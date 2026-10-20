@@ -1,6 +1,16 @@
 {
   "releases": [
     {
+      "version": "0.1.1",
+      "date": "2026-10-20",
+      "title": "the repository moved to Risk-Mandate; the source links and the DNS target follow it",
+      "notes": "The lead moved the repository from the SGit-AI organisation to Risk-Mandate/Risk-Mandate-AI__Website__Customers between the first push and the first CI run, and pointed customers.riskmandate.ai at risk-mandate.github.io. Every source link on the site, the release script's Actions lookup, the participant disclosure and the DNS line in needs.md now name the new home; the corrections file records the move as C9. Nothing else changed.",
+      "tag": "v0.1.1",
+      "commit": null,
+      "run": null,
+      "verified": null
+    },
+    {
       "version": "0.1.0",
       "date": "2026-10-20",
       "title": "the first customers site: the brief, the start-here page, the batch, the steps and the gate",

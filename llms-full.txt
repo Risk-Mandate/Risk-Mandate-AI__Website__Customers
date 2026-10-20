@@ -2,7 +2,7 @@
 
 > The first customers of the Agent Behaviour Policy: an early access programme run as a site, with a start-here page, a page per customer, credit to spend, the milestones agreed with each one, and a daily follow-up. Part of riskmandate.ai.
 
-Site version: v0.1.0 (2026-10-20). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/SGit-AI/SGit-AI__Website__Customers. Parent site: https://riskmandate.ai
+Site version: v0.1.1 (2026-10-20). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers. Parent site: https://riskmandate.ai
 
 Every HTML page has a markdown twin at the same path with the extension swapped; links inside the markdown point at markdown, so an agent never has to parse HTML. What exists, is proposed or is deliberately absent is in /docs/reality.md, generated from data/reality.json on every release: if it is not listed there, it does not exist. Nothing on this site is described in the present tense before that file says shipped.
 
@@ -21,7 +21,7 @@ source: /index.md
 
 > The first customers of the Agent Behaviour Policy, and the site we run the programme from: a start-here page, a page per customer with the objectives and milestones agreed with them, credit to spend, a daily follow-up, and a list for the next batch. Part of riskmandate.ai.
 
-*Source: <https://customers.riskmandate.ai/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -99,7 +99,7 @@ source: /about/participant.md
 
 > This site is published by the people building the thing it describes: RiskMandate, whose product the programme sells, and the sgit project whose tooling the site runs on. What that means for the reader, and who did what.
 
-*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -112,7 +112,7 @@ customers.riskmandate.ai is a sub-site of [riskmandate.ai](https://riskmandate.a
 - **Every claim carries a status** from `data/reality.json`: shipped with a version, proposed, or absent. [docs/reality.md](/docs/reality.md) and the status lines on the pages are generated from it and cannot disagree with each other.
 - **The brief is published in full**, with [what it got wrong](/docs/brief/BRIEF-CORRECTIONS.md) beside it, so the site can be checked against something other than its own claims.
 - **Every number is counted.** The counts on the home page and the batch table are read from the data on every release; a number in prose names the file it came from and the day.
-- **No customer is named who did not agree to be,** and no contact details are in the repository, which is public at [SGit-AI/SGit-AI__Website__Customers](https://github.com/SGit-AI/SGit-AI__Website__Customers).
+- **No customer is named who did not agree to be,** and no contact details are in the repository, which is public at [Risk-Mandate/Risk-Mandate-AI__Website__Customers](https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers).
 
 ## Who did what
 
@@ -131,7 +131,7 @@ source: /admin/index.md
 
 > How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.
 
-*Source: <https://customers.riskmandate.ai/admin/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -205,7 +205,7 @@ source: /admin/versions.md
 
 > Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.
 
-*Source: <https://customers.riskmandate.ai/admin/versions.html> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/versions.html> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -213,6 +213,7 @@ One row per release, newest first. The version lives in `admin/build/version.txt
 
 | Version | Date | Release | What changed, and why |
 |---|---|---|---|
+| `v0.1.1` | 2026-10-20 | the repository moved to Risk-Mandate; the source links and the DNS target follow it | The lead moved the repository from the SGit-AI organisation to Risk-Mandate/Risk-Mandate-AI__Website__Customers between the first push and the first CI run, and pointed customers.riskmandate.ai at risk-mandate.github.io. Every source link on the site, the release script's Actions lookup, the participant disclosure and the DNS line in needs.md now name the new home; the corrections file records the move as C9. Nothing else changed. |
 | `v0.1.0` | 2026-10-20 | the first customers site: the brief, the start-here page, the batch, the steps and the gate | The site exists, as customers.riskmandate.ai, a sub-site of riskmandate.ai, built from the newsroom brief of 20 October 2026 and the voice memo that followed it the same day. What is here: the brief published in full with its corrections file beside it; a start-here page in order; the programme pages (customers not beta users, credit and the meter, the seven milestone steps, the daily follow-up, what we want to discover, the next batch); a page per customer generated from data/customers.json with no contact details in it; the reality file; the team as files; the review folder with the brief as intent; and the eight-check gate with a leak tripwire and the house words. What is not here: the meter (the newsroom's, not yet wired to this site), a form, any customer's private details, and the derived half of the review folder. Every number on a page is counted from a file. |
 
 The release records in `data/versions.json` also carry, once CI has run, the commit, the Actions run and whether verify-live passed; the release script fills them in at the next release. [How a release works →](/docs/ops/release.md)
@@ -230,7 +231,7 @@ source: /credit/index.md
 
 > How the credit works for a customer of the first batch: a starting amount, a meter that charges a few pence per use, a top-up link, and the two numbers we track, credit used and whether they topped up. Today the meter is the newsroom's; wiring it to this site is proposed and waits on the lead.
 
-*Source: <https://customers.riskmandate.ai/credit/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/credit/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -283,7 +284,7 @@ source: /customers/co-founder/index.md
 
 > The co-founder (Nimay Parekh, chief executive): invited; started not yet; first behaviour policy not yet; 0 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/co-founder/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/co-founder/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -343,7 +344,7 @@ source: /customers/example/index.md
 
 > A worked example of a customer page, with invented numbers, so the shape can be seen before the first customer fills it. Not a customer.
 
-*Source: <https://customers.riskmandate.ai/customers/example/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/example/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -409,7 +410,7 @@ source: /customers/index.md
 
 > The customers of the first batch and where each is: started, first behaviour policy with its rows and gaps, milestone steps done, credit used and topped up, and follow-ups recorded. Generated from data/customers.json on every release. One worked example, marked as such, shows the shape.
 
-*Source: <https://customers.riskmandate.ai/customers/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -446,7 +447,7 @@ source: /customers/lead/index.md
 
 > The lead (Dinis Cruz, co-founder): starting; started 2026-10-20; first behaviour policy not yet; 2 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -509,7 +510,7 @@ source: /customers/the-agents/index.md
 
 > The lead's agents (about ten, as one customer): starting; started 2026-10-20; first behaviour policy not yet; 1 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/the-agents/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/the-agents/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -572,7 +573,7 @@ source: /docs/brief/index.md
 
 > The article this site was built from, published in full and never edited; the voice memo that followed it, byte for byte; and the corrections file, which is where the brief is told it was wrong.
 
-*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -595,7 +596,7 @@ source: /docs/index.md
 
 > The documents this site was built from and the notes it is run by, published whole. Each is a markdown file in the repository, which is the source of truth, and a page rendered from it on every release.
 
-*Source: <https://customers.riskmandate.ai/docs/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -628,7 +629,7 @@ source: /docs/ops/index.md
 
 > How a release works, and what only a human can do, as commands where a command exists.
 
-*Source: <https://customers.riskmandate.ai/docs/ops/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/ops/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -650,7 +651,7 @@ source: /follow-up/index.md
 
 > How the hand-holding works for the first batch: a follow-up as often as daily, three questions each time (what they did, what got in the way, what is next), how the answers are recorded on the customer page in summary, and what stays private with the lead.
 
-*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -714,7 +715,7 @@ source: /learning/index.md
 
 > The point of the programme is to find the usage moment, when an Agent Behaviour Policy becomes worth something to a particular person. Three questions follow from it, and this page holds them with a findings table that starts empty and is filled from the follow-ups, counted.
 
-*Source: <https://customers.riskmandate.ai/learning/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/learning/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -767,7 +768,7 @@ source: /milestones/index.md
 
 > The shared ladder of seven steps for the first batch, each with its objective, what done looks like and who does it: in with credit, one agent named, the grant, the mandate, the delta, the hooks half, and the usage moment. The objectives per customer are their own; the steps are the shared shape.
 
-*Source: <https://customers.riskmandate.ai/milestones/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/milestones/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -850,7 +851,7 @@ source: /next-batch/index.md
 
 > This is not a launch; it is a first batch. Everyone who asks to join is kept on a list for the next one, with what they want to use it for. How to ask today (by email or the riskmandate.ai contact form), what we keep and what we never publish, and the form on this site that is proposed and not built.
 
-*Source: <https://customers.riskmandate.ai/next-batch/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/next-batch/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -889,7 +890,7 @@ source: /programme/index.md
 
 > What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.
 
-*Source: <https://customers.riskmandate.ai/programme/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/programme/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -955,7 +956,7 @@ source: /review/index.md
 
 > The intent half of the review folder: the brief and the memo read as stories, rules and examples, each node linked to the heading it came from and to the page on this site that realises it, with the counts. The derived half is proposed.
 
-*Source: <https://customers.riskmandate.ai/review/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/review/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1067,7 +1068,7 @@ source: /start-here/index.md
 
 > The page a customer reads first: what you need, the seven things to do in order, from naming one agent to telling us what the behaviour policy was worth, and what happens every day in between. Each step links to the thing that does it.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1148,7 +1149,7 @@ source: /team/index.md
 
 > Who does what, as one file per role with the rules it enforces and the mistake behind each, and the board of work.
 
-*Source: <https://customers.riskmandate.ai/team/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/team/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1171,7 +1172,7 @@ source: /docs/reality.md
 
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.1.0 (2026-10-20). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.1.1 (2026-10-20). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
 20 claims: 11 shipped, 6 proposed, 3 absent.
 
@@ -1216,7 +1217,7 @@ source: /docs/reality.md
 | programme | Customer contact details, company names that are not already public, or private notes in this repository | absent | nowhere | The gate fails on anything contact-shaped in data/customers.json. |
 | programme | A score, rating or level on any behaviour policy | absent | nowhere | An Agent Behaviour Policy describes and does not judge. The gate fails on the words. |
 
-*Source: [https://github.com/SGit-AI/SGit-AI__Website__Customers](https://github.com/SGit-AI/SGit-AI__Website__Customers) · CC BY 4.0*
+*Source: [https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers](https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers) · CC BY 4.0*
 
 
 ==============================================================================
@@ -1231,7 +1232,7 @@ The brief ([our-first-customers.md](our-first-customers.md)) and the memo ([memo
 
 ## C1. The site is customers.riskmandate.ai, not customers.sgit.ai (2026-10-20, v0.1.0)
 
-The repository was made as `SGit-AI__Website__Customers`, "repo for customers.sgit.ai", and the first instruction to the build session named that host. During the first session the lead corrected it: the programme is RiskMandate's, so the site is a sub-site of riskmandate.ai at `customers.riskmandate.ai`, and the lead changes the DNS record and the GitHub mapping. Done: the CNAME, every canonical URL, the chrome and the licence line say riskmandate.ai; the repository keeps its name and its organisation (SGit-AI), which is recorded on the admin page rather than hidden. The pipeline and the repository rules are still the sgit.ai estate's, because that is where the tooling comes from; the look and the house words are riskmandate.ai's.
+The repository was made as `SGit-AI__Website__Customers`, "repo for customers.sgit.ai", and the first instruction to the build session named that host. During the first session the lead corrected it: the programme is RiskMandate's, so the site is a sub-site of riskmandate.ai at `customers.riskmandate.ai`, and the lead changes the DNS record and the GitHub mapping. Done: the CNAME, every canonical URL, the chrome and the licence line say riskmandate.ai. The repository kept its name and its organisation (SGit-AI) for the first release; see C9. The pipeline and the repository rules are still the sgit.ai estate's, because that is where the tooling comes from; the look and the house words are riskmandate.ai's.
 
 ## C2. The brief says no customer is named; the memo names the first users (2026-10-20, v0.1.0)
 
@@ -1260,6 +1261,10 @@ The repository rules ask each repository to add a row to the honest column on nf
 ## C8. "Policy" alone is never written here (2026-10-20, v0.1.0)
 
 The brief and the memo say "policy" and "policies" alone throughout, as the newsroom does. riskmandate.ai's rule is that on its sites *policy* is also the insurance instrument, so the ABP is always *the ABP* or *the behaviour policy*. Decided: the rule applies to every word this site writes, and the gate enforces it; the brief and the memo are verbatim and exempt. The same for "beta users" (the brief's own heading is the one allowed use), "rung", "ADP", a score, and American spellings.
+
+## C9. The repository moved to the Risk-Mandate organisation (2026-10-20, v0.1.1)
+
+Between the first push and the first CI run the lead moved the repository from `SGit-AI/SGit-AI__Website__Customers` to `Risk-Mandate/Risk-Mandate-AI__Website__Customers`, so the site is served from the Risk-Mandate organisation's Pages, and the DNS record points at `risk-mandate.github.io`. GitHub redirects the old name. Done at v0.1.1: the source link in the chrome and the footer, the release script's Actions lookup, the participant disclosure and needs.md say the new name. The v0.1.0 release note and its commit keep the old name, because they are a record.
 
 
 ==============================================================================
@@ -1399,14 +1404,14 @@ source: /docs/ops/needs.md
 
 # What only a human can do
 
-*customers.riskmandate.ai · operations · maintained by the build session · last updated at v0.1.0 (2026-10-20) · CC BY 4.0*
+*customers.riskmandate.ai · operations · maintained by the build session · last updated at v0.1.1 (2026-10-20) · CC BY 4.0*
 
 Everything on this list blocks a step of the brief or of the repository rules and cannot be done from inside the repository. Each item says who, what, exactly, and which step waits on it. Items are moved to *Done* when done, dated, and anything that turned out differently from the brief is recorded in [BRIEF-CORRECTIONS.md](../brief/BRIEF-CORRECTIONS.md).
 
 ## Blocking the first release being live
 
-1. **DNS (the lead).** `customers.riskmandate.ai CNAME sgit-ai.github.io` at the registrar for riskmandate.ai. The lead said on 2026-10-20 that this is being done now.
-2. **GitHub Pages (the lead, as an owner of SGit-AI).** On the repository `SGit-AI/SGit-AI__Website__Customers`: Settings, Pages, source "GitHub Actions"; custom domain `customers.riskmandate.ai`; enforce HTTPS once the certificate is issued. The deploy job asks Pages to enable itself (`enablement: true`), but the custom domain and HTTPS are settings the token cannot set.
+1. **DNS (the lead).** `customers.riskmandate.ai CNAME risk-mandate.github.io` at the registrar for riskmandate.ai. The lead said on 2026-10-20 that this is being done now; by 20:55 UTC the host answered from GitHub Pages with a 404, which is the record in place and no site deployed yet.
+2. **GitHub Pages (the lead, as an owner of Risk-Mandate).** On the repository `Risk-Mandate/Risk-Mandate-AI__Website__Customers`: Settings, Pages, source "GitHub Actions"; custom domain `customers.riskmandate.ai`; enforce HTTPS once the certificate is issued. The deploy job asks Pages to enable itself (`enablement: true`), but the custom domain and HTTPS are settings the token cannot set.
 3. **Re-run `verify-live` (the lead).** The v0.1.0 run's last job polls the host for ten minutes and fails if the record is not there yet. When 1 and 2 are done, re-run the workflow from the Actions tab, or push the next release; the record in `data/versions.json` is filled at the next release.
 4. **The Pages environment (the lead).** If the `github-pages` environment restricts deploy branches, add `dev`. The sibling sites hit this once.
 
@@ -1427,8 +1432,8 @@ Everything on this list blocks a step of the brief or of the repository rules an
 
 ## The estate's asks
 
-11. **The honest column (the lead).** Add this site's row to the honest column on nfrs.sgit.ai. The row, as at v0.1.0: version control, met (one version, tagged, release history); reliability, partly (the gate and verify-live; no uptime record); resilience, not met (no backup beyond the repository and Pages); security, partly (the leak tripwire, a strict content security policy, no credentials in the tree; no branch protection yet); backups, not met; consistency, met (every number generated); explainability, met (the brief, the corrections, reality); documentation, met (twins, llms.txt, the ops notes).
-12. **Branch protection (an owner of SGit-AI).** `dev` and `main` with `validate` as the required status check; no force pushes; the organisation's 2FA rule.
+11. **The honest column (the lead).** Add this site's row to the honest column on nfrs.sgit.ai. The row, as at v0.1.1: version control, met (one version, tagged, release history); reliability, partly (the gate and verify-live; no uptime record); resilience, not met (no backup beyond the repository and Pages); security, partly (the leak tripwire, a strict content security policy, no credentials in the tree; no branch protection yet); backups, not met; consistency, met (every number generated); explainability, met (the brief, the corrections, reality); documentation, met (twins, llms.txt, the ops notes).
+12. **Branch protection (an owner of Risk-Mandate).** `dev` and `main` with `validate` as the required status check; no force pushes; the organisation's 2FA rule.
 
 ## Not yet needed
 

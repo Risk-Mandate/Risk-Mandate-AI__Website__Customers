@@ -6,7 +6,7 @@ The brief ([our-first-customers.md](our-first-customers.md)) and the memo ([memo
 
 ## C1. The site is customers.riskmandate.ai, not customers.sgit.ai (2026-10-20, v0.1.0)
 
-The repository was made as `SGit-AI__Website__Customers`, "repo for customers.sgit.ai", and the first instruction to the build session named that host. During the first session the lead corrected it: the programme is RiskMandate's, so the site is a sub-site of riskmandate.ai at `customers.riskmandate.ai`, and the lead changes the DNS record and the GitHub mapping. Done: the CNAME, every canonical URL, the chrome and the licence line say riskmandate.ai; the repository keeps its name and its organisation (SGit-AI), which is recorded on the admin page rather than hidden. The pipeline and the repository rules are still the sgit.ai estate's, because that is where the tooling comes from; the look and the house words are riskmandate.ai's.
+The repository was made as `SGit-AI__Website__Customers`, "repo for customers.sgit.ai", and the first instruction to the build session named that host. During the first session the lead corrected it: the programme is RiskMandate's, so the site is a sub-site of riskmandate.ai at `customers.riskmandate.ai`, and the lead changes the DNS record and the GitHub mapping. Done: the CNAME, every canonical URL, the chrome and the licence line say riskmandate.ai. The repository kept its name and its organisation (SGit-AI) for the first release; see C9. The pipeline and the repository rules are still the sgit.ai estate's, because that is where the tooling comes from; the look and the house words are riskmandate.ai's.
 
 ## C2. The brief says no customer is named; the memo names the first users (2026-10-20, v0.1.0)
 
@@ -35,3 +35,7 @@ The repository rules ask each repository to add a row to the honest column on nf
 ## C8. "Policy" alone is never written here (2026-10-20, v0.1.0)
 
 The brief and the memo say "policy" and "policies" alone throughout, as the newsroom does. riskmandate.ai's rule is that on its sites *policy* is also the insurance instrument, so the ABP is always *the ABP* or *the behaviour policy*. Decided: the rule applies to every word this site writes, and the gate enforces it; the brief and the memo are verbatim and exempt. The same for "beta users" (the brief's own heading is the one allowed use), "rung", "ADP", a score, and American spellings.
+
+## C9. The repository moved to the Risk-Mandate organisation (2026-10-20, v0.1.1)
+
+Between the first push and the first CI run the lead moved the repository from `SGit-AI/SGit-AI__Website__Customers` to `Risk-Mandate/Risk-Mandate-AI__Website__Customers`, so the site is served from the Risk-Mandate organisation's Pages, and the DNS record points at `risk-mandate.github.io`. GitHub redirects the old name. Done at v0.1.1: the source link in the chrome and the footer, the release script's Actions lookup, the participant disclosure and needs.md say the new name. The v0.1.0 release note and its commit keep the old name, because they are a record.

@@ -1,6 +1,6 @@
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.1.0 (2026-10-20). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.1.1 (2026-10-20). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
 20 claims: 11 shipped, 6 proposed, 3 absent.
 
@@ -45,4 +45,4 @@
 | programme | Customer contact details, company names that are not already public, or private notes in this repository | absent | nowhere | The gate fails on anything contact-shaped in data/customers.json. |
 | programme | A score, rating or level on any behaviour policy | absent | nowhere | An Agent Behaviour Policy describes and does not judge. The gate fails on the words. |
 
-*Source: [https://github.com/SGit-AI/SGit-AI__Website__Customers](https://github.com/SGit-AI/SGit-AI__Website__Customers) · CC BY 4.0*
+*Source: [https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers](https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers) · CC BY 4.0*

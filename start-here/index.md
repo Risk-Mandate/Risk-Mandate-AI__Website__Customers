@@ -2,7 +2,7 @@
 
 > The page a customer reads first: what you need, the seven things to do in order, from naming one agent to telling us what the behaviour policy was worth, and what happens every day in between. Each step links to the thing that does it.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

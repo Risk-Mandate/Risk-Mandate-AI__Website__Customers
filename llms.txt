@@ -2,7 +2,7 @@
 
 > The first customers of the Agent Behaviour Policy: an early access programme run as a site, with a start-here page, a page per customer, credit to spend, the milestones agreed with each one, and a daily follow-up. Part of riskmandate.ai.
 
-Site version: v0.1.0 (2026-10-20). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/SGit-AI/SGit-AI__Website__Customers. Parent site: https://riskmandate.ai
+Site version: v0.1.1 (2026-10-20). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers. Parent site: https://riskmandate.ai
 
 Every HTML page has a markdown twin at the same path with the extension swapped; links inside the markdown point at markdown, so an agent never has to parse HTML. What exists, is proposed or is deliberately absent is in /docs/reality.md, generated from data/reality.json on every release: if it is not listed there, it does not exist. Nothing on this site is described in the present tense before that file says shipped.
 

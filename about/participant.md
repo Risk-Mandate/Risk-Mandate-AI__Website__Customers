@@ -2,7 +2,7 @@
 
 > This site is published by the people building the thing it describes: RiskMandate, whose product the programme sells, and the sgit project whose tooling the site runs on. What that means for the reader, and who did what.
 
-*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -15,7 +15,7 @@ customers.riskmandate.ai is a sub-site of [riskmandate.ai](https://riskmandate.a
 - **Every claim carries a status** from `data/reality.json`: shipped with a version, proposed, or absent. [docs/reality.md](/docs/reality.md) and the status lines on the pages are generated from it and cannot disagree with each other.
 - **The brief is published in full**, with [what it got wrong](/docs/brief/BRIEF-CORRECTIONS.md) beside it, so the site can be checked against something other than its own claims.
 - **Every number is counted.** The counts on the home page and the batch table are read from the data on every release; a number in prose names the file it came from and the day.
-- **No customer is named who did not agree to be,** and no contact details are in the repository, which is public at [SGit-AI/SGit-AI__Website__Customers](https://github.com/SGit-AI/SGit-AI__Website__Customers).
+- **No customer is named who did not agree to be,** and no contact details are in the repository, which is public at [Risk-Mandate/Risk-Mandate-AI__Website__Customers](https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers).
 
 ## Who did what
 

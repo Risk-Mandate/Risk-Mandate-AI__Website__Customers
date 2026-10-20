@@ -30,7 +30,7 @@ PARENT_URL     = 'https://riskmandate.ai'
 PARENT_TITLE   = 'riskmandate.ai: the company and the product this programme is for'
 LICENCE_URL    = 'https://creativecommons.org/licenses/by/4.0/'
 LICENCE_NAME   = 'CC BY 4.0'
-REPO_URL       = 'https://github.com/SGit-AI/SGit-AI__Website__Customers'
+REPO_URL       = 'https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers'
 AGENT_ADDRESS  = 'agent@riskmandate.ai'
 
 CSP            = ("default-src 'self'; "

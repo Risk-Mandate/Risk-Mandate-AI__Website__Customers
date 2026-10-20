@@ -21,7 +21,7 @@ from pathlib  import Path
 ROOT      = Path(__file__).resolve().parents[2]
 KINDS     = ('fix', 'feature', 'refactor', 'docs')
 RE_SEMVER = re.compile(r'^\d+\.\d+\.\d+$')
-RUNS_URL  = 'https://api.github.com/repos/SGit-AI/SGit-AI__Website__Customers/actions/runs?branch=dev&per_page=50'
+RUNS_URL  = 'https://api.github.com/repos/Risk-Mandate/Risk-Mandate-AI__Website__Customers/actions/runs?branch=dev&per_page=50'
 
 
 class Release:
