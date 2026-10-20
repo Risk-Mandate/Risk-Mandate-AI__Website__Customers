@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin: how the site is built, the generators, the eight-check gate and the four CI jobs</title>
+  <meta name="description" content="How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/admin/">
+  <link rel="alternate" type="text/markdown" href="/admin/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/admin/">
+  <meta property="og:title" content="Admin: how the site is built, the generators, the eight-check gate and the four CI jobs">
+  <meta property="og:description" content="How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.">
+  <meta name="rm-customers:version" content="0.1.0">
+  <meta name="rm-customers:released" content="2026-10-20">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <span class="stage-pill">first batch, being set up</span>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <a class="pagelink" href="/start-here/">Start here</a>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/credit/">Credit, and the meter</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+          </div>
+        </span>
+        <a class="pagelink" href="/customers/">Customers</a>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/admin/">Admin<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild active" href="/admin/" aria-current="page">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/docs/ops/needs.html">What needs a human</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <a class="version" href="/admin/versions.html" data-version="0.1.0" title="released 2026-10-20; what shipped in v0.1.0">v0.1.0</a>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">How the site is built</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap">
+    <h1>How the site is built</h1>
+    <p class="lead">A static site, served byte for byte from this repository by GitHub Pages. There is no build step at deploy time: seven small generators run before a commit and keep the parts that must agree in agreement, and a gate refuses the push when they do not.</p>
+    <!-- rm-customers:status:start ids="site.pipeline,site.chrome,site.twins,site.gate,site.review,site.review-derived" -->
+  <p class="status-line" data-generated-from="data/reality.json">Status, from <a href="/docs/reality.html">docs/reality.md</a>: <span class="status status-shipped">shipped v0.1.0</span> One version in admin/build/version.txt, a release history, and four CI jobs: validate, tag, deploy, verify live · <span class="status status-shipped">shipped v0.1.0</span> The RiskMandate chrome (head, header, breadcrumbs, footer, CSP) generated into every page from one definition · <span class="status status-shipped">shipped v0.1.0</span> A markdown twin for every page, llms.txt, llms-full.txt and sitemap.xml, generated from the pages · <span class="status status-shipped">shipped v0.1.0</span> The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words · <span class="status status-shipped">shipped v0.1.0</span> The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered · <span class="status status-proposed">proposed</span> The derived half of the review folder: the code graph from parsers, the join with a coverage figure, every commit read upwards, the navigator as web components</p>
+<!-- rm-customers:status:end -->
+
+    <h2>The one-screen version</h2>
+    <pre><code>pip install pytest                        # the gate's only Python dependency; Node 22 and Python 3.11+ otherwise
+python3 admin/build/gate.py --build       # regenerate everything, then run the whole gate
+python3 admin/build/gate.py               # what CI runs: check mode only
+python3 -m http.server 8000               # serve the tree locally; there is no build step
+python3 admin/build/release.py --version 0.2.0 --kind feature --title "what" --notes "why"   # bump, build, gate, commit, push, verify live</code></pre>
+
+    <h2>The generators, in order</h2>
+    <table>
+      <thead><tr><th>Generator</th><th>Reads</th><th>Writes</th></tr></thead>
+      <tbody>
+        <tr><td><code>gen_customers.py</code></td><td><code>data/customers.json</code>, <code>data/milestones.json</code></td><td>a page per customer, the batch table, the steps, the counts on the home page</td></tr>
+        <tr><td><code>gen_reality.py</code></td><td><code>data/reality.json</code></td><td><code>docs/reality.md</code>, the status lines and tables on the pages</td></tr>
+        <tr><td><code>gen_docs.py</code></td><td><code>docs/**/*.md</code>, <code>team/**/*.md</code>, <code>review/*.md</code></td><td>an HTML page beside each, and an index page per folder</td></tr>
+        <tr><td><code>review/tools/</code></td><td>the brief, <code>review/intent/stories.json</code></td><td><code>review/intent/sections.json</code>, the review page; validates the intent files</td></tr>
+        <tr><td><code>gen_chrome.py</code></td><td><code>chrome.py</code>, <code>version.txt</code>, <code>CNAME</code></td><td>the head, header, breadcrumbs and footer of every page</td></tr>
+        <tr><td><code>gen_versions.py</code></td><td><code>data/versions.json</code></td><td>the release table on <a href="/admin/versions.html">the release history</a></td></tr>
+        <tr><td><code>gen_twins.py</code></td><td>every page's <code>&lt;main&gt;</code></td><td>the markdown twin beside it</td></tr>
+        <tr><td><code>gen_llms.py</code></td><td>every page and document</td><td><code>llms.txt</code>, <code>llms-full.txt</code>, <code>sitemap.xml</code></td></tr>
+      </tbody>
+    </table>
+
+    <h2>The eight checks of the gate</h2>
+    <p>In <code>admin/build/validate.js</code>, with no dependency beyond Node. Every problem of every check is printed before the run fails, so one run shows everything.</p>
+    <ol>
+      <li><strong>Version agreement.</strong> <code>version.txt</code>, every badge, the release table, the indexes and the home twin say the same version.</li>
+      <li><strong>Internal links, fragments and no orphans.</strong> Every link resolves against the real tree; every fragment exists; a page nothing links to fails, because an orphan is unpublished.</li>
+      <li><strong>Canonical host.</strong> Every page's canonical URL and og:url are on the CNAME host and agree.</li>
+      <li><strong>The leak tripwire.</strong> sgit key shapes, write tokens, cloud key prefixes, private key blocks, append tokens, bare account numbers, against every text file. The fix for a trip is a redaction, never a wider pattern.</li>
+      <li><strong>No runtime foreign origin.</strong> No script, style or import from another origin; every script parses; no inline script or style, because the content security policy forbids them.</li>
+      <li><strong>The data holds together.</strong> Every customer record has a page and every page a record; the milestones name the ladder; no contact details; the versions file is valid.</li>
+      <li><strong>Reality regenerates identically.</strong> <code>docs/reality.md</code> and the status tables are what <code>data/reality.json</code> says.</li>
+      <li><strong>The house words.</strong> riskmandate.ai's rules: never "ADP", never "the policy" alone, no score on a behaviour policy, "steps" not "rungs", British spelling, customers not "beta users". The verbatim brief and memo are exempt.</li>
+    </ol>
+    <p>Plus an advisory that never fails the build: em-dashes in prose we write. Then <code>pytest tests/build/</code> (the chrome on every page, the twins, the customer data, the converters) and <code>node --test tests/unit/</code> (the gate's own helpers).</p>
+
+    <h2>The four CI jobs</h2>
+    <table>
+      <thead><tr><th>Job</th><th>When</th><th>Does</th><th>On failure</th></tr></thead>
+      <tbody>
+        <tr><td><code>validate</code></td><td>every push to <code>dev</code> or <code>main</code>, every pull request, manual dispatch</td><td><code>python3 admin/build/gate.py</code></td><td>nothing is tagged or deployed</td></tr>
+        <tr><td><code>tag-release</code></td><td>push to <code>dev</code> only</td><td>asserts <code>version.txt</code> equals the newest <code>site vX.Y.Z : …</code> commit subject and that the bump is the next minor, a patch or a major; tags; backfills; pushes the tags</td><td>no deploy</td></tr>
+        <tr><td><code>deploy</code></td><td>any push or dispatch, never a pull request</td><td>copies the tree minus <code>.git</code>, <code>.github</code>, <code>tests/unit</code> into the Pages artifact and deploys it</td><td>the previous version stays live</td></tr>
+        <tr><td><code>verify-live</code></td><td>after deploy</td><td>polls <code>https://customers.riskmandate.ai/admin/build/version.txt</code> and the home page badge, with a cache-buster, until both equal the version, for up to ten minutes</td><td>the run is red: green does not mean live</td></tr>
+      </tbody>
+    </table>
+    <p>The whole of it is in <a href="/docs/ops/release.html">how a release works</a>. What only a human can do, starting with the DNS record for this host, is in <a href="/docs/ops/needs.html">what needs a human</a>.</p>
+
+    <h2>Where this came from</h2>
+    <p>The pipeline is copied from <a href="https://secrets.sgit.ai/admin/">secrets.sgit.ai</a>, the newest gate in the sgit.ai estate, as <a href="https://sgit.ai/docs/guidance/repositories.html">every sgit repository</a> says a new repository should do first; the look and the house words are <a href="https://riskmandate.ai">riskmandate.ai</a>'s, because this is a sub-site of it. What was changed and why is in <a href="/docs/brief/BRIEF-CORRECTIONS.html">the corrections file</a>.</p>
+  </main>
+  <!-- rm-customers:footer:start -->
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.1.0" title="released 2026-10-20; what shipped in v0.1.0">v0.1.0</a> · released 2026-10-20 · <a href="/admin/versions.html">releases</a> · <a href="/admin/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/SGit-AI/SGit-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

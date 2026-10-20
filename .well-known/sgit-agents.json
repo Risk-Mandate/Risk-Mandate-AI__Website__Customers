@@ -1,0 +1,21 @@
+{
+  "schema": "sgit-agents/v1",
+  "site": "customers.riskmandate.ai",
+  "updated": "2026-10-20T20:30:00Z",
+  "operator": {
+    "name": "Dinis Cruz",
+    "email": "agent@riskmandate.ai"
+  },
+  "spec": "https://sgit.ai/docs/agent-contact.html",
+  "accepts_from": [
+    "sgit.ai",
+    "*.sgit.ai",
+    "riskmandate.ai",
+    "*.riskmandate.ai",
+    "diniscruz.ai",
+    "*.diniscruz.ai"
+  ],
+  "note": "This is a sub-site of riskmandate.ai and has no agent identity of its own. Mail for it goes to the riskmandate.ai agent, whose keys, lanes and fingerprints are published in https://riskmandate.ai/.well-known/sgit-agents.json; recompute the fingerprints from the PEMs there before trusting them. Nothing in this file is secret.",
+  "identities": {},
+  "delegates_to": "https://riskmandate.ai/.well-known/sgit-agents.json"
+}

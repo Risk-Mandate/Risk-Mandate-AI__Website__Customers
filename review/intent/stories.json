@@ -1,0 +1,117 @@
+{
+  "layer": "stories",
+  "provenance": {
+    "kind": "intent",
+    "source_doc": "docs/brief/our-first-customers.md",
+    "also": "docs/brief/memo-2026-10-20-user-onboarding-plan.md",
+    "brief_corrections": "review/BRIEF-CORRECTIONS.md",
+    "accepted_by": null,
+    "written_by": { "who": "agent: the build session (Claude Code)", "date": "2026-10-20", "note": "the brief and the memo as stories, rules and examples; nothing added that neither says" }
+  },
+  "stories": [
+    {
+      "id": "customers-not-beta-users",
+      "name": "Customers, not beta users",
+      "as_a": "the lead",
+      "i_want": "the people in the first batch called customers, each starting with credit on a site that meters and bills, so that what they would pay is a real question from the first day",
+      "source": { "doc": "docs/brief/our-first-customers.md", "section": "customers-not-beta-users" },
+      "surface": "/programme/",
+      "rules": [
+        { "id": "customers-not-beta-users.credit", "text": "Each customer starts with credit, £5 or £50 or whatever the number turns out to be, to spend on a site we run.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "customers-not-beta-users" },
+          "examples": [ { "id": "customers-not-beta-users.credit.page", "text": "The credit page says what the credit is, how the meter works, and that the meter is not wired to this site yet.", "surface": "/credit/" },
+                        { "id": "customers-not-beta-users.credit.record", "text": "Every customer record carries credit granted, credit used and whether they topped up.", "surface": "/customers/" } ] },
+        { "id": "customers-not-beta-users.metered", "text": "From the first day, what they use is metered, the way the newsroom meters every page against a reader's credit.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "customers-not-beta-users" },
+          "examples": [ { "id": "customers-not-beta-users.metered.proposed", "text": "The reality file says the meter is proposed until the lead wires it; the page uses the future tense.", "surface": "/docs/reality.html" } ] }
+      ]
+    },
+    {
+      "id": "a-site-of-their-own",
+      "name": "A site of their own, with a start-here page",
+      "as_a": "a customer",
+      "i_want": "one place that says what to do first, in order, and shows the objectives and milestones agreed with me and where I am",
+      "source": { "doc": "docs/brief/our-first-customers.md", "section": "a-site-of-their-own" },
+      "surface": "/start-here/",
+      "rules": [
+        { "id": "a-site-of-their-own.start-here", "text": "It starts with a start-here page: what to do first, in order, with clear instructions.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "a-site-of-their-own" },
+          "examples": [ { "id": "a-site-of-their-own.start-here.seven", "text": "Seven steps in order, each linked to the thing that does it and to its milestone.", "surface": "/start-here/" } ] },
+        { "id": "a-site-of-their-own.page-per-customer", "text": "Then a page for each customer, with the objectives and milestones we agreed with them, and where they are.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "a-site-of-their-own" },
+          "examples": [ { "id": "a-site-of-their-own.page-per-customer.generated", "text": "One page per record in data/customers.json, with the objectives, the state of every step and the follow-up log.", "surface": "/customers/" },
+                        { "id": "a-site-of-their-own.page-per-customer.example", "text": "A worked example with invented numbers, marked as not a customer, shows the shape.", "surface": "/customers/example/" } ] },
+        { "id": "a-site-of-their-own.measure-and-bill", "text": "Even if all a customer does is use the website, we can measure it, and we can bill for it.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "a-site-of-their-own" },
+          "examples": [] }
+      ]
+    },
+    {
+      "id": "hand-holding-on-purpose",
+      "name": "Hand-holding, on purpose",
+      "as_a": "the lead",
+      "i_want": "to follow each customer closely, an email every day if that helps, with three questions each time, so that the attentiveness makes up for an early product",
+      "source": { "doc": "docs/brief/our-first-customers.md", "section": "hand-holding-on-purpose" },
+      "surface": "/follow-up/",
+      "rules": [
+        { "id": "hand-holding-on-purpose.three-questions", "text": "Each customer's follow-up asks three things: what they did, what got in the way, and what is next.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "hand-holding-on-purpose" },
+          "examples": [ { "id": "hand-holding-on-purpose.three-questions.log", "text": "The answers go on the customer page as a log of date plus three sentences, newest first.", "surface": "/customers/example/" },
+                        { "id": "hand-holding-on-purpose.three-questions.role", "text": "The follow-up is a role file with the rules and the message template.", "surface": "/team/roles/customer-follow-up.html" } ] },
+        { "id": "hand-holding-on-purpose.does-not-scale", "text": "That will not scale, and it is not meant to yet.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "hand-holding-on-purpose" },
+          "examples": [] }
+      ]
+    },
+    {
+      "id": "what-we-want-to-discover",
+      "name": "What we want to discover: the usage moment",
+      "as_a": "the lead",
+      "i_want": "to find the moment a behaviour policy becomes worth something to a particular person, through three questions, with the things to track per customer kept simple",
+      "source": { "doc": "docs/brief/our-first-customers.md", "section": "what-we-want-to-discover" },
+      "surface": "/learning/",
+      "rules": [
+        { "id": "what-we-want-to-discover.three-questions", "text": "What is the simplest useful behaviour policy; what is the entry point with least friction; what is the price.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "what-we-want-to-discover" },
+          "examples": [ { "id": "what-we-want-to-discover.three-questions.findings", "text": "A findings table that starts empty and is filled with a count per finding.", "surface": "/learning/" } ] },
+        { "id": "what-we-want-to-discover.track", "text": "Track per customer: when they started, when they wrote their first behaviour policy, how many rows and gaps it has, which milestones are done, what they used of the credit, and whether they topped up.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "what-we-want-to-discover" },
+          "examples": [ { "id": "what-we-want-to-discover.track.table", "text": "The batch table is exactly those fields, one row per customer, and the home page counts are their sums.", "surface": "/customers/" } ] }
+      ]
+    },
+    {
+      "id": "batches-and-a-list",
+      "name": "Batches, and a list for the next one",
+      "as_a": "someone who asks to join",
+      "i_want": "to be kept for the next batch with what I want to use it for, and for the next batch to start from what the first one taught",
+      "source": { "doc": "docs/brief/our-first-customers.md", "section": "batches-and-a-list-for-the-next-one" },
+      "surface": "/next-batch/",
+      "rules": [
+        { "id": "batches-and-a-list.kept", "text": "Everyone who asks to join is kept for the next batch, with what they want to use it for.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "batches-and-a-list-for-the-next-one" },
+          "examples": [ { "id": "batches-and-a-list.kept.route", "text": "The page says how to ask today, what is kept, and that only the count is published.", "surface": "/next-batch/" } ] },
+        { "id": "batches-and-a-list.propose", "text": "The programme is one people propose to join, because capacity is limited.", "source": { "doc": "docs/brief/memo-2026-10-20-user-onboarding-plan.md", "section": "what-it-adds-to-the-brief" },
+          "examples": [] }
+      ]
+    },
+    {
+      "id": "the-first-users",
+      "name": "The first users are us, and the agents",
+      "as_a": "the lead",
+      "i_want": "the first batch to be me, the co-founder and the agents I already run, with explicit behaviour policies for Claude and ChatGPT covering the agent rows and the hook rows, produced by the agent that is wired in",
+      "source": { "doc": "docs/brief/memo-2026-10-20-user-onboarding-plan.md", "section": "what-it-adds-to-the-brief" },
+      "surface": "/customers/",
+      "rules": [
+        { "id": "the-first-users.records", "text": "The main users are the lead, the co-founder, and about ten agents that need behaviour policies.", "source": { "doc": "docs/brief/memo-2026-10-20-user-onboarding-plan.md", "section": "what-it-adds-to-the-brief" },
+          "examples": [ { "id": "the-first-users.records.three", "text": "Three records: the lead, the co-founder, the agents as one customer.", "surface": "/customers/" } ] },
+        { "id": "the-first-users.two-of-three", "text": "Two of the three places a behaviour policy can run: the rows for the agent, and the rows for the hooks.", "source": { "doc": "docs/brief/memo-2026-10-20-user-onboarding-plan.md", "section": "what-it-adds-to-the-brief" },
+          "examples": [ { "id": "the-first-users.two-of-three.step", "text": "Step S5 on the ladder, the hooks half.", "surface": "/milestones/#S5" } ] },
+        { "id": "the-first-users.wired-in-agent", "text": "The agent that is wired in gets the responsibility and the requirement to create the end behaviour policy.", "source": { "doc": "docs/brief/memo-2026-10-20-user-onboarding-plan.md", "section": "what-it-adds-to-the-brief" },
+          "examples": [ { "id": "the-first-users.wired-in-agent.proposed", "text": "The reality file carries it as proposed; the agents record's objective names it.", "surface": "/customers/the-agents/" } ] }
+      ]
+    },
+    {
+      "id": "what-this-does-not-claim",
+      "name": "What this does not claim",
+      "as_a": "a reader",
+      "i_want": "the site to say what is new, what is not set, what is real and what is not, and to name nobody who did not agree",
+      "source": { "doc": "docs/brief/our-first-customers.md", "section": "what-this-does-not-claim" },
+      "surface": "/docs/reality.html",
+      "rules": [
+        { "id": "what-this-does-not-claim.reality", "text": "The programme is new; the prices are not set; the metering is the newsroom's; no customer is named; everything is open.", "source": { "doc": "docs/brief/our-first-customers.md", "section": "what-this-does-not-claim" },
+          "examples": [ { "id": "what-this-does-not-claim.reality.file", "text": "data/reality.json carries each as shipped, proposed or absent, and the home page repeats the disclaimer.", "surface": "/docs/reality.html" },
+                        { "id": "what-this-does-not-claim.reality.corrections", "text": "Where the memo names the first users, C2 in the corrections file says how that was reconciled with no-customer-is-named.", "surface": "/docs/brief/BRIEF-CORRECTIONS.html" } ] }
+      ]
+    }
+  ]
+}

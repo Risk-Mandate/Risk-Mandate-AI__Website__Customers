@@ -1,0 +1,157 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# customers.riskmandate.ai — Gen__Reality
+# Reads data/reality.json, validates it, and generates (1) docs/reality.md, the
+# list of what exists, and (2) the status tables and status lines in pages that
+# carry a <!-- rm-customers:reality:start area="..." --> or a
+# <!-- rm-customers:status:start ids="..." --> block. `--check` fails on drift.
+# A feature that is not in data/reality.json does not exist, whatever the brief says.
+# Usage: python3 admin/build/gen_reality.py [--check]
+# ═══════════════════════════════════════════════════════════════════════════════
+
+import html
+import json
+import sys
+
+from chrome import ROOT, Chrome, SITE_NAME, REPO_URL
+from pages  import Site__Pages
+
+
+REALITY_DATA  = ROOT / 'data' / 'reality.json'
+REALITY_FILE  = ROOT / 'docs' / 'reality.md'
+STATUSES      = ('shipped', 'proposed', 'absent')
+REQUIRED_KEYS = ('id', 'area', 'title', 'status', 'where', 'notes')
+
+
+class Gen__Reality:
+
+    def __init__(self, check=False):
+        self.check    = check
+        self.chrome   = Chrome()
+        self.pages    = Site__Pages()
+        self.data     = json.loads(REALITY_DATA.read_text(encoding='utf-8'))
+        self.features = self.data['features']
+        self.validate()
+
+    def validate(self):
+        problems = []
+        seen     = set()
+        for feature in self.features:
+            for key in REQUIRED_KEYS:
+                if key not in feature:
+                    problems.append(f'{feature.get("id", "?")}: missing "{key}"')
+            if feature.get('id') in seen:
+                problems.append(f'{feature["id"]}: duplicate id')
+            seen.add(feature.get('id'))
+            if feature.get('status') not in STATUSES:
+                problems.append(f'{feature.get("id")}: status must be one of {STATUSES}')
+            if feature.get('status') == 'shipped' and not feature.get('since'):
+                problems.append(f'{feature.get("id")}: shipped features need "since"')
+            if feature.get('status') != 'shipped' and feature.get('since'):
+                problems.append(f'{feature.get("id")}: only shipped features carry "since"')
+        if problems:
+            raise SystemExit('data/reality.json is invalid:\n  ' + '\n  '.join(problems))
+
+    def status_label(self, feature):
+        if feature['status'] == 'shipped':
+            return f'shipped v{feature["since"]}'
+        return feature['status']
+
+    def by_status(self, features):
+        return {status: [f for f in features if f['status'] == status] for status in STATUSES}
+
+    # ── docs/reality.md ────────────────────────────────────────────────────────
+
+    def reality_markdown(self):
+        groups = self.by_status(self.features)
+        counts = ', '.join(f'{len(groups[status])} {status}' for status in STATUSES)
+        lines  = [f'# {SITE_NAME}: reality'                                                                                          ,
+                  ''                                                                                                                  ,
+                  f'*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v{self.chrome.version} '
+                  f'({self.chrome.released}). If this document does not list it, it does not exist. '
+                  f'The brief is an aspiration; this file is the fact.*'                                                             ,
+                  ''                                                                                                                  ,
+                  f'{len(self.features)} claims: {counts}.'                                                                           ,
+                  ''                                                                                                                  ,
+                  '| Status | Meaning |'                                                                                              ,
+                  '|---|---|'                                                                                                         ]
+        for status in STATUSES:
+            lines.append(f'| {status} | {self.data["statuses"][status]} |')
+        for status in STATUSES:
+            lines += ['', f'## {status.capitalize()} ({len(groups[status])})', '']
+            if not groups[status]:
+                lines.append('Nothing.')
+                continue
+            lines += ['| Area | Feature | Status | Where | Notes |', '|---|---|---|---|---|']
+            for feature in groups[status]:
+                lines.append(f'| {feature["area"]} | {feature["title"]} | {self.status_label(feature)} | '
+                             f'{feature["where"]} | {feature["notes"]} |')
+        lines += ['', f'*Source: [{REPO_URL}]({REPO_URL}) · CC BY 4.0*', '']
+        return '\n'.join(lines)
+
+    # ── status tables in pages ─────────────────────────────────────────────────
+
+    def table_html(self, area, features=None):
+        if features is None:
+            features = [f for f in self.features if area in ('', 'all') or f['area'] == area]
+        if not features:
+            raise SystemExit(f'reality block: no features in area "{area}"')
+        rows = []
+        for feature in features:
+            rows.append('      <tr>'
+                        f'<td>{html.escape(feature["area"])}</td>'
+                        f'<td>{html.escape(feature["title"])}</td>'
+                        f'<td><span class="status status-{feature["status"]}">{self.status_label(feature)}</span></td>'
+                        f'<td>{html.escape(feature["where"])}</td>'
+                        f'<td>{html.escape(feature["notes"])}</td>'
+                        '</tr>')
+        return '\n'.join([f'  <table class="reality" data-area="{html.escape(area)}" data-generated-from="data/reality.json">'          ,
+                          '    <thead><tr><th>Area</th><th>Feature</th><th>Status</th><th>Where</th><th>Notes</th></tr></thead>'        ,
+                          '    <tbody>'                                                                                                   ,
+                          *rows                                                                                                           ,
+                          '    </tbody>'                                                                                                  ,
+                          '  </table>'                                                                                                    ])
+
+    def grouped_html(self):                                                       # one table per status, in the order shipped, proposed, absent
+        groups = self.by_status(self.features)
+        parts  = []
+        for status in STATUSES:
+            parts.append(f'  <h2 id="{status}">{status.capitalize()} ({len(groups[status])})</h2>')
+            parts.append(f'  <p>{html.escape(self.data["statuses"][status])}.</p>')
+            parts.append(self.table_html(status, features=groups[status]))
+        return '\n'.join(parts)
+
+    def status_line_html(self, ids):                                              # a content page's status line, from the features it describes
+        chips = []
+        for feature_id in [i.strip() for i in ids.split(',') if i.strip()]:
+            feature = next((f for f in self.features if f['id'] == feature_id), None)
+            if feature is None:
+                raise SystemExit(f'status block names unknown feature id "{feature_id}"')
+            chips.append(f'<span class="status status-{feature["status"]}">{self.status_label(feature)}</span> {html.escape(feature["title"])}')
+        return ('  <p class="status-line" data-generated-from="data/reality.json">Status, from <a href="/docs/reality.html">docs/reality.md</a>: '
+                + ' · '.join(chips) + '</p>')
+
+    def run(self):
+        changed = []
+        if self.pages.write_if_changed(REALITY_FILE, self.reality_markdown(), self.check):
+            changed.append('docs/reality.md')
+        for path in self.pages.html_files():
+            text = path.read_text(encoding='utf-8')
+            if not (self.pages.has_block(text, 'reality') or self.pages.has_block(text, 'status')):
+                continue
+            text, _ = self.pages.replace_blocks(text, 'reality', lambda attrs: self.grouped_html() if attrs.get('group') == 'status' else self.table_html(attrs.get('area', 'all')))
+            text, _ = self.pages.replace_blocks(text, 'status' , lambda attrs: self.status_line_html(attrs.get('ids', '')))
+            if self.pages.write_if_changed(path, text, self.check):
+                changed.append(path.relative_to(ROOT).as_posix())
+        return changed
+
+
+if __name__ == '__main__':
+    check   = '--check' in sys.argv
+    changed = Gen__Reality(check=check).run()
+    verb    = 'stale' if check else 'updated'
+    for name in changed:
+        print(f'  reality {verb}: {name}')
+    if check and changed:
+        print(f'gen_reality --check: {len(changed)} file(s) out of date; run python3 admin/build/gen_reality.py')
+        sys.exit(1)
+    print(f'gen_reality: {len(changed)} file(s) {verb}')

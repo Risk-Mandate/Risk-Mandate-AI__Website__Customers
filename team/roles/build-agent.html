@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Role: build agent</title>
+  <meta name="description" content="The build agent: the session that builds the site from the brief, under rules with a mistake behind each.">
+  <meta name="rm-customers:source" content="/team/roles/build-agent.md">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/team/roles/build-agent.html">
+  <link rel="alternate" type="text/markdown" href="/team/roles/build-agent.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/team/roles/build-agent.html">
+  <meta property="og:title" content="Role: build agent">
+  <meta property="og:description" content="The build agent: the session that builds the site from the brief, under rules with a mistake behind each.">
+  <meta name="rm-customers:version" content="0.1.0">
+  <meta name="rm-customers:released" content="2026-10-20">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <span class="stage-pill">first batch, being set up</span>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <a class="pagelink" href="/start-here/">Start here</a>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/credit/">Credit, and the meter</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+          </div>
+        </span>
+        <a class="pagelink" href="/customers/">Customers</a>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/admin/">Admin<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/docs/ops/needs.html">What needs a human</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <a class="version" href="/admin/versions.html" data-version="0.1.0" title="released 2026-10-20; what shipped in v0.1.0">v0.1.0</a>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/team/">The team</a> <span class="sep">/</span> <a href="/team/">Roles</a> <span class="sep">/</span> <span aria-current="page">Role</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap document">
+    <!-- rm-customers:docs:start -->
+<p class="doc-source">Rendered from <a href="/team/roles/build-agent.md">team/roles/build-agent.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.1.0.</p>
+<h1 id="role-build-agent">Role: build agent</h1>
+<p><em>customers.riskmandate.ai · the Claude Code session · written at v0.1.0 (2026-10-20) · CC BY 4.0</em></p>
+<p>The session that builds the site from the brief, one release at a time, under the rules below. It never pushes a release that fails the gate, never writes a secret or a contact detail into the tree, and never describes a thing in the present tense before <code>data/reality.json</code> says shipped.</p>
+<h2 id="rules-this-role-enforces-and-the-mistake-behind-each">Rules this role enforces, and the mistake behind each</h2>
+<table>
+<thead><tr><th>Rule</th><th>The mistake it came from</th></tr></thead>
+<tbody>
+<tr><td>Run <code>python3 admin/build/gate.py --build</code> before every commit; CI runs the same command.</td><td>A sibling site shipped two releases that reported success and never reached anyone; the gate and verify-live exist for that reason.</td></tr>
+<tr><td>Every number on a page is generated from a file or dated with the file it came from.</td><td>nfrs.sgit.ai&#x27;s rule: an index maintained by hand becomes a lie on a schedule. The counts, the batch table and reality are written by scripts.</td></tr>
+<tr><td>Never &quot;ADP&quot;, never &quot;the policy&quot; alone, no score on a behaviour policy, &quot;steps&quot; not &quot;rungs&quot;, British English.</td><td>riskmandate.ai&#x27;s rules, each with a reason on its own CLAUDE.md; the gate enforces them here, and the verbatim brief and memo are exempt.</td></tr>
+<tr><td>No contact details in any file; the gate fails on anything contact-shaped in the customer records.</td><td>The brief&#x27;s &quot;no customer is named&quot;; the repository is public.</td></tr>
+<tr><td>When the brief is wrong, record it in BRIEF-CORRECTIONS.md and carry on; never edit the brief or the memo.</td><td>The brief is the one that was accepted; the memo is the one that was said.</td></tr>
+<tr><td>When something needs a human, write exactly what, as a command, in needs.md, and continue with what does not depend on it.</td><td>A step that lives in a chat does not get done.</td></tr>
+<tr><td>The fix for a tripwire hit is a redaction, never a wider pattern.</td><td>A wider pattern hides the next real key.</td></tr>
+<tr><td>No em-dashes in prose the session writes; the gate says so as an advisory.</td><td>The house prose rule; the verbatim documents are exempt.</td></tr>
+<tr><td>A release is <code>site vX.Y.Z : what</code>, the version bumped, the note saying what changed and why.</td><td>&quot;UI improvements&quot; tells a reader nothing; the release history is the repository&#x27;s memory.</td></tr>
+</tbody>
+</table>
+<h2 id="starting-prompt">Starting prompt</h2>
+<p>&quot;Read README.md, docs/ops/release.md, docs/brief/BRIEF-CORRECTIONS.md and team/board.md. Continue from the first open row on the board that does not wait on the lead. Every release is <code>site vX.Y.Z : what</code> with the minor bumped and a <code>Kind:</code> trailer.&quot;</p>
+    <!-- rm-customers:docs:end -->
+  </main>
+  <!-- rm-customers:footer:start -->
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.1.0" title="released 2026-10-20; what shipped in v0.1.0">v0.1.0</a> · released 2026-10-20 · <a href="/admin/versions.html">releases</a> · <a href="/team/roles/build-agent.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/SGit-AI/SGit-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

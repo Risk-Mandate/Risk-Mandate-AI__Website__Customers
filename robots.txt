@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://customers.riskmandate.ai/sitemap.xml

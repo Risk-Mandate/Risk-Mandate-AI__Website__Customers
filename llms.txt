@@ -1,0 +1,65 @@
+# customers.riskmandate.ai
+
+> The first customers of the Agent Behaviour Policy: an early access programme run as a site, with a start-here page, a page per customer, credit to spend, the milestones agreed with each one, and a daily follow-up. Part of riskmandate.ai.
+
+Site version: v0.1.0 (2026-10-20). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/SGit-AI/SGit-AI__Website__Customers. Parent site: https://riskmandate.ai
+
+Every HTML page has a markdown twin at the same path with the extension swapped; links inside the markdown point at markdown, so an agent never has to parse HTML. What exists, is proposed or is deliberately absent is in /docs/reality.md, generated from data/reality.json on every release: if it is not listed there, it does not exist. Nothing on this site is described in the present tense before that file says shipped.
+
+Notes for agents:
+- The product is the Agent Behaviour Policy (ABP), never "ADP", and never "the policy" alone: say the ABP or the behaviour policy. An ABP carries no score. The milestones are steps, never "rungs".
+- No customer contact details are in this repository. The customer pages carry a handle, a kind, dates and counts; the rest is held privately by the lead.
+- Everything in the repository is public and nothing in it is secret; a leak tripwire in the release gate scans every file.
+- If your tooling cannot follow links, fetch /llms-full.txt: every page and document in one request.
+
+## Pages
+
+- [Our first customers: the early access programme for Agent Behaviour Policies, run as a site](/index.md): The first customers of the Agent Behaviour Policy, and the site we run the programme from: a start-here page, a page per customer with the objectives and milestones agreed with them, credit to spend, a daily follow-up, and a list for the next batch. Part of riskmandate.ai.
+- [Participant disclosure: who publishes this site, and why to read it with that in mind](/about/participant.md): This site is published by the people building the thing it describes: RiskMandate, whose product the programme sells, and the sgit project whose tooling the site runs on. What that means for the reader, and who did what.
+- [Admin: how the site is built, the generators, the eight-check gate and the four CI jobs](/admin/index.md): How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.
+- [Release history: one row per release, newest first, with what changed and why](/admin/versions.md): Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.
+- [Credit, and the meter: £5 or £50 to start, metered per use, topped up when the value is in view](/credit/index.md): How the credit works for a customer of the first batch: a starting amount, a meter that charges a few pence per use, a top-up link, and the two numbers we track, credit used and whether they topped up. Today the meter is the newsroom's; wiring it to this site is proposed and waits on the lead.
+- [The co-founder (Nimay Parekh, chief executive): where they are](/customers/co-founder/index.md): The co-founder (Nimay Parekh, chief executive): invited; started not yet; first behaviour policy not yet; 0 of 7 steps done. No contact details on this page.
+- [Example Co (a worked example, not a customer): where they are](/customers/example/index.md): A worked example of a customer page, with invented numbers, so the shape can be seen before the first customer fills it. Not a customer.
+- [The first batch: one row per customer, and a page for each, with no contact details](/customers/index.md): The customers of the first batch and where each is: started, first behaviour policy with its rows and gaps, milestone steps done, credit used and topped up, and follow-ups recorded. Generated from data/customers.json on every release. One worked example, marked as such, shows the shape.
+- [The lead (Dinis Cruz, co-founder): where they are](/customers/lead/index.md): The lead (Dinis Cruz, co-founder): starting; started 2026-10-20; first behaviour policy not yet; 2 of 7 steps done. No contact details on this page.
+- [The lead's agents (about ten, as one customer): where they are](/customers/the-agents/index.md): The lead's agents (about ten, as one customer): starting; started 2026-10-20; first behaviour policy not yet; 1 of 7 steps done. No contact details on this page.
+- [The brief](/docs/brief/index.md): The article this site was built from, published in full and never edited; the voice memo that followed it, byte for byte; and the corrections file, which is where the brief is told it was wrong.
+- [Documents: the brief, the memo, the corrections, reality, operations and the team](/docs/index.md): The documents this site was built from and the notes it is run by, published whole. Each is a markdown file in the repository, which is the source of truth, and a page rendered from it on every release.
+- [Operations](/docs/ops/index.md): How a release works, and what only a human can do, as commands where a command exists.
+- [The daily follow-up: three questions, an email a day if it helps, and a log on the customer page](/follow-up/index.md): How the hand-holding works for the first batch: a follow-up as often as daily, three questions each time (what they did, what got in the way, what is next), how the answers are recorded on the customer page in summary, and what stays private with the lead.
+- [What we want to discover: the usage moment, the simplest useful behaviour policy, the easiest entry, the fair price](/learning/index.md): The point of the programme is to find the usage moment, when an Agent Behaviour Policy becomes worth something to a particular person. Three questions follow from it, and this page holds them with a findings table that starts empty and is filled from the follow-ups, counted.
+- [The milestones: seven steps every customer walks, from in-with-credit to the usage moment](/milestones/index.md): The shared ladder of seven steps for the first batch, each with its objective, what done looks like and who does it: in with credit, one agent named, the grant, the mandate, the delta, the hooks half, and the usage moment. The objectives per customer are their own; the steps are the shared shape.
+- [The next batch: a list for everyone who asks, with what they want to use it for](/next-batch/index.md): This is not a launch; it is a first batch. Everyone who asks to join is kept on a list for the next one, with what they want to use it for. How to ask today (by email or the riskmandate.ai contact form), what we keep and what we never publish, and the form on this site that is proposed and not built.
+- [The programme: customers, not beta users; credit; a site of their own; hand-holding on purpose](/programme/index.md): What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.
+- [The review folder: the brief as stories, rules and examples, each anchored to the brief and to the page it lands on](/review/index.md): The intent half of the review folder: the brief and the memo read as stories, rules and examples, each node linked to the heading it came from and to the page on this site that realises it, with the counts. The derived half is proposed.
+- [Start here: what to do first, in order, as a customer of the first batch](/start-here/index.md): The page a customer reads first: what you need, the seven things to do in order, from naming one agent to telling us what the behaviour policy was worth, and what happens every day in between. Each step links to the thing that does it.
+- [The team](/team/index.md): Who does what, as one file per role with the rules it enforces and the mistake behind each, and the board of work.
+
+## The brief (the article it started from, the memo that followed, and where they were wrong)
+
+- [Brief corrections: where the brief and the memo were wrong, open, or decided differently](/docs/brief/BRIEF-CORRECTIONS.md)
+- [The memo of 20 October 2026: the first batch of users, and the next phase of RiskMandate](/docs/brief/memo-2026-10-20-user-onboarding-plan.md)
+- [Our first customers: an early access programme for Agent Behaviour Policies, with credit to spend, a start-here site, daily follow-up, and a list for the next batch](/docs/brief/our-first-customers.md)
+
+## Operations (how a release works, and what only a human can do)
+
+- [What only a human can do](/docs/ops/needs.md)
+- [How a release works](/docs/ops/release.md)
+
+## The team (roles as files, and the board)
+
+- [The team](/team/README.md)
+- [The board](/team/board.md)
+- [Role: build agent](/team/roles/build-agent.md)
+- [Role: customer follow-up](/team/roles/customer-follow-up.md)
+- [Role: project lead](/team/roles/project-lead.md)
+
+## The review folder (the brief as intent, and what is not derived yet)
+
+- [Corrections to the review brief, for this repository](/review/BRIEF-CORRECTIONS.md)
+- [review/: the brief as intent, and what is not derived yet](/review/README.md)
+
+## Reality
+
+- [What exists, by status](/docs/reality.md)

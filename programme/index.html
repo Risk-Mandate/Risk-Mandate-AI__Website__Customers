@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The programme: customers, not beta users; credit; a site of their own; hand-holding on purpose</title>
+  <meta name="description" content="What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/programme/">
+  <link rel="alternate" type="text/markdown" href="/programme/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/programme/">
+  <meta property="og:title" content="The programme: customers, not beta users; credit; a site of their own; hand-holding on purpose">
+  <meta property="og:description" content="What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.">
+  <meta name="rm-customers:version" content="0.1.0">
+  <meta name="rm-customers:released" content="2026-10-20">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <span class="stage-pill">first batch, being set up</span>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <a class="pagelink" href="/start-here/">Start here</a>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild active" href="/programme/" aria-current="page">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/credit/">Credit, and the meter</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+          </div>
+        </span>
+        <a class="pagelink" href="/customers/">Customers</a>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/admin/">Admin<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/docs/ops/needs.html">What needs a human</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <a class="version" href="/admin/versions.html" data-version="0.1.0" title="released 2026-10-20; what shipped in v0.1.0">v0.1.0</a>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">Customers, not beta users</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap">
+    <h1>Customers, <span class="g">not beta users.</span></h1>
+    <p class="lead">The brief thought about what to call the people in the first batch: "early access users", "beta users", "the first batch". Beta describes the state of the product. What we want to name is the relationship. So they are customers, and the programme is built around that word.</p>
+    <!-- rm-customers:status:start ids="programme.brief,programme.customers,programme.follow-up,programme.credit" -->
+  <p class="status-line" data-generated-from="data/reality.json">Status, from <a href="/docs/reality.html">docs/reality.md</a>: <span class="status status-shipped">shipped v0.1.0</span> The brief and the memo published in full, never edited, with the corrections file beside them · <span class="status status-shipped">shipped v0.1.0</span> A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details · <span class="status status-shipped">shipped v0.1.0</span> The daily follow-up: three questions, recorded on the customer page as a log · <span class="status status-proposed">proposed</span> Credit per customer, metered and billed on this site, with a top-up link</p>
+<!-- rm-customers:status:end -->
+
+    <h2>Why now</h2>
+    <p>We have a workflow that works: grant, mandate, delta and barrier, with a holder for every row. We have a mapping to what regulators are now asking for, worked through against the FCA's four elements in <a href="https://newsroom.sgit.ai/articles/inside-the-pellbridge-agents.html">the Pellbridge agents</a>. And we have a good understanding of how it should all fit together, from <a href="https://newsroom.sgit.ai/articles/a-policy-beside-the-prompt.html">a behaviour policy beside the prompt</a> to <a href="https://newsroom.sgit.ai/articles/a-policy-for-every-skill.html">one for every skill</a>. What is left is execution, and we have the people to execute it with: friendlies who are engaged and motivated. Some are consultants who are going to be selling this and already use some of it. Some are people the lead works with. Some of it is us.</p>
+
+    <h2>Each customer starts with credit</h2>
+    <p>Each of them starts with credit, £5 or £50 or whatever the number turns out to be, to spend on a site we run. From the first day, what they use is metered, and the question of what they would pay is a real one. That is the same idea as <a href="https://newsroom.sgit.ai/articles/paying-after-the-value.html">paying after the value</a>: the newsroom gives every reader £5 of credit, each page uses a few pence, and the reader decides when to top up with the value already in front of them. Give it for free until there is enough value that they want to pay for it. The other reason is the one in <a href="https://newsroom.sgit.ai/articles/can-you-sell-it.html">can you sell it?</a>: a customer who pays is the best signal you will get, and making it easy to pay goes in early, not at the end. <a href="/credit/">Credit, and the meter: what is wired and what is not →</a></p>
+
+    <h2>A site of their own</h2>
+    <p>One place where we can follow how everyone is getting on, and where the lead can keep things up to date. It starts with <a href="/start-here/">a start-here page</a>: what to do first, in order, with clear instructions. Then <a href="/customers/">a page for each customer</a>, with the objectives and milestones agreed with them, and where they are. The billing is already there on the newsroom; the same works for any site we run: even if all a customer does is use the website, we can measure it, and we can bill for it. The price per use is something to discover.</p>
+
+    <h2>Hand-holding, on purpose</h2>
+    <p>For this first batch we invest in following up: an email every day if that is what helps, very specific hand-holding, and objectives and milestones mapped out for each customer. That will not scale, and it is not meant to yet. Paul Graham made the case in <a href="https://paulgraham.com/ds.html">Do Things that Don't Scale</a> (July 2013): the most common unscalable thing founders have to do at the start is to recruit users manually, and you can give users an insanely great experience with an early, incomplete, buggy product if you make up the difference with attentiveness. Each follow-up asks three things: what they did, what got in the way, and what is next. <a href="/follow-up/">The follow-up →</a></p>
+
+    <h2>The first batch, after the memo</h2>
+    <p>The voice memo of the same day made the first batch concrete. The first users are the lead, the co-founder, and the agents the lead already runs, about ten of them, which are the ones that need behaviour policies. The programme is one people can propose to join, because capacity is limited. The behaviour policies are explicit ones that work with Claude and with ChatGPT, and they cover two of the three places a behaviour policy can run: the rows for the agent, and the rows for the hooks. The agent that is already wired in gets the responsibility and the requirement to produce the end behaviour policy. The milestone is to find behaviour policies that add value to these users, with the onboarding as smooth and effective as it can be made, to the point where it adds a lot of value and they understand what the behaviour policy is doing. <a href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo, verbatim →</a></p>
+
+    <h2>Batches, not a launch</h2>
+    <p>This is a first batch, small enough to follow closely. Alongside it we keep a list: everyone who asks to join is kept for the next batch, with what they want to use it for. The next batch gets a start-here page made from what the first one taught us, and needs less hand-holding per customer. <a href="/next-batch/">The next batch →</a></p>
+
+    <h2>What exists today, in this area</h2>
+    <p>From <a href="/docs/reality.html">docs/reality.md</a>, generated on every release. A row that says proposed is described on this site in the future tense only.</p>
+    <!-- rm-customers:reality:start area="programme" -->
+  <table class="reality" data-area="programme" data-generated-from="data/reality.json">
+    <thead><tr><th>Area</th><th>Feature</th><th>Status</th><th>Where</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>programme</td><td>The brief and the memo published in full, never edited, with the corrections file beside them</td><td><span class="status status-shipped">shipped v0.1.0</span></td><td>docs/brief/</td><td>The newsroom article of 20 October 2026 and the voice memo of the same day, byte for byte, with its digest.</td></tr>
+      <tr><td>programme</td><td>A start-here page: what a customer does first, in order, with the links to do it</td><td><span class="status status-shipped">shipped v0.1.0</span></td><td>start-here/index.html</td><td>The brief&#x27;s first fix for pages that were hard to understand; each customer will show where it still is.</td></tr>
+      <tr><td>programme</td><td>A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details</td><td><span class="status status-shipped">shipped v0.1.0</span></td><td>data/customers.json, admin/build/gen_customers.py, customers/</td><td>Start date, first behaviour policy with rows and gaps, steps done, credit used, topped up, and the follow-up log. One worked example, marked as such.</td></tr>
+      <tr><td>programme</td><td>Seven milestone steps shared across the batch, from in-with-credit to the usage moment</td><td><span class="status status-shipped">shipped v0.1.0</span></td><td>data/milestones.json, milestones/index.html</td><td>The objectives per customer are theirs; the steps are the shared shape so the batch reads in one table.</td></tr>
+      <tr><td>programme</td><td>The daily follow-up: three questions, recorded on the customer page as a log</td><td><span class="status status-shipped">shipped v0.1.0</span></td><td>follow-up/index.html, data/customers.json</td><td>What they did, what got in the way, what is next. Daily if that is what helps; the record is the summary.</td></tr>
+      <tr><td>programme</td><td>The three questions the programme exists to answer, with a findings table that starts empty</td><td><span class="status status-shipped">shipped v0.1.0</span></td><td>learning/index.html</td><td>The simplest useful behaviour policy, the entry point with least friction, the price that feels fair.</td></tr>
+      <tr><td>programme</td><td>Credit per customer, metered and billed on this site, with a top-up link</td><td><span class="status status-proposed">proposed</span></td><td>credit/index.html</td><td>The meter is the newsroom&#x27;s today (SG Meter, live since 11 October 2026); wiring it to this site needs the lead. Until then credit is a number on the customer page, kept by hand.</td></tr>
+      <tr><td>programme</td><td>A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent&#x27;s lane</td><td><span class="status status-proposed">proposed</span></td><td>next-batch/index.html</td><td>Today the route is the riskmandate.ai contact form or an email to agent@riskmandate.ai; the page says so.</td></tr>
+      <tr><td>programme</td><td>The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds</td><td><span class="status status-proposed">proposed</span></td><td>docs/ops/needs.md</td><td>Never in this repository. The public page carries the summary.</td></tr>
+      <tr><td>programme</td><td>A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in</td><td><span class="status status-proposed">proposed</span></td><td>customers/the-agents/</td><td>The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/.</td></tr>
+      <tr><td>programme</td><td>This site&#x27;s row on the honest column at nfrs.sgit.ai</td><td><span class="status status-proposed">proposed</span></td><td>docs/ops/needs.md</td><td>Another repository; the ask is recorded.</td></tr>
+      <tr><td>programme</td><td>Accounts, sign-in or a customer login on this site</td><td><span class="status status-absent">absent</span></td><td>nowhere</td><td>The site is static. The meter, when wired, carries its own reading account, as on the newsroom.</td></tr>
+      <tr><td>programme</td><td>Customer contact details, company names that are not already public, or private notes in this repository</td><td><span class="status status-absent">absent</span></td><td>nowhere</td><td>The gate fails on anything contact-shaped in data/customers.json.</td></tr>
+      <tr><td>programme</td><td>A score, rating or level on any behaviour policy</td><td><span class="status status-absent">absent</span></td><td>nowhere</td><td>An Agent Behaviour Policy describes and does not judge. The gate fails on the words.</td></tr>
+    </tbody>
+  </table>
+<!-- rm-customers:reality:end -->
+  </main>
+  <!-- rm-customers:footer:start -->
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.1.0" title="released 2026-10-20; what shipped in v0.1.0">v0.1.0</a> · released 2026-10-20 · <a href="/admin/versions.html">releases</a> · <a href="/programme/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/SGit-AI/SGit-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

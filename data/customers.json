@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "_comment": "The first batch, one record per customer. No contact details, no company names that are not already public, nothing a customer did not agree to show: a handle, a kind, the dates and counts the brief asks to track, the state of each milestone step, and the follow-up log as dates and three short answers. The lead holds the rest privately (a list, never committed; see docs/ops/needs.md). A record whose kind is example is a worked example of the page, not a customer. Rendered on /customers/ and one page per record by admin/build/gen_customers.py. Milestone states: open, in-progress, done (with a date).",
+  "kinds": {
+    "us": "one of the people building RiskMandate, using the programme on their own agents first",
+    "agents": "agents the lead already runs, which need behaviour policies of their own",
+    "consultant": "a consultant who will sell this, and already uses some of it",
+    "colleague": "a person the lead works with",
+    "example": "a worked example of a customer page; not a customer"
+  },
+  "statuses": {
+    "invited": "on the list; not yet started",
+    "starting": "started; before the first behaviour policy",
+    "active": "has written a first behaviour policy; working the steps",
+    "usage-moment": "has said what it is worth",
+    "paused": "stopped for now, with a reason on the page",
+    "example": "a worked example; not a customer"
+  },
+  "customers": [
+    {
+      "id": "lead",
+      "handle": "The lead (Dinis Cruz, co-founder)",
+      "kind": "us",
+      "status": "starting",
+      "started": "2026-10-20",
+      "agent": "Claude Code, on a laptop and on the web, with the connectors the sessions hold; nearest published shape: Claude Code on the web.",
+      "credit": { "granted": 5, "currency": "GBP", "used": 0, "topped_up": false, "note": "credit is a starting point; the meter is the newsroom's, not yet this site's" },
+      "first_policy": null,
+      "objectives": [
+        "Prove the workflow on the agents we run before asking anyone else to.",
+        "Find the simplest behaviour policy that is useful on a Claude Code session."
+      ],
+      "milestones": { "S0": { "state": "done", "date": "2026-10-20" }, "S1": { "state": "done", "date": "2026-10-20" }, "S2": { "state": "open" }, "S3": { "state": "open" }, "S4": { "state": "open" }, "S5": { "state": "open" }, "S6": { "state": "open" } },
+      "follow_ups": [
+        { "date": "2026-10-20", "did": "Set the programme up: the brief, the memo, this site.", "blocked": "The meter and the credit are not wired to this site yet.", "next": "Measure the grant of one Claude Code session with MAP-A-GRANT.md." }
+      ]
+    },
+    {
+      "id": "co-founder",
+      "handle": "The co-founder (Nimay Parekh, chief executive)",
+      "kind": "us",
+      "status": "invited",
+      "started": null,
+      "agent": "To be named: the assistant connected to mail or the browser; nearest published shape to be chosen at S1.",
+      "credit": { "granted": 5, "currency": "GBP", "used": 0, "topped_up": false, "note": "credit is a starting point; the meter is the newsroom's, not yet this site's" },
+      "first_policy": null,
+      "objectives": [
+        "Experience the start-here page as a customer would, and say where it is hard to understand."
+      ],
+      "milestones": { "S0": { "state": "in-progress" }, "S1": { "state": "open" }, "S2": { "state": "open" }, "S3": { "state": "open" }, "S4": { "state": "open" }, "S5": { "state": "open" }, "S6": { "state": "open" } },
+      "follow_ups": []
+    },
+    {
+      "id": "the-agents",
+      "handle": "The lead's agents (about ten, as one customer)",
+      "kind": "agents",
+      "status": "starting",
+      "started": "2026-10-20",
+      "agent": "About ten agents the lead already runs: the site publishers across the sgit.ai network, the newsroom writer, the inbox agent, the Claude Code sessions. Each needs a behaviour policy of its own; two already have one on riskmandate.ai/team/.",
+      "credit": { "granted": 0, "currency": "GBP", "used": 0, "topped_up": false, "note": "the agents spend nothing; the measure for them is a behaviour policy each" },
+      "first_policy": null,
+      "objectives": [
+        "A behaviour policy for every agent the lead runs, in the same grammar as the two on riskmandate.ai/team/.",
+        "The agent that is wired in takes on the responsibility of producing the end behaviour policy for each of the others."
+      ],
+      "milestones": { "S0": { "state": "done", "date": "2026-10-20" }, "S1": { "state": "in-progress" }, "S2": { "state": "open" }, "S3": { "state": "open" }, "S4": { "state": "open" }, "S5": { "state": "open" }, "S6": { "state": "open" } },
+      "follow_ups": [
+        { "date": "2026-10-20", "did": "Counted: two of about ten agents have a behaviour policy (the publisher and the design studio, on riskmandate.ai/team/).", "blocked": "No list of the ten yet, with the shape each is nearest to.", "next": "List the agents, one line each, with the published shape it is nearest to." }
+      ]
+    },
+    {
+      "id": "example",
+      "handle": "Example Co (a worked example, not a customer)",
+      "kind": "example",
+      "status": "example",
+      "started": "2026-10-01",
+      "agent": "An assistant connected to a shared mailbox, read-only scope; nearest published shape: Gmail at read-only scope.",
+      "credit": { "granted": 50, "currency": "GBP", "used": 12, "topped_up": false, "note": "invented numbers, to show the page" },
+      "first_policy": { "date": "2026-10-04", "rows": 9, "gaps": 4 },
+      "objectives": [
+        "Know what the mailbox assistant can reach before the quarterly review.",
+        "Turn the two rules in the team's wiki into rows with a barrier each."
+      ],
+      "milestones": { "S0": { "state": "done", "date": "2026-10-01" }, "S1": { "state": "done", "date": "2026-10-02" }, "S2": { "state": "done", "date": "2026-10-03" }, "S3": { "state": "done", "date": "2026-10-04" }, "S4": { "state": "done", "date": "2026-10-04" }, "S5": { "state": "in-progress" }, "S6": { "state": "open" } },
+      "follow_ups": [
+        { "date": "2026-10-02", "did": "Named the agent and read the nearest example.", "blocked": "Could not tell which scope the connector was granted.", "next": "Run the first try-it prompt to list the tools." },
+        { "date": "2026-10-04", "did": "Wrote the mandate; corrected two rows downward.", "blocked": "Nothing.", "next": "Read the delta and name the row that surprised them." }
+      ]
+    }
+  ]
+}

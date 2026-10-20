@@ -1,0 +1,1673 @@
+# customers.riskmandate.ai
+
+> The first customers of the Agent Behaviour Policy: an early access programme run as a site, with a start-here page, a page per customer, credit to spend, the milestones agreed with each one, and a daily follow-up. Part of riskmandate.ai.
+
+Site version: v0.1.0 (2026-10-20). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/SGit-AI/SGit-AI__Website__Customers. Parent site: https://riskmandate.ai
+
+Every HTML page has a markdown twin at the same path with the extension swapped; links inside the markdown point at markdown, so an agent never has to parse HTML. What exists, is proposed or is deliberately absent is in /docs/reality.md, generated from data/reality.json on every release: if it is not listed there, it does not exist. Nothing on this site is described in the present tense before that file says shipped.
+
+Notes for agents:
+- The product is the Agent Behaviour Policy (ABP), never "ADP", and never "the policy" alone: say the ABP or the behaviour policy. An ABP carries no score. The milestones are steps, never "rungs".
+- No customer contact details are in this repository. The customer pages carry a handle, a kind, dates and counts; the rest is held privately by the lead.
+- Everything in the repository is public and nothing in it is secret; a leak tripwire in the release gate scans every file.
+- If your tooling cannot follow links, fetch /llms-full.txt: every page and document in one request.
+
+
+==============================================================================
+source: /index.md
+==============================================================================
+
+# Our first customers: the early access programme for Agent Behaviour Policies, run as a site
+
+> The first customers of the Agent Behaviour Policy, and the site we run the programme from: a start-here page, a page per customer with the objectives and milestones agreed with them, credit to spend, a daily follow-up, and a list for the next batch. Part of riskmandate.ai.
+
+*Source: <https://customers.riskmandate.ai/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+Early access · the first batch
+
+# Our first customers, and the site we follow them from.
+
+Agent Behaviour Policies are ready for the next level, and the next level is execution. Execution starts with customers: a small first batch, each with **credit to spend**, **objectives and milestones written with them**, and **a follow-up every day** if that is what helps. This site is where that happens: what to do first, where each customer is, and what we are learning.
+
+[Start here](/start-here/index.md) [The first batch](/customers/index.md) [The brief, in full](/docs/brief/our-first-customers.md)
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 A start-here page: what a customer does first, in order, with the links to do it · shipped v0.1.0 A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details · proposed Credit per customer, metered and billed on this site, with a top-up link · proposed A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane
+
+## Where the batch is, counted from the data.
+
+Every number below is read from `data/customers.json` on every release; nothing is typed. The one worked example is not counted.
+
+**3**customers in the first batch
+**2**started
+**0**first behaviour policies written
+**3 of 21**milestone steps done
+**£0 of £10**credit used
+**0**topped up
+**2**follow-ups recorded
+
+[The batch, one row per customer, and a page for each →](/customers/index.md)
+
+## In short: the brief, in seven lines.
+
+- **Agent Behaviour Policies are ready for the next level.** The workflow, the mapping to what regulators ask for, and the understanding of how it fits together are in place.
+- **What is left is execution, and execution starts with customers.** Consultants who will sell this and already use some of it, people the lead works with, and us.
+- **Call them customers, not beta users.** Beta describes the product; customer names the relationship. Each starts with credit on a site that meters and bills. [The programme →](/programme/index.md)
+- **Follow each one closely.** Daily if needed, with objectives and milestones of their own, and three questions each time. [The follow-up →](/follow-up/index.md)
+- **A dedicated site with a start-here page.** Instructions, progress and usage in one place. You are on it. [Start here →](/start-here/index.md)
+- **Discover the usage moment.** The simplest useful behaviour policy, the easiest entry, a fair price. [What we want to discover →](/learning/index.md)
+- **A mailing list for the next batch.** Everyone who asks, kept for when we are ready. [The next batch →](/next-batch/index.md)
+
+## The first batch is us, then the people we already work with.
+
+The voice memo that followed the brief the same day named the first users: the two founders and the agents the lead already runs, about ten of them, each needing a behaviour policy of its own. The first work is two of the three places a behaviour policy can run: the rows the agent follows, and the rows the harness holds as hooks, for Claude and for ChatGPT. The milestone is a behaviour policy that adds value to a particular person, who understands what it is doing. [The memo →](/docs/brief/memo-2026-10-20-user-onboarding-plan.md)
+
+The product**The Agent Behaviour Policy**
+
+For one agent in one deployment: everything it can reach, what you authorised, the gap, and what stands in the way. It describes and does not judge, so it carries no score. [What an ABP is ↗](https://riskmandate.ai/abp.html)
+
+The steps**Seven milestones, shared across the batch**
+
+From in-with-credit to the usage moment, so progress reads in one table while the objectives stay each customer's own. [The steps →](/milestones/index.md)
+
+The credit**£5 or £50 to start, metered**
+
+Give it for free until there is enough value that they want to pay. The meter is the newsroom's today; wiring it here is proposed. [Credit, and the meter →](/credit/index.md)
+
+The record**Everything public, nothing private**
+
+The brief in full, where it was wrong, what exists, and a page per customer with no contact details on it. [The documents →](/docs/index.md)
+
+## What this site does not claim.
+
+- **The programme is new.** The site exists; the prices are starting points to test; the metering is the newsroom's and not yet this site's.
+- **No customer is named who did not agree to be.** The first group is people we already work with. Contact details are never in this repository.
+- **What exists is listed, and only that.** [docs/reality.md](/docs/reality.md) is generated on every release; if it is not there, it does not exist.
+- **Everything is open.** The brief, the data shapes and this site are CC BY 4.0; the code is Apache-2.0. This site is published by the people building the thing it describes: [the participant disclosure](/about/participant.md).
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/)*
+
+
+==============================================================================
+source: /about/participant.md
+==============================================================================
+
+# Participant disclosure
+
+> This site is published by the people building the thing it describes: RiskMandate, whose product the programme sells, and the sgit project whose tooling the site runs on. What that means for the reader, and who did what.
+
+*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+This site is published by the people building the thing it describes. Read its claims with that in mind.
+
+customers.riskmandate.ai is a sub-site of [riskmandate.ai](https://riskmandate.ai), run by RiskMandate's two founders, Nimay Parekh and Dinis Cruz, whose product, the Agent Behaviour Policy, is what the programme's customers use. The site is built in the open by a Claude Code session working from a published brief, on tooling from the [sgit.ai](https://sgit.ai) network of sites, which the same people build. The site therefore has an interest in the programme succeeding and in the product being adopted.
+
+## What that means for the reader
+
+- **Every claim carries a status** from `data/reality.json`: shipped with a version, proposed, or absent. [docs/reality.md](/docs/reality.md) and the status lines on the pages are generated from it and cannot disagree with each other.
+- **The brief is published in full**, with [what it got wrong](/docs/brief/BRIEF-CORRECTIONS.md) beside it, so the site can be checked against something other than its own claims.
+- **Every number is counted.** The counts on the home page and the batch table are read from the data on every release; a number in prose names the file it came from and the day.
+- **No customer is named who did not agree to be,** and no contact details are in the repository, which is public at [SGit-AI/SGit-AI__Website__Customers](https://github.com/SGit-AI/SGit-AI__Website__Customers).
+
+## Who did what
+
+The brief was written by Dinis Cruz, from a voice memo, by the newsroom's agent, and accepted by him; the memo of the same day is his words, transcribed. The site, its pipeline and its content pages are written by a Claude Code session under the rules in [the build agent's role file](/team/roles/build-agent.md); the person's decisions are recorded in [the project lead's](/team/roles/project-lead.md). Pages are CC BY 4.0; code is Apache-2.0.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/about/participant.html)*
+
+
+==============================================================================
+source: /admin/index.md
+==============================================================================
+
+# How the site is built
+
+> How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.
+
+*Source: <https://customers.riskmandate.ai/admin/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+A static site, served byte for byte from this repository by GitHub Pages. There is no build step at deploy time: seven small generators run before a commit and keep the parts that must agree in agreement, and a gate refuses the push when they do not.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 One version in admin/build/version.txt, a release history, and four CI jobs: validate, tag, deploy, verify live · shipped v0.1.0 The RiskMandate chrome (head, header, breadcrumbs, footer, CSP) generated into every page from one definition · shipped v0.1.0 A markdown twin for every page, llms.txt, llms-full.txt and sitemap.xml, generated from the pages · shipped v0.1.0 The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words · shipped v0.1.0 The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered · proposed The derived half of the review folder: the code graph from parsers, the join with a coverage figure, every commit read upwards, the navigator as web components
+
+## The one-screen version
+
+```
+pip install pytest                        # the gate's only Python dependency; Node 22 and Python 3.11+ otherwise
+python3 admin/build/gate.py --build       # regenerate everything, then run the whole gate
+python3 admin/build/gate.py               # what CI runs: check mode only
+python3 -m http.server 8000               # serve the tree locally; there is no build step
+python3 admin/build/release.py --version 0.2.0 --kind feature --title "what" --notes "why"   # bump, build, gate, commit, push, verify live
+```
+
+## The generators, in order
+
+| Generator | Reads | Writes |
+|---|---|---|
+| `gen_customers.py` | `data/customers.json`, `data/milestones.json` | a page per customer, the batch table, the steps, the counts on the home page |
+| `gen_reality.py` | `data/reality.json` | `docs/reality.md`, the status lines and tables on the pages |
+| `gen_docs.py` | `docs/**/*.md`, `team/**/*.md`, `review/*.md` | an HTML page beside each, and an index page per folder |
+| `review/tools/` | the brief, `review/intent/stories.json` | `review/intent/sections.json`, the review page; validates the intent files |
+| `gen_chrome.py` | `chrome.py`, `version.txt`, `CNAME` | the head, header, breadcrumbs and footer of every page |
+| `gen_versions.py` | `data/versions.json` | the release table on [the release history](/admin/versions.md) |
+| `gen_twins.py` | every page's `<main>` | the markdown twin beside it |
+| `gen_llms.py` | every page and document | `llms.txt`, `llms-full.txt`, `sitemap.xml` |
+
+## The eight checks of the gate
+
+In `admin/build/validate.js`, with no dependency beyond Node. Every problem of every check is printed before the run fails, so one run shows everything.
+
+1. **Version agreement.** `version.txt`, every badge, the release table, the indexes and the home twin say the same version.
+2. **Internal links, fragments and no orphans.** Every link resolves against the real tree; every fragment exists; a page nothing links to fails, because an orphan is unpublished.
+3. **Canonical host.** Every page's canonical URL and og:url are on the CNAME host and agree.
+4. **The leak tripwire.** sgit key shapes, write tokens, cloud key prefixes, private key blocks, append tokens, bare account numbers, against every text file. The fix for a trip is a redaction, never a wider pattern.
+5. **No runtime foreign origin.** No script, style or import from another origin; every script parses; no inline script or style, because the content security policy forbids them.
+6. **The data holds together.** Every customer record has a page and every page a record; the milestones name the ladder; no contact details; the versions file is valid.
+7. **Reality regenerates identically.** `docs/reality.md` and the status tables are what `data/reality.json` says.
+8. **The house words.** riskmandate.ai's rules: never "ADP", never "the policy" alone, no score on a behaviour policy, "steps" not "rungs", British spelling, customers not "beta users". The verbatim brief and memo are exempt.
+
+Plus an advisory that never fails the build: em-dashes in prose we write. Then `pytest tests/build/` (the chrome on every page, the twins, the customer data, the converters) and `node --test tests/unit/` (the gate's own helpers).
+
+## The four CI jobs
+
+| Job | When | Does | On failure |
+|---|---|---|---|
+| `validate` | every push to `dev` or `main`, every pull request, manual dispatch | `python3 admin/build/gate.py` | nothing is tagged or deployed |
+| `tag-release` | push to `dev` only | asserts `version.txt` equals the newest `site vX.Y.Z : …` commit subject and that the bump is the next minor, a patch or a major; tags; backfills; pushes the tags | no deploy |
+| `deploy` | any push or dispatch, never a pull request | copies the tree minus `.git`, `.github`, `tests/unit` into the Pages artifact and deploys it | the previous version stays live |
+| `verify-live` | after deploy | polls `https://customers.riskmandate.ai/admin/build/version.txt` and the home page badge, with a cache-buster, until both equal the version, for up to ten minutes | the run is red: green does not mean live |
+
+The whole of it is in [how a release works](/docs/ops/release.md). What only a human can do, starting with the DNS record for this host, is in [what needs a human](/docs/ops/needs.md).
+
+## Where this came from
+
+The pipeline is copied from [secrets.sgit.ai](https://secrets.sgit.ai/admin/), the newest gate in the sgit.ai estate, as [every sgit repository](https://sgit.ai/docs/guidance/repositories.html) says a new repository should do first; the look and the house words are [riskmandate.ai](https://riskmandate.ai)'s, because this is a sub-site of it. What was changed and why is in [the corrections file](/docs/brief/BRIEF-CORRECTIONS.md).
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/admin/)*
+
+
+==============================================================================
+source: /admin/versions.md
+==============================================================================
+
+# Release history
+
+> Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.
+
+*Source: <https://customers.riskmandate.ai/admin/versions.html> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+One row per release, newest first. The version lives in `admin/build/version.txt`, goes up on every push to `dev`, and is the commit subject, `site vX.Y.Z : what`. CI tags the commit and deploys it, and then checks the live host serves it. The note says what changed and why, not "UI improvements".
+
+| Version | Date | Release | What changed, and why |
+|---|---|---|---|
+| `v0.1.0` | 2026-10-20 | the first customers site: the brief, the start-here page, the batch, the steps and the gate | The site exists, as customers.riskmandate.ai, a sub-site of riskmandate.ai, built from the newsroom brief of 20 October 2026 and the voice memo that followed it the same day. What is here: the brief published in full with its corrections file beside it; a start-here page in order; the programme pages (customers not beta users, credit and the meter, the seven milestone steps, the daily follow-up, what we want to discover, the next batch); a page per customer generated from data/customers.json with no contact details in it; the reality file; the team as files; the review folder with the brief as intent; and the eight-check gate with a leak tripwire and the house words. What is not here: the meter (the newsroom's, not yet wired to this site), a form, any customer's private details, and the derived half of the review folder. Every number on a page is counted from a file. |
+
+The release records in `data/versions.json` also carry, once CI has run, the commit, the Actions run and whether verify-live passed; the release script fills them in at the next release. [How a release works →](/docs/ops/release.md)
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/admin/versions.html)*
+
+
+==============================================================================
+source: /credit/index.md
+==============================================================================
+
+# Credit, and the meter.
+
+> How the credit works for a customer of the first batch: a starting amount, a meter that charges a few pence per use, a top-up link, and the two numbers we track, credit used and whether they topped up. Today the meter is the newsroom's; wiring it to this site is proposed and waits on the lead.
+
+*Source: <https://customers.riskmandate.ai/credit/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+Each customer starts with credit to spend on a site we run. What they use is metered from the first day, so the question of what they would pay is a real one, asked with the value already in front of them.
+
+Status, from [docs/reality.md](/docs/reality.md): proposed Credit per customer, metered and billed on this site, with a top-up link · absent Accounts, sign-in or a customer login on this site
+
+## How it is meant to work
+
+1. **A starting amount.**
+
+£5 or £50; the brief says the number is to be discovered. The lead records it on the customer page at milestone S0.
+
+2. **A meter on the site.**
+
+The newsroom's meter, [SG Meter](https://newsroom.sgit.ai/meter/), charges a reader's balance a few pence per page and lets it go negative; the reader decides when to top up. The top-up link has been live there since 11 October 2026. The same meter works for any site we run.
+
+3. **Two numbers.**
+
+Credit used, and whether they topped up. Both are on the customer page and in the batch table, and both are what the price question is answered from.
+
+4. **The price, discovered.**
+
+The credit tells us how much each customer uses before they would top up; the follow-up tells us why. It could be quite high, or quite low. We start with credit and learn what feels fair.
+
+## What is wired today, and what is not
+
+**The meter is real; it is the newsroom's, not yet this site's.** Until the lead wires SG Meter to customers.riskmandate.ai, the credit on a customer page is a number kept by hand in `data/customers.json`, changed by a release. The steps that only a human can do are in [what needs a human](/docs/ops/needs.md).
+
+This site has no accounts and no sign-in, and that is deliberate: it is static. When the meter is wired, the reading account is the meter's, as it is on the newsroom, and this site stays as it is.
+
+## Why credit rather than a price
+
+Most purchases are bets on future value; a balance that can go negative asks for payment when the value is already in view. That is the experiment the newsroom runs, in [paying after the value](https://newsroom.sgit.ai/articles/paying-after-the-value.html). And a customer who pays is the best signal you will get, which is why making it easy to pay goes in early, in [can you sell it?](https://newsroom.sgit.ai/articles/can-you-sell-it.html). The point of the programme is not the sale. It is what we learn trying.
+
+## What the store already sells
+
+The Agent Behaviour Policy is for sale on riskmandate.ai at [four levels, £10 to £1,500](https://riskmandate.ai/pricing.html): a pack, a working vault, one corrected for your situation, and one a professional signs. The programme's credit is a different question: not which level, but what a use of the site is worth, a few pence at a time, to a particular person.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/credit/)*
+
+
+==============================================================================
+source: /customers/co-founder/index.md
+==============================================================================
+
+# The co-founder (Nimay Parekh, chief executive)
+
+> The co-founder (Nimay Parekh, chief executive): invited; started not yet; first behaviour policy not yet; 0 of 7 steps done. No contact details on this page.
+
+*Source: <https://customers.riskmandate.ai/customers/co-founder/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+One of the people building RiskMandate, using the programme on their own agents first. Status: **invited**, on the list; not yet started.
+
+## What the brief asks us to track
+
+**Started**
+: not yet
+**The agent**
+: To be named: the assistant connected to mail or the browser; nearest published shape to be chosen at S1.
+**First behaviour policy**
+: not yet
+**Milestone steps done**
+: 0 of 7
+**Credit**
+: £0 used of £5 granted; not topped up (credit is a starting point; the meter is the newsroom's, not yet this site's)
+**Follow-ups recorded**
+: 0
+
+## Objectives agreed with them
+
+- Experience the start-here page as a customer would, and say where it is hard to understand.
+
+## The steps
+
+The shared ladder is on [the milestones page](/milestones/index.md); the state of each step for this customer is here.
+
+| Step | Milestone | State |
+|---|---|---|
+| [S0](/milestones/index.md#S0) | In, with credit | in-progress |
+| [S1](/milestones/index.md#S1) | One agent named | open |
+| [S2](/milestones/index.md#S2) | The grant, measured or documented | open |
+| [S3](/milestones/index.md#S3) | The mandate, in the customer's words | open |
+| [S4](/milestones/index.md#S4) | The delta, and the first finding | open |
+| [S5](/milestones/index.md#S5) | The hooks half: what the harness holds | open |
+| [S6](/milestones/index.md#S6) | The usage moment | open |
+
+## The follow-up log
+
+Each follow-up asks three things: what they did, what got in the way, and what is next. Newest first. The record here is the summary; anything private stays with the lead.
+
+No follow-up recorded yet.
+
+**What is not on this page.** No contact details, no private notes, nothing the customer did not agree to show. The source is `data/customers.json`; a change to it is a release, so the history of this page is the history of the repository.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/customers/co-founder/)*
+
+
+==============================================================================
+source: /customers/example/index.md
+==============================================================================
+
+# Example Co (a worked example, not a customer)
+
+> A worked example of a customer page, with invented numbers, so the shape can be seen before the first customer fills it. Not a customer.
+
+*Source: <https://customers.riskmandate.ai/customers/example/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+A worked example of a customer page; not a customer. Status: **example**, a worked example; not a customer.
+
+**A worked example.** The numbers on this page are invented to show the shape of a customer page. Nothing here describes a real person or organisation.
+
+## What the brief asks us to track
+
+**Started**
+: 2026-10-01
+**The agent**
+: An assistant connected to a shared mailbox, read-only scope; nearest published shape: Gmail at read-only scope.
+**First behaviour policy**
+: 2026-10-04: 9 rows, 4 gaps
+**Milestone steps done**
+: 5 of 7
+**Credit**
+: £12 used of £50 granted; not topped up (invented numbers, to show the page)
+**Follow-ups recorded**
+: 2
+
+## Objectives agreed with them
+
+- Know what the mailbox assistant can reach before the quarterly review.
+- Turn the two rules in the team's wiki into rows with a barrier each.
+
+## The steps
+
+The shared ladder is on [the milestones page](/milestones/index.md); the state of each step for this customer is here.
+
+| Step | Milestone | State |
+|---|---|---|
+| [S0](/milestones/index.md#S0) | In, with credit | done 2026-10-01 |
+| [S1](/milestones/index.md#S1) | One agent named | done 2026-10-02 |
+| [S2](/milestones/index.md#S2) | The grant, measured or documented | done 2026-10-03 |
+| [S3](/milestones/index.md#S3) | The mandate, in the customer's words | done 2026-10-04 |
+| [S4](/milestones/index.md#S4) | The delta, and the first finding | done 2026-10-04 |
+| [S5](/milestones/index.md#S5) | The hooks half: what the harness holds | in-progress |
+| [S6](/milestones/index.md#S6) | The usage moment | open |
+
+## The follow-up log
+
+Each follow-up asks three things: what they did, what got in the way, and what is next. Newest first. The record here is the summary; anything private stays with the lead.
+
+| Date | What they did | What got in the way | What is next |
+|---|---|---|---|
+| 2026-10-04 | Wrote the mandate; corrected two rows downward. | Nothing. | Read the delta and name the row that surprised them. |
+| 2026-10-02 | Named the agent and read the nearest example. | Could not tell which scope the connector was granted. | Run the first try-it prompt to list the tools. |
+
+**What is not on this page.** No contact details, no private notes, nothing the customer did not agree to show. The source is `data/customers.json`; a change to it is a release, so the history of this page is the history of the repository.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/customers/example/)*
+
+
+==============================================================================
+source: /customers/index.md
+==============================================================================
+
+# The first batch, and where each customer is.
+
+> The customers of the first batch and where each is: started, first behaviour policy with its rows and gaps, milestone steps done, credit used and topped up, and follow-ups recorded. Generated from data/customers.json on every release. One worked example, marked as such, shows the shape.
+
+*Source: <https://customers.riskmandate.ai/customers/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+One row per customer, with the fields the brief asks us to track, and a page for each with the objectives agreed with them, the state of every milestone step and the follow-up log. The table and the pages are generated from `data/customers.json`; a change to the data is a release.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details · absent Customer contact details, company names that are not already public, or private notes in this repository
+
+| Customer | Kind | Status | Started | First behaviour policy | Steps done | Credit | Follow-ups |
+|---|---|---|---|---|---|---|---|
+| [The lead (Dinis Cruz, co-founder)](/customers/lead/index.md) | us | starting | 2026-10-20 | not yet | 2 of 7 | £0 used of £5 granted; not topped up (credit is a starting point; the meter is the newsroom's, not yet this site's) | 1 |
+| [The co-founder (Nimay Parekh, chief executive)](/customers/co-founder/index.md) | us | invited | not yet | not yet | 0 of 7 | £0 used of £5 granted; not topped up (credit is a starting point; the meter is the newsroom's, not yet this site's) | 0 |
+| [The lead's agents (about ten, as one customer)](/customers/the-agents/index.md) | agents | starting | 2026-10-20 | not yet | 1 of 7 | none (the agents spend nothing; the measure for them is a behaviour policy each) | 1 |
+| [Example Co (a worked example, not a customer)](/customers/example/index.md) | example | example | 2026-10-01 | 2026-10-04: 9 rows, 4 gaps | 5 of 7 | £12 used of £50 granted; not topped up (invented numbers, to show the page) | 2 |
+
+## Who is in the first batch
+
+The memo of 20 October named the first users: the lead, the co-founder, and the agents the lead already runs, about ten, counted here as one customer because the measure for them is a behaviour policy each. The brief named two more groups, not yet listed: consultants who will sell this and already use some of it, and people the lead works with. They are added as records when they start, by their own handle, and nothing about them is published without their yes.
+
+## What a record carries, and what it never does
+
+- **Carries:** a handle, a kind, a status, the start date, the agent in a sentence, the credit granted and used, the first behaviour policy's date with its row and gap counts, the state of each of the seven steps, the objectives, and the follow-ups as date plus three sentences.
+- **Never:** an email address, a phone number, a profile link, a company name that is not already public, the contents of a grant or a mandate, or a private note. The gate fails the build on anything contact-shaped in the file.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/customers/)*
+
+
+==============================================================================
+source: /customers/lead/index.md
+==============================================================================
+
+# The lead (Dinis Cruz, co-founder)
+
+> The lead (Dinis Cruz, co-founder): starting; started 2026-10-20; first behaviour policy not yet; 2 of 7 steps done. No contact details on this page.
+
+*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+One of the people building RiskMandate, using the programme on their own agents first. Status: **starting**, started; before the first behaviour policy.
+
+## What the brief asks us to track
+
+**Started**
+: 2026-10-20
+**The agent**
+: Claude Code, on a laptop and on the web, with the connectors the sessions hold; nearest published shape: Claude Code on the web.
+**First behaviour policy**
+: not yet
+**Milestone steps done**
+: 2 of 7
+**Credit**
+: £0 used of £5 granted; not topped up (credit is a starting point; the meter is the newsroom's, not yet this site's)
+**Follow-ups recorded**
+: 1
+
+## Objectives agreed with them
+
+- Prove the workflow on the agents we run before asking anyone else to.
+- Find the simplest behaviour policy that is useful on a Claude Code session.
+
+## The steps
+
+The shared ladder is on [the milestones page](/milestones/index.md); the state of each step for this customer is here.
+
+| Step | Milestone | State |
+|---|---|---|
+| [S0](/milestones/index.md#S0) | In, with credit | done 2026-10-20 |
+| [S1](/milestones/index.md#S1) | One agent named | done 2026-10-20 |
+| [S2](/milestones/index.md#S2) | The grant, measured or documented | open |
+| [S3](/milestones/index.md#S3) | The mandate, in the customer's words | open |
+| [S4](/milestones/index.md#S4) | The delta, and the first finding | open |
+| [S5](/milestones/index.md#S5) | The hooks half: what the harness holds | open |
+| [S6](/milestones/index.md#S6) | The usage moment | open |
+
+## The follow-up log
+
+Each follow-up asks three things: what they did, what got in the way, and what is next. Newest first. The record here is the summary; anything private stays with the lead.
+
+| Date | What they did | What got in the way | What is next |
+|---|---|---|---|
+| 2026-10-20 | Set the programme up: the brief, the memo, this site. | The meter and the credit are not wired to this site yet. | Measure the grant of one Claude Code session with MAP-A-GRANT.md. |
+
+**What is not on this page.** No contact details, no private notes, nothing the customer did not agree to show. The source is `data/customers.json`; a change to it is a release, so the history of this page is the history of the repository.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/customers/lead/)*
+
+
+==============================================================================
+source: /customers/the-agents/index.md
+==============================================================================
+
+# The lead's agents (about ten, as one customer)
+
+> The lead's agents (about ten, as one customer): starting; started 2026-10-20; first behaviour policy not yet; 1 of 7 steps done. No contact details on this page.
+
+*Source: <https://customers.riskmandate.ai/customers/the-agents/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+Agents the lead already runs, which need behaviour policies of their own. Status: **starting**, started; before the first behaviour policy.
+
+## What the brief asks us to track
+
+**Started**
+: 2026-10-20
+**The agent**
+: About ten agents the lead already runs: the site publishers across the sgit.ai network, the newsroom writer, the inbox agent, the Claude Code sessions. Each needs a behaviour policy of its own; two already have one on riskmandate.ai/team/.
+**First behaviour policy**
+: not yet
+**Milestone steps done**
+: 1 of 7
+**Credit**
+: none (the agents spend nothing; the measure for them is a behaviour policy each)
+**Follow-ups recorded**
+: 1
+
+## Objectives agreed with them
+
+- A behaviour policy for every agent the lead runs, in the same grammar as the two on riskmandate.ai/team/.
+- The agent that is wired in takes on the responsibility of producing the end behaviour policy for each of the others.
+
+## The steps
+
+The shared ladder is on [the milestones page](/milestones/index.md); the state of each step for this customer is here.
+
+| Step | Milestone | State |
+|---|---|---|
+| [S0](/milestones/index.md#S0) | In, with credit | done 2026-10-20 |
+| [S1](/milestones/index.md#S1) | One agent named | in-progress |
+| [S2](/milestones/index.md#S2) | The grant, measured or documented | open |
+| [S3](/milestones/index.md#S3) | The mandate, in the customer's words | open |
+| [S4](/milestones/index.md#S4) | The delta, and the first finding | open |
+| [S5](/milestones/index.md#S5) | The hooks half: what the harness holds | open |
+| [S6](/milestones/index.md#S6) | The usage moment | open |
+
+## The follow-up log
+
+Each follow-up asks three things: what they did, what got in the way, and what is next. Newest first. The record here is the summary; anything private stays with the lead.
+
+| Date | What they did | What got in the way | What is next |
+|---|---|---|---|
+| 2026-10-20 | Counted: two of about ten agents have a behaviour policy (the publisher and the design studio, on riskmandate.ai/team/). | No list of the ten yet, with the shape each is nearest to. | List the agents, one line each, with the published shape it is nearest to. |
+
+**What is not on this page.** No contact details, no private notes, nothing the customer did not agree to show. The source is `data/customers.json`; a change to it is a release, so the history of this page is the history of the repository.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/customers/the-agents/)*
+
+
+==============================================================================
+source: /docs/brief/index.md
+==============================================================================
+
+# The brief
+
+> The article this site was built from, published in full and never edited; the voice memo that followed it, byte for byte; and the corrections file, which is where the brief is told it was wrong.
+
+*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+The article this site was built from, published in full and never edited; the voice memo that followed it, byte for byte; and the corrections file, which is where the brief is told it was wrong.
+
+- [Brief corrections: where the brief and the memo were wrong, open, or decided differently](/docs/brief/BRIEF-CORRECTIONS.md): Where the brief and the memo were wrong, open, or decided differently while building, dated, beside them. [(markdown)](/docs/brief/BRIEF-CORRECTIONS.md)
+- [The memo of 20 October 2026: the first batch of users, and the next phase of RiskMandate](/docs/brief/memo-2026-10-20-user-onboarding-plan.md): The voice memo of 20 October 2026 that followed the brief: the first users are the two founders and the agents they run; the first work is the agent-side and hook-side behaviour policies, for Claude and ChatGPT. [(markdown)](/docs/brief/memo-2026-10-20-user-onboarding-plan.md)
+- [Our first customers: an early access programme for Agent Behaviour Policies, with credit to spend, a start-here site, daily follow-up, and a list for the next batch](/docs/brief/our-first-customers.md): The brief: the newsroom article of 20 October 2026, published in full as written, with its status and date. Never edited here; corrections go beside it. [(markdown)](/docs/brief/our-first-customers.md)
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/docs/brief/)*
+
+
+==============================================================================
+source: /docs/index.md
+==============================================================================
+
+# Documents
+
+> The documents this site was built from and the notes it is run by, published whole. Each is a markdown file in the repository, which is the source of truth, and a page rendered from it on every release.
+
+*Source: <https://customers.riskmandate.ai/docs/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+The documents this site was built from and the notes it is run by, published whole. Each is a markdown file in the repository, which is the source of truth, and a page rendered from it on every release, which is presentation. The rendered page links the raw file at the top.
+
+- **[The brief](/docs/brief/index.md):** [the newsroom article of 20 October 2026](/docs/brief/our-first-customers.md), published in full as written; [the voice memo of the same day](/docs/brief/memo-2026-10-20-user-onboarding-plan.md), byte for byte with its digest; and [the corrections file](/docs/brief/BRIEF-CORRECTIONS.md), where the brief is told it was wrong.
+- **[Reality](/docs/reality.md):** what exists, is proposed or is absent, generated from `data/reality.json`. If it is not listed there, it does not exist.
+- **[Operations](/docs/ops/index.md):** [how a release works](/docs/ops/release.md) and [what only a human can do](/docs/ops/needs.md).
+- **[The team](/team/index.md):** the roles as files, with the rules each enforces and the mistake behind each, and the board.
+- **[The review folder](/review/index.md):** the brief read as intent, and what is not derived yet.
+
+## Why publish the brief at all
+
+A reader who wants to check whether this site is faithful to what it was asked to build should not have to reconstruct the brief from the site. Publishing the commission, and the corrections beside it, makes the site checkable against something other than its own claims. The brief is never edited to look right afterwards; the corrections file is where the finding goes.
+
+## For agents
+
+[llms.txt](/llms.txt) lists every page and document with a one-line description; [llms-full.txt](/llms-full.txt) is all of them in one fetch. Every HTML page has a markdown twin at the same path with the extension swapped, and links inside the markdown point at markdown.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/docs/)*
+
+
+==============================================================================
+source: /docs/ops/index.md
+==============================================================================
+
+# Operations
+
+> How a release works, and what only a human can do, as commands where a command exists.
+
+*Source: <https://customers.riskmandate.ai/docs/ops/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+How a release works, and what only a human can do, as commands where a command exists.
+
+- [What only a human can do](/docs/ops/needs.md): Exactly what only a human can do, who, and which step waits on it. [(markdown)](/docs/ops/needs.md)
+- [How a release works](/docs/ops/release.md): The version, the commit subject, the gate, the four CI jobs, and why green does not mean live. [(markdown)](/docs/ops/release.md)
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/docs/ops/)*
+
+
+==============================================================================
+source: /follow-up/index.md
+==============================================================================
+
+# Three questions, as often as daily.
+
+> How the hand-holding works for the first batch: a follow-up as often as daily, three questions each time (what they did, what got in the way, what is next), how the answers are recorded on the customer page in summary, and what stays private with the lead.
+
+*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+For this first batch we invest in following up: an email every day if that is what helps, with objectives and milestones mapped out for each customer. That will not scale, and it is not meant to yet.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 The daily follow-up: three questions, recorded on the customer page as a log · proposed The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds
+
+## The three questions
+
+1**What did you do?**
+
+Since the last time. One line is enough; "nothing, I was busy" is a fine answer and goes in the log.
+
+2**What got in the way?**
+
+A page that was hard to understand, a prompt that returned something odd, a step that assumed a tool you do not have. This is the most useful answer of the three.
+
+3**What is next?**
+
+The next step on the ladder, or the thing you want to try instead. Agreed, not assigned.
+
+## The message
+
+```
+Subject: Day N · the three questions
+
+Hi {first name},
+
+Yesterday's answer put you at {step} on the ladder; your page is at
+https://customers.riskmandate.ai/customers/{id}/
+
+1. What did you do since last time?
+2. What got in the way?
+3. What is next?
+
+A line each is plenty. If the answer to 2 is "the start-here page", say which step.
+
+{the lead, or the follow-up}
+```
+
+## Where the answers go
+
+- **On the customer page, in summary.** Date, and the three answers in a sentence each, newest first. The source is `data/customers.json`, so a follow-up is a release and the history of the page is the history of the repository.
+- **Anything private stays with the lead.** Names of systems the customer did not want named, details of their deployment, the contents of their grant and mandate. The brief's rule: nothing is published without their yes, and the default is no. The private record per customer, in a vault the lead holds, is proposed and not built; until then it is the lead's own notes.
+- **What got in the way becomes a finding.** The second answer is read against the three questions on [what we want to discover](/learning/index.md), and a pattern across customers goes in that page's table with the number of customers who hit it.
+
+## Who does it
+
+The follow-up is a role, held by the lead for the first batch and written down as [a role file](/team/roles/customer-follow-up.md) so that an agent can take the drafting and a person the sending. The newsroom's pattern applies: an agent drafts, a person reads and sends, and nothing goes out that a person has not seen.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/follow-up/)*
+
+
+==============================================================================
+source: /learning/index.md
+==============================================================================
+
+# The usage moment, and the three questions behind it.
+
+> The point of the programme is to find the usage moment, when an Agent Behaviour Policy becomes worth something to a particular person. Three questions follow from it, and this page holds them with a findings table that starts empty and is filled from the follow-ups, counted.
+
+*Source: <https://customers.riskmandate.ai/learning/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+The point of the programme is to find the moment an Agent Behaviour Policy becomes worth something to a particular person. Three questions follow from it. This page holds them, and the findings as they come in, counted from the follow-ups rather than remembered.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 The three questions the programme exists to answer, with a findings table that starts empty
+
+## The three questions
+
+Q1**What is the simplest useful behaviour policy?**
+
+One agent, a few rows, the gap found. Perhaps a system prompt turned into rows, as in [system prompts as behaviour policies](https://newsroom.sgit.ai/articles/system-prompts-as-behaviour-policies.html); perhaps a skill checked against its mandate; perhaps one agent's reach, measured.
+
+Q2**What is the entry point with least friction?**
+
+A reader once told us the pages were hard to understand. The start-here page has to fix that, and each customer will show us where it does not.
+
+Q3**What is the price?**
+
+The credit tells us how much each customer uses before they would top up, and the follow-up tells us why.
+
+## What we track, per customer
+
+The things are simple, and they are on every customer page: when they started, when they wrote their first behaviour policy, how many rows and gaps it has, which milestone steps are done, what they used of the credit, and whether they topped up. The batch table on [the customers page](/customers/index.md) is those fields, one row per customer, and the counts on the home page are their sums.
+
+## Findings
+
+A finding is a pattern across customers, read from the second follow-up answer, with the number of customers who hit it. The table starts empty on purpose; a finding typed before it was counted would be a guess.
+
+| Question | Finding | Customers | First seen | What we did |
+|---|---|---|---|---|
+| None yet. The first batch started on 2026-10-20. |  |  |  |  |
+
+## What a finding changes
+
+- **Q1 changes the first step.** If the simplest useful behaviour policy turns out to be a system prompt turned into rows, the start-here page's third step changes to say so.
+- **Q2 changes the start-here page.** Each place a customer got stuck is a sentence to rewrite, and the next batch's start-here page is made from this one plus those sentences.
+- **Q3 changes the number.** The starting credit and the price per use are starting points. When the batch has answered, the number on [the credit page](/credit/index.md) changes, with the count it came from.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/learning/)*
+
+
+==============================================================================
+source: /milestones/index.md
+==============================================================================
+
+# Seven steps, shared across the batch.
+
+> The shared ladder of seven steps for the first batch, each with its objective, what done looks like and who does it: in with credit, one agent named, the grant, the mandate, the delta, the hooks half, and the usage moment. The objectives per customer are their own; the steps are the shared shape.
+
+*Source: <https://customers.riskmandate.ai/milestones/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+The brief asks for objectives and milestones mapped out with each customer. The objectives are each customer's own and sit on their page. The milestones are shared, so the whole batch reads in one table and the next batch can be compared with this one. The word is steps.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 Seven milestone steps shared across the batch, from in-with-credit to the usage moment
+
+Each step is done when the thing it names exists, not when it is believed to. The source is `data/milestones.json`; the state of each step for each customer is in `data/customers.json` and on [their page](/customers/index.md).
+
+1. <a id="S0"></a>**S0 · In, with credit**
+
+The customer is on the list, has read the start-here page, and has credit to spend on the site.
+
+**Done when:** The lead has recorded the start date and the credit granted; the customer has said which agent they will start with.
+
+**Who:** the lead and the customer
+
+2. <a id="S1"></a>**S1 · One agent named**
+
+One agent in one deployment, named: what it is (Claude Code, Claude Desktop, ChatGPT, a connector, a scheduled job), where it runs, and what it holds.
+
+**Done when:** A sentence on the customer page names the agent and the shape it is nearest to in the sixteen published examples.
+
+**Who:** the customer, with the follow-up
+
+3. <a id="S2"></a>**S2 · The grant, measured or documented**
+
+What the agent can actually reach, one row per capability, in the pinned vocabulary.
+
+**Done when:** A grant.json exists for the agent, measured where the customer is entitled to run a probe and documented from the vendor's pages where not, with dates.
+
+**Who:** the customer's agent, from MAP-A-GRANT.md or the try-it prompts
+
+4. <a id="S3"></a>**S3 · The mandate, in the customer's words**
+
+What the customer actually wants the agent to do, what they refuse, and what they never thought to mention.
+
+**Done when:** A mandate.json exists with want, do_not_want and unstated, drafted by the agent and corrected by the customer. The correction is the elicitation.
+
+**Who:** the customer
+
+5. <a id="S4"></a>**S4 · The delta, and the first finding**
+
+The gap between the grant and the mandate: the excess, the unbounded excess, and what stands in the way of each row.
+
+**Done when:** The customer page records the row count and the gap count, and the customer has named one row that surprised them.
+
+**Who:** derived by the build; read by the customer
+
+6. <a id="S5"></a>**S5 · The hooks half: what the harness holds**
+
+The part of the behaviour policy the agent's harness can hold as hooks or rules, so an expectation becomes a setting or a boundary where one exists.
+
+**Done when:** The rows that the harness can hold are marked, the hooks or rules for them exist in the customer's deployment, and the rest are marked honestly as expectations.
+
+**Who:** the customer, with the follow-up; the agent writes the first draft
+
+7. <a id="S6"></a>**S6 · The usage moment**
+
+The moment the behaviour policy became worth something to this customer: what it was, what they used of the credit, and whether they topped up.
+
+**Done when:** The customer has said in their own words what it is worth and what a fair price would be, and the follow-up has recorded credit used and whether they topped up.
+
+**Who:** the customer; recorded by the follow-up
+
+## Why these seven
+
+They follow the four objects of an Agent Behaviour Policy in the order they are produced: the grant is measured, the mandate is elicited, the delta is derived, and the barriers are recorded. Step S5 is the memo's addition: the rows the harness can hold as hooks, so an expectation becomes a setting or a boundary where one exists. Step S6 is the brief's purpose: the usage moment, and the price that feels fair. Nothing on this ladder is a score; a step is done or it is not.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/milestones/)*
+
+
+==============================================================================
+source: /next-batch/index.md
+==============================================================================
+
+# Not a launch. A first batch, and a list for the next one.
+
+> This is not a launch; it is a first batch. Everyone who asks to join is kept on a list for the next one, with what they want to use it for. How to ask today (by email or the riskmandate.ai contact form), what we keep and what we never publish, and the form on this site that is proposed and not built.
+
+*Source: <https://customers.riskmandate.ai/next-batch/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+The first batch is small enough to follow closely, and capacity is limited, so the programme is one people propose to join. Everyone who asks is kept for the next batch, with what they want to use it for. The next batch gets a start-here page made from what the first one taught us, and needs less hand-holding per customer.
+
+Status, from [docs/reality.md](/docs/reality.md): proposed A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane · absent Customer contact details, company names that are not already public, or private notes in this repository
+
+## How to ask, today
+
+- **Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai)** with the subject "Next batch", one line on who you are, and one line on the agent you run and what you want a behaviour policy for. A person reads it within a working day.
+- **Or use [the contact form on riskmandate.ai](https://riskmandate.ai/contact.html).** What you type is encrypted in your browser to the key of the agent that runs the site and dropped into a write-only lane on its vault; the site keeps nothing. Say "next batch" in the message.
+- **If you already have an invitation to riskmandate.ai's early access,** that programme is a different one: a behaviour policy for one agent you run, delivered as a vault, free, in exchange for telling us where it is wrong. [Register there](https://riskmandate.ai/early-access.html) with your code; the two lists are kept apart.
+
+## What we keep
+
+Your name, how to reach you, the agent you named, and what you want to use it for; the date you asked; and, when the next batch opens, whether you were invited. The list is held by the lead and never committed to this repository, which is public, and never put in a vault with a public read key. The only thing this site publishes about the list is its length, counted.
+
+| The list | Count | As at |
+|---|---|---|
+| People asking for the next batch | 0 | 2026-10-20, the day the programme started; the lead updates this row by a release |
+
+## A form on this site
+
+Proposed and not built: the same encrypted form the riskmandate.ai contact page uses, on this site, posting to the same lane with "next batch" set. This site's content security policy forbids forms today, on purpose, until that form exists and has been tested. The steps are in [what needs a human](/docs/ops/needs.md).
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/next-batch/)*
+
+
+==============================================================================
+source: /programme/index.md
+==============================================================================
+
+# Customers, not beta users.
+
+> What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.
+
+*Source: <https://customers.riskmandate.ai/programme/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+The brief thought about what to call the people in the first batch: "early access users", "beta users", "the first batch". Beta describes the state of the product. What we want to name is the relationship. So they are customers, and the programme is built around that word.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 The brief and the memo published in full, never edited, with the corrections file beside them · shipped v0.1.0 A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details · shipped v0.1.0 The daily follow-up: three questions, recorded on the customer page as a log · proposed Credit per customer, metered and billed on this site, with a top-up link
+
+## Why now
+
+We have a workflow that works: grant, mandate, delta and barrier, with a holder for every row. We have a mapping to what regulators are now asking for, worked through against the FCA's four elements in [the Pellbridge agents](https://newsroom.sgit.ai/articles/inside-the-pellbridge-agents.html). And we have a good understanding of how it should all fit together, from [a behaviour policy beside the prompt](https://newsroom.sgit.ai/articles/a-policy-beside-the-prompt.html) to [one for every skill](https://newsroom.sgit.ai/articles/a-policy-for-every-skill.html). What is left is execution, and we have the people to execute it with: friendlies who are engaged and motivated. Some are consultants who are going to be selling this and already use some of it. Some are people the lead works with. Some of it is us.
+
+## Each customer starts with credit
+
+Each of them starts with credit, £5 or £50 or whatever the number turns out to be, to spend on a site we run. From the first day, what they use is metered, and the question of what they would pay is a real one. That is the same idea as [paying after the value](https://newsroom.sgit.ai/articles/paying-after-the-value.html): the newsroom gives every reader £5 of credit, each page uses a few pence, and the reader decides when to top up with the value already in front of them. Give it for free until there is enough value that they want to pay for it. The other reason is the one in [can you sell it?](https://newsroom.sgit.ai/articles/can-you-sell-it.html): a customer who pays is the best signal you will get, and making it easy to pay goes in early, not at the end. [Credit, and the meter: what is wired and what is not →](/credit/index.md)
+
+## A site of their own
+
+One place where we can follow how everyone is getting on, and where the lead can keep things up to date. It starts with [a start-here page](/start-here/index.md): what to do first, in order, with clear instructions. Then [a page for each customer](/customers/index.md), with the objectives and milestones agreed with them, and where they are. The billing is already there on the newsroom; the same works for any site we run: even if all a customer does is use the website, we can measure it, and we can bill for it. The price per use is something to discover.
+
+## Hand-holding, on purpose
+
+For this first batch we invest in following up: an email every day if that is what helps, very specific hand-holding, and objectives and milestones mapped out for each customer. That will not scale, and it is not meant to yet. Paul Graham made the case in [Do Things that Don't Scale](https://paulgraham.com/ds.html) (July 2013): the most common unscalable thing founders have to do at the start is to recruit users manually, and you can give users an insanely great experience with an early, incomplete, buggy product if you make up the difference with attentiveness. Each follow-up asks three things: what they did, what got in the way, and what is next. [The follow-up →](/follow-up/index.md)
+
+## The first batch, after the memo
+
+The voice memo of the same day made the first batch concrete. The first users are the lead, the co-founder, and the agents the lead already runs, about ten of them, which are the ones that need behaviour policies. The programme is one people can propose to join, because capacity is limited. The behaviour policies are explicit ones that work with Claude and with ChatGPT, and they cover two of the three places a behaviour policy can run: the rows for the agent, and the rows for the hooks. The agent that is already wired in gets the responsibility and the requirement to produce the end behaviour policy. The milestone is to find behaviour policies that add value to these users, with the onboarding as smooth and effective as it can be made, to the point where it adds a lot of value and they understand what the behaviour policy is doing. [The memo, verbatim →](/docs/brief/memo-2026-10-20-user-onboarding-plan.md)
+
+## Batches, not a launch
+
+This is a first batch, small enough to follow closely. Alongside it we keep a list: everyone who asks to join is kept for the next batch, with what they want to use it for. The next batch gets a start-here page made from what the first one taught us, and needs less hand-holding per customer. [The next batch →](/next-batch/index.md)
+
+## What exists today, in this area
+
+From [docs/reality.md](/docs/reality.md), generated on every release. A row that says proposed is described on this site in the future tense only.
+
+| Area | Feature | Status | Where | Notes |
+|---|---|---|---|---|
+| programme | The brief and the memo published in full, never edited, with the corrections file beside them | shipped v0.1.0 | docs/brief/ | The newsroom article of 20 October 2026 and the voice memo of the same day, byte for byte, with its digest. |
+| programme | A start-here page: what a customer does first, in order, with the links to do it | shipped v0.1.0 | start-here/index.html | The brief's first fix for pages that were hard to understand; each customer will show where it still is. |
+| programme | A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details | shipped v0.1.0 | data/customers.json, admin/build/gen_customers.py, customers/ | Start date, first behaviour policy with rows and gaps, steps done, credit used, topped up, and the follow-up log. One worked example, marked as such. |
+| programme | Seven milestone steps shared across the batch, from in-with-credit to the usage moment | shipped v0.1.0 | data/milestones.json, milestones/index.html | The objectives per customer are theirs; the steps are the shared shape so the batch reads in one table. |
+| programme | The daily follow-up: three questions, recorded on the customer page as a log | shipped v0.1.0 | follow-up/index.html, data/customers.json | What they did, what got in the way, what is next. Daily if that is what helps; the record is the summary. |
+| programme | The three questions the programme exists to answer, with a findings table that starts empty | shipped v0.1.0 | learning/index.html | The simplest useful behaviour policy, the entry point with least friction, the price that feels fair. |
+| programme | Credit per customer, metered and billed on this site, with a top-up link | proposed | credit/index.html | The meter is the newsroom's today (SG Meter, live since 11 October 2026); wiring it to this site needs the lead. Until then credit is a number on the customer page, kept by hand. |
+| programme | A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane | proposed | next-batch/index.html | Today the route is the riskmandate.ai contact form or an email to agent@riskmandate.ai; the page says so. |
+| programme | The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds | proposed | docs/ops/needs.md | Never in this repository. The public page carries the summary. |
+| programme | A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in | proposed | customers/the-agents/ | The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/. |
+| programme | This site's row on the honest column at nfrs.sgit.ai | proposed | docs/ops/needs.md | Another repository; the ask is recorded. |
+| programme | Accounts, sign-in or a customer login on this site | absent | nowhere | The site is static. The meter, when wired, carries its own reading account, as on the newsroom. |
+| programme | Customer contact details, company names that are not already public, or private notes in this repository | absent | nowhere | The gate fails on anything contact-shaped in data/customers.json. |
+| programme | A score, rating or level on any behaviour policy | absent | nowhere | An Agent Behaviour Policy describes and does not judge. The gate fails on the words. |
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/programme/)*
+
+
+==============================================================================
+source: /review/index.md
+==============================================================================
+
+# The brief, as intent.
+
+> The intent half of the review folder: the brief and the memo read as stories, rules and examples, each node linked to the heading it came from and to the page on this site that realises it, with the counts. The derived half is proposed.
+
+*Source: <https://customers.riskmandate.ai/review/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+Every story below came from a heading of [the brief](/docs/brief/our-first-customers.md) or [the memo](/docs/brief/memo-2026-10-20-user-onboarding-plan.md), and lands on a page of this site. Nothing here was added that neither document says; where the site decided something they left open, the decision is in [the corrections file](/docs/brief/BRIEF-CORRECTIONS.md), not here.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered · proposed The derived half of the review folder: the code graph from parsers, the join with a coverage figure, every commit read upwards, the navigator as web components
+
+**7**stories
+**15**rules
+**16**examples
+**14**headings anchored
+
+Written by agent: the build session (Claude Code) on 2026-10-20: the brief and the memo as stories, rules and examples; nothing added that neither says. Accepted by: nobody yet; the lead accepts by a release.
+
+<a id="customers-not-beta-users"></a>
+
+### Customers, not beta users
+
+As the lead, I want the people in the first batch called customers, each starting with credit on a site that meters and bills, so that what they would pay is a real question from the first day. From [Customers, not beta users](/docs/brief/our-first-customers.md#customers-not-beta-users) · lands on [`/programme/`](/programme/index.md).
+
+- <a id="customers-not-beta-users.credit"></a>**Each customer starts with credit, £5 or £50 or whatever the number turns out to be, to spend on a site we run.** From [Customers, not beta users](/docs/brief/our-first-customers.md#customers-not-beta-users).
+  - <a id="customers-not-beta-users.credit.page"></a>The credit page says what the credit is, how the meter works, and that the meter is not wired to this site yet. · lands on [`/credit/`](/credit/index.md)
+  - <a id="customers-not-beta-users.credit.record"></a>Every customer record carries credit granted, credit used and whether they topped up. · lands on [`/customers/`](/customers/index.md)
+- <a id="customers-not-beta-users.metered"></a>**From the first day, what they use is metered, the way the newsroom meters every page against a reader's credit.** From [Customers, not beta users](/docs/brief/our-first-customers.md#customers-not-beta-users).
+  - <a id="customers-not-beta-users.metered.proposed"></a>The reality file says the meter is proposed until the lead wires it; the page uses the future tense. · lands on [`/docs/reality.html`](/docs/reality.md)
+
+<a id="a-site-of-their-own"></a>
+
+### A site of their own, with a start-here page
+
+As a customer, I want one place that says what to do first, in order, and shows the objectives and milestones agreed with me and where I am. From [A site of their own](/docs/brief/our-first-customers.md#a-site-of-their-own) · lands on [`/start-here/`](/start-here/index.md).
+
+- <a id="a-site-of-their-own.start-here"></a>**It starts with a start-here page: what to do first, in order, with clear instructions.** From [A site of their own](/docs/brief/our-first-customers.md#a-site-of-their-own).
+  - <a id="a-site-of-their-own.start-here.seven"></a>Seven steps in order, each linked to the thing that does it and to its milestone. · lands on [`/start-here/`](/start-here/index.md)
+- <a id="a-site-of-their-own.page-per-customer"></a>**Then a page for each customer, with the objectives and milestones we agreed with them, and where they are.** From [A site of their own](/docs/brief/our-first-customers.md#a-site-of-their-own).
+  - <a id="a-site-of-their-own.page-per-customer.generated"></a>One page per record in data/customers.json, with the objectives, the state of every step and the follow-up log. · lands on [`/customers/`](/customers/index.md)
+  - <a id="a-site-of-their-own.page-per-customer.example"></a>A worked example with invented numbers, marked as not a customer, shows the shape. · lands on [`/customers/example/`](/customers/example/index.md)
+- <a id="a-site-of-their-own.measure-and-bill"></a>**Even if all a customer does is use the website, we can measure it, and we can bill for it.** From [A site of their own](/docs/brief/our-first-customers.md#a-site-of-their-own).
+
+<a id="hand-holding-on-purpose"></a>
+
+### Hand-holding, on purpose
+
+As the lead, I want to follow each customer closely, an email every day if that helps, with three questions each time, so that the attentiveness makes up for an early product. From [Hand-holding, on purpose](/docs/brief/our-first-customers.md#hand-holding-on-purpose) · lands on [`/follow-up/`](/follow-up/index.md).
+
+- <a id="hand-holding-on-purpose.three-questions"></a>**Each customer's follow-up asks three things: what they did, what got in the way, and what is next.** From [Hand-holding, on purpose](/docs/brief/our-first-customers.md#hand-holding-on-purpose).
+  - <a id="hand-holding-on-purpose.three-questions.log"></a>The answers go on the customer page as a log of date plus three sentences, newest first. · lands on [`/customers/example/`](/customers/example/index.md)
+  - <a id="hand-holding-on-purpose.three-questions.role"></a>The follow-up is a role file with the rules and the message template. · lands on [`/team/roles/customer-follow-up.html`](/team/roles/customer-follow-up.md)
+- <a id="hand-holding-on-purpose.does-not-scale"></a>**That will not scale, and it is not meant to yet.** From [Hand-holding, on purpose](/docs/brief/our-first-customers.md#hand-holding-on-purpose).
+
+<a id="what-we-want-to-discover"></a>
+
+### What we want to discover: the usage moment
+
+As the lead, I want to find the moment a behaviour policy becomes worth something to a particular person, through three questions, with the things to track per customer kept simple. From [What we want to discover](/docs/brief/our-first-customers.md#what-we-want-to-discover) · lands on [`/learning/`](/learning/index.md).
+
+- <a id="what-we-want-to-discover.three-questions"></a>**What is the simplest useful behaviour policy; what is the entry point with least friction; what is the price.** From [What we want to discover](/docs/brief/our-first-customers.md#what-we-want-to-discover).
+  - <a id="what-we-want-to-discover.three-questions.findings"></a>A findings table that starts empty and is filled with a count per finding. · lands on [`/learning/`](/learning/index.md)
+- <a id="what-we-want-to-discover.track"></a>**Track per customer: when they started, when they wrote their first behaviour policy, how many rows and gaps it has, which milestones are done, what they used of the credit, and whether they topped up.** From [What we want to discover](/docs/brief/our-first-customers.md#what-we-want-to-discover).
+  - <a id="what-we-want-to-discover.track.table"></a>The batch table is exactly those fields, one row per customer, and the home page counts are their sums. · lands on [`/customers/`](/customers/index.md)
+
+<a id="batches-and-a-list"></a>
+
+### Batches, and a list for the next one
+
+As someone who asks to join, I want to be kept for the next batch with what I want to use it for, and for the next batch to start from what the first one taught. From [Batches, and a list for the next one](/docs/brief/our-first-customers.md#batches-and-a-list-for-the-next-one) · lands on [`/next-batch/`](/next-batch/index.md).
+
+- <a id="batches-and-a-list.kept"></a>**Everyone who asks to join is kept for the next batch, with what they want to use it for.** From [Batches, and a list for the next one](/docs/brief/our-first-customers.md#batches-and-a-list-for-the-next-one).
+  - <a id="batches-and-a-list.kept.route"></a>The page says how to ask today, what is kept, and that only the count is published. · lands on [`/next-batch/`](/next-batch/index.md)
+- <a id="batches-and-a-list.propose"></a>**The programme is one people propose to join, because capacity is limited.** From [What it adds to the brief](/docs/brief/memo-2026-10-20-user-onboarding-plan.md#what-it-adds-to-the-brief).
+
+<a id="the-first-users"></a>
+
+### The first users are us, and the agents
+
+As the lead, I want the first batch to be me, the co-founder and the agents I already run, with explicit behaviour policies for Claude and ChatGPT covering the agent rows and the hook rows, produced by the agent that is wired in. From [What it adds to the brief](/docs/brief/memo-2026-10-20-user-onboarding-plan.md#what-it-adds-to-the-brief) · lands on [`/customers/`](/customers/index.md).
+
+- <a id="the-first-users.records"></a>**The main users are the lead, the co-founder, and about ten agents that need behaviour policies.** From [What it adds to the brief](/docs/brief/memo-2026-10-20-user-onboarding-plan.md#what-it-adds-to-the-brief).
+  - <a id="the-first-users.records.three"></a>Three records: the lead, the co-founder, the agents as one customer. · lands on [`/customers/`](/customers/index.md)
+- <a id="the-first-users.two-of-three"></a>**Two of the three places a behaviour policy can run: the rows for the agent, and the rows for the hooks.** From [What it adds to the brief](/docs/brief/memo-2026-10-20-user-onboarding-plan.md#what-it-adds-to-the-brief).
+  - <a id="the-first-users.two-of-three.step"></a>Step S5 on the ladder, the hooks half. · lands on [`/milestones/#S5`](/milestones/index.md#S5)
+- <a id="the-first-users.wired-in-agent"></a>**The agent that is wired in gets the responsibility and the requirement to create the end behaviour policy.** From [What it adds to the brief](/docs/brief/memo-2026-10-20-user-onboarding-plan.md#what-it-adds-to-the-brief).
+  - <a id="the-first-users.wired-in-agent.proposed"></a>The reality file carries it as proposed; the agents record's objective names it. · lands on [`/customers/the-agents/`](/customers/the-agents/index.md)
+
+<a id="what-this-does-not-claim"></a>
+
+### What this does not claim
+
+As a reader, I want the site to say what is new, what is not set, what is real and what is not, and to name nobody who did not agree. From [What this does not claim](/docs/brief/our-first-customers.md#what-this-does-not-claim) · lands on [`/docs/reality.html`](/docs/reality.md).
+
+- <a id="what-this-does-not-claim.reality"></a>**The programme is new; the prices are not set; the metering is the newsroom's; no customer is named; everything is open.** From [What this does not claim](/docs/brief/our-first-customers.md#what-this-does-not-claim).
+  - <a id="what-this-does-not-claim.reality.file"></a>data/reality.json carries each as shipped, proposed or absent, and the home page repeats the disclaimer. · lands on [`/docs/reality.html`](/docs/reality.md)
+  - <a id="what-this-does-not-claim.reality.corrections"></a>Where the memo names the first users, C2 in the corrections file says how that was reconciled with no-customer-is-named. · lands on [`/docs/brief/BRIEF-CORRECTIONS.html`](/docs/brief/BRIEF-CORRECTIONS.md)
+
+## What is not here
+
+The derived half: the code read bottom up by parsers, the join with a coverage figure, every commit read upwards, the navigator as web components, and the same folder for the tools. [The folder's README](/review/README.md) says what exists and [its corrections file](/review/BRIEF-CORRECTIONS.md) says why the rest does not yet.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/review/)*
+
+
+==============================================================================
+source: /start-here/index.md
+==============================================================================
+
+# Start here. Seven things, in order.
+
+> The page a customer reads first: what you need, the seven things to do in order, from naming one agent to telling us what the behaviour policy was worth, and what happens every day in between. Each step links to the thing that does it.
+
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+You are one of the first customers of the Agent Behaviour Policy. This page is the whole of what we ask, in the order it happens. Each step links to the thing that does it, and each is also a milestone on [the shared ladder](/milestones/index.md), so your [customer page](/customers/index.md) shows where you are.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 A start-here page: what a customer does first, in order, with the links to do it · proposed Credit per customer, metered and billed on this site, with a top-up link
+
+## What you need
+
+- **One agent you actually run, with real access.** Claude Code on a machine or on the web, Claude Desktop, ChatGPT in the browser, an assistant connected to your mail, a scheduled job. The [sixteen published examples](https://riskmandate.ai/agent-behaviour-policy.html) cover the common shapes; pick the nearest.
+- **About twenty minutes a day,** for as long as the first batch runs. The follow-up asks three short questions each time; a reply by email is enough.
+- **Credit.** Each customer starts with credit to spend on the site, £5 or £50 as a starting point. What you use is metered, and when you would top up is the thing we most want to learn. [How the credit works, and what is not wired yet →](/credit/index.md)
+
+## The seven steps
+
+1. **Read what an Agent Behaviour Policy is, and one example. Ten minutes.**
+
+[What an ABP is](https://riskmandate.ai/abp.html): for one agent in one deployment, everything it can reach (the grant), what you authorised it to do (the mandate), the gap between the two (the delta), and what stands in the way of each row (the barrier). It carries no score. Then open the example nearest to your agent in [the library](https://riskmandate.ai/agent-behaviour-policy.html) and read its mandate first.
+
+Milestone [S0, in with credit](/milestones/index.md#S0): done when you have read this page and the lead has recorded your start date and your credit.
+
+2. **Name one agent.**
+
+Reply to the follow-up with one sentence: which agent, where it runs, what it holds (a mailbox, a repository, a cloud account, a calendar), and which published example it is nearest to. One agent is the unit; a second one is a second behaviour policy later.
+
+Milestone [S1, one agent named](/milestones/index.md#S1).
+
+3. **Measure what it can reach, or document it.**
+
+Every vault in the library carries `MAP-A-GRANT.md`: paste it into the session of the agent that holds the credential and it measures what the credential lets it do, in the fixed vocabulary of 23 capabilities and four barriers, following seven rules (reversible probes only, never move a credential, say what you did not test). If you cannot run a probe, the [try-it prompts](https://riskmandate.ai/try-it.html) ask the assistant to list its own tools; that is a self-report, weaker, and still worth having. Send us the `grant.json` it wrote, with no secrets in it.
+
+Milestone [S2, the grant](/milestones/index.md#S2).
+
+4. **Write the mandate, in your own words.**
+
+The agent drafts three lists, what you want it to do, what you refuse, and what you never thought to mention; you correct them. The correction is almost always downward, and the correction is the point: only you can write this part. Send us the `mandate.json`.
+
+Milestone [S3, the mandate](/milestones/index.md#S3).
+
+5. **Read the delta, and name the row that surprised you.**
+
+The build derives the gap: what the agent can do that you never asked for, split into what you would have refused and what you never mentioned, and for each row what stands in the way, from nothing, to a rule in prose, to a setting, to a boundary. Your customer page records the row count and the gap count. Tell us the one row that surprised you.
+
+Milestone [S4, the delta](/milestones/index.md#S4).
+
+6. **Put in the hooks: the rows the harness can hold.**
+
+A behaviour policy can run in three places. The first batch works on two: the rows the agent itself follows, and the rows the harness holds as hooks or rules, for Claude and for ChatGPT. With the follow-up, mark which of your rows the harness can hold, put those hooks in, and mark the rest honestly as expectations. An expectation is not a control, and the page says so.
+
+Milestone [S5, the hooks half](/milestones/index.md#S5).
+
+7. **Tell us what it was worth.**
+
+The usage moment: the point at which the behaviour policy became worth something to you. What was it, in your words? What did you use of the credit, and would you top up? What would feel like a fair price? There is no right answer, and the honest one is the one we need.
+
+Milestone [S6, the usage moment](/milestones/index.md#S6).
+
+## Every day in between
+
+The follow-up asks three things, by email, as often as daily if that helps: what you did, what got in the way, and what is next. The answers go on your customer page as a short log, in summary; anything private stays with the lead. If the answer is "nothing, I was busy", that is a fine answer and it goes in the log too. [How the follow-up works →](/follow-up/index.md)
+
+## Where to write
+
+Replies go to [agent@riskmandate.ai](mailto:agent@riskmandate.ai), the one identity behind riskmandate.ai, read by a person within a working day. If you would rather not use email, [the contact form on riskmandate.ai](https://riskmandate.ai/contact.html) encrypts what you type in your browser to the agent's key. Nothing you send is read by anyone but us, and nothing from it is published without your yes; the default is no.
+
+**If this page is hard to understand, say so.** A reader once told us the pages were hard to follow. This page is the first fix, and each customer will show us where it still is. "I did not understand step three" is the most useful thing you can send.
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/start-here/)*
+
+
+==============================================================================
+source: /team/index.md
+==============================================================================
+
+# The team
+
+> Who does what, as one file per role with the rules it enforces and the mistake behind each, and the board of work.
+
+*Source: <https://customers.riskmandate.ai/team/> · site v0.1.0 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+Who does what, as one file per role with the rules it enforces and the mistake behind each, and the board of work.
+
+- [The team](/team/README.md): The team page: two roles today, one person and one agent, and where the board lives. [(markdown)](/team/README.md)
+- [The board](/team/board.md): The board: the work as files with a status line each. [(markdown)](/team/board.md)
+- [Role: build agent](/team/roles/build-agent.md): The build agent: the session that builds the site from the brief, under rules with a mistake behind each. [(markdown)](/team/roles/build-agent.md)
+- [Role: customer follow-up](/team/roles/customer-follow-up.md): The follow-up role: the daily contact with each customer, the three questions, and what is recorded where. [(markdown)](/team/roles/customer-follow-up.md)
+- [Role: project lead](/team/roles/project-lead.md): The project lead: what the person decides, and the rules the role enforces. [(markdown)](/team/roles/project-lead.md)
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/team/)*
+
+
+==============================================================================
+source: /docs/reality.md
+==============================================================================
+
+# customers.riskmandate.ai: reality
+
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.1.0 (2026-10-20). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+
+20 claims: 11 shipped, 6 proposed, 3 absent.
+
+| Status | Meaning |
+|---|---|
+| shipped | exists in the repository, runs, and was exercised at the version shown |
+| proposed | the brief or the memo says how; not built; described only in the future tense |
+| absent | deliberately not on this site; comes as a later version, lives elsewhere, or never |
+
+## Shipped (11)
+
+| Area | Feature | Status | Where | Notes |
+|---|---|---|---|---|
+| site | One version in admin/build/version.txt, a release history, and four CI jobs: validate, tag, deploy, verify live | shipped v0.1.0 | admin/build/version.txt, data/versions.json, .github/workflows/deploy-pages.yml | Copied from secrets.sgit.ai, the newest gate in the estate. A clean push is not a release: verify-live polls the host. |
+| site | The RiskMandate chrome (head, header, breadcrumbs, footer, CSP) generated into every page from one definition | shipped v0.1.0 | admin/build/chrome.py, admin/build/gen_chrome.py, assets/site.css | The look of riskmandate.ai; every colour is a token in one file. |
+| site | A markdown twin for every page, llms.txt, llms-full.txt and sitemap.xml, generated from the pages | shipped v0.1.0 | admin/build/gen_twins.py, admin/build/gen_llms.py | Links inside the markdown point at markdown. |
+| site | The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words | shipped v0.1.0 | admin/build/validate.js, admin/build/gate.py, tests/ | The house words are riskmandate.ai's: never "ADP", never "the policy" alone, no score, "steps" not "rungs", British spelling. The verbatim brief and memo are exempt. |
+| site | The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered | shipped v0.1.0 | review/intent/, review/tools/, review/index.html | The top-down half only; see site.review-derived. |
+| programme | The brief and the memo published in full, never edited, with the corrections file beside them | shipped v0.1.0 | docs/brief/ | The newsroom article of 20 October 2026 and the voice memo of the same day, byte for byte, with its digest. |
+| programme | A start-here page: what a customer does first, in order, with the links to do it | shipped v0.1.0 | start-here/index.html | The brief's first fix for pages that were hard to understand; each customer will show where it still is. |
+| programme | A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details | shipped v0.1.0 | data/customers.json, admin/build/gen_customers.py, customers/ | Start date, first behaviour policy with rows and gaps, steps done, credit used, topped up, and the follow-up log. One worked example, marked as such. |
+| programme | Seven milestone steps shared across the batch, from in-with-credit to the usage moment | shipped v0.1.0 | data/milestones.json, milestones/index.html | The objectives per customer are theirs; the steps are the shared shape so the batch reads in one table. |
+| programme | The daily follow-up: three questions, recorded on the customer page as a log | shipped v0.1.0 | follow-up/index.html, data/customers.json | What they did, what got in the way, what is next. Daily if that is what helps; the record is the summary. |
+| programme | The three questions the programme exists to answer, with a findings table that starts empty | shipped v0.1.0 | learning/index.html | The simplest useful behaviour policy, the entry point with least friction, the price that feels fair. |
+
+## Proposed (6)
+
+| Area | Feature | Status | Where | Notes |
+|---|---|---|---|---|
+| site | The derived half of the review folder: the code graph from parsers, the join with a coverage figure, every commit read upwards, the navigator as web components | proposed | review/ | The review brief asks for it from the first commit; this site has the intent half and says so in review/BRIEF-CORRECTIONS.md. |
+| programme | Credit per customer, metered and billed on this site, with a top-up link | proposed | credit/index.html | The meter is the newsroom's today (SG Meter, live since 11 October 2026); wiring it to this site needs the lead. Until then credit is a number on the customer page, kept by hand. |
+| programme | A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane | proposed | next-batch/index.html | Today the route is the riskmandate.ai contact form or an email to agent@riskmandate.ai; the page says so. |
+| programme | The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds | proposed | docs/ops/needs.md | Never in this repository. The public page carries the summary. |
+| programme | A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in | proposed | customers/the-agents/ | The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/. |
+| programme | This site's row on the honest column at nfrs.sgit.ai | proposed | docs/ops/needs.md | Another repository; the ask is recorded. |
+
+## Absent (3)
+
+| Area | Feature | Status | Where | Notes |
+|---|---|---|---|---|
+| programme | Accounts, sign-in or a customer login on this site | absent | nowhere | The site is static. The meter, when wired, carries its own reading account, as on the newsroom. |
+| programme | Customer contact details, company names that are not already public, or private notes in this repository | absent | nowhere | The gate fails on anything contact-shaped in data/customers.json. |
+| programme | A score, rating or level on any behaviour policy | absent | nowhere | An Agent Behaviour Policy describes and does not judge. The gate fails on the words. |
+
+*Source: [https://github.com/SGit-AI/SGit-AI__Website__Customers](https://github.com/SGit-AI/SGit-AI__Website__Customers) · CC BY 4.0*
+
+
+==============================================================================
+source: /docs/brief/BRIEF-CORRECTIONS.md
+==============================================================================
+
+# Brief corrections: where the brief and the memo were wrong, open, or decided differently
+
+*customers.riskmandate.ai · maintained by the build session · started at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+The brief ([our-first-customers.md](our-first-customers.md)) and the memo ([memo-2026-10-20-user-onboarding-plan.md](memo-2026-10-20-user-onboarding-plan.md)) are never edited. When building finds them wrong, open, or decides something they left to the builder, the finding goes here, dated, with what was done instead. Entries are numbered C1, C2, … and never removed; a later entry may say an earlier one was itself wrong.
+
+## C1. The site is customers.riskmandate.ai, not customers.sgit.ai (2026-10-20, v0.1.0)
+
+The repository was made as `SGit-AI__Website__Customers`, "repo for customers.sgit.ai", and the first instruction to the build session named that host. During the first session the lead corrected it: the programme is RiskMandate's, so the site is a sub-site of riskmandate.ai at `customers.riskmandate.ai`, and the lead changes the DNS record and the GitHub mapping. Done: the CNAME, every canonical URL, the chrome and the licence line say riskmandate.ai; the repository keeps its name and its organisation (SGit-AI), which is recorded on the admin page rather than hidden. The pipeline and the repository rules are still the sgit.ai estate's, because that is where the tooling comes from; the look and the house words are riskmandate.ai's.
+
+## C2. The brief says no customer is named; the memo names the first users (2026-10-20, v0.1.0)
+
+The brief's last section says "No customer is named. The first group is people we already work with." The memo of the same day names the first users: the lead, the co-founder and the lead's agents. Decided: the two founders are listed as customers by their public names, because they are the company's own founders and are already named on riskmandate.ai; the agents are one record, "the lead's agents"; nobody else is listed until they start and agree to a handle; contact details are never in the repository and the gate fails on anything contact-shaped. One worked example with invented numbers, marked as such, shows the shape of a customer page.
+
+## C3. The credit is not metered on this site yet (2026-10-20, v0.1.0)
+
+The brief says "the site already meters and bills, the way this newsroom does today" and, in its own disclaimer, "the metering is real. It is this newsroom's meter today, not yet the programme's site." Both are true and the second is the one this site states: *programme.credit* is proposed in the reality file, the credit on a customer page is a number kept by hand, and wiring SG Meter to this host is the lead's step in [needs.md](../ops/needs.md). The credit page says so in its own status line.
+
+## C4. The mailing list has no form on this site (2026-10-20, v0.1.0)
+
+The brief proposes a mailing list. Decided: the list is held by the lead, never committed; the way to ask is an email to agent@riskmandate.ai or the riskmandate.ai contact form, which already encrypts to the agent's lane; a form on this site is proposed and not built, and the content security policy forbids forms until it is. The only thing published about the list is its count, as a row the lead updates by a release.
+
+## C5. The milestones are shared steps; the objectives are each customer's own (2026-10-20, v0.1.0)
+
+The brief asks for "objectives and milestones written with them". Decided: a shared ladder of seven steps for the whole batch (S0 to S6, in `data/milestones.json`), so the batch reads in one table and the next batch can be compared with this one, and free-text objectives per customer on their page. Step S5, the hooks half, is from the memo, not the brief. The word is steps: riskmandate.ai's rule.
+
+## C6. The review folder has its top-down half only (2026-10-20, v0.1.0)
+
+Every sgit repository is asked to carry a review folder from its first commit: the brief as intent, the code derived by parsers, the join, every commit read upwards, a navigator as web components, and review/self/. Done at v0.1.0: the brief as stories, rules and examples, each anchored to a section of the brief; a validator; a rendered review page. Not done: everything derived, the join, the navigator as web components, review/self/. Recorded as *site.review-derived*, proposed, and in [review/BRIEF-CORRECTIONS.md](../../review/BRIEF-CORRECTIONS.md).
+
+## C7. The honest column row on nfrs.sgit.ai is an ask, not a change (2026-10-20, v0.1.0)
+
+The repository rules ask each repository to add a row to the honest column on nfrs.sgit.ai saying what it meets and what it does not. That is another repository, which this session cannot write to. The row's content is in [needs.md](../ops/needs.md) for the lead to carry across.
+
+## C8. "Policy" alone is never written here (2026-10-20, v0.1.0)
+
+The brief and the memo say "policy" and "policies" alone throughout, as the newsroom does. riskmandate.ai's rule is that on its sites *policy* is also the insurance instrument, so the ABP is always *the ABP* or *the behaviour policy*. Decided: the rule applies to every word this site writes, and the gate enforces it; the brief and the memo are verbatim and exempt. The same for "beta users" (the brief's own heading is the one allowed use), "rung", "ADP", a score, and American spellings.
+
+
+==============================================================================
+source: /docs/brief/memo-2026-10-20-user-onboarding-plan.md
+==============================================================================
+
+# The memo of 20 October 2026: the first batch of users, and the next phase of RiskMandate
+
+*A voice memo from the lead, received the same day as the brief, after the brief. Archived byte for byte and registered by digest, in the riskmandate.ai way: what was said and what we made of it are two objects, and only one of them is allowed to be wrong.*
+
+| | |
+|---|---|
+| Received | 2026-10-20, as an otter.ai transcript uploaded by the lead to the build session, titled "Risk Mandate User Onboarding Plan" |
+| The bytes | [memos/2026-10-20-user-onboarding-plan.txt](memos/2026-10-20-user-onboarding-plan.txt), 1,876 bytes, sha256 `0a60b38e069682f98c906a36d21dff8665d54a6048cc4f8bd21dca445892e7df`; never edited |
+| Status | read into this site at v0.1.0 (2026-10-20); what it changed is listed below and in [BRIEF-CORRECTIONS.md](BRIEF-CORRECTIONS.md) |
+| Reads against | [the brief](our-first-customers.md), the newsroom article of the same day |
+
+## What it adds to the brief
+
+Read against the brief, the memo makes five things concrete. The transcript is the lead's spoken words; the list is the build session's reading of them, and is the part that can be wrong.
+
+1. **The first users are named.** The lead, the co-founder ("Nime" in the transcript is Nimay Parekh, the co-founder and chief executive, as on [the about page](https://riskmandate.ai/about.html)), and the agents the lead already runs: about ten, probably more, which are the ones that need behaviour policies. The brief said "some of it is us"; the memo says it is us first.
+2. **The programme is one people propose to join**, because capacity is limited. The brief's mailing list for the next batch is the same mechanism seen from the other side.
+3. **What the behaviour policies are.** Very explicit ones that work with Claude and with ChatGPT, covering two of the three places a behaviour policy can run: the rows the agent follows, and the rows the hooks hold. The third place is left for later. This is the step S5 on the milestone ladder.
+4. **The wired-in agent produces the end behaviour policy.** The agent that is already wired in gets the responsibility and the requirement to create the end behaviour policy, which means the workflow has to be implemented with it and the KPIs and objectives mapped out. This is the proposed row *programme.agent-policies* in the reality file.
+5. **The milestone.** To get a behaviour policy, and to find behaviour policies that add value to these users; and to focus on the onboarding and the experience, as smooth and effective as it can be, to the point where it adds a lot of value and they understand what the behaviour policy is doing. The brief's "usage moment" and "entry point with least friction", in the lead's own words.
+
+## The transcript, verbatim
+
+What follows is the file, unchanged, including the transcription's own spellings.
+
+```
+Dinis Cruz  0:00  
+To map out the next phase of the risk mandate, which is we now are ready to create our first batch of users, which I already have, and we're delivering them in, and basically we're going to have sort of a programme where people can propose to join me, right? Because again, we have limited capacity, and we're going to be working with to to get to give them the policies right. And these policies are fundamentally going to be around a set of very explicit policies that work with Cloud and ChatGPT, and they basically are all focused on both the policies for the agent to run, and the and policies for the hooks. Right. So remember that we, when you talk about agent behaviour policies. There's three elements where they can run. What we're going to do is we're going to first work with our users to do two. So what we need now is these users. We now need to implement the workflow with the agent behaviour policies, and so with the with the with the agent that we have wired in. So we need to basically give that agent the responsibility and the requirement to basically create the end policy. So we need to basically map out all the KPIs and all the objectives, and we need to basically, like the milestone here is to get a policy and to find policies that add value to these users, right? So the the first, of course, two main users is going to be me. Actually, the main users are going to be me, Nime, and the pile of agents that I already have. So about 10 agents, or probably more, that I already have, that are going to be the ones that need the policies. So we just need to now really focus on the onboarding, focus on the experience, to make it as smooth and as effective, and to get to the point of it adds a lot of value, and they understand what the policy is doing. So that's our next very exciting milestone.
+
+Transcribed by https://otter.ai
+```
+
+
+==============================================================================
+source: /docs/brief/our-first-customers.md
+==============================================================================
+
+# Our first customers: an early access programme for Agent Behaviour Policies, with credit to spend, a start-here site, daily follow-up, and a list for the next batch
+
+*The brief. Published here in full, as written, and never edited: corrections go in [BRIEF-CORRECTIONS.md](BRIEF-CORRECTIONS.md) beside it.*
+
+| | |
+|---|---|
+| Source | <https://newsroom.sgit.ai/articles/our-first-customers.html>, article No. 224 of the SGit Newsroom, article v1.1.0, 2 versions; the markdown twin at the same path with `.md` |
+| Author | Dinis Cruz, written up and checked by the newsroom's agent from a voice memo of 20 October 2026; the editorial responsibility is his |
+| Date | 2026-10-20 |
+| Status | proposed, in the article's own words; accepted as this site's brief on 2026-10-20 when the lead asked for the site to be built from it, and the site built the same day |
+| Licence | CC BY 4.0 |
+| What follows | the article body, from its title to "Where this comes from", copied from the newsroom's markdown twin on 2026-10-20 with its relative links made absolute; the newsroom's own chrome (the threads, the related articles, the reviews) is not part of the brief and is not reproduced |
+
+---
+
+# Our first customers: an early access programme for Agent Behaviour Policies, with credit to spend, a start-here site, daily follow-up, and a list for the next batch
+
+By [Dinis Cruz](https://sgit.ai/about/index.md) · 2026-10-20 · [article v1.1.0, 2 versions](https://newsroom.sgit.ai/articles/versions/our-first-customers.md) · [newsroom v0.12.154](https://newsroom.sgit.ai/admin/versions.html) · agentsagent-behaviour-policystartupscustomerspricingearly-accessarticle
+
+***Abstract:** Agent Behaviour Policies are ready for the next level. We have a workflow that works, a mapping to what regulators are asking for, and a clear idea of how it should all fit together. What is left is execution, and execution starts with customers. We now have a first group of people who are engaged and motivated: consultants who will sell this and already use some of it, people I work with, and us. So we are launching an early access programme, and I would like to call the people in it customers, not beta users: each one starts with credit to spend on a site we run, and the site already meters and bills, the way this newsroom does today, starting at £5. We will follow each customer closely, an email every day if that is what it takes, with objectives and milestones written with them, on a dedicated site with a start-here page. What we want to discover is the usage moment: the simplest policy that is useful, the entry point with least friction, and the price that feels fair. Everyone else who asks goes on a mailing list for the next batch. This is the brief.*
+
+The first customers, from credit to the moment they would pay: credit, a start-here page, a first policy, milestones and the value, with a daily follow-up and the meter alongside. Proposed.
+
+## In short
+
+- **Agent Behaviour Policies are ready for the next level.** The workflow, the mapping and the understanding are in place.
+- **What is left is execution.** And execution starts with customers.
+- **Call them customers.** Each one starts with credit, on a site that meters and bills.
+- **Follow each one closely.** Daily if needed, with objectives and milestones of their own.
+- **A dedicated site, with a start-here page.** Instructions, progress and usage in one place.
+- **Discover the usage moment.** The simplest useful policy, the easiest entry, a fair price.
+- **A mailing list for the next batch.** Everyone who asks, kept for when we are ready.
+
+## Why now
+
+This is good news, and I think it is the move to the next level for Agent Behaviour Policies. We have a workflow that works: grant, mandate, delta and barrier, with a holder for every row. We have a mapping to what regulators are now asking for, worked through with [the Pellbridge agents](https://newsroom.sgit.ai/articles/inside-the-pellbridge-agents.md) against the FCA's four elements. And we have a good understanding of how it should all fit together, from [the policy beside the prompt](https://newsroom.sgit.ai/articles/a-policy-beside-the-prompt.md) to [a policy for every skill](https://newsroom.sgit.ai/articles/a-policy-for-every-skill.md).
+
+What is left is execution. And we have the people to execute it with: a good number of friendlies who are engaged and motivated. Some are consultants who are going to be selling this, and who already use some of it. Some are people I work with. Some of it is us. That is the first good group.
+
+## Customers, not beta users
+
+I thought about what to call them: early access users, beta users, the first batch. Beta describes the state of the product. What I want to name is the relationship. So I think they should be customers.
+
+Each of them starts with credit, £5 or £50 or whatever the number turns out to be, to spend on a site we run. From the first day, what they use is metered, and the question of what they would pay is a real one. That is the same idea as [paying after the value](https://newsroom.sgit.ai/articles/paying-after-the-value.md): this newsroom gives every reader £5 of credit, each page uses a few pence, and the reader decides when to top up, with the value already in front of them. Give it for free until there is enough value that they want to pay for it.
+
+The other reason is the one in [can you sell it?](https://newsroom.sgit.ai/articles/can-you-sell-it.md): a customer who pays is the best signal you will get, and making it easy to pay goes in early, not at the end.
+
+## A site of their own
+
+I think a dedicated site for this programme would help a lot: one place where we can follow how everyone is getting on, and where I can keep things up to date. It starts with a start-here page: what to do first, in order, with clear instructions. Then a page for each customer, with the objectives and milestones we agreed with them, and where they are.
+
+The billing is already there. This newsroom meters every page a reader reads against their credit, and the top-up link has been live since 11 October. The same works for any site we run: even if all a customer does is use the website, we can measure it, and we can bill for it. The price per use is something to discover. It could be quite high, or quite low. We start with credit and learn what feels fair.
+
+## Hand-holding, on purpose
+
+For this first batch, I would like us to really invest in following up: an email every day if that is what helps, very specific hand-holding, and objectives and milestones mapped out for each customer.
+
+That will not scale, and it is not meant to yet. Paul Graham made the case in [Do Things that Don't Scale](https://paulgraham.com/ds.html) (July 2013): "The most common unscalable thing founders have to do at the start is to recruit users manually." He tells how Stripe's founders got their first users: "When anyone agreed to try Stripe they'd say 'Right then, give me your laptop' and set them up on the spot." And he says you can give users "an insanely great experience with an early, incomplete, buggy product, if you make up the difference with attentiveness."
+
+Each customer's follow-up asks three things: what they did, what got in the way, and what is next.
+
+## What we want to discover
+
+The point of the programme is to find the usage moment: the moment an Agent Behaviour Policy becomes worth something to a particular person. Three questions follow from it.
+
+- **What is the simplest useful policy?** One agent, a few rows, the gap found. Perhaps a system prompt turned into a policy, as in [system prompts as behaviour policies](https://newsroom.sgit.ai/articles/system-prompts-as-behaviour-policies.md); perhaps a skill checked against its mandate; perhaps one agent's reach, measured.
+- **What is the entry point with least friction?** A reader once told us the pages were [hard to understand](https://newsroom.sgit.ai/articles/what-can-your-agent-reach.md). The start-here page has to fix that, and each customer will show us where it does not.
+- **What is the price?** The credit tells us how much each customer uses before they would top up, and the follow-up tells us why.
+
+The things to track for each customer are simple: when they started, when they wrote their first policy, how many rows and gaps it has, which milestones are done, what they used of the credit, and whether they topped up.
+
+## Batches, and a list for the next one
+
+This is not a launch. It is a first batch, small enough to follow closely. Alongside it we start a mailing list: everyone who asks to join is kept for the next batch, with what they want to use it for. The next batch gets a start-here page made from what the first one taught us, and needs less hand-holding per customer.
+
+Batches, not a launch: the first batch of friendlies, what we learn from them, the mailing list, and the second batch. Proposed.
+
+## What this does not claim
+
+- **The programme is new.** The site, the start-here page and the mailing list are proposed here.
+- **The prices are not set.** £5 and £50 are starting points, to test.
+- **The metering is real.** It is this newsroom's meter today, not yet the programme's site.
+- **No customer is named.** The first group is people we already work with.
+- **Everything is open.** The policies, the vocabulary and this brief are CC BY 4.0.
+
+## Where this comes from
+
+A voice memo of 20 October 2026. Paul Graham, [Do Things that Don't Scale](https://paulgraham.com/ds.html), July 2013. The Agent Behaviour Policy at [abp.sgit.ai](https://abp.sgit.ai/). Related: [paying after the value](https://newsroom.sgit.ai/articles/paying-after-the-value.md), [can you sell it?](https://newsroom.sgit.ai/articles/can-you-sell-it.md), [inside the Pellbridge agents](https://newsroom.sgit.ai/articles/inside-the-pellbridge-agents.md), [what can your agent reach?](https://newsroom.sgit.ai/articles/what-can-your-agent-reach.md), [system prompts as behaviour policies](https://newsroom.sgit.ai/articles/system-prompts-as-behaviour-policies.md). Written up and checked by this site's agent, newsroom.writer; the editorial responsibility is mine.
+
+
+==============================================================================
+source: /docs/ops/needs.md
+==============================================================================
+
+# What only a human can do
+
+*customers.riskmandate.ai · operations · maintained by the build session · last updated at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+Everything on this list blocks a step of the brief or of the repository rules and cannot be done from inside the repository. Each item says who, what, exactly, and which step waits on it. Items are moved to *Done* when done, dated, and anything that turned out differently from the brief is recorded in [BRIEF-CORRECTIONS.md](../brief/BRIEF-CORRECTIONS.md).
+
+## Blocking the first release being live
+
+1. **DNS (the lead).** `customers.riskmandate.ai CNAME sgit-ai.github.io` at the registrar for riskmandate.ai. The lead said on 2026-10-20 that this is being done now.
+2. **GitHub Pages (the lead, as an owner of SGit-AI).** On the repository `SGit-AI/SGit-AI__Website__Customers`: Settings, Pages, source "GitHub Actions"; custom domain `customers.riskmandate.ai`; enforce HTTPS once the certificate is issued. The deploy job asks Pages to enable itself (`enablement: true`), but the custom domain and HTTPS are settings the token cannot set.
+3. **Re-run `verify-live` (the lead).** The v0.1.0 run's last job polls the host for ten minutes and fails if the record is not there yet. When 1 and 2 are done, re-run the workflow from the Actions tab, or push the next release; the record in `data/versions.json` is filled at the next release.
+4. **The Pages environment (the lead).** If the `github-pages` environment restricts deploy branches, add `dev`. The sibling sites hit this once.
+
+## Blocking the credit (milestone S0 for every customer, step 3 of the credit page)
+
+5. **Wire SG Meter to this host (the lead, with the newsroom's tooling).** The newsroom's meter charges a reader's balance per page and has a live top-up link since 11 October 2026. This site needs the meter's script on its pages, which means a content security policy change (`script-src` and `connect-src` for the meter's origin) recorded in `admin/build/chrome.py` and a release note, and the reading accounts for the first batch with their starting credit. Until then the credit on a customer page is a number kept by hand.
+6. **Decide the starting credit (the lead).** £5 or £50; the brief says the number is to be discovered. Written on each customer's record at S0.
+
+## Blocking the next batch's form
+
+7. **The form on this site (the lead, then the build session).** The riskmandate.ai contact form encrypts to the site agent's key and posts to the `site` lane of its comms vault. The same form on this site needs: the lead's yes; the lane's endpoint and token (public on purpose on riskmandate.ai) referenced, never copied into a new file; a content security policy change for `connect-src` and `form-action`; and a round trip proved. Until then the route is email or the riskmandate.ai form.
+
+## The customer records
+
+8. **The private list (the lead).** One file, held by the lead, never committed and never in a vault with a public read key: for each customer, the handle used on the site, the real name and how to reach them, the agent they named, the starting credit, and the private notes from the follow-ups. The public record in `data/customers.json` is the summary and carries none of it.
+9. **The consultants and the colleagues (the lead).** The brief's other two groups are not listed yet. Each is added as a record when they start, by a handle they agreed to, by a release.
+10. **The ten agents (the lead, with the wired-in agent).** A list of the agents the lead runs, one line each, with the published shape each is nearest to; two have behaviour policies today on riskmandate.ai/team/. This is step S1 of the record *the-agents*.
+
+## The estate's asks
+
+11. **The honest column (the lead).** Add this site's row to the honest column on nfrs.sgit.ai. The row, as at v0.1.0: version control, met (one version, tagged, release history); reliability, partly (the gate and verify-live; no uptime record); resilience, not met (no backup beyond the repository and Pages); security, partly (the leak tripwire, a strict content security policy, no credentials in the tree; no branch protection yet); backups, not met; consistency, met (every number generated); explainability, met (the brief, the corrections, reality); documentation, met (twins, llms.txt, the ops notes).
+12. **Branch protection (an owner of SGit-AI).** `dev` and `main` with `validate` as the required status check; no force pushes; the organisation's 2FA rule.
+
+## Not yet needed
+
+- A reviewer other than the lead for the follow-up messages: the lead sends them for the first batch.
+- A comms identity of this site's own: it delegates to agent@riskmandate.ai, and `.well-known/sgit-agents.json` says so.
+
+
+==============================================================================
+source: /docs/ops/release.md
+==============================================================================
+
+# How a release works
+
+*customers.riskmandate.ai · operations · written at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+Every push to `dev` is a release. There is no build step at deploy time: the committed tree is the deployed tree, and seven small generators keep the parts that must agree in agreement. One pipeline validates, tags, deploys and then checks that the live site is serving what was pushed.
+
+## The version
+
+- The version lives in one file, `admin/build/version.txt`, as `X.Y.Z` with no `v`.
+- Every push to `dev` bumps the minor (`0.1.0` to `0.2.0`). A patch (`0.2.1`) is for a same-day fix. A major `.0.0` is deliberate and rare.
+- The release commit's subject is `site vX.Y.Z : <what>`, with the same version. CI anchors on the newest commit whose subject has that shape, not on HEAD, because a merge commit may sit on top.
+- `data/versions.json` gets a new first row: version, date, title, notes. The title is the `<what>` of the subject. The note says what changed and why, in words a reader can act on.
+- The version is repeated by the generators into every page badge, every markdown twin, `llms.txt`, `llms-full.txt`, `sitemap.xml` and the release table. Check 1 of the gate fails on any disagreement.
+
+## The steps, locally
+
+```
+# 1. edit content; edit data/customers.json, data/reality.json as the facts change
+python3 admin/build/release.py --version X.Y.Z --kind feature --title "<what>" --notes "<why>"
+#    which does: bump version.txt and versions.json; gate.py --build; commit "site vX.Y.Z : <what>"; push dev; verify live
+# or by hand:
+python3 admin/build/gate.py --build      # regenerate everything, then run the whole gate
+git add -A
+git commit -m "site vX.Y.Z : <what>"
+git push -u origin dev                   # or open a pull request to dev from claude/<description>-<session-id>
+```
+
+`gate.py --build` runs the generators in order (customers, reality, docs, the review tools, chrome, versions, twins, llms), then runs them again with `--check`, then `node admin/build/validate.js`, then `python3 -m pytest tests/build/ -q`, then `node --test tests/unit/**/*.test.js`. `gate.py` without `--build` runs the same list in check mode only, which is exactly what CI does.
+
+## The steps, in CI (`.github/workflows/deploy-pages.yml`)
+
+| Job | When | Does | On failure |
+|---|---|---|---|
+| `validate` | every push to `dev` or `main`, every pull request to either, manual dispatch | `python3 admin/build/gate.py` | nothing is tagged or deployed |
+| `tag-release` | push to `dev` only | `admin/build/tag_release.py`: version.txt equals the newest `site vX.Y.Z` subject; the version is the next minor, a patch or a major `.0.0` after the newest tag; backfills missing historical tags; pushes `refs/tags/vX.Y.Z` | no deploy |
+| `deploy` | any push or dispatch, never a pull request | `admin/build/assemble_site.py` copies the tree minus `.git`, `.github`, `tests/unit`, `node_modules` into `_site/`; upload and deploy to GitHub Pages | the previous version stays live |
+| `verify-live` | after deploy | `admin/build/verify_live.py` polls `https://customers.riskmandate.ai/admin/build/version.txt` and the home page badge with a cache-buster until both equal the version, for up to ten minutes | the run is red; the site may be stale |
+
+A push to `main` deploys without tagging: `main` is promoted from `dev` and is the fallback. Both branches deploy to the one Pages site of this repository, so whichever pushed last is what the host serves; `main` is promoted only to a version `dev` already released.
+
+## Green does not mean live
+
+A sibling site once pushed two releases that reported success and never reached anyone, because the Pages deploy job died downloading its own action. The `verify-live` job exists for that reason: the release is not done until the origin answers with the new version. When `verify-live` is red and `deploy` is green, the usual causes are the domain not yet pointing at Pages (see [needs.md](needs.md)), Pages not yet enabled for the repository with the custom domain, or a transient `429` on an action download, which a re-run fixes. The first release of this site, v0.1.0, was pushed before the DNS record existed, so its `verify-live` is expected red until the lead's step is done; the re-run is the lead's.
+
+## The eight checks of the gate
+
+See `/admin/` on the site or the header of `admin/build/validate.js`. The rule for the leak tripwire is worth repeating: the fix for a trip is always a redaction, never a wider pattern. The rule for the house words is riskmandate.ai's: the verbatim documents are exempt and nothing else is.
+
+## Backfilling tags
+
+`tag_release.py` tags every historical release commit that has no tag, oldest first, then pushes all the new tags. A tag that already points at its release commit is left alone. A tag that points elsewhere fails the job: tags are never moved.
+
+
+==============================================================================
+source: /team/README.md
+==============================================================================
+
+# The team
+
+*customers.riskmandate.ai · who does what, as files · written at v0.1.0 (2026-10-20) · in the shape of the sgit.ai team section and the riskmandate.ai team page · CC BY 4.0*
+
+Three roles fill every seat at this stage, held by one person and one agent. Each role is one file with the rules it enforces and the mistake behind each rule, so that a new agent can read this page and one role and begin. The board of work is [board.md](board.md), the work as files with a status line each, and [needs.md](../docs/ops/needs.md), the asks back to the person. Neither lives in a vault yet; if the board outgrows a file, it moves to a vault of its own and this page says where.
+
+| Role | Held by | Decides |
+|---|---|---|
+| [Project lead](roles/project-lead.md) | Dinis Cruz | What ships next, what the brief means where it is ambiguous, who is in the batch and under what handle, the credit, everything that needs a human account (DNS, Pages, the meter, the list) |
+| [Build agent](roles/build-agent.md) | A Claude Code session, one at a time | Everything else, within the rules its role file lists, recording each departure from the brief in the corrections file |
+| [Customer follow-up](roles/customer-follow-up.md) | The lead, for the first batch; an agent drafts | The daily contact with each customer, the three questions, and what is recorded on the customer page |
+
+The agents that make riskmandate.ai have behaviour policies of their own on [its team page](https://riskmandate.ai/team/); this site's build agent is a Claude Code session of the same kind and will get one as part of the record *the-agents* in the batch. Other teams review the work and the review is published with the reply; the first review this site expects is the sgit.ai site team's, against its repository rules.
+
+
+==============================================================================
+source: /team/board.md
+==============================================================================
+
+# The board
+
+*customers.riskmandate.ai · the work as files · written at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+One line per piece of work, with a status: `open`, `building`, `done vX.Y.Z`, or `waits on <who>`. A row moves because the thing happened, by a release; nothing is dragged. The asks that only a person can do are in [needs.md](../docs/ops/needs.md) and are not repeated here.
+
+| # | Work | Status |
+|---|---|---|
+| B1 | The site, from the brief: pipeline, gate, chrome, the content pages, the brief in full, the corrections file, reality, the team, the review folder's intent half | done v0.1.0 |
+| B2 | The customer records for the first batch: the lead, the co-founder, the agents; one worked example | done v0.1.0 |
+| B3 | The list of the ten agents, one line each, with the nearest published shape | waits on the lead (needs 10) |
+| B4 | The grant of one Claude Code session, measured with MAP-A-GRANT.md: the lead's step S2 | open |
+| B5 | The meter wired to this host, and the credit accounts for the batch | waits on the lead (needs 5, 6) |
+| B6 | The follow-up message as a draft an agent writes each day, from the customer records | open |
+| B7 | The findings table on the learning page, filled from the second follow-up answer, counted | open; starts when the first follow-up answers arrive |
+| B8 | The form for the next batch, on this site | waits on the lead (needs 7) |
+| B9 | The derived half of the review folder, and review/self/ | open; from the next change, delta first |
+| B10 | The behaviour policy of this site's build agent, in the riskmandate.ai team grammar | open |
+
+
+==============================================================================
+source: /team/roles/build-agent.md
+==============================================================================
+
+# Role: build agent
+
+*customers.riskmandate.ai · the Claude Code session · written at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+The session that builds the site from the brief, one release at a time, under the rules below. It never pushes a release that fails the gate, never writes a secret or a contact detail into the tree, and never describes a thing in the present tense before `data/reality.json` says shipped.
+
+## Rules this role enforces, and the mistake behind each
+
+| Rule | The mistake it came from |
+|---|---|
+| Run `python3 admin/build/gate.py --build` before every commit; CI runs the same command. | A sibling site shipped two releases that reported success and never reached anyone; the gate and verify-live exist for that reason. |
+| Every number on a page is generated from a file or dated with the file it came from. | nfrs.sgit.ai's rule: an index maintained by hand becomes a lie on a schedule. The counts, the batch table and reality are written by scripts. |
+| Never "ADP", never "the policy" alone, no score on a behaviour policy, "steps" not "rungs", British English. | riskmandate.ai's rules, each with a reason on its own CLAUDE.md; the gate enforces them here, and the verbatim brief and memo are exempt. |
+| No contact details in any file; the gate fails on anything contact-shaped in the customer records. | The brief's "no customer is named"; the repository is public. |
+| When the brief is wrong, record it in BRIEF-CORRECTIONS.md and carry on; never edit the brief or the memo. | The brief is the one that was accepted; the memo is the one that was said. |
+| When something needs a human, write exactly what, as a command, in needs.md, and continue with what does not depend on it. | A step that lives in a chat does not get done. |
+| The fix for a tripwire hit is a redaction, never a wider pattern. | A wider pattern hides the next real key. |
+| No em-dashes in prose the session writes; the gate says so as an advisory. | The house prose rule; the verbatim documents are exempt. |
+| A release is `site vX.Y.Z : what`, the version bumped, the note saying what changed and why. | "UI improvements" tells a reader nothing; the release history is the repository's memory. |
+
+## Starting prompt
+
+"Read README.md, docs/ops/release.md, docs/brief/BRIEF-CORRECTIONS.md and team/board.md. Continue from the first open row on the board that does not wait on the lead. Every release is `site vX.Y.Z : what` with the minor bumped and a `Kind:` trailer."
+
+
+==============================================================================
+source: /team/roles/customer-follow-up.md
+==============================================================================
+
+# Role: customer follow-up
+
+*customers.riskmandate.ai · held by the lead for the first batch; an agent drafts · written at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+The daily contact with each customer. Asks three things, as often as daily if that helps: what they did, what got in the way, what is next. Records the answers on the customer page in summary and keeps the rest with the lead. The pattern is the newsroom's: an agent drafts, a person reads and sends, and nothing goes out that a person has not seen.
+
+## Rules this role enforces, and the mistake behind each
+
+| Rule | The mistake it came from |
+|---|---|
+| Three questions, a line each is plenty; "nothing, I was busy" is a fine answer and goes in the log. | A follow-up that reads as a form gets no reply; Paul Graham's attentiveness is a person asking, not a survey. |
+| The log on the customer page is the summary; names of systems, the contents of a grant or a mandate, and anything the customer did not want public stay with the lead. | The brief: nothing is published without their yes, and the default is no. |
+| The second answer, what got in the way, is read against the three questions on the learning page, and a pattern across customers becomes a finding with its count. | A finding typed before it was counted is a guess; the learning page's table starts empty on purpose. |
+| A customer who has not replied is asked again, not marked. | A status that says "stalled" is a judgement; the log records dates and the ladder records steps. |
+| The follow-up names the step the customer is on and links their page, so they can see what the site says about them. | A page about a person that the person has not seen is a page they cannot correct. |
+
+## The message
+
+The template is on [the follow-up page](../../follow-up/index.md). An agent fills `{first name}`, `{step}` and `{id}` from the private list and the customer record; a person sends it from agent@riskmandate.ai.
+
+## Starting prompt
+
+"For each customer in data/customers.json whose status is not example, draft today's follow-up from the template, with the step they are on and the link to their page, and put the drafts where the lead reads them. Do not send."
+
+
+==============================================================================
+source: /team/roles/project-lead.md
+==============================================================================
+
+# Role: project lead
+
+*customers.riskmandate.ai · Dinis Cruz · written at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+The person. Speaks or writes the brief; an agent drafts; the person accepts. Decides who is in the batch and under what handle, what the credit is, what the brief means where it is ambiguous, and everything that needs a human account.
+
+## Rules this role enforces, and the mistake behind each
+
+| Rule | The mistake it came from |
+|---|---|
+| A brief is the person's words, in either hand, and is published in full before the work starts. | A site built from a conversation nobody can read cannot be checked against anything but itself; the repository rules say so and the newsroom's briefs are the pattern. |
+| Nobody is listed as a customer without their yes, and the default is no. | The brief's own rule, "no customer is named"; the memo named the first users, and C2 in the corrections says how that was reconciled. |
+| A customer's private details never enter the repository; the lead holds them. | The repository is public and every file in it is deployed; a leak is an incident, not a typo. |
+| Every ask that needs a human is written as a command in needs.md, and the lead does it or says why not. | The sibling sites' DNS and Pages steps sat undone because they were in a chat, not on a page. |
+| The lead reads the correction above the mistake, never edits the brief to match. | A corrected brief would no longer be the one that was accepted. |
+
+## Starting prompt
+
+"Read the start-here page as a customer would and say where it is hard to understand. Then read needs.md and do the first open item or say why not."
+
+
+==============================================================================
+source: /review/BRIEF-CORRECTIONS.md
+==============================================================================
+
+# Corrections to the review brief, for this repository
+
+*customers.riskmandate.ai · started at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+The review brief is [Code review graphs in the repository](https://sgit.ai/docs/briefs/code-review-graphs-in-the-repository.html), on sgit.ai. Where this repository does not follow it, the entry is here, dated, with the reason.
+
+## R1. Only the intent half exists at v0.1.0 (2026-10-20)
+
+The brief asks a new repository to build the whole folder before its first source file. This repository built the intent half (stories, rules, examples, anchored to the brief and the memo), a validator and a static rendering, and shipped the site. The derived half, the join, the change files, the web-component navigator and `self/` are proposed, recorded in `data/reality.json` as *site.review-derived*. Reason: the site had to exist on the day the brief was accepted; a review folder for a site that does not exist reviews nothing. The next change starts the derived half, delta first.
+
+## R2. The brief's headings are not numbered (2026-10-20)
+
+The review brief's `sections.json` keys sections by number. The newsroom article that is this site's brief has prose headings with no numbers, so `tools/sections.py` keys them by the heading's slug, which is also the anchor on the rendered page. The memo document is anchored the same way, and both are in one `sections.json` under `docs`.
+
+## R3. The navigator is a page, not components (2026-10-20)
+
+The brief asks for a navigator built as web components in the coding.sgit.ai shape. `review/index.html` is a static page rendered by `tools/render.py`, with the same links a navigator would have (every node to its section of the brief and to the page it lands on), and no script. The components come with the derived half.
+
+
+==============================================================================
+source: /review/README.md
+==============================================================================
+
+# review/: the brief as intent, and what is not derived yet
+
+*customers.riskmandate.ai · written at v0.1.0 (2026-10-20) · CC BY 4.0*
+
+The sgit.ai repository rules ask every repository to carry a review folder from its first commit, in the shape of [Code review graphs in the repository](https://sgit.ai/docs/briefs/code-review-graphs-in-the-repository.html): the intent written top down from the brief, the code derived bottom up from the syntax tree by parsers, the join between the two with a coverage figure, every commit read upwards, a navigator built as web components, and `self/` for the tools. This folder has the first of those and says so.
+
+## What is here
+
+- `intent/stories.json`: the brief and the memo as stories, rules and examples, written by the build session on 2026-10-20, each node carrying the document and the heading it came from. Not yet accepted by a person; the lead accepts by a release that sets `accepted_by`.
+- `intent/sections.json`: every heading of the brief and the memo with the anchor the rendered page gives it, generated by `tools/sections.py`, so every source resolves to a place a reader can click.
+- `tools/validate_review.py`: the shape checks; it runs in the gate. `tools/render.py` renders the intent into [the review page](index.html), static HTML with no script.
+- [BRIEF-CORRECTIONS.md](BRIEF-CORRECTIONS.md): where the review brief was not followed, and why.
+
+## What is not here
+
+The derived half: `graph/`, `join/`, `changes/`, `streams/`, `checks/`, the navigator as web components, and `self/`. The reality file carries it as *site.review-derived*, proposed. The plan is the repository rules' own: from the next change, delta first, letting the graph grow along the paths people walk.
+
+## Regenerate and check
+
+```
+python3 review/tools/sections.py             # the headings of the brief and the memo, with anchors
+python3 review/tools/validate_review.py      # every source resolves; every surface is a page; ids unique
+python3 review/tools/render.py               # the review page
+```
+

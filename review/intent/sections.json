@@ -1,0 +1,86 @@
+{
+  "docs": [
+    {
+      "doc": "docs/brief/our-first-customers.md",
+      "page": "/docs/brief/our-first-customers.html",
+      "sections": {
+        "a-site-of-their-own": {
+          "anchor": "a-site-of-their-own",
+          "level": 2,
+          "title": "A site of their own"
+        },
+        "batches-and-a-list-for-the-next-one": {
+          "anchor": "batches-and-a-list-for-the-next-one",
+          "level": 2,
+          "title": "Batches, and a list for the next one"
+        },
+        "customers-not-beta-users": {
+          "anchor": "customers-not-beta-users",
+          "level": 2,
+          "title": "Customers, not beta users"
+        },
+        "hand-holding-on-purpose": {
+          "anchor": "hand-holding-on-purpose",
+          "level": 2,
+          "title": "Hand-holding, on purpose"
+        },
+        "in-short": {
+          "anchor": "in-short",
+          "level": 2,
+          "title": "In short"
+        },
+        "our-first-customers-an-early-access-programme-for-agent-behaviour-policies-with-credit-to-spend-a-start-here-site-daily-follow-up-and-a-list-for-the-next-batch": {
+          "anchor": "our-first-customers-an-early-access-programme-for-agent-behaviour-policies-with-credit-to-spend-a-start-here-site-daily-follow-up-and-a-list-for-the-next-batch",
+          "level": 1,
+          "title": "Our first customers: an early access programme for Agent Behaviour Policies, with credit to spend, a start-here site, daily follow-up, and a list for the next batch"
+        },
+        "our-first-customers-an-early-access-programme-for-agent-behaviour-policies-with-credit-to-spend-a-start-here-site-daily-follow-up-and-a-list-for-the-next-batch-1": {
+          "anchor": "our-first-customers-an-early-access-programme-for-agent-behaviour-policies-with-credit-to-spend-a-start-here-site-daily-follow-up-and-a-list-for-the-next-batch-1",
+          "level": 1,
+          "title": "Our first customers: an early access programme for Agent Behaviour Policies, with credit to spend, a start-here site, daily follow-up, and a list for the next batch"
+        },
+        "what-this-does-not-claim": {
+          "anchor": "what-this-does-not-claim",
+          "level": 2,
+          "title": "What this does not claim"
+        },
+        "what-we-want-to-discover": {
+          "anchor": "what-we-want-to-discover",
+          "level": 2,
+          "title": "What we want to discover"
+        },
+        "where-this-comes-from": {
+          "anchor": "where-this-comes-from",
+          "level": 2,
+          "title": "Where this comes from"
+        },
+        "why-now": {
+          "anchor": "why-now",
+          "level": 2,
+          "title": "Why now"
+        }
+      }
+    },
+    {
+      "doc": "docs/brief/memo-2026-10-20-user-onboarding-plan.md",
+      "page": "/docs/brief/memo-2026-10-20-user-onboarding-plan.html",
+      "sections": {
+        "the-memo-of-20-october-2026-the-first-batch-of-users-and-the-next-phase-of-riskmandate": {
+          "anchor": "the-memo-of-20-october-2026-the-first-batch-of-users-and-the-next-phase-of-riskmandate",
+          "level": 1,
+          "title": "The memo of 20 October 2026: the first batch of users, and the next phase of RiskMandate"
+        },
+        "the-transcript-verbatim": {
+          "anchor": "the-transcript-verbatim",
+          "level": 2,
+          "title": "The transcript, verbatim"
+        },
+        "what-it-adds-to-the-brief": {
+          "anchor": "what-it-adds-to-the-brief",
+          "level": 2,
+          "title": "What it adds to the brief"
+        }
+      }
+    }
+  ]
+}
