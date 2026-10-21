@@ -1,0 +1,9 @@
+{
+  "what": "riskmandate.ai's rules, copied byte for byte: one question about an agent, the line that answers it, and the setting or boundary that holds when the agent does not cooperate. The behaviour policies on this site are built from them; the rule is riskmandate.ai's and stays the source. Do not edit these files; take a new copy instead, and record it here.",
+  "from": "https://github.com/Risk-Mandate/riskmandate.ai/tree/dev/site/rules",
+  "commit": "700ee2ce38b1b50e2a69e62d7a92387ebf2ea649",
+  "copied": "2026-10-21",
+  "count": 24,
+  "licence": "CC BY 4.0, RiskMandate (https://riskmandate.ai/rules/)",
+  "page": "https://riskmandate.ai/rules/"
+}

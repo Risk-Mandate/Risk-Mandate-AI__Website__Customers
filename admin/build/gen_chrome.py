@@ -20,9 +20,10 @@ class Gen__Chrome:
 
     def render(self, page):
         text        = page['path'].read_text(encoding='utf-8')
-        text, head  = self.pages.replace_blocks(text, 'head', lambda attrs: self.chrome.head(page['url'], page['title'], page['description'], attrs.get('connect', '')))
+        storyboard  = 'data-sb-bundle=' in page['main']                              # a page with a storyboard gets the kit's files, pinned and with their integrity
+        text, head  = self.pages.replace_blocks(text, 'head', lambda attrs: self.chrome.head(page['url'], page['title'], page['description'], storyboard))
         text, nav   = self.pages.replace_block(text, 'nav'   , self.chrome.nav(page['url'], page['title']))
-        text, foot  = self.pages.replace_block(text, 'footer', self.chrome.footer(page['url']))
+        text, foot  = self.pages.replace_block(text, 'footer', self.chrome.footer(page['url'], page['title'], storyboard))
         missing     = [name for name, found in (('head', head), ('nav', nav), ('footer', foot)) if not found]
         if missing:
             raise SystemExit(f'{page["path"].relative_to(self.pages.root)}: missing chrome markers for {", ".join(missing)}')

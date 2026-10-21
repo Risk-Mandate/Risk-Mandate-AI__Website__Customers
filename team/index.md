@@ -2,7 +2,7 @@
 
 > Who does what, as one file per role with the rules it enforces and the mistake behind each, and the board of work.
 
-*Source: <https://customers.riskmandate.ai/team/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/team/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

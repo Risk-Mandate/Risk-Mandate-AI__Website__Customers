@@ -3,25 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Credit, and the meter: £5 or £50 to start, metered per use, topped up when the value is in view</title>
-  <meta name="description" content="How the credit works for a customer of the first batch: a starting amount, a meter that charges a few pence per use, a top-up link, and the two numbers we track, credit used and whether they topped up. Today the meter is the newsroom's; wiring it to this site is proposed and waits on the lead.">
+  <title>Credit, and the meter: £50 to start, a price per page, topped up when the value is in view</title>
+  <meta name="description" content="How the credit works: every reader starts with £50, each page costs a little by how far down it is read, a behaviour policy costs the most, and nothing is ever blocked. The meter is the newsroom's SG Meter, from api.newsroom.sgit.ai; there is no payment link yet.">
   <!-- rm-customers:head:start -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
   <link rel="canonical" href="https://customers.riskmandate.ai/credit/">
   <link rel="alternate" type="text/markdown" href="/credit/index.md">
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
   <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
   <script src="/assets/theme.js"></script>
   <link rel="stylesheet" href="/assets/themes.css">
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/credit/">
-  <meta property="og:title" content="Credit, and the meter: £5 or £50 to start, metered per use, topped up when the value is in view">
-  <meta property="og:description" content="How the credit works for a customer of the first batch: a starting amount, a meter that charges a few pence per use, a top-up link, and the two numbers we track, credit used and whether they topped up. Today the meter is the newsroom&#x27;s; wiring it to this site is proposed and waits on the lead.">
-  <meta name="rm-customers:version" content="0.2.0">
+  <meta property="og:title" content="Credit, and the meter: £50 to start, a price per page, topped up when the value is in view">
+  <meta property="og:description" content="How the credit works: every reader starts with £50, each page costs a little by how far down it is read, a behaviour policy costs the most, and nothing is ever blocked. The meter is the newsroom&#x27;s SG Meter, from api.newsroom.sgit.ai; there is no payment link yet.">
+  <meta name="rm-customers:version" content="0.2.1">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -29,23 +33,48 @@
   <!-- rm-customers:nav:start -->
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
       <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
       <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
       <nav class="navlinks" aria-label="Site">
-        <a class="pagelink" href="/start-here/">Start here</a>
         <span class="navgroup active">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
+            <a class="pagelink navchild active" href="/credit/" aria-current="page">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
+            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
+            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
+            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
+            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
           <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
-            <a class="pagelink navchild active" href="/credit/" aria-current="page">Credit, and the meter</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
             <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
             <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
           </div>
         </span>
-        <a class="pagelink" href="/customers/">Customers</a>
         <span class="navgroup">
           <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
@@ -56,20 +85,15 @@
             <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
             <a class="pagelink navchild" href="/docs/ops/">Operations</a>
             <a class="pagelink navchild" href="/team/">The team</a>
-          </div>
-        </span>
-        <span class="navgroup">
-          <a class="navgroup-btn" href="/admin/">Admin<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
-          <div class="navmenu">
             <a class="pagelink navchild" href="/admin/">How the site is built</a>
             <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
-            <a class="pagelink navchild" href="/docs/ops/needs.html">What needs a human</a>
             <a class="pagelink navchild" href="/review/">The review folder</a>
             <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
           </div>
         </span>
       </nav>
       <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
         <div class="theme-pick">
           <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
           <ul aria-label="Theme" hidden>
@@ -82,32 +106,49 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
       </div>
     </div>
-    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">Credit, and the meter</span></div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">What each page costs</span></div>
   </header>
 <!-- rm-customers:nav:end -->
   <main class="wrap">
     <h1>Credit, <span class="g">and the meter.</span></h1>
-    <p class="lead">Each customer starts with credit to spend on a site we run. What they use is metered from the first day, so the question of what they would pay is a real one, asked with the value already in front of them.</p>
+    <p class="lead">Everyone who opens this site starts with <strong>£50.00</strong> of credit. What you read is metered from the first page, so the question of what you would pay is a real one, asked with the value already in front of you.</p>
     <!-- rm-customers:status:start ids="programme.credit,programme.accounts" -->
-  <p class="status-line" data-generated-from="data/reality.json">Status, from <a href="/docs/reality.html">docs/reality.md</a>: <span class="status status-proposed">proposed</span> Credit per customer, metered and billed on this site, with a top-up link · <span class="status status-absent">absent</span> Accounts, sign-in or a customer login on this site</p>
+  <p class="status-line" data-generated-from="data/reality.json">Status, from <a href="/docs/reality.html">docs/reality.md</a>: <span class="status status-shipped">shipped v0.2.1</span> Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai · <span class="status status-absent">absent</span> Accounts, sign-in or a customer login on this site</p>
 <!-- rm-customers:status:end -->
 
-    <h2>How it is meant to work</h2>
-    <ol class="steps">
-      <li><b>A starting amount.</b><p>£5 or £50; the brief says the number is to be discovered. The lead records it on the customer page at milestone S0.</p></li>
-      <li><b>A meter on the site.</b><p>The newsroom's meter, <a href="https://newsroom.sgit.ai/meter/">SG Meter</a>, charges a reader's balance a few pence per page and lets it go negative; the reader decides when to top up. The top-up link has been live there since 11 October 2026. The same meter works for any site we run.</p></li>
-      <li><b>Two numbers.</b><p>Credit used, and whether they topped up. Both are on the customer page and in the batch table, and both are what the price question is answered from.</p></li>
-      <li><b>The price, discovered.</b><p>The credit tells us how much each customer uses before they would top up; the follow-up tells us why. It could be quite high, or quite low. We start with credit and learn what feels fair.</p></li>
-    </ol>
+    <h2>What each page costs</h2>
+    <p>By kind, in pence, for a page read to the end. A page you open and leave costs a tenth of its price; read half, pay half. Each page is charged once per browser session; coming back does not charge it again. The table is generated from <code>data/meter.json</code>.</p>
+    <!-- rm-customers:prices:start -->
+  <table class="prices" data-generated-from="data/meter.json">
+    <thead><tr><th>Kind</th><th>Which pages</th><th>Read to the end</th><th>Read to the end, on £50.00</th></tr></thead>
+    <tbody>
+      <tr><td><code>free</code></td><td>your account, the top-up pages, the not-found page</td><td>nothing</td><td></td></tr>
+      <tr><td><code>home</code></td><td>the home page</td><td>1p</td><td>5,000</td></tr>
+      <tr><td><code>page</code></td><td>an ordinary page: start here, the programme, the lists</td><td>2p</td><td>2,500</td></tr>
+      <tr><td><code>doc</code></td><td>a document: the brief, the memo, operations, the team, admin</td><td>2p</td><td>2,500</td></tr>
+      <tr><td><code>storyboard</code></td><td>a storyboard, or a page built around one</td><td>10p</td><td>500</td></tr>
+      <tr><td><code>policy</code></td><td>a behaviour policy: its line, its hook, and how to try it</td><td>50p</td><td>100</td></tr>
+      <tr><td><code>pack</code></td><td>the starter pack: three behaviour policies and their hooks, ready to install</td><td>£1.00</td><td>50</td></tr>
+    </tbody>
+  </table>
+<!-- rm-customers:prices:end -->
+    <p>At the foot of every page is what that page has cost you so far, and three ratings: how useful it was sets the price, from free to double. If something was wrong with a page, you can say why and not be charged for it.</p>
 
-    <h2>What is wired today, and what is not</h2>
+    <h2>How it works</h2>
+    <ul class="plist">
+      <li><strong>The meter is the newsroom's.</strong> <a href="https://newsroom.sgit.ai/meter/">SG Meter</a> v1.4.1, loaded from <a href="https://api.newsroom.sgit.ai/">api.newsroom.sgit.ai</a> at release v0.2.5, pinned, with the browser checking the file against the release's hash. newsroom.sgit.ai runs a newer meter, v1.5.0, from its own copy; it is not on the API yet.</li>
+      <li><strong>It lives in your browser.</strong> The balance and the history are this browser's, under one storage key, and are sent nowhere. Another browser starts again at £50.00. <a href="/account/">Your account</a> shows all of it, and can export it.</li>
+      <li><strong>It never blocks.</strong> Below zero is allowed. It is an honesty box, not a paywall, and <a href="https://newsroom.sgit.ai/meter/security.html">its security model</a> says what a reader can do to it and why that is accepted.</li>
+      <li><strong>Two numbers per customer.</strong> Credit used, and whether they topped up. Both are on the customer's page, and both are what the price question is answered from.</li>
+    </ul>
+
+    <h2>What is not wired yet</h2>
     <div class="note warn">
-      <p><strong>The meter is real; it is the newsroom's, not yet this site's.</strong> Until the lead wires SG Meter to customers.riskmandate.ai, the credit on a customer page is a number kept by hand in <code>data/customers.json</code>, changed by a release. The steps that only a human can do are in <a href="/docs/ops/needs.html">what needs a human</a>.</p>
+      <p><strong>No money moves yet.</strong> The meter charges on this site from v0.2.1. There is no payment link of this site's own, so <a href="/account/top-up.html">the top-up page</a> is the meter's simulated cart, which says it is simulated. The credit on a customer's page is still written by hand from what they tell us, because the meter's history never leaves their browser. What is waiting on the lead is in <a href="/docs/ops/needs.html">what needs a human</a>.</p>
     </div>
-    <p>This site has no accounts and no sign-in, and that is deliberate: it is static. When the meter is wired, the reading account is the meter's, as it is on the newsroom, and this site stays as it is.</p>
 
     <h2>Why credit rather than a price</h2>
     <p>Most purchases are bets on future value; a balance that can go negative asks for payment when the value is already in view. That is the experiment the newsroom runs, in <a href="https://newsroom.sgit.ai/articles/paying-after-the-value.html">paying after the value</a>. And a customer who pays is the best signal you will get, which is why making it easy to pay goes in early, in <a href="https://newsroom.sgit.ai/articles/can-you-sell-it.html">can you sell it?</a>. The point of the programme is not the sale. It is what we learn trying.</p>
@@ -116,9 +157,10 @@
     <p>The Agent Behaviour Policy is for sale on riskmandate.ai at <a href="https://riskmandate.ai/pricing.html">four levels, £10 to £1,500</a>: a pack, a working vault, one corrected for your situation, and one a professional signs. The programme's credit is a different question: not which level, but what a use of the site is worth, a few pence at a time, to a particular person.</p>
   </main>
   <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="page" title="Credit, and the meter: £50 to start, a price per page, topped up when the value is in view"></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/credit/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/credit/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

@@ -57,5 +57,6 @@ class Test__Twins__Exist(TestCase):
 
     def test_index_md_is_the_homepage_twin(self):
         text = (ROOT / 'index.md').read_text(encoding='utf-8')
-        self.assertIn('customers', text.splitlines()[0].lower())
-        self.assertIn('customers in the first batch', text)                      # the counts survive conversion
+        self.assertIn('behaviour policy', text.splitlines()[0].lower())
+        self.assertIn('£50', text)                                                # the credit every reader starts with
+        self.assertIn('/policies/touch-your-secrets/index.md', text)              # the first policy, one click away

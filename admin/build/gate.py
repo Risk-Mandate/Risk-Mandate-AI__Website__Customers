@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 ROOT       = Path(__file__).resolve().parents[2]
-GENERATORS = ('gen_customers', 'gen_reality', 'gen_docs', 'gen_chrome', 'gen_versions', 'gen_twins', 'gen_llms')   # in dependency order: pages before the chrome, the chrome before the twins, the twins before the indexes
+GENERATORS = ('gen_customers', 'gen_meter', 'gen_policies', 'gen_storyboards', 'gen_reality', 'gen_docs', 'gen_chrome', 'gen_versions', 'gen_twins', 'gen_llms')   # in dependency order: pages and their blocks before the chrome, the chrome before the twins, the twins before the indexes
 REVIEW     = ('sections', 'validate_review', 'render')                            # the brief's anchors, the intent files against them, the review page
 
 
@@ -28,7 +28,8 @@ class Gate:
         gens   = [(f'python3 admin/build/{name}.py' + ('' if self.build else ' --check'), ['python3', f'admin/build/{name}.py', *flag]) for name in GENERATORS]
         review = [(f'python3 review/tools/{name}.py' + ('' if self.build or name == 'validate_review' else ' --check'),
                    ['python3', f'review/tools/{name}.py', *([] if name == 'validate_review' else flag)]) for name in REVIEW]
-        steps  = gens[:3] + review + gens[3:]                                     # the review page is a page: it needs the chrome and a twin like any other
+        cut    = GENERATORS.index('gen_chrome')
+        steps  = gens[:cut] + review + gens[cut:]                                 # the review page is a page: it needs the chrome and a twin like any other
         if self.build:                                                            # after regenerating, prove --check is clean too
             steps += [(f'python3 admin/build/{name}.py --check', ['python3', f'admin/build/{name}.py', '--check']) for name in GENERATORS]
         steps += [('node admin/build/validate.js'       , ['node', 'admin/build/validate.js'                    ]),

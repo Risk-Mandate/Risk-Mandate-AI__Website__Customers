@@ -2,7 +2,7 @@
 
 > How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.
 
-*Source: <https://customers.riskmandate.ai/admin/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -17,7 +17,7 @@ pip install pytest                        # the gate's only Python dependency; N
 python3 admin/build/gate.py --build       # regenerate everything, then run the whole gate
 python3 admin/build/gate.py               # what CI runs: check mode only
 python3 -m http.server 8000               # serve the tree locally; there is no build step
-python3 admin/build/release.py --version 0.2.0 --kind feature --title "what" --notes "why"   # bump, build, gate, commit, push, verify live
+python3 admin/build/release.py --version 0.2.2 --kind feature --title "what" --notes "why"   # the next patch: bump, build, gate, commit, push, verify live
 ```
 
 ## The generators, in order
@@ -25,6 +25,9 @@ python3 admin/build/release.py --version 0.2.0 --kind feature --title "what" --n
 | Generator | Reads | Writes |
 |---|---|---|
 | `gen_customers.py` | `data/customers.json`, `data/milestones.json` | a page per customer, the batch table, the steps, the counts on the home page |
+| `gen_meter.py` | `data/meter.json`, `data/storyboards.json` | `assets/site-config.js` (the meter's config, £50 to start), the prices table |
+| `gen_policies.py` | `data/policies.json`, `data/rules/`, `policies/hooks/` | every page and file under `policies/`: the behaviour policies, their settings, the starter pack and its `INSTALL.md` |
+| `gen_storyboards.py` | `storyboards/`, `data/demos.json` | each bundle, the storyboard viewers and pages, and the demos |
 | `gen_reality.py` | `data/reality.json` | `docs/reality.md`, the status lines and tables on the pages |
 | `gen_docs.py` | `docs/**/*.md`, `team/**/*.md`, `review/*.md` | an HTML page beside each, and an index page per folder |
 | `review/tools/` | the brief, `review/intent/stories.json` | `review/intent/sections.json`, the review page; validates the intent files |
@@ -41,7 +44,7 @@ In `admin/build/validate.js`, with no dependency beyond Node. Every problem of e
 2. **Internal links, fragments and no orphans.** Every link resolves against the real tree; every fragment exists; a page nothing links to fails, because an orphan is unpublished.
 3. **Canonical host.** Every page's canonical URL and og:url are on the CNAME host and agree.
 4. **The leak tripwire.** sgit key shapes, write tokens, cloud key prefixes, private key blocks, append tokens, bare account numbers, against every text file. The fix for a trip is a redaction, never a wider pattern.
-5. **No runtime foreign origin.** No script, style or import from another origin; every script parses; no inline script or style, because the content security policy forbids them.
+5. **Code from another origin only from the two pinned releases.** The meter from api.newsroom.sgit.ai v0.2.5 and the storyboard kit from api.storyboards.sgit.ai v0.1.0, each URL a file of that release's manifest (copied in `admin/build/pins/`), loaded with the manifest's integrity and `crossorigin`; anything else fails. Every script parses; no inline script or style.
 6. **The data holds together.** Every customer record has a page and every page a record; the milestones name the ladder; no contact details; the versions file is valid.
 7. **Reality regenerates identically.** `docs/reality.md` and the status tables are what `data/reality.json` says.
 8. **The house words.** riskmandate.ai's rules: never "ADP", never "the policy" alone, no score on a behaviour policy, "steps" not "rungs", British spelling, customers not "beta users". The verbatim brief and memo are exempt.

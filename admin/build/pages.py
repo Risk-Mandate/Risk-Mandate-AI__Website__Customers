@@ -81,6 +81,26 @@ class Site__Pages:
 
         return pattern.sub(swap, text), found[0]
 
+    def keep_chrome(self, target, text):                                         # a generator that writes a whole page keeps the chrome gen_chrome already filled, so a rerun is idempotent
+        if not target.exists():
+            return text
+        current = target.read_text(encoding='utf-8')
+        for block in ('head', 'nav', 'footer'):
+            found = re.search(rf'<!-- {MARKER_PREFIX}:{block}:start -->\n?(.*?)\n?[ \t]*<!-- {MARKER_PREFIX}:{block}:end -->', current, re.S)
+            if found:
+                text = text.replace(f'  <!-- {MARKER_PREFIX}:{block}:start -->\n  <!-- {MARKER_PREFIX}:{block}:end -->',
+                                    f'  <!-- {MARKER_PREFIX}:{block}:start -->\n{found.group(1)}\n<!-- {MARKER_PREFIX}:{block}:end -->')
+        return text
+
+    def shell(self, title, description, main, main_class='wrap'):               # a page a generator writes whole: the chrome markers empty, the content given
+        return '\n'.join(['<!doctype html>', '<html lang="en-GB">', '<head>', '  <meta charset="utf-8">',
+                          '  <meta name="viewport" content="width=device-width, initial-scale=1">',
+                          f'  <title>{html.escape(title)}</title>', f'  <meta name="description" content="{html.escape(description)}">',
+                          f'  <!-- {MARKER_PREFIX}:head:start -->', f'  <!-- {MARKER_PREFIX}:head:end -->', '</head>', '<body>',
+                          f'  <!-- {MARKER_PREFIX}:nav:start -->', f'  <!-- {MARKER_PREFIX}:nav:end -->',
+                          f'  <main class="{main_class}">', main.rstrip('\n'), '  </main>',
+                          f'  <!-- {MARKER_PREFIX}:footer:start -->', f'  <!-- {MARKER_PREFIX}:footer:end -->', '</body>', '</html>', ''])
+
     def has_block(self, text, block):
         return re.search(rf'<!-- {MARKER_PREFIX}:{block}:start', text) is not None
 

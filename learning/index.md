@@ -2,7 +2,7 @@
 
 > The point of the programme is to find the usage moment, when an Agent Behaviour Policy becomes worth something to a particular person. Three questions follow from it, and this page holds them with a findings table that starts empty and is filled from the follow-ups, counted.
 
-*Source: <https://customers.riskmandate.ai/learning/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/learning/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

@@ -109,3 +109,17 @@ test('every check passes on the real tree', () => {
         assert.deepEqual(check.run(V.ROOT), [], `check ${check.n} ${check.name}`)
     }
 })
+
+test('pinned code: a file of a pinned release with its integrity passes; anything else is named', () => {
+    const pins  = V.loadPins()
+    const meter = 'https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js'
+    const good  = `<script type="module" src="${meter}" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous">`
+    assert.equal(V.pinnedProblem(meter, good, pins), null)
+    assert.match(V.pinnedProblem(meter, good.replace('ukbuy', 'AAAAA'), pins), /integrity/)
+    assert.match(V.pinnedProblem(meter, good.replace(' crossorigin="anonymous"', ''), pins), /crossorigin/)
+    assert.match(V.pinnedProblem(meter.replace('v0.2.5', 'v0.2.0'), good, pins), /outside the two pinned releases/)
+    assert.match(V.pinnedProblem('https://api.newsroom.sgit.ai/v0.2.5/assets/not-a-file.js', good, pins), /not in the pinned manifest/)
+    assert.match(V.pinnedProblem('https://cdn.example/x.js', good, pins), /another origin/)
+    const kit = 'https://api.storyboards.sgit.ai/v0/v0.1/v0.1.0/storyboard.js'
+    assert.equal(V.pinnedProblem(kit, `<script src="${kit}" integrity="sha384-3xZhCe5dUdBXMwV57gyscmlqdIjzz9L6huUkcuiEyC0V3jfrlQEdyEhvvF4kCeOa" crossorigin="anonymous">`, pins), null)
+})

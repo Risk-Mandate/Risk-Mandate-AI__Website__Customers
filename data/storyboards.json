@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "_comment": "The storyboard kit, from api.storyboards.sgit.ai, pinned to one release and loaded file by file with the integrity strings of its manifest (admin/build/pins/), so the browser refuses any byte that is not the release's. The storyboards themselves are this site's, in storyboards/<slug>/bundle.json, drawn in the reader's browser. The kit writes two kinds of inline style attribute, the delays that make a panel's bubbles arrive in order; this site's content security policy allows exactly those strings by hash ('unsafe-hashes') and no other inline style. admin/build/gen_storyboards.py computes the hashes from style_delays.",
+  "api": {
+    "host": "https://api.storyboards.sgit.ai",
+    "release": "v0/v0.1/v0.1.0",
+    "styles": [
+      "fonts.css",
+      "storyboard.css"
+    ],
+    "scripts": [
+      "vendor/rough-4.6.6.js",
+      "props/security.js",
+      "storyboard.js"
+    ]
+  },
+  "style_delays": {
+    "_": "Every inline style the kit v0.1.0 writes (storyboard.js lines 327 to 515): two fixed values and eight families start + i * step, for i from 0 to count - 1, printed as JavaScript prints a number. tests/build/test_storyboards.py checks the list against node, and gen_storyboards.py refuses a storyboard with more entries in a list than count.",
+    "fixed": [
+      "--d:.2s",
+      "--d:.5s"
+    ],
+    "families": [
+      [
+        1,
+        0.4
+      ],
+      [
+        0.2,
+        0.12
+      ],
+      [
+        0.1,
+        0.15
+      ],
+      [
+        0.5,
+        0.08
+      ],
+      [
+        0.25,
+        0.07
+      ],
+      [
+        0.25,
+        0.35
+      ],
+      [
+        0.6,
+        0.5
+      ],
+      [
+        0.2,
+        0.3
+      ]
+    ],
+    "count": 16
+  },
+  "prefs_key": "riskmandate.customers.storyboards.v1"
+}

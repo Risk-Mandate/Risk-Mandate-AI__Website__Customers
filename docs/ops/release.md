@@ -1,13 +1,13 @@
 # How a release works
 
-*customers.riskmandate.ai · operations · written at v0.1.0 (2026-10-20) · CC BY 4.0*
+*customers.riskmandate.ai · operations · written at v0.1.0 (2026-10-20), the numbering changed at v0.2.1 (2026-10-21) · CC BY 4.0*
 
 Every push to `dev` is a release. There is no build step at deploy time: the committed tree is the deployed tree, and seven small generators keep the parts that must agree in agreement. One pipeline validates, tags, deploys and then checks that the live site is serving what was pushed.
 
 ## The version
 
 - The version lives in one file, `admin/build/version.txt`, as `X.Y.Z` with no `v`.
-- Every push to `dev` bumps the minor (`0.1.0` to `0.2.0`). A patch (`0.2.1`) is for a same-day fix. A major `.0.0` is deliberate and rare.
+- Every push to `dev` moves the third number: `0.2.0`, `0.2.1`, `0.2.2`, `0.2.3`. The lead decided this on 21 October 2026, the way riskmandate.ai numbers its releases. The second number moves only when the lead says the site has become a different thing; the first is the lead's. `tag_release.py` accepts a patch, a minor or a major `.0.0`, so the gate does not change with the convention.
 - The release commit's subject is `site vX.Y.Z : <what>`, with the same version. CI anchors on the newest commit whose subject has that shape, not on HEAD, because a merge commit may sit on top.
 - `data/versions.json` gets a new first row: version, date, title, notes. The title is the `<what>` of the subject. The note says what changed and why, in words a reader can act on.
 - The version is repeated by the generators into every page badge, every markdown twin, `llms.txt`, `llms-full.txt`, `sitemap.xml` and the release table. Check 1 of the gate fails on any disagreement.

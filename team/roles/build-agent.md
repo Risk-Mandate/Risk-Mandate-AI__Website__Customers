@@ -20,4 +20,4 @@ The session that builds the site from the brief, one release at a time, under th
 
 ## Starting prompt
 
-"Read README.md, docs/ops/release.md, docs/brief/BRIEF-CORRECTIONS.md and team/board.md. Continue from the first open row on the board that does not wait on the lead. Every release is `site vX.Y.Z : what` with the minor bumped and a `Kind:` trailer."
+"Read README.md, docs/ops/release.md, docs/brief/BRIEF-CORRECTIONS.md and team/board.md. Continue from the first open row on the board that does not wait on the lead. Every release is `site vX.Y.Z : what` with the third number moved by one (v0.2.1, then v0.2.2) and a `Kind:` trailer."

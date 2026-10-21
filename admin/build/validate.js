@@ -10,7 +10,7 @@
 // and cut to what this site has; the house words are riskmandate.ai's.
 //
 // Checks:
-//   1 version agreement          5 no runtime script or style from another origin; every script parses
+//   1 version agreement          5 code from another origin only from the two pinned releases, with their integrity; every script parses
 //   2 internal links and orphans 6 the data holds together (customers, milestones, versions, reality)
 //   3 canonical host             7 docs/reality.md regenerates identically
 //   4 leak tripwire              8 the house words: never ADP, never "the policy" alone, no score, steps not rungs, British spelling
@@ -308,18 +308,48 @@ function checkLeakTripwire(root = ROOT) {
     return problems
 }
 
+function loadPins(root = ROOT) {                                                 // the two APIs this site may load code from: host, release, and the manifest's files with their integrity
+    const meter = JSON.parse(read('data/meter.json', root)).api
+    const kit   = JSON.parse(read('data/storyboards.json', root)).api
+    const pin   = (api, integrityOf) => {
+        const manifest = JSON.parse(read(`admin/build/pins/${api.host.replace('https://', '')}/${api.release}/manifest.json`, root))
+        const files    = new Map(manifest.files.map(f => [f.path, integrityOf(f)]))
+        return { base : `${api.host}/${api.release}/`, files, release : manifest.release }
+    }
+    return [pin(meter, f => 'sha256-' + Buffer.from(f.sha256, 'hex').toString('base64')),
+            pin(kit  , f => f.integrity)]
+}
+
+function pinnedProblem(url, tag, pins) {                                            // null when the URL is a pinned file loaded with its manifest's integrity
+    const pin = pins.find(p => url.startsWith(p.base))
+    if (!pin) return 'loads from another origin, outside the two pinned releases in data/meter.json and data/storyboards.json'
+    const path = url.slice(pin.base.length)
+    if (!pin.files.has(path)) return `names ${path}, which is not in the pinned manifest of ${pin.base}`
+    const integrity = (tag.match(/\bintegrity\s*=\s*["']([^"']+)["']/i) || [])[1]
+    if (integrity !== pin.files.get(path)) return `carries integrity ${integrity || '(none)'}, the manifest says ${pin.files.get(path)}`
+    if (!/\bcrossorigin\s*=\s*["']anonymous["']/i.test(tag)) return 'needs crossorigin="anonymous" for its integrity to be checked'
+    return null
+}
+
 function checkRuntimeOrigin(root = ROOT) {
     const problems = checkScriptsParse(root)
-    for (const rel of walkTree(root).filter(f => /\.(html|js|mjs|css)$/.test(f))) {
-        const text = read(rel, root)
-        const foreign = (index, name) => problems.push(`${rel}:${lineOf(text, index)}: ${name} loads from another origin. Vendor it, or do without.`)
-        for (const rule of RUNTIME_RE) {
-            for (const match of text.matchAll(new RegExp(rule.re.source, rule.re.flags + 'g'))) foreign(match.index, rule.name)
+    const pins     = loadPins(root)
+    for (const rel of walkTree(root).filter(f => /\.(html|js|mjs|css)$/.test(f) && !f.startsWith('admin/build/pins/'))) {
+        const text    = read(rel, root)
+        const foreign = (index, why) => problems.push(`${rel}:${lineOf(text, index)}: ${why}`)
+        for (const match of text.matchAll(/<script\b[^>]*\bsrc\s*=\s*["'](https?:[^"']+)["'][^>]*>/gi)) {
+            const why = pinnedProblem(match[1], match[0], pins)
+            if (why) foreign(match.index, `<script src="${match[1]}"> ${why}`)
         }
         for (const match of text.matchAll(LINK_TAG_RE)) {
             const relAttr = match[0].match(/\brel\s*=\s*["']([^"']+)["']/i)
             const href    = match[0].match(/\bhref\s*=\s*["'](https?:[^"']*)["']/i)
-            if (relAttr && href && LINK_RELS_THAT_LOAD.includes(relAttr[1].toLowerCase())) foreign(match.index, `<link rel="${relAttr[1]}" href="http…">`)
+            if (!relAttr || !href || !LINK_RELS_THAT_LOAD.includes(relAttr[1].toLowerCase())) continue
+            const why = pinnedProblem(href[1], match[0], pins)
+            if (why) foreign(match.index, `<link rel="${relAttr[1]}" href="${href[1]}"> ${why}`)
+        }
+        for (const rule of RUNTIME_RE.filter(r => !r.name.startsWith('<script'))) {
+            for (const match of text.matchAll(new RegExp(rule.re.source, rule.re.flags + 'g'))) foreign(match.index, `${rule.name} loads from another origin. Vendor it, or do without.`)
         }
         if (rel.endsWith('.html') && text.includes(MARK)) {
             if (/<script\b(?![^>]*\bsrc=)/.test(text)) problems.push(`${rel}: an inline script; the CSP forbids it`)
@@ -394,7 +424,7 @@ const CHECKS = Object.freeze([
     { n : 2, name : 'internal links, fragments and no orphans'   , run : checkInternalLinks    },
     { n : 3, name : 'canonical host'                             , run : checkCanonicalHost    },
     { n : 4, name : 'leak tripwire'                              , run : checkLeakTripwire     },
-    { n : 5, name : 'no runtime foreign origin; scripts parse; no inline script or style', run : checkRuntimeOrigin },
+    { n : 5, name : 'code from another origin only from the two pinned releases, with integrity; scripts parse; no inline script or style', run : checkRuntimeOrigin },
     { n : 6, name : 'the data holds together'                    , run : checkData             },
     { n : 7, name : 'reality regenerates identically'            , run : checkReality          },
     { n : 8, name : 'the house words'                            , run : checkHouseWords       },
@@ -426,7 +456,7 @@ function main() {
 module.exports = {
     ROOT, LEAK_PATTERNS, LEAK_ALLOW_FILES, RUNTIME_RE, LINK_RELS_THAT_LOAD, WORD_RULES, WORD_EXEMPT, CHECKS,
     walkTree, isBinary, headingSlug, stripCode, isInternalLink, resolveLink, anchorsIn, linksIn, nextVersionOk, wordProblems, withoutMentions, proseOf,
-    checkVersionAgreement, checkInternalLinks, checkCanonicalHost, checkLeakTripwire, checkRuntimeOrigin, checkScriptsParse,
+    checkVersionAgreement, checkInternalLinks, checkCanonicalHost, checkLeakTripwire, checkRuntimeOrigin, checkScriptsParse, loadPins, pinnedProblem,
     checkData, checkReality, checkHouseWords, adviseEmDashes,
 }
 

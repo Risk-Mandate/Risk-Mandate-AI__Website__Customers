@@ -1,12 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.2.1",
+      "date": "2026-10-21",
+      "title": "the customer first: £50 of credit metered by SG Meter, six behaviour policies with tested hooks, storyboards and demos",
+      "notes": "The home page is now the customer's: £50.00 of credit, one worry, one line, one hook, one prompt to try it, with the programme's logistics moved to the programme pages. Every page has a price by its kind (1p the home page, 2p a page, 10p a storyboard, 50p a behaviour policy, £1.00 the starter pack), charged by how far it is read by SG Meter v1.4.1 from api.newsroom.sgit.ai release v0.2.5, pinned and loaded with its manifest's hash; nothing is blocked and there is no payment link yet, so top-ups are simulated and say so. Six behaviour policies from riskmandate.ai's rules: four for Claude Code with a line and a PreToolUse hook (secrets, pushes, deletes, its own permissions), each hook tested with an allowed twin for every refusal; two for ChatGPT and Claude with a line, said to be an expectation only; and a starter pack Claude Code installs from one prompt, showing every file first. Three storyboards drawn by the kit from api.storyboards.sgit.ai v0.1.0, loaded with integrity, its delay attributes allowed by hash and nothing else inline; three demos of a session on a drawn laptop or browser, labelled as illustrations. The header fits every width from 320 to 1440 pixels with the balance in it. From this release every push moves the third number.",
+      "tag": "v0.2.1",
+      "commit": null,
+      "run": null,
+      "verified": null
+    },
+    {
       "version": "0.2.0",
       "date": "2026-10-21",
       "title": "six themes, the newsroom's five mapped onto RiskMandate's look plus its own dark; the header fits an iPad",
       "notes": "A theme pill in the header picks one of six, kept in this browser: RiskMandate (the default, riskmandate.ai's paper and green), Canvas (its dark, from the dark hero band), and newsroom.sgit.ai's Night, Ember, Paper and Blueprint, mapped onto this site's tokens. Every colour now lives in assets/themes.css and nowhere else; site.css reads tokens only. A new test fails the build on a theme missing a token, a colour written outside that file, or a pair under its contrast in any theme; it found riskmandate.ai's green at 4.24:1 on its own alternate band, so the link accent is one shade darker. The header lost the first-batch stage pill, gained the picker beside the version, and now folds its links behind the menu button below 1100px: between 1040 and 1200 the version chip used to run past the right edge and the page scrolled sideways, which is an iPad in landscape. Wide tables scroll inside themselves on a phone instead of widening the customers page. docs/ops/themes.md says how it works and how to add a seventh.",
       "tag": "v0.2.0",
-      "commit": null,
+      "commit": "b1c9764cfd5a056b34f368f43b11e402344815a8",
       "run": null,
       "verified": null
     },

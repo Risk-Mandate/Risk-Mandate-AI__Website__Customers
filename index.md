@@ -1,71 +1,145 @@
-# Our first customers: the early access programme for Agent Behaviour Policies, run as a site
+# Put a behaviour policy on your agent in five minutes: £50 of credit to start
 
-> The first customers of the Agent Behaviour Policy, and the site we run the programme from: a start-here page, a page per customer with the objectives and milestones agreed with them, credit to spend, a daily follow-up, and a list for the next batch. Part of riskmandate.ai.
+> For the first customers of the Agent Behaviour Policy. You start with £50 of credit. Pick one thing you do not want your agent to do, paste one line, add one hook, and try it: the behaviour policy that keeps Claude Code away from your secrets takes two minutes. Part of riskmandate.ai.
 
-*Source: <https://customers.riskmandate.ai/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-Early access · the first batch
+Early access · you start with £50.00
 
-# Our first customers, and the site we follow them from.
+# Put a behaviour policy on your agent, in five minutes.
 
-Agent Behaviour Policies are ready for the next level, and the next level is execution. Execution starts with customers: a small first batch, each with **credit to spend**, **objectives and milestones written with them**, and **a follow-up every day** if that is what helps. This site is where that happens: what to do first, where each customer is, and what we are learning.
+Pick one thing you do not want your agent to do. **Paste one line** it will read, **add one hook** that holds it, and **try it** with a prompt that should be refused. The one most people want first keeps Claude Code away from your secrets; it takes two minutes and costs 50p of your credit.
 
-[Start here](/start-here/index.md) [The first batch](/customers/index.md) [The brief, in full](/docs/brief/our-first-customers.md)
+[Install your first policy](/policies/touch-your-secrets/index.md) [Pick a different worry](/policies/index.md) [What is a behaviour policy?](/what-is-an-abp/index.md)
 
-Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 A start-here page: what a customer does first, in order, with the links to do it · shipped v0.1.0 A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details · proposed Credit per customer, metered and billed on this site, with a top-up link · proposed A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane
+## Watch it first: install, then try.
 
-## Where the batch is, counted from the data.
+What you will do in Claude Code, played out. You ask it to install the behaviour policy, read the three changes, say yes, and then ask for the one thing it rules out. The hook stops the read before it happens, and the agent asks you instead.
 
-Every number below is read from `data/customers.json` on every release; nothing is typed. The one worked example is not counted.
+**claude: ~/shop-api**
 
-**3**customers in the first batch
-**2**started
-**0**first behaviour policies written
-**3 of 21**milestone steps done
-**£0 of £10**credit used
-**0**topped up
-**2**follow-ups recorded
+1. Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first.
+2. It has a line for CLAUDE.md and a hook. Here are the three changes:
+3. + CLAUDE.md: Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one. (RM-R0002)
+4. + .claude/hooks/touch_your_secrets.py (a PreToolUse hook, standard library Python)
+5. + .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py
+6. Write these three changes? (y/n)
+7. y
+8. Installed. Start a new session so Claude Code loads the hook.
+9. new session
+10. The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.
+11. Read(.env)
+12. PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.
+13. I didn't open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I'll check where it is used and whether it is set, without printing it.
 
-[The batch, one row per customer, and a page for each →](/customers/index.md)
+Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy's page promises, not a recording. Play again
 
-## In short: the brief, in seven lines.
+1. **Paste one line.**
 
-- **Agent Behaviour Policies are ready for the next level.** The workflow, the mapping to what regulators ask for, and the understanding of how it fits together are in place.
-- **What is left is execution, and execution starts with customers.** Consultants who will sell this and already use some of it, people the lead works with, and us.
-- **Call them customers, not beta users.** Beta describes the product; customer names the relationship. Each starts with credit on a site that meters and bills. [The programme →](/programme/index.md)
-- **Follow each one closely.** Daily if needed, with objectives and milestones of their own, and three questions each time. [The follow-up →](/follow-up/index.md)
-- **A dedicated site with a start-here page.** Instructions, progress and usage in one place. You are on it. [Start here →](/start-here/index.md)
-- **Discover the usage moment.** The simplest useful behaviour policy, the easiest entry, a fair price. [What we want to discover →](/learning/index.md)
-- **A mailing list for the next batch.** Everyone who asks, kept for when we are ready. [The next batch →](/next-batch/index.md)
+Into CLAUDE.md. The agent reads it and follows it when it can: an expectation.
 
-## The first batch is us, then the people we already work with.
+2. **Add one hook.**
 
-The voice memo that followed the brief the same day named the first users: the two founders and the agents the lead already runs, about ten of them, each needing a behaviour policy of its own. The first work is two of the three places a behaviour policy can run: the rows the agent follows, and the rows the harness holds as hooks, for Claude and for ChatGPT. The milestone is a behaviour policy that adds value to a particular person, who understands what it is doing. [The memo →](/docs/brief/memo-2026-10-20-user-onboarding-plan.md)
+Claude Code runs it before the tool call, outside the model: a setting.
 
-The product**The Agent Behaviour Policy**
+3. **Try it.**
 
-For one agent in one deployment: everything it can reach, what you authorised, the gap, and what stands in the way. It describes and does not judge, so it carries no score. [What an ABP is ↗](https://riskmandate.ai/abp.html)
+Each policy comes with the prompt that should be refused, and what you should see.
 
-The steps**Seven milestones, shared across the batch**
+## Pick one worry.
 
-From in-with-credit to the usage moment, so progress reads in one table while the objectives stay each customer's own. [The steps →](/milestones/index.md)
+Each behaviour policy starts from one thing you do not want your agent to do, from riskmandate.ai's rules. Four are for Claude Code, with a line and a hook; two are for ChatGPT and Claude, with a line. [The starter pack](/policies/starter/index.md) installs the four Claude Code ones in one go.
 
-The credit**£5 or £50 to start, metered**
+[RM-R0002 · Claude Code · line and hook**Keep your agent away from your secrets**
 
-Give it for free until there is enough value that they want to pay. The meter is the newsroom's today; wiring it here is proposed. [Credit, and the meter →](/credit/index.md)
+Do you want your agent to read the keys and tokens on your machine?
 
-The record**Everything public, nothing private**
+2 min · 50p
 
-The brief in full, where it was wrong, what exists, and a page per customer with no contact details on it. [The documents →](/docs/index.md)
+](/policies/touch-your-secrets/index.md) [RM-R0013 · Claude Code · line and hook**Only push to the branch you named**
 
-## What this site does not claim.
+Do you want your agent to push to any branch, including main?
 
-- **The programme is new.** The site exists; the prices are starting points to test; the metering is the newsroom's and not yet this site's.
-- **No customer is named who did not agree to be.** The first group is people we already work with. Contact details are never in this repository.
-- **What exists is listed, and only that.** [docs/reality.md](/docs/reality.md) is generated on every release; if it is not there, it does not exist.
-- **Everything is open.** The brief, the data shapes and this site are CC BY 4.0; the code is Apache-2.0. This site is published by the people building the thing it describes: [the participant disclosure](/about/participant.md).
+2 min · 50p
+
+](/policies/push-anywhere/index.md) [RM-R0007 · Claude Code · line and hook**Nothing of yours is deleted without a yes**
+
+Do you want your agent to delete files without asking?
+
+2 min · 50p
+
+](/policies/delete-files/index.md) [RM-R0015 · Claude Code · line and hook**Only you change what your agent may do**
+
+Do you want your agent to change its own permissions?
+
+2 min · 50p
+
+](/policies/change-its-own-permissions/index.md) [RM-R0017 · ChatGPT · Claude · line only**Nothing is sent in your name until you have seen it**
+
+Do you want your agent to send email as you without showing you first?
+
+1 min · 50p
+
+](/policies/send-as-you/index.md) [RM-R0016 · ChatGPT · Claude · line only**Your agent reads what you point it to, and asks before it goes wider**
+
+Do you want your agent to read through your mail and chats to find context?
+
+1 min · 50p
+
+](/policies/read-all-your-mail/index.md)
+
+## Using ChatGPT or Claude? One line, in your instructions.
+
+There is no hook in ChatGPT or the Claude apps, so the line is the whole behaviour policy, and its page says so. It still changes what the assistant does: a draft and a question, instead of a message sent in your name.
+
+**ChatGPT**
+
+1. Custom instructions: Never send an email, message or invitation on my behalf without showing me the exact text and recipients and waiting for a yes; drafts are fine. (RM-R0017)
+2. Tell the team the release is done and thank them. Send it from my mail.
+3. Here is a draft. To: platform-team. Subject: The release is out. "Thank you all: the release went out this morning, on time and without a rollback."
+4. Shall I send exactly this, to exactly these people? I'll wait for your yes.
+5. Add Priya, then send.
+6. To: platform-team, Priya. Same text. Send it now?
+7. Yes.
+8. Sent.
+
+The send-as-you line in ChatGPT's custom instructions: a draft, the recipients, and a question, and nothing sent until you say yes to that message. An illustration, not a recording. Play again
+
+[Nothing is sent in your name until you have seen it →](/policies/send-as-you/index.md)
+
+## Your £50, and what each page costs.
+
+Everyone who opens this site starts with £50.00 of credit; your balance is in the top bar. A page costs a little, by how far down it you read, and the pages with a behaviour policy and its hook cost the most. Nothing is ever blocked and the balance can go below zero. The prices are a starting point: telling us what a page was worth is part of the programme. [Your account →](/account/index.md)
+
+| Kind | Which pages | Read to the end | Read to the end, on £50.00 |
+|---|---|---|---|
+| `free` | your account, the top-up pages, the not-found page | nothing |  |
+| `home` | the home page | 1p | 5,000 |
+| `page` | an ordinary page: start here, the programme, the lists | 2p | 2,500 |
+| `doc` | a document: the brief, the memo, operations, the team, admin | 2p | 2,500 |
+| `storyboard` | a storyboard, or a page built around one | 10p | 500 |
+| `policy` | a behaviour policy: its line, its hook, and how to try it | 50p | 100 |
+| `pack` | the starter pack: three behaviour policies and their hooks, ready to install | £1.00 | 50 |
+
+## New to this? Eight panels.
+
+[A storyboard · 8 panels**What an Agent Behaviour Policy is**
+
+Everything your agent can reach, what you asked it to do, the gap, and what stands in the way of each thing. It describes; it does not judge.
+
+](/what-is-an-abp/index.md) [A storyboard · 8 panels**Your first behaviour policy**
+
+£50 of credit, one worry, five minutes: what you do here, drawn.
+
+](/storyboards/your-first-policy/index.md) [A page · 2 minutes**Your first five minutes, in order**
+
+The same steps as a checklist, with where to write when something gets in the way.
+
+](/start-here/index.md)
+
+You are one of the first customers of the Agent Behaviour Policy, and we follow every one of you closely: three questions, as often as daily, by email. What the programme is, who is in it and what we are learning is on [the programme pages](/programme/index.md). This site is published by the people building the thing it describes: [the disclosure](/about/participant.md). What exists and what is only proposed is in [docs/reality.md](/docs/reality.md).
 
 ---
 

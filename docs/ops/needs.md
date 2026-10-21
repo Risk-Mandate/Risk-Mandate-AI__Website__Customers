@@ -11,10 +11,11 @@ Everything on this list blocks a step of the brief or of the repository rules an
 3. **Re-run `verify-live` (the lead).** The v0.1.0 run's last job polls the host for ten minutes and fails if the record is not there yet. When 1 and 2 are done, re-run the workflow from the Actions tab, or push the next release; the record in `data/versions.json` is filled at the next release.
 4. **The Pages environment (the lead).** If the `github-pages` environment restricts deploy branches, add `dev`. The sibling sites hit this once.
 
-## Blocking the credit (milestone S0 for every customer, step 3 of the credit page)
+## Blocking real money (the top-up)
 
-5. **Wire SG Meter to this host (the lead, with the newsroom's tooling).** The newsroom's meter charges a reader's balance per page and has a live top-up link since 11 October 2026. This site needs the meter's script on its pages, which means a content security policy change (`script-src` and `connect-src` for the meter's origin) recorded in `admin/build/chrome.py` and a release note, and the reading accounts for the first batch with their starting credit. Until then the credit on a customer page is a number kept by hand.
-6. **Decide the starting credit (the lead).** £5 or £50; the brief says the number is to be discovered. Written on each customer's record at S0.
+5. **A payment link (the lead).** The meter charges on this site from v0.2.1, with £50.00 of credit to start. A top-up moves no money until there is a payment link: create one (a Stripe Payment Link, as the newsroom has), set its return address to `https://customers.riskmandate.ai/account/topped-up.html?session_id={CHECKOUT_SESSION_ID}`, and put it in `data/meter.json` as `config.topup.link` with the credit it buys as `config.topup.amount`. The meter's security model says what the return page does and does not check.
+6. **The prices (the lead, with the batch).** The table in `data/meter.json` is a starting point: 1p for the home page, 2p a page, 10p a storyboard, 50p a behaviour policy, £1.00 the starter pack. Change it as the batch says what pages are worth.
+6a. **The meter on the API (the newsroom's agent).** newsroom.sgit.ai runs SG Meter v1.5.0 from its own copy, which charges by the share of a page read; api.newsroom.sgit.ai's newest release, v0.2.5, has v1.4.1. When a release with v1.5.0 is published, this site moves to it by changing `data/meter.json` and the pinned manifest in `admin/build/pins/`.
 
 ## Blocking the next batch's form
 

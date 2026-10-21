@@ -6,22 +6,26 @@
   <title>The first batch: one row per customer, and a page for each, with no contact details</title>
   <meta name="description" content="The customers of the first batch and where each is: started, first behaviour policy with its rows and gaps, milestone steps done, credit used and topped up, and follow-ups recorded. Generated from data/customers.json on every release. One worked example, marked as such, shows the shape.">
   <!-- rm-customers:head:start -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
   <link rel="canonical" href="https://customers.riskmandate.ai/customers/">
   <link rel="alternate" type="text/markdown" href="/customers/index.md">
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
   <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
   <script src="/assets/theme.js"></script>
   <link rel="stylesheet" href="/assets/themes.css">
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/customers/">
   <meta property="og:title" content="The first batch: one row per customer, and a page for each, with no contact details">
   <meta property="og:description" content="The customers of the first batch and where each is: started, first behaviour policy with its rows and gaps, milestone steps done, credit used and topped up, and follow-ups recorded. Generated from data/customers.json on every release. One worked example, marked as such, shows the shape.">
-  <meta name="rm-customers:version" content="0.2.0">
+  <meta name="rm-customers:version" content="0.2.1">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -29,23 +33,48 @@
   <!-- rm-customers:nav:start -->
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
       <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
       <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
       <nav class="navlinks" aria-label="Site">
-        <a class="pagelink" href="/start-here/">Start here</a>
         <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
+            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
+            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
+            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
+            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup active">
           <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
-            <a class="pagelink navchild" href="/credit/">Credit, and the meter</a>
+            <a class="pagelink navchild active" href="/customers/" aria-current="page">The first batch</a>
             <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
             <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
           </div>
         </span>
-        <a class="pagelink active" href="/customers/" aria-current="page">Customers</a>
         <span class="navgroup">
           <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
@@ -56,20 +85,15 @@
             <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
             <a class="pagelink navchild" href="/docs/ops/">Operations</a>
             <a class="pagelink navchild" href="/team/">The team</a>
-          </div>
-        </span>
-        <span class="navgroup">
-          <a class="navgroup-btn" href="/admin/">Admin<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
-          <div class="navmenu">
             <a class="pagelink navchild" href="/admin/">How the site is built</a>
             <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
-            <a class="pagelink navchild" href="/docs/ops/needs.html">What needs a human</a>
             <a class="pagelink navchild" href="/review/">The review folder</a>
             <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
           </div>
         </span>
       </nav>
       <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
         <div class="theme-pick">
           <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
           <ul aria-label="Theme" hidden>
@@ -82,10 +106,10 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
       </div>
     </div>
-    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">The first batch, and where each is</span></div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">The first batch</span></div>
   </header>
 <!-- rm-customers:nav:end -->
   <main class="wrap">
@@ -114,9 +138,10 @@
     </ul>
   </main>
   <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="page" title="The first batch: one row per customer, and a page for each, with no contact details"></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/customers/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/customers/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

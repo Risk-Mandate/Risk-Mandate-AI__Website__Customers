@@ -126,10 +126,46 @@
     {
       "id": "programme.credit",
       "area": "programme",
-      "title": "Credit per customer, metered and billed on this site, with a top-up link",
+      "title": "Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai",
+      "status": "shipped",
+      "where": "data/meter.json, assets/site-config.js, admin/build/chrome.py, account/",
+      "notes": "Meter v1.4.1 from the API release v0.2.5, pinned and checked against its hash. Charged by how far down a page is read; nothing is blocked. The balance lives in the reader's browser.",
+      "since": "0.2.1"
+    },
+    {
+      "id": "programme.topup",
+      "area": "programme",
+      "title": "A payment link, so a top-up moves money",
       "status": "proposed",
-      "where": "credit/index.html",
-      "notes": "The meter is the newsroom's today (SG Meter, live since 11 October 2026); wiring it to this site needs the lead. Until then credit is a number on the customer page, kept by hand."
+      "where": "data/meter.json config.topup.link, docs/ops/needs.md",
+      "notes": "Until the lead adds one, the top-up page is the meter's simulated cart, which says so."
+    },
+    {
+      "id": "programme.policies",
+      "area": "programme",
+      "title": "Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four",
+      "status": "shipped",
+      "since": "0.2.1",
+      "where": "data/policies.json, data/rules/, policies/, tests/build/test_hooks.py",
+      "notes": "Built from riskmandate.ai's rules, copied byte for byte. Every hook refusal in the tests has an allowed twin."
+    },
+    {
+      "id": "programme.storyboards",
+      "area": "programme",
+      "title": "Three storyboards drawn in the reader's browser by the kit from api.storyboards.sgit.ai: what an ABP is, your first policy, the first batch",
+      "status": "shipped",
+      "since": "0.2.1",
+      "where": "storyboards/, data/storyboards.json, assets/storyboards.js",
+      "notes": "The kit is pinned and loaded with its integrity strings; its delay attributes are allowed by hash and no other inline style."
+    },
+    {
+      "id": "programme.demos",
+      "area": "programme",
+      "title": "Animated demos of a session: installing and trying a policy in Claude Code, and the send-as-you line in ChatGPT",
+      "status": "shipped",
+      "since": "0.2.1",
+      "where": "data/demos.json, assets/demo.js",
+      "notes": "Illustrations of what each policy's page promises, labelled as such; not recordings. Still and complete with reduced motion or no JavaScript."
     },
     {
       "id": "programme.next-batch",

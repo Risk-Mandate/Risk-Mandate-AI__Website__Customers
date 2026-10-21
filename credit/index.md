@@ -1,38 +1,41 @@
 # Credit, and the meter.
 
-> How the credit works for a customer of the first batch: a starting amount, a meter that charges a few pence per use, a top-up link, and the two numbers we track, credit used and whether they topped up. Today the meter is the newsroom's; wiring it to this site is proposed and waits on the lead.
+> How the credit works: every reader starts with £50, each page costs a little by how far down it is read, a behaviour policy costs the most, and nothing is ever blocked. The meter is the newsroom's SG Meter, from api.newsroom.sgit.ai; there is no payment link yet.
 
-*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-Each customer starts with credit to spend on a site we run. What they use is metered from the first day, so the question of what they would pay is a real one, asked with the value already in front of them.
+Everyone who opens this site starts with **£50.00** of credit. What you read is metered from the first page, so the question of what you would pay is a real one, asked with the value already in front of you.
 
-Status, from [docs/reality.md](/docs/reality.md): proposed Credit per customer, metered and billed on this site, with a top-up link · absent Accounts, sign-in or a customer login on this site
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.2.1 Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai · absent Accounts, sign-in or a customer login on this site
 
-## How it is meant to work
+## What each page costs
 
-1. **A starting amount.**
+By kind, in pence, for a page read to the end. A page you open and leave costs a tenth of its price; read half, pay half. Each page is charged once per browser session; coming back does not charge it again. The table is generated from `data/meter.json`.
 
-£5 or £50; the brief says the number is to be discovered. The lead records it on the customer page at milestone S0.
+| Kind | Which pages | Read to the end | Read to the end, on £50.00 |
+|---|---|---|---|
+| `free` | your account, the top-up pages, the not-found page | nothing |  |
+| `home` | the home page | 1p | 5,000 |
+| `page` | an ordinary page: start here, the programme, the lists | 2p | 2,500 |
+| `doc` | a document: the brief, the memo, operations, the team, admin | 2p | 2,500 |
+| `storyboard` | a storyboard, or a page built around one | 10p | 500 |
+| `policy` | a behaviour policy: its line, its hook, and how to try it | 50p | 100 |
+| `pack` | the starter pack: three behaviour policies and their hooks, ready to install | £1.00 | 50 |
 
-2. **A meter on the site.**
+At the foot of every page is what that page has cost you so far, and three ratings: how useful it was sets the price, from free to double. If something was wrong with a page, you can say why and not be charged for it.
 
-The newsroom's meter, [SG Meter](https://newsroom.sgit.ai/meter/), charges a reader's balance a few pence per page and lets it go negative; the reader decides when to top up. The top-up link has been live there since 11 October 2026. The same meter works for any site we run.
+## How it works
 
-3. **Two numbers.**
+- **The meter is the newsroom's.** [SG Meter](https://newsroom.sgit.ai/meter/) v1.4.1, loaded from [api.newsroom.sgit.ai](https://api.newsroom.sgit.ai/) at release v0.2.5, pinned, with the browser checking the file against the release's hash. newsroom.sgit.ai runs a newer meter, v1.5.0, from its own copy; it is not on the API yet.
+- **It lives in your browser.** The balance and the history are this browser's, under one storage key, and are sent nowhere. Another browser starts again at £50.00. [Your account](/account/index.md) shows all of it, and can export it.
+- **It never blocks.** Below zero is allowed. It is an honesty box, not a paywall, and [its security model](https://newsroom.sgit.ai/meter/security.html) says what a reader can do to it and why that is accepted.
+- **Two numbers per customer.** Credit used, and whether they topped up. Both are on the customer's page, and both are what the price question is answered from.
 
-Credit used, and whether they topped up. Both are on the customer page and in the batch table, and both are what the price question is answered from.
+## What is not wired yet
 
-4. **The price, discovered.**
-
-The credit tells us how much each customer uses before they would top up; the follow-up tells us why. It could be quite high, or quite low. We start with credit and learn what feels fair.
-
-## What is wired today, and what is not
-
-**The meter is real; it is the newsroom's, not yet this site's.** Until the lead wires SG Meter to customers.riskmandate.ai, the credit on a customer page is a number kept by hand in `data/customers.json`, changed by a release. The steps that only a human can do are in [what needs a human](/docs/ops/needs.md).
-
-This site has no accounts and no sign-in, and that is deliberate: it is static. When the meter is wired, the reading account is the meter's, as it is on the newsroom, and this site stays as it is.
+**No money moves yet.** The meter charges on this site from v0.2.1. There is no payment link of this site's own, so [the top-up page](/account/top-up.md) is the meter's simulated cart, which says it is simulated. The credit on a customer's page is still written by hand from what they tell us, because the meter's history never leaves their browser. What is waiting on the lead is in [what needs a human](/docs/ops/needs.md).
 
 ## Why credit rather than a price
 

@@ -8,6 +8,8 @@
 # canvas); every colour lives in assets/site.css as a token and nowhere else.
 # ═══════════════════════════════════════════════════════════════════════════════
 
+import base64
+import hashlib
 import html
 import json
 
@@ -19,6 +21,9 @@ VERSION_FILE   = ROOT / 'admin' / 'build' / 'version.txt'
 CNAME_FILE     = ROOT / 'CNAME'
 VERSIONS_FILE  = ROOT / 'data' / 'versions.json'
 THEMES_FILE    = ROOT / 'data' / 'themes.json'
+METER_FILE     = ROOT / 'data' / 'meter.json'
+KIT_FILE       = ROOT / 'data' / 'storyboards.json'
+PINS_DIR       = ROOT / 'admin' / 'build' / 'pins'
 
 MARKER_PREFIX  = 'rm-customers'                                                  # <!-- rm-customers:<block>:start -->
 
@@ -33,35 +38,95 @@ LICENCE_NAME   = 'CC BY 4.0'
 REPO_URL       = 'https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers'
 AGENT_ADDRESS  = 'agent@riskmandate.ai'
 
-CSP            = ("default-src 'self'; "
-                  "connect-src 'self'; "
-                  "img-src 'self' data:; "
-                  "style-src 'self'; "
-                  "script-src 'self'; "
-                  "object-src 'none'; "
-                  "base-uri 'none'; "
-                  "form-action 'none'")                                           # no form on this site yet; the next-batch page says where the form is
+METER          = json.loads(METER_FILE.read_text(encoding='utf-8'))
+KIT            = json.loads(KIT_FILE.read_text(encoding='utf-8'))
+
+
+class Pins:                                                                      # the two APIs this site loads code from, each pinned to one release and checked against a copy of its manifest
+
+    @staticmethod
+    def manifest(host, release):
+        return json.loads((PINS_DIR / host.replace('https://', '') / release / 'manifest.json').read_text(encoding='utf-8'))
+
+    @staticmethod
+    def meter_url():
+        return f"{METER['api']['host']}/{METER['api']['release']}/{METER['api']['component']}"
+
+    @staticmethod
+    def meter_integrity():                                                       # the manifest gives sha256 in hex; the integrity attribute wants base64
+        files = {f['path']: f for f in Pins.manifest(METER['api']['host'], METER['api']['release'])['files']}
+        return 'sha256-' + base64.b64encode(bytes.fromhex(files[METER['api']['component']]['sha256'])).decode()
+
+    @staticmethod
+    def kit(path):                                                               # (url, integrity) for one file of the storyboard kit
+        files = {f['path']: f for f in Pins.manifest(KIT['api']['host'], KIT['api']['release'])['files']}
+        return f"{KIT['api']['host']}/{KIT['api']['release']}/{path}", files[path]['integrity']
+
+    @staticmethod
+    def js_number(x):                                                            # a number as JavaScript prints it: the shortest repr, and no ".0" on a whole number
+        return str(int(x)) if float(x).is_integer() else repr(float(x))
+
+    @staticmethod
+    def style_delays():                                                          # the exact inline style values the kit writes, computed with the same float arithmetic
+        d      = KIT['style_delays']
+        values = list(d['fixed'])
+        for start, step in d['families']:
+            for i in range(d['count']):
+                value = f"--d:{Pins.js_number(start + i * step)}s"
+                if value not in values:
+                    values.append(value)
+        return values
+
+    @staticmethod
+    def style_hashes():
+        return ["'sha256-" + base64.b64encode(hashlib.sha256(v.encode()).digest()).decode() + "'" for v in Pins.style_delays()]
+
+
+def csp(storyboard=False):                                                       # one policy; a page with a storyboard also allows the kit's stylesheets, fonts and delay attributes
+    style = f"style-src 'self' {KIT['api']['host']} 'unsafe-hashes' {' '.join(Pins.style_hashes())}; font-src {KIT['api']['host']}; " if storyboard else "style-src 'self'; "
+    kit   = f" {KIT['api']['host']}" if storyboard else ''
+    return ("default-src 'self'; "
+            f"connect-src 'self' {METER['api']['host']}; "                         # the meter fetches its markup and styles from beside itself
+            "img-src 'self' data:; "
+            + style +
+            f"script-src 'self' {METER['api']['host']}{kit}; "
+            "object-src 'none'; "
+            "base-uri 'none'; "
+            "form-action 'none'")                                                 # no form on this site yet; the next-batch page says where the form is
+
+
+CSP            = csp()
+CSP_STORYBOARD = csp(storyboard=True)
 
 # Each group: (label, the group's own page, [(href, label), ...]). A group label is a
 # plain link to its first page, so the nav works with no JavaScript at all.
-NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'                                   , 'What to do first, in order'       ),)),
+NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'                                   , 'Your first five minutes'          ),
+                                                      ('/account/'                                      , 'Your account: £50 to spend'       ),
+                                                      ('/credit/'                                       , 'What each page costs'             ))),
+                  ('Policies'     , '/policies/'   , (('/policies/'                                     , 'Pick one worry: every policy'     ),
+                                                      ('/policies/starter/'                             , 'The starter pack: four in one go' ),
+                                                      ('/policies/touch-your-secrets/'                  , 'Keep it away from your secrets'   ),
+                                                      ('/policies/push-anywhere/'                       , 'Only push to your branch'         ),
+                                                      ('/policies/send-as-you/'                         , 'ChatGPT: nothing sent without a yes'))),
+                  ('Learn'        , '/what-is-an-abp/', (('/what-is-an-abp/'                            , 'What an ABP is'                   ),
+                                                      ('/storyboards/'                                  , 'Storyboards'                      ),
+                                                      ('/storyboards/your-first-policy/'                , 'Your first policy, drawn'         ))),
                   ('The programme', '/programme/'  , (('/programme/'                                    , 'Customers, not beta users'        ),
-                                                      ('/credit/'                                       , 'Credit, and the meter'            ),
+                                                      ('/customers/'                                    , 'The first batch'                  ),
                                                       ('/milestones/'                                   , 'The milestones: seven steps'      ),
                                                       ('/follow-up/'                                    , 'The daily follow-up'              ),
                                                       ('/learning/'                                     , 'What we want to discover'         ),
-                                                      ('/next-batch/'                                   , 'The next batch'                   ))),
-                  ('Customers'    , '/customers/'  , (('/customers/'                                    , 'The first batch, and where each is'),)),
+                                                      ('/next-batch/'                                   , 'The next batch'                   ),
+                                                      ('/storyboards/the-first-batch/'                  , 'The first batch, drawn'           ))),
                   ('Docs'         , '/docs/'       , (('/docs/'                                         , 'All documents'                    ),
                                                       ('/docs/brief/our-first-customers.html'           , 'The brief, in full'               ),
                                                       ('/docs/brief/memo-2026-10-20-user-onboarding-plan.html', 'The memo of 20 October'    ),
                                                       ('/docs/brief/BRIEF-CORRECTIONS.html'             , 'Brief corrections'                ),
                                                       ('/docs/reality.html'                             , 'Reality: what exists'             ),
                                                       ('/docs/ops/'                                     , 'Operations'                       ),
-                                                      ('/team/'                                         , 'The team'                         ))),
-                  ('Admin'        , '/admin/'      , (('/admin/'                                        , 'How the site is built'            ),
+                                                      ('/team/'                                         , 'The team'                         ),
+                                                      ('/admin/'                                        , 'How the site is built'            ),
                                                       ('/admin/versions.html'                           , 'Release history'                  ),
-                                                      ('/docs/ops/needs.html'                           , 'What needs a human'               ),
                                                       ('/review/'                                       , 'The review folder'                ),
                                                       ('/llms.txt'                                      , 'llms.txt, for agents'             ))))
 
@@ -73,7 +138,10 @@ CRUMB_FOLDERS  = {'/docs/'        : ('Docs'       , '/docs/'       ),
                   '/customers/'   : ('Customers'  , '/customers/'  ),
                   '/about/'       : ('About'      , '/about/participant.html'),
                   '/review/'      : ('Review'     , '/review/'     ),
-                  '/admin/'       : ('Admin'      , '/admin/'      )}
+                  '/admin/'       : ('Admin'      , '/admin/'      ),
+                  '/policies/'    : ('Policies'   , '/policies/'   ),
+                  '/storyboards/' : ('Storyboards', '/storyboards/'),
+                  '/account/'     : ('Your account', '/account/'   )}
 
 
 class Chrome:
@@ -106,20 +174,33 @@ class Chrome:
 
     # ── head ──────────────────────────────────────────────────────────────────
 
-    def head(self, url_path, title, description, connect=''):
+    def kind_of(self, url_path):                                                 # the meter's price class for a page, from data/meter.json's path rules, longest first
+        path = url_path if not url_path.endswith('/') else url_path + 'index.html'
+        for prefix, kind in sorted(METER['paths'], key=lambda rule: -len(rule[0])):
+            if path == prefix or path.startswith(prefix if prefix.endswith('/') else prefix + '\0'):
+                return kind
+        return 'page'
+
+    def head(self, url_path, title, description, storyboard=False):
         canonical = self.canonical_url(url_path)
         twin      = self.twin_path(url_path)
         esc       = html.escape
-        lines     = [f'<meta http-equiv="Content-Security-Policy" content="{CSP}">'                      ,
+        kit_css   = [Pins.kit(path) for path in KIT['api']['styles']] if storyboard else []
+        lines     = [f'<meta http-equiv="Content-Security-Policy" content="{CSP_STORYBOARD if storyboard else CSP}">',
                      f'<link rel="canonical" href="{canonical}">'                                         ,
                      f'<link rel="alternate" type="text/markdown" href="{twin}">'                        ,
                      f'<link rel="license" href="{LICENCE_URL}">'                                         ,
                      f'<link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">'  ,
                      f'<link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">' ,
+                     f'<script src="/assets/site-config.js"></script>'                                   ,   # the meter's config and the storyboard viewer's key, before anything reads them
                      f'<script src="/assets/theme.js"></script>'                                         ,   # before the stylesheets, so the theme is set before the first paint
                      f'<link rel="stylesheet" href="/assets/themes.css">'                                 ,
                      f'<link rel="stylesheet" href="/assets/site.css">'                                   ,
+                     *[f'<link rel="stylesheet" href="{url}" integrity="{sri}" crossorigin="anonymous">' for url, sri in kit_css],
                      f'<script src="/assets/nav.js" defer></script>'                                      ,
+                     f'<script src="/assets/copy.js" defer></script>'                                     ,
+                     f'<script src="/assets/demo.js" defer></script>'                                     ,
+                     f'<script type="module" src="{Pins.meter_url()}" integrity="{Pins.meter_integrity()}" crossorigin="anonymous"></script>',
                      f'<meta property="og:type" content="website">'                                       ,
                      f'<meta property="og:site_name" content="RiskMandate">'                             ,
                      f'<meta property="og:url" content="{canonical}">'                                    ,
@@ -161,13 +242,14 @@ class Chrome:
         return '\n'.join(['  <header class="top">'                                                                                                           ,
                           '    <div class="wrap">'                                                                                                           ,
                           '      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">'
-                          'RiskMandate<span class="sub">customers</span></a>'                                                                                ,
+                          '<span class="word">RiskMandate</span><span class="sub">customers</span></a>'                                                                                ,
                           f'      <a class="parent" href="{PARENT_URL}" title="{html.escape(PARENT_TITLE)}">&#8599; riskmandate.ai</a>'                       ,
                           '      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>',
                           '      <nav class="navlinks" aria-label="Site">'                                                                                   ,
                           *groups                                                                                                                            ,
                           '      </nav>'                                                                                                                     ,
                           '      <div class="tools">'                                                                                                        ,
+                          '        <sg-meter class="meter-nav" view="balance"></sg-meter>'                                                                    ,
                           self.theme_picker()                                                                                                                ,
                           f'        {self.version_badge()}'                                                                                                   ,
                           '      </div>'                                                                                                                     ,
@@ -205,9 +287,19 @@ class Chrome:
 
     # ── footer ────────────────────────────────────────────────────────────────
 
-    def footer(self, url_path):
+    def meter_card(self, url_path, title):
+        kind = self.kind_of(url_path)
+        return (f'  <div class="wrap meter-card"><sg-meter view="page" kind="{kind}" title="{html.escape(title, quote=True)}"'
+                + (' quiet' if kind == 'free' else '') + '></sg-meter></div>')
+
+    def kit_scripts(self):
+        return [f'  <script src="{url}" integrity="{sri}" crossorigin="anonymous"></script>'
+                for url, sri in (Pins.kit(path) for path in KIT['api']['scripts'])] + ['  <script src="/assets/storyboards.js" defer></script>']
+
+    def footer(self, url_path, title='', storyboard=False):
         twin = self.twin_path(url_path)
-        return '\n'.join(['  <footer class="foot">'                                                                                                ,
+        return '\n'.join([self.meter_card(url_path, title)                                                                                    ,
+                          '  <footer class="foot">'                                                                                                ,
                           '    <div class="wrap">'                                                                                                 ,
                           f'      <p>{SITE_NAME} · site {self.version_badge()} · released {self.released} · '
                           f'<a href="/admin/versions.html">releases</a> · <a href="{twin}">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · '
@@ -217,4 +309,5 @@ class Chrome:
                           f'if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer\'s contact details are in it. '
                           f'Write to <a href="mailto:{AGENT_ADDRESS}">{AGENT_ADDRESS}</a>.</p>'                                                   ,
                           '    </div>'                                                                                                             ,
-                          '  </footer>'                                                                                                            ])
+                          '  </footer>'                                                                                                            ,
+                          *(self.kit_scripts() if storyboard else [])                                                                              ])

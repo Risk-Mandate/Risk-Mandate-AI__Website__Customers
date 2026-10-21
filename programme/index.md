@@ -2,13 +2,25 @@
 
 > What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.
 
-*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
 The brief thought about what to call the people in the first batch: "early access users", "beta users", "the first batch". Beta describes the state of the product. What we want to name is the relationship. So they are customers, and the programme is built around that word.
 
-Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 The brief and the memo published in full, never edited, with the corrections file beside them · shipped v0.1.0 A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details · shipped v0.1.0 The daily follow-up: three questions, recorded on the customer page as a log · proposed Credit per customer, metered and billed on this site, with a top-up link
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 The brief and the memo published in full, never edited, with the corrections file beside them · shipped v0.1.0 A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details · shipped v0.1.0 The daily follow-up: three questions, recorded on the customer page as a log · shipped v0.2.1 Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai
+
+## Where the batch is, counted from the data.
+
+Every number below is read from `data/customers.json` on every release; nothing is typed. The one worked example is not counted. [The batch, one row per customer →](/customers/index.md)
+
+**3**customers in the first batch
+**2**started
+**0**first behaviour policies written
+**3 of 21**milestone steps done
+**£0 of £10**credit used
+**0**topped up
+**2**follow-ups recorded
 
 ## Why now
 
@@ -46,7 +58,11 @@ From [docs/reality.md](/docs/reality.md), generated on every release. A row that
 | programme | Seven milestone steps shared across the batch, from in-with-credit to the usage moment | shipped v0.1.0 | data/milestones.json, milestones/index.html | The objectives per customer are theirs; the steps are the shared shape so the batch reads in one table. |
 | programme | The daily follow-up: three questions, recorded on the customer page as a log | shipped v0.1.0 | follow-up/index.html, data/customers.json | What they did, what got in the way, what is next. Daily if that is what helps; the record is the summary. |
 | programme | The three questions the programme exists to answer, with a findings table that starts empty | shipped v0.1.0 | learning/index.html | The simplest useful behaviour policy, the entry point with least friction, the price that feels fair. |
-| programme | Credit per customer, metered and billed on this site, with a top-up link | proposed | credit/index.html | The meter is the newsroom's today (SG Meter, live since 11 October 2026); wiring it to this site needs the lead. Until then credit is a number on the customer page, kept by hand. |
+| programme | Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai | shipped v0.2.1 | data/meter.json, assets/site-config.js, admin/build/chrome.py, account/ | Meter v1.4.1 from the API release v0.2.5, pinned and checked against its hash. Charged by how far down a page is read; nothing is blocked. The balance lives in the reader's browser. |
+| programme | A payment link, so a top-up moves money | proposed | data/meter.json config.topup.link, docs/ops/needs.md | Until the lead adds one, the top-up page is the meter's simulated cart, which says so. |
+| programme | Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four | shipped v0.2.1 | data/policies.json, data/rules/, policies/, tests/build/test_hooks.py | Built from riskmandate.ai's rules, copied byte for byte. Every hook refusal in the tests has an allowed twin. |
+| programme | Three storyboards drawn in the reader's browser by the kit from api.storyboards.sgit.ai: what an ABP is, your first policy, the first batch | shipped v0.2.1 | storyboards/, data/storyboards.json, assets/storyboards.js | The kit is pinned and loaded with its integrity strings; its delay attributes are allowed by hash and no other inline style. |
+| programme | Animated demos of a session: installing and trying a policy in Claude Code, and the send-as-you line in ChatGPT | shipped v0.2.1 | data/demos.json, assets/demo.js | Illustrations of what each policy's page promises, labelled as such; not recordings. Still and complete with reduced motion or no JavaScript. |
 | programme | A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane | proposed | next-batch/index.html | Today the route is the riskmandate.ai contact form or an email to agent@riskmandate.ai; the page says so. |
 | programme | The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds | proposed | docs/ops/needs.md | Never in this repository. The public page carries the summary. |
 | programme | A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in | proposed | customers/the-agents/ | The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/. |

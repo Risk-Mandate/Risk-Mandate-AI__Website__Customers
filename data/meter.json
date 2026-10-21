@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "_comment": "The reading meter: SG Meter, from api.newsroom.sgit.ai, pinned to one release. Every page has a price by its kind, in pence, charged by how far down the page the reader reads (never less than a tenth, so opening a page is not free), once per page per browser session. Every reader starts with £50.00. Nothing is ever blocked and the balance may go below zero: it is an honesty box, not a paywall (https://newsroom.sgit.ai/meter/security.html). The prices are starting points; the programme exists to find the fair ones. admin/build/gen_meter.py writes assets/meter-config.js and the prices table on /credit/ from this file, and admin/build/chrome.py puts the balance in every header and the page's card under every page, with the kind its path says. The gate checks every pinned path against the copy of the release manifest in admin/build/pins/.",
+  "api": {
+    "host": "https://api.newsroom.sgit.ai",
+    "release": "v0.2.5",
+    "component": "assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js",
+    "also_loads": ["assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter-core.js", "assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.css",
+                   "assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.tpl", "assets/components/base/v1/v1.0/v1.0.0/sg-component.js"],
+    "note": "v1.4.1 is the newest meter on the API (release v0.2.5, 15 October 2026). newsroom.sgit.ai itself runs v1.5.0 from its own copy, which charges by the share of the page read; it is not on the API yet."
+  },
+  "kinds": [
+    { "kind": "free",       "price": 0,   "what": "your account, the top-up pages, the not-found page" },
+    { "kind": "home",       "price": 1,   "what": "the home page" },
+    { "kind": "page",       "price": 2,   "what": "an ordinary page: start here, the programme, the lists" },
+    { "kind": "doc",        "price": 2,   "what": "a document: the brief, the memo, operations, the team, admin" },
+    { "kind": "storyboard", "price": 10,  "what": "a storyboard, or a page built around one" },
+    { "kind": "policy",     "price": 50,  "what": "a behaviour policy: its line, its hook, and how to try it" },
+    { "kind": "pack",       "price": 100, "what": "the starter pack: three behaviour policies and their hooks, ready to install" }
+  ],
+  "paths": [
+    ["/account/",               "free"],
+    ["/404.html",               "free"],
+    ["/policies/starter/",      "pack"],
+    ["/policies/index.html",    "page"],
+    ["/policies/",              "policy"],
+    ["/what-is-an-abp/",        "storyboard"],
+    ["/storyboards/index.html", "page"],
+    ["/storyboards/",           "storyboard"],
+    ["/docs/",                  "doc"],
+    ["/team/",                  "doc"],
+    ["/review/",                "doc"],
+    ["/admin/",                 "doc"],
+    ["/about/",                 "doc"],
+    ["/index.html",             "home"],
+    ["/",                       "page"]
+  ],
+  "config": {
+    "storageKey": "riskmandate.customers.meter.v1",
+    "start": 5000,
+    "newDays": 7,
+    "symbol": "£",
+    "depth": true,
+    "minDepth": 0.1,
+    "topup": { "amount": 5000, "link": "" },
+    "packs": [ { "id": "p10", "price": 1000, "bonus": 0 }, { "id": "p50", "price": 5000, "bonus": 0 } ],
+    "links":  { "account": "account/index.html", "topup": "account/top-up.html", "how": "credit/index.html" },
+    "links2": { "newsroom": "account/index.html", "personas": "account/index.html", "share": "" },
+    "picks":  { "feed": "", "base": "" },
+    "share":  { "contact": "", "form": "", "site": "customers.riskmandate.ai", "max": 0 },
+    "rating": { "price": [0, 0.5, 1, 1.5, 2], "more": [-3, -1, 0, 3, 6] },
+    "autoKeep": false,
+    "root": "/"
+  }
+}

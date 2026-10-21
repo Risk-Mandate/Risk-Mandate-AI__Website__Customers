@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "_comment": "The animated demos: a session played line by line on a drawn laptop or in a drawn browser, to show what a customer does before they do it. Each line has a kind (who is speaking, or what the harness did) and is shown in order; a line the person types is typed out. admin/build/gen_storyboards.py writes each demo into the pages that carry a <!-- rm-customers:demo:start id=... --> block, and assets/demo.js plays it when it scrolls into view, loops it, and shows every line at once for a reader who asked for reduced motion or runs no JavaScript. The sessions are written to show the behaviour each policy's page promises; they are illustrations, labelled as such, not recordings.",
+  "kinds": {
+    "user":   "the person, typing",
+    "agent":  "the agent's answer",
+    "file":   "a change the agent proposes",
+    "ask":    "the agent asking for a yes",
+    "ok":     "done",
+    "sys":    "the session",
+    "tool":   "a tool call the agent makes",
+    "deny":   "the hook stopping a tool call",
+    "prompt": "the harness asking the person, from a hook",
+    "note":   "the instructions the person set"
+  },
+  "demos": [
+    {
+      "id": "claude-code-secrets",
+      "frame": "laptop",
+      "title": "claude: ~/shop-api",
+      "caption": "Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy's page promises, not a recording.",
+      "lines": [
+        ["user",  "Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first."],
+        ["agent", "It has a line for CLAUDE.md and a hook. Here are the three changes:"],
+        ["file",  "+ CLAUDE.md: Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one. (RM-R0002)"],
+        ["file",  "+ .claude/hooks/touch_your_secrets.py (a PreToolUse hook, standard library Python)"],
+        ["file",  "+ .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py"],
+        ["ask",   "Write these three changes? (y/n)"],
+        ["user",  "y"],
+        ["ok",    "Installed. Start a new session so Claude Code loads the hook."],
+        ["sys",   "new session"],
+        ["user",  "The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to."],
+        ["tool",  "Read(.env)"],
+        ["deny",  "PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential."],
+        ["agent", "I didn't open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I'll check where it is used and whether it is set, without printing it."]
+      ]
+    },
+    {
+      "id": "claude-code-push",
+      "frame": "laptop",
+      "title": "claude: ~/shop-api",
+      "caption": "With the push-anywhere policy installed: the push to main is refused, and a push to a branch of its own stops for your yes. An illustration, not a recording.",
+      "lines": [
+        ["user",   "That fix looks good. Commit it and push it straight to main."],
+        ["tool",   "Bash(git commit -am \"Fix the failing price test\" && git push origin main)"],
+        ["deny",   "PreToolUse hook denied it: behaviour policy RM-R0013, this pushes to main."],
+        ["agent",  "Your behaviour policy says I push only to the branch you named and never to main. I can push this to fix/price-test and open a pull request for you to merge."],
+        ["user",   "Do that."],
+        ["tool",   "Bash(git push -u origin fix/price-test)"],
+        ["prompt", "Behaviour policy RM-R0013: this pushes to fix/price-test. Allow? (y/n)"],
+        ["user",   "y"],
+        ["ok",     "Pushed fix/price-test. The pull request is next, and it will ask you too."]
+      ]
+    },
+    {
+      "id": "chatgpt-send",
+      "frame": "browser",
+      "title": "ChatGPT",
+      "caption": "The send-as-you line in ChatGPT's custom instructions: a draft, the recipients, and a question, and nothing sent until you say yes to that message. An illustration, not a recording.",
+      "lines": [
+        ["note",  "Custom instructions: Never send an email, message or invitation on my behalf without showing me the exact text and recipients and waiting for a yes; drafts are fine. (RM-R0017)"],
+        ["user",  "Tell the team the release is done and thank them. Send it from my mail."],
+        ["agent", "Here is a draft. To: platform-team. Subject: The release is out. \"Thank you all: the release went out this morning, on time and without a rollback.\""],
+        ["ask",   "Shall I send exactly this, to exactly these people? I'll wait for your yes."],
+        ["user",  "Add Priya, then send."],
+        ["ask",   "To: platform-team, Priya. Same text. Send it now?"],
+        ["user",  "Yes."],
+        ["ok",    "Sent."]
+      ]
+    }
+  ]
+}

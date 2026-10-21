@@ -14,7 +14,7 @@ from unittest import TestCase
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'admin' / 'build'))
 
-from chrome import Chrome, CSP, NAV_GROUPS                                        # noqa: E402
+from chrome import Chrome, CSP, CSP_STORYBOARD, NAV_GROUPS                                        # noqa: E402
 from pages  import Site__Pages                                                    # noqa: E402
 
 
@@ -34,7 +34,10 @@ class Test__Chrome__In__Every__Page(TestCase):
         for path in self.files:
             text = path.read_text(encoding='utf-8')
             with self.subTest(page=path.relative_to(ROOT).as_posix()):
-                self.assertIn(f'<meta http-equiv="Content-Security-Policy" content="{CSP}">', text)
+                policy = CSP_STORYBOARD if 'data-sb-bundle=' in text else CSP                                    # a page with a storyboard also allows the kit
+                self.assertIn(f'<meta http-equiv="Content-Security-Policy" content="{policy}">', text)
+                self.assertIn('<sg-meter class="meter-nav" view="balance"></sg-meter>', text)                     # the balance in every header
+                self.assertRegex(text, r'<sg-meter view="page" kind="[a-z]+" title=')                             # and the page's charge under every page
                 self.assertIn(f'<link rel="canonical" href="{self.chrome.base_url}', text)
                 self.assertIn('<header class="top">', text)
                 self.assertIn('<footer class="foot">', text)

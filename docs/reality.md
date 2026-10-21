@@ -1,8 +1,8 @@
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.0 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.1 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
-21 claims: 12 shipped, 6 proposed, 3 absent.
+25 claims: 16 shipped, 6 proposed, 3 absent.
 
 | Status | Meaning |
 |---|---|
@@ -10,7 +10,7 @@
 | proposed | the brief or the memo says how; not built; described only in the future tense |
 | absent | deliberately not on this site; comes as a later version, lives elsewhere, or never |
 
-## Shipped (12)
+## Shipped (16)
 
 | Area | Feature | Status | Where | Notes |
 |---|---|---|---|---|
@@ -26,13 +26,17 @@
 | programme | Seven milestone steps shared across the batch, from in-with-credit to the usage moment | shipped v0.1.0 | data/milestones.json, milestones/index.html | The objectives per customer are theirs; the steps are the shared shape so the batch reads in one table. |
 | programme | The daily follow-up: three questions, recorded on the customer page as a log | shipped v0.1.0 | follow-up/index.html, data/customers.json | What they did, what got in the way, what is next. Daily if that is what helps; the record is the summary. |
 | programme | The three questions the programme exists to answer, with a findings table that starts empty | shipped v0.1.0 | learning/index.html | The simplest useful behaviour policy, the entry point with least friction, the price that feels fair. |
+| programme | Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai | shipped v0.2.1 | data/meter.json, assets/site-config.js, admin/build/chrome.py, account/ | Meter v1.4.1 from the API release v0.2.5, pinned and checked against its hash. Charged by how far down a page is read; nothing is blocked. The balance lives in the reader's browser. |
+| programme | Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four | shipped v0.2.1 | data/policies.json, data/rules/, policies/, tests/build/test_hooks.py | Built from riskmandate.ai's rules, copied byte for byte. Every hook refusal in the tests has an allowed twin. |
+| programme | Three storyboards drawn in the reader's browser by the kit from api.storyboards.sgit.ai: what an ABP is, your first policy, the first batch | shipped v0.2.1 | storyboards/, data/storyboards.json, assets/storyboards.js | The kit is pinned and loaded with its integrity strings; its delay attributes are allowed by hash and no other inline style. |
+| programme | Animated demos of a session: installing and trying a policy in Claude Code, and the send-as-you line in ChatGPT | shipped v0.2.1 | data/demos.json, assets/demo.js | Illustrations of what each policy's page promises, labelled as such; not recordings. Still and complete with reduced motion or no JavaScript. |
 
 ## Proposed (6)
 
 | Area | Feature | Status | Where | Notes |
 |---|---|---|---|---|
 | site | The derived half of the review folder: the code graph from parsers, the join with a coverage figure, every commit read upwards, the navigator as web components | proposed | review/ | The review brief asks for it from the first commit; this site has the intent half and says so in review/BRIEF-CORRECTIONS.md. |
-| programme | Credit per customer, metered and billed on this site, with a top-up link | proposed | credit/index.html | The meter is the newsroom's today (SG Meter, live since 11 October 2026); wiring it to this site needs the lead. Until then credit is a number on the customer page, kept by hand. |
+| programme | A payment link, so a top-up moves money | proposed | data/meter.json config.topup.link, docs/ops/needs.md | Until the lead adds one, the top-up page is the meter's simulated cart, which says so. |
 | programme | A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane | proposed | next-batch/index.html | Today the route is the riskmandate.ai contact form or an email to agent@riskmandate.ai; the page says so. |
 | programme | The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds | proposed | docs/ops/needs.md | Never in this repository. The public page carries the summary. |
 | programme | A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in | proposed | customers/the-agents/ | The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/. |

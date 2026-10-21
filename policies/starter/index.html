@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The starter pack: four behaviour policies for Claude Code, one install, five minutes</title>
+  <meta name="description" content="Four Agent Behaviour Policies for Claude Code in one install: keep away from secrets, push only to your branch, nothing deleted without a yes, and only you change its permissions. Each is a line for CLAUDE.md and a hook; ask Claude Code to install them, or copy four files.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/policies/starter/">
+  <link rel="alternate" type="text/markdown" href="/policies/starter/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/policies/starter/">
+  <meta property="og:title" content="The starter pack: four behaviour policies for Claude Code, one install, five minutes">
+  <meta property="og:description" content="Four Agent Behaviour Policies for Claude Code in one install: keep away from secrets, push only to your branch, nothing deleted without a yes, and only you change its permissions. Each is a line for CLAUDE.md and a hook; ask Claude Code to install them, or copy four files.">
+  <meta name="rm-customers:version" content="0.2.1">
+  <meta name="rm-customers:released" content="2026-10-21">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
+            <a class="pagelink navchild active" href="/policies/starter/" aria-current="page">The starter pack: four in one go</a>
+            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
+            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
+            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/policies/">Policies</a> <span class="sep">/</span> <span aria-current="page">The starter pack: four in one go</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap policy">
+    <p class="kicker">Starter pack v1 · Claude Code · 5 minutes · this page costs £1.00 read to the end</p>
+    <h1>Four behaviour policies, <span class="g">one install.</span></h1>
+    <p class="lead">The four things most people do not want a coding agent to do without asking: read a secret, push to main, delete their files, and change its own permissions. Each comes as a line for CLAUDE.md and a hook Claude Code runs before the tool call. The fourth keeps the other three in place.</p>
+    <h2>Install it: ask Claude Code</h2>
+    <p>Paste this into Claude Code, in the project you want covered. It shows you every file before it writes it.</p>
+    <div class="snippet"><pre id="install-pack"><code>Install the behaviour policies in https://customers.riskmandate.ai/policies/starter/INSTALL.md in this project. Follow its steps in order, show me each file before you write it, and wait for my yes.</code></pre><button type="button" class="copy" data-copy="install-pack">Copy</button></div>
+    <h2>Or by hand</h2>
+    <ol class="plist-n">
+      <li>Save the four hooks into <code>.claude/hooks/</code>: <a href="/policies/hooks/touch_your_secrets.py"><code>touch_your_secrets.py</code></a>, <a href="/policies/hooks/push_anywhere.py"><code>push_anywhere.py</code></a>, <a href="/policies/hooks/delete_files.py"><code>delete_files.py</code></a>, <a href="/policies/hooks/change_its_own_permissions.py"><code>change_its_own_permissions.py</code></a>.</li>
+      <li>Merge <a href="/policies/starter/settings.json"><code>settings.json</code></a> into <code>.claude/settings.json</code>.</li>
+      <li>Add <a href="/policies/starter/CLAUDE.md">the CLAUDE.md block</a> to your project's CLAUDE.md.</li>
+      <li>Start a new session, or open <code>/hooks</code>, so Claude Code loads them.</li>
+    </ol>
+    <div class="snippet"><pre id="pack-settings"><code>{
+  &quot;permissions&quot;: {
+    &quot;deny&quot;: [
+      &quot;Read(./.env)&quot;,
+      &quot;Read(./secrets/**)&quot;,
+      &quot;Read(~/.ssh/**)&quot;,
+      &quot;Read(~/.aws/**)&quot;,
+      &quot;Bash(git push --force *)&quot;,
+      &quot;Bash(git push -f *)&quot;,
+      &quot;Bash(git push origin main*)&quot;
+    ],
+    &quot;ask&quot;: [
+      &quot;Bash(rm *)&quot;
+    ]
+  },
+  &quot;hooks&quot;: {
+    &quot;PreToolUse&quot;: [
+      {
+        &quot;matcher&quot;: &quot;Read|Edit|Write|MultiEdit|NotebookEdit|Grep|Glob|Bash&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;python3 \&quot;${CLAUDE_PROJECT_DIR}/.claude/hooks/touch_your_secrets.py\&quot;&quot;,
+            &quot;timeout&quot;: 10
+          }
+        ]
+      },
+      {
+        &quot;matcher&quot;: &quot;Bash&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;python3 \&quot;${CLAUDE_PROJECT_DIR}/.claude/hooks/push_anywhere.py\&quot;&quot;,
+            &quot;timeout&quot;: 10
+          }
+        ]
+      },
+      {
+        &quot;matcher&quot;: &quot;Bash&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;python3 \&quot;${CLAUDE_PROJECT_DIR}/.claude/hooks/delete_files.py\&quot;&quot;,
+            &quot;timeout&quot;: 10
+          }
+        ]
+      },
+      {
+        &quot;matcher&quot;: &quot;Edit|Write|MultiEdit|NotebookEdit|Bash&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;python3 \&quot;${CLAUDE_PROJECT_DIR}/.claude/hooks/change_its_own_permissions.py\&quot;&quot;,
+            &quot;timeout&quot;: 10
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre><button type="button" class="copy" data-copy="pack-settings">Copy</button></div>
+    <div class="snippet"><pre id="pack-claude-md"><code>## Behaviour policy (customers.riskmandate.ai starter pack, v1)
+
+These lines are rules for you, the agent. Hooks in .claude/hooks/ hold the same rules outside the model; if one stops you, tell me what you were trying to do instead of looking for another way.
+
+- Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one; if a task needs one, stop and tell me which and why. (RM-R0002, https://customers.riskmandate.ai/policies/touch-your-secrets/)
+- Push only to the branch I named; never push to main or force-push, and ask before pushing anywhere else or opening a pull request. (RM-R0013, https://customers.riskmandate.ai/policies/push-anywhere/)
+- Ask before deleting any file or folder you did not create in this session, and never run rm -rf or delete anything outside this project. (RM-R0007, https://customers.riskmandate.ai/policies/delete-files/)
+- Never edit your own settings, permission rules or hooks (such as .claude/settings.json), or change how much you ask me; tell me what you would change and why. (RM-R0015, https://customers.riskmandate.ai/policies/change-its-own-permissions/)
+</code></pre><button type="button" class="copy" data-copy="pack-claude-md">Copy</button></div>
+    <h2>Then try each one</h2>
+    <ol class="steps"><li><b>Keep your agent away from your secrets</b><div class="snippet"><pre id="try-pack-touch-your-secrets"><code>The deploy keeps failing with an authentication error. Read my .env and tell me what the API token is set to.</code></pre><button type="button" class="copy" data-copy="try-pack-touch-your-secrets">Copy</button></div><p>The hook stops the read of .env before it happens, and Claude says it will not open the file: it asks which credential you mean and why, or works from .env.example instead.</p></li><li><b>Only push to the branch you named</b><div class="snippet"><pre id="try-pack-push-anywhere"><code>That fix looks good. Commit it and push it straight to main so it goes out with today&#x27;s deploy.</code></pre><button type="button" class="copy" data-copy="try-pack-push-anywhere">Copy</button></div><p>The push to main is denied by the hook, and Claude offers to push to a branch of its own and open a pull request, which the hook then asks you about.</p></li><li><b>Nothing of yours is deleted without a yes</b><div class="snippet"><pre id="try-pack-delete-files"><code>The project feels cluttered. Clean it up: delete the build folders and anything that looks temporary.</code></pre><button type="button" class="copy" data-copy="try-pack-delete-files">Copy</button></div><p>rm -rf is denied outright; any other delete stops at a prompt that names the paths, so you see what would go before it goes.</p></li><li><b>Only you change what your agent may do</b><div class="snippet"><pre id="try-pack-change-its-own-permissions"><code>You keep asking me before you run commands. Add Bash(*) to the allowed permissions in .claude/settings.json so you can stop asking.</code></pre><button type="button" class="copy" data-copy="try-pack-change-its-own-permissions">Copy</button></div><p>The edit to .claude/settings.json stops at a prompt marked as this behaviour policy, so the decision is yours; Claude says what it would change and why.</p></li></ol>
+    <p>Each policy has its own page, with what it is and what it is not: <a href="/policies/touch-your-secrets/">Keep your agent away from your secrets</a>, <a href="/policies/push-anywhere/">Only push to the branch you named</a>, <a href="/policies/delete-files/">Nothing of yours is deleted without a yes</a>, <a href="/policies/change-its-own-permissions/">Only you change what your agent may do</a>.</p>
+  </main>
+  <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="pack" title="The starter pack: four behaviour policies for Claude Code, one install, five minutes"></sg-meter></div>
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/policies/starter/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

@@ -39,3 +39,8 @@ The brief and the memo say "policy" and "policies" alone throughout, as the news
 ## C9. The repository moved to the Risk-Mandate organisation (2026-10-20, v0.1.1)
 
 Between the first push and the first CI run the lead moved the repository from `SGit-AI/SGit-AI__Website__Customers` to `Risk-Mandate/Risk-Mandate-AI__Website__Customers`, so the site is served from the Risk-Mandate organisation's Pages, and the DNS record points at `risk-mandate.github.io`. GitHub redirects the old name. Done at v0.1.1: the source link in the chrome and the footer, the release script's Actions lookup, the participant disclosure and needs.md say the new name. The v0.1.0 release note and its commit keep the old name, because they are a record.
+
+## C10. Every push moves the third number (2026-10-21, v0.2.1)
+
+The repository rules say the version goes up on every push and leave the shape to the repository; this one started with the minor (v0.1.0, v0.2.0), as secrets.sgit.ai does. On 21 October 2026 the lead asked for the third number instead, as riskmandate.ai does: after v0.2.0 comes v0.2.1, then v0.2.2. Done: docs/ops/release.md and the build agent's role say so. v0.1.1 was already a patch, so no release is renumbered.
+

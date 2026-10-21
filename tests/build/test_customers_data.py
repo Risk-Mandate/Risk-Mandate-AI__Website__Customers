@@ -39,9 +39,9 @@ class Test__Customers__Data(TestCase):
         for customer in self.gen.customers:
             self.assertEqual(sorted(customer['milestones']), sorted(self.gen.step_ids))
 
-    def test_counts_on_the_home_page_are_the_data(self):
+    def test_counts_on_the_programme_page_are_the_data(self):
         counts = self.gen.counts()
-        home   = (ROOT / 'index.html').read_text(encoding='utf-8')
+        home   = (ROOT / 'programme' / 'index.html').read_text(encoding='utf-8')
         self.assertIn(f'<b>{counts["customers"]}</b><span>customers in the first batch</span>', home)
         self.assertIn(f'<b>{counts["steps_done"]} of {counts["steps_total"]}</b>', home)
 

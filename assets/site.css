@@ -11,15 +11,38 @@
     --rm-mono:   ui-monospace, "SF Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace;
     --rm-wrap:      1000px;
     --rm-wrap-wide: 1100px;
+    --rm-wrap-head: 1200px;
     --rm-r:         10px;
     --rm-r-sm:      8px;
     --rm-fast:      150ms;
+
+    /* the names the two imported components read: the meter (api.newsroom.sgit.ai) and the storyboard kit
+       (api.storyboards.sgit.ai) draw with these, so they follow this site's theme; each is one of ours */
+    --fg:        var(--rm-text);
+    --text:      var(--rm-text);
+    --head:      var(--rm-text);
+    --dim:       var(--rm-muted);
+    --dim2:      var(--rm-faint);
+    --line:      var(--rm-border);
+    --line2:     var(--rm-border);
+    --panel:     var(--rm-card);
+    --panel2:    var(--rm-bg-2);
+    --input-bg:  var(--rm-card);
+    --accent:    var(--rm-accent);
+    --accent-dk: var(--rm-accent-hover);
+    --on-accent: var(--rm-on-accent);
+    --warm:      var(--rm-warn);
+    --solid:     var(--rm-text);
+    --on-solid:  var(--rm-bg);
+    --mono:      var(--rm-mono);
+    --sans:      var(--rm-sans);
+    --serif:     var(--rm-sans);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 [hidden]                { display: none !important; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 124px; }                    /* a jump to #S2 or #scene-6 lands below the sticky header, not under it */
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -71,7 +94,7 @@ header.top {
     top:             0;
     z-index:         60;
 }
-header.top .wrap { align-items: center; display: flex; gap: 18px; max-width: var(--rm-wrap-wide); min-height: 56px; position: relative; }
+header.top .wrap { align-items: center; display: flex; gap: 18px; max-width: var(--rm-wrap-head); min-height: 56px; position: relative; }
 .tools { align-items: center; display: flex; flex: none; gap: 10px; }
 .brand {
     align-items:     center;
@@ -148,6 +171,13 @@ header.top .wrap { align-items: center; display: flex; gap: 18px; max-width: var
 .version:hover { border-color: var(--rm-faint); color: var(--rm-text); }
 .navtoggle { display: none; }
 
+/* the reading meter: the balance chip in the header, the page's card under the content */
+sg-meter            { display: block; }
+sg-meter.meter-nav  { display: inline-block; flex: none; min-width: 64px; }
+.meter-card         { margin-bottom: 32px; }
+.meter-card sg-meter[hidden] { display: none; }
+.account-view       { margin: 24px 0; }
+
 /* the theme picker: a pill with the current theme's swatch and name; the list is drawn by chrome.py from data/themes.json */
 .theme-pick { flex: none; position: relative; }
 .theme-pick > button {
@@ -207,9 +237,10 @@ header.top .wrap { align-items: center; display: flex; gap: 18px; max-width: var
 .crumbs .sep { opacity: 0.5; padding: 0 2px; }
 .crumbs [aria-current] { color: var(--rm-text); }
 
-/* the phone and tablet menu: below 1100px the links fold behind the button; the theme and the version stay in the bar.
-   1100 is measured: the row needs 1043px plus the gutters, and an iPad in landscape is 1024 to 1194. */
-@media (max-width: 1100px) {
+/* the phone and tablet menu: below 1160px the links fold behind the button; the balance, the theme and the version stay
+   in the bar. 1160 is measured (v0.2.1): the row needs 1086px plus the gutters once the balance is in it, and an iPad in
+   landscape is 1024 to 1194. */
+@media (max-width: 1160px) {
     .navtoggle {
         background:      none;
         border:          0;
@@ -255,10 +286,19 @@ header.top .wrap { align-items: center; display: flex; gap: 18px; max-width: var
     .navmenu { background: transparent; border: 0; box-shadow: none; display: flex; min-width: 0; padding: 2px 0 8px 14px; position: static; transform: none; }
     .tools { margin-left: auto; order: 2; }
 }
-@media (max-width: 560px) {
-    header.top .wrap { gap: 10px; padding: 0 16px; }
+/* three narrower tiers, measured (v0.2.1) so no width from 320px up scrolls sideways */
+@media (max-width: 900px) {
     .parent { display: none; }
+}
+@media (max-width: 760px) {
+    header.top .wrap { gap: 10px; padding: 0 16px; }
+    .tools { gap: 8px; }
+    .tools .version { display: none; }                                             /* it is in the footer of every page too */
     .theme-pick > button .name, .theme-pick > button .caret { display: none; }
+}
+@media (max-width: 560px) {
+    .brand .word { display: none; }                                                /* the mark says RiskMandate; the word comes back above 560px */
+    .brand .sub { margin-left: 0; }
 }
 @media (max-width: 380px) {
     .brand { font-size: 14px; gap: 7px; }
@@ -416,6 +456,109 @@ th { color: var(--rm-text); font-weight: 600; }
 .counts .c { background: var(--rm-card); border: 1px solid var(--rm-border); border-radius: var(--rm-r); min-width: 140px; padding: 12px 16px; }
 .counts .c b { color: var(--rm-text); display: block; font-size: 24px; letter-spacing: -0.02em; }
 .counts .c span { color: var(--rm-muted); font-size: 12.5px; }
+
+/* ── the policies: a kicker, the snippets with their Copy buttons, the cards ─── */
+
+.kicker { color: var(--rm-accent); font-family: var(--rm-mono); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; margin: 32px 0 0; text-transform: uppercase; }
+.kicker + h1 { margin-top: 10px; }
+.you-get { max-width: 68ch; }
+.snippet { margin: 12px 0; position: relative; }
+.snippet pre { margin: 0; padding-right: 88px; white-space: pre-wrap; word-break: break-word; }
+.snippet .copy {
+    background:    var(--rm-accent);
+    border:        0;
+    border-radius: 6px;
+    color:         var(--rm-on-accent);
+    cursor:        pointer;
+    font:          inherit;
+    font-size:     12.5px;
+    font-weight:   600;
+    padding:       6px 12px;
+    position:      absolute;
+    right:         10px;
+    top:           10px;
+}
+.snippet .copy:hover { background: var(--rm-accent-hover); }
+.steps.install > li { padding-bottom: 20px; }
+details.hook-source { margin-top: 12px; }
+details.hook-source summary { color: var(--rm-accent); cursor: pointer; font-size: 14px; font-weight: 600; }
+details.hook-source pre { font-size: 12.5px; margin-top: 10px; max-height: 420px; }
+.src { color: var(--rm-muted); font-size: 13px; }
+ul.stronger li pre { margin: 8px 0; }
+a.card { color: inherit; display: block; text-decoration: none; transition: border-color var(--rm-fast), transform var(--rm-fast); }
+a.card:hover { border-color: var(--rm-accent); transform: translateY(-2px); }
+a.card b { color: var(--rm-text); }
+.card .price { color: var(--rm-accent); font-family: var(--rm-mono); font-size: 12px; font-weight: 700; margin-top: 10px; }
+.pack-card { border-left: 4px solid var(--rm-accent); margin: 24px 0; max-width: 680px; }
+ol.plist-n li { color: var(--rm-muted); }
+table.rules td:nth-child(4) { color: var(--rm-muted); font-size: 13px; }
+
+/* ── the demos: a session on a drawn laptop or in a drawn browser ─────────────── */
+
+figure.demo { margin: 28px auto; max-width: 780px; }
+figure.demo figcaption { color: var(--rm-muted); font-size: 13.5px; margin-top: 18px; text-align: center; }
+.demo-replay { background: none; border: 1px solid var(--rm-border); border-radius: 999px; color: var(--rm-accent); cursor: pointer; font: inherit; font-size: 12.5px; margin-left: 6px; padding: 3px 10px; }
+.demo-replay:hover { border-color: var(--rm-accent); }
+.demo-screen {
+    background:    var(--rm-term-bg);
+    border:        12px solid var(--rm-laptop);
+    border-bottom-width: 16px;
+    border-radius: 16px 16px 4px 4px;
+    box-shadow:    var(--rm-shadow);
+    color:         var(--rm-term-fg);
+    overflow:      hidden;
+}
+.demo-base { background: var(--rm-laptop-base); border-radius: 0 0 18px 18px; height: 14px; margin: 0 -4%; }
+.demo-bar { align-items: center; border-bottom: 1px solid var(--rm-line); display: flex; gap: 6px; padding: 8px 12px; }
+.demo-bar span { background: var(--rm-term-dim); border-radius: 50%; display: inline-block; height: 10px; opacity: 0.6; width: 10px; }
+.demo-bar b { color: var(--rm-term-dim); font-family: var(--rm-mono); font-size: 12px; font-weight: 400; margin-left: 8px; }
+.demo-lines { font-family: var(--rm-mono); font-size: 13px; height: 360px; line-height: 1.55; list-style: none; margin: 0; overflow-y: auto; padding: 14px 18px 22px; scroll-behavior: smooth; }
+.demo-lines li { margin: 0 0 8px; white-space: pre-wrap; word-break: break-word; }
+.demo-js .demo-lines li:not(.shown) { display: none; }
+.demo-lines .k-user  { color: var(--rm-term-fg); font-weight: 600; }
+.demo-lines .k-user::before  { color: var(--rm-term-green); content: "> "; }
+.demo-lines .k-agent { color: var(--rm-term-fg); }
+.demo-lines .k-agent::before { color: var(--rm-term-dim); content: "\25CF  "; }
+.demo-lines .k-file  { color: var(--rm-term-green); padding-left: 18px; }
+.demo-lines .k-tool  { color: var(--rm-term-blue); }
+.demo-lines .k-tool::before  { content: "\23FA  "; }
+.demo-lines .k-deny  { background: var(--rm-term-red-bg); border-left: 3px solid var(--rm-term-red); color: var(--rm-term-red); padding: 6px 10px; }
+.demo-lines .k-deny::before  { content: "\2298  "; }
+.demo-lines .k-prompt { border: 1px solid var(--rm-term-amber); border-radius: 6px; color: var(--rm-term-amber); padding: 6px 10px; }
+.demo-lines .k-ask   { color: var(--rm-term-amber); }
+.demo-lines .k-ok    { color: var(--rm-term-green); }
+.demo-lines .k-ok::before    { content: "\2713  "; }
+.demo-lines .k-sys   { color: var(--rm-term-dim); text-align: center; }
+.demo-lines .k-sys::before, .demo-lines .k-sys::after { content: " \2500\2500 "; }
+.demo-lines .typing::after { animation: demo-caret 1s steps(1) infinite; color: var(--rm-term-green); content: "\258B"; }
+@keyframes demo-caret { 50% { opacity: 0; } }
+
+/* the browser frame, for an assistant in a web app: the page's own colours */
+.demo-browser { background: var(--rm-card); border: 1px solid var(--rm-border); border-radius: 12px; box-shadow: var(--rm-shadow); overflow: hidden; }
+.demo-browser .demo-bar { background: var(--rm-bg-2); border-bottom: 1px solid var(--rm-border); }
+.demo-browser .demo-bar b { color: var(--rm-muted); }
+.demo-browser .demo-bar span { background: var(--rm-faint); }
+.demo-lines.chat { font-family: var(--rm-sans); font-size: 14.5px; }
+.chat li { border-radius: 14px; max-width: 82%; padding: 10px 14px; }
+.chat .k-note  { background: var(--rm-accent-bg); border: 1px dashed var(--rm-accent-line); color: var(--rm-text); font-size: 13px; max-width: 100%; }
+.chat .k-user  { background: var(--rm-accent); color: var(--rm-on-accent); font-weight: 400; margin-left: auto; }
+.chat .k-user::before { content: ""; }
+.chat .k-agent, .chat .k-ask { background: var(--rm-bg-2); color: var(--rm-text); }
+.chat .k-agent::before { content: ""; }
+.chat .k-ask { border-left: 3px solid var(--rm-warn); }
+.chat .k-ok  { color: var(--rm-accent); font-size: 13px; padding: 0 14px; }
+.chat .typing::after { color: var(--rm-on-accent); }
+@media (max-width: 560px) { .demo-lines { font-size: 12px; height: 320px; padding: 10px 12px 18px; } .demo-screen { border-width: 8px; } }
+
+/* ── the storyboards: the kit draws; the page frames ───────────────────────────── */
+
+.sb-host { margin: 24px 0 8px; }
+.sb-wait { color: var(--rm-muted); font-size: 14px; }
+details.sb-text { margin: 12px 0 24px; }
+details.sb-text summary { color: var(--rm-accent); cursor: pointer; font-size: 14px; font-weight: 600; }
+details.sb-text li { color: var(--rm-muted); font-size: 14px; margin-bottom: 10px; }
+details.sb-text li b { color: var(--rm-text); display: block; }
+.dim { color: var(--rm-muted); }
 
 /* ── the footer, on the canvas ──────────────────────────────────────────────── */
 

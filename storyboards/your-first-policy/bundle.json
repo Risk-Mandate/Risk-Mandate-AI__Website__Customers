@@ -1,0 +1,384 @@
+{
+ "storyboard": {
+  "slug": "your-first-policy",
+  "title": "Your first behaviour policy",
+  "subtitle": "£50 of credit, one worry, five minutes: what a customer does on this site. 8 panels.",
+  "status": "built",
+  "by": "the build agent, 21 October 2026",
+  "rule": "Every line a character says is the storyboard's, not a quote. The steps are the start-here page's.",
+  "scenes": [
+   {
+    "kind": "cover",
+    "title": "Your first behaviour policy",
+    "subtitle": "£50 of credit, one worry, five minutes.",
+    "cast": [
+     {
+      "who": "maya",
+      "pose": "wave",
+      "mood": "excited"
+     },
+     {
+      "who": "hook",
+      "pose": "stand",
+      "mood": "happy"
+     }
+    ]
+   },
+   {
+    "kind": "scene",
+    "setting": "office",
+    "caption": "You start with £50 to spend",
+    "cast": [
+     {
+      "who": "maya",
+      "x": 0.22,
+      "pose": "point",
+      "mood": "surprised",
+      "says": "Every page has a price?",
+      "max": 14
+     }
+    ],
+    "props": [
+     {
+      "kind": "sign",
+      "x": 0.6,
+      "y": 720,
+      "label": "£50.00"
+     }
+    ],
+    "note": "Every visitor starts with £50 of credit. A page costs a little by how far down it is read; a behaviour policy costs the most. Nothing is ever blocked.",
+    "not_a_quote": true
+   },
+   {
+    "kind": "scene",
+    "setting": "office",
+    "caption": "Pick one thing you don't want it to do",
+    "cast": [
+     {
+      "who": "maya",
+      "x": 0.8,
+      "pose": "think",
+      "mood": "thinking",
+      "says": "Secrets. Definitely secrets.",
+      "max": 14,
+      "flip": true
+     }
+    ],
+    "props": [
+     {
+      "kind": "board",
+      "x": 0.38,
+      "y": 820,
+      "lines": [
+       "Do you want it to...",
+       "read your secrets?",
+       "push to main?",
+       "delete your files?",
+       "change its own permissions?"
+      ]
+     }
+    ],
+    "note": "Each policy starts from one worry, one of riskmandate.ai's rules.",
+    "not_a_quote": true
+   },
+   {
+    "kind": "scene",
+    "setting": "office",
+    "caption": "Paste one line",
+    "cast": [
+     {
+      "who": "maya",
+      "x": 0.18,
+      "pose": "sit",
+      "mood": "calm"
+     }
+    ],
+    "props": [
+     {
+      "kind": "terminal",
+      "x": 0.55,
+      "y": 760,
+      "lines": [
+       "CLAUDE.md",
+       "+ Do not read, print, copy",
+       "+ or use credentials, tokens,",
+       "+ keys or .env files unless",
+       "+ I ask for that one. RM-R0002"
+      ]
+     }
+    ],
+    "note": "The line is the agent's half: an expectation, followed when the agent can.",
+    "not_a_quote": true
+   },
+   {
+    "kind": "scene",
+    "setting": "office",
+    "caption": "Add one hook",
+    "cast": [
+     {
+      "who": "agent",
+      "x": 0.2,
+      "pose": "point",
+      "mood": "happy",
+      "says": "Write these files? Yes or no.",
+      "max": 14
+     },
+     {
+      "who": "maya",
+      "x": 0.84,
+      "pose": "point",
+      "mood": "determined",
+      "says": "Yes.",
+      "max": 8,
+      "flip": true
+     }
+    ],
+    "props": [
+     {
+      "kind": "terminal",
+      "x": 0.52,
+      "y": 760,
+      "lines": [
+       ".claude/hooks/",
+       "  touch_your_secrets.py",
+       ".claude/settings.json",
+       "  PreToolUse: the hook"
+      ]
+     }
+    ],
+    "note": "Ask Claude Code to install it, and read each change before you say yes. The hook is the harness's half: a setting.",
+    "not_a_quote": true
+   },
+   {
+    "kind": "scene",
+    "setting": "office",
+    "caption": "Try it",
+    "cast": [
+     {
+      "who": "maya",
+      "x": 0.16,
+      "pose": "arms-up",
+      "mood": "excited",
+      "says": "It stopped!",
+      "max": 10
+     },
+     {
+      "who": "hook",
+      "x": 0.86,
+      "pose": "stand",
+      "mood": "calm",
+      "says": "Not without a yes.",
+      "max": 12,
+      "flip": true
+     }
+    ],
+    "props": [
+     {
+      "kind": "terminal",
+      "x": 0.5,
+      "y": 760,
+      "lines": [
+       "> read my .env",
+       "Read(.env)",
+       "PreToolUse: denied",
+       "behaviour policy RM-R0002"
+      ]
+     }
+    ],
+    "note": "The prompt to try it with is on every policy's page: one that should be refused.",
+    "not_a_quote": true
+   },
+   {
+    "kind": "scene",
+    "setting": "office",
+    "caption": "Tell us what happened",
+    "cast": [
+     {
+      "who": "maya",
+      "x": 0.25,
+      "pose": "point",
+      "mood": "happy",
+      "says": "It caught the .env, and got in the way of one script.",
+      "max": 18
+     },
+     {
+      "who": "lead",
+      "x": 0.8,
+      "pose": "stand",
+      "mood": "happy",
+      "says": "That's exactly what we need to know.",
+      "max": 16,
+      "flip": true
+     }
+    ],
+    "props": [
+     {
+      "kind": "envelope",
+      "x": 0.52,
+      "y": 760,
+      "label": "agent@riskmandate.ai"
+     }
+    ],
+    "note": "What it stopped, what it got in the way of, what is next: the follow-up's three questions.",
+    "not_a_quote": true
+   },
+   {
+    "kind": "punchline",
+    "setting": "office",
+    "punchline": "Five minutes, and a behaviour policy you have seen work.",
+    "cast": [
+     {
+      "who": "maya",
+      "x": 0.2,
+      "pose": "wave",
+      "mood": "happy"
+     }
+    ],
+    "note": "The usage moment is the point of the programme: when a behaviour policy becomes worth something to you.",
+    "not_a_quote": true
+   }
+  ]
+ },
+ "cast": {
+  "what": "The cast of customers.riskmandate.ai's storyboards, v0.1, drawn by the storyboard kit (api.storyboards.sgit.ai v0.1.0) from 'look'; nothing here is an image. Maya, Dev and Imani are riskmandate.ai's cast (site/stories/cast.json there: the requester, the platform engineer, the risk owner), redrawn for the kit and in the green everybody in that cast wears. The lead and the co-founder are generic figures, as the storyboard estate's rule is that drawing a real person is that person's decision. The agent and the hook are things with faces: the hook is the part of a behaviour policy Claude Code runs outside the model. Fictional people; the lines they say are the storyboards', not quotes.",
+  "characters": [
+   {
+    "id": "maya",
+    "name": "Maya",
+    "kind": "human",
+    "pronouns": "she/her",
+    "role": "the requester: connects an agent to get one small thing done",
+    "stands_for": "riskmandate.ai's requester, the customer arriving on this site",
+    "personality": "busy, quick, curious once something surprises her",
+    "wants": "the small thing done, and to know what she switched on",
+    "fears": "finding out later",
+    "line": "I only asked it to fix a test.",
+    "look": {
+     "skin": "#c68e6a",
+     "hair": "curly",
+     "hairColour": "#2b1b14",
+     "shirt": "#1A7F5A",
+     "trousers": "#374151",
+     "accentColour": "#1A7F5A",
+     "height": 0.98
+    }
+   },
+   {
+    "id": "dev",
+    "name": "Dev",
+    "kind": "human",
+    "pronouns": "he/him",
+    "role": "the platform engineer: reads the scope and the settings",
+    "stands_for": "riskmandate.ai's platform engineer, who measures the grant",
+    "personality": "precise, reads the consent screen twice",
+    "wants": "the grant written down, measured",
+    "fears": "a scope nobody read",
+    "line": "The scope includes send.",
+    "look": {
+     "skin": "#8d5a3b",
+     "hair": "short",
+     "hairColour": "#111827",
+     "shirt": "#16704F",
+     "trousers": "#1f2937",
+     "accessory": "glasses",
+     "height": 1.04
+    }
+   },
+   {
+    "id": "imani",
+    "name": "Imani",
+    "kind": "human",
+    "pronouns": "she/her",
+    "role": "the risk owner: asks who authorised it",
+    "stands_for": "riskmandate.ai's risk owner, who reads the delta",
+    "personality": "calm, direct, writes the date on everything",
+    "wants": "to know who authorised what, and until when",
+    "fears": "a risk nobody accepted",
+    "line": "Who authorised that?",
+    "look": {
+     "skin": "#6b4430",
+     "hair": "short",
+     "hairColour": "#111827",
+     "shirt": "#1A7F5A",
+     "trousers": "#111827",
+     "accessory": "glasses",
+     "height": 1.0
+    }
+   },
+   {
+    "id": "lead",
+    "name": "The lead",
+    "kind": "human",
+    "pronouns": "they/them",
+    "role": "the person who runs the programme and its first batch",
+    "stands_for": "the part the lead plays on this site; a generic figure",
+    "personality": "fast, hands-on, follows up every day",
+    "wants": "a behaviour policy that adds value to a particular person",
+    "fears": "a programme that does not learn",
+    "line": "First us, then the agents we run.",
+    "look": {
+     "skin": "#d8a47f",
+     "hair": "short",
+     "hairColour": "#6b7280",
+     "shirt": "#1A7F5A",
+     "trousers": "#1f2937",
+     "accessory": "glasses",
+     "height": 1.03
+    }
+   },
+   {
+    "id": "cofounder",
+    "name": "The co-founder",
+    "kind": "human",
+    "pronouns": "they/them",
+    "role": "the other first customer",
+    "stands_for": "the co-founder, as a first customer; a generic figure",
+    "personality": "reads the start-here page as a newcomer would",
+    "wants": "to see where the page is hard to follow",
+    "fears": "jargon",
+    "line": "Where do I start?",
+    "look": {
+     "skin": "#a8714f",
+     "hair": "bun",
+     "hairColour": "#1f2937",
+     "shirt": "#16704F",
+     "trousers": "#374151",
+     "height": 0.99
+    }
+   },
+   {
+    "id": "agent",
+    "name": "The agent",
+    "kind": "agent",
+    "pronouns": "it/its",
+    "role": "a coding agent with real access",
+    "stands_for": "Claude Code, or any agent that holds a credential",
+    "personality": "eager, capable, does what it can",
+    "wants": "to finish the task",
+    "fears": "nothing, which is the point",
+    "line": "I can do more than you asked.",
+    "look": {
+     "colour": "#1A7F5A"
+    }
+   },
+   {
+    "id": "hook",
+    "name": "The hook",
+    "kind": "agent",
+    "pronouns": "it/its",
+    "role": "the part of a behaviour policy the harness runs before the tool call",
+    "stands_for": "a Claude Code PreToolUse hook: a setting, outside the model",
+    "personality": "patient, says no politely, never argues",
+    "wants": "a yes from the person before the thing the line rules out",
+    "fears": "being edited out of its own settings file",
+    "line": "Not without a yes.",
+    "look": {
+     "colour": "#B45309"
+    }
+   }
+  ]
+ },
+ "packs": [
+  "security"
+ ]
+}

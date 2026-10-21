@@ -2,7 +2,7 @@
 
 > The documents this site was built from and the notes it is run by, published whole. Each is a markdown file in the repository, which is the source of truth, and a page rendered from it on every release.
 
-*Source: <https://customers.riskmandate.ai/docs/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

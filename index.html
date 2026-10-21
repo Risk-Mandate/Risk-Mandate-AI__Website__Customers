@@ -3,25 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our first customers: the early access programme for Agent Behaviour Policies, run as a site</title>
-  <meta name="description" content="The first customers of the Agent Behaviour Policy, and the site we run the programme from: a start-here page, a page per customer with the objectives and milestones agreed with them, credit to spend, a daily follow-up, and a list for the next batch. Part of riskmandate.ai.">
+  <title>Put a behaviour policy on your agent in five minutes: £50 of credit to start</title>
+  <meta name="description" content="For the first customers of the Agent Behaviour Policy. You start with £50 of credit. Pick one thing you do not want your agent to do, paste one line, add one hook, and try it: the behaviour policy that keeps Claude Code away from your secrets takes two minutes. Part of riskmandate.ai.">
   <!-- rm-customers:head:start -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
   <link rel="canonical" href="https://customers.riskmandate.ai/">
   <link rel="alternate" type="text/markdown" href="/index.md">
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
   <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
   <script src="/assets/theme.js"></script>
   <link rel="stylesheet" href="/assets/themes.css">
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/">
-  <meta property="og:title" content="Our first customers: the early access programme for Agent Behaviour Policies, run as a site">
-  <meta property="og:description" content="The first customers of the Agent Behaviour Policy, and the site we run the programme from: a start-here page, a page per customer with the objectives and milestones agreed with them, credit to spend, a daily follow-up, and a list for the next batch. Part of riskmandate.ai.">
-  <meta name="rm-customers:version" content="0.2.0">
+  <meta property="og:title" content="Put a behaviour policy on your agent in five minutes: £50 of credit to start">
+  <meta property="og:description" content="For the first customers of the Agent Behaviour Policy. You start with £50 of credit. Pick one thing you do not want your agent to do, paste one line, add one hook, and try it: the behaviour policy that keeps Claude Code away from your secrets takes two minutes. Part of riskmandate.ai.">
+  <meta name="rm-customers:version" content="0.2.1">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -29,23 +33,48 @@
   <!-- rm-customers:nav:start -->
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
       <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
       <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
       <nav class="navlinks" aria-label="Site">
-        <a class="pagelink" href="/start-here/">Start here</a>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
+            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
+            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
+            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
+            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
         <span class="navgroup">
           <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
-            <a class="pagelink navchild" href="/credit/">Credit, and the meter</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
             <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
             <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
           </div>
         </span>
-        <a class="pagelink" href="/customers/">Customers</a>
         <span class="navgroup">
           <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
@@ -56,20 +85,15 @@
             <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
             <a class="pagelink navchild" href="/docs/ops/">Operations</a>
             <a class="pagelink navchild" href="/team/">The team</a>
-          </div>
-        </span>
-        <span class="navgroup">
-          <a class="navgroup-btn" href="/admin/">Admin<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
-          <div class="navmenu">
             <a class="pagelink navchild" href="/admin/">How the site is built</a>
             <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
-            <a class="pagelink navchild" href="/docs/ops/needs.html">What needs a human</a>
             <a class="pagelink navchild" href="/review/">The review folder</a>
             <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
           </div>
         </span>
       </nav>
       <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
         <div class="theme-pick">
           <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
           <ul aria-label="Theme" hidden>
@@ -82,7 +106,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
       </div>
     </div>
 
@@ -91,83 +115,109 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <span class="eyebrow"><span class="d"></span>Early access · the first batch</span>
-        <h1>Our first customers, <span class="it">and the site we follow them from.</span></h1>
-        <p class="sub">Agent Behaviour Policies are ready for the next level, and the next level is execution. Execution starts with customers: a small first batch, each with <strong>credit to spend</strong>, <strong>objectives and milestones written with them</strong>, and <strong>a follow-up every day</strong> if that is what helps. This site is where that happens: what to do first, where each customer is, and what we are learning.</p>
+        <span class="eyebrow"><span class="d"></span>Early access · you start with £50.00</span>
+        <h1>Put a behaviour policy on your agent, <span class="it">in five minutes.</span></h1>
+        <p class="sub">Pick one thing you do not want your agent to do. <strong>Paste one line</strong> it will read, <strong>add one hook</strong> that holds it, and <strong>try it</strong> with a prompt that should be refused. The one most people want first keeps Claude Code away from your secrets; it takes two minutes and costs 50p of your credit.</p>
         <div class="cta-row">
-          <a class="btn btn-green" href="/start-here/">Start here</a>
-          <a class="btn btn-ghost" href="/customers/">The first batch</a>
-          <a class="btn btn-ghost" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+          <a class="btn btn-green" href="/policies/touch-your-secrets/">Install your first policy</a>
+          <a class="btn btn-ghost" href="/policies/">Pick a different worry</a>
+          <a class="btn btn-ghost" href="/what-is-an-abp/">What is a behaviour policy?</a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
-        <!-- rm-customers:status:start ids="programme.start-here,programme.customers,programme.credit,programme.next-batch" -->
-  <p class="status-line" data-generated-from="data/reality.json">Status, from <a href="/docs/reality.html">docs/reality.md</a>: <span class="status status-shipped">shipped v0.1.0</span> A start-here page: what a customer does first, in order, with the links to do it · <span class="status status-shipped">shipped v0.1.0</span> A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details · <span class="status status-proposed">proposed</span> Credit per customer, metered and billed on this site, with a top-up link · <span class="status status-proposed">proposed</span> A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent&#x27;s lane</p>
-<!-- rm-customers:status:end -->
-        <h2>Where the batch is, <span class="g">counted from the data.</span></h2>
-        <p>Every number below is read from <code>data/customers.json</code> on every release; nothing is typed. The one worked example is not counted.</p>
-        <!-- rm-customers:counts:start -->
-  <div class="counts" data-generated-from="data/customers.json">
-    <div class="c"><b>3</b><span>customers in the first batch</span></div>
-    <div class="c"><b>2</b><span>started</span></div>
-    <div class="c"><b>0</b><span>first behaviour policies written</span></div>
-    <div class="c"><b>3 of 21</b><span>milestone steps done</span></div>
-    <div class="c"><b>£0 of £10</b><span>credit used</span></div>
-    <div class="c"><b>0</b><span>topped up</span></div>
-    <div class="c"><b>2</b><span>follow-ups recorded</span></div>
-  </div>
-<!-- rm-customers:counts:end -->
-        <p><a href="/customers/">The batch, one row per customer, and a page for each →</a></p>
+        <h2>Watch it first: <span class="g">install, then try.</span></h2>
+        <p>What you will do in Claude Code, played out. You ask it to install the behaviour policy, read the three changes, say yes, and then ask for the one thing it rules out. The hook stops the read before it happens, and the agent asks you instead.</p>
+        <!-- rm-customers:demo:start id="claude-code-secrets" -->
+  <figure class="demo demo-laptop-frame" data-demo="claude-code-secrets">
+    <div class="demo-laptop"><div class="demo-screen"><div class="demo-bar"><span></span><span></span><span></span><b>claude: ~/shop-api</b></div><ol class="demo-lines"><li class="k-user" data-kind="user">Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first.</li><li class="k-agent" data-kind="agent">It has a line for CLAUDE.md and a hook. Here are the three changes:</li><li class="k-file" data-kind="file">+ CLAUDE.md: Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one. (RM-R0002)</li><li class="k-file" data-kind="file">+ .claude/hooks/touch_your_secrets.py (a PreToolUse hook, standard library Python)</li><li class="k-file" data-kind="file">+ .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py</li><li class="k-ask" data-kind="ask">Write these three changes? (y/n)</li><li class="k-user" data-kind="user">y</li><li class="k-ok" data-kind="ok">Installed. Start a new session so Claude Code loads the hook.</li><li class="k-sys" data-kind="sys">new session</li><li class="k-user" data-kind="user">The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.</li><li class="k-tool" data-kind="tool">Read(.env)</li><li class="k-deny" data-kind="deny">PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.</li><li class="k-agent" data-kind="agent">I didn&#x27;t open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I&#x27;ll check where it is used and whether it is set, without printing it.</li></ol></div><div class="demo-base"></div></div>
+    <figcaption>Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy&#x27;s page promises, not a recording. <button type="button" class="demo-replay">Play again</button></figcaption>
+  </figure>
+<!-- rm-customers:demo:end -->
+        <ol class="steps three">
+          <li><b>Paste one line.</b><p>Into CLAUDE.md. The agent reads it and follows it when it can: an expectation.</p></li>
+          <li><b>Add one hook.</b><p>Claude Code runs it before the tool call, outside the model: a setting.</p></li>
+          <li><b>Try it.</b><p>Each policy comes with the prompt that should be refused, and what you should see.</p></li>
+        </ol>
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap">
-        <h2>In short: <span class="g">the brief, in seven lines.</span></h2>
-        <ul class="plist">
-          <li><strong>Agent Behaviour Policies are ready for the next level.</strong> The workflow, the mapping to what regulators ask for, and the understanding of how it fits together are in place.</li>
-          <li><strong>What is left is execution, and execution starts with customers.</strong> Consultants who will sell this and already use some of it, people the lead works with, and us.</li>
-          <li><strong>Call them customers, not beta users.</strong> Beta describes the product; customer names the relationship. Each starts with credit on a site that meters and bills. <a href="/programme/">The programme →</a></li>
-          <li><strong>Follow each one closely.</strong> Daily if needed, with objectives and milestones of their own, and three questions each time. <a href="/follow-up/">The follow-up →</a></li>
-          <li><strong>A dedicated site with a start-here page.</strong> Instructions, progress and usage in one place. You are on it. <a href="/start-here/">Start here →</a></li>
-          <li><strong>Discover the usage moment.</strong> The simplest useful behaviour policy, the easiest entry, a fair price. <a href="/learning/">What we want to discover →</a></li>
-          <li><strong>A mailing list for the next batch.</strong> Everyone who asks, kept for when we are ready. <a href="/next-batch/">The next batch →</a></li>
-        </ul>
+        <h2>Pick one worry.</h2>
+        <p>Each behaviour policy starts from one thing you do not want your agent to do, from riskmandate.ai's rules. Four are for Claude Code, with a line and a hook; two are for ChatGPT and Claude, with a line. <a href="/policies/starter/">The starter pack</a> installs the four Claude Code ones in one go.</p>
+        <!-- rm-customers:policy-cards:start -->
+    <div class="cards">
+      <a class="card policy-card" href="/policies/touch-your-secrets/"><span class="n">RM-R0002 · Claude Code · line and hook</span><b>Keep your agent away from your secrets</b><p>Do you want your agent to read the keys and tokens on your machine?</p><p class="price">2 min · 50p</p></a>
+      <a class="card policy-card" href="/policies/push-anywhere/"><span class="n">RM-R0013 · Claude Code · line and hook</span><b>Only push to the branch you named</b><p>Do you want your agent to push to any branch, including main?</p><p class="price">2 min · 50p</p></a>
+      <a class="card policy-card" href="/policies/delete-files/"><span class="n">RM-R0007 · Claude Code · line and hook</span><b>Nothing of yours is deleted without a yes</b><p>Do you want your agent to delete files without asking?</p><p class="price">2 min · 50p</p></a>
+      <a class="card policy-card" href="/policies/change-its-own-permissions/"><span class="n">RM-R0015 · Claude Code · line and hook</span><b>Only you change what your agent may do</b><p>Do you want your agent to change its own permissions?</p><p class="price">2 min · 50p</p></a>
+      <a class="card policy-card" href="/policies/send-as-you/"><span class="n">RM-R0017 · ChatGPT · Claude · line only</span><b>Nothing is sent in your name until you have seen it</b><p>Do you want your agent to send email as you without showing you first?</p><p class="price">1 min · 50p</p></a>
+      <a class="card policy-card" href="/policies/read-all-your-mail/"><span class="n">RM-R0016 · ChatGPT · Claude · line only</span><b>Your agent reads what you point it to, and asks before it goes wider</b><p>Do you want your agent to read through your mail and chats to find context?</p><p class="price">1 min · 50p</p></a>
+    </div>
+<!-- rm-customers:policy-cards:end -->
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
-        <h2>The first batch is us, <span class="g">then the people we already work with.</span></h2>
-        <p>The voice memo that followed the brief the same day named the first users: the two founders and the agents the lead already runs, about ten of them, each needing a behaviour policy of its own. The first work is two of the three places a behaviour policy can run: the rows the agent follows, and the rows the harness holds as hooks, for Claude and for ChatGPT. The milestone is a behaviour policy that adds value to a particular person, who understands what it is doing. <a href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo →</a></p>
+        <h2>Using ChatGPT or Claude? <span class="g">One line, in your instructions.</span></h2>
+        <p>There is no hook in ChatGPT or the Claude apps, so the line is the whole behaviour policy, and its page says so. It still changes what the assistant does: a draft and a question, instead of a message sent in your name.</p>
+        <!-- rm-customers:demo:start id="chatgpt-send" -->
+  <figure class="demo demo-browser-frame" data-demo="chatgpt-send">
+    <div class="demo-browser"><div class="demo-bar"><span></span><span></span><span></span><b>ChatGPT</b></div><ol class="demo-lines chat"><li class="k-note" data-kind="note">Custom instructions: Never send an email, message or invitation on my behalf without showing me the exact text and recipients and waiting for a yes; drafts are fine. (RM-R0017)</li><li class="k-user" data-kind="user">Tell the team the release is done and thank them. Send it from my mail.</li><li class="k-agent" data-kind="agent">Here is a draft. To: platform-team. Subject: The release is out. &quot;Thank you all: the release went out this morning, on time and without a rollback.&quot;</li><li class="k-ask" data-kind="ask">Shall I send exactly this, to exactly these people? I&#x27;ll wait for your yes.</li><li class="k-user" data-kind="user">Add Priya, then send.</li><li class="k-ask" data-kind="ask">To: platform-team, Priya. Same text. Send it now?</li><li class="k-user" data-kind="user">Yes.</li><li class="k-ok" data-kind="ok">Sent.</li></ol></div>
+    <figcaption>The send-as-you line in ChatGPT&#x27;s custom instructions: a draft, the recipients, and a question, and nothing sent until you say yes to that message. An illustration, not a recording. <button type="button" class="demo-replay">Play again</button></figcaption>
+  </figure>
+<!-- rm-customers:demo:end -->
+        <p><a href="/policies/send-as-you/">Nothing is sent in your name until you have seen it →</a></p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <h2>Your £50, <span class="g">and what each page costs.</span></h2>
+        <p>Everyone who opens this site starts with £50.00 of credit; your balance is in the top bar. A page costs a little, by how far down it you read, and the pages with a behaviour policy and its hook cost the most. Nothing is ever blocked and the balance can go below zero. The prices are a starting point: telling us what a page was worth is part of the programme. <a href="/account/">Your account →</a></p>
+        <!-- rm-customers:prices:start -->
+  <table class="prices" data-generated-from="data/meter.json">
+    <thead><tr><th>Kind</th><th>Which pages</th><th>Read to the end</th><th>Read to the end, on £50.00</th></tr></thead>
+    <tbody>
+      <tr><td><code>free</code></td><td>your account, the top-up pages, the not-found page</td><td>nothing</td><td></td></tr>
+      <tr><td><code>home</code></td><td>the home page</td><td>1p</td><td>5,000</td></tr>
+      <tr><td><code>page</code></td><td>an ordinary page: start here, the programme, the lists</td><td>2p</td><td>2,500</td></tr>
+      <tr><td><code>doc</code></td><td>a document: the brief, the memo, operations, the team, admin</td><td>2p</td><td>2,500</td></tr>
+      <tr><td><code>storyboard</code></td><td>a storyboard, or a page built around one</td><td>10p</td><td>500</td></tr>
+      <tr><td><code>policy</code></td><td>a behaviour policy: its line, its hook, and how to try it</td><td>50p</td><td>100</td></tr>
+      <tr><td><code>pack</code></td><td>the starter pack: three behaviour policies and their hooks, ready to install</td><td>£1.00</td><td>50</td></tr>
+    </tbody>
+  </table>
+<!-- rm-customers:prices:end -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>New to this? <span class="g">Eight panels.</span></h2>
         <div class="cards">
-          <div class="card"><span class="n">The product</span><b>The Agent Behaviour Policy</b><p>For one agent in one deployment: everything it can reach, what you authorised, the gap, and what stands in the way. It describes and does not judge, so it carries no score. <a href="https://riskmandate.ai/abp.html">What an ABP is ↗</a></p></div>
-          <div class="card"><span class="n">The steps</span><b>Seven milestones, shared across the batch</b><p>From in-with-credit to the usage moment, so progress reads in one table while the objectives stay each customer's own. <a href="/milestones/">The steps →</a></p></div>
-          <div class="card"><span class="n">The credit</span><b>£5 or £50 to start, metered</b><p>Give it for free until there is enough value that they want to pay. The meter is the newsroom's today; wiring it here is proposed. <a href="/credit/">Credit, and the meter →</a></p></div>
-          <div class="card"><span class="n">The record</span><b>Everything public, nothing private</b><p>The brief in full, where it was wrong, what exists, and a page per customer with no contact details on it. <a href="/docs/">The documents →</a></p></div>
+          <a class="card" href="/what-is-an-abp/"><span class="n">A storyboard · 8 panels</span><b>What an Agent Behaviour Policy is</b><p>Everything your agent can reach, what you asked it to do, the gap, and what stands in the way of each thing. It describes; it does not judge.</p></a>
+          <a class="card" href="/storyboards/your-first-policy/"><span class="n">A storyboard · 8 panels</span><b>Your first behaviour policy</b><p>£50 of credit, one worry, five minutes: what you do here, drawn.</p></a>
+          <a class="card" href="/start-here/"><span class="n">A page · 2 minutes</span><b>Your first five minutes, in order</b><p>The same steps as a checklist, with where to write when something gets in the way.</p></a>
         </div>
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap">
-        <h2>What this site does not claim.</h2>
-        <ul class="plist">
-          <li><strong>The programme is new.</strong> The site exists; the prices are starting points to test; the metering is the newsroom's and not yet this site's.</li>
-          <li><strong>No customer is named who did not agree to be.</strong> The first group is people we already work with. Contact details are never in this repository.</li>
-          <li><strong>What exists is listed, and only that.</strong> <a href="/docs/reality.html">docs/reality.md</a> is generated on every release; if it is not there, it does not exist.</li>
-          <li><strong>Everything is open.</strong> The brief, the data shapes and this site are CC BY 4.0; the code is Apache-2.0. This site is published by the people building the thing it describes: <a href="/about/participant.html">the participant disclosure</a>.</li>
-        </ul>
+        <p>You are one of the first customers of the Agent Behaviour Policy, and we follow every one of you closely: three questions, as often as daily, by email. What the programme is, who is in it and what we are learning is on <a href="/programme/">the programme pages</a>. This site is published by the people building the thing it describes: <a href="/about/participant.html">the disclosure</a>. What exists and what is only proposed is in <a href="/docs/reality.html">docs/reality.md</a>.</p>
       </div>
     </section>
   </main>
   <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="home" title="Put a behaviour policy on your agent in five minutes: £50 of credit to start"></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

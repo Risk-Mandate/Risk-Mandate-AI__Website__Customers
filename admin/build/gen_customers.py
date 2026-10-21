@@ -3,7 +3,7 @@
 # Reads data/customers.json and data/milestones.json, validates them, and
 # generates (1) one page per customer under customers/<id>/index.html, (2) the
 # batch table in customers/index.html, (3) the steps on milestones/index.html,
-# and (4) the counts block on the home page. Every number on those pages is
+# and (4) the counts block on the programme page. Every number on those pages is
 # counted here, from the data, never typed. `--check` fails on drift.
 # Usage: python3 admin/build/gen_customers.py [--check]
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -261,13 +261,7 @@ class Gen__Customers:
     def write_page(self, customer, changed):
         target = CUSTOMERS_DIR / customer['id'] / 'index.html'
         text   = self.customer_page(customer)
-        if target.exists():                                                        # keep the chrome gen_chrome already filled; only the page's own parts change
-            current = target.read_text(encoding='utf-8')
-            for block in ('head', 'nav', 'footer'):
-                current_block = re.search(rf'<!-- rm-customers:{block}:start -->\n?(.*?)\n?[ \t]*<!-- rm-customers:{block}:end -->', current, re.S)
-                if current_block:
-                    text = text.replace(f'  <!-- rm-customers:{block}:start -->\n  <!-- rm-customers:{block}:end -->',
-                                        f'  <!-- rm-customers:{block}:start -->\n{current_block.group(1)}\n<!-- rm-customers:{block}:end -->')
+        text   = self.pages.keep_chrome(target, text)
         if self.pages.write_if_changed(target, text, self.check):
             changed.append(target.relative_to(ROOT).as_posix())
 
@@ -281,7 +275,7 @@ class Gen__Customers:
             self.write_page(customer, changed)
         for page, block, body in ((CUSTOMERS_DIR / 'index.html', 'customers' , self.batch_table_html()),
                                   (ROOT / 'milestones' / 'index.html', 'milestones', self.steps_html()),
-                                  (ROOT / 'index.html', 'counts', self.counts_html())):
+                                  (ROOT / 'programme' / 'index.html', 'counts', self.counts_html())):
             text        = page.read_text(encoding='utf-8')
             text, found = self.pages.replace_block(text, block, body)
             if not found:

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What an Agent Behaviour Policy is: the grant, the mandate, the delta and the barrier</title>
+  <meta name="description" content="An Agent Behaviour Policy writes down, for one agent in one deployment, everything it can reach, what you authorised it to do, the gap between the two, and what stands in the way of each thing. Eight panels, then the four words in a table. It describes and does not judge.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self' https://api.storyboards.sgit.ai 'unsafe-hashes' 'sha256-s5X2nIo6tUcfySJCrZELqcROsV3/V2knbkXkaBa4y9w=' 'sha256-gvivWWlxTDGCvK/11dq2R6tspyvF7xIka8gf5BQscZE=' 'sha256-cVeVfNLxRaOaEB1AESy6ENWhplZDP642/PEOPEnwV3I=' 'sha256-Bc8aQjE8H3lOLl6ddegJFSpSsvKELifseaPp4Fc9FCU=' 'sha256-+Z0Wu6cp4wWQwet4ckLXf/DDg0IKeAynsmcp/EpWdTs=' 'sha256-zK/0+KvHn/yin46e2Vse3I8Gjtaz1I/oDYD/Qhqe7qs=' 'sha256-xx+OogRwF/9f0Idt6qAaHbrhYH70Gj/FlOBu/zcBMuI=' 'sha256-kpm6aZfeVWYRPChy3ey6tfGFMBBHRSv520o8dxeQ6Fc=' 'sha256-G8FywvuKENImF8QSVSJLQBlYycCviBXN/qFuEdQjzKY=' 'sha256-BZb2O+dF9qyPQQvlmbpUAOVTlj3+c14hqmMD4RCOsWI=' 'sha256-CKUpAhY6Fo8U2EZsyB4nSgD+DyIBN/FoQOZvokiF4E4=' 'sha256-ULXnU/LGsj9uwy92zW9NZe/ja557YQT6uwLB6qAFU2M=' 'sha256-fNNSMkCLMc+1BVh1zJSyEK753c0pUNvZ/5Iy6rbLrMg=' 'sha256-PxX70CBiGEXAqoX9vO15qf5NfBhXO4p0T+8Q3CydKII=' 'sha256-R1hdG1Q0tw6pxEXa6NHa/alp6aJln+143SHOc0wNrEs=' 'sha256-p7UWFrn0ux7FOtIbS0RjYxxPKiywPVbVWXOv0Xc0NyU=' 'sha256-Nt0gDfEsPrwZ9WgnjRItXQkWwzUIs4gdTYgwOhQwThY=' 'sha256-isWbZHXkhTwQZvn4rH3z2/DioQQE2XmFQtjTaCCrZoI=' 'sha256-xj+PwQw/AM/lzIuUQ8dzrtbN3gqwA1CQ+UqMsGtpJwA=' 'sha256-Cim2TPimWzQDoArM2v5Oc3pkWh7SAaMTSunQC7oI4xQ=' 'sha256-zCWRKcuLw0ICXJiEhX/8eMLV6pXLgInXOmBh1Mx4FfY=' 'sha256-gLA+eWw/X6CJRukK0UAWx2lZrbzKoLV3HaOXEWEofw0=' 'sha256-rs4CYjLyBpFVnQ5OezLZkfff8S17q8FX1VR/VScP2Ns=' 'sha256-rf8nhafgyziozLumYW6h48JaLp+rCm/okn1LCal2EZY=' 'sha256-+X5S7sF3b5XvkWums/Ur0xLKF6uS1MmfnjpNMNAfOOQ=' 'sha256-+QV2TTY7TOFUaWqtKIxtd6sakakeSP0TBPfVXho3RRA=' 'sha256-VPN9faP8xsrcQjOnPU688+77bANM6QCjr4+fBJ43AEI=' 'sha256-E5l8GY/HxRgw5uX6qipTFTtQIO7FMeLvf5eQ0DUSH48=' 'sha256-h5vZVf4jkXG8q/V9MwVHfeE83XGgHaJpiQl2ka15xKk=' 'sha256-gpyEe0L9uS+b84ImPdOcj8yxA5I6IQ9o5N008NnNjTQ=' 'sha256-0s6KUSTmfZkBr038MSjiUW8GwPNb0uCkd6o8L686h2c=' 'sha256-Mt60tJJCvImcX83/DTHlVbodp+q02TcRYNU274tFiDw=' 'sha256-SUXlGfJx0wNRCG+kT105yyZ/36CdCFtd9cxnUxQjFPQ=' 'sha256-8Kt+dmbCYC7g1ayad5YocA5PZl0qm4+i+6vmDezW8Hc=' 'sha256-ll3Di6+i3CKGjeHBjANmVTy6N6khf6o1xixEbHT+sRg=' 'sha256-gRP5Q8VGhttFaB8xWEqlY+EX4bWvnQCxEbGgfRZShzA=' 'sha256-DOgvFmJILVUc2oJ9UQKfYBwoQ8p2lbk/aDHAnN0rOaM=' 'sha256-yYbIBj5U5gdfkWwFgvrGL5qKR4Srs6f8naJfrr/sUQo=' 'sha256-15g7oFoBjmRPP1d8qLvhSCTo2mqUxVgagryhJJI4WFw=' 'sha256-emqT8pdPg5Z5I95WwpEA/HeD5R1gcfMfGdRfJ7YOJAY=' 'sha256-6+hHoTvmtujM0lavAC3GiVf2dd4/I2Qc/Ku9bjs9rGQ=' 'sha256-J0bSOXooawvECci+erGinctbT01W/7uzrcL5etwRrf8=' 'sha256-03rhUDVVaFGIApx0AAtPfCY0hsq0C0sZy7PTrfs6ybg=' 'sha256-I9/lcLmy45Rby1gfV7LwbLcvRB2vBsvFzABwp9H2ggY=' 'sha256-sDeQGqy9cpw4tMS6p11HPr8Qa7kztNMZRMkNmwBreSU=' 'sha256-Ht1aCgHGmHc+23cWMurXzlQFL7/Rbzx1HKqB5AfD6DY=' 'sha256-UcOQFz/vB1YemQbHNS+L28DRjToEstJCm8u5WXmZL6Y=' 'sha256-jeLOFTECTidUxf9Pc1uyGtZJ7dEBAIynAUX2NeSzdRw=' 'sha256-V/zKiIXjr7Anh433fJurAycnOff9Rluea1TMc6ebB+g=' 'sha256-rYo89rq5dqbC0uM8+nwc532p/cVMerE8/g7xvtHisRk=' 'sha256-8I3jFmE8vjQ9nNyPedFzxizfQ6IrP2Bw/xrHnKkZdgQ=' 'sha256-W6dJDjtxZ6tGFS4QpI06kVH0m+nY1gWts4myxkvP9dM=' 'sha256-lQyLgIBC3jFzBnplV1zpwaid3BWgJIbfIoDhjWOWjww=' 'sha256-SaKTj2+PGV8kggiERjhvYLErU4kf5S2BDD6N54jAWvc=' 'sha256-cySjzfdlSz/wY06vCRQ4Ea3+RHHBsyafU7C6ds/6f1A=' 'sha256-+o9MIH4zrFj1dqACVWzAMXzY9tTmdvx3tZpmXmFaou0=' 'sha256-9cG5aLzJ4MlsCTCv9alDwjxoWPvyF3Nt5Wfp9uLNkcg=' 'sha256-trK1W5/CvYkJ3pVyS2ftRc1OBGWNhTChkQcWYZXwIag=' 'sha256-KO1A2i89VI3z9HnHp5LGk8sYa0Ry1zgcbS2+JF5mc6k=' 'sha256-efLI9jkYylILhdzcgvUqrk0mLFOukvX4IOTXdeqFZ50=' 'sha256-41pRHohXIZyOMMBS/VYSBfSws/GtXP6F5OkwpwDm9wg=' 'sha256-U6bopknKPTAWolo/iriAx+Sm5S0fppDnQeU6a9Oa+dc=' 'sha256-sgxGo8b0r9tIOGSPN+s8b0Fe9fArCZzzD/6aBzz7u9k=' 'sha256-3cyqQaDQ/PnjIFYIIFEexZMCmu9AHwhWmUu6ARhWDuM=' 'sha256-tS66jUSDt1isa6HlBcZYqSxIuRSE0SqCPujDMjykss4=' 'sha256-BANleLuAeRAdU7qhituwtAFW0ODLYSRwyW/h81uQxkU=' 'sha256-Mz6M1LnFNXybsZsXffry9ZLtZv4kXoIVIqccEuuFhdg=' 'sha256-aiTge22+B/21cMG/rJcY85eRjlY/q3fyLpdKdR6N4uY=' 'sha256-eXbnvIp7uZ7QJGP0UwzVg9kXIIgLyY8yHy9gmcd3zGE=' 'sha256-uB8+qV2kyhhXI5wi7/e1yU7EkmvxLnWs/G4/eXtLNJo=' 'sha256-IgIgci+3ZoKTioxrIiuMizQfwWbhfP4TebZlsaelaQg=' 'sha256-i5v51/Di4uUsNNMlQgtO+TwQz8Nc9GfNWehPHVL/lqg=' 'sha256-vhibREbh8vh8CKoD+OC06zgL7XSPBXcSfRdXkoWg3Ww=' 'sha256-AQgKvfouZsXlhEgG1zPHl4tx75pSvtnulE8NZCRbn+o=' 'sha256-Dwz/jMMYmcpbbNdGVVYMd8XlXRB+L2P9ahodQYbZNXs=' 'sha256-oZnEtPF1o1fn5+QCItU4aTbXeW/4nSshfONsQDc+nEE=' 'sha256-9XJVUyOoZ9ueGt/o/jNJoo7C5LJlIhtbBjn4yB/Deig=' 'sha256-b+TwntIkUxKhJvXfkOR6jJffDZm1DqzxIq6HoVmfFz8=' 'sha256-HC9CIl0V/GkjsYxlGcNPNdAKNaHiIisEQHPDqmL7H3o=' 'sha256-dfuNZLPCyafNbDmmnzqJK6fmqwSmiPlv3e2LrwCCwNI=' 'sha256-Rp64+ka61c4yc8CNUYgCt9g/zYUFiDleYzLK2iF32Js=' 'sha256-KErZRrrsVUI8aq1QRipEU17RwX6CTezgSxDC7TkgKV0=' 'sha256-dEucDFR16UBJ1Tmi1yDx7JZEa2Pzl8blA6nrOZwzeWc=' 'sha256-+qS9sF6uKKOT+ZcUbFe1zQNT7cTg3lwGL48WdZPh84Y=' 'sha256-10TjTNJaoxDHzK50O63cqHwKfRJ9V8ELIzkPizb12k0=' 'sha256-C9Nsh8QOCs/n78krpx7RHg5Kp6aFhaQGzvudVKwLzaI=' 'sha256-Wi60X+dzQgysFXe7fDJfI2TiH6ivEn6O4usfkW97oQE=' 'sha256-RJXiGKI+1eEJ2Gl5p7TsLhTTzXp7qI+RqaqYtYfxDGA=' 'sha256-MCYEk62Wui3vG7oijeh2vANo4E2++vR7iafjB+HzOoc=' 'sha256-0skOcsDZLUSoCeg2YvqYfmfCYZDOsIilVvJdWcSphXw=' 'sha256-DEx8jbnuNVFt86qjb1ZwYfCMXlQ2lR0FOKxBAlUUfo0=' 'sha256-o9dUV93/00hi/P6tEzoH/Kv7i+VRL7hPcBkajT3KZ5A=' 'sha256-YwN9wwwwwf2mnHiW43emUa5tz8MKfCMkyRZGf3/GyKo=' 'sha256-cYAjULYLtriFDccd0Lks7sonHwAtHof8SxP3L2KMpxU=' 'sha256-DX/6t+qMwwuwnGyGL0xA58A98iw/A96FzEv3Sl1WLUw=' 'sha256-aVMEKJALXDh8bg2XwwqaC7VclB0XOwbn/+yCEe6rm2Y=' 'sha256-VwpXfrW4SBnW7JTdAU0XA2snFP3tda2YOVLvKwJgsL4=' 'sha256-am3dlCZv7VIGts5sxg0aW/j2PPeCoUcUPtqmwIxcCa4=' 'sha256-cUHkivIH26gqprQLHHAdHhjIlJwPObkWpYtq//C/tGQ=' 'sha256-yR4n3CWhQTS7ZLYMBbj0aaffjrPvnA/uNv2QEBqO9fM=' 'sha256-puFWFjkf/uLeJyuc8BqEQvuy+a0nvuvgPxZjUYjr/Ow=' 'sha256-lEBw8YHEJ0j5HhTMUa9AK56eh1WbRPzEV9HuADwVqps=' 'sha256-PO2pRPTmm0eg/FwZNYV4lPnnMn/+Ruf0cB+nXc/yk2w=' 'sha256-4N8Ro+/3KVzrdU2wYyvsCzKKU4e27QCKlKC8gZHi+8w=' 'sha256-pXH1fXoXKzoh4HMUy/1PhMrwjJZT0BuJ7+SK7VMFnDg=' 'sha256-xlcc20MlM9ocBohh202qFvgTY+pAT6epz0HwrY0C+tA=' 'sha256-piBJGK8hLHqhH1/blcBuuwqvdxY9RFLL+RepmD1n6kQ=' 'sha256-bPeNPtDFNYP6Xq6GUP+hdBVvqzEQT0t5j46ZMnKpjpA=' 'sha256-Q48ddtfsasUgGBBLflYyVo38SNVg1xXB4V16IKPcKMM='; font-src https://api.storyboards.sgit.ai; script-src 'self' https://api.newsroom.sgit.ai https://api.storyboards.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/what-is-an-abp/">
+  <link rel="alternate" type="text/markdown" href="/what-is-an-abp/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="https://api.storyboards.sgit.ai/v0/v0.1/v0.1.0/fonts.css" integrity="sha384-ep4bdPYRUzquMICQMhuOkSZ/CB1FnMh6qnGWS1F74VepoLOlw9JGK+Zg+E6/t9dD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://api.storyboards.sgit.ai/v0/v0.1/v0.1.0/storyboard.css" integrity="sha384-NGJqtVi+93pE7lBuwFU0RQWhqnQVLR33Wp8AYH1iAeyC2A7h2ijgU4bEKF5HIKIf" crossorigin="anonymous">
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/what-is-an-abp/">
+  <meta property="og:title" content="What an Agent Behaviour Policy is: the grant, the mandate, the delta and the barrier">
+  <meta property="og:description" content="An Agent Behaviour Policy writes down, for one agent in one deployment, everything it can reach, what you authorised it to do, the gap between the two, and what stands in the way of each thing. Eight panels, then the four words in a table. It describes and does not judge.">
+  <meta name="rm-customers:version" content="0.2.1">
+  <meta name="rm-customers:released" content="2026-10-21">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
+            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
+            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
+            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
+            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild active" href="/what-is-an-abp/" aria-current="page">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">What an ABP is</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap">
+    <h1>What your agent can do, <span class="g">and what you asked it to.</span></h1>
+    <p class="lead">An <strong>Agent Behaviour Policy</strong>, an ABP, writes down, for one agent in one deployment, everything it can reach, what you authorised it to do, the gap between the two, and what stands in the way of each thing. It describes and does not judge, so it carries no score.</p>
+    <!-- rm-customers:storyboard:start slug="what-is-an-abp" -->
+  <div class="sb-host" data-sb-bundle="/storyboards/what-is-an-abp/bundle.json">
+    <template class="sb-template"><div class="sb-viewer"><div class="sb-tools" role="toolbar" aria-label="How to view the panels"><span class="sb-views" role="group" aria-label="View"><button type="button" data-view="deck" title="One panel at a time (d)">Deck</button><button type="button" data-view="grid" title="Every panel on one page (g)">Grid</button><button type="button" data-view="script" title="The storyboard as text (t)">Script</button></span><label class="sb-for-grid">Per row <select class="sb-cols"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></label><label title="Panels play as they arrive (a)"><input type="checkbox" class="sb-anim"> Animation</label><label class="sb-for-grid" title="Each panel's script under it (x)"><input type="checkbox" class="sb-showtext"> Text</label><button type="button" class="sb-playall sb-for-grid" title="Play the panels one after another (p)">Play in order</button><input type="search" class="sb-filter sb-for-list" placeholder="Filter: a word, a name, a mood, a kind" aria-label="Filter the panels"><span class="sb-keys"><kbd>d</kbd> <kbd>g</kbd> <kbd>t</kbd> views &middot; <kbd>a</kbd> animation &middot; <kbd>x</kbd> text &middot; <kbd>+</kbd><kbd>&minus;</kbd> per row &middot; <kbd>/</kbd> filter &middot; <kbd>p</kbd> play &middot; <kbd>&larr;</kbd><kbd>&rarr;</kbd> <kbd>n</kbd> notes <kbd>f</kbd> full screen</span></div>
+<div class="sb-deck" hidden><div class="sb-track"></div>
+<div class="sb-bar"><button type="button" class="sb-prev" aria-label="Previous panel">&larr;</button><span class="sb-count"></span><button type="button" class="sb-next" aria-label="Next panel">&rarr;</button><button type="button" class="sb-replay" title="Play this panel (p)">&#9654; Play</button><button type="button" class="sb-notes-toggle" title="Notes (n)">Notes</button><button type="button" class="sb-full" title="Full screen (f)">Full screen</button></div>
+<div class="sb-notes"></div></div>
+<div class="sb-grid" hidden></div>
+<div class="sb-script" hidden></div></template>
+    <p class="sb-wait">The storyboard draws here, in your browser, with the kit from <a href="https://api.storyboards.sgit.ai/">api.storyboards.sgit.ai</a>. Without JavaScript, the same panels are below as text.</p>
+  </div>
+  <details class="sb-text"><summary>What an Agent Behaviour Policy is, as text (8 panels)</summary><ol><li><b>What your agent can do, and what you asked it to</b> <span class="dim">One agent, one deployment, one document. It describes; it does not judge.</span></li><li><b>A small request, and a big capability</b> Maya: “Just fix the failing test.” The agent: “Done. I could also read your .env and push to main.” <span class="dim">The request is small. What the agent holds is not: the credential it runs with reaches much further.</span></li><li><b>The grant: everything it can reach</b> Dev: “Measured, not guessed.” The grant; read files: yes; write files: yes; run commands: yes; push to the repo: yes; read .env: yes <span class="dim">One row per capability, in a fixed vocabulary of 23. Measured on the deployment where we are entitled to run it, documented from the vendor&#x27;s pages where not.</span></li><li><b>The mandate: what you asked for, in your words</b> Maya: “This is what I actually wanted.” The mandate; want: fix the test; want: on my branch; refuse: push to main; unstated: my secrets <span class="dim">The only part a person writes. The agent drafts it, the person corrects it, and the correction is almost always downward.</span></li><li><b>The delta: what it can do that nobody asked for</b> Imani: “Who authorised read .env?” Maya: “Nobody. I never thought of it.” <span class="dim">Excess is what the grant allows and the mandate never asked for. Derived by the build, never typed.</span></li><li><b>What stands in the way of each row</b> The hook: “I&#x27;m a setting.” none: nothing in the way; expectation: a rule in prose: the line; setting: a switch: the hook; boundary: out of its reach <span class="dim">Four barriers, weakest first. Only the boundary is a control in the strict sense: enforced by something the grant does not include.</span></li><li><b>A line it reads, and a hook that holds it</b> The agent: “Which credential do you need?” The hook: “Not without a yes.” &gt; read my .env; PreToolUse hook; denied: RM-R0002; ask which and why <span class="dim">The line goes in CLAUDE.md. The hook goes in .claude/settings.json, and Claude Code runs it before the tool call, outside the model.</span></li><li><b>It describes. It does not judge.</b> Imani: “No score. Just what is true.” <span class="dim">An Agent Behaviour Policy carries no score. The same one is harmless in one deployment and dangerous in another; the deployment changed, not the document.</span></li></ol><p class="src">The data: <a href="/storyboards/what-is-an-abp/bundle.json">bundle.json</a>, the storyboard with its cast. Every line a character says is the storyboard&#x27;s, not a quote. The vocabulary is riskmandate.ai&#x27;s and abp.sgit.ai&#x27;s: grant, mandate, delta, barrier; none, expectation, setting, boundary.</p></details>
+<!-- rm-customers:storyboard:end -->
+
+    <h2>Four words, and the verb on each</h2>
+    <table>
+      <thead><tr><th>Word</th><th>What it is</th><th>How it is made</th><th>On this site</th></tr></thead>
+      <tbody>
+        <tr><td>The grant</td><td>everything the agent can do, one row per capability</td><td>measured on the deployment, or documented from the vendor's pages</td><td>step S2: the agent measures its own with <code>MAP-A-GRANT.md</code></td></tr>
+        <tr><td>The mandate</td><td>what you authorised it to do: want, refuse, and never mentioned</td><td>elicited: the agent drafts it, you correct it</td><td>step S3; a policy's line is one row of a mandate</td></tr>
+        <tr><td>The delta</td><td>what it can do that you never asked for, and what you asked for that it cannot</td><td>derived by the build, never typed</td><td>step S4; the row that surprised you</td></tr>
+        <tr><td>The barrier</td><td>what stands between the agent and each capability</td><td>recorded, one per row</td><td>the line is an expectation; the hook is a setting</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Four barriers, weakest first</h2>
+    <table>
+      <thead><tr><th>Barrier</th><th>Means</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>none</td><td>nothing in the way</td><td>an agent with a token and no instructions</td></tr>
+        <tr><td>expectation</td><td>a rule in prose, enforced by nobody but the agent</td><td>a line in CLAUDE.md or ChatGPT's custom instructions</td></tr>
+        <tr><td>setting</td><td>a switch the agent's own account could flip</td><td>a Claude Code hook in <code>.claude/settings.json</code></td></tr>
+        <tr><td>boundary</td><td>enforced outside the agent's reach</td><td>a token scope, branch protection, a sandbox</td></tr>
+      </tbody>
+    </table>
+    <p>Only a boundary is a control in the strict sense. Most of what anyone can do in five minutes is the second and third rows, and that is still a real change: the agent stops and asks you. Each policy's page says which barrier it is, and names the stronger control.</p>
+
+    <h2>Try one</h2>
+    <p>The fastest way to understand a behaviour policy is to install one and watch it work. <a href="/policies/touch-your-secrets/">Keep your agent away from your secrets</a> takes two minutes in Claude Code; <a href="/policies/send-as-you/">nothing sent in your name</a> takes one minute in ChatGPT.</p>
+
+    <h2>Read further</h2>
+    <ul class="plist">
+      <li><a href="https://riskmandate.ai/abp.html">What an ABP is</a>, on riskmandate.ai, and <a href="https://riskmandate.ai/agent-behaviour-policy.html">the sixteen published examples</a>, one per kind of agent.</li>
+      <li><a href="https://abp.sgit.ai/">abp.sgit.ai</a>: the model, the 23 capabilities and the four barriers, pinned.</li>
+      <li><a href="https://riskmandate.ai/stories/">riskmandate.ai's stories</a>, drawn with Maya, Dev and Imani, the same people as the storyboard above, and <a href="https://riskmandate.ai/library.html">its library</a> of the ideas behind it.</li>
+    </ul>
+  </main>
+  <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="storyboard" title="What an Agent Behaviour Policy is: the grant, the mandate, the delta and the barrier"></sg-meter></div>
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/what-is-an-abp/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+  <script src="https://api.storyboards.sgit.ai/v0/v0.1/v0.1.0/vendor/rough-4.6.6.js" integrity="sha384-XPr5sCJfqHMzoJ8Cn1UYdXXD+XvRi0yoZm3W0yVJ24QP0ps8SYUskiXqnl4yqWlc" crossorigin="anonymous"></script>
+  <script src="https://api.storyboards.sgit.ai/v0/v0.1/v0.1.0/props/security.js" integrity="sha384-IkxAFhrp5pQhBSjFCLMEA+1iqFHJ6xPRLeO2n9g478h7Z8hW9cUyvza3PuOtmsOx" crossorigin="anonymous"></script>
+  <script src="https://api.storyboards.sgit.ai/v0/v0.1/v0.1.0/storyboard.js" integrity="sha384-3xZhCe5dUdBXMwV57gyscmlqdIjzz9L6huUkcuiEyC0V3jfrlQEdyEhvvF4kCeOa" crossorigin="anonymous"></script>
+  <script src="/assets/storyboards.js" defer></script>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

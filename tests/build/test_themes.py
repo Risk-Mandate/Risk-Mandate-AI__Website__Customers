@@ -43,7 +43,13 @@ PAIRS     = (('--rm-text'      , '--rm-bg'      , TEXT ),                       
              ('--rm-on-status' , '--rm-status-proposed', TEXT),
              ('--rm-on-status' , '--rm-status-absent'  , TEXT),
              ('--rm-step-done' , '--rm-bg'      , TEXT ),                          # the step states, as text
-             ('--rm-step-progress', '--rm-bg'   , TEXT ))
+             ('--rm-step-progress', '--rm-bg'   , TEXT ),
+             ('--rm-term-fg'   , '--rm-term-bg' , TEXT ),                          # the demo's terminal
+             ('--rm-term-dim'  , '--rm-term-bg' , TEXT ),
+             ('--rm-term-green', '--rm-term-bg' , TEXT ),
+             ('--rm-term-red'  , '--rm-term-bg' , TEXT ),
+             ('--rm-term-amber', '--rm-term-bg' , TEXT ),
+             ('--rm-term-blue' , '--rm-term-bg' , TEXT ))
 
 
 def blocks():
@@ -130,3 +136,12 @@ class Test__Themes(TestCase):
                 if ratio < minimum:
                     failures.append(f'{name}: {fg} {tokens[fg]} on {bg} {tokens[bg]} is {ratio:.2f}:1, needs {minimum}:1')
         self.assertEqual(failures, [], '\n' + '\n'.join(failures))
+
+    def test_stylesheets_are_balanced(self):                                      # a stray brace turns the next rule into one that applies everywhere
+        for path in (ROOT / 'assets').glob('*.css'):
+            depth = 0
+            with self.subTest(file=path.name):
+                for ch in re.sub(r'/\*.*?\*/', '', path.read_text(encoding='utf-8'), flags=re.S):
+                    depth += (ch == '{') - (ch == '}')
+                    self.assertGreaterEqual(depth, 0)
+                self.assertEqual(depth, 0)
