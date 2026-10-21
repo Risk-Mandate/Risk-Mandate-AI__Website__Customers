@@ -22,6 +22,7 @@
   "paths": [
     ["/account/",               "free"],
     ["/feedback/index.html",    "free"],
+    ["/feedback/how-sending-works/", "free"],
     ["/feedback/",              "doc"],
     ["/404.html",               "free"],
     ["/policies/starter/",      "pack"],

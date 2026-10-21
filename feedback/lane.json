@@ -1,0 +1,13 @@
+{
+  "type": "riskmandate/feedback-lane/v1",
+  "what": "Where Encrypt and send on customers.riskmandate.ai sends to: the feedback append lane of a private vault. The token can only append; the key can only encrypt. Both are public by design (R003). Only the vault's key, which is not in this repository, can read what arrives.",
+  "endpoint": "https://dev.send.sgraph.ai",
+  "vault": "zs81fic5",
+  "lane": "feedback",
+  "to": "agent@riskmandate.ai",
+  "append_token": "d420ea6e95fe0525f43bc2b5b89eb1ff94b046b7c661f814a2515c09662603fa",
+  "encrypt_to": "sha256:16f0cff81d0ff10a",
+  "encrypt_pem": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAmcAzzv2WTZtzolK7IWYJ\n50PmUcKG11VT9OFEQNgCE+VDnGSgV4G9UIVTGC2T/X1ys+jAbc1ciCwzjyCgPApy\nY03X50cubk2GJ0/ifdNyJ5dkXlLeCSZqqQkKjZOuwmLBpGt/ZYcl1fMkZoeVHmku\nicsMVbGEbfUo4Xp9tSo8z92Yt1YRx4uJuNB7AHi89hk/6HDZoJIr1ZfhS3gr4gfu\nMVYpwOx7j7nzPHxDRMNNFbagLqBQGg/8dnAAGSMjngeRlUFE1+eygA/t+0zY3JN0\nf4sA8vJwCJSq/nj8Tc3E8KsK5LROJSdT80L6XFk8CIKT/NMF/Sck/zr5PsPCdhyZ\nGqaZ+Dvg5hi3/jrcYw43hFLwc4AhrLm2zV1qMcAkhGSP6E3OJ83ZAj5ilFWeRFC0\nRoqvyJUcmdCQnBvN4WHOKQlO8Nai1x6r306GGI1PfLaUZbaKc/rPqxoM0KQCpptp\nccZXNvfsJt73dN8a4g7rfuM4K9Tn/XDm9k7HH44jZrXt/42KrKhw61IsrMafseWh\nQaW8pc4Yp4PtLdVDhcAUYrp3WotkvMAjA4MOQLzVj+btJeodWU4p0CnKCTxEpVuT\nt7Z2SGLKdDyipEY8Zu+OWXN2HapDbWYK9wNHIAFmZiWiesC1mRbuHsHSDE5cVxdZ\nsmoAXrgwU/OXOuaxq3sn56ECAwEAAQ==\n-----END PUBLIC KEY-----\n",
+  "status": "open",
+  "since": "0.2.4"
+}

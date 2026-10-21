@@ -1,0 +1,183 @@
+{
+  "id": "R003",
+  "kind": "memo",
+  "title": "Make the reviews easy to find, make the account big, and send to the agent, encrypted",
+  "reviewer": "Dinis Cruz",
+  "role": "the lead of the programme",
+  "given": "Wednesday 21 October 2026, after v0.2.3 went live",
+  "date": "2026-10-21",
+  "site_version": "0.2.3",
+  "medium": "a voice memo, transcribed",
+  "status": "a review of v0.2.3: the reviews, the account, the player and sending",
+  "memo": "data/feedback/memos/R003.txt",
+  "notes": [
+    "The memo is kept as transcribed, with paragraph breaks added. 'Eskito.ai' in the transcript is sgit.ai.",
+    "The screenshots are of v0.2.3, the version reviewed, from the local copy of the live commit."
+  ],
+  "screens": {
+    "01-hello-world-ended": {
+      "page": "/examples/hello-world/",
+      "viewport": "1280x900",
+      "caption": "Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end."
+    },
+    "02-quiz-send": {
+      "page": "/examples/hello-world/",
+      "viewport": "1280x900",
+      "caption": "The questions' buttons at v0.2.3: Send by email and Copy my answers."
+    },
+    "03-new-to-this": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "New to this? at v0.2.3: the second card's label wraps, and its second line loses its margin."
+    },
+    "04-header": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "The menu at v0.2.3: no Reviews; the reviews were under The programme."
+    },
+    "05-account": {
+      "page": "/account/",
+      "viewport": "1280x900",
+      "caption": "The account at v0.2.3: the balance and the history, and nothing about the examples, the answers or the settings."
+    }
+  },
+  "points": [
+    {
+      "id": "R003.1",
+      "stance": "agree",
+      "quote": "By the way, where's the review? I couldn't find it. So we need to make it easy to find.",
+      "shots": [
+        "04-header"
+      ],
+      "reading": "Fair: at v0.2.3 the reviews were two menus deep, under The programme, and linked from one line at the foot of the home page. Now Reviews is its own menu, the home page has a band of the latest reviews with what each led to, and every page's footer links to them.",
+      "proposals": [
+        "P32"
+      ]
+    },
+    {
+      "id": "R003.2",
+      "stance": "agree",
+      "quote": "can you start implementing those ideas? Because I think you've done quite a lot of them, but we need to be very big here.",
+      "shots": [],
+      "reading": "Started with what this memo names first: the account, the player and sending. Of the ideas still proposed, a storyboard per example (P25) and the advanced examples (P26) come next; the advanced ones wait on Q5, which of them first.",
+      "proposals": [
+        "P25",
+        "P26"
+      ]
+    },
+    {
+      "id": "R003.3",
+      "stance": "agree",
+      "quote": "The account, right, of this, and so that we make it super clear of all that stuff we talked about their usage, what they've done, what they have, and all that information we have in local storage, right?",
+      "shots": [
+        "05-account"
+      ],
+      "reading": "Done. The account now opens with your balance and five counts: examples watched, played to the end, answered, sent to us, pages opened. Then each example (how far you got, what you said when you tried it, whether you sent it), what you sent and whether it went, where the credit went, everything you read, top-ups, and, last, every item this site keeps in your browser: its key, what it is, and what is in it, with Export everything and Delete everything.",
+      "proposals": [
+        "P33"
+      ]
+    },
+    {
+      "id": "R003.4",
+      "stance": "agree",
+      "quote": "it was playing without me noticing, and he arrived at that end bit. So I think that we need to, A, you should detect that to start playing only when the user scrolls to that page",
+      "shots": [
+        "01-hello-world-ended"
+      ],
+      "reading": "Done: a player starts by itself only after you have scrolled and the frame is at least 60% on screen, never on a page that has just opened. It plays once.",
+      "proposals": [
+        "P34"
+      ]
+    },
+    {
+      "id": "R003.5",
+      "stance": "agree",
+      "quote": "even in the end, you need to make it easy to start again, right, or something like that. So almost show that he got to the end step. Maybe you can have a little thing at the bottom or maybe at the top showing the steps, like as they play.",
+      "shots": [
+        "01-hello-world-ended"
+      ],
+      "reading": "Done: a bar of the steps across the top, one mark per step, grouped by act and clickable to jump; at the end a banner, 'The end of this example', with Start again and Now try it yourself; and the counter says 'Done: step 12 of 12'.",
+      "proposals": [
+        "P35"
+      ]
+    },
+    {
+      "id": "R003.6",
+      "stance": "agree",
+      "quote": "So either you have a little countdown before you continue, which it might not be a bad option, which allows me to stop also at the moment.",
+      "shots": [],
+      "reading": "Done: before each act after the first the player waits six seconds, saying what comes next ('Next: A new chat. The line goes first, in 6s'). Pause stops it there; Next skips the wait. We chose the countdown over stopping outright: a reader who is watching keeps the flow, and a reader who is reading gets the time.",
+      "proposals": [
+        "P36"
+      ]
+    },
+    {
+      "id": "R003.7",
+      "stance": "agree-in-part",
+      "quote": "the back, when I'm in playing, should just go forward. At the moment, it doesn't, right? So it goes to the beginning.",
+      "shots": [],
+      "reading": "We could not make it jump to the beginning: in v0.2.3, Back stepped back one and stopped. Two things could have looked like it: going back across the new chat brings the whole first chat back on screen, and the first button, Start again, sits where Back usually is. Now Back and Next keep playing if it was playing, and the step bar shows exactly where you are.",
+      "proposals": [
+        "P37"
+      ]
+    },
+    {
+      "id": "R003.8",
+      "stance": "agree",
+      "quote": "And what should happen is you should create a vault here on this session. And this vault should have an append lane. And that append lane, you should put that on here. So you need to share the public key and the append lane key, which is fine for now.",
+      "shots": [
+        "02-quiz-send"
+      ],
+      "reading": "Done: a vault made in this session on sgit.ai's host, with a feedback append lane, the way riskmandate.ai's contact form works. The public key and the lane's token are in /feedback/lane.json; the build's leak check allows that one token in that one file and nowhere else. Tested end to end: a send from Node and one from a real browser, both drained, opened and filed in the vault.",
+      "proposals": [
+        "P38"
+      ]
+    },
+    {
+      "id": "R003.9",
+      "stance": "agree",
+      "quote": "So it should not be sent by email, should be sent to risk mandate agent, or even sent to, you know, even say sent to agent, and then maybe have a little link that says explain how it works in a new page. And you can even say encrypt and send, right?",
+      "shots": [
+        "02-quiz-send"
+      ],
+      "reading": "Done: the button is 'Encrypt and send to the agent', with 'Exactly what will be sent' above it and 'How this works' beside it, a page of its own. Email appears only if sending fails. The feedback page has a box to write anything and send it the same way.",
+      "proposals": [
+        "P38",
+        "P39"
+      ]
+    },
+    {
+      "id": "R003.10",
+      "stance": "agree",
+      "quote": "But also I like the copy my answers. That's also a good option.",
+      "shots": [],
+      "reading": "Kept, beside Encrypt and send.",
+      "proposals": [
+        "P39"
+      ]
+    },
+    {
+      "id": "R003.11",
+      "stance": "agree",
+      "quote": "There's a little formatting, little problem on the second new to this bit.",
+      "shots": [
+        "03-new-to-this"
+      ],
+      "reading": "Found: the card's label was inline, so when it wrapped, its second line lost the card's margin. Fixed.",
+      "proposals": [
+        "P40"
+      ]
+    },
+    {
+      "id": "R003.12",
+      "stance": "asked",
+      "quote": "I'm actually got an agent to run this on a separate environment, so we should get some feedback from it",
+      "shots": [],
+      "reading": "It can send its findings through the same lane: How this works has the call an agent makes. Whatever arrives is drained into the vault and, with the sender's yes, becomes a review here like this one.",
+      "proposals": [
+        "P38"
+      ]
+    }
+  ],
+  "questions": []
+}

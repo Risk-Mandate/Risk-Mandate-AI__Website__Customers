@@ -385,7 +385,8 @@
     {
       "id": "Q6",
       "to": "Dinis Cruz",
-      "ask": "The answers to an example's questions go by email for now. Do you want a form that posts them to us? It needs riskmandate.ai's encrypted form, a change to the content security policy, and your yes (needs.md, item 7)."
+      "ask": "The answers to an example's questions go by email for now. Do you want a form that posts them to us? It needs riskmandate.ai's encrypted form, a change to the content security policy, and your yes (needs.md, item 7).",
+      "answer": "Yes, by R003 (R003.8): Encrypt and send, to an append lane of an encrypted vault, from v0.2.4."
     }
   ]
 }

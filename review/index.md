@@ -2,7 +2,7 @@
 
 > The intent half of the review folder: the brief and the memo read as stories, rules and examples, each node linked to the heading it came from and to the page on this site that realises it, with the counts. The derived half is proposed.
 
-*Source: <https://customers.riskmandate.ai/review/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/review/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

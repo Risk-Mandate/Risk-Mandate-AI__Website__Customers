@@ -1,12 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.2.4",
+      "date": "2026-10-21",
+      "title": "Encrypt and send to the agent, the big account, a player that waits for you, and Reviews in the menu; R003 read point by point",
+      "notes": "R003, the lead's third memo, kept verbatim and read in 12 points with screenshots of v0.2.3. Encrypt and send: answers and messages are encrypted in the browser (sgit's hybrid envelope v2) and appended to the feedback lane of an encrypted vault made in this session, zs81fic5 on dev.send.sgraph.ai; the public key and append token are in feedback/lane.json (the leak check allows that one token in that one file), only the vault's key can read what arrives, and admin/feedback/lane.mjs configures, tests and drains it; tested end to end from Node and from a real browser. How this works is a page of its own; email only if sending fails; Copy kept; a box on /feedback/ to send anything; agents can send the same way. The account shows everything a reader did and everything kept in their browser: balance, five counts, each example's progress, answers and sends, where the credit went, everything read, top-ups, and every stored item, with Export everything and Delete everything. The player starts only after you have scrolled to it, shows a bar of the steps by act, counts down before each new act, keeps playing on Back and Next, and says when it has ended. Reviews is a menu of its own, the home page has a band of the latest reviews, and every footer links to them; the menu folds at 1260px. The card label that wrapped is fixed. The register has 46 proposals.",
+      "tag": "v0.2.4",
+      "commit": null,
+      "run": null,
+      "verified": null
+    },
+    {
       "version": "0.2.3",
       "date": "2026-10-21",
       "title": "web first: six examples to try in Claude or ChatGPT, played step by step, with questions under each; no hooks on the front pages; an account page of our own; R002 read point by point",
       "notes": "R002, the lead's second memo, kept verbatim and read in 26 points with screenshots of v0.2.2. The home page and start here are now in the browser: open Claude or ChatGPT, ask, paste one line, ask again, new chat with the line first. Six examples in tabs, simplest first (hello world, stay on topic, no web search, keep a secret, drafts never send, refunds up to 50 pounds), each versioned, each in a chat frame drawn like Claude's or ChatGPT's, each with the prompts to copy and five questions whose answers the reader emails. Every demo on the site can be played, paused, stepped back and forward. No hook and nothing to install on the front pages; the Claude Code behaviour policies are kept further down /policies/ under a warning. The account strip sits under the hero; the account page is our own view of the meter, without the newsroom's personas; the meter's reader card under each page is gone, and it still charges. Cards show pictures of where they go. The register has 37 proposals; D1 is recorded as declined at v0.2.2 and reversed at v0.2.3, with why. Questions Q4 to Q6 for the lead.",
       "tag": "v0.2.3",
-      "commit": null,
+      "commit": "5a7607247e696a4f0c821f4da231cc4331176452",
       "run": null,
       "verified": null
     },

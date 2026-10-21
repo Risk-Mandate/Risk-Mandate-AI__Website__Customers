@@ -6,7 +6,7 @@
   <title>Your account: £50 to start, what each page cost, and what you have left</title>
   <meta name="description" content="Your reading account on customers.riskmandate.ai: the balance you started with, every page you opened and what it cost by how far you read, what you asked not to be charged for, and your top-ups. Kept in this browser only; nothing is sent anywhere.">
   <!-- rm-customers:head:start -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai https://dev.send.sgraph.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
   <link rel="canonical" href="https://customers.riskmandate.ai/account/">
   <link rel="alternate" type="text/markdown" href="/account/index.md">
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
@@ -19,6 +19,7 @@
   <script src="/assets/nav.js" defer></script>
   <script src="/assets/copy.js" defer></script>
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/envelope.js" defer></script>
   <script src="/assets/examples.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
@@ -26,7 +27,7 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/account/">
   <meta property="og:title" content="Your account: £50 to start, what each page cost, and what you have left">
   <meta property="og:description" content="Your reading account on customers.riskmandate.ai: the balance you started with, every page you opened and what it cost by how far you read, what you asked not to be charged for, and your top-ups. Kept in this browser only; nothing is sent anywhere.">
-  <meta name="rm-customers:version" content="0.2.3">
+  <meta name="rm-customers:version" content="0.2.4">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -43,7 +44,6 @@
           <div class="navmenu">
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
             <a class="pagelink navchild active" href="/account/" aria-current="page">Your account</a>
-            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
             <a class="pagelink navchild" href="/credit/">What each page costs</a>
           </div>
         </span>
@@ -76,7 +76,14 @@
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
             <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/feedback/reviews/">Reviews<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
             <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/feedback/how-sending-works/">How Encrypt and send works</a>
             <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
@@ -111,7 +118,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">Your account</span></div>
@@ -119,11 +126,11 @@
 <!-- rm-customers:nav:end -->
   <main class="wrap">
     <h1>Your account</h1>
-    <p class="lead">Everyone who opens this site starts with <strong>£50.00</strong> of credit. Each page draws a little of it as you read, by how far down you read, and an example's page draws the most. It is credit for reading, not money: nothing is billed and nothing is ever blocked. We are working out the fair prices with you.</p>
+    <p class="lead">Everything you have done here, and everything this site keeps about it: your credit and where it went, the examples you watched and how far, what you answered, what you sent us, and your settings. All of it lives in this browser and nowhere else; we see none of it unless you send it. Everyone starts with <strong>£50.00</strong> of credit for reading, not money: nothing is billed and nothing is ever blocked.</p>
     <div id="account-live" class="account-live"><p class="dim">Your balance and history are drawn here from this browser; with JavaScript off there is nothing to show.</p></div>
     <h2>What this is, and what it is not</h2>
     <ul class="plist">
-      <li><strong>It lives in this browser.</strong> The balance and the history are kept in this browser's storage under <code>riskmandate.customers.meter.v1</code> and are sent nowhere. Another browser starts again at £50.00; <em>Export as JSON</em> keeps a copy.</li>
+      <li><strong>It lives in this browser.</strong> The balance and the history are kept in this browser's storage under <code>riskmandate.customers.meter.v1</code> and are sent nowhere. Another browser starts again at £50.00; <em>Export everything</em> keeps a copy, and <em>Delete everything</em> removes it.</li>
       <li><strong>It is an honesty box, not a paywall.</strong> The meter is <a href="https://newsroom.sgit.ai/meter/">SG Meter</a>, loaded from <a href="https://api.newsroom.sgit.ai/">api.newsroom.sgit.ai</a> at a pinned release; this page is this site's own view of it. What the meter can and cannot protect is in <a href="https://newsroom.sgit.ai/meter/security.html">its security model</a>.</li>
       <li><strong>The prices are a starting point.</strong> <a href="/credit/">What each page costs</a>. If a page was not worth its price, <a href="/feedback/">tell us</a>.</li>
     </ul>
@@ -133,7 +140,7 @@
   <div class="wrap meter-card"><sg-meter view="page" kind="free" title="Your account: £50 to start, what each page cost, and what you have left" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/account/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/account/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

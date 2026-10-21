@@ -2,7 +2,7 @@
 
 > Give feedback on customers.riskmandate.ai: one line by email, a voice memo that your Claude turns into a review, or a fifteen-minute interview by Claude. Criticism first; every point gets a decision and a reason; nothing is published without your yes.
 
-*Source: <https://customers.riskmandate.ai/feedback/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -12,11 +12,25 @@ Feedback · free to read · a person reads every word
 
 What did you try, what stopped, what got in the way, and where did you have to guess? Criticism first: it is what we can use. Three ways, from one line to fifteen minutes.
 
-1. **One line, by email.**
+1. **Write it here, and encrypt and send it.**
+
+A line or a page. It is encrypted in this browser before it leaves, and only RiskMandate can read it. Add your name or an email only if you want a reply. [How this works](/feedback/how-sending-works/index.md).
+
+What happened, what got in the way, what you would changeYour name or email, if you want a reply (optional)Exactly what will be sent
+
+```
+
+```
+
+Encrypt and send to the agentCopy it
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Feedback)
+
+2. **One line, by email.**
 
 What happened, in a line. [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=Feedback); a person reads it within a working day.
 
-2. **Record a voice memo, and give it to your Claude.**
+3. **Record a voice memo, and give it to your Claude.**
 
 Talk for two to five minutes, on your phone, while it is fresh: walk through what you did and say what you thought. Transcribe it (your phone, Otter, or the Claude app can), then paste this prompt and the transcript into Claude, or ChatGPT. It turns the memo into a review without softening it, tells you which screenshots to attach, and asks before anything is published.
 
@@ -55,7 +69,7 @@ Copy
 
 The same prompt as a file: [voice-memo.txt](/feedback/prompts/voice-memo.txt).
 
-3. **Let Claude interview you.**
+4. **Let Claude interview you.**
 
 Paste this into Claude and switch to voice. It asks one question at a time, about fifteen minutes, criticism first, and writes up what you said, kept apart from what it thinks you meant. You read it before you send it.
 
@@ -124,7 +138,7 @@ As a file: [interview.txt](/feedback/prompts/interview.txt).
 - **Every point leads to a proposal with a decision:** done, proposed, a question, or declined. We do not do everything a reviewer asks, but every no has a reason, and you can see it.
 - **Nothing is published without your yes,** under your name or anonymously, as you choose. No contact details are ever published.
 
-Every review so far, and what we did: [the reviews](/feedback/reviews/index.md). The latest is [R002, Web first, examples in tabs, and no hooks: nothing that runs on your machine](/feedback/reviews/R002/index.md). We also run invented users through the site: [study S1](/feedback/synthetic/index.md).
+Every review so far, and what we did: [the reviews](/feedback/reviews/index.md). The latest is [R003, Make the reviews easy to find, make the account big, and send to the agent, encrypted](/feedback/reviews/R003/index.md). We also run invented users through the site: [study S1](/feedback/synthetic/index.md).
 
 ---
 

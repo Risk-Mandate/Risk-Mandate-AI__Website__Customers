@@ -1,12 +1,12 @@
 // shoot.cjs <spec.json> <out dir> : the screenshots a review cites, element by element, from a copy of the site served locally (SITE, default http://127.0.0.1:8765).
-// Each spec entry: {name, url, w, h, sel (a selector, or a list whose boxes are joined), pad, maxh, mobile}. Convert the PNGs to WebP into assets/feedback/<review id>/.
+// Each spec entry: {name, url, w, h, sel (a selector, or a list whose boxes are joined), pad, maxh, mobile, wait, motion}. Convert the PNGs to WebP into assets/feedback/<review id>/.
 const { chromium } = require('playwright');
 const fs = require('fs');
 const [spec, out] = process.argv.slice(2);
 (async () => {
   const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', headless: true });
   for (const s of JSON.parse(fs.readFileSync(spec, 'utf8'))) {
-    const ctx = await browser.newContext({ viewport: { width: s.w, height: s.h }, isMobile: !!s.mobile, hasTouch: !!s.mobile, deviceScaleFactor: s.mobile ? 2 : 1, reducedMotion: 'reduce' });
+    const ctx = await browser.newContext({ viewport: { width: s.w, height: s.h }, isMobile: !!s.mobile, hasTouch: !!s.mobile, deviceScaleFactor: s.mobile ? 2 : 1, reducedMotion: s.motion ? 'no-preference' : 'reduce' });   // still by default; "motion": true to see what plays
     const page = await ctx.newPage();
     const errors = [];
     page.on('pageerror', e => errors.push(String(e)));

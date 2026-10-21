@@ -55,7 +55,8 @@ class Test__Examples(TestCase):
     def test_the_front_pages_mention_no_hook_and_install_nothing(self):
         for path in FRONT:
             with self.subTest(page=path):
-                prose = re.sub(r'<[^>]+>', ' ', main_of(path))
+                main  = re.sub(r'<section class="[^"]*\breviews-band\b.*?</section>', ' ', main_of(path), flags=re.S)   # the reviews' own titles, which record why the hooks went
+                prose = re.sub(r'<[^>]+>', ' ', main)
                 self.assertNotRegex(prose, r'(?i)\bhooks?\b')
                 self.assertNotIn('.claude/', prose)
 

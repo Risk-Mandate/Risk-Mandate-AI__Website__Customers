@@ -19,7 +19,7 @@ Everything on this list blocks a step of the brief or of the repository rules an
 
 ## Blocking the next batch's form
 
-7. **The form on this site (the lead, then the build session).** The riskmandate.ai contact form encrypts to the site agent's key and posts to the `site` lane of its comms vault. The same form on this site needs: the lead's yes; the lane's endpoint and token (public on purpose on riskmandate.ai) referenced, never copied into a new file; a content security policy change for `connect-src` and `form-action`; and a round trip proved. Until then the route is email or the riskmandate.ai form.
+7. **The feedback vault's key (the lead).** Done at v0.2.4, differently from what this item first said: Encrypt and send appends to the `feedback` lane of a vault of this site's own, `zs81fic5` on dev.send.sgraph.ai, made by the build session (R003), with its public key and token in `feedback/lane.json`. The vault's key was given to the lead in the session, once, and is in no file in this repository. Keep it with the other vault keys; a session that drains the lane needs it as `FEEDBACK_KEY`, and `SG_SEND_ACCESS_TOKEN` to push the clone. To revoke the token: mint a new one, update `lanes.json` in the vault and `feedback/lane.json`, run `admin/feedback/lane.mjs configure`, release.
 
 ## The customer records
 

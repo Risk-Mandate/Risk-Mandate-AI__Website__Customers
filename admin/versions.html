@@ -6,7 +6,7 @@
   <title>Release history: one row per release, newest first, with what changed and why</title>
   <meta name="description" content="Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.">
   <!-- rm-customers:head:start -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai https://dev.send.sgraph.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
   <link rel="canonical" href="https://customers.riskmandate.ai/admin/versions.html">
   <link rel="alternate" type="text/markdown" href="/admin/versions.md">
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
@@ -19,6 +19,7 @@
   <script src="/assets/nav.js" defer></script>
   <script src="/assets/copy.js" defer></script>
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/envelope.js" defer></script>
   <script src="/assets/examples.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
@@ -26,7 +27,7 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/admin/versions.html">
   <meta property="og:title" content="Release history: one row per release, newest first, with what changed and why">
   <meta property="og:description" content="Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.">
-  <meta name="rm-customers:version" content="0.2.3">
+  <meta name="rm-customers:version" content="0.2.4">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -43,7 +44,6 @@
           <div class="navmenu">
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
             <a class="pagelink navchild" href="/account/">Your account</a>
-            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
             <a class="pagelink navchild" href="/credit/">What each page costs</a>
           </div>
         </span>
@@ -76,7 +76,14 @@
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
             <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/feedback/reviews/">Reviews<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
             <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/feedback/how-sending-works/">How Encrypt and send works</a>
             <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
@@ -111,7 +118,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/admin/">Admin</a> <span class="sep">/</span> <span aria-current="page">Release history</span></div>
@@ -124,6 +131,7 @@
   <table class="versions" data-generated-from="data/versions.json">
     <thead><tr><th>Version</th><th>Date</th><th>Release</th><th>What changed, and why</th></tr></thead>
     <tbody>
+      <tr><td><code>v0.2.4</code></td><td>2026-10-21</td><td>Encrypt and send to the agent, the big account, a player that waits for you, and Reviews in the menu; R003 read point by point</td><td>R003, the lead&#x27;s third memo, kept verbatim and read in 12 points with screenshots of v0.2.3. Encrypt and send: answers and messages are encrypted in the browser (sgit&#x27;s hybrid envelope v2) and appended to the feedback lane of an encrypted vault made in this session, zs81fic5 on dev.send.sgraph.ai; the public key and append token are in feedback/lane.json (the leak check allows that one token in that one file), only the vault&#x27;s key can read what arrives, and admin/feedback/lane.mjs configures, tests and drains it; tested end to end from Node and from a real browser. How this works is a page of its own; email only if sending fails; Copy kept; a box on /feedback/ to send anything; agents can send the same way. The account shows everything a reader did and everything kept in their browser: balance, five counts, each example&#x27;s progress, answers and sends, where the credit went, everything read, top-ups, and every stored item, with Export everything and Delete everything. The player starts only after you have scrolled to it, shows a bar of the steps by act, counts down before each new act, keeps playing on Back and Next, and says when it has ended. Reviews is a menu of its own, the home page has a band of the latest reviews, and every footer links to them; the menu folds at 1260px. The card label that wrapped is fixed. The register has 46 proposals.</td></tr>
       <tr><td><code>v0.2.3</code></td><td>2026-10-21</td><td>web first: six examples to try in Claude or ChatGPT, played step by step, with questions under each; no hooks on the front pages; an account page of our own; R002 read point by point</td><td>R002, the lead&#x27;s second memo, kept verbatim and read in 26 points with screenshots of v0.2.2. The home page and start here are now in the browser: open Claude or ChatGPT, ask, paste one line, ask again, new chat with the line first. Six examples in tabs, simplest first (hello world, stay on topic, no web search, keep a secret, drafts never send, refunds up to 50 pounds), each versioned, each in a chat frame drawn like Claude&#x27;s or ChatGPT&#x27;s, each with the prompts to copy and five questions whose answers the reader emails. Every demo on the site can be played, paused, stepped back and forward. No hook and nothing to install on the front pages; the Claude Code behaviour policies are kept further down /policies/ under a warning. The account strip sits under the hero; the account page is our own view of the meter, without the newsroom&#x27;s personas; the meter&#x27;s reader card under each page is gone, and it still charges. Cards show pictures of where they go. The register has 37 proposals; D1 is recorded as declined at v0.2.2 and reversed at v0.2.3, with why. Questions Q4 to Q6 for the lead.</td></tr>
       <tr><td><code>v0.2.2</code></td><td>2026-10-21</td><td>the feedback loop: the lead&#x27;s first review read point by point with screenshots, five invented users run through v0.2.1, and one register of 23 proposals each with a decision and a reason</td><td>R001, Dinis Cruz&#x27;s first impression, kept verbatim with our reading point by point and screenshots of v0.2.1: the hook answers a question nobody has asked yet. Study S1: five invented users (Sam, Nadia, Marcus, Joan, Tomas) drove v0.2.1 one screenshot at a time; 29 findings, each checked (24 confirmed, 4 partly, 1 artefact). /feedback/: one line by email, a voice memo your Claude turns into a review, or a Claude interview. The register: 23 proposals; 8 done in this release (the feedback pages, the study, what the 50 pounds is, no more &#x27;start a new session&#x27;, did it work and the hook fails open, each hook in plain words with how to turn it off, line-only pages, start here&#x27;s status line moved to its foot); the guided path (P1, P2) proposed and held for the lead&#x27;s further memos; 5 declined with reasons; questions Q1 to Q3 for the lead.</td></tr>
       <tr><td><code>v0.2.1</code></td><td>2026-10-21</td><td>the customer first: £50 of credit metered by SG Meter, six behaviour policies with tested hooks, storyboards and demos</td><td>The home page is now the customer&#x27;s: £50.00 of credit, one worry, one line, one hook, one prompt to try it, with the programme&#x27;s logistics moved to the programme pages. Every page has a price by its kind (1p the home page, 2p a page, 10p a storyboard, 50p a behaviour policy, £1.00 the starter pack), charged by how far it is read by SG Meter v1.4.1 from api.newsroom.sgit.ai release v0.2.5, pinned and loaded with its manifest&#x27;s hash; nothing is blocked and there is no payment link yet, so top-ups are simulated and say so. Six behaviour policies from riskmandate.ai&#x27;s rules: four for Claude Code with a line and a PreToolUse hook (secrets, pushes, deletes, its own permissions), each hook tested with an allowed twin for every refusal; two for ChatGPT and Claude with a line, said to be an expectation only; and a starter pack Claude Code installs from one prompt, showing every file first. Three storyboards drawn by the kit from api.storyboards.sgit.ai v0.1.0, loaded with integrity, its delay attributes allowed by hash and nothing else inline; three demos of a session on a drawn laptop or browser, labelled as illustrations. The header fits every width from 320 to 1440 pixels with the balance in it. From this release every push moves the third number.</td></tr>
@@ -139,7 +147,7 @@
   <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="Release history: one row per release, newest first, with what changed and why" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/admin/versions.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/admin/versions.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

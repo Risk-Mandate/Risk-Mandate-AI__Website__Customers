@@ -2,7 +2,7 @@
 
 > Six examples of an Agent Behaviour Policy to try in Claude or ChatGPT in your browser, from hello world to refunds: ask, paste one line, ask again, and a new chat with the line first. Nothing to install.
 
-*Source: <https://customers.riskmandate.ai/examples/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

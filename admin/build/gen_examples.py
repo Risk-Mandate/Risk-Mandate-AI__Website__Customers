@@ -79,7 +79,7 @@ class Gen__Examples:
             extra = ' k-line' if kind == 'user' and ex['line'] in body else ''
             items.append(f'<li class="k-{kind}{extra}" data-kind="{kind}">{esc(body)}</li>')
         return '\n'.join([
-            f'      <figure class="demo chat-frame look-claude" data-demo="{prefix}{ex["slug"]}">',
+            f'      <figure class="demo chat-frame look-claude" data-demo="{prefix}{ex["slug"]}" data-example="{ex["slug"]}">',
             '        <div class="chat-window">',
             f'          <div class="chat-top"><span class="chat-title">{esc(ex["tab"])}</span>'
             '<span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>',
@@ -130,11 +130,13 @@ class Gen__Examples:
         return '\n'.join([
             f'        <section class="quiz" data-quiz="{ex["slug"]}" data-example-version="{ex["version"]}" data-to="{AGENT_ADDRESS}" aria-labelledby="quiz-{sid}">',
             f'          <h3 id="quiz-{sid}">Tell us about this example</h3>',
-            '          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.</p>',
+            '          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.</p>',
             *[f'          {s}' for s in sets],
             f'          <label class="quiz-free"><span>Anything else: what it did when you tried it, what was unclear?</span><textarea name="{sid}-note" rows="3"></textarea></label>',
-            f'          <p class="quiz-actions"><a class="btn btn-green quiz-send" href="mailto:{AGENT_ADDRESS}?subject={esc(subject.replace(" ", "%20"))}">Send by email</a>'
-            '<button type="button" class="btn quiz-copy">Copy my answers</button><span class="quiz-status" aria-live="polite"></span></p>',
+            '          <details class="send-preview"><summary>Exactly what will be sent</summary><pre><code></code></pre></details>',
+            f'          <p class="quiz-actions"><button type="button" class="btn btn-green send-encrypted">Encrypt and send to the agent</button>'
+            '<button type="button" class="btn quiz-copy">Copy my answers</button><a href="/feedback/how-sending-works/">How this works</a></p>',
+            f'          <p class="quiz-after"><span class="quiz-status" aria-live="polite"></span> <a class="quiz-mail" hidden href="mailto:{AGENT_ADDRESS}?subject={esc(subject.replace(" ", "%20"))}">Send it by email instead</a></p>',
             '        </section>'])
 
     def panel(self, ex, prefix, selected, tab=True):
@@ -225,6 +227,9 @@ class Gen__Examples:
         for n, ex in enumerate(self.examples):
             self.put(OUT / ex['slug'] / 'index.html', self.example_page(ex, n), changed)
         self.put(OUT / 'index.html', self.index_page(), changed)
+        index = {'_comment': 'The examples, for the account page (assets/account.js): generated from data/examples.json by admin/build/gen_examples.py.',
+                 'examples': [{'slug': ex['slug'], 'title': ex['title'], 'tab': ex['tab'], 'version': ex['version'], 'steps': len(ex['transcript'])} for ex in self.examples]}
+        self.put(OUT / 'index.json', json.dumps(index, indent=2, ensure_ascii=False) + '\n', changed, page=False)
         for path in self.pages.html_files():
             text = path.read_text(encoding='utf-8')
             if self.pages.has_block(text, 'examples-tabs') or self.pages.has_block(text, 'acts-strip') or self.pages.has_block(text, 'example'):

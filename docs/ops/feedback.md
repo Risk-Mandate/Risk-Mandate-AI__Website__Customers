@@ -36,3 +36,24 @@ Follow newsroom.sgit.ai's method, [How to run synthetic users](https://newsroom.
 6. **Run the same users again** after the changes they led to, and compare.
 
 The study pages say on every page that the users are invented and that this is not user research.
+
+## Encrypt and send: the feedback lane
+
+From v0.2.4 a reader's answers, and anything written on `/feedback/`, are encrypted in their browser and appended to the `feedback` lane of a private vault, `zs81fic5` on dev.send.sgraph.ai (R003). The pieces:
+
+| Piece | Where | Secret? |
+|---|---|---|
+| The lane's address, token and public key | `feedback/lane.json` | no: the token can only append, the key can only encrypt |
+| The envelope and the send | `assets/envelope.js` (sgit's hybrid envelope v2) | no |
+| The private key | the vault, `feedback-lane/keys/feedback.encrypt.pem`, encrypted with a passphrase derived from the vault's write key | it is in the vault, which needs the vault key |
+| The vault key | with the lead | yes; never in a file in this repository |
+
+```bash
+sgit clone "$FEEDBACK_KEY" customers-feedback                                   # or sgit pull in an existing clone
+FEEDBACK_KEY="$FEEDBACK_KEY" node admin/feedback/lane.mjs drain --vault customers-feedback --dry-run   # look first
+FEEDBACK_KEY="$FEEDBACK_KEY" node admin/feedback/lane.mjs drain --vault customers-feedback             # then file
+cd customers-feedback && sgit commit "drain: <n>" && sgit push --token "$SG_SEND_ACCESS_TOKEN"
+node admin/feedback/lane.mjs send "a test"                                       # a test send, as a browser makes it
+```
+
+Each message is filed as `feedback-lane/inbox/<file>.eml` beside its `.enc`, with a line in `feedback-lane/log.jsonl`. A message becomes a review on this site only with the sender's yes, as the feedback page promises.

@@ -1,8 +1,8 @@
 # Every review of customers.riskmandate.ai, what we read in it, and what we will do
 
-> The consolidated reviews: each review verbatim, our reading point by point with screenshots, the synthetic study's findings with our checks, and one register of 37 proposals, each with a decision and a reason.
+> The consolidated reviews: each review verbatim, our reading point by point with screenshots, the synthetic study's findings with our checks, and one register of 46 proposals, each with a decision and a reason.
 
-*Source: <https://customers.riskmandate.ai/feedback/reviews/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/reviews/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -12,10 +12,10 @@ Feedback · every review · one document
 
 Each review is kept in the reviewer's own words. Our reading follows point by point, with screenshots of what the reviewer was looking at. Every point leads to a proposal, and every proposal has a decision and a reason: we do not do everything a reviewer asks, but every no is explained here.
 
-- **Reviews by people:** 2.
+- **Reviews by people:** 3.
 - **Synthetic users:** [study S1](#s1). 5 invented users took 60 screenshots on site v0.2.1, gave it 3, 3, 4, 2 and 3 out of 5, and reported 29 findings. We checked each one: 24 confirmed, 4 partly, 1 artefact.
-- **Proposals:** 37: 24 done, 1 reversed, 6 proposed, 1 question, 5 declined. [The register](#register).
-- **Questions:** 5 waiting for an answer, 1 answered. [The questions](#questions).
+- **Proposals:** 46: 33 done, 1 reversed, 6 proposed, 1 question, 5 declined. [The register](#register).
+- **Questions:** 4 waiting for an answer, 2 answered. [The questions](#questions).
 
 Give a review of your own: [tell us what you think](/feedback/index.md).
 
@@ -25,6 +25,7 @@ Give a review of your own: [tell us what you think](/feedback/index.md).
 
 - [R001](#r001), Dinis Cruz, Wednesday 21 October 2026, 1:41, as given in the memo, on site v0.2.1: A first impression: the hook answers a question nobody has asked yet (11 points; [on its own page](/feedback/reviews/R001/index.md))
 - [R002](#r002), Dinis Cruz, Wednesday 21 October 2026, after v0.2.2 went live, on site v0.2.2: Web first, examples in tabs, and no hooks: nothing that runs on your machine (26 points; [on its own page](/feedback/reviews/R002/index.md))
+- [R003](#r003), Dinis Cruz, Wednesday 21 October 2026, after v0.2.3 went live, on site v0.2.3: Make the reviews easy to find, make the account big, and send to the agent, encrypted (12 points; [on its own page](/feedback/reviews/R003/index.md))
 
 <a id="r001"></a>
 
@@ -617,6 +618,203 @@ Each example has a version, shown on it, sent with the answers to its questions,
 
 Leads to: [P31](/feedback/reviews/index.md#p31).
 
+<a id="r003"></a>
+
+## R003: Make the reviews easy to find, make the account big, and send to the agent, encrypted
+
+**Reviewer**
+: Dinis Cruz, the lead of the programme
+**Given**
+: Wednesday 21 October 2026, after v0.2.3 went live
+**Reviewing**
+: site v0.2.3
+**As**
+: a voice memo, transcribed
+**Status**
+: a review of v0.2.3: the reviews, the account, the player and sending
+
+- The memo is kept as transcribed, with paragraph breaks added. 'Eskito.ai' in the transcript is sgit.ai.
+- The screenshots are of v0.2.3, the version reviewed, from the local copy of the live commit.
+
+### The memo, verbatim
+
+>
+
+This is so much better. By the way, where's the review? I couldn't find it. So we need to make it easy to find. Also, can you start implementing those ideas? Because I think you've done quite a lot of them, but we need to be very big here. The account, right, of this, and so that we make it super clear of all that stuff we talked about their usage, what they've done, what they have, and all that information we have in local storage, right?
+
+Now, one little thing here that I noticed, I love how now I go to that Hello World Assistant. The thing I noticed here is that it was playing without me noticing, and he arrived at that end bit. So I think that we need to, A, you should detect that to start playing only when the user scrolls to that page, if you can, but B, even in the end, you need to make it easy to start again, right, or something like that. So almost show that he got to the end step. Maybe you can have a little thing at the bottom or maybe at the top showing the steps, like as they play. One thing I feel that you want to do is, I think that the jump from step 9 to 10 is too great, and maybe we even stop there and maybe the user needs to continue, right? Because you kind of want to absorb that information. So either you have a little countdown before you continue, which it might not be a bad option, which allows me to stop also at the moment. Yeah, stop and pause. Yeah, so maybe that's the way you do it. You have a little countdown on that one with maybe some seconds to show. Do it small, but like, you know, like, oh, I'm going to go to the next page in 5 or 10 seconds. And then I can just go Also, the play, the back, at the moment, the back, when I'm in playing, should just go forward. At the moment, it doesn't, right? So it goes to the beginning. So take a look at that. But it's really cool, right?
+
+And also, the send by email, can you take a look at Eskito.ai? And what should happen is you should create a vault here on this session. And this vault should have an append lane. And that append lane, you should put that on here. So you need to share the public key and the append lane key, which is fine for now. And is actually sent to us. So it should not be sent by email, should be sent to risk mandate agent, or even sent to, you know, even say sent to agent, and then maybe have a little link that says explain how it works in a new page. And you can even say encrypt and send, right? That's a nice thing. But also I like the copy my answers. That's also a good option.
+
+And and the next page is quite nice, right? The storyboards. There's a little formatting, little problem on the second new to this bit. And by the way, I'm actually got an agent to run this on a separate environment, so we should get some feedback from it, which would be quite interesting.
+
+### Our reading, point by point
+
+<a id="r003-1"></a>
+
+**R003.1** agreed
+
+>
+
+By the way, where's the review? I couldn't find it. So we need to make it easy to find.
+
+Fair: at v0.2.3 the reviews were two menus deep, under The programme, and linked from one line at the foot of the home page. Now Reviews is its own menu, the home page has a band of the latest reviews with what each led to, and every page's footer links to them.
+
+[![The menu at v0.2.3: no Reviews; the reviews were under The programme.](/assets/feedback/R003/04-header.webp)](/assets/feedback/R003/04-header.webp)
+The menu at v0.2.3: no Reviews; the reviews were under The programme. / · 1280x900 · v0.2.3
+
+Leads to: [P32](/feedback/reviews/index.md#p32).
+
+<a id="r003-2"></a>
+
+**R003.2** agreed
+
+>
+
+can you start implementing those ideas? Because I think you've done quite a lot of them, but we need to be very big here.
+
+Started with what this memo names first: the account, the player and sending. Of the ideas still proposed, a storyboard per example (P25) and the advanced examples (P26) come next; the advanced ones wait on Q5, which of them first.
+
+Leads to: [P25](/feedback/reviews/index.md#p25), [P26](/feedback/reviews/index.md#p26).
+
+<a id="r003-3"></a>
+
+**R003.3** agreed
+
+>
+
+The account, right, of this, and so that we make it super clear of all that stuff we talked about their usage, what they've done, what they have, and all that information we have in local storage, right?
+
+Done. The account now opens with your balance and five counts: examples watched, played to the end, answered, sent to us, pages opened. Then each example (how far you got, what you said when you tried it, whether you sent it), what you sent and whether it went, where the credit went, everything you read, top-ups, and, last, every item this site keeps in your browser: its key, what it is, and what is in it, with Export everything and Delete everything.
+
+[![The account at v0.2.3: the balance and the history, and nothing about the examples, the answers or the settings.](/assets/feedback/R003/05-account.webp)](/assets/feedback/R003/05-account.webp)
+The account at v0.2.3: the balance and the history, and nothing about the examples, the answers or the settings. /account/ · 1280x900 · v0.2.3
+
+Leads to: [P33](/feedback/reviews/index.md#p33).
+
+<a id="r003-4"></a>
+
+**R003.4** agreed
+
+>
+
+it was playing without me noticing, and he arrived at that end bit. So I think that we need to, A, you should detect that to start playing only when the user scrolls to that page
+
+Done: a player starts by itself only after you have scrolled and the frame is at least 60% on screen, never on a page that has just opened. It plays once.
+
+[![Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end.](/assets/feedback/R003/01-hello-world-ended.webp)](/assets/feedback/R003/01-hello-world-ended.webp)
+Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P34](/feedback/reviews/index.md#p34).
+
+<a id="r003-5"></a>
+
+**R003.5** agreed
+
+>
+
+even in the end, you need to make it easy to start again, right, or something like that. So almost show that he got to the end step. Maybe you can have a little thing at the bottom or maybe at the top showing the steps, like as they play.
+
+Done: a bar of the steps across the top, one mark per step, grouped by act and clickable to jump; at the end a banner, 'The end of this example', with Start again and Now try it yourself; and the counter says 'Done: step 12 of 12'.
+
+[![Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end.](/assets/feedback/R003/01-hello-world-ended.webp)](/assets/feedback/R003/01-hello-world-ended.webp)
+Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P35](/feedback/reviews/index.md#p35).
+
+<a id="r003-6"></a>
+
+**R003.6** agreed
+
+>
+
+So either you have a little countdown before you continue, which it might not be a bad option, which allows me to stop also at the moment.
+
+Done: before each act after the first the player waits six seconds, saying what comes next ('Next: A new chat. The line goes first, in 6s'). Pause stops it there; Next skips the wait. We chose the countdown over stopping outright: a reader who is watching keeps the flow, and a reader who is reading gets the time.
+
+Leads to: [P36](/feedback/reviews/index.md#p36).
+
+<a id="r003-7"></a>
+
+**R003.7** agreed in part
+
+>
+
+the back, when I'm in playing, should just go forward. At the moment, it doesn't, right? So it goes to the beginning.
+
+We could not make it jump to the beginning: in v0.2.3, Back stepped back one and stopped. Two things could have looked like it: going back across the new chat brings the whole first chat back on screen, and the first button, Start again, sits where Back usually is. Now Back and Next keep playing if it was playing, and the step bar shows exactly where you are.
+
+Leads to: [P37](/feedback/reviews/index.md#p37).
+
+<a id="r003-8"></a>
+
+**R003.8** agreed
+
+>
+
+And what should happen is you should create a vault here on this session. And this vault should have an append lane. And that append lane, you should put that on here. So you need to share the public key and the append lane key, which is fine for now.
+
+Done: a vault made in this session on sgit.ai's host, with a feedback append lane, the way riskmandate.ai's contact form works. The public key and the lane's token are in /feedback/lane.json; the build's leak check allows that one token in that one file and nowhere else. Tested end to end: a send from Node and one from a real browser, both drained, opened and filed in the vault.
+
+[![The questions' buttons at v0.2.3: Send by email and Copy my answers.](/assets/feedback/R003/02-quiz-send.webp)](/assets/feedback/R003/02-quiz-send.webp)
+The questions' buttons at v0.2.3: Send by email and Copy my answers. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P38](/feedback/reviews/index.md#p38).
+
+<a id="r003-9"></a>
+
+**R003.9** agreed
+
+>
+
+So it should not be sent by email, should be sent to risk mandate agent, or even sent to, you know, even say sent to agent, and then maybe have a little link that says explain how it works in a new page. And you can even say encrypt and send, right?
+
+Done: the button is 'Encrypt and send to the agent', with 'Exactly what will be sent' above it and 'How this works' beside it, a page of its own. Email appears only if sending fails. The feedback page has a box to write anything and send it the same way.
+
+[![The questions' buttons at v0.2.3: Send by email and Copy my answers.](/assets/feedback/R003/02-quiz-send.webp)](/assets/feedback/R003/02-quiz-send.webp)
+The questions' buttons at v0.2.3: Send by email and Copy my answers. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P38](/feedback/reviews/index.md#p38), [P39](/feedback/reviews/index.md#p39).
+
+<a id="r003-10"></a>
+
+**R003.10** agreed
+
+>
+
+But also I like the copy my answers. That's also a good option.
+
+Kept, beside Encrypt and send.
+
+Leads to: [P39](/feedback/reviews/index.md#p39).
+
+<a id="r003-11"></a>
+
+**R003.11** agreed
+
+>
+
+There's a little formatting, little problem on the second new to this bit.
+
+Found: the card's label was inline, so when it wrapped, its second line lost the card's margin. Fixed.
+
+[![New to this? at v0.2.3: the second card's label wraps, and its second line loses its margin.](/assets/feedback/R003/03-new-to-this.webp)](/assets/feedback/R003/03-new-to-this.webp)
+New to this? at v0.2.3: the second card's label wraps, and its second line loses its margin. / · 1280x900 · v0.2.3
+
+Leads to: [P40](/feedback/reviews/index.md#p40).
+
+<a id="r003-12"></a>
+
+**R003.12** asked of us
+
+>
+
+I'm actually got an agent to run this on a separate environment, so we should get some feedback from it
+
+It can send its findings through the same lane: How this works has the call an agent makes. Whatever arrives is drained into the vault and, with the sender's yes, becomes a review here like this one.
+
+Leads to: [P38](/feedback/reviews/index.md#p38).
+
 <a id="s1"></a>
 
 ## Synthetic users: study S1
@@ -697,15 +895,24 @@ From every review and every finding above. done built, in the version named; acc
 | <a id="p20"></a>**P20** | **Six examples in tabs, simplest first**Hello world, stay on topic, no web search, keep a secret, drafts never send, refunds up to £50. Each in three acts: ask and it does it; paste the line and ask again; a new chat with the line first. Each with the prompts to copy and what to look for. | done v0.2.3R002 asked for examples in tabs, from hello world to business rules, in the scenario, policy, again, new chat order. | [R002.2](/feedback/reviews/index.md#r002-2), [R002.4](/feedback/reviews/index.md#r002-4), [R002.9](/feedback/reviews/index.md#r002-9), [R002.11](/feedback/reviews/index.md#r002-11), [R002.12](/feedback/reviews/index.md#r002-12), [R002.13](/feedback/reviews/index.md#r002-13), [R002.16](/feedback/reviews/index.md#r002-16), [R002.17](/feedback/reviews/index.md#r002-17) |
 | <a id="p21"></a>**P21** | **Chat frames like Claude's and ChatGPT's, and a link to open each in a new window**The examples play in a frame drawn roughly like each product's web chat, with a switch between them: messages above, the box you type into at the bottom. No logos; the caption says it is an approximation. | done v0.2.3R002: the old frames were not how either product looks, and most people will try this on the web. | [R002.5](/feedback/reviews/index.md#r002-5), [R002.6](/feedback/reviews/index.md#r002-6), [R002.20](/feedback/reviews/index.md#r002-20) |
 | <a id="p22"></a>**P22** | **Every demo can be played, paused and stepped**Start again, back, play or pause, next, and which step of how many, on every demo on the site; the arrow keys step too. Plays once when first seen; never loops. | done v0.2.3R002: reading a demo that plays by itself is annoying. | [R002.10](/feedback/reviews/index.md#r002-10) |
-| <a id="p23"></a>**P23** | **Questions under every example**Did you get it, learn something, were you surprised, did it go as shown, how good was it, and a line. The answers become an email the reader sends, with the example's version; they stay in the reader's browser until then. | done v0.2.3R002: the first users should tell us, example by example, whether it surprised them. | [R002.14](/feedback/reviews/index.md#r002-14) |
+| <a id="p23"></a>**P23** | **Questions under every example**Did you get it, learn something, were you surprised, did it go as shown, how good was it, and a line. The answers become an email the reader sends, with the example's version; they stay in the reader's browser until then. | done v0.2.3R002: the first users should tell us, example by example, whether it surprised them. Changed at v0.2.4 by R003: the answers go by Encrypt and send (P38), with email only if sending fails. | [R002.14](/feedback/reviews/index.md#r002-14) |
 | <a id="p24"></a>**P24** | **The three acts, drawn**A strip of the three acts above the examples and on every example's page, in place of 'paste one line, add one hook, try it'. | done v0.2.3R002 asked for an infographic beside the examples; the three acts are what every example has in common. | [R002.8](/feedback/reviews/index.md#r002-8), [R002.12](/feedback/reviews/index.md#r002-12), [R002.18](/feedback/reviews/index.md#r002-18) |
-| <a id="p25"></a>**P25** | **A small storyboard for each example**Drawn with the storyboard kit, like what-is-an-abp: the scenario, the line, the refusal, the new chat. | proposedR002 suggested one. Proposed for after the lead has seen the examples as they are, so that the storyboards draw examples that have stopped changing. | [R002.8](/feedback/reviews/index.md#r002-8) |
-| <a id="p26"></a>**P26** | **Next: your other chats, its memory of you, things it does later**Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it. | proposedR002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first. | [R002.15](/feedback/reviews/index.md#r002-15) |
+| <a id="p25"></a>**P25** | **A small storyboard for each example**Drawn with the storyboard kit, like what-is-an-abp: the scenario, the line, the refusal, the new chat. | proposedR002 suggested one. Proposed for after the lead has seen the examples as they are, so that the storyboards draw examples that have stopped changing. | [R002.8](/feedback/reviews/index.md#r002-8), [R003.2](/feedback/reviews/index.md#r003-2) |
+| <a id="p26"></a>**P26** | **Next: your other chats, its memory of you, things it does later**Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it. | proposedR002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first. | [R002.15](/feedback/reviews/index.md#r002-15), [R003.2](/feedback/reviews/index.md#r003-2) |
 | <a id="p27"></a>**P27** | **Your account first, the price list second**An account strip straight under the hero: the balance, and a link to what you have read. The prices stay, on 'What each page costs', and each example's page costs 50p. | done v0.2.3R002: the account matters more than the price list at this stage; the prices are still an experiment, so they stay. | [R002.3](/feedback/reviews/index.md#r002-3), [R002.21](/feedback/reviews/index.md#r002-21) |
 | <a id="p28"></a>**P28** | **No newsroom in the account: no reader card under pages, and an account page of our own**The meter still charges every page, quietly. /account/ draws the balance, where it went by kind of page, everything read and the top-ups from the meter's own state, without the newsroom's personas or links. | done v0.2.3R002: the reader card and the personas are the newsroom's, not this site's. | [R002.24](/feedback/reviews/index.md#r002-24), [R002.25](/feedback/reviews/index.md#r002-25) |
 | <a id="p29"></a>**P29** | **Cards that show where they go**Each card on the home page shows a picture of the page it opens, made by admin/build/thumbs.cjs from the page itself. | done v0.2.3R002: a card that does not show what is on the other side is not worth the click. | [R002.22](/feedback/reviews/index.md#r002-22) |
 | <a id="p30"></a>**P30** | **Professional copy: no 'first customers' on the pages a customer reads**The home page and start here talk to somebody using the site, not to the first batch. | done v0.2.3R002: the site is live and working with users. | [R002.23](/feedback/reviews/index.md#r002-23) |
 | <a id="p31"></a>**P31** | **Version control of all of it**Each example has a version, shown on it, sent with the answers to its questions and listed on its page; each review records the version it reviewed; a decision that changes keeps its history in this register. | done v0.2.3R002 asked for it. The site's releases were already versioned; the examples and the decisions now are too. | [R002.26](/feedback/reviews/index.md#r002-26) |
+| <a id="p32"></a>**P32** | **Reviews you can find**Reviews is its own menu; the home page has a band of the latest reviews and what each led to; every footer links to them. | done v0.2.4R003: the reviews could not be found. | [R003.1](/feedback/reviews/index.md#r003-1) |
+| <a id="p33"></a>**P33** | **The account: everything you did, and everything this browser keeps**Your balance and five counts; each example, how far you got, what you said, whether you sent it; what you sent; where the credit went; everything you read; top-ups; and every item kept in this browser, with what it is and what is in it, Export everything and Delete everything. | done v0.2.4R003: the account should make plain what a reader did and everything kept about it. | [R003.3](/feedback/reviews/index.md#r003-3) |
+| <a id="p34"></a>**P34** | **A player starts only when you have scrolled to it**Never on a page that has just opened: only after a scroll, with the frame at least 60% on screen; once. | done v0.2.4R003: the example played to its end before it was noticed. | [R003.4](/feedback/reviews/index.md#r003-4) |
+| <a id="p35"></a>**P35** | **A bar of the steps, and an end that says so**One mark per step, grouped by act, clickable; at the end, 'The end of this example' with Start again and Now try it yourself. | done v0.2.4R003: nothing said it had reached the end, or where it was. | [R003.5](/feedback/reviews/index.md#r003-5) |
+| <a id="p36"></a>**P36** | **A countdown before each new act**Six seconds, saying what comes next; Pause stops it, Next skips it. | done v0.2.4R003: the jump into the third act came too soon to take in. | [R003.6](/feedback/reviews/index.md#r003-6) |
+| <a id="p37"></a>**P37** | **Back and Next keep playing**If the player was playing, Back and Next move one step and it carries on. | done v0.2.4R003 found Back confusing while playing; see R003.7 for what we found. | [R003.7](/feedback/reviews/index.md#r003-7) |
+| <a id="p38"></a>**P38** | **Encrypt and send: an encrypted lane to the agent**A vault on sgit.ai's host with a feedback append lane; the browser encrypts to its public key and appends with its public token; only the vault's key, held by RiskMandate, opens what arrives; admin/feedback/lane.mjs configures, tests and drains it. Agents can send the same way. | done v0.2.4R003 asked for it, after riskmandate.ai's contact form; it answers Q6. | [R003.8](/feedback/reviews/index.md#r003-8), [R003.9](/feedback/reviews/index.md#r003-9), [R003.12](/feedback/reviews/index.md#r003-12) |
+| <a id="p39"></a>**P39** | **Encrypt and send to the agent, Copy, and How this works**The main button sends, encrypted; Copy stays; Exactly what will be sent is one click away; How this works is a page; email only if sending fails; a box on /feedback/ to send anything. | done v0.2.4R003 asked for it. | [R003.9](/feedback/reviews/index.md#r003-9), [R003.10](/feedback/reviews/index.md#r003-10) |
+| <a id="p40"></a>**P40** | **The card label that wrapped**Card labels are blocks, so a wrapped line keeps its margin. | done v0.2.4R003 found it. | [R003.11](/feedback/reviews/index.md#r003-11) |
 | <a id="d1"></a>**D1** | **Take the hook out of the first five minutes**One reading of 'a solution for a problem they don't have yet' is to leave the hook for later. | reversed v0.2.3declined at v0.2.2 → reversed at v0.2.3Declined at v0.2.2: a customer who stops after the line leaves believing their agent is held when it has only been asked. Reversed at v0.2.3 by R002 (R002.7): a hook is a program run on the customer's machine, which our first screen had their agent fetch from our site and install, before any behaviour policy governs what their agent installs. Our concern is kept in words: every example says the line is followed because the assistant chooses to. | [R001.11](/feedback/reviews/index.md#r001-11), [R002.1](/feedback/reviews/index.md#r002-1) |
 | <a id="d2"></a>**D2** | **A glossary page for hook, expectation, setting and boundary**A page that defines the words. | declinedA glossary is a page a customer does not open at the moment they need it. Each word is said in plain words where it first appears (P3), and the path (P2) teaches the barrier words by using them. | [R001.11](/feedback/reviews/index.md#r001-11) |
 | <a id="d3"></a>**D3** | **Show the whole hook, uncut, on the page**Sam's one change, read literally: every line of the hook on the page. | declinedSixty-seven lines of Python on the page push Try it down by a screen for everybody, to help the few who read code, and they can open the box or the file. What Sam needed was to predict what it blocks and how to remove it: P12 gives him that in five lines. | [S1 Sam 1](/feedback/reviews/index.md#s1-sam-1) |
@@ -721,7 +928,7 @@ From every review and every finding above. done built, in the version named; acc
 - <a id="q2"></a>**Q2, to Dinis Cruz.** Should the first try show the line failing? An honest demonstration of a line being ignored is hard to stage without making the agent look worse than it is. We propose showing instead that it refused because it chose to: the same refusal, read differently. Is that enough? Answered: Answered by R002 (R002.12): show the assistant doing the thing first, then the line, then a new chat with the line first. Every example now goes that way.
 - <a id="q4"></a>**Q4, to Dinis Cruz.** The transcripts in the examples are written by us, as illustrations. Should we record real runs in Claude and ChatGPT, with screenshots, and keep them beside each example before the batch sees them?
 - <a id="q5"></a>**Q5, to Dinis Cruz.** Of the advanced examples, your other chats, its memory of you, and things it does later, which first?
-- <a id="q6"></a>**Q6, to Dinis Cruz.** The answers to an example's questions go by email for now. Do you want a form that posts them to us? It needs riskmandate.ai's encrypted form, a change to the content security policy, and your yes (needs.md, item 7).
+- <a id="q6"></a>**Q6, to Dinis Cruz.** The answers to an example's questions go by email for now. Do you want a form that posts them to us? It needs riskmandate.ai's encrypted form, a change to the content security policy, and your yes (needs.md, item 7). Answered: Yes, by R003 (R003.8): Encrypt and send, to an append lane of an encrypted vault, from v0.2.4.
 - <a id="q3"></a>**Q3, to Dinis Cruz.** What does joining the first batch commit a company to: what we ask of them, what it costs now and later, and how they leave? And should the first batch include companies that want a team-wide baseline, or individuals first?
 
 ---

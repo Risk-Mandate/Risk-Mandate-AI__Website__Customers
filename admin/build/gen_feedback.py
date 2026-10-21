@@ -17,7 +17,7 @@ import re
 import struct
 import sys
 
-from chrome import ROOT, AGENT_ADDRESS
+from chrome import ROOT, AGENT_ADDRESS, FEEDBACK_LANE
 from pages  import Site__Pages
 
 
@@ -302,6 +302,12 @@ class Gen__Feedback:
             '    <h1>Tell us what you think. <span class="g">A voice memo is best.</span></h1>',
             '    <p class="lead">What did you try, what stopped, what got in the way, and where did you have to guess? Criticism first: it is what we can use. Three ways, from one line to fifteen minutes.</p>',
             '    <ol class="steps">',
+            f'      <li><b>Write it here, and encrypt and send it.</b><p>A line or a page. It is encrypted in this browser before it leaves, and only RiskMandate can read it. Add your name or an email only if you want a reply. <a href="/feedback/how-sending-works/">How this works</a>.</p>'
+            f'<div class="send-box" data-to="{AGENT_ADDRESS}"><label class="quiz-free"><span>What happened, what got in the way, what you would change</span><textarea rows="5" name="message"></textarea></label>'
+            '<label class="quiz-free"><span>Your name or email, if you want a reply (optional)</span><input type="text" name="who" autocomplete="off"></label>'
+            '<details class="send-preview"><summary>Exactly what will be sent</summary><pre><code></code></pre></details>'
+            '<p class="quiz-actions"><button type="button" class="btn btn-green send-encrypted">Encrypt and send to the agent</button><button type="button" class="btn quiz-copy">Copy it</button></p>'
+            f'<p class="quiz-after"><span class="quiz-status" aria-live="polite"></span> <a class="quiz-mail" hidden href="mailto:{AGENT_ADDRESS}?subject=Feedback">Send it by email instead</a></p></div></li>',
             f'      <li><b>One line, by email.</b><p>What happened, in a line. <a href="mailto:{AGENT_ADDRESS}?subject=Feedback">Write to {AGENT_ADDRESS}</a>; a person reads it within a working day.</p></li>',
             '      <li><b>Record a voice memo, and give it to your Claude.</b><p>Talk for two to five minutes, on your phone, while it is fresh: walk through what you did and say what you thought. '
             'Transcribe it (your phone, Otter, or the Claude app can), then paste this prompt and the transcript into Claude, or ChatGPT. It turns the memo into a review without softening it, '
@@ -321,6 +327,33 @@ class Gen__Feedback:
             f'We also run invented users through the site: <a href="/feedback/synthetic/">study {self.study}</a>.</p>'])
         return self.pages.shell('Tell us what you think: a line, a voice memo for your Claude, or a Claude interview',
                                 'Give feedback on customers.riskmandate.ai: one line by email, a voice memo that your Claude turns into a review, or a fifteen-minute interview by Claude. Criticism first; every point gets a decision and a reason; nothing is published without your yes.',
+                                main, 'wrap policy')
+
+    def how_page(self):
+        lane = FEEDBACK_LANE
+        main = '\n'.join([
+            '    <p class="kicker">Feedback · free to read</p>',
+            '    <h1>How Encrypt and send works</h1>',
+            '    <p class="lead">What you send is encrypted in your browser, before it leaves, to a key only RiskMandate holds. It goes to an encrypted vault, not to an inbox, and the host that stores it cannot read it.</p>',
+            '    <h2>What happens when you press it</h2>',
+            '    <ol class="steps">',
+            '      <li><b>Your browser fetches the lane\'s address and key.</b><p>From <a href="/feedback/lane.json">/feedback/lane.json</a>: the vault, the lane, a token that can only add to it, and a public key that can only encrypt. The page checks the key against its fingerprint, <code>' + esc(lane['encrypt_to']) + '</code>, before it uses it.</p></li>',
+            '      <li><b>It encrypts what you wrote, there and then.</b><p>A fresh AES-256-GCM key for the message, and that key wrapped with RSA-OAEP (SHA-256) to the public key: sgit\'s hybrid envelope, the one riskmandate.ai\'s contact form uses. The code is <a href="/assets/envelope.js">assets/envelope.js</a>, about seventy lines, and runs nowhere else.</p></li>',
+            '      <li><b>It adds the sealed message to the lane.</b><p>The <code>' + esc(lane['lane']) + '</code> append lane of vault <code>' + esc(lane['vault']) + '</code>, on <code>' + esc(lane['endpoint'].replace('https://', '')) + '</code>, sgit.ai\'s vault host. The token lets anybody add to the lane and nobody read it.</p></li>',
+            '      <li><b>Only the vault\'s key opens it.</b><p>That key is RiskMandate\'s and is not on this site or in its source. The site\'s agent drains the lane, files each message in the vault, and a person reads it.</p></li>',
+            '    </ol>',
+            '    <h2>What is sent, and what is not</h2>',
+            '    <ul class="plist">',
+            '      <li><strong>Sent:</strong> exactly the text under <em>Exactly what will be sent</em>, with the page you sent it from and the time. Your name or email only if you typed them.</li>',
+            '      <li><strong>Not sent:</strong> your balance, your history, your other answers, anything else this browser keeps. <a href="/account/">Your account</a> lists all of that, at its foot, and it stays here.</li>',
+            '      <li><strong>What the host sees:</strong> that a sealed message arrived, when, how big it is, and the network address it came from, as any server does. Not what it says.</li>',
+            '      <li><strong>What your browser keeps:</strong> that you sent something, when, and whether it went, so your account can show it. Not the text.</li>',
+            '    </ul>',
+            '    <h2>For an agent</h2>',
+            '    <p>An agent reviewing this site can send its findings the same way: build the envelope as <a href="/assets/envelope.js">assets/envelope.js</a> does, and POST <code>{"append_token": …, "payload": …}</code> to <code>' + esc(lane['endpoint']) + '/api/vault/append/write/' + esc(lane['vault']) + '</code>, with the token and key from <a href="/feedback/lane.json">lane.json</a>. Put <code>To: agent &lt;' + esc(lane['to']) + '&gt;</code> and a <code>Subject</code> in the message\'s first lines. <code>admin/feedback/lane.mjs send</code> in <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">the source</a> does it in Node.</p>',
+            '    <p>If anything fails, the page says why and offers the same text as an email to <a href="mailto:' + AGENT_ADDRESS + '">' + AGENT_ADDRESS + '</a>.</p>'])
+        return self.pages.shell('How Encrypt and send works: encrypted in your browser, to a key only RiskMandate holds',
+                                'What happens when you press Encrypt and send on customers.riskmandate.ai: the message is encrypted in your browser with sgit\'s hybrid envelope, appended to an encrypted vault\'s lane that anybody can add to and nobody can read, and opened only with RiskMandate\'s key.',
                                 main, 'wrap policy')
 
     def reviews_page(self):
@@ -447,15 +480,33 @@ class Gen__Feedback:
         if self.pages.write_if_changed(target, text, self.check):
             changed.append(target.relative_to(ROOT).as_posix())
 
+    def latest_html(self):                                                          # the reviews on the home page, newest first, so they are easy to find (R003)
+        cards = []
+        for r in sorted(self.reviews, key=lambda r: r['id'], reverse=True):
+            mine = {i for p in r['points'] for i in p['proposals']}
+            done = sum(1 for i in mine if self.proposals[i]['decision'] in ('done', 'reversed'))
+            cards.append(f'      <a class="card" href="/feedback/reviews/{r["id"]}/"><span class="n">{r["id"]} · {esc(r["reviewer"])} · site v{esc(r["site_version"])}</span>'
+                         f'<b>{esc(r["title"])}</b><p>{len(r["points"])} points; {len(mine)} proposals, {done} done.</p></a>')
+        cards.append(f'      <a class="card" href="/feedback/synthetic/"><span class="n">Study {self.study} · invented users · site v{esc(self.personas["site_version"])}</span>'
+                     f'<b>Five people who do not exist, on the site as it was</b><p>{len(self.checks["checks"])} findings, each checked.</p></a>')
+        return '\n'.join(['    <div class="cards">', *cards, '    </div>'])
+
     def run(self):
         changed = []
-        wanted  = ({OUT / 'index.html', OUT / 'reviews' / 'index.html', OUT / 'synthetic' / 'index.html'}
+        for path in self.pages.html_files():
+            text = path.read_text(encoding='utf-8')
+            if self.pages.has_block(text, 'reviews-latest'):
+                text, _ = self.pages.replace_block(text, 'reviews-latest', self.latest_html())
+                if self.pages.write_if_changed(path, text, self.check):
+                    changed.append(path.relative_to(ROOT).as_posix())
+        wanted  = ({OUT / 'index.html', OUT / 'reviews' / 'index.html', OUT / 'synthetic' / 'index.html', OUT / 'how-sending-works' / 'index.html'}
                    | {OUT / 'reviews' / r['id'] / 'index.html' for r in self.reviews}
                    | {OUT / 'synthetic' / who / 'index.html' for who in self.runs})
         for stale in OUT.rglob('index.html'):
             if stale not in wanted:
                 raise SystemExit(f'{stale.relative_to(ROOT)}: nothing in data/feedback/ makes this page; remove it or add its record')
         self.put(OUT / 'index.html', self.give_page(), changed)
+        self.put(OUT / 'how-sending-works' / 'index.html', self.how_page(), changed)
         self.put(OUT / 'reviews' / 'index.html', self.reviews_page(), changed)
         for review in self.reviews:
             self.put(OUT / 'reviews' / review['id'] / 'index.html', self.review_page(review), changed)

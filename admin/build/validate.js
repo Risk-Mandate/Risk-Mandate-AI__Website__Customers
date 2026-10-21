@@ -48,6 +48,7 @@ const LEAK_PATTERNS = Object.freeze([
 ])
 
 const LEAK_ALLOW_FILES = Object.freeze([SELF])                                    // validate.js names every pattern, so it is exempt
+const LEAK_PUBLIC      = Object.freeze({ 'feedback/lane.json': ['append token (64 hex)'] })   // public by design (R003): a lane token can only append, and the browser must have it
 
 // ── runtime-origin rules (check 5) ────────────────────────────────────────────
 
@@ -302,6 +303,7 @@ function checkLeakTripwire(root = ROOT) {
         if (isBinary(rel, root)) continue
         const text = read(rel, root)
         for (const pattern of LEAK_PATTERNS) {
+            if ((LEAK_PUBLIC[rel] || []).includes(pattern.name)) continue
             const match = pattern.re.exec(text)
             if (match) problems.push(`${rel}:${lineOf(text, match.index)}: looks like a ${pattern.name} (${match[0].slice(0, 6)}…). Redact it.`)
         }

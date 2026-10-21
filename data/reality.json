@@ -218,6 +218,24 @@
       "notes": "The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer's yes."
     },
     {
+      "id": "programme.encrypted-send",
+      "area": "programme",
+      "title": "Encrypt and send: answers and messages encrypted in the browser and appended to an encrypted vault's lane that only RiskMandate can read",
+      "status": "shipped",
+      "since": "0.2.4",
+      "where": "/feedback/how-sending-works/",
+      "notes": "Vault zs81fic5 on dev.send.sgraph.ai, lane feedback; the public key and token are in feedback/lane.json; admin/feedback/lane.mjs drains it."
+    },
+    {
+      "id": "programme.account",
+      "area": "programme",
+      "title": "An account page that shows everything a reader did here and everything this site keeps in their browser, with export and delete",
+      "status": "shipped",
+      "since": "0.2.4",
+      "where": "/account/",
+      "notes": "Drawn in the browser from local storage only."
+    },
+    {
       "id": "programme.reviews",
       "area": "programme",
       "title": "Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason",

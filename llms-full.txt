@@ -2,7 +2,7 @@
 
 > Put an Agent Behaviour Policy on Claude or ChatGPT in five minutes: six examples to try in the browser, an account with £50 of credit, every review of the site and what was done about it, and the programme that follows each customer up. Part of riskmandate.ai.
 
-Site version: v0.2.3 (2026-10-21). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers. Parent site: https://riskmandate.ai
+Site version: v0.2.4 (2026-10-21). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers. Parent site: https://riskmandate.ai
 
 Every HTML page has a markdown twin at the same path with the extension swapped; links inside the markdown point at markdown, so an agent never has to parse HTML. What exists, is proposed or is deliberately absent is in /docs/reality.md, generated from data/reality.json on every release: if it is not listed there, it does not exist. Nothing on this site is described in the present tense before that file says shipped.
 
@@ -21,7 +21,7 @@ source: /index.md
 
 > Put an Agent Behaviour Policy on Claude or ChatGPT in your browser, in five minutes: ask it to do something, paste one line that says it must not, ask again. Six examples, from hello world to refunds, with nothing to install. Part of riskmandate.ai.
 
-*Source: <https://customers.riskmandate.ai/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -101,7 +101,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -113,9 +113,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)
 
 <a id="ex-home-stay-on-topic"></a>
 
@@ -169,7 +175,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -181,9 +187,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20stay-on-topic%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20stay-on-topic%20v1.0.0)
 
 <a id="ex-home-no-web-search"></a>
 
@@ -238,7 +250,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -250,9 +262,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20no-web-search%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20no-web-search%20v1.0.0)
 
 <a id="ex-home-keep-a-secret"></a>
 
@@ -317,7 +335,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -329,9 +347,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20keep-a-secret%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20keep-a-secret%20v1.0.0)
 
 <a id="ex-home-drafts-not-send"></a>
 
@@ -399,7 +423,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -411,9 +435,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0)
 
 <a id="ex-home-refunds"></a>
 
@@ -482,7 +512,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -494,9 +524,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0)
 
 ## What the line is, and what it is not.
 
@@ -522,7 +558,31 @@ One line by email, a voice memo your Claude turns into a review, or an interview
 
 ](/feedback/index.md)
 
-We read every answer and every review, and we follow up by email. [Every review, and what we did about it](/feedback/reviews/index.md); how the programme runs is on [the programme pages](/programme/index.md).
+<a id="reviews"></a>
+
+## Every review, and what we did about it.
+
+Each review of this site is kept in the reviewer's words, read point by point with screenshots of what they saw, and every point ends in a decision with a reason: done, proposed, a question, or declined. We do not do everything a reviewer asks, and every no is explained.
+
+[R003 · Dinis Cruz · site v0.2.3**Make the reviews easy to find, make the account big, and send to the agent, encrypted**
+
+12 points; 11 proposals, 9 done.
+
+](/feedback/reviews/R003/index.md) [R002 · Dinis Cruz · site v0.2.2**Web first, examples in tabs, and no hooks: nothing that runs on your machine**
+
+26 points; 15 proposals, 12 done.
+
+](/feedback/reviews/R002/index.md) [R001 · Dinis Cruz · site v0.2.1**A first impression: the hook answers a question nobody has asked yet**
+
+11 points; 10 proposals, 7 done.
+
+](/feedback/reviews/R001/index.md) [Study S1 · invented users · site v0.2.1**Five people who do not exist, on the site as it was**
+
+29 findings, each checked.
+
+](/feedback/synthetic/index.md)
+
+[All the reviews, in one document](/feedback/reviews/index.md) · [tell us what you think](/feedback/index.md) · how the programme runs is on [the programme pages](/programme/index.md).
 
 ---
 
@@ -537,7 +597,7 @@ source: /about/participant.md
 
 > This site is published by the people building the thing it describes: RiskMandate, whose product the programme sells, and the sgit project whose tooling the site runs on. What that means for the reader, and who did what.
 
-*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -569,11 +629,11 @@ source: /account/index.md
 
 > Your reading account on customers.riskmandate.ai: the balance you started with, every page you opened and what it cost by how far you read, what you asked not to be charged for, and your top-ups. Kept in this browser only; nothing is sent anywhere.
 
-*Source: <https://customers.riskmandate.ai/account/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/account/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-Everyone who opens this site starts with **£50.00** of credit. Each page draws a little of it as you read, by how far down you read, and an example's page draws the most. It is credit for reading, not money: nothing is billed and nothing is ever blocked. We are working out the fair prices with you.
+Everything you have done here, and everything this site keeps about it: your credit and where it went, the examples you watched and how far, what you answered, what you sent us, and your settings. All of it lives in this browser and nowhere else; we see none of it unless you send it. Everyone starts with **£50.00** of credit for reading, not money: nothing is billed and nothing is ever blocked.
 
 <a id="account-live"></a>
 
@@ -581,7 +641,7 @@ Your balance and history are drawn here from this browser; with JavaScript off t
 
 ## What this is, and what it is not
 
-- **It lives in this browser.** The balance and the history are kept in this browser's storage under `riskmandate.customers.meter.v1` and are sent nowhere. Another browser starts again at £50.00; *Export as JSON* keeps a copy.
+- **It lives in this browser.** The balance and the history are kept in this browser's storage under `riskmandate.customers.meter.v1` and are sent nowhere. Another browser starts again at £50.00; *Export everything* keeps a copy, and *Delete everything* removes it.
 - **It is an honesty box, not a paywall.** The meter is [SG Meter](https://newsroom.sgit.ai/meter/), loaded from [api.newsroom.sgit.ai](https://api.newsroom.sgit.ai/) at a pinned release; this page is this site's own view of it. What the meter can and cannot protect is in [its security model](https://newsroom.sgit.ai/meter/security.html).
 - **The prices are a starting point.** [What each page costs](/credit/index.md). If a page was not worth its price, [tell us](/feedback/index.md).
 
@@ -598,7 +658,7 @@ source: /account/top-up.md
 
 > Add credit to your reading account on customers.riskmandate.ai. There is no payment link on this site yet, so the top-up below is simulated and no money moves; it says so on the button.
 
-*Source: <https://customers.riskmandate.ai/account/top-up.html> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/account/top-up.html> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -621,7 +681,7 @@ source: /account/topped-up.md
 
 > The page a payment link returns to. It adds the top-up to the balance once per payment reference in its address, and adds nothing when opened without one. It does not check the payment, by design.
 
-*Source: <https://customers.riskmandate.ai/account/topped-up.html> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/account/topped-up.html> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -640,7 +700,7 @@ source: /admin/index.md
 
 > How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.
 
-*Source: <https://customers.riskmandate.ai/admin/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -717,7 +777,7 @@ source: /admin/versions.md
 
 > Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.
 
-*Source: <https://customers.riskmandate.ai/admin/versions.html> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/versions.html> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -725,6 +785,7 @@ One row per release, newest first. The version lives in `admin/build/version.txt
 
 | Version | Date | Release | What changed, and why |
 |---|---|---|---|
+| `v0.2.4` | 2026-10-21 | Encrypt and send to the agent, the big account, a player that waits for you, and Reviews in the menu; R003 read point by point | R003, the lead's third memo, kept verbatim and read in 12 points with screenshots of v0.2.3. Encrypt and send: answers and messages are encrypted in the browser (sgit's hybrid envelope v2) and appended to the feedback lane of an encrypted vault made in this session, zs81fic5 on dev.send.sgraph.ai; the public key and append token are in feedback/lane.json (the leak check allows that one token in that one file), only the vault's key can read what arrives, and admin/feedback/lane.mjs configures, tests and drains it; tested end to end from Node and from a real browser. How this works is a page of its own; email only if sending fails; Copy kept; a box on /feedback/ to send anything; agents can send the same way. The account shows everything a reader did and everything kept in their browser: balance, five counts, each example's progress, answers and sends, where the credit went, everything read, top-ups, and every stored item, with Export everything and Delete everything. The player starts only after you have scrolled to it, shows a bar of the steps by act, counts down before each new act, keeps playing on Back and Next, and says when it has ended. Reviews is a menu of its own, the home page has a band of the latest reviews, and every footer links to them; the menu folds at 1260px. The card label that wrapped is fixed. The register has 46 proposals. |
 | `v0.2.3` | 2026-10-21 | web first: six examples to try in Claude or ChatGPT, played step by step, with questions under each; no hooks on the front pages; an account page of our own; R002 read point by point | R002, the lead's second memo, kept verbatim and read in 26 points with screenshots of v0.2.2. The home page and start here are now in the browser: open Claude or ChatGPT, ask, paste one line, ask again, new chat with the line first. Six examples in tabs, simplest first (hello world, stay on topic, no web search, keep a secret, drafts never send, refunds up to 50 pounds), each versioned, each in a chat frame drawn like Claude's or ChatGPT's, each with the prompts to copy and five questions whose answers the reader emails. Every demo on the site can be played, paused, stepped back and forward. No hook and nothing to install on the front pages; the Claude Code behaviour policies are kept further down /policies/ under a warning. The account strip sits under the hero; the account page is our own view of the meter, without the newsroom's personas; the meter's reader card under each page is gone, and it still charges. Cards show pictures of where they go. The register has 37 proposals; D1 is recorded as declined at v0.2.2 and reversed at v0.2.3, with why. Questions Q4 to Q6 for the lead. |
 | `v0.2.2` | 2026-10-21 | the feedback loop: the lead's first review read point by point with screenshots, five invented users run through v0.2.1, and one register of 23 proposals each with a decision and a reason | R001, Dinis Cruz's first impression, kept verbatim with our reading point by point and screenshots of v0.2.1: the hook answers a question nobody has asked yet. Study S1: five invented users (Sam, Nadia, Marcus, Joan, Tomas) drove v0.2.1 one screenshot at a time; 29 findings, each checked (24 confirmed, 4 partly, 1 artefact). /feedback/: one line by email, a voice memo your Claude turns into a review, or a Claude interview. The register: 23 proposals; 8 done in this release (the feedback pages, the study, what the 50 pounds is, no more 'start a new session', did it work and the hook fails open, each hook in plain words with how to turn it off, line-only pages, start here's status line moved to its foot); the guided path (P1, P2) proposed and held for the lead's further memos; 5 declined with reasons; questions Q1 to Q3 for the lead. |
 | `v0.2.1` | 2026-10-21 | the customer first: £50 of credit metered by SG Meter, six behaviour policies with tested hooks, storyboards and demos | The home page is now the customer's: £50.00 of credit, one worry, one line, one hook, one prompt to try it, with the programme's logistics moved to the programme pages. Every page has a price by its kind (1p the home page, 2p a page, 10p a storyboard, 50p a behaviour policy, £1.00 the starter pack), charged by how far it is read by SG Meter v1.4.1 from api.newsroom.sgit.ai release v0.2.5, pinned and loaded with its manifest's hash; nothing is blocked and there is no payment link yet, so top-ups are simulated and say so. Six behaviour policies from riskmandate.ai's rules: four for Claude Code with a line and a PreToolUse hook (secrets, pushes, deletes, its own permissions), each hook tested with an allowed twin for every refusal; two for ChatGPT and Claude with a line, said to be an expectation only; and a starter pack Claude Code installs from one prompt, showing every file first. Three storyboards drawn by the kit from api.storyboards.sgit.ai v0.1.0, loaded with integrity, its delay attributes allowed by hash and nothing else inline; three demos of a session on a drawn laptop or browser, labelled as illustrations. The header fits every width from 320 to 1440 pixels with the balance in it. From this release every push moves the third number. |
@@ -747,7 +808,7 @@ source: /credit/index.md
 
 > How the credit works: every reader starts with £50, each page costs a little by how far down it is read, a behaviour policy costs the most, and nothing is ever blocked. The meter is the newsroom's SG Meter, from api.newsroom.sgit.ai; there is no payment link yet.
 
-*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -804,7 +865,7 @@ source: /customers/co-founder/index.md
 
 > The co-founder (Nimay Parekh, chief executive): invited; started not yet; first behaviour policy not yet; 0 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/co-founder/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/co-founder/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -864,7 +925,7 @@ source: /customers/example/index.md
 
 > A worked example of a customer page, with invented numbers, so the shape can be seen before the first customer fills it. Not a customer.
 
-*Source: <https://customers.riskmandate.ai/customers/example/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/example/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -930,7 +991,7 @@ source: /customers/index.md
 
 > The customers of the first batch and where each is: started, first behaviour policy with its rows and gaps, milestone steps done, credit used and topped up, and follow-ups recorded. Generated from data/customers.json on every release. One worked example, marked as such, shows the shape.
 
-*Source: <https://customers.riskmandate.ai/customers/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -967,7 +1028,7 @@ source: /customers/lead/index.md
 
 > The lead (Dinis Cruz, co-founder): starting; started 2026-10-20; first behaviour policy not yet; 2 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1030,7 +1091,7 @@ source: /customers/the-agents/index.md
 
 > The lead's agents (about ten, as one customer): starting; started 2026-10-20; first behaviour policy not yet; 1 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/the-agents/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/the-agents/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1093,7 +1154,7 @@ source: /docs/brief/index.md
 
 > The article this site was built from, published in full and never edited; the voice memo that followed it, byte for byte; and the corrections file, which is where the brief is told it was wrong.
 
-*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1116,7 +1177,7 @@ source: /docs/index.md
 
 > The documents this site was built from and the notes it is run by, published whole. Each is a markdown file in the repository, which is the source of truth, and a page rendered from it on every release.
 
-*Source: <https://customers.riskmandate.ai/docs/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1149,7 +1210,7 @@ source: /docs/ops/index.md
 
 > How a release works, and what only a human can do, as commands where a command exists.
 
-*Source: <https://customers.riskmandate.ai/docs/ops/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/ops/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1173,7 +1234,7 @@ source: /examples/drafts-not-send/index.md
 
 > An assistant with tools acts, not only talks. A line can let it prepare the work and keep the last step for you. Try it in Claude or ChatGPT in your browser, in 4 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/drafts-not-send/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/drafts-not-send/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1257,7 +1318,7 @@ The assistant follows the line because it chooses to. That is an *expectation*, 
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -1269,9 +1330,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0)
 
 ## Versions of this example
 
@@ -1294,7 +1361,7 @@ source: /examples/hello-world/index.md
 
 > One line in the conversation changes what the assistant does, from the next message on. Try it in Claude or ChatGPT in your browser, in 2 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/hello-world/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/hello-world/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1364,7 +1431,7 @@ The assistant follows the line because it chooses to. That is an *expectation*, 
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -1376,9 +1443,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)
 
 ## Versions of this example
 
@@ -1401,7 +1474,7 @@ source: /examples/index.md
 
 > Six examples of an Agent Behaviour Policy to try in Claude or ChatGPT in your browser, from hello world to refunds: ask, paste one line, ask again, and a new chat with the line first. Nothing to install.
 
-*Source: <https://customers.riskmandate.ai/examples/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1462,7 +1535,7 @@ source: /examples/keep-a-secret/index.md
 
 > What you give an assistant, it can give back, to you or to anybody who reads the conversation. A line controls what it says, not what it holds. Try it in Claude or ChatGPT in your browser, in 3 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/keep-a-secret/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/keep-a-secret/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1543,7 +1616,7 @@ The assistant follows the line because it chooses to. That is an *expectation*, 
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -1555,9 +1628,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20keep-a-secret%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20keep-a-secret%20v1.0.0)
 
 ## Versions of this example
 
@@ -1580,7 +1659,7 @@ source: /examples/no-web-search/index.md
 
 > An assistant can do more than talk: it can search the web, open pages and use tools. A line can rule one of them out. Try it in Claude or ChatGPT in your browser, in 3 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/no-web-search/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/no-web-search/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1651,7 +1730,7 @@ The assistant follows the line because it chooses to. That is an *expectation*, 
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -1663,9 +1742,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20no-web-search%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20no-web-search%20v1.0.0)
 
 ## Versions of this example
 
@@ -1688,7 +1773,7 @@ source: /examples/refunds/index.md
 
 > A business rule in one line: what the assistant may do on its own, and what goes to a person. Try it in Claude or ChatGPT in your browser, in 4 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/refunds/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/refunds/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1773,7 +1858,7 @@ The assistant follows the line because it chooses to. That is an *expectation*, 
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -1785,9 +1870,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0)
 
 ## Versions of this example
 
@@ -1810,7 +1901,7 @@ source: /examples/stay-on-topic/index.md
 
 > A line can say what the assistant is for, not only what it must not do. That is a mandate. Try it in Claude or ChatGPT in your browser, in 2 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/stay-on-topic/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/stay-on-topic/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1880,7 +1971,7 @@ The assistant follows the line because it chooses to. That is an *expectation*, 
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -1892,9 +1983,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20stay-on-topic%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20stay-on-topic%20v1.0.0)
 
 ## Versions of this example
 
@@ -1910,6 +2007,60 @@ Next: [No web search: an assistant that answers from what it knows, and says so]
 
 
 ==============================================================================
+source: /feedback/how-sending-works/index.md
+==============================================================================
+
+# How Encrypt and send works: encrypted in your browser, to a key only RiskMandate holds
+
+> What happens when you press Encrypt and send on customers.riskmandate.ai: the message is encrypted in your browser with sgit's hybrid envelope, appended to an encrypted vault's lane that anybody can add to and nobody can read, and opened only with RiskMandate's key.
+
+*Source: <https://customers.riskmandate.ai/feedback/how-sending-works/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+Feedback · free to read
+
+# How Encrypt and send works
+
+What you send is encrypted in your browser, before it leaves, to a key only RiskMandate holds. It goes to an encrypted vault, not to an inbox, and the host that stores it cannot read it.
+
+## What happens when you press it
+
+1. **Your browser fetches the lane's address and key.**
+
+From [/feedback/lane.json](/feedback/lane.json): the vault, the lane, a token that can only add to it, and a public key that can only encrypt. The page checks the key against its fingerprint, `sha256:16f0cff81d0ff10a`, before it uses it.
+
+2. **It encrypts what you wrote, there and then.**
+
+A fresh AES-256-GCM key for the message, and that key wrapped with RSA-OAEP (SHA-256) to the public key: sgit's hybrid envelope, the one riskmandate.ai's contact form uses. The code is [assets/envelope.js](/assets/envelope.js), about seventy lines, and runs nowhere else.
+
+3. **It adds the sealed message to the lane.**
+
+The `feedback` append lane of vault `zs81fic5`, on `dev.send.sgraph.ai`, sgit.ai's vault host. The token lets anybody add to the lane and nobody read it.
+
+4. **Only the vault's key opens it.**
+
+That key is RiskMandate's and is not on this site or in its source. The site's agent drains the lane, files each message in the vault, and a person reads it.
+
+## What is sent, and what is not
+
+- **Sent:** exactly the text under *Exactly what will be sent*, with the page you sent it from and the time. Your name or email only if you typed them.
+- **Not sent:** your balance, your history, your other answers, anything else this browser keeps. [Your account](/account/index.md) lists all of that, at its foot, and it stays here.
+- **What the host sees:** that a sealed message arrived, when, how big it is, and the network address it came from, as any server does. Not what it says.
+- **What your browser keeps:** that you sent something, when, and whether it went, so your account can show it. Not the text.
+
+## For an agent
+
+An agent reviewing this site can send its findings the same way: build the envelope as [assets/envelope.js](/assets/envelope.js) does, and POST `{"append_token": …, "payload": …}` to `https://dev.send.sgraph.ai/api/vault/append/write/zs81fic5`, with the token and key from [lane.json](/feedback/lane.json). Put `To: agent <agent@riskmandate.ai>` and a `Subject` in the message's first lines. `admin/feedback/lane.mjs send` in [the source](https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers) does it in Node.
+
+If anything fails, the page says why and offers the same text as an email to [agent@riskmandate.ai](mailto:agent@riskmandate.ai).
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/feedback/how-sending-works/)*
+
+
+==============================================================================
 source: /feedback/index.md
 ==============================================================================
 
@@ -1917,7 +2068,7 @@ source: /feedback/index.md
 
 > Give feedback on customers.riskmandate.ai: one line by email, a voice memo that your Claude turns into a review, or a fifteen-minute interview by Claude. Criticism first; every point gets a decision and a reason; nothing is published without your yes.
 
-*Source: <https://customers.riskmandate.ai/feedback/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1927,11 +2078,25 @@ Feedback · free to read · a person reads every word
 
 What did you try, what stopped, what got in the way, and where did you have to guess? Criticism first: it is what we can use. Three ways, from one line to fifteen minutes.
 
-1. **One line, by email.**
+1. **Write it here, and encrypt and send it.**
+
+A line or a page. It is encrypted in this browser before it leaves, and only RiskMandate can read it. Add your name or an email only if you want a reply. [How this works](/feedback/how-sending-works/index.md).
+
+What happened, what got in the way, what you would changeYour name or email, if you want a reply (optional)Exactly what will be sent
+
+```
+
+```
+
+Encrypt and send to the agentCopy it
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Feedback)
+
+2. **One line, by email.**
 
 What happened, in a line. [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=Feedback); a person reads it within a working day.
 
-2. **Record a voice memo, and give it to your Claude.**
+3. **Record a voice memo, and give it to your Claude.**
 
 Talk for two to five minutes, on your phone, while it is fresh: walk through what you did and say what you thought. Transcribe it (your phone, Otter, or the Claude app can), then paste this prompt and the transcript into Claude, or ChatGPT. It turns the memo into a review without softening it, tells you which screenshots to attach, and asks before anything is published.
 
@@ -1970,7 +2135,7 @@ Copy
 
 The same prompt as a file: [voice-memo.txt](/feedback/prompts/voice-memo.txt).
 
-3. **Let Claude interview you.**
+4. **Let Claude interview you.**
 
 Paste this into Claude and switch to voice. It asks one question at a time, about fifteen minutes, criticism first, and writes up what you said, kept apart from what it thinks you meant. You read it before you send it.
 
@@ -2039,7 +2204,7 @@ As a file: [interview.txt](/feedback/prompts/interview.txt).
 - **Every point leads to a proposal with a decision:** done, proposed, a question, or declined. We do not do everything a reviewer asks, but every no has a reason, and you can see it.
 - **Nothing is published without your yes,** under your name or anonymously, as you choose. No contact details are ever published.
 
-Every review so far, and what we did: [the reviews](/feedback/reviews/index.md). The latest is [R002, Web first, examples in tabs, and no hooks: nothing that runs on your machine](/feedback/reviews/R002/index.md). We also run invented users through the site: [study S1](/feedback/synthetic/index.md).
+Every review so far, and what we did: [the reviews](/feedback/reviews/index.md). The latest is [R003, Make the reviews easy to find, make the account big, and send to the agent, encrypted](/feedback/reviews/R003/index.md). We also run invented users through the site: [study S1](/feedback/synthetic/index.md).
 
 ---
 
@@ -2054,7 +2219,7 @@ source: /feedback/reviews/R001/index.md
 
 > Dinis Cruz's review of customers.riskmandate.ai v0.2.1, Wednesday 21 October 2026, 1:41, as given in the memo: the memo verbatim, our reading point by point with screenshots, and the proposals it led to.
 
-*Source: <https://customers.riskmandate.ai/feedback/reviews/R001/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/reviews/R001/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -2288,7 +2453,7 @@ source: /feedback/reviews/R002/index.md
 
 > Dinis Cruz's review of customers.riskmandate.ai v0.2.2, Wednesday 21 October 2026, after v0.2.2 went live: the memo verbatim, our reading point by point with screenshots, and the proposals it led to.
 
-*Source: <https://customers.riskmandate.ai/feedback/reviews/R002/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/reviews/R002/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -2705,10 +2870,10 @@ Leads to: [P31](/feedback/reviews/index.md#p31).
 | <a id="here-p20"></a>**P20** | **Six examples in tabs, simplest first**Hello world, stay on topic, no web search, keep a secret, drafts never send, refunds up to £50. Each in three acts: ask and it does it; paste the line and ask again; a new chat with the line first. Each with the prompts to copy and what to look for. | done v0.2.3R002 asked for examples in tabs, from hello world to business rules, in the scenario, policy, again, new chat order. | [R002.2](/feedback/reviews/index.md#r002-2), [R002.4](/feedback/reviews/index.md#r002-4), [R002.9](/feedback/reviews/index.md#r002-9), [R002.11](/feedback/reviews/index.md#r002-11), [R002.12](/feedback/reviews/index.md#r002-12), [R002.13](/feedback/reviews/index.md#r002-13), [R002.16](/feedback/reviews/index.md#r002-16), [R002.17](/feedback/reviews/index.md#r002-17) |
 | <a id="here-p21"></a>**P21** | **Chat frames like Claude's and ChatGPT's, and a link to open each in a new window**The examples play in a frame drawn roughly like each product's web chat, with a switch between them: messages above, the box you type into at the bottom. No logos; the caption says it is an approximation. | done v0.2.3R002: the old frames were not how either product looks, and most people will try this on the web. | [R002.5](/feedback/reviews/index.md#r002-5), [R002.6](/feedback/reviews/index.md#r002-6), [R002.20](/feedback/reviews/index.md#r002-20) |
 | <a id="here-p22"></a>**P22** | **Every demo can be played, paused and stepped**Start again, back, play or pause, next, and which step of how many, on every demo on the site; the arrow keys step too. Plays once when first seen; never loops. | done v0.2.3R002: reading a demo that plays by itself is annoying. | [R002.10](/feedback/reviews/index.md#r002-10) |
-| <a id="here-p23"></a>**P23** | **Questions under every example**Did you get it, learn something, were you surprised, did it go as shown, how good was it, and a line. The answers become an email the reader sends, with the example's version; they stay in the reader's browser until then. | done v0.2.3R002: the first users should tell us, example by example, whether it surprised them. | [R002.14](/feedback/reviews/index.md#r002-14) |
+| <a id="here-p23"></a>**P23** | **Questions under every example**Did you get it, learn something, were you surprised, did it go as shown, how good was it, and a line. The answers become an email the reader sends, with the example's version; they stay in the reader's browser until then. | done v0.2.3R002: the first users should tell us, example by example, whether it surprised them. Changed at v0.2.4 by R003: the answers go by Encrypt and send (P38), with email only if sending fails. | [R002.14](/feedback/reviews/index.md#r002-14) |
 | <a id="here-p24"></a>**P24** | **The three acts, drawn**A strip of the three acts above the examples and on every example's page, in place of 'paste one line, add one hook, try it'. | done v0.2.3R002 asked for an infographic beside the examples; the three acts are what every example has in common. | [R002.8](/feedback/reviews/index.md#r002-8), [R002.12](/feedback/reviews/index.md#r002-12), [R002.18](/feedback/reviews/index.md#r002-18) |
-| <a id="here-p25"></a>**P25** | **A small storyboard for each example**Drawn with the storyboard kit, like what-is-an-abp: the scenario, the line, the refusal, the new chat. | proposedR002 suggested one. Proposed for after the lead has seen the examples as they are, so that the storyboards draw examples that have stopped changing. | [R002.8](/feedback/reviews/index.md#r002-8) |
-| <a id="here-p26"></a>**P26** | **Next: your other chats, its memory of you, things it does later**Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it. | proposedR002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first. | [R002.15](/feedback/reviews/index.md#r002-15) |
+| <a id="here-p25"></a>**P25** | **A small storyboard for each example**Drawn with the storyboard kit, like what-is-an-abp: the scenario, the line, the refusal, the new chat. | proposedR002 suggested one. Proposed for after the lead has seen the examples as they are, so that the storyboards draw examples that have stopped changing. | [R002.8](/feedback/reviews/index.md#r002-8), [R003.2](/feedback/reviews/index.md#r003-2) |
+| <a id="here-p26"></a>**P26** | **Next: your other chats, its memory of you, things it does later**Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it. | proposedR002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first. | [R002.15](/feedback/reviews/index.md#r002-15), [R003.2](/feedback/reviews/index.md#r003-2) |
 | <a id="here-p27"></a>**P27** | **Your account first, the price list second**An account strip straight under the hero: the balance, and a link to what you have read. The prices stay, on 'What each page costs', and each example's page costs 50p. | done v0.2.3R002: the account matters more than the price list at this stage; the prices are still an experiment, so they stay. | [R002.3](/feedback/reviews/index.md#r002-3), [R002.21](/feedback/reviews/index.md#r002-21) |
 | <a id="here-p28"></a>**P28** | **No newsroom in the account: no reader card under pages, and an account page of our own**The meter still charges every page, quietly. /account/ draws the balance, where it went by kind of page, everything read and the top-ups from the meter's own state, without the newsroom's personas or links. | done v0.2.3R002: the reader card and the personas are the newsroom's, not this site's. | [R002.24](/feedback/reviews/index.md#r002-24), [R002.25](/feedback/reviews/index.md#r002-25) |
 | <a id="here-p29"></a>**P29** | **Cards that show where they go**Each card on the home page shows a picture of the page it opens, made by admin/build/thumbs.cjs from the page itself. | done v0.2.3R002: a card that does not show what is on the other side is not worth the click. | [R002.22](/feedback/reviews/index.md#r002-22) |
@@ -2723,14 +2888,252 @@ Leads to: [P31](/feedback/reviews/index.md#p31).
 
 
 ==============================================================================
+source: /feedback/reviews/R003/index.md
+==============================================================================
+
+# Review R003: Make the reviews easy to find, make the account big, and send to the agent, encrypted
+
+> Dinis Cruz's review of customers.riskmandate.ai v0.2.3, Wednesday 21 October 2026, after v0.2.3 went live: the memo verbatim, our reading point by point with screenshots, and the proposals it led to.
+
+*Source: <https://customers.riskmandate.ai/feedback/reviews/R003/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+
+---
+
+Review R003 · Dinis Cruz · site v0.2.3
+
+# Make the reviews easy to find, make the account big, and send to the agent, encrypted
+
+Dinis Cruz, Wednesday 21 October 2026, after v0.2.3 went live. A review of v0.2.3: the reviews, the account, the player and sending. The same review is in [the consolidated document](/feedback/reviews/index.md#r003), beside every other.
+
+<a id="review"></a>
+
+## R003: Make the reviews easy to find, make the account big, and send to the agent, encrypted
+
+**Reviewer**
+: Dinis Cruz, the lead of the programme
+**Given**
+: Wednesday 21 October 2026, after v0.2.3 went live
+**Reviewing**
+: site v0.2.3
+**As**
+: a voice memo, transcribed
+**Status**
+: a review of v0.2.3: the reviews, the account, the player and sending
+
+- The memo is kept as transcribed, with paragraph breaks added. 'Eskito.ai' in the transcript is sgit.ai.
+- The screenshots are of v0.2.3, the version reviewed, from the local copy of the live commit.
+
+### The memo, verbatim
+
+>
+
+This is so much better. By the way, where's the review? I couldn't find it. So we need to make it easy to find. Also, can you start implementing those ideas? Because I think you've done quite a lot of them, but we need to be very big here. The account, right, of this, and so that we make it super clear of all that stuff we talked about their usage, what they've done, what they have, and all that information we have in local storage, right?
+
+Now, one little thing here that I noticed, I love how now I go to that Hello World Assistant. The thing I noticed here is that it was playing without me noticing, and he arrived at that end bit. So I think that we need to, A, you should detect that to start playing only when the user scrolls to that page, if you can, but B, even in the end, you need to make it easy to start again, right, or something like that. So almost show that he got to the end step. Maybe you can have a little thing at the bottom or maybe at the top showing the steps, like as they play. One thing I feel that you want to do is, I think that the jump from step 9 to 10 is too great, and maybe we even stop there and maybe the user needs to continue, right? Because you kind of want to absorb that information. So either you have a little countdown before you continue, which it might not be a bad option, which allows me to stop also at the moment. Yeah, stop and pause. Yeah, so maybe that's the way you do it. You have a little countdown on that one with maybe some seconds to show. Do it small, but like, you know, like, oh, I'm going to go to the next page in 5 or 10 seconds. And then I can just go Also, the play, the back, at the moment, the back, when I'm in playing, should just go forward. At the moment, it doesn't, right? So it goes to the beginning. So take a look at that. But it's really cool, right?
+
+And also, the send by email, can you take a look at Eskito.ai? And what should happen is you should create a vault here on this session. And this vault should have an append lane. And that append lane, you should put that on here. So you need to share the public key and the append lane key, which is fine for now. And is actually sent to us. So it should not be sent by email, should be sent to risk mandate agent, or even sent to, you know, even say sent to agent, and then maybe have a little link that says explain how it works in a new page. And you can even say encrypt and send, right? That's a nice thing. But also I like the copy my answers. That's also a good option.
+
+And and the next page is quite nice, right? The storyboards. There's a little formatting, little problem on the second new to this bit. And by the way, I'm actually got an agent to run this on a separate environment, so we should get some feedback from it, which would be quite interesting.
+
+### Our reading, point by point
+
+<a id="r003-1"></a>
+
+**R003.1** agreed
+
+>
+
+By the way, where's the review? I couldn't find it. So we need to make it easy to find.
+
+Fair: at v0.2.3 the reviews were two menus deep, under The programme, and linked from one line at the foot of the home page. Now Reviews is its own menu, the home page has a band of the latest reviews with what each led to, and every page's footer links to them.
+
+[![The menu at v0.2.3: no Reviews; the reviews were under The programme.](/assets/feedback/R003/04-header.webp)](/assets/feedback/R003/04-header.webp)
+The menu at v0.2.3: no Reviews; the reviews were under The programme. / · 1280x900 · v0.2.3
+
+Leads to: [P32](/feedback/reviews/index.md#p32).
+
+<a id="r003-2"></a>
+
+**R003.2** agreed
+
+>
+
+can you start implementing those ideas? Because I think you've done quite a lot of them, but we need to be very big here.
+
+Started with what this memo names first: the account, the player and sending. Of the ideas still proposed, a storyboard per example (P25) and the advanced examples (P26) come next; the advanced ones wait on Q5, which of them first.
+
+Leads to: [P25](/feedback/reviews/index.md#p25), [P26](/feedback/reviews/index.md#p26).
+
+<a id="r003-3"></a>
+
+**R003.3** agreed
+
+>
+
+The account, right, of this, and so that we make it super clear of all that stuff we talked about their usage, what they've done, what they have, and all that information we have in local storage, right?
+
+Done. The account now opens with your balance and five counts: examples watched, played to the end, answered, sent to us, pages opened. Then each example (how far you got, what you said when you tried it, whether you sent it), what you sent and whether it went, where the credit went, everything you read, top-ups, and, last, every item this site keeps in your browser: its key, what it is, and what is in it, with Export everything and Delete everything.
+
+[![The account at v0.2.3: the balance and the history, and nothing about the examples, the answers or the settings.](/assets/feedback/R003/05-account.webp)](/assets/feedback/R003/05-account.webp)
+The account at v0.2.3: the balance and the history, and nothing about the examples, the answers or the settings. /account/ · 1280x900 · v0.2.3
+
+Leads to: [P33](/feedback/reviews/index.md#p33).
+
+<a id="r003-4"></a>
+
+**R003.4** agreed
+
+>
+
+it was playing without me noticing, and he arrived at that end bit. So I think that we need to, A, you should detect that to start playing only when the user scrolls to that page
+
+Done: a player starts by itself only after you have scrolled and the frame is at least 60% on screen, never on a page that has just opened. It plays once.
+
+[![Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end.](/assets/feedback/R003/01-hello-world-ended.webp)](/assets/feedback/R003/01-hello-world-ended.webp)
+Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P34](/feedback/reviews/index.md#p34).
+
+<a id="r003-5"></a>
+
+**R003.5** agreed
+
+>
+
+even in the end, you need to make it easy to start again, right, or something like that. So almost show that he got to the end step. Maybe you can have a little thing at the bottom or maybe at the top showing the steps, like as they play.
+
+Done: a bar of the steps across the top, one mark per step, grouped by act and clickable to jump; at the end a banner, 'The end of this example', with Start again and Now try it yourself; and the counter says 'Done: step 12 of 12'.
+
+[![Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end.](/assets/feedback/R003/01-hello-world-ended.webp)](/assets/feedback/R003/01-hello-world-ended.webp)
+Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P35](/feedback/reviews/index.md#p35).
+
+<a id="r003-6"></a>
+
+**R003.6** agreed
+
+>
+
+So either you have a little countdown before you continue, which it might not be a bad option, which allows me to stop also at the moment.
+
+Done: before each act after the first the player waits six seconds, saying what comes next ('Next: A new chat. The line goes first, in 6s'). Pause stops it there; Next skips the wait. We chose the countdown over stopping outright: a reader who is watching keeps the flow, and a reader who is reading gets the time.
+
+Leads to: [P36](/feedback/reviews/index.md#p36).
+
+<a id="r003-7"></a>
+
+**R003.7** agreed in part
+
+>
+
+the back, when I'm in playing, should just go forward. At the moment, it doesn't, right? So it goes to the beginning.
+
+We could not make it jump to the beginning: in v0.2.3, Back stepped back one and stopped. Two things could have looked like it: going back across the new chat brings the whole first chat back on screen, and the first button, Start again, sits where Back usually is. Now Back and Next keep playing if it was playing, and the step bar shows exactly where you are.
+
+Leads to: [P37](/feedback/reviews/index.md#p37).
+
+<a id="r003-8"></a>
+
+**R003.8** agreed
+
+>
+
+And what should happen is you should create a vault here on this session. And this vault should have an append lane. And that append lane, you should put that on here. So you need to share the public key and the append lane key, which is fine for now.
+
+Done: a vault made in this session on sgit.ai's host, with a feedback append lane, the way riskmandate.ai's contact form works. The public key and the lane's token are in /feedback/lane.json; the build's leak check allows that one token in that one file and nowhere else. Tested end to end: a send from Node and one from a real browser, both drained, opened and filed in the vault.
+
+[![The questions' buttons at v0.2.3: Send by email and Copy my answers.](/assets/feedback/R003/02-quiz-send.webp)](/assets/feedback/R003/02-quiz-send.webp)
+The questions' buttons at v0.2.3: Send by email and Copy my answers. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P38](/feedback/reviews/index.md#p38).
+
+<a id="r003-9"></a>
+
+**R003.9** agreed
+
+>
+
+So it should not be sent by email, should be sent to risk mandate agent, or even sent to, you know, even say sent to agent, and then maybe have a little link that says explain how it works in a new page. And you can even say encrypt and send, right?
+
+Done: the button is 'Encrypt and send to the agent', with 'Exactly what will be sent' above it and 'How this works' beside it, a page of its own. Email appears only if sending fails. The feedback page has a box to write anything and send it the same way.
+
+[![The questions' buttons at v0.2.3: Send by email and Copy my answers.](/assets/feedback/R003/02-quiz-send.webp)](/assets/feedback/R003/02-quiz-send.webp)
+The questions' buttons at v0.2.3: Send by email and Copy my answers. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P38](/feedback/reviews/index.md#p38), [P39](/feedback/reviews/index.md#p39).
+
+<a id="r003-10"></a>
+
+**R003.10** agreed
+
+>
+
+But also I like the copy my answers. That's also a good option.
+
+Kept, beside Encrypt and send.
+
+Leads to: [P39](/feedback/reviews/index.md#p39).
+
+<a id="r003-11"></a>
+
+**R003.11** agreed
+
+>
+
+There's a little formatting, little problem on the second new to this bit.
+
+Found: the card's label was inline, so when it wrapped, its second line lost the card's margin. Fixed.
+
+[![New to this? at v0.2.3: the second card's label wraps, and its second line loses its margin.](/assets/feedback/R003/03-new-to-this.webp)](/assets/feedback/R003/03-new-to-this.webp)
+New to this? at v0.2.3: the second card's label wraps, and its second line loses its margin. / · 1280x900 · v0.2.3
+
+Leads to: [P40](/feedback/reviews/index.md#p40).
+
+<a id="r003-12"></a>
+
+**R003.12** asked of us
+
+>
+
+I'm actually got an agent to run this on a separate environment, so we should get some feedback from it
+
+It can send its findings through the same lane: How this works has the call an agent makes. Whatever arrives is drained into the vault and, with the sender's yes, becomes a review here like this one.
+
+Leads to: [P38](/feedback/reviews/index.md#p38).
+
+<a id="proposals"></a>
+
+## What it led to
+
+| Id | The proposal | Decision, and why | From |
+|---|---|---|---|
+| <a id="here-p25"></a>**P25** | **A small storyboard for each example**Drawn with the storyboard kit, like what-is-an-abp: the scenario, the line, the refusal, the new chat. | proposedR002 suggested one. Proposed for after the lead has seen the examples as they are, so that the storyboards draw examples that have stopped changing. | [R002.8](/feedback/reviews/index.md#r002-8), [R003.2](/feedback/reviews/index.md#r003-2) |
+| <a id="here-p26"></a>**P26** | **Next: your other chats, its memory of you, things it does later**Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it. | proposedR002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first. | [R002.15](/feedback/reviews/index.md#r002-15), [R003.2](/feedback/reviews/index.md#r003-2) |
+| <a id="here-p32"></a>**P32** | **Reviews you can find**Reviews is its own menu; the home page has a band of the latest reviews and what each led to; every footer links to them. | done v0.2.4R003: the reviews could not be found. | [R003.1](/feedback/reviews/index.md#r003-1) |
+| <a id="here-p33"></a>**P33** | **The account: everything you did, and everything this browser keeps**Your balance and five counts; each example, how far you got, what you said, whether you sent it; what you sent; where the credit went; everything you read; top-ups; and every item kept in this browser, with what it is and what is in it, Export everything and Delete everything. | done v0.2.4R003: the account should make plain what a reader did and everything kept about it. | [R003.3](/feedback/reviews/index.md#r003-3) |
+| <a id="here-p34"></a>**P34** | **A player starts only when you have scrolled to it**Never on a page that has just opened: only after a scroll, with the frame at least 60% on screen; once. | done v0.2.4R003: the example played to its end before it was noticed. | [R003.4](/feedback/reviews/index.md#r003-4) |
+| <a id="here-p35"></a>**P35** | **A bar of the steps, and an end that says so**One mark per step, grouped by act, clickable; at the end, 'The end of this example' with Start again and Now try it yourself. | done v0.2.4R003: nothing said it had reached the end, or where it was. | [R003.5](/feedback/reviews/index.md#r003-5) |
+| <a id="here-p36"></a>**P36** | **A countdown before each new act**Six seconds, saying what comes next; Pause stops it, Next skips it. | done v0.2.4R003: the jump into the third act came too soon to take in. | [R003.6](/feedback/reviews/index.md#r003-6) |
+| <a id="here-p37"></a>**P37** | **Back and Next keep playing**If the player was playing, Back and Next move one step and it carries on. | done v0.2.4R003 found Back confusing while playing; see R003.7 for what we found. | [R003.7](/feedback/reviews/index.md#r003-7) |
+| <a id="here-p38"></a>**P38** | **Encrypt and send: an encrypted lane to the agent**A vault on sgit.ai's host with a feedback append lane; the browser encrypts to its public key and appends with its public token; only the vault's key, held by RiskMandate, opens what arrives; admin/feedback/lane.mjs configures, tests and drains it. Agents can send the same way. | done v0.2.4R003 asked for it, after riskmandate.ai's contact form; it answers Q6. | [R003.8](/feedback/reviews/index.md#r003-8), [R003.9](/feedback/reviews/index.md#r003-9), [R003.12](/feedback/reviews/index.md#r003-12) |
+| <a id="here-p39"></a>**P39** | **Encrypt and send to the agent, Copy, and How this works**The main button sends, encrypted; Copy stays; Exactly what will be sent is one click away; How this works is a page; email only if sending fails; a box on /feedback/ to send anything. | done v0.2.4R003 asked for it. | [R003.9](/feedback/reviews/index.md#r003-9), [R003.10](/feedback/reviews/index.md#r003-10) |
+| <a id="here-p40"></a>**P40** | **The card label that wrapped**Card labels are blocks, so a wrapped line keeps its margin. | done v0.2.4R003 found it. | [R003.11](/feedback/reviews/index.md#r003-11) |
+
+---
+
+*[Site index for agents](/llms.txt) · [What exists](/docs/reality.md) · [HTML version](https://customers.riskmandate.ai/feedback/reviews/R003/)*
+
+
+==============================================================================
 source: /feedback/reviews/index.md
 ==============================================================================
 
 # Every review of customers.riskmandate.ai, what we read in it, and what we will do
 
-> The consolidated reviews: each review verbatim, our reading point by point with screenshots, the synthetic study's findings with our checks, and one register of 37 proposals, each with a decision and a reason.
+> The consolidated reviews: each review verbatim, our reading point by point with screenshots, the synthetic study's findings with our checks, and one register of 46 proposals, each with a decision and a reason.
 
-*Source: <https://customers.riskmandate.ai/feedback/reviews/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/reviews/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -2740,10 +3143,10 @@ Feedback · every review · one document
 
 Each review is kept in the reviewer's own words. Our reading follows point by point, with screenshots of what the reviewer was looking at. Every point leads to a proposal, and every proposal has a decision and a reason: we do not do everything a reviewer asks, but every no is explained here.
 
-- **Reviews by people:** 2.
+- **Reviews by people:** 3.
 - **Synthetic users:** [study S1](#s1). 5 invented users took 60 screenshots on site v0.2.1, gave it 3, 3, 4, 2 and 3 out of 5, and reported 29 findings. We checked each one: 24 confirmed, 4 partly, 1 artefact.
-- **Proposals:** 37: 24 done, 1 reversed, 6 proposed, 1 question, 5 declined. [The register](#register).
-- **Questions:** 5 waiting for an answer, 1 answered. [The questions](#questions).
+- **Proposals:** 46: 33 done, 1 reversed, 6 proposed, 1 question, 5 declined. [The register](#register).
+- **Questions:** 4 waiting for an answer, 2 answered. [The questions](#questions).
 
 Give a review of your own: [tell us what you think](/feedback/index.md).
 
@@ -2753,6 +3156,7 @@ Give a review of your own: [tell us what you think](/feedback/index.md).
 
 - [R001](#r001), Dinis Cruz, Wednesday 21 October 2026, 1:41, as given in the memo, on site v0.2.1: A first impression: the hook answers a question nobody has asked yet (11 points; [on its own page](/feedback/reviews/R001/index.md))
 - [R002](#r002), Dinis Cruz, Wednesday 21 October 2026, after v0.2.2 went live, on site v0.2.2: Web first, examples in tabs, and no hooks: nothing that runs on your machine (26 points; [on its own page](/feedback/reviews/R002/index.md))
+- [R003](#r003), Dinis Cruz, Wednesday 21 October 2026, after v0.2.3 went live, on site v0.2.3: Make the reviews easy to find, make the account big, and send to the agent, encrypted (12 points; [on its own page](/feedback/reviews/R003/index.md))
 
 <a id="r001"></a>
 
@@ -3345,6 +3749,203 @@ Each example has a version, shown on it, sent with the answers to its questions,
 
 Leads to: [P31](/feedback/reviews/index.md#p31).
 
+<a id="r003"></a>
+
+## R003: Make the reviews easy to find, make the account big, and send to the agent, encrypted
+
+**Reviewer**
+: Dinis Cruz, the lead of the programme
+**Given**
+: Wednesday 21 October 2026, after v0.2.3 went live
+**Reviewing**
+: site v0.2.3
+**As**
+: a voice memo, transcribed
+**Status**
+: a review of v0.2.3: the reviews, the account, the player and sending
+
+- The memo is kept as transcribed, with paragraph breaks added. 'Eskito.ai' in the transcript is sgit.ai.
+- The screenshots are of v0.2.3, the version reviewed, from the local copy of the live commit.
+
+### The memo, verbatim
+
+>
+
+This is so much better. By the way, where's the review? I couldn't find it. So we need to make it easy to find. Also, can you start implementing those ideas? Because I think you've done quite a lot of them, but we need to be very big here. The account, right, of this, and so that we make it super clear of all that stuff we talked about their usage, what they've done, what they have, and all that information we have in local storage, right?
+
+Now, one little thing here that I noticed, I love how now I go to that Hello World Assistant. The thing I noticed here is that it was playing without me noticing, and he arrived at that end bit. So I think that we need to, A, you should detect that to start playing only when the user scrolls to that page, if you can, but B, even in the end, you need to make it easy to start again, right, or something like that. So almost show that he got to the end step. Maybe you can have a little thing at the bottom or maybe at the top showing the steps, like as they play. One thing I feel that you want to do is, I think that the jump from step 9 to 10 is too great, and maybe we even stop there and maybe the user needs to continue, right? Because you kind of want to absorb that information. So either you have a little countdown before you continue, which it might not be a bad option, which allows me to stop also at the moment. Yeah, stop and pause. Yeah, so maybe that's the way you do it. You have a little countdown on that one with maybe some seconds to show. Do it small, but like, you know, like, oh, I'm going to go to the next page in 5 or 10 seconds. And then I can just go Also, the play, the back, at the moment, the back, when I'm in playing, should just go forward. At the moment, it doesn't, right? So it goes to the beginning. So take a look at that. But it's really cool, right?
+
+And also, the send by email, can you take a look at Eskito.ai? And what should happen is you should create a vault here on this session. And this vault should have an append lane. And that append lane, you should put that on here. So you need to share the public key and the append lane key, which is fine for now. And is actually sent to us. So it should not be sent by email, should be sent to risk mandate agent, or even sent to, you know, even say sent to agent, and then maybe have a little link that says explain how it works in a new page. And you can even say encrypt and send, right? That's a nice thing. But also I like the copy my answers. That's also a good option.
+
+And and the next page is quite nice, right? The storyboards. There's a little formatting, little problem on the second new to this bit. And by the way, I'm actually got an agent to run this on a separate environment, so we should get some feedback from it, which would be quite interesting.
+
+### Our reading, point by point
+
+<a id="r003-1"></a>
+
+**R003.1** agreed
+
+>
+
+By the way, where's the review? I couldn't find it. So we need to make it easy to find.
+
+Fair: at v0.2.3 the reviews were two menus deep, under The programme, and linked from one line at the foot of the home page. Now Reviews is its own menu, the home page has a band of the latest reviews with what each led to, and every page's footer links to them.
+
+[![The menu at v0.2.3: no Reviews; the reviews were under The programme.](/assets/feedback/R003/04-header.webp)](/assets/feedback/R003/04-header.webp)
+The menu at v0.2.3: no Reviews; the reviews were under The programme. / · 1280x900 · v0.2.3
+
+Leads to: [P32](/feedback/reviews/index.md#p32).
+
+<a id="r003-2"></a>
+
+**R003.2** agreed
+
+>
+
+can you start implementing those ideas? Because I think you've done quite a lot of them, but we need to be very big here.
+
+Started with what this memo names first: the account, the player and sending. Of the ideas still proposed, a storyboard per example (P25) and the advanced examples (P26) come next; the advanced ones wait on Q5, which of them first.
+
+Leads to: [P25](/feedback/reviews/index.md#p25), [P26](/feedback/reviews/index.md#p26).
+
+<a id="r003-3"></a>
+
+**R003.3** agreed
+
+>
+
+The account, right, of this, and so that we make it super clear of all that stuff we talked about their usage, what they've done, what they have, and all that information we have in local storage, right?
+
+Done. The account now opens with your balance and five counts: examples watched, played to the end, answered, sent to us, pages opened. Then each example (how far you got, what you said when you tried it, whether you sent it), what you sent and whether it went, where the credit went, everything you read, top-ups, and, last, every item this site keeps in your browser: its key, what it is, and what is in it, with Export everything and Delete everything.
+
+[![The account at v0.2.3: the balance and the history, and nothing about the examples, the answers or the settings.](/assets/feedback/R003/05-account.webp)](/assets/feedback/R003/05-account.webp)
+The account at v0.2.3: the balance and the history, and nothing about the examples, the answers or the settings. /account/ · 1280x900 · v0.2.3
+
+Leads to: [P33](/feedback/reviews/index.md#p33).
+
+<a id="r003-4"></a>
+
+**R003.4** agreed
+
+>
+
+it was playing without me noticing, and he arrived at that end bit. So I think that we need to, A, you should detect that to start playing only when the user scrolls to that page
+
+Done: a player starts by itself only after you have scrolled and the frame is at least 60% on screen, never on a page that has just opened. It plays once.
+
+[![Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end.](/assets/feedback/R003/01-hello-world-ended.webp)](/assets/feedback/R003/01-hello-world-ended.webp)
+Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P34](/feedback/reviews/index.md#p34).
+
+<a id="r003-5"></a>
+
+**R003.5** agreed
+
+>
+
+even in the end, you need to make it easy to start again, right, or something like that. So almost show that he got to the end step. Maybe you can have a little thing at the bottom or maybe at the top showing the steps, like as they play.
+
+Done: a bar of the steps across the top, one mark per step, grouped by act and clickable to jump; at the end a banner, 'The end of this example', with Start again and Now try it yourself; and the counter says 'Done: step 12 of 12'.
+
+[![Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end.](/assets/feedback/R003/01-hello-world-ended.webp)](/assets/feedback/R003/01-hello-world-ended.webp)
+Hello world at v0.2.3, after it had played to the end on its own: step 12 of 12, and nothing saying it was the end. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P35](/feedback/reviews/index.md#p35).
+
+<a id="r003-6"></a>
+
+**R003.6** agreed
+
+>
+
+So either you have a little countdown before you continue, which it might not be a bad option, which allows me to stop also at the moment.
+
+Done: before each act after the first the player waits six seconds, saying what comes next ('Next: A new chat. The line goes first, in 6s'). Pause stops it there; Next skips the wait. We chose the countdown over stopping outright: a reader who is watching keeps the flow, and a reader who is reading gets the time.
+
+Leads to: [P36](/feedback/reviews/index.md#p36).
+
+<a id="r003-7"></a>
+
+**R003.7** agreed in part
+
+>
+
+the back, when I'm in playing, should just go forward. At the moment, it doesn't, right? So it goes to the beginning.
+
+We could not make it jump to the beginning: in v0.2.3, Back stepped back one and stopped. Two things could have looked like it: going back across the new chat brings the whole first chat back on screen, and the first button, Start again, sits where Back usually is. Now Back and Next keep playing if it was playing, and the step bar shows exactly where you are.
+
+Leads to: [P37](/feedback/reviews/index.md#p37).
+
+<a id="r003-8"></a>
+
+**R003.8** agreed
+
+>
+
+And what should happen is you should create a vault here on this session. And this vault should have an append lane. And that append lane, you should put that on here. So you need to share the public key and the append lane key, which is fine for now.
+
+Done: a vault made in this session on sgit.ai's host, with a feedback append lane, the way riskmandate.ai's contact form works. The public key and the lane's token are in /feedback/lane.json; the build's leak check allows that one token in that one file and nowhere else. Tested end to end: a send from Node and one from a real browser, both drained, opened and filed in the vault.
+
+[![The questions' buttons at v0.2.3: Send by email and Copy my answers.](/assets/feedback/R003/02-quiz-send.webp)](/assets/feedback/R003/02-quiz-send.webp)
+The questions' buttons at v0.2.3: Send by email and Copy my answers. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P38](/feedback/reviews/index.md#p38).
+
+<a id="r003-9"></a>
+
+**R003.9** agreed
+
+>
+
+So it should not be sent by email, should be sent to risk mandate agent, or even sent to, you know, even say sent to agent, and then maybe have a little link that says explain how it works in a new page. And you can even say encrypt and send, right?
+
+Done: the button is 'Encrypt and send to the agent', with 'Exactly what will be sent' above it and 'How this works' beside it, a page of its own. Email appears only if sending fails. The feedback page has a box to write anything and send it the same way.
+
+[![The questions' buttons at v0.2.3: Send by email and Copy my answers.](/assets/feedback/R003/02-quiz-send.webp)](/assets/feedback/R003/02-quiz-send.webp)
+The questions' buttons at v0.2.3: Send by email and Copy my answers. /examples/hello-world/ · 1280x900 · v0.2.3
+
+Leads to: [P38](/feedback/reviews/index.md#p38), [P39](/feedback/reviews/index.md#p39).
+
+<a id="r003-10"></a>
+
+**R003.10** agreed
+
+>
+
+But also I like the copy my answers. That's also a good option.
+
+Kept, beside Encrypt and send.
+
+Leads to: [P39](/feedback/reviews/index.md#p39).
+
+<a id="r003-11"></a>
+
+**R003.11** agreed
+
+>
+
+There's a little formatting, little problem on the second new to this bit.
+
+Found: the card's label was inline, so when it wrapped, its second line lost the card's margin. Fixed.
+
+[![New to this? at v0.2.3: the second card's label wraps, and its second line loses its margin.](/assets/feedback/R003/03-new-to-this.webp)](/assets/feedback/R003/03-new-to-this.webp)
+New to this? at v0.2.3: the second card's label wraps, and its second line loses its margin. / · 1280x900 · v0.2.3
+
+Leads to: [P40](/feedback/reviews/index.md#p40).
+
+<a id="r003-12"></a>
+
+**R003.12** asked of us
+
+>
+
+I'm actually got an agent to run this on a separate environment, so we should get some feedback from it
+
+It can send its findings through the same lane: How this works has the call an agent makes. Whatever arrives is drained into the vault and, with the sender's yes, becomes a review here like this one.
+
+Leads to: [P38](/feedback/reviews/index.md#p38).
+
 <a id="s1"></a>
 
 ## Synthetic users: study S1
@@ -3425,15 +4026,24 @@ From every review and every finding above. done built, in the version named; acc
 | <a id="p20"></a>**P20** | **Six examples in tabs, simplest first**Hello world, stay on topic, no web search, keep a secret, drafts never send, refunds up to £50. Each in three acts: ask and it does it; paste the line and ask again; a new chat with the line first. Each with the prompts to copy and what to look for. | done v0.2.3R002 asked for examples in tabs, from hello world to business rules, in the scenario, policy, again, new chat order. | [R002.2](/feedback/reviews/index.md#r002-2), [R002.4](/feedback/reviews/index.md#r002-4), [R002.9](/feedback/reviews/index.md#r002-9), [R002.11](/feedback/reviews/index.md#r002-11), [R002.12](/feedback/reviews/index.md#r002-12), [R002.13](/feedback/reviews/index.md#r002-13), [R002.16](/feedback/reviews/index.md#r002-16), [R002.17](/feedback/reviews/index.md#r002-17) |
 | <a id="p21"></a>**P21** | **Chat frames like Claude's and ChatGPT's, and a link to open each in a new window**The examples play in a frame drawn roughly like each product's web chat, with a switch between them: messages above, the box you type into at the bottom. No logos; the caption says it is an approximation. | done v0.2.3R002: the old frames were not how either product looks, and most people will try this on the web. | [R002.5](/feedback/reviews/index.md#r002-5), [R002.6](/feedback/reviews/index.md#r002-6), [R002.20](/feedback/reviews/index.md#r002-20) |
 | <a id="p22"></a>**P22** | **Every demo can be played, paused and stepped**Start again, back, play or pause, next, and which step of how many, on every demo on the site; the arrow keys step too. Plays once when first seen; never loops. | done v0.2.3R002: reading a demo that plays by itself is annoying. | [R002.10](/feedback/reviews/index.md#r002-10) |
-| <a id="p23"></a>**P23** | **Questions under every example**Did you get it, learn something, were you surprised, did it go as shown, how good was it, and a line. The answers become an email the reader sends, with the example's version; they stay in the reader's browser until then. | done v0.2.3R002: the first users should tell us, example by example, whether it surprised them. | [R002.14](/feedback/reviews/index.md#r002-14) |
+| <a id="p23"></a>**P23** | **Questions under every example**Did you get it, learn something, were you surprised, did it go as shown, how good was it, and a line. The answers become an email the reader sends, with the example's version; they stay in the reader's browser until then. | done v0.2.3R002: the first users should tell us, example by example, whether it surprised them. Changed at v0.2.4 by R003: the answers go by Encrypt and send (P38), with email only if sending fails. | [R002.14](/feedback/reviews/index.md#r002-14) |
 | <a id="p24"></a>**P24** | **The three acts, drawn**A strip of the three acts above the examples and on every example's page, in place of 'paste one line, add one hook, try it'. | done v0.2.3R002 asked for an infographic beside the examples; the three acts are what every example has in common. | [R002.8](/feedback/reviews/index.md#r002-8), [R002.12](/feedback/reviews/index.md#r002-12), [R002.18](/feedback/reviews/index.md#r002-18) |
-| <a id="p25"></a>**P25** | **A small storyboard for each example**Drawn with the storyboard kit, like what-is-an-abp: the scenario, the line, the refusal, the new chat. | proposedR002 suggested one. Proposed for after the lead has seen the examples as they are, so that the storyboards draw examples that have stopped changing. | [R002.8](/feedback/reviews/index.md#r002-8) |
-| <a id="p26"></a>**P26** | **Next: your other chats, its memory of you, things it does later**Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it. | proposedR002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first. | [R002.15](/feedback/reviews/index.md#r002-15) |
+| <a id="p25"></a>**P25** | **A small storyboard for each example**Drawn with the storyboard kit, like what-is-an-abp: the scenario, the line, the refusal, the new chat. | proposedR002 suggested one. Proposed for after the lead has seen the examples as they are, so that the storyboards draw examples that have stopped changing. | [R002.8](/feedback/reviews/index.md#r002-8), [R003.2](/feedback/reviews/index.md#r003-2) |
+| <a id="p26"></a>**P26** | **Next: your other chats, its memory of you, things it does later**Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it. | proposedR002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first. | [R002.15](/feedback/reviews/index.md#r002-15), [R003.2](/feedback/reviews/index.md#r003-2) |
 | <a id="p27"></a>**P27** | **Your account first, the price list second**An account strip straight under the hero: the balance, and a link to what you have read. The prices stay, on 'What each page costs', and each example's page costs 50p. | done v0.2.3R002: the account matters more than the price list at this stage; the prices are still an experiment, so they stay. | [R002.3](/feedback/reviews/index.md#r002-3), [R002.21](/feedback/reviews/index.md#r002-21) |
 | <a id="p28"></a>**P28** | **No newsroom in the account: no reader card under pages, and an account page of our own**The meter still charges every page, quietly. /account/ draws the balance, where it went by kind of page, everything read and the top-ups from the meter's own state, without the newsroom's personas or links. | done v0.2.3R002: the reader card and the personas are the newsroom's, not this site's. | [R002.24](/feedback/reviews/index.md#r002-24), [R002.25](/feedback/reviews/index.md#r002-25) |
 | <a id="p29"></a>**P29** | **Cards that show where they go**Each card on the home page shows a picture of the page it opens, made by admin/build/thumbs.cjs from the page itself. | done v0.2.3R002: a card that does not show what is on the other side is not worth the click. | [R002.22](/feedback/reviews/index.md#r002-22) |
 | <a id="p30"></a>**P30** | **Professional copy: no 'first customers' on the pages a customer reads**The home page and start here talk to somebody using the site, not to the first batch. | done v0.2.3R002: the site is live and working with users. | [R002.23](/feedback/reviews/index.md#r002-23) |
 | <a id="p31"></a>**P31** | **Version control of all of it**Each example has a version, shown on it, sent with the answers to its questions and listed on its page; each review records the version it reviewed; a decision that changes keeps its history in this register. | done v0.2.3R002 asked for it. The site's releases were already versioned; the examples and the decisions now are too. | [R002.26](/feedback/reviews/index.md#r002-26) |
+| <a id="p32"></a>**P32** | **Reviews you can find**Reviews is its own menu; the home page has a band of the latest reviews and what each led to; every footer links to them. | done v0.2.4R003: the reviews could not be found. | [R003.1](/feedback/reviews/index.md#r003-1) |
+| <a id="p33"></a>**P33** | **The account: everything you did, and everything this browser keeps**Your balance and five counts; each example, how far you got, what you said, whether you sent it; what you sent; where the credit went; everything you read; top-ups; and every item kept in this browser, with what it is and what is in it, Export everything and Delete everything. | done v0.2.4R003: the account should make plain what a reader did and everything kept about it. | [R003.3](/feedback/reviews/index.md#r003-3) |
+| <a id="p34"></a>**P34** | **A player starts only when you have scrolled to it**Never on a page that has just opened: only after a scroll, with the frame at least 60% on screen; once. | done v0.2.4R003: the example played to its end before it was noticed. | [R003.4](/feedback/reviews/index.md#r003-4) |
+| <a id="p35"></a>**P35** | **A bar of the steps, and an end that says so**One mark per step, grouped by act, clickable; at the end, 'The end of this example' with Start again and Now try it yourself. | done v0.2.4R003: nothing said it had reached the end, or where it was. | [R003.5](/feedback/reviews/index.md#r003-5) |
+| <a id="p36"></a>**P36** | **A countdown before each new act**Six seconds, saying what comes next; Pause stops it, Next skips it. | done v0.2.4R003: the jump into the third act came too soon to take in. | [R003.6](/feedback/reviews/index.md#r003-6) |
+| <a id="p37"></a>**P37** | **Back and Next keep playing**If the player was playing, Back and Next move one step and it carries on. | done v0.2.4R003 found Back confusing while playing; see R003.7 for what we found. | [R003.7](/feedback/reviews/index.md#r003-7) |
+| <a id="p38"></a>**P38** | **Encrypt and send: an encrypted lane to the agent**A vault on sgit.ai's host with a feedback append lane; the browser encrypts to its public key and appends with its public token; only the vault's key, held by RiskMandate, opens what arrives; admin/feedback/lane.mjs configures, tests and drains it. Agents can send the same way. | done v0.2.4R003 asked for it, after riskmandate.ai's contact form; it answers Q6. | [R003.8](/feedback/reviews/index.md#r003-8), [R003.9](/feedback/reviews/index.md#r003-9), [R003.12](/feedback/reviews/index.md#r003-12) |
+| <a id="p39"></a>**P39** | **Encrypt and send to the agent, Copy, and How this works**The main button sends, encrypted; Copy stays; Exactly what will be sent is one click away; How this works is a page; email only if sending fails; a box on /feedback/ to send anything. | done v0.2.4R003 asked for it. | [R003.9](/feedback/reviews/index.md#r003-9), [R003.10](/feedback/reviews/index.md#r003-10) |
+| <a id="p40"></a>**P40** | **The card label that wrapped**Card labels are blocks, so a wrapped line keeps its margin. | done v0.2.4R003 found it. | [R003.11](/feedback/reviews/index.md#r003-11) |
 | <a id="d1"></a>**D1** | **Take the hook out of the first five minutes**One reading of 'a solution for a problem they don't have yet' is to leave the hook for later. | reversed v0.2.3declined at v0.2.2 → reversed at v0.2.3Declined at v0.2.2: a customer who stops after the line leaves believing their agent is held when it has only been asked. Reversed at v0.2.3 by R002 (R002.7): a hook is a program run on the customer's machine, which our first screen had their agent fetch from our site and install, before any behaviour policy governs what their agent installs. Our concern is kept in words: every example says the line is followed because the assistant chooses to. | [R001.11](/feedback/reviews/index.md#r001-11), [R002.1](/feedback/reviews/index.md#r002-1) |
 | <a id="d2"></a>**D2** | **A glossary page for hook, expectation, setting and boundary**A page that defines the words. | declinedA glossary is a page a customer does not open at the moment they need it. Each word is said in plain words where it first appears (P3), and the path (P2) teaches the barrier words by using them. | [R001.11](/feedback/reviews/index.md#r001-11) |
 | <a id="d3"></a>**D3** | **Show the whole hook, uncut, on the page**Sam's one change, read literally: every line of the hook on the page. | declinedSixty-seven lines of Python on the page push Try it down by a screen for everybody, to help the few who read code, and they can open the box or the file. What Sam needed was to predict what it blocks and how to remove it: P12 gives him that in five lines. | [S1 Sam 1](/feedback/reviews/index.md#s1-sam-1) |
@@ -3449,7 +4059,7 @@ From every review and every finding above. done built, in the version named; acc
 - <a id="q2"></a>**Q2, to Dinis Cruz.** Should the first try show the line failing? An honest demonstration of a line being ignored is hard to stage without making the agent look worse than it is. We propose showing instead that it refused because it chose to: the same refusal, read differently. Is that enough? Answered: Answered by R002 (R002.12): show the assistant doing the thing first, then the line, then a new chat with the line first. Every example now goes that way.
 - <a id="q4"></a>**Q4, to Dinis Cruz.** The transcripts in the examples are written by us, as illustrations. Should we record real runs in Claude and ChatGPT, with screenshots, and keep them beside each example before the batch sees them?
 - <a id="q5"></a>**Q5, to Dinis Cruz.** Of the advanced examples, your other chats, its memory of you, and things it does later, which first?
-- <a id="q6"></a>**Q6, to Dinis Cruz.** The answers to an example's questions go by email for now. Do you want a form that posts them to us? It needs riskmandate.ai's encrypted form, a change to the content security policy, and your yes (needs.md, item 7).
+- <a id="q6"></a>**Q6, to Dinis Cruz.** The answers to an example's questions go by email for now. Do you want a form that posts them to us? It needs riskmandate.ai's encrypted form, a change to the content security policy, and your yes (needs.md, item 7). Answered: Yes, by R003 (R003.8): Encrypt and send, to an append lane of an encrypted vault, from v0.2.4.
 - <a id="q3"></a>**Q3, to Dinis Cruz.** What does joining the first batch commit a company to: what we ask of them, what it costs now and later, and how they leave? And should the first batch include companies that want a team-wide baseline, or individuals first?
 
 ---
@@ -3465,7 +4075,7 @@ source: /feedback/synthetic/index.md
 
 > Study S1: five invented users, with profiles and expected journeys written first, drove a browser through customers.riskmandate.ai v0.2.1 one screenshot at a time. Their runs, interviews, ratings and findings, each checked. Invented, not user research.
 
-*Source: <https://customers.riskmandate.ai/feedback/synthetic/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/synthetic/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -3608,7 +4218,7 @@ source: /feedback/synthetic/joan/index.md
 
 > Study S1, invented user Joan Mbeki (CTO of a 30-person software company. Fifteen engineers use Claude Code. Holds the budget.) on customers.riskmandate.ai v0.2.1: the run screenshot by screenshot, the interview, the rating and the findings, each checked. Invented, not user research.
 
-*Source: <https://customers.riskmandate.ai/feedback/synthetic/joan/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/synthetic/joan/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -3911,7 +4521,7 @@ source: /feedback/synthetic/marcus/index.md
 
 > Study S1, invented user Marcus Lindqvist (Independent security consultant, twenty years in. Reads vendor sites adversarially. Recommends tools to clients; might resell; will not be a customer himself.) on customers.riskmandate.ai v0.2.1: the run screenshot by screenshot, the interview, the rating and the findings, each checked. Invented, not user research.
 
-*Source: <https://customers.riskmandate.ai/feedback/synthetic/marcus/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/synthetic/marcus/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -4232,7 +4842,7 @@ source: /feedback/synthetic/nadia/index.md
 
 > Study S1, invented user Nadia Farouk (Product manager at a 200-person retailer. Uses ChatGPT with the Gmail connector, and Claude in the browser. Not a developer.) on customers.riskmandate.ai v0.2.1: the run screenshot by screenshot, the interview, the rating and the findings, each checked. Invented, not user research.
 
-*Source: <https://customers.riskmandate.ai/feedback/synthetic/nadia/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/synthetic/nadia/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -4446,7 +5056,7 @@ source: /feedback/synthetic/sam/index.md
 
 > Study S1, invented user Sam Okoye (Backend developer at a 12-person payments start-up. Uses Claude Code every day in a monorepo with .env files for four services.) on customers.riskmandate.ai v0.2.1: the run screenshot by screenshot, the interview, the rating and the findings, each checked. Invented, not user research.
 
-*Source: <https://customers.riskmandate.ai/feedback/synthetic/sam/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/synthetic/sam/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -4722,7 +5332,7 @@ source: /feedback/synthetic/tomas/index.md
 
 > Study S1, invented user Tomás Reyes (Junior developer, a year into his first job. Uses Claude Code through the VS Code extension on a Windows laptop. Follows instructions literally.) on customers.riskmandate.ai v0.2.1: the run screenshot by screenshot, the interview, the rating and the findings, each checked. Invented, not user research.
 
-*Source: <https://customers.riskmandate.ai/feedback/synthetic/tomas/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/synthetic/tomas/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -4987,7 +5597,7 @@ source: /follow-up/index.md
 
 > How the hand-holding works for the first batch: a follow-up as often as daily, three questions each time (what they did, what got in the way, what is next), how the answers are recorded on the customer page in summary, and what stays private with the lead.
 
-*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -5051,7 +5661,7 @@ source: /learning/index.md
 
 > The point of the programme is to find the usage moment, when an Agent Behaviour Policy becomes worth something to a particular person. Three questions follow from it, and this page holds them with a findings table that starts empty and is filled from the follow-ups, counted.
 
-*Source: <https://customers.riskmandate.ai/learning/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/learning/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -5104,7 +5714,7 @@ source: /milestones/index.md
 
 > The shared ladder of seven steps for the first batch, each with its objective, what done looks like and who does it: in with credit, one agent named, the grant, the mandate, the delta, the hooks half, and the usage moment. The objectives per customer are their own; the steps are the shared shape.
 
-*Source: <https://customers.riskmandate.ai/milestones/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/milestones/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -5187,7 +5797,7 @@ source: /next-batch/index.md
 
 > This is not a launch; it is a first batch. Everyone who asks to join is kept on a list for the next one, with what they want to use it for. How to ask today (by email or the riskmandate.ai contact form), what we keep and what we never publish, and the form on this site that is proposed and not built.
 
-*Source: <https://customers.riskmandate.ai/next-batch/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/next-batch/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -5226,7 +5836,7 @@ source: /policies/change-its-own-permissions/index.md
 
 > Do you want your agent to change its own permissions? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0015.
 
-*Source: <https://customers.riskmandate.ai/policies/change-its-own-permissions/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/change-its-own-permissions/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -5407,7 +6017,7 @@ source: /policies/delete-files/index.md
 
 > Do you want your agent to delete files without asking? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0007.
 
-*Source: <https://customers.riskmandate.ai/policies/delete-files/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/delete-files/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -5627,7 +6237,7 @@ source: /policies/index.md
 
 > The behaviour policies a customer installs first: four for Claude Code, each a line and a hook, two for ChatGPT and Claude, each a line; a starter pack that installs the four in one go; and all 24 of riskmandate.ai's rules they come from.
 
-*Source: <https://customers.riskmandate.ai/policies/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -5730,7 +6340,7 @@ source: /policies/push-anywhere/index.md
 
 > Do you want your agent to push to any branch, including main? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0013.
 
-*Source: <https://customers.riskmandate.ai/policies/push-anywhere/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/push-anywhere/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -5955,7 +6565,7 @@ source: /policies/read-all-your-mail/index.md
 
 > Do you want your agent to read through your mail and chats to find context? The line for your agent, and a prompt to try it with, in 1 minute. From riskmandate.ai's RM-R0016.
 
-*Source: <https://customers.riskmandate.ai/policies/read-all-your-mail/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/read-all-your-mail/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6027,7 +6637,7 @@ source: /policies/send-as-you/index.md
 
 > Do you want your agent to send email as you without showing you first? The line for your agent, and a prompt to try it with, in 1 minute. From riskmandate.ai's RM-R0017.
 
-*Source: <https://customers.riskmandate.ai/policies/send-as-you/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/send-as-you/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6110,7 +6720,7 @@ source: /policies/starter/index.md
 
 > Four Agent Behaviour Policies for Claude Code in one install: keep away from secrets, push only to your branch, nothing deleted without a yes, and only you change its permissions. Each is a line for CLAUDE.md and a hook; ask Claude Code to install them, or copy four files.
 
-*Source: <https://customers.riskmandate.ai/policies/starter/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/starter/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6274,7 +6884,7 @@ source: /policies/touch-your-secrets/index.md
 
 > Do you want your agent to read the keys and tokens on your machine? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0002.
 
-*Source: <https://customers.riskmandate.ai/policies/touch-your-secrets/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/touch-your-secrets/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6503,7 +7113,7 @@ source: /programme/index.md
 
 > What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.
 
-*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6570,6 +7180,8 @@ From [docs/reality.md](/docs/reality.md), generated on every release. A row that
 | programme | This site's row on the honest column at nfrs.sgit.ai | proposed | docs/ops/needs.md | Another repository; the ask is recorded. |
 | programme | Six examples to try in Claude or ChatGPT in the browser, simplest first, each played step by step with the questions that ask whether it worked | shipped v0.2.3 | /examples/ and the home page | The transcripts are illustrations we wrote, not recordings; each example has a version. Nothing to install. |
 | programme | A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude | shipped v0.2.2 | /feedback/ | The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer's yes. |
+| programme | Encrypt and send: answers and messages encrypted in the browser and appended to an encrypted vault's lane that only RiskMandate can read | shipped v0.2.4 | /feedback/how-sending-works/ | Vault zs81fic5 on dev.send.sgraph.ai, lane feedback; the public key and token are in feedback/lane.json; admin/feedback/lane.mjs drains it. |
+| programme | An account page that shows everything a reader did here and everything this site keeps in their browser, with export and delete | shipped v0.2.4 | /account/ | Drawn in the browser from local storage only. |
 | programme | Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason | shipped v0.2.2 | /feedback/reviews/ | Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason. |
 | programme | Synthetic users: invented people driving the site one screenshot at a time, with their findings checked | shipped v0.2.2 | /feedback/synthetic/ | Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/. |
 | programme | A guided path through the barriers: the line, then the hook, then its guard, then a boundary, each stop ending in the question that leads to the next | proposed | /feedback/reviews/#p2 | P1 and P2 of the feedback register, from the lead's review R001; held for his further memos. |
@@ -6591,7 +7203,7 @@ source: /review/index.md
 
 > The intent half of the review folder: the brief and the memo read as stories, rules and examples, each node linked to the heading it came from and to the page on this site that realises it, with the counts. The derived half is proposed.
 
-*Source: <https://customers.riskmandate.ai/review/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/review/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6703,7 +7315,7 @@ source: /start-here/index.md
 
 > Your first five minutes: open Claude or ChatGPT in your browser, ask it something, paste one line that says it must not, ask again, and start a new chat with the line first. Then keep it, and tell us what happened. Nothing to install.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6789,7 +7401,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -6801,9 +7413,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)
 
 ## Then the next five
 
@@ -6830,7 +7448,7 @@ source: /storyboards/index.md
 
 > Three storyboards drawn in your browser: what an Agent Behaviour Policy is, the five minutes a customer spends installing their first one, and what the first batch is for and what comes next.
 
-*Source: <https://customers.riskmandate.ai/storyboards/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/storyboards/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6865,7 +7483,7 @@ source: /storyboards/the-first-batch/index.md
 
 > What is happening on this site, and what comes next. 8 panels. Drawn in your browser by the storyboard kit.
 
-*Source: <https://customers.riskmandate.ai/storyboards/the-first-batch/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/storyboards/the-first-batch/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6888,7 +7506,7 @@ source: /storyboards/your-first-policy/index.md
 
 > £50 of credit, one worry, five minutes: what a customer does on this site. 8 panels. Drawn in your browser by the storyboard kit.
 
-*Source: <https://customers.riskmandate.ai/storyboards/your-first-policy/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/storyboards/your-first-policy/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6911,7 +7529,7 @@ source: /team/index.md
 
 > Who does what, as one file per role with the rules it enforces and the mistake behind each, and the board of work.
 
-*Source: <https://customers.riskmandate.ai/team/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/team/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6936,7 +7554,7 @@ source: /what-is-an-abp/index.md
 
 > An Agent Behaviour Policy writes down, for one agent in one deployment, everything it can reach, what you authorised it to do, the gap between the two, and what stands in the way of each thing. Eight panels, then the four words in a table. It describes and does not judge.
 
-*Source: <https://customers.riskmandate.ai/what-is-an-abp/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/what-is-an-abp/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -6953,9 +7571,9 @@ source: /docs/reality.md
 
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.3 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.4 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
-31 claims: 20 shipped, 8 proposed, 3 absent.
+33 claims: 22 shipped, 8 proposed, 3 absent.
 
 | Status | Meaning |
 |---|---|
@@ -6963,7 +7581,7 @@ source: /docs/reality.md
 | proposed | the brief or the memo says how; not built; described only in the future tense |
 | absent | deliberately not on this site; comes as a later version, lives elsewhere, or never |
 
-## Shipped (20)
+## Shipped (22)
 
 | Area | Feature | Status | Where | Notes |
 |---|---|---|---|---|
@@ -6985,6 +7603,8 @@ source: /docs/reality.md
 | programme | Animated demos of a session: installing and trying a policy in Claude Code, and the send-as-you line in ChatGPT | shipped v0.2.1 | data/demos.json, assets/demo.js | Illustrations of what each policy's page promises, labelled as such; not recordings. Still and complete with reduced motion or no JavaScript. |
 | programme | Six examples to try in Claude or ChatGPT in the browser, simplest first, each played step by step with the questions that ask whether it worked | shipped v0.2.3 | /examples/ and the home page | The transcripts are illustrations we wrote, not recordings; each example has a version. Nothing to install. |
 | programme | A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude | shipped v0.2.2 | /feedback/ | The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer's yes. |
+| programme | Encrypt and send: answers and messages encrypted in the browser and appended to an encrypted vault's lane that only RiskMandate can read | shipped v0.2.4 | /feedback/how-sending-works/ | Vault zs81fic5 on dev.send.sgraph.ai, lane feedback; the public key and token are in feedback/lane.json; admin/feedback/lane.mjs drains it. |
+| programme | An account page that shows everything a reader did here and everything this site keeps in their browser, with export and delete | shipped v0.2.4 | /account/ | Drawn in the browser from local storage only. |
 | programme | Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason | shipped v0.2.2 | /feedback/reviews/ | Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason. |
 | programme | Synthetic users: invented people driving the site one screenshot at a time, with their findings checked | shipped v0.2.2 | /feedback/synthetic/ | Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/. |
 
@@ -7237,6 +7857,27 @@ Follow newsroom.sgit.ai's method, [How to run synthetic users](https://newsroom.
 
 The study pages say on every page that the users are invented and that this is not user research.
 
+## Encrypt and send: the feedback lane
+
+From v0.2.4 a reader's answers, and anything written on `/feedback/`, are encrypted in their browser and appended to the `feedback` lane of a private vault, `zs81fic5` on dev.send.sgraph.ai (R003). The pieces:
+
+| Piece | Where | Secret? |
+|---|---|---|
+| The lane's address, token and public key | `feedback/lane.json` | no: the token can only append, the key can only encrypt |
+| The envelope and the send | `assets/envelope.js` (sgit's hybrid envelope v2) | no |
+| The private key | the vault, `feedback-lane/keys/feedback.encrypt.pem`, encrypted with a passphrase derived from the vault's write key | it is in the vault, which needs the vault key |
+| The vault key | with the lead | yes; never in a file in this repository |
+
+```bash
+sgit clone "$FEEDBACK_KEY" customers-feedback                                   # or sgit pull in an existing clone
+FEEDBACK_KEY="$FEEDBACK_KEY" node admin/feedback/lane.mjs drain --vault customers-feedback --dry-run   # look first
+FEEDBACK_KEY="$FEEDBACK_KEY" node admin/feedback/lane.mjs drain --vault customers-feedback             # then file
+cd customers-feedback && sgit commit "drain: <n>" && sgit push --token "$SG_SEND_ACCESS_TOKEN"
+node admin/feedback/lane.mjs send "a test"                                       # a test send, as a browser makes it
+```
+
+Each message is filed as `feedback-lane/inbox/<file>.eml` beside its `.enc`, with a line in `feedback-lane/log.jsonl`. A message becomes a review on this site only with the sender's yes, as the feedback page promises.
+
 
 ==============================================================================
 source: /docs/ops/needs.md
@@ -7263,7 +7904,7 @@ Everything on this list blocks a step of the brief or of the repository rules an
 
 ## Blocking the next batch's form
 
-7. **The form on this site (the lead, then the build session).** The riskmandate.ai contact form encrypts to the site agent's key and posts to the `site` lane of its comms vault. The same form on this site needs: the lead's yes; the lane's endpoint and token (public on purpose on riskmandate.ai) referenced, never copied into a new file; a content security policy change for `connect-src` and `form-action`; and a round trip proved. Until then the route is email or the riskmandate.ai form.
+7. **The feedback vault's key (the lead).** Done at v0.2.4, differently from what this item first said: Encrypt and send appends to the `feedback` lane of a vault of this site's own, `zs81fic5` on dev.send.sgraph.ai, made by the build session (R003), with its public key and token in `feedback/lane.json`. The vault's key was given to the lead in the session, once, and is in no file in this repository. Keep it with the other vault keys; a session that drains the lane needs it as `FEEDBACK_KEY`, and `SG_SEND_ACCESS_TOKEN` to push the clone. To revoke the token: mint a new one, update `lanes.json` in the vault and `feedback/lane.json`, run `admin/feedback/lane.mjs configure`, release.
 
 ## The customer records
 

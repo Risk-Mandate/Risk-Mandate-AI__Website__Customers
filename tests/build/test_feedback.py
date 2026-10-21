@@ -73,7 +73,7 @@ class Test__Feedback(TestCase):
     def test_webp_sizes_are_read_from_the_header(self):
         for shot in (ROOT / 'assets' / 'feedback').rglob('*.webp'):
             w, h = webp_size(shot)
-            self.assertTrue(100 < w < 4000 and 100 < h < 4000, shot)
+            self.assertTrue(100 < w < 4000 and 20 < h < 4000, shot)                     # a header strip is short
 
     def test_the_house_check_leaves_only_kept_words_alone(self):
         script = ("const v = require('./admin/build/validate.js');"

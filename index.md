@@ -2,7 +2,7 @@
 
 > Put an Agent Behaviour Policy on Claude or ChatGPT in your browser, in five minutes: ask it to do something, paste one line that says it must not, ask again. Six examples, from hello world to refunds, with nothing to install. Part of riskmandate.ai.
 
-*Source: <https://customers.riskmandate.ai/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -82,7 +82,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -94,9 +94,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)
 
 <a id="ex-home-stay-on-topic"></a>
 
@@ -150,7 +156,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -162,9 +168,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20stay-on-topic%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20stay-on-topic%20v1.0.0)
 
 <a id="ex-home-no-web-search"></a>
 
@@ -219,7 +231,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -231,9 +243,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20no-web-search%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20no-web-search%20v1.0.0)
 
 <a id="ex-home-keep-a-secret"></a>
 
@@ -298,7 +316,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -310,9 +328,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20keep-a-secret%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20keep-a-secret%20v1.0.0)
 
 <a id="ex-home-drafts-not-send"></a>
 
@@ -380,7 +404,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -392,9 +416,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0)
 
 <a id="ex-home-refunds"></a>
 
@@ -463,7 +493,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -475,9 +505,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0)
 
 ## What the line is, and what it is not.
 
@@ -503,7 +539,31 @@ One line by email, a voice memo your Claude turns into a review, or an interview
 
 ](/feedback/index.md)
 
-We read every answer and every review, and we follow up by email. [Every review, and what we did about it](/feedback/reviews/index.md); how the programme runs is on [the programme pages](/programme/index.md).
+<a id="reviews"></a>
+
+## Every review, and what we did about it.
+
+Each review of this site is kept in the reviewer's words, read point by point with screenshots of what they saw, and every point ends in a decision with a reason: done, proposed, a question, or declined. We do not do everything a reviewer asks, and every no is explained.
+
+[R003 · Dinis Cruz · site v0.2.3**Make the reviews easy to find, make the account big, and send to the agent, encrypted**
+
+12 points; 11 proposals, 9 done.
+
+](/feedback/reviews/R003/index.md) [R002 · Dinis Cruz · site v0.2.2**Web first, examples in tabs, and no hooks: nothing that runs on your machine**
+
+26 points; 15 proposals, 12 done.
+
+](/feedback/reviews/R002/index.md) [R001 · Dinis Cruz · site v0.2.1**A first impression: the hook answers a question nobody has asked yet**
+
+11 points; 10 proposals, 7 done.
+
+](/feedback/reviews/R001/index.md) [Study S1 · invented users · site v0.2.1**Five people who do not exist, on the site as it was**
+
+29 findings, each checked.
+
+](/feedback/synthetic/index.md)
+
+[All the reviews, in one document](/feedback/reviews/index.md) · [tell us what you think](/feedback/index.md) · how the programme runs is on [the programme pages](/programme/index.md).
 
 ---
 

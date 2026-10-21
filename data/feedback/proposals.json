@@ -338,7 +338,7 @@
         "/examples/"
       ],
       "decision": "done",
-      "reason": "R002: the first users should tell us, example by example, whether it surprised them.",
+      "reason": "R002: the first users should tell us, example by example, whether it surprised them. Changed at v0.2.4 by R003: the answers go by Encrypt and send (P38), with email only if sending fails.",
       "version": "0.2.3"
     },
     {
@@ -431,6 +431,110 @@
       "decision": "done",
       "reason": "R002 asked for it. The site's releases were already versioned; the examples and the decisions now are too.",
       "version": "0.2.3"
+    },
+    {
+      "id": "P32",
+      "title": "Reviews you can find",
+      "what": "Reviews is its own menu; the home page has a band of the latest reviews and what each led to; every footer links to them.",
+      "where": [
+        "the menu",
+        "/",
+        "every page"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003: the reviews could not be found."
+    },
+    {
+      "id": "P33",
+      "title": "The account: everything you did, and everything this browser keeps",
+      "what": "Your balance and five counts; each example, how far you got, what you said, whether you sent it; what you sent; where the credit went; everything you read; top-ups; and every item kept in this browser, with what it is and what is in it, Export everything and Delete everything.",
+      "where": [
+        "/account/"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003: the account should make plain what a reader did and everything kept about it."
+    },
+    {
+      "id": "P34",
+      "title": "A player starts only when you have scrolled to it",
+      "what": "Never on a page that has just opened: only after a scroll, with the frame at least 60% on screen; once.",
+      "where": [
+        "every demo"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003: the example played to its end before it was noticed."
+    },
+    {
+      "id": "P35",
+      "title": "A bar of the steps, and an end that says so",
+      "what": "One mark per step, grouped by act, clickable; at the end, 'The end of this example' with Start again and Now try it yourself.",
+      "where": [
+        "every demo"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003: nothing said it had reached the end, or where it was."
+    },
+    {
+      "id": "P36",
+      "title": "A countdown before each new act",
+      "what": "Six seconds, saying what comes next; Pause stops it, Next skips it.",
+      "where": [
+        "every demo"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003: the jump into the third act came too soon to take in."
+    },
+    {
+      "id": "P37",
+      "title": "Back and Next keep playing",
+      "what": "If the player was playing, Back and Next move one step and it carries on.",
+      "where": [
+        "every demo"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003 found Back confusing while playing; see R003.7 for what we found."
+    },
+    {
+      "id": "P38",
+      "title": "Encrypt and send: an encrypted lane to the agent",
+      "what": "A vault on sgit.ai's host with a feedback append lane; the browser encrypts to its public key and appends with its public token; only the vault's key, held by RiskMandate, opens what arrives; admin/feedback/lane.mjs configures, tests and drains it. Agents can send the same way.",
+      "where": [
+        "/feedback/lane.json",
+        "every example"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003 asked for it, after riskmandate.ai's contact form; it answers Q6."
+    },
+    {
+      "id": "P39",
+      "title": "Encrypt and send to the agent, Copy, and How this works",
+      "what": "The main button sends, encrypted; Copy stays; Exactly what will be sent is one click away; How this works is a page; email only if sending fails; a box on /feedback/ to send anything.",
+      "where": [
+        "every example",
+        "/feedback/",
+        "/feedback/how-sending-works/"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003 asked for it."
+    },
+    {
+      "id": "P40",
+      "title": "The card label that wrapped",
+      "what": "Card labels are blocks, so a wrapped line keeps its margin.",
+      "where": [
+        "/"
+      ],
+      "decision": "done",
+      "version": "0.2.4",
+      "reason": "R003 found it."
     },
     {
       "id": "D1",

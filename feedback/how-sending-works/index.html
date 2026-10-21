@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Encrypt and send works: encrypted in your browser, to a key only RiskMandate holds</title>
+  <meta name="description" content="What happens when you press Encrypt and send on customers.riskmandate.ai: the message is encrypted in your browser with sgit&#x27;s hybrid envelope, appended to an encrypted vault&#x27;s lane that anybody can add to and nobody can read, and opened only with RiskMandate&#x27;s key.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai https://dev.send.sgraph.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/feedback/how-sending-works/">
+  <link rel="alternate" type="text/markdown" href="/feedback/how-sending-works/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script src="/assets/envelope.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/feedback/how-sending-works/">
+  <meta property="og:title" content="How Encrypt and send works: encrypted in your browser, to a key only RiskMandate holds">
+  <meta property="og:description" content="What happens when you press Encrypt and send on customers.riskmandate.ai: the message is encrypted in your browser with sgit&#x27;s hybrid envelope, appended to an encrypted vault&#x27;s lane that anybody can add to and nobody can read, and opened only with RiskMandate&#x27;s key.">
+  <meta name="rm-customers:version" content="0.2.4">
+  <meta name="rm-customers:released" content="2026-10-21">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/feedback/reviews/">Reviews<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild active" href="/feedback/how-sending-works/" aria-current="page">How Encrypt and send works</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/feedback/">Feedback</a> <span class="sep">/</span> <span aria-current="page">How Encrypt and send works</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap policy">
+    <p class="kicker">Feedback · free to read</p>
+    <h1>How Encrypt and send works</h1>
+    <p class="lead">What you send is encrypted in your browser, before it leaves, to a key only RiskMandate holds. It goes to an encrypted vault, not to an inbox, and the host that stores it cannot read it.</p>
+    <h2>What happens when you press it</h2>
+    <ol class="steps">
+      <li><b>Your browser fetches the lane's address and key.</b><p>From <a href="/feedback/lane.json">/feedback/lane.json</a>: the vault, the lane, a token that can only add to it, and a public key that can only encrypt. The page checks the key against its fingerprint, <code>sha256:16f0cff81d0ff10a</code>, before it uses it.</p></li>
+      <li><b>It encrypts what you wrote, there and then.</b><p>A fresh AES-256-GCM key for the message, and that key wrapped with RSA-OAEP (SHA-256) to the public key: sgit's hybrid envelope, the one riskmandate.ai's contact form uses. The code is <a href="/assets/envelope.js">assets/envelope.js</a>, about seventy lines, and runs nowhere else.</p></li>
+      <li><b>It adds the sealed message to the lane.</b><p>The <code>feedback</code> append lane of vault <code>zs81fic5</code>, on <code>dev.send.sgraph.ai</code>, sgit.ai's vault host. The token lets anybody add to the lane and nobody read it.</p></li>
+      <li><b>Only the vault's key opens it.</b><p>That key is RiskMandate's and is not on this site or in its source. The site's agent drains the lane, files each message in the vault, and a person reads it.</p></li>
+    </ol>
+    <h2>What is sent, and what is not</h2>
+    <ul class="plist">
+      <li><strong>Sent:</strong> exactly the text under <em>Exactly what will be sent</em>, with the page you sent it from and the time. Your name or email only if you typed them.</li>
+      <li><strong>Not sent:</strong> your balance, your history, your other answers, anything else this browser keeps. <a href="/account/">Your account</a> lists all of that, at its foot, and it stays here.</li>
+      <li><strong>What the host sees:</strong> that a sealed message arrived, when, how big it is, and the network address it came from, as any server does. Not what it says.</li>
+      <li><strong>What your browser keeps:</strong> that you sent something, when, and whether it went, so your account can show it. Not the text.</li>
+    </ul>
+    <h2>For an agent</h2>
+    <p>An agent reviewing this site can send its findings the same way: build the envelope as <a href="/assets/envelope.js">assets/envelope.js</a> does, and POST <code>{"append_token": …, "payload": …}</code> to <code>https://dev.send.sgraph.ai/api/vault/append/write/zs81fic5</code>, with the token and key from <a href="/feedback/lane.json">lane.json</a>. Put <code>To: agent &lt;agent@riskmandate.ai&gt;</code> and a <code>Subject</code> in the message's first lines. <code>admin/feedback/lane.mjs send</code> in <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">the source</a> does it in Node.</p>
+    <p>If anything fails, the page says why and offers the same text as an email to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+  </main>
+  <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="free" title="How Encrypt and send works: encrypted in your browser, to a key only RiskMandate holds" quiet></sg-meter></div>
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/feedback/how-sending-works/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

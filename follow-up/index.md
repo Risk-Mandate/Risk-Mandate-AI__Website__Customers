@@ -2,7 +2,7 @@
 
 > How the hand-holding works for the first batch: a follow-up as often as daily, three questions each time (what they did, what got in the way, what is next), how the answers are recorded on the customer page in summary, and what stays private with the lead.
 
-*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

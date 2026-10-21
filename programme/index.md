@@ -2,7 +2,7 @@
 
 > What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.
 
-*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -69,6 +69,8 @@ From [docs/reality.md](/docs/reality.md), generated on every release. A row that
 | programme | This site's row on the honest column at nfrs.sgit.ai | proposed | docs/ops/needs.md | Another repository; the ask is recorded. |
 | programme | Six examples to try in Claude or ChatGPT in the browser, simplest first, each played step by step with the questions that ask whether it worked | shipped v0.2.3 | /examples/ and the home page | The transcripts are illustrations we wrote, not recordings; each example has a version. Nothing to install. |
 | programme | A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude | shipped v0.2.2 | /feedback/ | The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer's yes. |
+| programme | Encrypt and send: answers and messages encrypted in the browser and appended to an encrypted vault's lane that only RiskMandate can read | shipped v0.2.4 | /feedback/how-sending-works/ | Vault zs81fic5 on dev.send.sgraph.ai, lane feedback; the public key and token are in feedback/lane.json; admin/feedback/lane.mjs drains it. |
+| programme | An account page that shows everything a reader did here and everything this site keeps in their browser, with export and delete | shipped v0.2.4 | /account/ | Drawn in the browser from local storage only. |
 | programme | Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason | shipped v0.2.2 | /feedback/reviews/ | Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason. |
 | programme | Synthetic users: invented people driving the site one screenshot at a time, with their findings checked | shipped v0.2.2 | /feedback/synthetic/ | Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/. |
 | programme | A guided path through the barriers: the line, then the hook, then its guard, then a boundary, each stop ending in the question that leads to the next | proposed | /feedback/reviews/#p2 | P1 and P2 of the feedback register, from the lead's review R001; held for his further memos. |

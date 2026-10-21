@@ -1,0 +1,7 @@
+[
+ {"name":"01-hello-world-ended","url":"/examples/hello-world/","w":1280,"h":900,"sel":"figure.demo","pad":10,"wait":32000,"motion":true},
+ {"name":"02-quiz-send","url":"/examples/hello-world/","w":1280,"h":900,"sel":".quiz-actions","pad":14},
+ {"name":"03-new-to-this","url":"/","w":1280,"h":900,"sel":".cards.thumbs","pad":12,"wait":1200},
+ {"name":"04-header","url":"/","w":1280,"h":900,"sel":"header.top","pad":0},
+ {"name":"05-account","url":"/account/","w":1280,"h":900,"sel":"main","pad":0,"maxh":1100,"wait":1800}
+]

@@ -2,7 +2,7 @@
 
 > Your first five minutes: open Claude or ChatGPT in your browser, ask it something, paste one line that says it must not, ask again, and start a new chat with the line first. Then keep it, and tell us what happened. Nothing to install.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -88,7 +88,7 @@ Copy
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -100,9 +100,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)
 
 ## Then the next five
 

@@ -2,7 +2,7 @@
 
 > One line in the conversation changes what the assistant does, from the next message on. Try it in Claude or ChatGPT in your browser, in 2 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/hello-world/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/hello-world/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -72,7 +72,7 @@ The assistant follows the line because it chooses to. That is an *expectation*, 
 
 ### Tell us about this example
 
-Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them; when you do, they are encrypted here, before they leave, and only RiskMandate can read them.
 
 Did you get it?
 YesPartlyNo
@@ -84,9 +84,15 @@ When you tried it, did it go as shown?
 YesDifferentlyNoNot tried yet
 How good was this example?
 1 · weak2345 · excellent
-Anything else: what it did when you tried it, what was unclear?
+Anything else: what it did when you tried it, what was unclear? Exactly what will be sent
 
-[Send by email](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)Copy my answers
+```
+
+```
+
+Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
+
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)
 
 ## Versions of this example
 

@@ -1,8 +1,8 @@
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.3 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.4 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
-31 claims: 20 shipped, 8 proposed, 3 absent.
+33 claims: 22 shipped, 8 proposed, 3 absent.
 
 | Status | Meaning |
 |---|---|
@@ -10,7 +10,7 @@
 | proposed | the brief or the memo says how; not built; described only in the future tense |
 | absent | deliberately not on this site; comes as a later version, lives elsewhere, or never |
 
-## Shipped (20)
+## Shipped (22)
 
 | Area | Feature | Status | Where | Notes |
 |---|---|---|---|---|
@@ -32,6 +32,8 @@
 | programme | Animated demos of a session: installing and trying a policy in Claude Code, and the send-as-you line in ChatGPT | shipped v0.2.1 | data/demos.json, assets/demo.js | Illustrations of what each policy's page promises, labelled as such; not recordings. Still and complete with reduced motion or no JavaScript. |
 | programme | Six examples to try in Claude or ChatGPT in the browser, simplest first, each played step by step with the questions that ask whether it worked | shipped v0.2.3 | /examples/ and the home page | The transcripts are illustrations we wrote, not recordings; each example has a version. Nothing to install. |
 | programme | A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude | shipped v0.2.2 | /feedback/ | The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer's yes. |
+| programme | Encrypt and send: answers and messages encrypted in the browser and appended to an encrypted vault's lane that only RiskMandate can read | shipped v0.2.4 | /feedback/how-sending-works/ | Vault zs81fic5 on dev.send.sgraph.ai, lane feedback; the public key and token are in feedback/lane.json; admin/feedback/lane.mjs drains it. |
+| programme | An account page that shows everything a reader did here and everything this site keeps in their browser, with export and delete | shipped v0.2.4 | /account/ | Drawn in the browser from local storage only. |
 | programme | Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason | shipped v0.2.2 | /feedback/reviews/ | Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason. |
 | programme | Synthetic users: invented people driving the site one screenshot at a time, with their findings checked | shipped v0.2.2 | /feedback/synthetic/ | Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/. |
 

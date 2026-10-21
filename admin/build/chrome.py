@@ -40,6 +40,7 @@ AGENT_ADDRESS  = 'agent@riskmandate.ai'
 
 METER          = json.loads(METER_FILE.read_text(encoding='utf-8'))
 KIT            = json.loads(KIT_FILE.read_text(encoding='utf-8'))
+FEEDBACK_LANE  = json.loads((ROOT / 'feedback' / 'lane.json').read_text(encoding='utf-8'))
 
 
 class Pins:                                                                      # the two APIs this site loads code from, each pinned to one release and checked against a copy of its manifest
@@ -86,7 +87,7 @@ def csp(storyboard=False):                                                      
     style = f"style-src 'self' {KIT['api']['host']} 'unsafe-hashes' {' '.join(Pins.style_hashes())}; font-src {KIT['api']['host']}; " if storyboard else "style-src 'self'; "
     kit   = f" {KIT['api']['host']}" if storyboard else ''
     return ("default-src 'self'; "
-            f"connect-src 'self' {METER['api']['host']}; "                         # the meter fetches its markup and styles from beside itself
+            f"connect-src 'self' {METER['api']['host']} {FEEDBACK_LANE['endpoint']}; "   # the meter fetches its markup and styles from beside itself; Encrypt and send appends to the feedback lane
             "img-src 'self' data:; "
             + style +
             f"script-src 'self' {METER['api']['host']}{kit}; "
@@ -102,7 +103,6 @@ CSP_STORYBOARD = csp(storyboard=True)
 # plain link to its first page, so the nav works with no JavaScript at all.
 NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'                                   , 'Your first five minutes'          ),
                                                       ('/account/'                                      , 'Your account'                     ),
-                                                      ('/feedback/'                                     , 'Tell us what you think'           ),
                                                       ('/credit/'                                       , 'What each page costs'             ))),
                   ('Examples'     , '/examples/'   , (('/examples/'                                     , 'All six, simplest first'          ),
                                                       ('/examples/hello-world/'                         , 'Hello, world'                     ),
@@ -119,8 +119,10 @@ NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'           
                                                       ('/follow-up/'                                    , 'The daily follow-up'              ),
                                                       ('/learning/'                                     , 'What we want to discover'         ),
                                                       ('/next-batch/'                                   , 'The next batch'                   ),
-                                                      ('/storyboards/the-first-batch/'                  , 'The first batch, drawn'           ),
-                                                      ('/feedback/reviews/'                             , 'Every review, and what we did'    ),
+                                                      ('/storyboards/the-first-batch/'                  , 'The first batch, drawn'           ))),
+                  ('Reviews'      , '/feedback/reviews/', (('/feedback/reviews/'                        , 'Every review, and what we did'    ),
+                                                      ('/feedback/'                                     , 'Tell us what you think'           ),
+                                                      ('/feedback/how-sending-works/'                   , 'How Encrypt and send works'       ),
                                                       ('/feedback/synthetic/'                           , 'Synthetic users: invented'        ))),
                   ('Docs'         , '/docs/'       , (('/docs/'                                         , 'All documents'                    ),
                                                       ('/docs/brief/our-first-customers.html'           , 'The brief, in full'               ),
@@ -208,6 +210,7 @@ class Chrome:
                      f'<script src="/assets/nav.js" defer></script>'                                      ,
                      f'<script src="/assets/copy.js" defer></script>'                                     ,
                      f'<script src="/assets/demo.js" defer></script>'                                     ,
+                     f'<script src="/assets/envelope.js" defer></script>'                                 ,
                      f'<script src="/assets/examples.js" defer></script>'                                 ,
                      f'<script type="module" src="{Pins.meter_url()}" integrity="{Pins.meter_integrity()}" crossorigin="anonymous"></script>',
                      f'<meta property="og:type" content="website">'                                       ,
@@ -311,7 +314,7 @@ class Chrome:
                           '    <div class="wrap">'                                                                                                 ,
                           f'      <p>{SITE_NAME} · site {self.version_badge()} · released {self.released} · '
                           f'<a href="/admin/versions.html">releases</a> · <a href="{twin}">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · '
-                          f'<a href="/feedback/">tell us what you think</a> · <a href="{REPO_URL}">source</a> · <a href="{PARENT_URL}">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>',
+                          f'<a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="{REPO_URL}">source</a> · <a href="{PARENT_URL}">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>',
                           f'      <p>Code Apache-2.0. Pages <a href="{LICENCE_URL}">{LICENCE_NAME}</a>. '
                           f'What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; '
                           f'if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer\'s contact details are in it. '
