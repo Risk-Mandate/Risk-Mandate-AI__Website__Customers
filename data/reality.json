@@ -7,25 +7,185 @@
     "absent": "deliberately not on this site; comes as a later version, lives elsewhere, or never"
   },
   "features": [
-    { "id": "site.pipeline",         "area": "site",      "title": "One version in admin/build/version.txt, a release history, and four CI jobs: validate, tag, deploy, verify live", "status": "shipped", "since": "0.1.0", "where": "admin/build/version.txt, data/versions.json, .github/workflows/deploy-pages.yml", "notes": "Copied from secrets.sgit.ai, the newest gate in the estate. A clean push is not a release: verify-live polls the host." },
-    { "id": "site.chrome",           "area": "site",      "title": "The RiskMandate chrome (head, header, breadcrumbs, footer, CSP) generated into every page from one definition", "status": "shipped", "since": "0.1.0", "where": "admin/build/chrome.py, admin/build/gen_chrome.py, assets/site.css", "notes": "The look of riskmandate.ai; every colour is a token in one file." },
-    { "id": "site.twins",            "area": "site",      "title": "A markdown twin for every page, llms.txt, llms-full.txt and sitemap.xml, generated from the pages", "status": "shipped", "since": "0.1.0", "where": "admin/build/gen_twins.py, admin/build/gen_llms.py", "notes": "Links inside the markdown point at markdown." },
-    { "id": "site.gate",             "area": "site",      "title": "The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words", "status": "shipped", "since": "0.1.0", "where": "admin/build/validate.js, admin/build/gate.py, tests/", "notes": "The house words are riskmandate.ai's: never \"ADP\", never \"the policy\" alone, no score, \"steps\" not \"rungs\", British spelling. The verbatim brief and memo are exempt." },
-    { "id": "site.review",           "area": "site",      "title": "The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered", "status": "shipped", "since": "0.1.0", "where": "review/intent/, review/tools/, review/index.html", "notes": "The top-down half only; see site.review-derived." },
-    { "id": "site.review-derived",   "area": "site",      "title": "The derived half of the review folder: the code graph from parsers, the join with a coverage figure, every commit read upwards, the navigator as web components", "status": "proposed", "where": "review/", "notes": "The review brief asks for it from the first commit; this site has the intent half and says so in review/BRIEF-CORRECTIONS.md." },
-    { "id": "programme.brief",       "area": "programme", "title": "The brief and the memo published in full, never edited, with the corrections file beside them", "status": "shipped", "since": "0.1.0", "where": "docs/brief/", "notes": "The newsroom article of 20 October 2026 and the voice memo of the same day, byte for byte, with its digest." },
-    { "id": "programme.start-here",  "area": "programme", "title": "A start-here page: what a customer does first, in order, with the links to do it", "status": "shipped", "since": "0.1.0", "where": "start-here/index.html", "notes": "The brief's first fix for pages that were hard to understand; each customer will show where it still is." },
-    { "id": "programme.customers",   "area": "programme", "title": "A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details", "status": "shipped", "since": "0.1.0", "where": "data/customers.json, admin/build/gen_customers.py, customers/", "notes": "Start date, first behaviour policy with rows and gaps, steps done, credit used, topped up, and the follow-up log. One worked example, marked as such." },
-    { "id": "programme.milestones",  "area": "programme", "title": "Seven milestone steps shared across the batch, from in-with-credit to the usage moment", "status": "shipped", "since": "0.1.0", "where": "data/milestones.json, milestones/index.html", "notes": "The objectives per customer are theirs; the steps are the shared shape so the batch reads in one table." },
-    { "id": "programme.follow-up",   "area": "programme", "title": "The daily follow-up: three questions, recorded on the customer page as a log", "status": "shipped", "since": "0.1.0", "where": "follow-up/index.html, data/customers.json", "notes": "What they did, what got in the way, what is next. Daily if that is what helps; the record is the summary." },
-    { "id": "programme.learning",    "area": "programme", "title": "The three questions the programme exists to answer, with a findings table that starts empty", "status": "shipped", "since": "0.1.0", "where": "learning/index.html", "notes": "The simplest useful behaviour policy, the entry point with least friction, the price that feels fair." },
-    { "id": "programme.credit",      "area": "programme", "title": "Credit per customer, metered and billed on this site, with a top-up link", "status": "proposed", "where": "credit/index.html", "notes": "The meter is the newsroom's today (SG Meter, live since 11 October 2026); wiring it to this site needs the lead. Until then credit is a number on the customer page, kept by hand." },
-    { "id": "programme.next-batch",  "area": "programme", "title": "A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane", "status": "proposed", "where": "next-batch/index.html", "notes": "Today the route is the riskmandate.ai contact form or an email to agent@riskmandate.ai; the page says so." },
-    { "id": "programme.private-record", "area": "programme", "title": "The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds", "status": "proposed", "where": "docs/ops/needs.md", "notes": "Never in this repository. The public page carries the summary." },
-    { "id": "programme.agent-policies", "area": "programme", "title": "A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in", "status": "proposed", "where": "customers/the-agents/", "notes": "The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/." },
-    { "id": "programme.honest-column", "area": "programme", "title": "This site's row on the honest column at nfrs.sgit.ai", "status": "proposed", "where": "docs/ops/needs.md", "notes": "Another repository; the ask is recorded." },
-    { "id": "programme.accounts",    "area": "programme", "title": "Accounts, sign-in or a customer login on this site", "status": "absent", "where": "nowhere", "notes": "The site is static. The meter, when wired, carries its own reading account, as on the newsroom." },
-    { "id": "programme.public-contact", "area": "programme", "title": "Customer contact details, company names that are not already public, or private notes in this repository", "status": "absent", "where": "nowhere", "notes": "The gate fails on anything contact-shaped in data/customers.json." },
-    { "id": "programme.scores",      "area": "programme", "title": "A score, rating or level on any behaviour policy", "status": "absent", "where": "nowhere", "notes": "An Agent Behaviour Policy describes and does not judge. The gate fails on the words." }
+    {
+      "id": "site.pipeline",
+      "area": "site",
+      "title": "One version in admin/build/version.txt, a release history, and four CI jobs: validate, tag, deploy, verify live",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "admin/build/version.txt, data/versions.json, .github/workflows/deploy-pages.yml",
+      "notes": "Copied from secrets.sgit.ai, the newest gate in the estate. A clean push is not a release: verify-live polls the host."
+    },
+    {
+      "id": "site.chrome",
+      "area": "site",
+      "title": "The RiskMandate chrome (head, header, breadcrumbs, footer, CSP) generated into every page from one definition",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "admin/build/chrome.py, admin/build/gen_chrome.py, assets/site.css",
+      "notes": "The look of riskmandate.ai; every colour is a token in one file."
+    },
+    {
+      "id": "site.themes",
+      "area": "site",
+      "title": "Six themes picked from the header and kept in the reader's browser: RiskMandate (the default), Canvas, Night, Ember, Paper, Blueprint",
+      "status": "shipped",
+      "since": "0.2.0",
+      "where": "data/themes.json, assets/themes.css, assets/theme.js, tests/build/test_themes.py",
+      "notes": "The newsroom's five themes mapped onto this site's tokens, plus riskmandate.ai's own dark. Every colour is a token in one file; the gate checks every theme for every token and for contrast."
+    },
+    {
+      "id": "site.twins",
+      "area": "site",
+      "title": "A markdown twin for every page, llms.txt, llms-full.txt and sitemap.xml, generated from the pages",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "admin/build/gen_twins.py, admin/build/gen_llms.py",
+      "notes": "Links inside the markdown point at markdown."
+    },
+    {
+      "id": "site.gate",
+      "area": "site",
+      "title": "The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "admin/build/validate.js, admin/build/gate.py, tests/",
+      "notes": "The house words are riskmandate.ai's rules, listed on the admin page and in WORD_RULES in admin/build/validate.js. The verbatim brief and memo are exempt."
+    },
+    {
+      "id": "site.review",
+      "area": "site",
+      "title": "The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "review/intent/, review/tools/, review/index.html",
+      "notes": "The top-down half only; see site.review-derived."
+    },
+    {
+      "id": "site.review-derived",
+      "area": "site",
+      "title": "The derived half of the review folder: the code graph from parsers, the join with a coverage figure, every commit read upwards, the navigator as web components",
+      "status": "proposed",
+      "where": "review/",
+      "notes": "The review brief asks for it from the first commit; this site has the intent half and says so in review/BRIEF-CORRECTIONS.md."
+    },
+    {
+      "id": "programme.brief",
+      "area": "programme",
+      "title": "The brief and the memo published in full, never edited, with the corrections file beside them",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "docs/brief/",
+      "notes": "The newsroom article of 20 October 2026 and the voice memo of the same day, byte for byte, with its digest."
+    },
+    {
+      "id": "programme.start-here",
+      "area": "programme",
+      "title": "A start-here page: what a customer does first, in order, with the links to do it",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "start-here/index.html",
+      "notes": "The brief's first fix for pages that were hard to understand; each customer will show where it still is."
+    },
+    {
+      "id": "programme.customers",
+      "area": "programme",
+      "title": "A page per customer with the fields the brief asks to track, generated from data/customers.json, with no contact details",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "data/customers.json, admin/build/gen_customers.py, customers/",
+      "notes": "Start date, first behaviour policy with rows and gaps, steps done, credit used, topped up, and the follow-up log. One worked example, marked as such."
+    },
+    {
+      "id": "programme.milestones",
+      "area": "programme",
+      "title": "Seven milestone steps shared across the batch, from in-with-credit to the usage moment",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "data/milestones.json, milestones/index.html",
+      "notes": "The objectives per customer are theirs; the steps are the shared shape so the batch reads in one table."
+    },
+    {
+      "id": "programme.follow-up",
+      "area": "programme",
+      "title": "The daily follow-up: three questions, recorded on the customer page as a log",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "follow-up/index.html, data/customers.json",
+      "notes": "What they did, what got in the way, what is next. Daily if that is what helps; the record is the summary."
+    },
+    {
+      "id": "programme.learning",
+      "area": "programme",
+      "title": "The three questions the programme exists to answer, with a findings table that starts empty",
+      "status": "shipped",
+      "since": "0.1.0",
+      "where": "learning/index.html",
+      "notes": "The simplest useful behaviour policy, the entry point with least friction, the price that feels fair."
+    },
+    {
+      "id": "programme.credit",
+      "area": "programme",
+      "title": "Credit per customer, metered and billed on this site, with a top-up link",
+      "status": "proposed",
+      "where": "credit/index.html",
+      "notes": "The meter is the newsroom's today (SG Meter, live since 11 October 2026); wiring it to this site needs the lead. Until then credit is a number on the customer page, kept by hand."
+    },
+    {
+      "id": "programme.next-batch",
+      "area": "programme",
+      "title": "A form on this site for the next batch, encrypted in the browser to the riskmandate.ai agent's lane",
+      "status": "proposed",
+      "where": "next-batch/index.html",
+      "notes": "Today the route is the riskmandate.ai contact form or an email to agent@riskmandate.ai; the page says so."
+    },
+    {
+      "id": "programme.private-record",
+      "area": "programme",
+      "title": "The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds",
+      "status": "proposed",
+      "where": "docs/ops/needs.md",
+      "notes": "Never in this repository. The public page carries the summary."
+    },
+    {
+      "id": "programme.agent-policies",
+      "area": "programme",
+      "title": "A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in",
+      "status": "proposed",
+      "where": "customers/the-agents/",
+      "notes": "The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/."
+    },
+    {
+      "id": "programme.honest-column",
+      "area": "programme",
+      "title": "This site's row on the honest column at nfrs.sgit.ai",
+      "status": "proposed",
+      "where": "docs/ops/needs.md",
+      "notes": "Another repository; the ask is recorded."
+    },
+    {
+      "id": "programme.accounts",
+      "area": "programme",
+      "title": "Accounts, sign-in or a customer login on this site",
+      "status": "absent",
+      "where": "nowhere",
+      "notes": "The site is static. The meter, when wired, carries its own reading account, as on the newsroom."
+    },
+    {
+      "id": "programme.public-contact",
+      "area": "programme",
+      "title": "Customer contact details, company names that are not already public, or private notes in this repository",
+      "status": "absent",
+      "where": "nowhere",
+      "notes": "The gate fails on anything contact-shaped in data/customers.json."
+    },
+    {
+      "id": "programme.scores",
+      "area": "programme",
+      "title": "A score, rating or level on any behaviour policy",
+      "status": "absent",
+      "where": "nowhere",
+      "notes": "An Agent Behaviour Policy describes and does not judge. The gate fails on the words."
+    }
   ]
 }

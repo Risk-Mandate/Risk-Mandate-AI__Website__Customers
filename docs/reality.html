@@ -13,6 +13,8 @@
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
   <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/nav.js" defer></script>
   <meta property="og:type" content="website">
@@ -20,8 +22,8 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/docs/reality.html">
   <meta property="og:title" content="customers.riskmandate.ai: reality">
   <meta property="og:description" content="What exists on this site and in the programme, by status, generated from data/reality.json. If it is not listed, it does not exist.">
-  <meta name="rm-customers:version" content="0.1.1">
-  <meta name="rm-customers:released" content="2026-10-20">
+  <meta name="rm-customers:version" content="0.2.0">
+  <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
 <body>
@@ -30,7 +32,6 @@
     <div class="wrap">
       <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
       <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
-      <span class="stage-pill">first batch, being set up</span>
       <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
       <nav class="navlinks" aria-label="Site">
         <a class="pagelink" href="/start-here/">Start here</a>
@@ -69,17 +70,31 @@
           </div>
         </span>
       </nav>
-      <a class="version" href="/admin/versions.html" data-version="0.1.1" title="released 2026-10-20; what shipped in v0.1.1">v0.1.1</a>
+      <div class="tools">
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a>
+      </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/docs/">Docs</a> <span class="sep">/</span> <span aria-current="page">Reality: what exists</span></div>
   </header>
 <!-- rm-customers:nav:end -->
   <main class="wrap document">
     <!-- rm-customers:docs:start -->
-<p class="doc-source">Rendered from <a href="/docs/reality.md">docs/reality.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.1.1.</p>
+<p class="doc-source">Rendered from <a href="/docs/reality.md">docs/reality.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.0.</p>
 <h1 id="customersriskmandateai-reality">customers.riskmandate.ai: reality</h1>
-<p><em>Generated from <code>data/reality.json</code> by <code>admin/build/gen_reality.py</code> at site v0.1.1 (2026-10-20). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.</em></p>
-<p>20 claims: 11 shipped, 6 proposed, 3 absent.</p>
+<p><em>Generated from <code>data/reality.json</code> by <code>admin/build/gen_reality.py</code> at site v0.2.0 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.</em></p>
+<p>21 claims: 12 shipped, 6 proposed, 3 absent.</p>
 <table>
 <thead><tr><th>Status</th><th>Meaning</th></tr></thead>
 <tbody>
@@ -88,14 +103,15 @@
 <tr><td>absent</td><td>deliberately not on this site; comes as a later version, lives elsewhere, or never</td></tr>
 </tbody>
 </table>
-<h2 id="shipped-11">Shipped (11)</h2>
+<h2 id="shipped-12">Shipped (12)</h2>
 <table>
 <thead><tr><th>Area</th><th>Feature</th><th>Status</th><th>Where</th><th>Notes</th></tr></thead>
 <tbody>
 <tr><td>site</td><td>One version in admin/build/version.txt, a release history, and four CI jobs: validate, tag, deploy, verify live</td><td>shipped v0.1.0</td><td>admin/build/version.txt, data/versions.json, .github/workflows/deploy-pages.yml</td><td>Copied from secrets.sgit.ai, the newest gate in the estate. A clean push is not a release: verify-live polls the host.</td></tr>
 <tr><td>site</td><td>The RiskMandate chrome (head, header, breadcrumbs, footer, CSP) generated into every page from one definition</td><td>shipped v0.1.0</td><td>admin/build/chrome.py, admin/build/gen_chrome.py, assets/site.css</td><td>The look of riskmandate.ai; every colour is a token in one file.</td></tr>
+<tr><td>site</td><td>Six themes picked from the header and kept in the reader&#x27;s browser: RiskMandate (the default), Canvas, Night, Ember, Paper, Blueprint</td><td>shipped v0.2.0</td><td>data/themes.json, assets/themes.css, assets/theme.js, tests/build/test_themes.py</td><td>The newsroom&#x27;s five themes mapped onto this site&#x27;s tokens, plus riskmandate.ai&#x27;s own dark. Every colour is a token in one file; the gate checks every theme for every token and for contrast.</td></tr>
 <tr><td>site</td><td>A markdown twin for every page, llms.txt, llms-full.txt and sitemap.xml, generated from the pages</td><td>shipped v0.1.0</td><td>admin/build/gen<em>twins.py, admin/build/gen</em>llms.py</td><td>Links inside the markdown point at markdown.</td></tr>
-<tr><td>site</td><td>The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words</td><td>shipped v0.1.0</td><td>admin/build/validate.js, admin/build/gate.py, tests/</td><td>The house words are riskmandate.ai&#x27;s: never &quot;ADP&quot;, never &quot;the policy&quot; alone, no score, &quot;steps&quot; not &quot;rungs&quot;, British spelling. The verbatim brief and memo are exempt.</td></tr>
+<tr><td>site</td><td>The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words</td><td>shipped v0.1.0</td><td>admin/build/validate.js, admin/build/gate.py, tests/</td><td>The house words are riskmandate.ai&#x27;s rules, listed on the admin page and in WORD_RULES in admin/build/validate.js. The verbatim brief and memo are exempt.</td></tr>
 <tr><td>site</td><td>The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered</td><td>shipped v0.1.0</td><td>review/intent/, review/tools/, review/index.html</td><td>The top-down half only; see site.review-derived.</td></tr>
 <tr><td>programme</td><td>The brief and the memo published in full, never edited, with the corrections file beside them</td><td>shipped v0.1.0</td><td>docs/brief/</td><td>The newsroom article of 20 October 2026 and the voice memo of the same day, byte for byte, with its digest.</td></tr>
 <tr><td>programme</td><td>A start-here page: what a customer does first, in order, with the links to do it</td><td>shipped v0.1.0</td><td>start-here/index.html</td><td>The brief&#x27;s first fix for pages that were hard to understand; each customer will show where it still is.</td></tr>
@@ -132,7 +148,7 @@
   <!-- rm-customers:footer:start -->
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.1.1" title="released 2026-10-20; what shipped in v0.1.1">v0.1.1</a> · released 2026-10-20 · <a href="/admin/versions.html">releases</a> · <a href="/docs/reality.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/reality.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

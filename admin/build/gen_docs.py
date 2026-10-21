@@ -38,6 +38,7 @@ DESCRIPTIONS  = {'our-first-customers.md'                     : 'The brief: the 
                  'BRIEF-CORRECTIONS.md'                       : 'Where the brief and the memo were wrong, open, or decided differently while building, dated, beside them.',
                  'reality.md'                                 : 'What exists on this site and in the programme, by status, generated from data/reality.json. If it is not listed, it does not exist.',
                  'release.md'                                 : 'The version, the commit subject, the gate, the four CI jobs, and why green does not mean live.',
+                 'themes.md'                                  : 'The six themes: how one attribute picks them, what the gate checks, and how to add a seventh.',
                  'needs.md'                                   : 'Exactly what only a human can do, who, and which step waits on it.',
                  'README.md'                                  : 'The team page: two roles today, one person and one agent, and where the board lives.',
                  'board.md'                                   : 'The board: the work as files with a status line each.',

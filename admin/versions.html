@@ -12,6 +12,8 @@
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
   <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/nav.js" defer></script>
   <meta property="og:type" content="website">
@@ -19,8 +21,8 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/admin/versions.html">
   <meta property="og:title" content="Release history: one row per release, newest first, with what changed and why">
   <meta property="og:description" content="Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.">
-  <meta name="rm-customers:version" content="0.1.1">
-  <meta name="rm-customers:released" content="2026-10-20">
+  <meta name="rm-customers:version" content="0.2.0">
+  <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
 <body>
@@ -29,7 +31,6 @@
     <div class="wrap">
       <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
       <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
-      <span class="stage-pill">first batch, being set up</span>
       <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
       <nav class="navlinks" aria-label="Site">
         <a class="pagelink" href="/start-here/">Start here</a>
@@ -68,7 +69,21 @@
           </div>
         </span>
       </nav>
-      <a class="version" href="/admin/versions.html" data-version="0.1.1" title="released 2026-10-20; what shipped in v0.1.1">v0.1.1</a>
+      <div class="tools">
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a>
+      </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/admin/">Admin</a> <span class="sep">/</span> <span aria-current="page">Release history</span></div>
   </header>
@@ -80,6 +95,7 @@
   <table class="versions" data-generated-from="data/versions.json">
     <thead><tr><th>Version</th><th>Date</th><th>Release</th><th>What changed, and why</th></tr></thead>
     <tbody>
+      <tr><td><code>v0.2.0</code></td><td>2026-10-21</td><td>six themes, the newsroom&#x27;s five mapped onto RiskMandate&#x27;s look plus its own dark; the header fits an iPad</td><td>A theme pill in the header picks one of six, kept in this browser: RiskMandate (the default, riskmandate.ai&#x27;s paper and green), Canvas (its dark, from the dark hero band), and newsroom.sgit.ai&#x27;s Night, Ember, Paper and Blueprint, mapped onto this site&#x27;s tokens. Every colour now lives in assets/themes.css and nowhere else; site.css reads tokens only. A new test fails the build on a theme missing a token, a colour written outside that file, or a pair under its contrast in any theme; it found riskmandate.ai&#x27;s green at 4.24:1 on its own alternate band, so the link accent is one shade darker. The header lost the first-batch stage pill, gained the picker beside the version, and now folds its links behind the menu button below 1100px: between 1040 and 1200 the version chip used to run past the right edge and the page scrolled sideways, which is an iPad in landscape. Wide tables scroll inside themselves on a phone instead of widening the customers page. docs/ops/themes.md says how it works and how to add a seventh.</td></tr>
       <tr><td><code>v0.1.1</code></td><td>2026-10-20</td><td>the repository moved to Risk-Mandate; the source links and the DNS target follow it</td><td>The lead moved the repository from the SGit-AI organisation to Risk-Mandate/Risk-Mandate-AI__Website__Customers between the first push and the first CI run, and pointed customers.riskmandate.ai at risk-mandate.github.io. Every source link on the site, the release script&#x27;s Actions lookup, the participant disclosure and the DNS line in needs.md now name the new home; the corrections file records the move as C9. Nothing else changed.</td></tr>
       <tr><td><code>v0.1.0</code></td><td>2026-10-20</td><td>the first customers site: the brief, the start-here page, the batch, the steps and the gate</td><td>The site exists, as customers.riskmandate.ai, a sub-site of riskmandate.ai, built from the newsroom brief of 20 October 2026 and the voice memo that followed it the same day. What is here: the brief published in full with its corrections file beside it; a start-here page in order; the programme pages (customers not beta users, credit and the meter, the seven milestone steps, the daily follow-up, what we want to discover, the next batch); a page per customer generated from data/customers.json with no contact details in it; the reality file; the team as files; the review folder with the brief as intent; and the eight-check gate with a leak tripwire and the house words. What is not here: the meter (the newsroom&#x27;s, not yet wired to this site), a form, any customer&#x27;s private details, and the derived half of the review folder. Every number on a page is counted from a file.</td></tr>
     </tbody>
@@ -90,7 +106,7 @@
   <!-- rm-customers:footer:start -->
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.1.1" title="released 2026-10-20; what shipped in v0.1.1">v0.1.1</a> · released 2026-10-20 · <a href="/admin/versions.html">releases</a> · <a href="/admin/versions.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/admin/versions.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "_comment": "The themes a reader can pick from the header. RiskMandate is the default and the first; Canvas is its dark variant; Night, Ember, Paper and Blueprint are the newsroom.sgit.ai themes (assets/themes/themes.css there, v0.12.12, 13 October 2026) mapped onto this site's tokens. Every colour on the site is a token, and assets/themes.css gives every token a value in every theme, in a block :root[data-theme=<id>]. assets/theme.js sets the attribute before the first paint, from localStorage (the key below) or, when nothing is stored, from the reader's prefers-color-scheme. The picker is generated from this file by admin/build/chrome.py. tests/build/test_themes.py checks that this file, theme.js and themes.css name the same themes, that every theme defines every token, that no colour is written anywhere else, and that the pairs a reader reads hold their contrast.",
+  "default": "riskmandate",
+  "whenPreferringDark": "canvas",
+  "storageKey": "riskmandate.customers.theme",
+  "themes": [
+    { "id": "riskmandate", "name": "RiskMandate", "mode": "light", "note": "Paper and green, the default", "from": "riskmandate.ai" },
+    { "id": "canvas",      "name": "Canvas",      "mode": "dark",  "note": "Dark, green",                 "from": "riskmandate.ai's dark hero, as a whole page" },
+    { "id": "night",       "name": "Night",       "mode": "dark",  "note": "Dark, teal",                  "from": "newsroom.sgit.ai Night" },
+    { "id": "ember",       "name": "Ember",       "mode": "dark",  "note": "Dark, amber",                 "from": "newsroom.sgit.ai Ember" },
+    { "id": "paper",       "name": "Paper",       "mode": "light", "note": "Warm cream, terracotta",      "from": "newsroom.sgit.ai Paper" },
+    { "id": "blueprint",   "name": "Blueprint",   "mode": "light", "note": "White, electric blue",        "from": "newsroom.sgit.ai Blueprint" }
+  ]
+}

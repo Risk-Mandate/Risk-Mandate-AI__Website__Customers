@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The themes: six, one attribute, and how to add a seventh</title>
+  <meta name="description" content="The six themes: how one attribute picks them, what the gate checks, and how to add a seventh.">
+  <meta name="rm-customers:source" content="/docs/ops/themes.md">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/docs/ops/themes.html">
+  <link rel="alternate" type="text/markdown" href="/docs/ops/themes.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/docs/ops/themes.html">
+  <meta property="og:title" content="The themes: six, one attribute, and how to add a seventh">
+  <meta property="og:description" content="The six themes: how one attribute picks them, what the gate checks, and how to add a seventh.">
+  <meta name="rm-customers:version" content="0.2.0">
+  <meta name="rm-customers:released" content="2026-10-21">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">RiskMandate<span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <a class="pagelink" href="/start-here/">Start here</a>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/credit/">Credit, and the meter</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+          </div>
+        </span>
+        <a class="pagelink" href="/customers/">Customers</a>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/admin/">Admin<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/docs/ops/needs.html">What needs a human</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/docs/">Docs</a> <span class="sep">/</span> <a href="/docs/ops/">Operations</a> <span class="sep">/</span> <span aria-current="page">The themes</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap document">
+    <!-- rm-customers:docs:start -->
+<p class="doc-source">Rendered from <a href="/docs/ops/themes.md">docs/ops/themes.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.0.</p>
+<h1 id="the-themes-six-one-attribute-and-how-to-add-a-seventh">The themes: six, one attribute, and how to add a seventh</h1>
+<p><em>customers.riskmandate.ai · operations · written at v0.2.0 (2026-10-21) · CC BY 4.0</em></p>
+<p>The site has six themes, picked from the pill in the header and kept in the reader&#x27;s browser. RiskMandate is the default and the first: riskmandate.ai&#x27;s look, paper and green. Canvas is its dark variant, riskmandate.ai&#x27;s dark hero band used as the whole page. The other four are newsroom.sgit.ai&#x27;s themes, from its v0.12.12 of 13 October 2026, with the newsroom&#x27;s values mapped onto this site&#x27;s tokens.</p>
+<table>
+<thead><tr><th>Theme</th><th>Mode</th><th>What it is</th><th>From</th></tr></thead>
+<tbody>
+<tr><td>RiskMandate</td><td>light</td><td>paper and green, the default</td><td>riskmandate.ai</td></tr>
+<tr><td>Canvas</td><td>dark</td><td>dark, green</td><td>riskmandate.ai&#x27;s dark hero, as a whole page</td></tr>
+<tr><td>Night</td><td>dark</td><td>dark, teal</td><td>newsroom.sgit.ai Night</td></tr>
+<tr><td>Ember</td><td>dark</td><td>dark, amber</td><td>newsroom.sgit.ai Ember</td></tr>
+<tr><td>Paper</td><td>light</td><td>warm cream, terracotta</td><td>newsroom.sgit.ai Paper</td></tr>
+<tr><td>Blueprint</td><td>light</td><td>white, electric blue</td><td>newsroom.sgit.ai Blueprint</td></tr>
+</tbody>
+</table>
+<h2 id="how-it-works">How it works</h2>
+<ul>
+<li><strong>One attribute.</strong> <code>assets/theme.js</code> sets <code>data-theme</code> on the html element before the first paint: it is a classic script in the head, loaded before the stylesheets, so the page never flashes the default first.</li>
+<li><strong>The reader&#x27;s word is kept.</strong> The stored choice comes first. With nothing stored, a system set to dark opens in Canvas and anything else in RiskMandate; the first choice in the picker ends that. The choice is one key in local storage, <code>riskmandate.customers.theme</code>, and never leaves the device. Print is the default theme on white, whatever the reader reads in.</li>
+<li><strong>Every colour is a token.</strong> <code>assets/themes.css</code> is the only file on the site that writes a colour. It has one block per theme and every block defines every token. <code>assets/site.css</code> reads the tokens and writes no colour of its own.</li>
+<li><strong>The picker is drawn by the build.</strong> <code>admin/build/chrome.py</code> writes the list from <code>data/themes.json</code> into every page&#x27;s header; <code>theme.js</code> wires it and marks the current entry. Without JavaScript there is no choice and the page is the default.</li>
+</ul>
+<h2 id="what-the-gate-checks">What the gate checks</h2>
+<p><code>tests/build/test_themes.py</code> fails the build when any of these stop being true:</p>
+<ol>
+<li><code>data/themes.json</code>, <code>theme.js</code> and <code>themes.css</code> name the same themes, in the same order, with the default first and the same storage key.</li>
+<li>Every theme block defines exactly the tokens the default defines; no theme falls through to another&#x27;s colour.</li>
+<li>No colour is written in <code>site.css</code>, the scripts or any page.</li>
+<li>Each swatch in the picker is its theme&#x27;s own <code>--rm-swatch</code>.</li>
+<li>Each theme&#x27;s <code>color-scheme</code> matches its mode, so the browser&#x27;s own controls and scrollbars follow it.</li>
+<li>In every theme, the pairs a reader reads hold their contrast: text, muted text, links and button ink at 4.5:1; labels, the hero&#x27;s accent words and the step states at the levels their size allows.</li>
+</ol>
+<p>The last check found one thing on the first run. riskmandate.ai&#x27;s green, <code>#1A7F5A</code>, is 4.24:1 on its own alternate band, under the 4.5:1 a link needs. The accent here is <code>#187A56</code>, one shade darker and 4.53:1 there; the swatch and the shipped chip keep the brand green.</p>
+<h2 id="adding-a-theme">Adding a theme</h2>
+<ol>
+<li>Add a row to <code>data/themes.json</code>: an id of lower-case letters, a name, a mode, a note of three or four words, and where it came from.</li>
+<li>Add the id and name to <code>THEMES</code> in <code>assets/theme.js</code>, in the same position.</li>
+<li>Copy the default block in <code>assets/themes.css</code>, rename it <code>:root[data-theme=&quot;&lt;id&gt;&quot;]</code>, and give every token a value; add the <code>.sw-&lt;id&gt;</code> swatch.</li>
+<li>Run <code>python3 admin/build/gate.py --build</code>. The contrast check names each pair that falls short; fix the value, not the threshold.</li>
+</ol>
+    <!-- rm-customers:docs:end -->
+  </main>
+  <!-- rm-customers:footer:start -->
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.0" title="released 2026-10-21; what shipped in v0.2.0">v0.2.0</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/ops/themes.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

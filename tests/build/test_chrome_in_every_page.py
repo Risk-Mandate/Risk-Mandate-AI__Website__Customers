@@ -41,6 +41,10 @@ class Test__Chrome__In__Every__Page(TestCase):
                 self.assertRegex(text, r'<main\b')
                 self.assertIn('<link rel="stylesheet" href="/assets/site.css">', text)
                 self.assertIn('<script src="/assets/nav.js" defer></script>', text)
+                self.assertLess(text.index('<script src="/assets/theme.js"></script>'), text.index('<link rel="stylesheet" href="/assets/themes.css">'))   # the theme is set before the first paint
+                self.assertLess(text.index('<link rel="stylesheet" href="/assets/themes.css">'), text.index('<link rel="stylesheet" href="/assets/site.css">'))
+                self.assertIn('<div class="theme-pick">', text)
+                self.assertNotIn('stage-pill', text)
                 self.assertIn('<nav class="navlinks" aria-label="Site">', text)
                 self.assertIn('<button class="navtoggle"', text)
                 self.assertEqual(len(re.findall(r'<span class="navgroup( active)?">', text)), dropdowns)
@@ -67,9 +71,3 @@ class Test__Chrome__In__Every__Page(TestCase):
                 self.assertNotRegex(text, r'<script\b(?![^>]*\bsrc=)')
                 self.assertNotIn('<style', text)
                 self.assertNotRegex(text, r'\sstyle\s*=')
-
-    def test_colours_live_in_one_file(self):                                      # every colour is a token in assets/site.css and nowhere else
-        for path in self.files:
-            text = path.read_text(encoding='utf-8')
-            with self.subTest(page=path.relative_to(ROOT).as_posix()):
-                self.assertNotRegex(text, r'#[0-9A-Fa-f]{6}\b')

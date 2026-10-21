@@ -1,8 +1,8 @@
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.1.1 (2026-10-20). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.0 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
-20 claims: 11 shipped, 6 proposed, 3 absent.
+21 claims: 12 shipped, 6 proposed, 3 absent.
 
 | Status | Meaning |
 |---|---|
@@ -10,14 +10,15 @@
 | proposed | the brief or the memo says how; not built; described only in the future tense |
 | absent | deliberately not on this site; comes as a later version, lives elsewhere, or never |
 
-## Shipped (11)
+## Shipped (12)
 
 | Area | Feature | Status | Where | Notes |
 |---|---|---|---|---|
 | site | One version in admin/build/version.txt, a release history, and four CI jobs: validate, tag, deploy, verify live | shipped v0.1.0 | admin/build/version.txt, data/versions.json, .github/workflows/deploy-pages.yml | Copied from secrets.sgit.ai, the newest gate in the estate. A clean push is not a release: verify-live polls the host. |
 | site | The RiskMandate chrome (head, header, breadcrumbs, footer, CSP) generated into every page from one definition | shipped v0.1.0 | admin/build/chrome.py, admin/build/gen_chrome.py, assets/site.css | The look of riskmandate.ai; every colour is a token in one file. |
+| site | Six themes picked from the header and kept in the reader's browser: RiskMandate (the default), Canvas, Night, Ember, Paper, Blueprint | shipped v0.2.0 | data/themes.json, assets/themes.css, assets/theme.js, tests/build/test_themes.py | The newsroom's five themes mapped onto this site's tokens, plus riskmandate.ai's own dark. Every colour is a token in one file; the gate checks every theme for every token and for contrast. |
 | site | A markdown twin for every page, llms.txt, llms-full.txt and sitemap.xml, generated from the pages | shipped v0.1.0 | admin/build/gen_twins.py, admin/build/gen_llms.py | Links inside the markdown point at markdown. |
-| site | The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words | shipped v0.1.0 | admin/build/validate.js, admin/build/gate.py, tests/ | The house words are riskmandate.ai's: never "ADP", never "the policy" alone, no score, "steps" not "rungs", British spelling. The verbatim brief and memo are exempt. |
+| site | The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words | shipped v0.1.0 | admin/build/validate.js, admin/build/gate.py, tests/ | The house words are riskmandate.ai's rules, listed on the admin page and in WORD_RULES in admin/build/validate.js. The verbatim brief and memo are exempt. |
 | site | The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered | shipped v0.1.0 | review/intent/, review/tools/, review/index.html | The top-down half only; see site.review-derived. |
 | programme | The brief and the memo published in full, never edited, with the corrections file beside them | shipped v0.1.0 | docs/brief/ | The newsroom article of 20 October 2026 and the voice memo of the same day, byte for byte, with its digest. |
 | programme | A start-here page: what a customer does first, in order, with the links to do it | shipped v0.1.0 | start-here/index.html | The brief's first fix for pages that were hard to understand; each customer will show where it still is. |

@@ -2,7 +2,7 @@
 
 > How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.
 
-*Source: <https://customers.riskmandate.ai/admin/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -46,7 +46,7 @@ In `admin/build/validate.js`, with no dependency beyond Node. Every problem of e
 7. **Reality regenerates identically.** `docs/reality.md` and the status tables are what `data/reality.json` says.
 8. **The house words.** riskmandate.ai's rules: never "ADP", never "the policy" alone, no score on a behaviour policy, "steps" not "rungs", British spelling, customers not "beta users". The verbatim brief and memo are exempt.
 
-Plus an advisory that never fails the build: em-dashes in prose we write. Then `pytest tests/build/` (the chrome on every page, the twins, the customer data, the converters) and `node --test tests/unit/` (the gate's own helpers).
+Plus an advisory that never fails the build: em-dashes in prose we write. Then `pytest tests/build/` (the chrome on every page, the twins, the customer data, the converters, and the themes: every token in every theme, no colour outside `assets/themes.css`, and contrast in all six) and `node --test tests/unit/` (the gate's own helpers). How the themes work, and how to add one, is in [the themes note](/docs/ops/themes.md).
 
 ## The four CI jobs
 

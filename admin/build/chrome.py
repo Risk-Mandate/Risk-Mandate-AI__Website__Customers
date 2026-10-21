@@ -18,6 +18,7 @@ ROOT           = Path(__file__).resolve().parents[2]
 VERSION_FILE   = ROOT / 'admin' / 'build' / 'version.txt'
 CNAME_FILE     = ROOT / 'CNAME'
 VERSIONS_FILE  = ROOT / 'data' / 'versions.json'
+THEMES_FILE    = ROOT / 'data' / 'themes.json'
 
 MARKER_PREFIX  = 'rm-customers'                                                  # <!-- rm-customers:<block>:start -->
 
@@ -25,7 +26,6 @@ SITE_NAME      = 'customers.riskmandate.ai'
 SITE_ONE_LINER = ('The first customers of the Agent Behaviour Policy: an early access programme run as a site, '
                   'with a start-here page, a page per customer, credit to spend, the milestones agreed with each one, '
                   'and a daily follow-up. Part of riskmandate.ai.')
-STAGE          = 'first batch, being set up'                                     # the stage pill; changes when the first customer reaches the usage moment
 PARENT_URL     = 'https://riskmandate.ai'
 PARENT_TITLE   = 'riskmandate.ai: the company and the product this programme is for'
 LICENCE_URL    = 'https://creativecommons.org/licenses/by/4.0/'
@@ -84,6 +84,7 @@ class Chrome:
         self.base_url = f'https://{self.host}'
         self.released = self.release_date()
         self.labels   = {href: label for _, _, items in NAV_GROUPS for href, label in items}
+        self.themes   = json.loads(THEMES_FILE.read_text(encoding='utf-8'))
 
     def release_date(self):
         releases = json.loads(VERSIONS_FILE.read_text(encoding='utf-8'))['releases']
@@ -115,6 +116,8 @@ class Chrome:
                      f'<link rel="license" href="{LICENCE_URL}">'                                         ,
                      f'<link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">'  ,
                      f'<link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">' ,
+                     f'<script src="/assets/theme.js"></script>'                                         ,   # before the stylesheets, so the theme is set before the first paint
+                     f'<link rel="stylesheet" href="/assets/themes.css">'                                 ,
                      f'<link rel="stylesheet" href="/assets/site.css">'                                   ,
                      f'<script src="/assets/nav.js" defer></script>'                                      ,
                      f'<meta property="og:type" content="website">'                                       ,
@@ -160,15 +163,32 @@ class Chrome:
                           '      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26">'
                           'RiskMandate<span class="sub">customers</span></a>'                                                                                ,
                           f'      <a class="parent" href="{PARENT_URL}" title="{html.escape(PARENT_TITLE)}">&#8599; riskmandate.ai</a>'                       ,
-                          f'      <span class="stage-pill">{STAGE}</span>'                                                                                     ,
                           '      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>',
                           '      <nav class="navlinks" aria-label="Site">'                                                                                   ,
                           *groups                                                                                                                            ,
                           '      </nav>'                                                                                                                     ,
-                          f'      {self.version_badge()}'                                                                                                     ,
+                          '      <div class="tools">'                                                                                                        ,
+                          self.theme_picker()                                                                                                                ,
+                          f'        {self.version_badge()}'                                                                                                   ,
+                          '      </div>'                                                                                                                     ,
                           '    </div>'                                                                                                                       ,
                           self.crumbs(url_path, title)                                                                                                       ,
                           '  </header>'                                                                                                                      ])
+
+    def theme_picker(self):                                                     # the list is drawn here from data/themes.json; assets/theme.js wires it and marks the current one
+        default = next(t for t in self.themes['themes'] if t['id'] == self.themes['default'])
+        picks   = [f'            <li><button type="button" data-theme-pick="{t["id"]}" aria-pressed="false">'
+                   f'<span class="sw sw-{t["id"]}" aria-hidden="true"></span><span>{html.escape(t["name"])}<small>{html.escape(t["note"])}</small></span></button></li>'
+                   for t in self.themes['themes']]
+        return '\n'.join(['        <div class="theme-pick">'                                                                                                ,
+                          '          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser">'
+                          f'<span class="sw sw-{default["id"]}" aria-hidden="true"></span><span class="name">{html.escape(default["name"])}</span>'
+                          '<span class="caret" aria-hidden="true">&#9662;</span></button>'                                                                  ,
+                          '          <ul aria-label="Theme" hidden>'                                                                                       ,
+                          *picks                                                                                                                             ,
+                          f'            <li class="sub-note">Kept in this browser only, as <code>{self.themes["storageKey"]}</code>; nothing else is stored.</li>',
+                          '          </ul>'                                                                                                                  ,
+                          '        </div>'                                                                                                                   ])
 
     def crumbs(self, url_path, title):
         if url_path == '/':

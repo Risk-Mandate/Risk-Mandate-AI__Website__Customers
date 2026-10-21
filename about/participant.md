@@ -2,7 +2,7 @@
 
 > This site is published by the people building the thing it describes: RiskMandate, whose product the programme sells, and the sgit project whose tooling the site runs on. What that means for the reader, and who did what.
 
-*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

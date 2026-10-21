@@ -2,7 +2,7 @@
 
 > The article this site was built from, published in full and never edited; the voice memo that followed it, byte for byte; and the corrections file, which is where the brief is told it was wrong.
 
-*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

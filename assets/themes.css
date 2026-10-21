@@ -1,0 +1,292 @@
+/* ── themes.css — every colour on customers.riskmandate.ai, six times ────────
+   This is the only file on the site where a colour is written. Everything else
+   (assets/site.css, the pages) reads the semantic tokens below, so a theme is a
+   block here and nothing more. One attribute on <html> picks it:
+   data-theme="night". Absent, or an unknown value, is RiskMandate, the look of
+   riskmandate.ai, which is the default and the first theme.
+
+   Canvas is RiskMandate's own dark: the dark hero band, as the whole page. Night,
+   Ember, Paper and Blueprint are newsroom.sgit.ai's themes (v0.12.12), with the
+   newsroom's values mapped onto this site's tokens; where a token has no newsroom
+   equivalent (the dark band, the status chips) the value is chosen to hold the
+   same contrast the default holds.
+
+   Each block defines every token the default defines; tests/build/test_themes.py
+   fails when one is missing, so no theme ever falls through to another's colour,
+   and it checks the contrast of the pairs a reader reads in every theme. The list
+   of themes, with names and notes, is data/themes.json.
+
+   Token meanings:
+     --rm-bg / -bg-2 / -card     the page, the alternate section band, a raised card
+     --rm-text / -muted / -faint the ink: headings and body, secondary, labels only
+     --rm-accent and family      links, buttons, the brand colour; -on-accent is ink on it
+     --rm-canvas and --rm-fg-*   the dark band (the hero and the footer) and its ink
+     --rm-band-accent            the accent on the dark band
+     --rm-status-* / -step-*     the reality chips and the milestone states
+
+   One departure from riskmandate.ai: its green, #1A7F5A, is 4.24:1 on its own
+   alternate band, under the 4.5:1 a link needs, so the accent here is #187A56,
+   one shade darker (4.53:1 there). The swatch and the shipped chip keep the
+   brand green, which holds 4.97:1 under white text.                             */
+
+/* ── RiskMandate: paper and green, the default ──────────────────────────────── */
+:root,
+:root[data-theme="riskmandate"] {
+    color-scheme:          light;
+    --rm-bg:               #F7F6F2;
+    --rm-bg-2:             #EFEDE7;
+    --rm-card:             #FFFFFF;
+    --rm-text:             #1A1917;
+    --rm-muted:            #4A4845;
+    --rm-faint:            #7A7770;
+    --rm-border:           #E2DFD8;
+    --rm-accent:           #187A56;
+    --rm-accent-hover:     #146848;
+    --rm-accent-2:         #22C55E;
+    --rm-accent-bg:        #EBF5F0;
+    --rm-accent-tint:      rgba(26, 127, 90, 0.18);
+    --rm-accent-line:      rgba(26, 127, 90, 0.40);
+    --rm-on-accent:        #FFFFFF;
+    --rm-warn:             #B45309;
+    --rm-warn-bg:          #FBF1E6;
+    --rm-danger:           #C0392B;
+    --rm-canvas:           #0A0A09;
+    --rm-fg:               #F7F6F2;
+    --rm-fg-2:             #A9A8A4;
+    --rm-line:             rgba(247, 246, 242, 0.10);
+    --rm-line-2:           rgba(247, 246, 242, 0.22);
+    --rm-band-accent:      #2FA877;
+    --rm-header:           rgba(255, 255, 255, 0.92);
+    --rm-shadow:           0 10px 34px rgba(13, 13, 12, 0.14);
+    --rm-on-status:        #FFFFFF;
+    --rm-status-shipped:   #1A7F5A;
+    --rm-status-proposed:  #B45309;
+    --rm-status-absent:    #6B6964;
+    --rm-step-done:        #1A7F5A;
+    --rm-step-progress:    #B45309;
+    --rm-step-open:        #D6D2C9;
+    --rm-swatch:           #1A7F5A;
+}
+
+/* ── Canvas: RiskMandate's dark, green ──────────────────────────────────────── */
+:root[data-theme="canvas"] {
+    color-scheme:          dark;
+    --rm-bg:               #0F0F0E;
+    --rm-bg-2:             #141412;
+    --rm-card:             #1B1B19;
+    --rm-text:             #F2F1EC;
+    --rm-muted:            #B8B5AD;
+    --rm-faint:            #8E8B83;
+    --rm-border:           #2E2D29;
+    --rm-accent:           #3FBF8A;
+    --rm-accent-hover:     #66D4A6;
+    --rm-accent-2:         #22C55E;
+    --rm-accent-bg:        #12281E;
+    --rm-accent-tint:      rgba(63, 191, 138, 0.14);
+    --rm-accent-line:      rgba(63, 191, 138, 0.40);
+    --rm-on-accent:        #06170F;
+    --rm-warn:             #E3A548;
+    --rm-warn-bg:          #2B2213;
+    --rm-danger:           #FF7B6B;
+    --rm-canvas:           #070706;
+    --rm-fg:               #F7F6F2;
+    --rm-fg-2:             #B0AFAA;
+    --rm-line:             rgba(247, 246, 242, 0.10);
+    --rm-line-2:           rgba(247, 246, 242, 0.22);
+    --rm-band-accent:      #3FBF8A;
+    --rm-header:           rgba(15, 15, 14, 0.90);
+    --rm-shadow:           0 10px 34px rgba(0, 0, 0, 0.55);
+    --rm-on-status:        #0A0A09;
+    --rm-status-shipped:   #3FBF8A;
+    --rm-status-proposed:  #E3A548;
+    --rm-status-absent:    #9A978F;
+    --rm-step-done:        #3FBF8A;
+    --rm-step-progress:    #E3A548;
+    --rm-step-open:        #3A3935;
+    --rm-swatch:           #3FBF8A;
+}
+
+/* ── Night: dark, teal (newsroom.sgit.ai) ───────────────────────────────────── */
+:root[data-theme="night"] {
+    color-scheme:          dark;
+    --rm-bg:               #0F1115;
+    --rm-bg-2:             #13161C;
+    --rm-card:             #1C2129;
+    --rm-text:             #E6E8EC;
+    --rm-muted:            #A3A9B5;
+    --rm-faint:            #858C9A;
+    --rm-border:           #2A303A;
+    --rm-accent:           #2DD4BF;
+    --rm-accent-hover:     #5EEAD4;
+    --rm-accent-2:         #2DD4BF;
+    --rm-accent-bg:        #163A36;
+    --rm-accent-tint:      rgba(45, 212, 191, 0.10);
+    --rm-accent-line:      rgba(45, 212, 191, 0.38);
+    --rm-on-accent:        #06211D;
+    --rm-warn:             #E3B341;
+    --rm-warn-bg:          #2F2612;
+    --rm-danger:           #FF7B72;
+    --rm-canvas:           #090B0E;
+    --rm-fg:               #E6E8EC;
+    --rm-fg-2:             #A3A9B5;
+    --rm-line:             rgba(230, 232, 236, 0.10);
+    --rm-line-2:           rgba(230, 232, 236, 0.22);
+    --rm-band-accent:      #2DD4BF;
+    --rm-header:           rgba(15, 17, 21, 0.90);
+    --rm-shadow:           0 6px 24px rgba(0, 0, 0, 0.55);
+    --rm-on-status:        #06211D;
+    --rm-status-shipped:   #2DD4BF;
+    --rm-status-proposed:  #E3B341;
+    --rm-status-absent:    #8A91A0;
+    --rm-step-done:        #2DD4BF;
+    --rm-step-progress:    #E3B341;
+    --rm-step-open:        #3A4150;
+    --rm-swatch:           #2DD4BF;
+}
+
+/* ── Ember: dark, amber (newsroom.sgit.ai) ──────────────────────────────────── */
+:root[data-theme="ember"] {
+    color-scheme:          dark;
+    --rm-bg:               #16130F;
+    --rm-bg-2:             #1A1611;
+    --rm-card:             #262019;
+    --rm-text:             #F1E9DC;
+    --rm-muted:            #B3A692;
+    --rm-faint:            #948670;
+    --rm-border:           #352D24;
+    --rm-accent:           #E0A22B;
+    --rm-accent-hover:     #F0BB56;
+    --rm-accent-2:         #F0BB56;
+    --rm-accent-bg:        #3A2D12;
+    --rm-accent-tint:      rgba(224, 162, 43, 0.10);
+    --rm-accent-line:      rgba(224, 162, 43, 0.40);
+    --rm-on-accent:        #231705;
+    --rm-warn:             #FFB070;
+    --rm-warn-bg:          #3A2A18;
+    --rm-danger:           #FF8A78;
+    --rm-canvas:           #0E0C09;
+    --rm-fg:               #F1E9DC;
+    --rm-fg-2:             #B3A692;
+    --rm-line:             rgba(241, 233, 220, 0.10);
+    --rm-line-2:           rgba(241, 233, 220, 0.22);
+    --rm-band-accent:      #E0A22B;
+    --rm-header:           rgba(22, 19, 15, 0.90);
+    --rm-shadow:           0 6px 24px rgba(0, 0, 0, 0.60);
+    --rm-on-status:        #231705;
+    --rm-status-shipped:   #9ACD7E;
+    --rm-status-proposed:  #E0A22B;
+    --rm-status-absent:    #948670;
+    --rm-step-done:        #9ACD7E;
+    --rm-step-progress:    #E0A22B;
+    --rm-step-open:        #4A3F33;
+    --rm-swatch:           #E0A22B;
+}
+
+/* ── Paper: warm cream, terracotta (newsroom.sgit.ai) ───────────────────────── */
+:root[data-theme="paper"] {
+    color-scheme:          light;
+    --rm-bg:               #F7F1E6;
+    --rm-bg-2:             #EFE6D6;
+    --rm-card:             #FFFCF6;
+    --rm-text:             #221C15;
+    --rm-muted:            #5C5042;
+    --rm-faint:            #7F7260;
+    --rm-border:           #E2D6C0;
+    --rm-accent:           #A8442A;
+    --rm-accent-hover:     #8E3620;
+    --rm-accent-2:         #C4572F;
+    --rm-accent-bg:        #F6E3DA;
+    --rm-accent-tint:      rgba(168, 68, 42, 0.12);
+    --rm-accent-line:      rgba(168, 68, 42, 0.38);
+    --rm-on-accent:        #FFF7F2;
+    --rm-warn:             #8A5410;
+    --rm-warn-bg:          #F3EAD2;
+    --rm-danger:           #96271A;
+    --rm-canvas:           #241C14;
+    --rm-fg:               #F7F1E6;
+    --rm-fg-2:             #BFB2A0;
+    --rm-line:             rgba(247, 241, 230, 0.10);
+    --rm-line-2:           rgba(247, 241, 230, 0.24);
+    --rm-band-accent:      #E58A66;
+    --rm-header:           rgba(247, 241, 230, 0.92);
+    --rm-shadow:           0 6px 24px rgba(70, 52, 30, 0.16);
+    --rm-on-status:        #FFF7F2;
+    --rm-status-shipped:   #3B6E45;
+    --rm-status-proposed:  #8A5410;
+    --rm-status-absent:    #6F6354;
+    --rm-step-done:        #3B6E45;
+    --rm-step-progress:    #8A5410;
+    --rm-step-open:        #D9CBB1;
+    --rm-swatch:           #A8442A;
+}
+
+/* ── Blueprint: white, electric blue (newsroom.sgit.ai) ─────────────────────── */
+:root[data-theme="blueprint"] {
+    color-scheme:          light;
+    --rm-bg:               #F8F9FB;
+    --rm-bg-2:             #EEF1F6;
+    --rm-card:             #FFFFFF;
+    --rm-text:             #101318;
+    --rm-muted:            #4F5866;
+    --rm-faint:            #737D8C;
+    --rm-border:           #DDE1E9;
+    --rm-accent:           #1B4DFF;
+    --rm-accent-hover:     #1540D6;
+    --rm-accent-2:         #4D74FF;
+    --rm-accent-bg:        #E8EDFF;
+    --rm-accent-tint:      rgba(27, 77, 255, 0.10);
+    --rm-accent-line:      rgba(27, 77, 255, 0.35);
+    --rm-on-accent:        #FFFFFF;
+    --rm-warn:             #A04B06;
+    --rm-warn-bg:          #FDF3E7;
+    --rm-danger:           #C81E1E;
+    --rm-canvas:           #0B1230;
+    --rm-fg:               #F4F6FB;
+    --rm-fg-2:             #A9B2CC;
+    --rm-line:             rgba(244, 246, 251, 0.10);
+    --rm-line-2:           rgba(244, 246, 251, 0.24);
+    --rm-band-accent:      #8AA4FF;
+    --rm-header:           rgba(255, 255, 255, 0.92);
+    --rm-shadow:           0 6px 24px rgba(16, 19, 24, 0.14);
+    --rm-on-status:        #FFFFFF;
+    --rm-status-shipped:   #157347;
+    --rm-status-proposed:  #A04B06;
+    --rm-status-absent:    #5F6A7A;
+    --rm-step-done:        #157347;
+    --rm-step-progress:    #A04B06;
+    --rm-step-open:        #C4CAD6;
+    --rm-swatch:           #1B4DFF;
+}
+
+/* ── the picker's swatches ───────────────────────────────────────────────────
+   Each entry's dot is ITS theme's colour, not the active one's, so the list reads
+   as six colours before any is tried. These repeat the --rm-swatch values above,
+   because a token from another theme cannot be read without switching to it. */
+.sw-riskmandate { --sw: #1A7F5A; }
+.sw-canvas      { --sw: #3FBF8A; }
+.sw-night       { --sw: #2DD4BF; }
+.sw-ember       { --sw: #E0A22B; }
+.sw-paper       { --sw: #A8442A; }
+.sw-blueprint   { --sw: #1B4DFF; }
+
+/* ── print is the default, whatever the reader reads in ────────────────────── */
+@media print {
+    :root[data-theme] {
+        color-scheme:      light;
+        --rm-bg:           #FFFFFF;
+        --rm-bg-2:         #FFFFFF;
+        --rm-card:         #FFFFFF;
+        --rm-text:         #1A1917;
+        --rm-muted:        #4A4845;
+        --rm-faint:        #7A7770;
+        --rm-border:       #E2DFD8;
+        --rm-accent:       #1A7F5A;
+        --rm-accent-bg:    #EBF5F0;
+        --rm-on-accent:    #FFFFFF;
+        --rm-canvas:       #FFFFFF;
+        --rm-fg:           #1A1917;
+        --rm-fg-2:         #4A4845;
+        --rm-band-accent:  #1A7F5A;
+        --rm-shadow:       none;
+    }
+}

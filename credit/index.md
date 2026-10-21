@@ -2,7 +2,7 @@
 
 > How the credit works for a customer of the first batch: a starting amount, a meter that charges a few pence per use, a top-up link, and the two numbers we track, credit used and whether they topped up. Today the meter is the newsroom's; wiring it to this site is proposed and waits on the lead.
 
-*Source: <https://customers.riskmandate.ai/credit/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

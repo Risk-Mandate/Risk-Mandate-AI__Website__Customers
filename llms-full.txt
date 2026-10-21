@@ -2,7 +2,7 @@
 
 > The first customers of the Agent Behaviour Policy: an early access programme run as a site, with a start-here page, a page per customer, credit to spend, the milestones agreed with each one, and a daily follow-up. Part of riskmandate.ai.
 
-Site version: v0.1.1 (2026-10-20). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers. Parent site: https://riskmandate.ai
+Site version: v0.2.0 (2026-10-21). Pages CC BY 4.0, code Apache-2.0. Source: https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers. Parent site: https://riskmandate.ai
 
 Every HTML page has a markdown twin at the same path with the extension swapped; links inside the markdown point at markdown, so an agent never has to parse HTML. What exists, is proposed or is deliberately absent is in /docs/reality.md, generated from data/reality.json on every release: if it is not listed there, it does not exist. Nothing on this site is described in the present tense before that file says shipped.
 
@@ -21,7 +21,7 @@ source: /index.md
 
 > The first customers of the Agent Behaviour Policy, and the site we run the programme from: a start-here page, a page per customer with the objectives and milestones agreed with them, credit to spend, a daily follow-up, and a list for the next batch. Part of riskmandate.ai.
 
-*Source: <https://customers.riskmandate.ai/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -99,7 +99,7 @@ source: /about/participant.md
 
 > This site is published by the people building the thing it describes: RiskMandate, whose product the programme sells, and the sgit project whose tooling the site runs on. What that means for the reader, and who did what.
 
-*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/about/participant.html> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -131,7 +131,7 @@ source: /admin/index.md
 
 > How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.
 
-*Source: <https://customers.riskmandate.ai/admin/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -175,7 +175,7 @@ In `admin/build/validate.js`, with no dependency beyond Node. Every problem of e
 7. **Reality regenerates identically.** `docs/reality.md` and the status tables are what `data/reality.json` says.
 8. **The house words.** riskmandate.ai's rules: never "ADP", never "the policy" alone, no score on a behaviour policy, "steps" not "rungs", British spelling, customers not "beta users". The verbatim brief and memo are exempt.
 
-Plus an advisory that never fails the build: em-dashes in prose we write. Then `pytest tests/build/` (the chrome on every page, the twins, the customer data, the converters) and `node --test tests/unit/` (the gate's own helpers).
+Plus an advisory that never fails the build: em-dashes in prose we write. Then `pytest tests/build/` (the chrome on every page, the twins, the customer data, the converters, and the themes: every token in every theme, no colour outside `assets/themes.css`, and contrast in all six) and `node --test tests/unit/` (the gate's own helpers). How the themes work, and how to add one, is in [the themes note](/docs/ops/themes.md).
 
 ## The four CI jobs
 
@@ -205,7 +205,7 @@ source: /admin/versions.md
 
 > Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.
 
-*Source: <https://customers.riskmandate.ai/admin/versions.html> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/versions.html> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -213,6 +213,7 @@ One row per release, newest first. The version lives in `admin/build/version.txt
 
 | Version | Date | Release | What changed, and why |
 |---|---|---|---|
+| `v0.2.0` | 2026-10-21 | six themes, the newsroom's five mapped onto RiskMandate's look plus its own dark; the header fits an iPad | A theme pill in the header picks one of six, kept in this browser: RiskMandate (the default, riskmandate.ai's paper and green), Canvas (its dark, from the dark hero band), and newsroom.sgit.ai's Night, Ember, Paper and Blueprint, mapped onto this site's tokens. Every colour now lives in assets/themes.css and nowhere else; site.css reads tokens only. A new test fails the build on a theme missing a token, a colour written outside that file, or a pair under its contrast in any theme; it found riskmandate.ai's green at 4.24:1 on its own alternate band, so the link accent is one shade darker. The header lost the first-batch stage pill, gained the picker beside the version, and now folds its links behind the menu button below 1100px: between 1040 and 1200 the version chip used to run past the right edge and the page scrolled sideways, which is an iPad in landscape. Wide tables scroll inside themselves on a phone instead of widening the customers page. docs/ops/themes.md says how it works and how to add a seventh. |
 | `v0.1.1` | 2026-10-20 | the repository moved to Risk-Mandate; the source links and the DNS target follow it | The lead moved the repository from the SGit-AI organisation to Risk-Mandate/Risk-Mandate-AI__Website__Customers between the first push and the first CI run, and pointed customers.riskmandate.ai at risk-mandate.github.io. Every source link on the site, the release script's Actions lookup, the participant disclosure and the DNS line in needs.md now name the new home; the corrections file records the move as C9. Nothing else changed. |
 | `v0.1.0` | 2026-10-20 | the first customers site: the brief, the start-here page, the batch, the steps and the gate | The site exists, as customers.riskmandate.ai, a sub-site of riskmandate.ai, built from the newsroom brief of 20 October 2026 and the voice memo that followed it the same day. What is here: the brief published in full with its corrections file beside it; a start-here page in order; the programme pages (customers not beta users, credit and the meter, the seven milestone steps, the daily follow-up, what we want to discover, the next batch); a page per customer generated from data/customers.json with no contact details in it; the reality file; the team as files; the review folder with the brief as intent; and the eight-check gate with a leak tripwire and the house words. What is not here: the meter (the newsroom's, not yet wired to this site), a form, any customer's private details, and the derived half of the review folder. Every number on a page is counted from a file. |
 
@@ -231,7 +232,7 @@ source: /credit/index.md
 
 > How the credit works for a customer of the first batch: a starting amount, a meter that charges a few pence per use, a top-up link, and the two numbers we track, credit used and whether they topped up. Today the meter is the newsroom's; wiring it to this site is proposed and waits on the lead.
 
-*Source: <https://customers.riskmandate.ai/credit/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -284,7 +285,7 @@ source: /customers/co-founder/index.md
 
 > The co-founder (Nimay Parekh, chief executive): invited; started not yet; first behaviour policy not yet; 0 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/co-founder/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/co-founder/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -344,7 +345,7 @@ source: /customers/example/index.md
 
 > A worked example of a customer page, with invented numbers, so the shape can be seen before the first customer fills it. Not a customer.
 
-*Source: <https://customers.riskmandate.ai/customers/example/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/example/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -410,7 +411,7 @@ source: /customers/index.md
 
 > The customers of the first batch and where each is: started, first behaviour policy with its rows and gaps, milestone steps done, credit used and topped up, and follow-ups recorded. Generated from data/customers.json on every release. One worked example, marked as such, shows the shape.
 
-*Source: <https://customers.riskmandate.ai/customers/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -447,7 +448,7 @@ source: /customers/lead/index.md
 
 > The lead (Dinis Cruz, co-founder): starting; started 2026-10-20; first behaviour policy not yet; 2 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -510,7 +511,7 @@ source: /customers/the-agents/index.md
 
 > The lead's agents (about ten, as one customer): starting; started 2026-10-20; first behaviour policy not yet; 1 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/the-agents/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/the-agents/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -573,7 +574,7 @@ source: /docs/brief/index.md
 
 > The article this site was built from, published in full and never edited; the voice memo that followed it, byte for byte; and the corrections file, which is where the brief is told it was wrong.
 
-*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/brief/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -596,7 +597,7 @@ source: /docs/index.md
 
 > The documents this site was built from and the notes it is run by, published whole. Each is a markdown file in the repository, which is the source of truth, and a page rendered from it on every release.
 
-*Source: <https://customers.riskmandate.ai/docs/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -629,7 +630,7 @@ source: /docs/ops/index.md
 
 > How a release works, and what only a human can do, as commands where a command exists.
 
-*Source: <https://customers.riskmandate.ai/docs/ops/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/docs/ops/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -637,6 +638,7 @@ How a release works, and what only a human can do, as commands where a command e
 
 - [What only a human can do](/docs/ops/needs.md): Exactly what only a human can do, who, and which step waits on it. [(markdown)](/docs/ops/needs.md)
 - [How a release works](/docs/ops/release.md): The version, the commit subject, the gate, the four CI jobs, and why green does not mean live. [(markdown)](/docs/ops/release.md)
+- [The themes: six, one attribute, and how to add a seventh](/docs/ops/themes.md): The six themes: how one attribute picks them, what the gate checks, and how to add a seventh. [(markdown)](/docs/ops/themes.md)
 
 ---
 
@@ -651,7 +653,7 @@ source: /follow-up/index.md
 
 > How the hand-holding works for the first batch: a follow-up as often as daily, three questions each time (what they did, what got in the way, what is next), how the answers are recorded on the customer page in summary, and what stays private with the lead.
 
-*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/follow-up/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -715,7 +717,7 @@ source: /learning/index.md
 
 > The point of the programme is to find the usage moment, when an Agent Behaviour Policy becomes worth something to a particular person. Three questions follow from it, and this page holds them with a findings table that starts empty and is filled from the follow-ups, counted.
 
-*Source: <https://customers.riskmandate.ai/learning/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/learning/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -768,7 +770,7 @@ source: /milestones/index.md
 
 > The shared ladder of seven steps for the first batch, each with its objective, what done looks like and who does it: in with credit, one agent named, the grant, the mandate, the delta, the hooks half, and the usage moment. The objectives per customer are their own; the steps are the shared shape.
 
-*Source: <https://customers.riskmandate.ai/milestones/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/milestones/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -851,7 +853,7 @@ source: /next-batch/index.md
 
 > This is not a launch; it is a first batch. Everyone who asks to join is kept on a list for the next one, with what they want to use it for. How to ask today (by email or the riskmandate.ai contact form), what we keep and what we never publish, and the form on this site that is proposed and not built.
 
-*Source: <https://customers.riskmandate.ai/next-batch/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/next-batch/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -890,7 +892,7 @@ source: /programme/index.md
 
 > What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.
 
-*Source: <https://customers.riskmandate.ai/programme/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -956,7 +958,7 @@ source: /review/index.md
 
 > The intent half of the review folder: the brief and the memo read as stories, rules and examples, each node linked to the heading it came from and to the page on this site that realises it, with the counts. The derived half is proposed.
 
-*Source: <https://customers.riskmandate.ai/review/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/review/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1068,7 +1070,7 @@ source: /start-here/index.md
 
 > The page a customer reads first: what you need, the seven things to do in order, from naming one agent to telling us what the behaviour policy was worth, and what happens every day in between. Each step links to the thing that does it.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1149,7 +1151,7 @@ source: /team/index.md
 
 > Who does what, as one file per role with the rules it enforces and the mistake behind each, and the board of work.
 
-*Source: <https://customers.riskmandate.ai/team/> · site v0.1.1 (2026-10-20) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/team/> · site v0.2.0 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -1172,9 +1174,9 @@ source: /docs/reality.md
 
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.1.1 (2026-10-20). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.0 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
-20 claims: 11 shipped, 6 proposed, 3 absent.
+21 claims: 12 shipped, 6 proposed, 3 absent.
 
 | Status | Meaning |
 |---|---|
@@ -1182,14 +1184,15 @@ source: /docs/reality.md
 | proposed | the brief or the memo says how; not built; described only in the future tense |
 | absent | deliberately not on this site; comes as a later version, lives elsewhere, or never |
 
-## Shipped (11)
+## Shipped (12)
 
 | Area | Feature | Status | Where | Notes |
 |---|---|---|---|---|
 | site | One version in admin/build/version.txt, a release history, and four CI jobs: validate, tag, deploy, verify live | shipped v0.1.0 | admin/build/version.txt, data/versions.json, .github/workflows/deploy-pages.yml | Copied from secrets.sgit.ai, the newest gate in the estate. A clean push is not a release: verify-live polls the host. |
 | site | The RiskMandate chrome (head, header, breadcrumbs, footer, CSP) generated into every page from one definition | shipped v0.1.0 | admin/build/chrome.py, admin/build/gen_chrome.py, assets/site.css | The look of riskmandate.ai; every colour is a token in one file. |
+| site | Six themes picked from the header and kept in the reader's browser: RiskMandate (the default), Canvas, Night, Ember, Paper, Blueprint | shipped v0.2.0 | data/themes.json, assets/themes.css, assets/theme.js, tests/build/test_themes.py | The newsroom's five themes mapped onto this site's tokens, plus riskmandate.ai's own dark. Every colour is a token in one file; the gate checks every theme for every token and for contrast. |
 | site | A markdown twin for every page, llms.txt, llms-full.txt and sitemap.xml, generated from the pages | shipped v0.1.0 | admin/build/gen_twins.py, admin/build/gen_llms.py | Links inside the markdown point at markdown. |
-| site | The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words | shipped v0.1.0 | admin/build/validate.js, admin/build/gate.py, tests/ | The house words are riskmandate.ai's: never "ADP", never "the policy" alone, no score, "steps" not "rungs", British spelling. The verbatim brief and memo are exempt. |
+| site | The eight-check gate: version agreement, links and orphans, canonical host, the leak tripwire, no foreign runtime origin, the data holding together, reality regenerating identically, the house words | shipped v0.1.0 | admin/build/validate.js, admin/build/gate.py, tests/ | The house words are riskmandate.ai's rules, listed on the admin page and in WORD_RULES in admin/build/validate.js. The verbatim brief and memo are exempt. |
 | site | The review folder: the brief read as intent, each node anchored to a section of the brief, validated and rendered | shipped v0.1.0 | review/intent/, review/tools/, review/index.html | The top-down half only; see site.review-derived. |
 | programme | The brief and the memo published in full, never edited, with the corrections file beside them | shipped v0.1.0 | docs/brief/ | The newsroom article of 20 October 2026 and the voice memo of the same day, byte for byte, with its digest. |
 | programme | A start-here page: what a customer does first, in order, with the links to do it | shipped v0.1.0 | start-here/index.html | The brief's first fix for pages that were hard to understand; each customer will show where it still is. |
@@ -1496,6 +1499,53 @@ See `/admin/` on the site or the header of `admin/build/validate.js`. The rule f
 ## Backfilling tags
 
 `tag_release.py` tags every historical release commit that has no tag, oldest first, then pushes all the new tags. A tag that already points at its release commit is left alone. A tag that points elsewhere fails the job: tags are never moved.
+
+
+==============================================================================
+source: /docs/ops/themes.md
+==============================================================================
+
+# The themes: six, one attribute, and how to add a seventh
+
+*customers.riskmandate.ai · operations · written at v0.2.0 (2026-10-21) · CC BY 4.0*
+
+The site has six themes, picked from the pill in the header and kept in the reader's browser. RiskMandate is the default and the first: riskmandate.ai's look, paper and green. Canvas is its dark variant, riskmandate.ai's dark hero band used as the whole page. The other four are newsroom.sgit.ai's themes, from its v0.12.12 of 13 October 2026, with the newsroom's values mapped onto this site's tokens.
+
+| Theme | Mode | What it is | From |
+|---|---|---|---|
+| RiskMandate | light | paper and green, the default | riskmandate.ai |
+| Canvas | dark | dark, green | riskmandate.ai's dark hero, as a whole page |
+| Night | dark | dark, teal | newsroom.sgit.ai Night |
+| Ember | dark | dark, amber | newsroom.sgit.ai Ember |
+| Paper | light | warm cream, terracotta | newsroom.sgit.ai Paper |
+| Blueprint | light | white, electric blue | newsroom.sgit.ai Blueprint |
+
+## How it works
+
+- **One attribute.** `assets/theme.js` sets `data-theme` on the html element before the first paint: it is a classic script in the head, loaded before the stylesheets, so the page never flashes the default first.
+- **The reader's word is kept.** The stored choice comes first. With nothing stored, a system set to dark opens in Canvas and anything else in RiskMandate; the first choice in the picker ends that. The choice is one key in local storage, `riskmandate.customers.theme`, and never leaves the device. Print is the default theme on white, whatever the reader reads in.
+- **Every colour is a token.** `assets/themes.css` is the only file on the site that writes a colour. It has one block per theme and every block defines every token. `assets/site.css` reads the tokens and writes no colour of its own.
+- **The picker is drawn by the build.** `admin/build/chrome.py` writes the list from `data/themes.json` into every page's header; `theme.js` wires it and marks the current entry. Without JavaScript there is no choice and the page is the default.
+
+## What the gate checks
+
+`tests/build/test_themes.py` fails the build when any of these stop being true:
+
+1. `data/themes.json`, `theme.js` and `themes.css` name the same themes, in the same order, with the default first and the same storage key.
+2. Every theme block defines exactly the tokens the default defines; no theme falls through to another's colour.
+3. No colour is written in `site.css`, the scripts or any page.
+4. Each swatch in the picker is its theme's own `--rm-swatch`.
+5. Each theme's `color-scheme` matches its mode, so the browser's own controls and scrollbars follow it.
+6. In every theme, the pairs a reader reads hold their contrast: text, muted text, links and button ink at 4.5:1; labels, the hero's accent words and the step states at the levels their size allows.
+
+The last check found one thing on the first run. riskmandate.ai's green, `#1A7F5A`, is 4.24:1 on its own alternate band, under the 4.5:1 a link needs. The accent here is `#187A56`, one shade darker and 4.53:1 there; the swatch and the shipped chip keep the brand green.
+
+## Adding a theme
+
+1. Add a row to `data/themes.json`: an id of lower-case letters, a name, a mode, a note of three or four words, and where it came from.
+2. Add the id and name to `THEMES` in `assets/theme.js`, in the same position.
+3. Copy the default block in `assets/themes.css`, rename it `:root[data-theme="<id>"]`, and give every token a value; add the `.sw-<id>` swatch.
+4. Run `python3 admin/build/gate.py --build`. The contrast check names each pair that falls short; fix the value, not the threshold.
 
 
 ==============================================================================
