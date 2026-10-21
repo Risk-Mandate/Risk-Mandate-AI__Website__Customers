@@ -44,7 +44,7 @@ A sibling site once pushed two releases that reported success and never reached 
 
 ## The eight checks of the gate
 
-See `/admin/` on the site or the header of `admin/build/validate.js`. The rule for the leak tripwire is worth repeating: the fix for a trip is always a redaction, never a wider pattern. The rule for the house words is riskmandate.ai's: the verbatim documents are exempt and nothing else is.
+See `/admin/` on the site or the header of `admin/build/validate.js`. The rule for the leak tripwire is worth repeating: the fix for a trip is always a redaction, never a wider pattern. The rule for the house words is riskmandate.ai's: the verbatim documents are exempt and nothing else is. From v0.2.2 that includes the words of a reviewer or an invented user, which are kept as given: the memos in `data/feedback/memos/`, the runs in `data/feedback/synthetic/runs/`, a `"quote"` in a review's record, and any element marked `class="verbatim"`. Our own words around them are checked as usual.
 
 ## Backfilling tags
 

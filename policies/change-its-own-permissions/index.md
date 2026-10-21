@@ -2,7 +2,7 @@
 
 > Do you want your agent to change its own permissions? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0015.
 
-*Source: <https://customers.riskmandate.ai/policies/change-its-own-permissions/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/change-its-own-permissions/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -33,7 +33,7 @@ Install the behaviour policy at https://customers.riskmandate.ai/policies/change
 
 Copy
 
-Or by hand: save [`change_its_own_permissions.py`](/policies/hooks/change_its_own_permissions.py) as `.claude/hooks/change_its_own_permissions.py` and merge [`settings.json`](/policies/change-its-own-permissions/settings.json) into `.claude/settings.json`. Then start a new session, or open `/hooks`, so Claude Code loads it.
+Or by hand: save [`change_its_own_permissions.py`](/policies/hooks/change_its_own_permissions.py) as `.claude/hooks/change_its_own_permissions.py` and merge [`settings.json`](/policies/change-its-own-permissions/settings.json) into `.claude/settings.json`. Claude Code picks up the change on its own; `/hooks` lists the hooks it is running.
 
 ```
 {
@@ -56,7 +56,19 @@ Or by hand: save [`change_its_own_permissions.py`](/policies/hooks/change_its_ow
 ```
 
 Copy
-Read the hook before you install it (54 lines of Python, standard library only)
+
+**What the hook does, in plain words:**
+
+| Looks at | file edits and shell commands |
+|---|---|
+| Stops | nothing outright |
+| Asks you first | any edit to .claude/settings.json, .claude/settings.local.json, anything in .claude/hooks/, or ~/.claude.json, from a file tool or from a shell command that writes |
+| Lets through | every other edit and command |
+| Does not see | a write it does not recognise as one, such as a script the agent runs |
+
+**To turn it off:** remove its entry under `hooks.PreToolUse` in `.claude/settings.json`; Claude Code stops running it straight away.
+
+Read the hook before you install it (54 lines of Python, standard library only; the box scrolls)
 
 ```
 #!/usr/bin/env python3
@@ -127,6 +139,10 @@ Copy
 
 **Without it:** Claude adds the allow rule, and every session from now on starts with fewer checks than you chose.
 
+**Did it work?** If Claude Code stopped it, or asked you, the hook is running. If the prompt went through as if nothing were installed, the hook did not run, and Claude Code does not wait for a hook that cannot run: the action goes ahead (on Windows without Git Bash it may be blocked instead). The hook fails open, one more reason it is a setting and not a boundary. Check three things: that `/hooks` lists it; that `python3 --version` works where Claude Code runs (on Windows, Claude Code runs hooks in Git Bash, or in PowerShell if Git Bash is not installed, and `python3` may not exist there: install Python, or put `py` in place of `python3` in the settings); and that `.claude/hooks/change_its_own_permissions.py` is there. Still stuck? [Tell us](mailto:agent@riskmandate.ai?subject=RM-R0015%20did%20not%20work).
+
+The tests for this hook feed it the JSON Claude Code would send, every refusal with an allowed twin beside it; they do not drive a live Claude Code session. Your try is the live test.
+
 ## What this is, and what it is not
 
 | Half | Barrier | What holds it |
@@ -150,7 +166,7 @@ Source: [https://code.claude.com/docs/en/settings](https://code.claude.com/docs/
 
 ## Tell us what happened
 
-Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0015%20tried); it goes on your follow-up, and a person reads it within a working day.
+Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0015%20tried); it goes on your follow-up, and a person reads it within a working day. Or record a voice memo and let your Claude turn it into a review: [tell us what you think](/feedback/index.md).
 
 The rule is [RM-R0015 on riskmandate.ai](https://riskmandate.ai/rules/change-its-own-permissions.html), version 1.0.0, CC BY 4.0; copied here on 2026-10-21. The hook and this page are this site's, CC BY 4.0 and Apache-2.0.
 

@@ -10,16 +10,18 @@
     "note": "v1.4.1 is the newest meter on the API (release v0.2.5, 15 October 2026). newsroom.sgit.ai itself runs v1.5.0 from its own copy, which charges by the share of the page read; it is not on the API yet."
   },
   "kinds": [
-    { "kind": "free",       "price": 0,   "what": "your account, the top-up pages, the not-found page" },
+    { "kind": "free",       "price": 0,   "what": "your account, the top-up pages, the page where you tell us what you think, the not-found page" },
     { "kind": "home",       "price": 1,   "what": "the home page" },
     { "kind": "page",       "price": 2,   "what": "an ordinary page: start here, the programme, the lists" },
     { "kind": "doc",        "price": 2,   "what": "a document: the brief, the memo, operations, the team, admin" },
     { "kind": "storyboard", "price": 10,  "what": "a storyboard, or a page built around one" },
     { "kind": "policy",     "price": 50,  "what": "a behaviour policy: its line, its hook, and how to try it" },
-    { "kind": "pack",       "price": 100, "what": "the starter pack: three behaviour policies and their hooks, ready to install" }
+    { "kind": "pack",       "price": 100, "what": "the starter pack: four behaviour policies and their hooks, ready to install" }
   ],
   "paths": [
     ["/account/",               "free"],
+    ["/feedback/index.html",    "free"],
+    ["/feedback/",              "doc"],
     ["/404.html",               "free"],
     ["/policies/starter/",      "pack"],
     ["/policies/index.html",    "page"],

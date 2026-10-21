@@ -25,7 +25,7 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/">
   <meta property="og:title" content="Put a behaviour policy on your agent in five minutes: £50 of credit to start">
   <meta property="og:description" content="For the first customers of the Agent Behaviour Policy. You start with £50 of credit. Pick one thing you do not want your agent to do, paste one line, add one hook, and try it: the behaviour policy that keeps Claude Code away from your secrets takes two minutes. Part of riskmandate.ai.">
-  <meta name="rm-customers:version" content="0.2.1">
+  <meta name="rm-customers:version" content="0.2.2">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -43,6 +43,7 @@
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
             <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
             <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
           </div>
         </span>
         <span class="navgroup">
@@ -73,6 +74,8 @@
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
             <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
         <span class="navgroup">
@@ -106,7 +109,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
       </div>
     </div>
 
@@ -115,9 +118,9 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <span class="eyebrow"><span class="d"></span>Early access · you start with £50.00</span>
+        <span class="eyebrow"><span class="d"></span>Early access · £50.00 of reading credit, free</span>
         <h1>Put a behaviour policy on your agent, <span class="it">in five minutes.</span></h1>
-        <p class="sub">Pick one thing you do not want your agent to do. <strong>Paste one line</strong> it will read, <strong>add one hook</strong> that holds it, and <strong>try it</strong> with a prompt that should be refused. The one most people want first keeps Claude Code away from your secrets; it takes two minutes and costs 50p of your credit.</p>
+        <p class="sub">Pick one thing you do not want your agent to do. <strong>Paste one line</strong> it will read, <strong>add one hook</strong> that holds it, and <strong>try it</strong> with a prompt that should be refused. The one most people want first keeps Claude Code away from your secrets; it takes two minutes and costs 50p of your credit. <a class="credit-note" href="/account/">The £50 is credit for reading, not money</a>: each page draws a few pence as you read it, nothing is billed, and nothing is ever blocked.</p>
         <div class="cta-row">
           <a class="btn btn-green" href="/policies/touch-your-secrets/">Install your first policy</a>
           <a class="btn btn-ghost" href="/policies/">Pick a different worry</a>
@@ -132,7 +135,7 @@
         <p>What you will do in Claude Code, played out. You ask it to install the behaviour policy, read the three changes, say yes, and then ask for the one thing it rules out. The hook stops the read before it happens, and the agent asks you instead.</p>
         <!-- rm-customers:demo:start id="claude-code-secrets" -->
   <figure class="demo demo-laptop-frame" data-demo="claude-code-secrets">
-    <div class="demo-laptop"><div class="demo-screen"><div class="demo-bar"><span></span><span></span><span></span><b>claude: ~/shop-api</b></div><ol class="demo-lines"><li class="k-user" data-kind="user">Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first.</li><li class="k-agent" data-kind="agent">It has a line for CLAUDE.md and a hook. Here are the three changes:</li><li class="k-file" data-kind="file">+ CLAUDE.md: Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one. (RM-R0002)</li><li class="k-file" data-kind="file">+ .claude/hooks/touch_your_secrets.py (a PreToolUse hook, standard library Python)</li><li class="k-file" data-kind="file">+ .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py</li><li class="k-ask" data-kind="ask">Write these three changes? (y/n)</li><li class="k-user" data-kind="user">y</li><li class="k-ok" data-kind="ok">Installed. Start a new session so Claude Code loads the hook.</li><li class="k-sys" data-kind="sys">new session</li><li class="k-user" data-kind="user">The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.</li><li class="k-tool" data-kind="tool">Read(.env)</li><li class="k-deny" data-kind="deny">PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.</li><li class="k-agent" data-kind="agent">I didn&#x27;t open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I&#x27;ll check where it is used and whether it is set, without printing it.</li></ol></div><div class="demo-base"></div></div>
+    <div class="demo-laptop"><div class="demo-screen"><div class="demo-bar"><span></span><span></span><span></span><b>claude: ~/shop-api</b></div><ol class="demo-lines"><li class="k-user" data-kind="user">Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first.</li><li class="k-agent" data-kind="agent">It has a line for CLAUDE.md and a hook. Here are the three changes:</li><li class="k-file" data-kind="file">+ CLAUDE.md: Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one. (RM-R0002)</li><li class="k-file" data-kind="file">+ .claude/hooks/touch_your_secrets.py (a PreToolUse hook, standard library Python)</li><li class="k-file" data-kind="file">+ .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py</li><li class="k-ask" data-kind="ask">Write these three changes? (y/n)</li><li class="k-user" data-kind="user">y</li><li class="k-ok" data-kind="ok">Installed. Claude Code picks up the hook straight away; /hooks lists it.</li><li class="k-sys" data-kind="sys">later that day</li><li class="k-user" data-kind="user">The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.</li><li class="k-tool" data-kind="tool">Read(.env)</li><li class="k-deny" data-kind="deny">PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.</li><li class="k-agent" data-kind="agent">I didn&#x27;t open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I&#x27;ll check where it is used and whether it is set, without printing it.</li></ol></div><div class="demo-base"></div></div>
     <figcaption>Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy&#x27;s page promises, not a recording. <button type="button" class="demo-replay">Play again</button></figcaption>
   </figure>
 <!-- rm-customers:demo:end -->
@@ -183,13 +186,13 @@
   <table class="prices" data-generated-from="data/meter.json">
     <thead><tr><th>Kind</th><th>Which pages</th><th>Read to the end</th><th>Read to the end, on £50.00</th></tr></thead>
     <tbody>
-      <tr><td><code>free</code></td><td>your account, the top-up pages, the not-found page</td><td>nothing</td><td></td></tr>
+      <tr><td><code>free</code></td><td>your account, the top-up pages, the page where you tell us what you think, the not-found page</td><td>nothing</td><td></td></tr>
       <tr><td><code>home</code></td><td>the home page</td><td>1p</td><td>5,000</td></tr>
       <tr><td><code>page</code></td><td>an ordinary page: start here, the programme, the lists</td><td>2p</td><td>2,500</td></tr>
       <tr><td><code>doc</code></td><td>a document: the brief, the memo, operations, the team, admin</td><td>2p</td><td>2,500</td></tr>
       <tr><td><code>storyboard</code></td><td>a storyboard, or a page built around one</td><td>10p</td><td>500</td></tr>
       <tr><td><code>policy</code></td><td>a behaviour policy: its line, its hook, and how to try it</td><td>50p</td><td>100</td></tr>
-      <tr><td><code>pack</code></td><td>the starter pack: three behaviour policies and their hooks, ready to install</td><td>£1.00</td><td>50</td></tr>
+      <tr><td><code>pack</code></td><td>the starter pack: four behaviour policies and their hooks, ready to install</td><td>£1.00</td><td>50</td></tr>
     </tbody>
   </table>
 <!-- rm-customers:prices:end -->
@@ -217,7 +220,7 @@
   <div class="wrap meter-card"><sg-meter view="page" kind="home" title="Put a behaviour policy on your agent in five minutes: £50 of credit to start"></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

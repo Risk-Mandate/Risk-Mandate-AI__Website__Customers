@@ -1,0 +1,288 @@
+{
+  "_comment": "Every change a review has led us to propose, from every review, with a decision and the reason for it. We do not do everything a reviewer says, but every no has a reason here. Which review points led to each proposal is worked out from the reviews and the study's checks, so it is not written twice. Decisions: proposed (we think yes; not built yet, and the reason says why), accepted (will be built; not yet), done (built, in the version named), declined (not doing it, and why), question (we need an answer from someone first).",
+  "decisions": {
+    "proposed": "we think yes; not built yet, and the reason says why",
+    "accepted": "will be built; not yet",
+    "done": "built, in the version named",
+    "declined": "not doing it, and why",
+    "question": "we need an answer first; the question is named"
+  },
+  "proposals": [
+    {
+      "id": "P1",
+      "title": "The line first, the hook second, in answer to a question",
+      "what": "The home page, the three steps, start here and every Claude Code behaviour policy go: pick one worry, paste one line, try it. It refuses. Then: it refused because it chose to; what if it decides your task needs the file? The hook is the answer to that question, and arrives with it. The demo plays in the same order.",
+      "where": [
+        "/",
+        "/start-here/",
+        "/policies/"
+      ],
+      "decision": "proposed",
+      "reason": "We agree with the memo. Not built yet because it changes the first screen and every policy page, and the lead says more memos are coming: one redesign made with all of them is better than two."
+    },
+    {
+      "id": "P2",
+      "title": "A guided path: four stops, each ending in the question that leads to the next",
+      "what": "1. Say it: the line, an expectation. Try it; it refuses. 'It chose to.' 2. Hold it: the hook, a setting. Try it again; Claude Code stops the read before the model sees the file. 'But the hook is a file in my project.' 3. Guard the guard: RM-R0015, and Claude Code's own prompt before any edit to .claude/. 'But it is still my machine and my user.' 4. Put it outside: a boundary, out of the agent's reach: the secret not on the machine, branch protection on the server, the sandbox, managed settings an administrator owns. 'Which of my worries need a boundary?' That question is the start of your mandate. Drawn as a storyboard first, then a page; every behaviour policy shows where it sits on the path.",
+      "where": [
+        "/what-is-an-abp/",
+        "/policies/",
+        "/storyboards/"
+      ],
+      "decision": "proposed",
+      "reason": "This is the sequence the memo describes, and the site already has its words: the barrier table runs none, expectation, setting, boundary. Not built yet for the same reason as P1, and because Q1 (what 'the history' means) changes what each stop says."
+    },
+    {
+      "id": "P3",
+      "title": "Say what a hook is, in plain words, where the word first appears",
+      "what": "A hook: a small script Claude Code itself runs before the agent acts, which can stop the action. Said once, at the first mention, on every page that mentions one.",
+      "where": [
+        "/",
+        "/start-here/",
+        "/policies/"
+      ],
+      "decision": "proposed",
+      "reason": "Cheap and right, but the first mention is exactly the text P1 rewrites. It ships with P1, so the first screen changes once."
+    },
+    {
+      "id": "P4",
+      "title": "Say what the hook is outside of, and how it fails, where it is offered",
+      "what": "Replace 'outside the model' with what is true and what the customer will ask next: Claude Code runs it, not the model, so the model cannot argue with it; it runs as you, from a file in your project, so it is a setting, not a boundary; if it cannot run, the action goes ahead. Each policy page's limits move up, beside the install, and RM-R0015's page says its own limit at the top. The stronger controls are labelled as optional, for later, not a second required step.",
+      "where": [
+        "/",
+        "/start-here/",
+        "/policies/"
+      ],
+      "decision": "proposed",
+      "reason": "The memo's correction and two invented users (Marcus, Tomás) point the same way. It ships with P1 and P2, because the limits are the questions those two make into steps; how the hook fails ships now, as P11."
+    },
+    {
+      "id": "P5",
+      "title": "Start here shows the next stop, not the whole journey",
+      "what": "The seven milestones move off start here to the programme's pages; start here ends with the next stop of the path in P2.",
+      "where": [
+        "/start-here/",
+        "/programme/"
+      ],
+      "decision": "proposed",
+      "reason": "Agreed; the milestones are the programme's roadmap, not a customer's next step. Not built yet because the next stop is P2's, which is not built."
+    },
+    {
+      "id": "P6",
+      "title": "A way for every customer to give feedback, and one place it all goes",
+      "what": "/feedback/: one line by email; a voice memo with a prompt that has Claude turn the transcript into a review; a prompt that has Claude interview you. /feedback/reviews/: every review verbatim, our reading point by point with screenshots, and this register.",
+      "where": [
+        "/feedback/",
+        "/feedback/reviews/"
+      ],
+      "decision": "done",
+      "version": "0.2.2",
+      "reason": "The memo asked for it, and the programme exists to learn from its customers."
+    },
+    {
+      "id": "P7",
+      "title": "ChatGPT and Claude users never meet the word hook, and find their worry first",
+      "what": "A path for people who use ChatGPT or Claude in the browser: their worries first (mail sent as you, all of your mail read), a line, a try, and the honest answer on what holds it. We do not yet know which boundary a ChatGPT user who is not an administrator can set for a connector; until we do, the page says so rather than offering only an administrator's setting.",
+      "where": [
+        "/",
+        "/policies/",
+        "/policies/send-as-you/",
+        "/policies/read-all-your-mail/"
+      ],
+      "decision": "proposed",
+      "reason": "The memo's point about hooks applies twice over to people who cannot have one, and Nadia, an invented ChatGPT user on a phone, met 'hook' and 'Claude Code' in the first paragraph. Ships with P1; the facts about ChatGPT's connector settings have to be checked first."
+    },
+    {
+      "id": "P8",
+      "title": "Synthetic users, run again after every change that matters",
+      "what": "Study S1: five invented users on v0.2.1, with profiles and expected journeys written first, the browser helper and the protocol in the repository. The same five run again after P1 and P2 ship, and the two studies are compared.",
+      "where": [
+        "/feedback/synthetic/"
+      ],
+      "decision": "done",
+      "version": "0.2.2",
+      "reason": "The memo asked for it. They are invented, not user research: they find what a page fails to say, not what a customer wants."
+    },
+    {
+      "id": "P9",
+      "title": "Say what the £50 is where the balance first appears",
+      "what": "All five invented users asked whether the £50 was real money, and four watched the balance fall with nothing on the screen saying why. The home page's badge and the account link now say it: credit for reading, not money; nothing is billed and nothing is blocked; each page's price is on the page.",
+      "where": [
+        "/"
+      ],
+      "decision": "done",
+      "version": "0.2.2",
+      "reason": "Five of five, and a line of text. It does not touch the sequence P1 changes."
+    },
+    {
+      "id": "P10",
+      "title": "Stop telling people to start a new session",
+      "what": "Our pages said to start a new session, or open /hooks, so Claude Code loads the hook. Claude Code's documentation says it watches its settings files and applies changes to hooks in the running session, and that /hooks is a read-only list. The pages now say that, and that /hooks is where to check the hook is there.",
+      "where": [
+        "/policies/",
+        "/start-here/"
+      ],
+      "decision": "done",
+      "version": "0.2.2",
+      "reason": "A correction of fact, found because Tomás, an invented junior developer, could not tell what a new session meant in the VS Code extension.",
+      "sources": [
+        "https://code.claude.com/docs/en/settings",
+        "https://code.claude.com/docs/en/hooks"
+      ]
+    },
+    {
+      "id": "P11",
+      "title": "Did it work? And what happens when the hook cannot run",
+      "what": "Under every Try it: what you see if it worked; what it means if the prompt was not refused (the hook did not run); how to check (is it listed in /hooks? does python3 run where Claude Code runs it? on Windows, Claude Code runs hooks in Git Bash, or PowerShell if Git Bash is not installed); and the fact that matters most: if the hook cannot run, Claude Code lets the action through. The hook fails open (on Windows without Git Bash, Claude Code may block instead), which is one more reason it is a setting and not a boundary. The tests are named for what they are: they feed the hook the JSON Claude Code would send, and do not drive a live session.",
+      "where": [
+        "/policies/"
+      ],
+      "decision": "done",
+      "version": "0.2.2",
+      "reason": "Missing safety information, found by two invented users (Tomás on Windows, Marcus asking fail open or closed). It is about trying, which P1 keeps, so it does not wait for P1.",
+      "sources": [
+        "https://code.claude.com/docs/en/hooks"
+      ]
+    },
+    {
+      "id": "P12",
+      "title": "Each hook, in plain words, beside the install: what it looks at, stops, asks, lets through, and misses; and how to turn it off",
+      "what": "A short table beside each hook's settings, and one line on turning it off: remove its entry from .claude/settings.json, and Claude Code stops running it. The box with the hook's source says that it scrolls.",
+      "where": [
+        "/policies/"
+      ],
+      "decision": "done",
+      "version": "0.2.2",
+      "reason": "Sam, an invented developer, left without installing because he could not predict what the hook would block or how to remove it. The table is written from the hooks' own rules."
+    },
+    {
+      "id": "P13",
+      "title": "Line-only pages stop talking about two halves",
+      "what": "On a behaviour policy with only a line, the limits table had one row headed 'Half' and the text said 'Neither half is a boundary'. It now says the line is an expectation and is not a boundary.",
+      "where": [
+        "/policies/send-as-you/",
+        "/policies/read-all-your-mail/"
+      ],
+      "decision": "done",
+      "version": "0.2.2",
+      "reason": "A plain mistake in our generator, found by Nadia."
+    },
+    {
+      "id": "P14",
+      "title": "A page for a team: one baseline for everybody, and who can turn it off",
+      "what": "For a team lead: commit .claude/settings.json and the hooks to the repository, so everybody who pulls gets them; and for 'does it hold if one of them turns it off', managed settings, which an administrator deploys and no user or project file can override, with the setting that runs only the organisation's hooks. Then branch protection and token scopes, which no setting on a laptop can undo.",
+      "where": [
+        "a new page"
+      ],
+      "decision": "proposed",
+      "reason": "Joan, an invented CTO, left over this, and Marcus asked for managed settings by name. It is stop 4 of P2 for a company; it waits for P2 and for Q3.",
+      "sources": [
+        "https://code.claude.com/docs/en/settings",
+        "https://code.claude.com/docs/en/managed-settings"
+      ]
+    },
+    {
+      "id": "P15",
+      "title": "What joining the first batch commits a company to",
+      "what": "One page a company reads before saying yes: what we ask of you, what you get, what it costs now and later, and how you leave.",
+      "where": [
+        "/programme/"
+      ],
+      "decision": "question",
+      "reason": "Joan could not find it and left. Only the lead can say what joining commits a company to: Q3."
+    },
+    {
+      "id": "P16",
+      "title": "Customer pages lead with the customer's business",
+      "what": "Start here opened with a status line read from docs/reality.md; it now closes the page. The Docs menu, which holds the brief, the memo and how the site is built, is the lead's and ours, not a customer's: proposed to move it under the programme.",
+      "where": [
+        "/start-here/",
+        "the menu"
+      ],
+      "decision": "done",
+      "version": "0.2.2",
+      "reason": "Three invented users stopped on internal papers. The status line moved now; the menu waits for P1, which changes what a customer looks for in it."
+    },
+    {
+      "id": "P17",
+      "title": "The demo shows its point first",
+      "what": "The refusal arrives about eleven seconds after the demo comes into view; a reader who scrolls past sooner sees a terminal typing. Proposed: the demo opens on its last frame, the refusal, with a Play button for the whole session.",
+      "where": [
+        "/",
+        "/policies/touch-your-secrets/"
+      ],
+      "decision": "proposed",
+      "reason": "Two invented users saw the demo as stuck or empty. Partly a limit of the method (a screenshot cannot watch an animation), and partly real. P1 changes what the demo plays, so it changes with P1."
+    },
+    {
+      "id": "P18",
+      "title": "Make the guard fail closed",
+      "what": "Claude Code can be told to block the action when a hook fails, with \"onFailure\": \"block\" on the hook (Claude Code v2.1.295 or later). Proposed for RM-R0015's hook, the guard of the other three, first; for the others, a choice on each policy's page.",
+      "where": [
+        "/policies/"
+      ],
+      "decision": "proposed",
+      "reason": "Failing closed is safer and louder, but on a hook that looks at every read, a missing python3 would then stop every read until it is fixed, and older versions of Claude Code do not know the setting. The trade-off belongs on the page, and the default is the lead's call.",
+      "sources": [
+        "https://code.claude.com/docs/en/hooks"
+      ]
+    },
+    {
+      "id": "D1",
+      "title": "Take the hook out of the first five minutes",
+      "what": "One reading of 'a solution for a problem they don't have yet' is to leave the hook for later.",
+      "where": [
+        "/"
+      ],
+      "decision": "declined",
+      "reason": "The hook stays in the first five minutes, second rather than first (P1). A customer who stops after the line leaves believing their agent is held when it has only been asked, and that difference is the point of the ABP. The memo's own sequence keeps it: the question that the hook answers comes up in the first try, if we let it."
+    },
+    {
+      "id": "D2",
+      "title": "A glossary page for hook, expectation, setting and boundary",
+      "what": "A page that defines the words.",
+      "where": [
+        "a new page"
+      ],
+      "decision": "declined",
+      "reason": "A glossary is a page a customer does not open at the moment they need it. Each word is said in plain words where it first appears (P3), and the path (P2) teaches the barrier words by using them."
+    },
+    {
+      "id": "D3",
+      "title": "Show the whole hook, uncut, on the page",
+      "what": "Sam's one change, read literally: every line of the hook on the page.",
+      "where": [
+        "/policies/"
+      ],
+      "decision": "declined",
+      "reason": "Sixty-seven lines of Python on the page push Try it down by a screen for everybody, to help the few who read code, and they can open the box or the file. What Sam needed was to predict what it blocks and how to remove it: P12 gives him that in five lines."
+    },
+    {
+      "id": "D4",
+      "title": "A help or FAQ page for installers",
+      "what": "Tomás looked for one.",
+      "where": [
+        "a new page"
+      ],
+      "decision": "declined",
+      "reason": "His two questions were asked on the page where he got stuck, and P10 and P11 answer them there. A help page would be one more place to look."
+    },
+    {
+      "id": "D5",
+      "title": "Stop charging for pages, or hide the balance",
+      "what": "Joan found pages that cost real-looking money alarming.",
+      "where": [
+        "every page"
+      ],
+      "decision": "declined",
+      "reason": "Every page has a price because the lead asked for it, and the programme exists to find fair prices with its customers. What was wrong was that nothing said what the money is: P9 fixes that."
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q3",
+      "to": "Dinis Cruz",
+      "ask": "What does joining the first batch commit a company to: what we ask of them, what it costs now and later, and how they leave? And should the first batch include companies that want a team-wide baseline, or individuals first?"
+    }
+  ]
+}

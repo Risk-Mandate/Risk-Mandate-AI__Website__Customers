@@ -2,7 +2,7 @@
 
 > What the early access programme is, from the brief: why the people in it are customers, not beta users, why each starts with credit on a site that meters, why there is a dedicated site, why the hand-holding does not scale and is not meant to yet, and what exists today against each of those.
 
-*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/programme/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -67,6 +67,11 @@ From [docs/reality.md](/docs/reality.md), generated on every release. A row that
 | programme | The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds | proposed | docs/ops/needs.md | Never in this repository. The public page carries the summary. |
 | programme | A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in | proposed | customers/the-agents/ | The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/. |
 | programme | This site's row on the honest column at nfrs.sgit.ai | proposed | docs/ops/needs.md | Another repository; the ask is recorded. |
+| programme | A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude | shipped v0.2.2 | /feedback/ | The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer's yes. |
+| programme | Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason | shipped v0.2.2 | /feedback/reviews/ | Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason. |
+| programme | Synthetic users: invented people driving the site one screenshot at a time, with their findings checked | shipped v0.2.2 | /feedback/synthetic/ | Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/. |
+| programme | A guided path through the barriers: the line, then the hook, then its guard, then a boundary, each stop ending in the question that leads to the next | proposed | /feedback/reviews/#p2 | P1 and P2 of the feedback register, from the lead's review R001; held for his further memos. |
+| programme | A page for a team: one baseline for everybody through the repository, and managed settings so nobody turns it off | proposed | /feedback/reviews/#p14 | P14, from study S1; waits for the guided path and for question Q3. |
 | programme | Accounts, sign-in or a customer login on this site | absent | nowhere | The site is static. The meter, when wired, carries its own reading account, as on the newsroom. |
 | programme | Customer contact details, company names that are not already public, or private notes in this repository | absent | nowhere | The gate fails on anything contact-shaped in data/customers.json. |
 | programme | A score, rating or level on any behaviour policy | absent | nowhere | An Agent Behaviour Policy describes and does not judge. The gate fails on the words. |

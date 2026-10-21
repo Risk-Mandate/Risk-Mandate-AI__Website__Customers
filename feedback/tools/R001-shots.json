@@ -1,0 +1,59 @@
+[
+ {
+  "name": "01-home-hero",
+  "url": "/",
+  "w": 1280,
+  "h": 900,
+  "sel": "section.hero",
+  "pad": 0
+ },
+ {
+  "name": "02-home-three-steps",
+  "url": "/",
+  "w": 1280,
+  "h": 900,
+  "sel": "ol.steps.three"
+ },
+ {
+  "name": "03-policy-step-2",
+  "url": "/policies/touch-your-secrets/",
+  "w": 1280,
+  "h": 900,
+  "sel": "ol.steps.install > li:nth-child(2)",
+  "maxh": 620
+ },
+ {
+  "name": "04-start-here-steps",
+  "url": "/start-here/",
+  "w": 1280,
+  "h": 900,
+  "sel": "ol.steps"
+ },
+ {
+  "name": "05-abp-barriers",
+  "url": "/what-is-an-abp/",
+  "w": 1280,
+  "h": 900,
+  "sel": [
+   "h2:has-text('Four barriers')",
+   "h2:has-text('Four barriers') + table"
+  ]
+ },
+ {
+  "name": "06-home-phone",
+  "url": "/",
+  "w": 390,
+  "h": 844,
+  "mobile": true
+ },
+ {
+  "name": "07-start-here-journey",
+  "url": "/start-here/",
+  "w": 1280,
+  "h": 900,
+  "sel": [
+   "h2:has-text('Then, the whole journey')",
+   "h2:has-text('Then, the whole journey') + p"
+  ]
+ }
+]

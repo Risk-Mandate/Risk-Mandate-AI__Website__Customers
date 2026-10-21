@@ -25,7 +25,14 @@
         "with": "The hook stops the read of .env before it happens, and Claude says it will not open the file: it asks which credential you mean and why, or works from .env.example instead.",
         "without": "Claude reads .env, and the token is now in the conversation's transcript, where it stays."
       },
-      "demo": "claude-code-secrets"
+      "demo": "claude-code-secrets",
+      "plain": {
+        "looks_at": "every read, edit, search and shell command",
+        "stops": "any that names a file that usually holds a credential: .env and .env.local; key files (.pem, .key, .p12, .pfx); SSH keys and ~/.ssh; ~/.aws, gcloud, Azure, ~/.kube/config and Docker credentials; .netrc, .npmrc, .pypirc, .git-credentials, .pgpass; a secrets/ folder; credentials.json. And printenv or env, which print every variable.",
+        "asks": "nothing; it stops or stays silent",
+        "lets_through": ".env.example, .env.sample and .env.template, and everything else: it stays silent, and Claude Code asks you as it normally would",
+        "misses": "a script that opens a secret without naming the file in the command"
+      }
     },
     {
       "slug": "push-anywhere",
@@ -44,7 +51,14 @@
         "with": "The push to main is denied by the hook, and Claude offers to push to a branch of its own and open a pull request, which the hook then asks you about.",
         "without": "The commit lands on main and the pipeline deploys it before anybody has read it."
       },
-      "demo": "claude-code-push"
+      "demo": "claude-code-push",
+      "plain": {
+        "looks_at": "shell commands only",
+        "stops": "a force-push, a push to main or master, a push of every branch, and deleting a remote branch",
+        "asks": "any other push, and opening a pull request with gh",
+        "lets_through": "every other command",
+        "misses": "a push inside a script the agent runs"
+      }
     },
     {
       "slug": "delete-files",
@@ -63,7 +77,14 @@
         "with": "rm -rf is denied outright; any other delete stops at a prompt that names the paths, so you see what would go before it goes.",
         "without": "Claude clears what it thinks is temporary, and one of those files was yours and was not in version control."
       },
-      "demo": null
+      "demo": null,
+      "plain": {
+        "looks_at": "shell commands only",
+        "stops": "rm -rf, and any delete outside the project folder",
+        "asks": "any other delete: rm, rmdir, unlink, shred, git clean, git rm, find -delete",
+        "lets_through": "every other command",
+        "misses": "a delete inside a script the agent runs; file tools that empty a file"
+      }
     },
     {
       "slug": "change-its-own-permissions",
@@ -82,7 +103,14 @@
         "with": "The edit to .claude/settings.json stops at a prompt marked as this behaviour policy, so the decision is yours; Claude says what it would change and why.",
         "without": "Claude adds the allow rule, and every session from now on starts with fewer checks than you chose."
       },
-      "demo": null
+      "demo": null,
+      "plain": {
+        "looks_at": "file edits and shell commands",
+        "stops": "nothing outright",
+        "asks": "any edit to .claude/settings.json, .claude/settings.local.json, anything in .claude/hooks/, or ~/.claude.json, from a file tool or from a shell command that writes",
+        "lets_through": "every other edit and command",
+        "misses": "a write it does not recognise as one, such as a script the agent runs"
+      }
     },
     {
       "slug": "send-as-you",

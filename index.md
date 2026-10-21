@@ -2,15 +2,15 @@
 
 > For the first customers of the Agent Behaviour Policy. You start with £50 of credit. Pick one thing you do not want your agent to do, paste one line, add one hook, and try it: the behaviour policy that keeps Claude Code away from your secrets takes two minutes. Part of riskmandate.ai.
 
-*Source: <https://customers.riskmandate.ai/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-Early access · you start with £50.00
+Early access · £50.00 of reading credit, free
 
 # Put a behaviour policy on your agent, in five minutes.
 
-Pick one thing you do not want your agent to do. **Paste one line** it will read, **add one hook** that holds it, and **try it** with a prompt that should be refused. The one most people want first keeps Claude Code away from your secrets; it takes two minutes and costs 50p of your credit.
+Pick one thing you do not want your agent to do. **Paste one line** it will read, **add one hook** that holds it, and **try it** with a prompt that should be refused. The one most people want first keeps Claude Code away from your secrets; it takes two minutes and costs 50p of your credit. [The £50 is credit for reading, not money](/account/index.md): each page draws a few pence as you read it, nothing is billed, and nothing is ever blocked.
 
 [Install your first policy](/policies/touch-your-secrets/index.md) [Pick a different worry](/policies/index.md) [What is a behaviour policy?](/what-is-an-abp/index.md)
 
@@ -27,8 +27,8 @@ What you will do in Claude Code, played out. You ask it to install the behaviour
 5. + .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py
 6. Write these three changes? (y/n)
 7. y
-8. Installed. Start a new session so Claude Code loads the hook.
-9. new session
+8. Installed. Claude Code picks up the hook straight away; /hooks lists it.
+9. later that day
 10. The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.
 11. Read(.env)
 12. PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.
@@ -115,13 +115,13 @@ Everyone who opens this site starts with £50.00 of credit; your balance is in t
 
 | Kind | Which pages | Read to the end | Read to the end, on £50.00 |
 |---|---|---|---|
-| `free` | your account, the top-up pages, the not-found page | nothing |  |
+| `free` | your account, the top-up pages, the page where you tell us what you think, the not-found page | nothing |  |
 | `home` | the home page | 1p | 5,000 |
 | `page` | an ordinary page: start here, the programme, the lists | 2p | 2,500 |
 | `doc` | a document: the brief, the memo, operations, the team, admin | 2p | 2,500 |
 | `storyboard` | a storyboard, or a page built around one | 10p | 500 |
 | `policy` | a behaviour policy: its line, its hook, and how to try it | 50p | 100 |
-| `pack` | the starter pack: three behaviour policies and their hooks, ready to install | £1.00 | 50 |
+| `pack` | the starter pack: four behaviour policies and their hooks, ready to install | £1.00 | 50 |
 
 ## New to this? Eight panels.
 

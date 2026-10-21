@@ -26,7 +26,7 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/docs/ops/release.html">
   <meta property="og:title" content="How a release works">
   <meta property="og:description" content="The version, the commit subject, the gate, the four CI jobs, and why green does not mean live.">
-  <meta name="rm-customers:version" content="0.2.1">
+  <meta name="rm-customers:version" content="0.2.2">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -44,6 +44,7 @@
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
             <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
             <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
           </div>
         </span>
         <span class="navgroup">
@@ -74,6 +75,8 @@
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
             <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
         <span class="navgroup active">
@@ -107,7 +110,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/docs/">Docs</a> <span class="sep">/</span> <a href="/docs/ops/">Operations</a> <span class="sep">/</span> <span aria-current="page">How a release works</span></div>
@@ -115,7 +118,7 @@
 <!-- rm-customers:nav:end -->
   <main class="wrap document">
     <!-- rm-customers:docs:start -->
-<p class="doc-source">Rendered from <a href="/docs/ops/release.md">docs/ops/release.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.1.</p>
+<p class="doc-source">Rendered from <a href="/docs/ops/release.md">docs/ops/release.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.2.</p>
 <h1 id="how-a-release-works">How a release works</h1>
 <p><em>customers.riskmandate.ai · operations · written at v0.1.0 (2026-10-20), the numbering changed at v0.2.1 (2026-10-21) · CC BY 4.0</em></p>
 <p>Every push to <code>dev</code> is a release. There is no build step at deploy time: the committed tree is the deployed tree, and seven small generators keep the parts that must agree in agreement. One pipeline validates, tags, deploys and then checks that the live site is serving what was pushed.</p>
@@ -151,7 +154,7 @@ git push -u origin dev                   # or open a pull request to dev from cl
 <h2 id="green-does-not-mean-live">Green does not mean live</h2>
 <p>A sibling site once pushed two releases that reported success and never reached anyone, because the Pages deploy job died downloading its own action. The <code>verify-live</code> job exists for that reason: the release is not done until the origin answers with the new version. When <code>verify-live</code> is red and <code>deploy</code> is green, the usual causes are the domain not yet pointing at Pages (see <a href="needs.html">needs.md</a>), Pages not yet enabled for the repository with the custom domain, or a transient <code>429</code> on an action download, which a re-run fixes. The first release of this site, v0.1.0, was pushed before the DNS record existed, so its <code>verify-live</code> is expected red until the lead&#x27;s step is done; the re-run is the lead&#x27;s.</p>
 <h2 id="the-eight-checks-of-the-gate">The eight checks of the gate</h2>
-<p>See <code>/admin/</code> on the site or the header of <code>admin/build/validate.js</code>. The rule for the leak tripwire is worth repeating: the fix for a trip is always a redaction, never a wider pattern. The rule for the house words is riskmandate.ai&#x27;s: the verbatim documents are exempt and nothing else is.</p>
+<p>See <code>/admin/</code> on the site or the header of <code>admin/build/validate.js</code>. The rule for the leak tripwire is worth repeating: the fix for a trip is always a redaction, never a wider pattern. The rule for the house words is riskmandate.ai&#x27;s: the verbatim documents are exempt and nothing else is. From v0.2.2 that includes the words of a reviewer or an invented user, which are kept as given: the memos in <code>data/feedback/memos/</code>, the runs in <code>data/feedback/synthetic/runs/</code>, a <code>&quot;quote&quot;</code> in a review&#x27;s record, and any element marked <code>class=&quot;verbatim&quot;</code>. Our own words around them are checked as usual.</p>
 <h2 id="backfilling-tags">Backfilling tags</h2>
 <p><code>tag_release.py</code> tags every historical release commit that has no tag, oldest first, then pushes all the new tags. A tag that already points at its release commit is left alone. A tag that points elsewhere fails the job: tags are never moved.</p>
     <!-- rm-customers:docs:end -->
@@ -160,7 +163,7 @@ git push -u origin dev                   # or open a pull request to dev from cl
   <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="How a release works"></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/ops/release.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/ops/release.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

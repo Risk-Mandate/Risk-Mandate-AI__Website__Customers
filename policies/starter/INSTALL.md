@@ -10,6 +10,6 @@ For the agent the person is talking to. Four Agent Behaviour Policies, each a li
 3. Merge https://customers.riskmandate.ai/policies/starter/settings.json into the project's `.claude/settings.json`: add its `permissions` entries and its `hooks.PreToolUse` entries to any already there, keep everything else, and show the person the result before saving it. Create the file if there is none.
 4. Add the block in https://customers.riskmandate.ai/policies/starter/CLAUDE.md to the end of the project's CLAUDE.md, creating it if there is none.
 5. Last, because from then on any change to your own settings asks the person: save https://customers.riskmandate.ai/policies/hooks/change_its_own_permissions.py to `.claude/hooks/change_its_own_permissions.py`.
-6. Tell the person to start a new session, or open /hooks, so Claude Code loads the hooks, and give them the four prompts on https://customers.riskmandate.ai/policies/starter/ to try.
+6. Tell the person that Claude Code picks up the hooks on its own and that /hooks lists them, and give them the four prompts on https://customers.riskmandate.ai/policies/starter/ to try.
 
 The hooks need Python 3 and nothing else. Each is under eighty lines; the person may want to read them, and should.

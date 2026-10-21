@@ -26,7 +26,7 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/docs/reality.html">
   <meta property="og:title" content="customers.riskmandate.ai: reality">
   <meta property="og:description" content="What exists on this site and in the programme, by status, generated from data/reality.json. If it is not listed, it does not exist.">
-  <meta name="rm-customers:version" content="0.2.1">
+  <meta name="rm-customers:version" content="0.2.2">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -44,6 +44,7 @@
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
             <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
             <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
           </div>
         </span>
         <span class="navgroup">
@@ -74,6 +75,8 @@
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
             <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
         <span class="navgroup active">
@@ -107,7 +110,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/docs/">Docs</a> <span class="sep">/</span> <span aria-current="page">Reality: what exists</span></div>
@@ -115,10 +118,10 @@
 <!-- rm-customers:nav:end -->
   <main class="wrap document">
     <!-- rm-customers:docs:start -->
-<p class="doc-source">Rendered from <a href="/docs/reality.md">docs/reality.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.1.</p>
+<p class="doc-source">Rendered from <a href="/docs/reality.md">docs/reality.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.2.</p>
 <h1 id="customersriskmandateai-reality">customers.riskmandate.ai: reality</h1>
-<p><em>Generated from <code>data/reality.json</code> by <code>admin/build/gen_reality.py</code> at site v0.2.1 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.</em></p>
-<p>25 claims: 16 shipped, 6 proposed, 3 absent.</p>
+<p><em>Generated from <code>data/reality.json</code> by <code>admin/build/gen_reality.py</code> at site v0.2.2 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.</em></p>
+<p>30 claims: 19 shipped, 8 proposed, 3 absent.</p>
 <table>
 <thead><tr><th>Status</th><th>Meaning</th></tr></thead>
 <tbody>
@@ -127,7 +130,7 @@
 <tr><td>absent</td><td>deliberately not on this site; comes as a later version, lives elsewhere, or never</td></tr>
 </tbody>
 </table>
-<h2 id="shipped-16">Shipped (16)</h2>
+<h2 id="shipped-19">Shipped (19)</h2>
 <table>
 <thead><tr><th>Area</th><th>Feature</th><th>Status</th><th>Where</th><th>Notes</th></tr></thead>
 <tbody>
@@ -147,9 +150,12 @@
 <tr><td>programme</td><td>Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four</td><td>shipped v0.2.1</td><td>data/policies.json, data/rules/, policies/, tests/build/test_hooks.py</td><td>Built from riskmandate.ai&#x27;s rules, copied byte for byte. Every hook refusal in the tests has an allowed twin.</td></tr>
 <tr><td>programme</td><td>Three storyboards drawn in the reader&#x27;s browser by the kit from api.storyboards.sgit.ai: what an ABP is, your first policy, the first batch</td><td>shipped v0.2.1</td><td>storyboards/, data/storyboards.json, assets/storyboards.js</td><td>The kit is pinned and loaded with its integrity strings; its delay attributes are allowed by hash and no other inline style.</td></tr>
 <tr><td>programme</td><td>Animated demos of a session: installing and trying a policy in Claude Code, and the send-as-you line in ChatGPT</td><td>shipped v0.2.1</td><td>data/demos.json, assets/demo.js</td><td>Illustrations of what each policy&#x27;s page promises, labelled as such; not recordings. Still and complete with reduced motion or no JavaScript.</td></tr>
+<tr><td>programme</td><td>A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude</td><td>shipped v0.2.2</td><td>/feedback/</td><td>The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer&#x27;s yes.</td></tr>
+<tr><td>programme</td><td>Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason</td><td>shipped v0.2.2</td><td>/feedback/reviews/</td><td>Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason.</td></tr>
+<tr><td>programme</td><td>Synthetic users: invented people driving the site one screenshot at a time, with their findings checked</td><td>shipped v0.2.2</td><td>/feedback/synthetic/</td><td>Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/.</td></tr>
 </tbody>
 </table>
-<h2 id="proposed-6">Proposed (6)</h2>
+<h2 id="proposed-8">Proposed (8)</h2>
 <table>
 <thead><tr><th>Area</th><th>Feature</th><th>Status</th><th>Where</th><th>Notes</th></tr></thead>
 <tbody>
@@ -159,6 +165,8 @@
 <tr><td>programme</td><td>The private record per customer (contact details, the agreed objectives in full, the private notes) in a vault the lead holds</td><td>proposed</td><td>docs/ops/needs.md</td><td>Never in this repository. The public page carries the summary.</td></tr>
 <tr><td>programme</td><td>A behaviour policy for each of the agents the lead runs, produced by the agent that is wired in</td><td>proposed</td><td>customers/the-agents/</td><td>The memo of 20 October: about ten agents; two have one today, on riskmandate.ai/team/.</td></tr>
 <tr><td>programme</td><td>This site&#x27;s row on the honest column at nfrs.sgit.ai</td><td>proposed</td><td>docs/ops/needs.md</td><td>Another repository; the ask is recorded.</td></tr>
+<tr><td>programme</td><td>A guided path through the barriers: the line, then the hook, then its guard, then a boundary, each stop ending in the question that leads to the next</td><td>proposed</td><td>/feedback/reviews/#p2</td><td>P1 and P2 of the feedback register, from the lead&#x27;s review R001; held for his further memos.</td></tr>
+<tr><td>programme</td><td>A page for a team: one baseline for everybody through the repository, and managed settings so nobody turns it off</td><td>proposed</td><td>/feedback/reviews/#p14</td><td>P14, from study S1; waits for the guided path and for question Q3.</td></tr>
 </tbody>
 </table>
 <h2 id="absent-3">Absent (3)</h2>
@@ -177,7 +185,7 @@
   <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="customers.riskmandate.ai: reality"></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/reality.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/reality.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

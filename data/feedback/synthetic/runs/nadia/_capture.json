@@ -1,0 +1,120 @@
+{
+  "site": "a local copy of customers.riskmandate.ai v0.2.1, checked against the live site by sha256",
+  "viewport": "390x844",
+  "mobile": true,
+  "steps": [
+    {
+      "n": 1,
+      "cmd": "start",
+      "args": [
+        "/"
+      ],
+      "file": "01.png",
+      "note": "",
+      "url": "/",
+      "title": "Put a behaviour policy on your agent in five minutes: £50 of credit to start",
+      "scrollY": 0,
+      "height": 8335,
+      "at": "2026-10-21T12:53:19.693Z"
+    },
+    {
+      "n": 2,
+      "cmd": "clicktext",
+      "args": [
+        "Pick a different worry"
+      ],
+      "file": "02.png",
+      "note": "",
+      "url": "/policies/",
+      "title": "Behaviour policies: pick one worry, paste one line, add one hook, try it",
+      "scrollY": 0,
+      "height": 8265,
+      "at": "2026-10-21T12:53:25.130Z"
+    },
+    {
+      "n": 3,
+      "cmd": "scroll",
+      "args": [
+        "1500"
+      ],
+      "file": "03.png",
+      "note": "",
+      "url": "/policies/",
+      "title": "Behaviour policies: pick one worry, paste one line, add one hook, try it",
+      "scrollY": 1500,
+      "height": 8265,
+      "at": "2026-10-21T12:53:29.688Z"
+    },
+    {
+      "n": 4,
+      "cmd": "clicktext",
+      "args": [
+        "Nothing is sent in your name until you have seen it"
+      ],
+      "file": "04.png",
+      "note": "",
+      "url": "/policies/send-as-you/",
+      "title": "Nothing is sent in your name until you have seen it: behaviour policy RM-R0017",
+      "scrollY": 0,
+      "height": 4227,
+      "at": "2026-10-21T12:53:35.597Z"
+    },
+    {
+      "n": 5,
+      "cmd": "scroll",
+      "args": [
+        "1300"
+      ],
+      "file": "05.png",
+      "note": "",
+      "url": "/policies/send-as-you/",
+      "title": "Nothing is sent in your name until you have seen it: behaviour policy RM-R0017",
+      "scrollY": 1300,
+      "height": 4227,
+      "at": "2026-10-21T12:53:41.947Z"
+    },
+    {
+      "n": 6,
+      "cmd": "scroll",
+      "args": [
+        "1400"
+      ],
+      "file": "06.png",
+      "note": "",
+      "url": "/policies/send-as-you/",
+      "title": "Nothing is sent in your name until you have seen it: behaviour policy RM-R0017",
+      "scrollY": 2700,
+      "height": 4227,
+      "at": "2026-10-21T12:53:46.693Z"
+    },
+    {
+      "n": 7,
+      "cmd": "scroll",
+      "args": [
+        "-750"
+      ],
+      "file": "07.png",
+      "note": "",
+      "url": "/policies/send-as-you/",
+      "title": "Nothing is sent in your name until you have seen it: behaviour policy RM-R0017",
+      "scrollY": 1950,
+      "height": 4227,
+      "at": "2026-10-21T12:53:52.469Z"
+    },
+    {
+      "n": 8,
+      "cmd": "scroll",
+      "args": [
+        "650"
+      ],
+      "file": "08.png",
+      "note": "",
+      "url": "/policies/send-as-you/",
+      "title": "Nothing is sent in your name until you have seen it: behaviour policy RM-R0017",
+      "scrollY": 2600,
+      "height": 4227,
+      "at": "2026-10-21T12:53:58.000Z"
+    }
+  ],
+  "refused": []
+}

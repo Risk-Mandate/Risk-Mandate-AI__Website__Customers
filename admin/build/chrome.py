@@ -102,7 +102,8 @@ CSP_STORYBOARD = csp(storyboard=True)
 # plain link to its first page, so the nav works with no JavaScript at all.
 NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'                                   , 'Your first five minutes'          ),
                                                       ('/account/'                                      , 'Your account: £50 to spend'       ),
-                                                      ('/credit/'                                       , 'What each page costs'             ))),
+                                                      ('/credit/'                                       , 'What each page costs'             ),
+                                                      ('/feedback/'                                     , 'Tell us what you think'           ))),
                   ('Policies'     , '/policies/'   , (('/policies/'                                     , 'Pick one worry: every policy'     ),
                                                       ('/policies/starter/'                             , 'The starter pack: four in one go' ),
                                                       ('/policies/touch-your-secrets/'                  , 'Keep it away from your secrets'   ),
@@ -117,7 +118,9 @@ NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'           
                                                       ('/follow-up/'                                    , 'The daily follow-up'              ),
                                                       ('/learning/'                                     , 'What we want to discover'         ),
                                                       ('/next-batch/'                                   , 'The next batch'                   ),
-                                                      ('/storyboards/the-first-batch/'                  , 'The first batch, drawn'           ))),
+                                                      ('/storyboards/the-first-batch/'                  , 'The first batch, drawn'           ),
+                                                      ('/feedback/reviews/'                             , 'Every review, and what we did'    ),
+                                                      ('/feedback/synthetic/'                           , 'Synthetic users: invented'        ))),
                   ('Docs'         , '/docs/'       , (('/docs/'                                         , 'All documents'                    ),
                                                       ('/docs/brief/our-first-customers.html'           , 'The brief, in full'               ),
                                                       ('/docs/brief/memo-2026-10-20-user-onboarding-plan.html', 'The memo of 20 October'    ),
@@ -141,7 +144,10 @@ CRUMB_FOLDERS  = {'/docs/'        : ('Docs'       , '/docs/'       ),
                   '/admin/'       : ('Admin'      , '/admin/'      ),
                   '/policies/'    : ('Policies'   , '/policies/'   ),
                   '/storyboards/' : ('Storyboards', '/storyboards/'),
-                  '/account/'     : ('Your account', '/account/'   )}
+                  '/account/'     : ('Your account', '/account/'   ),
+                  '/feedback/'    : ('Feedback'   , '/feedback/'   ),
+                  '/feedback/reviews/'  : ('Reviews'  , '/feedback/reviews/'  ),
+                  '/feedback/synthetic/': ('Study S1' , '/feedback/synthetic/')}
 
 
 class Chrome:
@@ -303,7 +309,7 @@ class Chrome:
                           '    <div class="wrap">'                                                                                                 ,
                           f'      <p>{SITE_NAME} · site {self.version_badge()} · released {self.released} · '
                           f'<a href="/admin/versions.html">releases</a> · <a href="{twin}">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · '
-                          f'<a href="{REPO_URL}">source</a> · <a href="{PARENT_URL}">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>',
+                          f'<a href="/feedback/">tell us what you think</a> · <a href="{REPO_URL}">source</a> · <a href="{PARENT_URL}">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>',
                           f'      <p>Code Apache-2.0. Pages <a href="{LICENCE_URL}">{LICENCE_NAME}</a>. '
                           f'What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; '
                           f'if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer\'s contact details are in it. '

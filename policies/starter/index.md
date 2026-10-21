@@ -2,7 +2,7 @@
 
 > Four Agent Behaviour Policies for Claude Code in one install: keep away from secrets, push only to your branch, nothing deleted without a yes, and only you change its permissions. Each is a line for CLAUDE.md and a hook; ask Claude Code to install them, or copy four files.
 
-*Source: <https://customers.riskmandate.ai/policies/starter/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/starter/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -27,7 +27,7 @@ Copy
 1. Save the four hooks into `.claude/hooks/`: [`touch_your_secrets.py`](/policies/hooks/touch_your_secrets.py), [`push_anywhere.py`](/policies/hooks/push_anywhere.py), [`delete_files.py`](/policies/hooks/delete_files.py), [`change_its_own_permissions.py`](/policies/hooks/change_its_own_permissions.py).
 2. Merge [`settings.json`](/policies/starter/settings.json) into `.claude/settings.json`.
 3. Add [the CLAUDE.md block](/policies/starter/CLAUDE.md) to your project's CLAUDE.md.
-4. Start a new session, or open `/hooks`, so Claude Code loads them.
+4. Claude Code picks them up on its own; `/hooks` lists them.
 
 ```
 {

@@ -118,10 +118,13 @@ class Html__To__Markdown(HTMLParser):
             self.newline(2)
             self.table = []
         elif tag == 'tr':
-            self.row = []
+            self.row    = []
+            self.row_id = attrs.get('id')
         elif tag in ('th', 'td'):
             self.cell        = []
             self.cell_header = tag == 'th'
+            if getattr(self, 'row_id', None) and self.row == []:                   # a row's anchor survives in its first cell, so a #fragment link into the twin resolves
+                self.cell.append(f'<a id="{self.row_id}"></a>')
         elif tag == 'img':
             self.emit(f'![{attrs.get("alt", "")}]({attrs.get("src", "")})')
         elif tag in ('dt',):

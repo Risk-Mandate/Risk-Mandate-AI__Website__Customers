@@ -2,7 +2,7 @@
 
 > Do you want your agent to send email as you without showing you first? The line for your agent, and a prompt to try it with, in 1 minute. From riskmandate.ai's RM-R0017.
 
-*Source: <https://customers.riskmandate.ai/policies/send-as-you/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/send-as-you/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -54,11 +54,11 @@ The send-as-you line in ChatGPT's custom instructions: a draft, the recipients, 
 
 ## What this is, and what it is not
 
-| Half | Barrier | What holds it |
+| Part | Barrier | What holds it |
 |---|---|---|
 | The line | expectation | the agent reads it and follows it when it can |
 
-Neither half is a *boundary*, the only barrier that holds when the agent does not cooperate. The stronger controls for this rule, from riskmandate.ai:
+The line is an *expectation*, not a *boundary*, the only barrier that holds when the agent does not cooperate. The stronger controls for this rule, from riskmandate.ai:
 
 - setting **An organisation's admin can set a claude.ai connector tool to ask.**
 
@@ -68,7 +68,7 @@ Source: [https://code.claude.com/docs/en/permissions](https://code.claude.com/do
 
 ## Tell us what happened
 
-Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0017%20tried); it goes on your follow-up, and a person reads it within a working day.
+Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0017%20tried); it goes on your follow-up, and a person reads it within a working day. Or record a voice memo and let your Claude turn it into a review: [tell us what you think](/feedback/index.md).
 
 The rule is [RM-R0017 on riskmandate.ai](https://riskmandate.ai/rules/send-as-you.html), version 1.0.0, CC BY 4.0; copied here on 2026-10-21. The hook and this page are this site's, CC BY 4.0 and Apache-2.0.
 

@@ -25,7 +25,7 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/admin/versions.html">
   <meta property="og:title" content="Release history: one row per release, newest first, with what changed and why">
   <meta property="og:description" content="Every release of customers.riskmandate.ai, newest first, from data/versions.json: the version, the date, the title that was the commit subject, and a note that says what changed and why in words a reader can act on. The tag for each is on the repository.">
-  <meta name="rm-customers:version" content="0.2.1">
+  <meta name="rm-customers:version" content="0.2.2">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -43,6 +43,7 @@
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
             <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
             <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
           </div>
         </span>
         <span class="navgroup">
@@ -73,6 +74,8 @@
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
             <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
         <span class="navgroup active">
@@ -106,7 +109,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/admin/">Admin</a> <span class="sep">/</span> <span aria-current="page">Release history</span></div>
@@ -119,6 +122,7 @@
   <table class="versions" data-generated-from="data/versions.json">
     <thead><tr><th>Version</th><th>Date</th><th>Release</th><th>What changed, and why</th></tr></thead>
     <tbody>
+      <tr><td><code>v0.2.2</code></td><td>2026-10-21</td><td>the feedback loop: the lead&#x27;s first review read point by point with screenshots, five invented users run through v0.2.1, and one register of 23 proposals each with a decision and a reason</td><td>R001, Dinis Cruz&#x27;s first impression, kept verbatim with our reading point by point and screenshots of v0.2.1: the hook answers a question nobody has asked yet. Study S1: five invented users (Sam, Nadia, Marcus, Joan, Tomas) drove v0.2.1 one screenshot at a time; 29 findings, each checked (24 confirmed, 4 partly, 1 artefact). /feedback/: one line by email, a voice memo your Claude turns into a review, or a Claude interview. The register: 23 proposals; 8 done in this release (the feedback pages, the study, what the 50 pounds is, no more &#x27;start a new session&#x27;, did it work and the hook fails open, each hook in plain words with how to turn it off, line-only pages, start here&#x27;s status line moved to its foot); the guided path (P1, P2) proposed and held for the lead&#x27;s further memos; 5 declined with reasons; questions Q1 to Q3 for the lead.</td></tr>
       <tr><td><code>v0.2.1</code></td><td>2026-10-21</td><td>the customer first: £50 of credit metered by SG Meter, six behaviour policies with tested hooks, storyboards and demos</td><td>The home page is now the customer&#x27;s: £50.00 of credit, one worry, one line, one hook, one prompt to try it, with the programme&#x27;s logistics moved to the programme pages. Every page has a price by its kind (1p the home page, 2p a page, 10p a storyboard, 50p a behaviour policy, £1.00 the starter pack), charged by how far it is read by SG Meter v1.4.1 from api.newsroom.sgit.ai release v0.2.5, pinned and loaded with its manifest&#x27;s hash; nothing is blocked and there is no payment link yet, so top-ups are simulated and say so. Six behaviour policies from riskmandate.ai&#x27;s rules: four for Claude Code with a line and a PreToolUse hook (secrets, pushes, deletes, its own permissions), each hook tested with an allowed twin for every refusal; two for ChatGPT and Claude with a line, said to be an expectation only; and a starter pack Claude Code installs from one prompt, showing every file first. Three storyboards drawn by the kit from api.storyboards.sgit.ai v0.1.0, loaded with integrity, its delay attributes allowed by hash and nothing else inline; three demos of a session on a drawn laptop or browser, labelled as illustrations. The header fits every width from 320 to 1440 pixels with the balance in it. From this release every push moves the third number.</td></tr>
       <tr><td><code>v0.2.0</code></td><td>2026-10-21</td><td>six themes, the newsroom&#x27;s five mapped onto RiskMandate&#x27;s look plus its own dark; the header fits an iPad</td><td>A theme pill in the header picks one of six, kept in this browser: RiskMandate (the default, riskmandate.ai&#x27;s paper and green), Canvas (its dark, from the dark hero band), and newsroom.sgit.ai&#x27;s Night, Ember, Paper and Blueprint, mapped onto this site&#x27;s tokens. Every colour now lives in assets/themes.css and nowhere else; site.css reads tokens only. A new test fails the build on a theme missing a token, a colour written outside that file, or a pair under its contrast in any theme; it found riskmandate.ai&#x27;s green at 4.24:1 on its own alternate band, so the link accent is one shade darker. The header lost the first-batch stage pill, gained the picker beside the version, and now folds its links behind the menu button below 1100px: between 1040 and 1200 the version chip used to run past the right edge and the page scrolled sideways, which is an iPad in landscape. Wide tables scroll inside themselves on a phone instead of widening the customers page. docs/ops/themes.md says how it works and how to add a seventh.</td></tr>
       <tr><td><code>v0.1.1</code></td><td>2026-10-20</td><td>the repository moved to Risk-Mandate; the source links and the DNS target follow it</td><td>The lead moved the repository from the SGit-AI organisation to Risk-Mandate/Risk-Mandate-AI__Website__Customers between the first push and the first CI run, and pointed customers.riskmandate.ai at risk-mandate.github.io. Every source link on the site, the release script&#x27;s Actions lookup, the participant disclosure and the DNS line in needs.md now name the new home; the corrections file records the move as C9. Nothing else changed.</td></tr>
@@ -132,7 +136,7 @@
   <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="Release history: one row per release, newest first, with what changed and why"></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/admin/versions.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/admin/versions.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

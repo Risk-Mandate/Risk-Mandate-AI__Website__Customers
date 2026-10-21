@@ -2,7 +2,7 @@
 
 > How the credit works: every reader starts with £50, each page costs a little by how far down it is read, a behaviour policy costs the most, and nothing is ever blocked. The meter is the newsroom's SG Meter, from api.newsroom.sgit.ai; there is no payment link yet.
 
-*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -16,13 +16,13 @@ By kind, in pence, for a page read to the end. A page you open and leave costs a
 
 | Kind | Which pages | Read to the end | Read to the end, on £50.00 |
 |---|---|---|---|
-| `free` | your account, the top-up pages, the not-found page | nothing |  |
+| `free` | your account, the top-up pages, the page where you tell us what you think, the not-found page | nothing |  |
 | `home` | the home page | 1p | 5,000 |
 | `page` | an ordinary page: start here, the programme, the lists | 2p | 2,500 |
 | `doc` | a document: the brief, the memo, operations, the team, admin | 2p | 2,500 |
 | `storyboard` | a storyboard, or a page built around one | 10p | 500 |
 | `policy` | a behaviour policy: its line, its hook, and how to try it | 50p | 100 |
-| `pack` | the starter pack: three behaviour policies and their hooks, ready to install | £1.00 | 50 |
+| `pack` | the starter pack: four behaviour policies and their hooks, ready to install | £1.00 | 50 |
 
 At the foot of every page is what that page has cost you so far, and three ratings: how useful it was sets the price, from free to double. If something was wrong with a page, you can say why and not be charged for it.
 

@@ -2,7 +2,7 @@
 
 > Do you want your agent to delete files without asking? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0007.
 
-*Source: <https://customers.riskmandate.ai/policies/delete-files/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/delete-files/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -33,7 +33,7 @@ Install the behaviour policy at https://customers.riskmandate.ai/policies/delete
 
 Copy
 
-Or by hand: save [`delete_files.py`](/policies/hooks/delete_files.py) as `.claude/hooks/delete_files.py` and merge [`settings.json`](/policies/delete-files/settings.json) into `.claude/settings.json`. Then start a new session, or open `/hooks`, so Claude Code loads it.
+Or by hand: save [`delete_files.py`](/policies/hooks/delete_files.py) as `.claude/hooks/delete_files.py` and merge [`settings.json`](/policies/delete-files/settings.json) into `.claude/settings.json`. Claude Code picks up the change on its own; `/hooks` lists the hooks it is running.
 
 ```
 {
@@ -61,7 +61,19 @@ Or by hand: save [`delete_files.py`](/policies/hooks/delete_files.py) as `.claud
 ```
 
 Copy
-Read the hook before you install it (82 lines of Python, standard library only)
+
+**What the hook does, in plain words:**
+
+| Looks at | shell commands only |
+|---|---|
+| Stops | rm -rf, and any delete outside the project folder |
+| Asks you first | any other delete: rm, rmdir, unlink, shred, git clean, git rm, find -delete |
+| Lets through | every other command |
+| Does not see | a delete inside a script the agent runs; file tools that empty a file |
+
+**To turn it off:** remove its entry under `hooks.PreToolUse` in `.claude/settings.json`; Claude Code stops running it straight away.
+
+Read the hook before you install it (82 lines of Python, standard library only; the box scrolls)
 
 ```
 #!/usr/bin/env python3
@@ -158,6 +170,10 @@ Copy
 
 **Without it:** Claude clears what it thinks is temporary, and one of those files was yours and was not in version control.
 
+**Did it work?** If Claude Code stopped it, or asked you, the hook is running. If the prompt went through as if nothing were installed, the hook did not run, and Claude Code does not wait for a hook that cannot run: the action goes ahead (on Windows without Git Bash it may be blocked instead). The hook fails open, one more reason it is a setting and not a boundary. Check three things: that `/hooks` lists it; that `python3 --version` works where Claude Code runs (on Windows, Claude Code runs hooks in Git Bash, or in PowerShell if Git Bash is not installed, and `python3` may not exist there: install Python, or put `py` in place of `python3` in the settings); and that `.claude/hooks/delete_files.py` is there. Still stuck? [Tell us](mailto:agent@riskmandate.ai?subject=RM-R0007%20did%20not%20work).
+
+The tests for this hook feed it the JSON Claude Code would send, every refusal with an allowed twin beside it; they do not drive a live Claude Code session. Your try is the live test.
+
 ## What this is, and what it is not
 
 | Half | Barrier | What holds it |
@@ -189,7 +205,7 @@ Source: [https://code.claude.com/docs/en/sandboxing](https://code.claude.com/doc
 
 ## Tell us what happened
 
-Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0007%20tried); it goes on your follow-up, and a person reads it within a working day.
+Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0007%20tried); it goes on your follow-up, and a person reads it within a working day. Or record a voice memo and let your Claude turn it into a review: [tell us what you think](/feedback/index.md).
 
 The rule is [RM-R0007 on riskmandate.ai](https://riskmandate.ai/rules/delete-files.html), version 1.0.0, CC BY 4.0; copied here on 2026-10-21. The hook and this page are this site's, CC BY 4.0 and Apache-2.0.
 

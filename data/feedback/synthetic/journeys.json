@@ -1,0 +1,21 @@
+{
+  "_comment": "What each invented user was expected to do, written before any run, so a run can be compared with a hypothesis instead of being explained afterwards.",
+  "study": "S1",
+  "journeys": [
+    { "persona": "sam", "hypothesis": "Sam reaches the secrets policy in one click and has the install prompt within two minutes.",
+      "path": ["home", "Install your first policy", "policy page: the line, the install prompt", "reads the hook source", "Try it"],
+      "watch_for": ["whether he understands what the hook will deny before he installs it", "whether the £50 distracts him", "whether he worries about false positives"] },
+    { "persona": "nadia", "hypothesis": "Nadia is put off by 'hook' and 'Claude Code' in the hero, scrolls, and may find the ChatGPT section or the send-as-you policy.",
+      "path": ["home on a phone", "scroll past the Claude Code demo", "Using ChatGPT or Claude?", "send-as-you policy", "paste the line into custom instructions"],
+      "watch_for": ["the first screen on a phone", "how many unknown words before she leaves", "whether she understands that a line alone is weaker"] },
+    { "persona": "marcus", "hypothesis": "Marcus goes looking for what the hook cannot do, finds the barrier table and RM-R0015, and judges whether the site says honestly that a hook is not a boundary.",
+      "path": ["home", "a policy page", "the hook source", "What this is, and what it is not", "what-is-an-abp", "RM-R0015"],
+      "watch_for": ["'outside the model' read as an overclaim", "whether he finds the barrier ladder", "whether he finds who RiskMandate are"] },
+    { "persona": "joan", "hypothesis": "Joan looks for a team rollout and the commitment of joining, finds the starter pack and the programme pages, and does not find a team-wide or managed install.",
+      "path": ["home", "the starter pack", "The programme", "the milestones", "the next batch"],
+      "watch_for": ["whether a team rollout is mentioned", "whether 'turns it off' is answered", "the iPad header"] },
+    { "persona": "tomas", "hypothesis": "Tomás follows 'Install your first policy', copies the install prompt, and is unsure about python3 on Windows and what a new session is in VS Code.",
+      "path": ["home", "Install your first policy", "Copy the install prompt", "the by-hand route", "Try it"],
+      "watch_for": ["python3 on Windows", "where to put settings.json", "how he would know it worked"] }
+  ]
+}

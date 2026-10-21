@@ -200,6 +200,49 @@
       "notes": "Another repository; the ask is recorded."
     },
     {
+      "id": "programme.feedback",
+      "area": "programme",
+      "title": "A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude",
+      "status": "shipped",
+      "since": "0.2.2",
+      "where": "/feedback/",
+      "notes": "The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer's yes."
+    },
+    {
+      "id": "programme.reviews",
+      "area": "programme",
+      "title": "Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason",
+      "status": "shipped",
+      "since": "0.2.2",
+      "where": "/feedback/reviews/",
+      "notes": "Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason."
+    },
+    {
+      "id": "programme.synthetic",
+      "area": "programme",
+      "title": "Synthetic users: invented people driving the site one screenshot at a time, with their findings checked",
+      "status": "shipped",
+      "since": "0.2.2",
+      "where": "/feedback/synthetic/",
+      "notes": "Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/."
+    },
+    {
+      "id": "programme.guided-path",
+      "area": "programme",
+      "title": "A guided path through the barriers: the line, then the hook, then its guard, then a boundary, each stop ending in the question that leads to the next",
+      "status": "proposed",
+      "where": "/feedback/reviews/#p2",
+      "notes": "P1 and P2 of the feedback register, from the lead's review R001; held for his further memos."
+    },
+    {
+      "id": "programme.teams",
+      "area": "programme",
+      "title": "A page for a team: one baseline for everybody through the repository, and managed settings so nobody turns it off",
+      "status": "proposed",
+      "where": "/feedback/reviews/#p14",
+      "notes": "P14, from study S1; waits for the guided path and for question Q3."
+    },
+    {
       "id": "programme.accounts",
       "area": "programme",
       "title": "Accounts, sign-in or a customer login on this site",

@@ -1,0 +1,205 @@
+{
+  "id": "R001",
+  "kind": "memo",
+  "title": "A first impression: the hook answers a question nobody has asked yet",
+  "reviewer": "Dinis Cruz",
+  "role": "the lead of the programme",
+  "given": "Wednesday 21 October 2026, 1:41, as given in the memo",
+  "date": "2026-10-21",
+  "site_version": "0.2.1",
+  "medium": "a voice memo, transcribed",
+  "status": "first impression; the reviewer says more memos follow and this one is not complete",
+  "memo": "data/feedback/memos/R001.txt",
+  "notes": [
+    "The memo is kept as transcribed, with paragraph breaks added. The transcription spells the name Dennis; the reviewer is Dinis Cruz.",
+    "The time is as given; the memo does not say morning or afternoon, or which time zone.",
+    "The screenshots are of v0.2.1, the version reviewed, taken from a local copy checked byte for byte against the live site."
+  ],
+  "screens": {
+    "01-home-hero": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "The home page's first screen at v0.2.1: pick one thing, paste one line, add one hook, try it."
+    },
+    "02-home-three-steps": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "The three-step strip under the demo, where the hook is first explained: 'Claude Code runs it before the tool call, outside the model: a setting.'"
+    },
+    "03-policy-step-2": {
+      "page": "/policies/touch-your-secrets/",
+      "viewport": "1280x900",
+      "caption": "A behaviour policy's step 2, straight after the line and before anything has been tried: install the hook."
+    },
+    "04-start-here-steps": {
+      "page": "/start-here/",
+      "viewport": "1280x900",
+      "caption": "Start here: paste one line, add one hook, then try it. The try comes after both."
+    },
+    "05-abp-barriers": {
+      "page": "/what-is-an-abp/",
+      "viewport": "1280x900",
+      "caption": "The sequence the memo asks for already exists, as a reference table: none, expectation, setting, boundary."
+    },
+    "06-home-phone": {
+      "page": "/",
+      "viewport": "390x844, a phone",
+      "caption": "On a phone, 'add one hook' is on the first screen, before anything says what a hook is."
+    },
+    "07-start-here-journey": {
+      "page": "/start-here/",
+      "viewport": "1280x900",
+      "caption": "Start here ends in the programme's roadmap: the first behaviour policy is 'milestone S0 to S1 of seven steps'."
+    }
+  },
+  "points": [
+    {
+      "id": "R001.1",
+      "stance": "agree",
+      "quote": "So first thing is, I like it. Put a behavior policy on your agent in 5 minutes. That is exactly the thing.",
+      "shots": [
+        "01-home-hero"
+      ],
+      "reading": "The promise stays. The headline, the five minutes and the one-worry framing are what everything else in this review is built on, and nothing proposed here changes them.",
+      "proposals": []
+    },
+    {
+      "id": "R001.2",
+      "stance": "agree",
+      "quote": "Pick one thing you don't want your agent to do, paste one line, read, add a hook that holds it, and try with a prompt that should be refused. Great.",
+      "shots": [
+        "01-home-hero"
+      ],
+      "reading": "These are the hero's four verbs as they stand at v0.2.1: pick, paste, add, try. The next points argue with the third one. What we propose keeps all four and changes their order, so that trying comes before the hook.",
+      "proposals": [
+        "P1"
+      ]
+    },
+    {
+      "id": "R001.3",
+      "stance": "agree",
+      "quote": "Though, a lot of users here won't know what a hook is, right?",
+      "shots": [
+        "06-home-phone",
+        "02-home-three-steps"
+      ],
+      "reading": "Agreed, and the screenshots show it is worse than the memo says. On a phone, 'add one hook' is on the first screen, before anything says what a hook is. The first explanation is in the three-step strip, half a page down, and it is in our words rather than the reader's: 'Claude Code runs it before the tool call, outside the model: a setting.' And a ChatGPT user is told to add a hook they cannot have: the hero says it to everybody, and only Claude Code has hooks.",
+      "proposals": [
+        "P3",
+        "P7"
+      ]
+    },
+    {
+      "id": "R001.4",
+      "stance": "agree",
+      "quote": "the hook is a solution for the question, hold on, but the is the agent that is enforcing its own checks, right? But the user will only provide that question once he understands what the policy is doing.",
+      "shots": [
+        "03-policy-step-2",
+        "04-start-here-steps"
+      ],
+      "reading": "This is the centre of the memo, and it is right. Every page hands over the line and the hook together, as one package, and puts trying it last: on a behaviour policy's page, step 2, 'Make Claude Code hold it', comes straight after the line; start here goes paste, add the hook, then try. So a customer never sees the line work on its own, never notices that it worked only because the agent chose to follow it, and so never asks the question the hook answers. We answer the question before it has been asked, and an answer to a question you do not have reads as a setup chore.",
+      "proposals": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "R001.5",
+      "stance": "agree-in-part",
+      "quote": "if they then go, but hold on, but the hook is still run by the agent. And then we go, yes, which is why it should be done outside.",
+      "shots": [
+        "05-abp-barriers",
+        "03-policy-step-2"
+      ],
+      "reading": "Right where it matters, with one correction of fact, so that the answer we give is honest. The hook is not run by the model: Claude Code, the program, runs it before the tool call, and the model cannot argue with it. But Claude Code runs it with your full user permissions, on the same machine, from a file in the project's .claude folder. Claude Code does guard that folder: in its default mode an edit there always asks you first, whatever your allow rules say. In bypass-permissions mode it does not ask, and nothing stops you saying yes without reading. So the customer's question is right, and the answer, 'which is why it should be done outside', is the site's own barrier table: a hook is a setting, a switch the agent's own account could flip; only a boundary is out of its reach. Our pages say the hook runs 'outside the model'. That is true, and it answers a narrower question than the one a customer asks next.",
+      "proposals": [
+        "P4",
+        "P2"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/hooks",
+        "https://code.claude.com/docs/en/permission-modes"
+      ]
+    },
+    {
+      "id": "R001.6",
+      "stance": "agree",
+      "quote": "it's very important to have a flow where we guide the user through this workflow, and we guide the user through this sort of sequence of events, including the history.",
+      "shots": [
+        "05-abp-barriers"
+      ],
+      "reading": "The sequence already exists, as a table: none, expectation, setting, boundary, weakest first. It sits on the what-is-an-ABP page as reference, not as a path anybody walks. The proposal turns it into the path: four stops, each ending with the question that leads to the next. We read 'including the history' as the story of how each stop came to be needed, the question a customer asks at each one; it could also mean the history of the ABP at riskmandate.ai. That is the first open question below.",
+      "proposals": [
+        "P2"
+      ],
+      "questions": [
+        "Q1"
+      ]
+    },
+    {
+      "id": "R001.7",
+      "stance": "agree",
+      "quote": "So this is not about providing the whole roadmap or a complete solution. This is about getting users to understand the principles of our agent behavior policies and use them straight away.",
+      "shots": [
+        "07-start-here-journey"
+      ],
+      "reading": "Agreed. Start here ends in the whole journey: seven milestones, from credit to the usage moment, and the first behaviour policy is introduced as 'milestone S0 to S1 of seven steps'. That is the programme's roadmap: useful to the lead and to us, and a distraction to a customer five minutes in. The proposal moves it to the programme pages and leaves start here with the next stop only.",
+      "proposals": [
+        "P5"
+      ]
+    },
+    {
+      "id": "R001.8",
+      "stance": "asked",
+      "quote": "we need to now capture this as reviews. We also need to encourage the user to record these audio memos and give it to their Claude version, and even get Claude to interview them.",
+      "shots": [],
+      "reading": "Done in v0.2.2. Tell us what you think, at /feedback/, offers three ways in: one line by email; a voice memo, transcribed, with a prompt that has Claude turn it into a review without softening it; and a prompt that has Claude interview you, one question at a time, criticism first. Every behaviour policy's page and start here link to it, and so does the footer of every page.",
+      "proposals": [
+        "P6"
+      ]
+    },
+    {
+      "id": "R001.9",
+      "stance": "asked",
+      "quote": "I would like us to run this to some synthetic users so that we can also capture them, right, this feedback.",
+      "shots": [],
+      "reading": "Done in v0.2.2: study S1, five invented users on the v0.2.1 site, each with a profile and an expected journey written before the run, driving a real browser one screenshot at a time. Their findings are on this page, checked, each with what we will do about it.",
+      "proposals": [
+        "P8"
+      ]
+    },
+    {
+      "id": "R001.10",
+      "stance": "asked",
+      "quote": "And then you can put them all in one document and put them all in one consolidated view. And then what you should do is you should have another part on that where you should comment on everything I said. Even put some screenshots on it",
+      "shots": [],
+      "reading": "This page. Every review keeps its words verbatim; our reading follows point by point, with what the reviewer was looking at; and every proposal, from every review, is in one register with a decision.",
+      "proposals": [
+        "P6"
+      ]
+    },
+    {
+      "id": "R001.11",
+      "stance": "asked",
+      "quote": "And we don't have to do everything the user says, right? You know, but we should have a good reason why we don't do that.",
+      "shots": [],
+      "reading": "Every proposal in the register carries a decision and a reason, the declined ones included. This review has two declines, D1 and D2. And everything it asks to change on the site is proposed rather than built, because the memo calls itself a first impression: one redesign made with all of the lead's memos is better than two.",
+      "proposals": [
+        "D1",
+        "D2"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "to": "Dinis Cruz",
+      "ask": "'Including the history': do you mean the history of each question, the conversation a customer has with us as they go from stop to stop, which is how we read it, or the history of the ABP at riskmandate.ai, how the rules came to be?"
+    },
+    {
+      "id": "Q2",
+      "to": "Dinis Cruz",
+      "ask": "Should the first try show the line failing? An honest demonstration of a line being ignored is hard to stage without making the agent look worse than it is. We propose showing instead that it refused because it chose to: the same refusal, read differently. Is that enough?"
+    }
+  ]
+}

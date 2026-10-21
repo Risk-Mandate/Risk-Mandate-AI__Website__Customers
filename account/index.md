@@ -2,7 +2,7 @@
 
 > Your reading account on customers.riskmandate.ai: the balance you started with, every page you opened and what it cost by how far you read, what you asked not to be charged for, and your top-ups. Kept in this browser only; nothing is sent anywhere.
 
-*Source: <https://customers.riskmandate.ai/account/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/account/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

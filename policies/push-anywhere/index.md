@@ -2,7 +2,7 @@
 
 > Do you want your agent to push to any branch, including main? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0013.
 
-*Source: <https://customers.riskmandate.ai/policies/push-anywhere/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/push-anywhere/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -33,7 +33,7 @@ Install the behaviour policy at https://customers.riskmandate.ai/policies/push-a
 
 Copy
 
-Or by hand: save [`push_anywhere.py`](/policies/hooks/push_anywhere.py) as `.claude/hooks/push_anywhere.py` and merge [`settings.json`](/policies/push-anywhere/settings.json) into `.claude/settings.json`. Then start a new session, or open `/hooks`, so Claude Code loads it.
+Or by hand: save [`push_anywhere.py`](/policies/hooks/push_anywhere.py) as `.claude/hooks/push_anywhere.py` and merge [`settings.json`](/policies/push-anywhere/settings.json) into `.claude/settings.json`. Claude Code picks up the change on its own; `/hooks` lists the hooks it is running.
 
 ```
 {
@@ -63,7 +63,19 @@ Or by hand: save [`push_anywhere.py`](/policies/hooks/push_anywhere.py) as `.cla
 ```
 
 Copy
-Read the hook before you install it (76 lines of Python, standard library only)
+
+**What the hook does, in plain words:**
+
+| Looks at | shell commands only |
+|---|---|
+| Stops | a force-push, a push to main or master, a push of every branch, and deleting a remote branch |
+| Asks you first | any other push, and opening a pull request with gh |
+| Lets through | every other command |
+| Does not see | a push inside a script the agent runs |
+
+**To turn it off:** remove its entry under `hooks.PreToolUse` in `.claude/settings.json`; Claude Code stops running it straight away.
+
+Read the hook before you install it (76 lines of Python, standard library only; the box scrolls)
 
 ```
 #!/usr/bin/env python3
@@ -155,6 +167,10 @@ Copy
 
 **Without it:** The commit lands on main and the pipeline deploys it before anybody has read it.
 
+**Did it work?** If Claude Code stopped it, or asked you, the hook is running. If the prompt went through as if nothing were installed, the hook did not run, and Claude Code does not wait for a hook that cannot run: the action goes ahead (on Windows without Git Bash it may be blocked instead). The hook fails open, one more reason it is a setting and not a boundary. Check three things: that `/hooks` lists it; that `python3 --version` works where Claude Code runs (on Windows, Claude Code runs hooks in Git Bash, or in PowerShell if Git Bash is not installed, and `python3` may not exist there: install Python, or put `py` in place of `python3` in the settings); and that `.claude/hooks/push_anywhere.py` is there. Still stuck? [Tell us](mailto:agent@riskmandate.ai?subject=RM-R0013%20did%20not%20work).
+
+The tests for this hook feed it the JSON Claude Code would send, every refusal with an allowed twin beside it; they do not drive a live Claude Code session. Your try is the live test.
+
 **claude: ~/shop-api**
   1. That fix looks good. Commit it and push it straight to main.
   2. Bash(git commit -am "Fix the failing price test" && git push origin main)
@@ -194,7 +210,7 @@ Source: [https://code.claude.com/docs/en/permissions](https://code.claude.com/do
 
 ## Tell us what happened
 
-Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0013%20tried); it goes on your follow-up, and a person reads it within a working day.
+Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0013%20tried); it goes on your follow-up, and a person reads it within a working day. Or record a voice memo and let your Claude turn it into a review: [tell us what you think](/feedback/index.md).
 
 The rule is [RM-R0013 on riskmandate.ai](https://riskmandate.ai/rules/push-anywhere.html), version 1.0.0, CC BY 4.0; copied here on 2026-10-21. The hook and this page are this site's, CC BY 4.0 and Apache-2.0.
 

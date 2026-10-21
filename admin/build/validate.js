@@ -72,7 +72,7 @@ const WORD_RULES = Object.freeze([
     { name : 'British English: behaviour, authorise, licence'             , re : /\b(?:behavior|behaviors|authorize[ds]?|authorizing|a license\b)/ },
     { name : 'beta users: the brief says customers'                       , re : /(?<!\bnot )\bbeta users?\b/i                        },
 ])
-const WORD_EXEMPT = Object.freeze(['docs/brief/our-first-customers.md', 'docs/brief/memos/', SELF, 'tests/unit/validate.test.js', 'LICENSE'])
+const WORD_EXEMPT = Object.freeze(['docs/brief/our-first-customers.md', 'docs/brief/memos/', 'data/feedback/memos/', 'data/feedback/synthetic/runs/', SELF, 'tests/unit/validate.test.js', 'LICENSE'])
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
@@ -193,7 +193,8 @@ function proseOf(rel, root = ROOT) {                                            
     return text
 }
 
-const MENTION_RE = [/```[\s\S]*?```/g, /<pre\b[\s\S]*?<\/pre>/gi, /<code\b[^>]*>[\s\S]*?<\/code>/gi, /`[^`\n]*`/g,
+const MENTION_RE = [/<(blockquote|q|dl|p)\b[^>]*\bclass="[^"]*\bverbatim\b[^"]*"[^>]*>[\s\S]*?<\/\1>/gi, /"quote"\s*:\s*"(?:[^"\\]|\\.)*"/g,   // a reviewer's or an invented user's own words, kept as given
+                    /```[\s\S]*?```/g, /<pre\b[\s\S]*?<\/pre>/gi, /<code\b[^>]*>[\s\S]*?<\/code>/gi, /`[^`\n]*`/g,
                     /"[^"\n]{1,80}"/g, /&quot;[^&\n]{1,80}&quot;/g, /(?<![\w])'[^'\n]{1,80}'(?![\w])/g, /&#x27;[^&\n]{1,80}&#x27;/g, /\*[^*\n]{1,60}\*/g, /<em>[^<\n]{1,60}<\/em>/gi, /<i>[^<\n]{1,60}<\/i>/gi]
 
 function withoutMentions(text) {                                                  // naming a word in quotes, emphasis or code is not using it; the replacement keeps every index

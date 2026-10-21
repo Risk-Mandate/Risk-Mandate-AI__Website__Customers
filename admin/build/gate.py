@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 ROOT       = Path(__file__).resolve().parents[2]
-GENERATORS = ('gen_customers', 'gen_meter', 'gen_policies', 'gen_storyboards', 'gen_reality', 'gen_docs', 'gen_chrome', 'gen_versions', 'gen_twins', 'gen_llms')   # in dependency order: pages and their blocks before the chrome, the chrome before the twins, the twins before the indexes
+GENERATORS = ('gen_customers', 'gen_meter', 'gen_policies', 'gen_storyboards', 'gen_reality', 'gen_feedback', 'gen_docs', 'gen_chrome', 'gen_versions', 'gen_twins', 'gen_llms')   # in dependency order: pages and their blocks before the chrome, the chrome before the twins, the twins before the indexes
 REVIEW     = ('sections', 'validate_review', 'render')                            # the brief's anchors, the intent files against them, the review page
 
 

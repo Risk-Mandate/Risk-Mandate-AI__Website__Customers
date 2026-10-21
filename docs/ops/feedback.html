@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback: from a memo to a decision, and invented users in between</title>
+  <meta name="description" content="Feedback, from a memo to a decision: how a review is kept, read and decided, and how a synthetic study is run.">
+  <meta name="rm-customers:source" content="/docs/ops/feedback.md">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/docs/ops/feedback.html">
+  <link rel="alternate" type="text/markdown" href="/docs/ops/feedback.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/docs/ops/feedback.html">
+  <meta property="og:title" content="Feedback: from a memo to a decision, and invented users in between">
+  <meta property="og:description" content="Feedback, from a memo to a decision: how a review is kept, read and decided, and how a synthetic study is run.">
+  <meta name="rm-customers:version" content="0.2.2">
+  <meta name="rm-customers:released" content="2026-10-21">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
+            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
+            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
+            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
+            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/docs/">Docs</a> <span class="sep">/</span> <a href="/docs/ops/">Operations</a> <span class="sep">/</span> <span aria-current="page">Feedback</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap document">
+    <!-- rm-customers:docs:start -->
+<p class="doc-source">Rendered from <a href="/docs/ops/feedback.md">docs/ops/feedback.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.2.</p>
+<h1 id="feedback-from-a-memo-to-a-decision-and-invented-users-in-between">Feedback: from a memo to a decision, and invented users in between</h1>
+<p><em>customers.riskmandate.ai · operations · written at v0.2.2 (2026-10-21) · CC BY 4.0</em></p>
+<p>The site learns from its customers in one loop: somebody tells us what they saw, we keep their words, read them point by point against what they were looking at, and every point leads to a proposal with a decision and a reason. We do not do everything a reviewer asks; every no has its reason in the register. Between reviews by people, invented users run the same pages and find what a page fails to say.</p>
+<table>
+<thead><tr><th>What</th><th>Where it lives</th><th>What makes the page</th></tr></thead>
+<tbody>
+<tr><td>A memo, word for word</td><td><code>data/feedback/memos/&lt;id&gt;.txt</code></td><td>nothing: it is never edited</td></tr>
+<tr><td>Our reading of it</td><td><code>data/feedback/reviews/&lt;id&gt;.json</code></td><td><code>admin/build/gen_feedback.py</code></td></tr>
+<tr><td>The screenshots it cites</td><td><code>assets/feedback/&lt;id&gt;/*.webp</code></td><td><code>feedback/tools/shoot.cjs</code>, from a spec like <code>feedback/tools/R001-shots.json</code></td></tr>
+<tr><td>Every proposal, with a decision</td><td><code>data/feedback/proposals.json</code></td><td>the same generator</td></tr>
+<tr><td>A synthetic study</td><td><code>data/feedback/synthetic/</code> and <code>assets/feedback/S1/</code></td><td>the same generator</td></tr>
+<tr><td>The two prompts customers use</td><td><code>feedback/prompts/*.txt</code></td><td>served as they are, and shown on <code>/feedback/</code></td></tr>
+</tbody>
+</table>
+<h2 id="a-review-by-a-person">A review by a person</h2>
+<ol>
+<li><strong>Keep the words.</strong> Save the memo or the transcript as <code>data/feedback/memos/R00N.txt</code>, as given. Paragraph breaks may be added; nothing else changes. The house-word check does not read this folder.</li>
+<li><strong>Take the screenshots first,</strong> of the version the reviewer saw. Serve that version locally (<code>git archive &lt;commit&gt; | tar -x -C &lt;dir&gt;</code>, then <code>python3 -m http.server</code>), check a page or two against the live site by sha256, and shoot the elements the memo is about with <code>feedback/tools/shoot.cjs</code>. Convert to WebP into <code>assets/feedback/R00N/</code>.</li>
+<li><strong>Read it point by point</strong> in <code>data/feedback/reviews/R00N.json</code>. Each point quotes the memo word for word (the build fails otherwise), takes a stance (agree, agree in part, disagree, a question, asked of us), says what we read in it, cites its screenshots, and names the proposals it leads to. Check facts about other people&#x27;s products against their documentation, and name the page in <code>sources</code>.</li>
+<li><strong>Decide.</strong> Add or update proposals in <code>data/feedback/proposals.json</code>. Each has a decision (done, accepted, proposed, question, declined) and a reason; a done one names its version. Which points led to it is worked out, not written.</li>
+<li><strong>Ask.</strong> Anything only the reviewer can answer goes in <code>questions</code>.</li>
+<li><code>python3 admin/build/gate.py --build</code>, then release as usual.</li>
+</ol>
+<p>Nothing a customer sends is published without their yes, and no contact details ever are: a test fails on an email address in <code>data/feedback/</code> other than ours.</p>
+<h2 id="a-synthetic-study">A synthetic study</h2>
+<p>Follow newsroom.sgit.ai&#x27;s method, <a href="https://newsroom.sgit.ai/articles/how-to-run-synthetic-users.html">How to run synthetic users</a>, as adapted in <code>data/feedback/synthetic/protocol.json</code>:</p>
+<ol>
+<li><strong>Before any run:</strong> the invented users in <code>personas.json</code> (a situation and a question, never a real person) and what each is expected to do in <code>journeys.json</code>.</li>
+<li><strong>Freeze the site:</strong> a local copy of the version under study, checked against the live site.</li>
+<li><strong>Run:</strong> one agent per invented user, each driving the browser only through <code>feedback/synthetic/tools/step.mjs</code>, which keeps one browser open for the run, reaches only the local copy and the two pinned APIs, and writes <code>_capture.json</code>. At most 14 actions, then the ten interview questions, a rating and three to six findings, in <code>run.json</code>.</li>
+<li><strong>Check every finding</strong> in <code>checks.json</code> against the capture, the screenshots, the site&#x27;s files and outside documentation: confirmed, partly, artefact, or not confirmed. Keep every finding whatever its verdict.</li>
+<li><strong>Decide,</strong> as for a review: each finding leads to proposals in the register.</li>
+<li><strong>Run the same users again</strong> after the changes they led to, and compare.</li>
+</ol>
+<p>The study pages say on every page that the users are invented and that this is not user research.</p>
+    <!-- rm-customers:docs:end -->
+  </main>
+  <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="Feedback: from a memo to a decision, and invented users in between"></sg-meter></div>
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/ops/feedback.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

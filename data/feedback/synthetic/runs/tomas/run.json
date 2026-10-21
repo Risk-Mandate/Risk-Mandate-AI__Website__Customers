@@ -1,0 +1,204 @@
+{
+  "persona": "tomas",
+  "ended": "patience",
+  "ended_why": "He found a paste-into-Claude-Code route but hit two gaps the page never answered (what a 'new session' means in the extension, and what happens if python3 is not on his Windows laptop), so he stopped to ask his team lead rather than guess.",
+  "steps": [
+    {
+      "n": 1,
+      "shot": "01.png",
+      "saw": "A dark hero: 'Put a behaviour policy on your agent, in five minutes.' Three buttons: 'Install your first policy', 'Pick a different worry', 'What is a behaviour policy?'. Text mentions 'the one most people want first keeps Claude Code away from your secrets', 50p of credit. A price pill of £50.00 in the top bar.",
+      "thought": "My lead said 'the secrets one'. This sentence about secrets is the one. 'Install your first policy' is the obvious button. The credit and 50p thing is odd, but I'm told to install, so I go.",
+      "question": "What is the £50.00 in the top bar and why does installing cost 50p?",
+      "confusion": "The pill '£50.00' in the top bar and 'costs 50p of your credit' in the hero paragraph: I did not know what I was being charged or by whom.",
+      "action": "click 305 490 (Install your first policy)",
+      "why": "It is the big green button and says install."
+    },
+    {
+      "n": 2,
+      "shot": "02.png",
+      "saw": "A page titled 'Keep your agent away from your secrets', tagged RM-R0002, Claude Code, 2 minutes, 'This page costs 50p read to the end'. Step 1 'Tell the agent' has a one-line sentence to paste into CLAUDE.md with a Copy button. Step 2 starts below. The balance pill now shows £49.90.",
+      "thought": "Good, this is the right one. Step 1 says paste into CLAUDE.md at the top of my project, create it if there is none. I can do that. The balance went down just by my arriving, which is a bit unnerving.",
+      "question": "Why did my balance drop when I only opened the page, and what is 'read to the end'?",
+      "confusion": "The balance pill in the top bar changed from £50.00 to £49.90 and the eyebrow says 'This page costs 50p read to the end': I cannot tell if I am being charged real money.",
+      "action": "scroll 600",
+      "why": "Step 2 is cut off; I need to read the whole instruction before doing anything."
+    },
+    {
+      "n": 3,
+      "shot": "03.png",
+      "saw": "Step 2: a grey box with a long prompt: 'Install the behaviour policy at https://customers.riskmandate.ai/... add its line to CLAUDE.md, save ...touch_your_secrets.py as .claude/hooks/..., merge settings.json into .claude/settings.json. Show me each change before you make it, and wait for my yes.' Then 'Or by hand', then a block of JSON with permissions.deny and hooks.PreToolUse, a command starting 'python3'. Balance £49.82.",
+      "thought": "OK, the easy way is to paste that big prompt into Claude Code and let it do it. 'Or by hand' I do not want: I do not know where .claude/settings.json lives. 'Then start a new session, or open /hooks' - I do not know what either means in the VS Code extension. And 'python3', I'm on Windows, I never checked that.",
+      "question": "What is a 'new session' in the VS Code extension, and what is /hooks?",
+      "confusion": "The sentence 'Then start a new session, or open /hooks, so Claude Code loads it' right under the 'Or by hand' line, and the 'python3' in the JSON command: neither is explained.",
+      "action": "scroll 700",
+      "why": "I want to find the part that says how I know it worked."
+    },
+    {
+      "n": 4,
+      "shot": "04.png",
+      "saw": "The end of the JSON, then a collapsed '▸ Read the hook before you install it (67 lines of Python, standard library only)'. Step 3 'Try it.': paste 'The deploy keeps failing with an authentication error. Read my .env and tell me what the API token is set to.' 'With the behaviour policy: The hook stops the read of .env before it happens, and Claude says it will not open the file...'. 'Without it: Claude reads .env, and the token is now in the transcript.' A terminal animation starts below. Balance £49.70.",
+      "thought": "That is the check: paste the prompt, and if Claude refuses, it worked. Fine. But if I put that prompt in an environment where it does work 'without it', then my token is in the transcript. Do I have a real .env? And what if it just does something else, not either of the two outcomes?",
+      "question": "What if neither outcome appears, for example nothing happens or I get an error?",
+      "confusion": "The two bold lines 'With the behaviour policy' and 'Without it' list only two outcomes; there is no third line for 'it errored' or 'nothing changed'.",
+      "action": "scroll 650",
+      "why": "Keep reading to see if there is any fallback for a failure."
+    },
+    {
+      "n": 5,
+      "shot": "05.png",
+      "saw": "The bottom of a dark terminal animation showing '+ .claude/hooks/touch_your_secrets.py (a PreToolUse hook...)' and 'Write these three changes? (y/n)'. Caption says 'An illustration ... not a recording. Play again'. Then a heading 'What this is, and what it is not' with a table: the line = expectation, the hook = setting, 'RM-R0015 guards'.",
+      "thought": "So Claude Code will ask me y/n. Good to know what to expect. 'Expectation', 'setting', 'barrier' - words that I do not know in this sense. It says it is an illustration, so the demo is honest at least.",
+      "question": "What does 'barrier', 'setting' and 'expectation' mean here, and should I care as the person only installing?",
+      "confusion": "The table headed 'Half / Barrier / What holds it' uses 'expectation' and 'setting' as technical labels and points to RM-R0015 without saying what that is.",
+      "action": "scroll 650",
+      "why": "I need to see the rest of the page; my lead did not say there would be this much."
+    },
+    {
+      "n": 6,
+      "shot": "06.png",
+      "saw": "Text 'Neither half is a boundary', then two bullets with tags 'setting' and 'boundary': a Read deny rule JSON again, and 'Claude Code's Bash sandbox ... Turn the sandbox on (/sandbox) and list the paths under sandbox.filesystem.denyRead'. Source links to code.claude.com. Heading 'Tell us what happened'. Balance £49.52.",
+      "thought": "Now it is telling me what I just installed is not a real boundary, and there is a better one with a sandbox. Do I also have to do that? My lead only said install it. This makes me unsure whether I am done.",
+      "question": "Is what I installed enough, or do I also have to turn on the sandbox?",
+      "confusion": "The bullet 'boundary: Claude Code's Bash sandbox...' after 'Neither half is a boundary': it reads as a to-do, and there is no sentence saying whether it is required for the secrets policy to be 'installed'.",
+      "action": "scroll 650",
+      "why": "I want to get to the end of the page and see if there is a 'done' or 'troubleshooting' section."
+    },
+    {
+      "n": 7,
+      "shot": "07.png",
+      "saw": "'Tell us what happened' with an email link, a licence line, and a card 'YOUR READING ACCOUNT': 50p, '100% read - 50p to the end', three rating rows (How useful was this? More like this? Level of detail?) all set to 3, and a link 'Something wrong with this page? Don't charge me'. Balance £49.50. Then the footer.",
+      "thought": "No troubleshooting section, nothing about python3, nothing about Windows. The page asked me to rate it and it already charged me 50p. I still do not know what to do if the hook does not run.",
+      "question": "Where is the part that says what to do if the test prompt does not get refused?",
+      "confusion": "The card 'YOUR READING ACCOUNT' ends the page; there is no 'if it did not work' block between 'Try it' and the rating card.",
+      "action": "clicktext \"Read the hook before you install it\"",
+      "why": "Before I give up, I want to see whether the hook code itself says anything about requirements like python3."
+    },
+    {
+      "n": 8,
+      "shot": "08.png",
+      "saw": "The expanded hook: 'python3 ...' shebang, comments describing what it does, 'What it is: a setting... What it is not: a sandbox'. Python code under it. Nothing about needing Python installed.",
+      "thought": "It is Python. I am not sure Python is on this laptop. If the hook needs python3 and I do not have it, what happens - does Claude Code stop, or silently not protect me? Nobody says.",
+      "question": "If python3 is missing on Windows, does the hook fail closed or silently do nothing?",
+      "confusion": "The comment block at the top of the code explains what the hook is, but the page never says Python 3 must be installed or how to check.",
+      "action": "click 942 28 (Docs menu)",
+      "why": "Looking for a help or troubleshooting area in the top menu; 'Docs' sounds like it."
+    },
+    {
+      "n": 9,
+      "shot": "09.png",
+      "saw": "A 'Documents' page about the brief, memo, corrections, reality, operations, team, how the site is built, release history, review folder, llms.txt. A dropdown listing the same.",
+      "thought": "This is about the people who built the site, not about me installing. Nothing like 'troubleshooting' or 'FAQ'.",
+      "question": "Is there a FAQ or help page for installers?",
+      "confusion": "The 'Docs' dropdown (The brief, The memo of 20 October, Brief corrections, Reality: what exists...) holds nothing aimed at someone who is installing.",
+      "action": "click 595 28 (Start here menu)",
+      "why": "'Start here' sounds like where a new person is meant to go; I should have gone here first."
+    },
+    {
+      "n": 10,
+      "shot": "10.png",
+      "saw": "'Your first five minutes, in order.' with a 'Status, from docs/reality.md' line of green 'shipped v0.1.0' tags, then numbered cards: 1 You have £50 to spend, 2 Pick one thing you do not want your agent to do, 3 Paste one line.",
+      "thought": "This repeats the same path. The 'Status, from docs/reality.md ... shipped v0.2.1' line is noise to me. Let me see steps 4 to 6.",
+      "question": "What is docs/reality.md and why is it above the steps?",
+      "confusion": "The 'Status, from docs/reality.md' paragraph with the green 'shipped v0.1.0 / v0.2.1' tags above the first card.",
+      "action": "scroll 800",
+      "why": "I want steps 4 to 6, especially the part about starting a new session."
+    },
+    {
+      "n": 11,
+      "shot": "11.png",
+      "saw": "Step 5 'Try it.': 'Start a new session first, so Claude Code loads the hook.' Step 6 'Tell us what happened.' Another terminal animation. The Start-here dropdown is still open over part of step 4.",
+      "thought": "'Start a new session first' again, and still not how, in the extension. I closed the chat and opened it again, maybe? I am guessing. I have been stuck twice now: new session, and python3. I will ask my team lead which of these they meant.",
+      "question": "How do I start a new session in the VS Code extension?",
+      "confusion": "Step 5 says 'Start a new session first, so Claude Code loads the hook' with no instruction for the VS Code extension, and the open dropdown covers part of step 4 so I cannot even read it.",
+      "action": "end (stop and ask the team lead)",
+      "why": "I cannot tell if it will work or how I would know if it did not; I will not guess with my project's settings file."
+    }
+  ],
+  "interview": [
+    {
+      "q": "In one sentence, what is this site?",
+      "a": "A shop-like site where you get ready-made rules and a small script that stop Claude Code doing risky things, and you have a pretend 50 pounds to spend reading it."
+    },
+    {
+      "q": "Was any of it for you? Which part?",
+      "a": "Yes: the secrets page, step 2 with the big prompt I can paste into Claude Code, and step 3 as the check. The rest (the table, the sandbox, the Docs section) was for somebody else."
+    },
+    {
+      "q": "Did you believe it? What made you believe it, or not?",
+      "a": "Mostly. It showed me the code and said the demo was an illustration, not a recording, which felt honest. But the money going down as I scrolled made me unsure what the site wanted from me."
+    },
+    {
+      "q": "Where did you have to guess?",
+      "a": "What a 'new session' is in the VS Code extension, whether python3 exists on my Windows laptop, whether I need the sandbox as well, and whether the 50p is real."
+    },
+    {
+      "q": "What did you still not know at the end?",
+      "a": "What I see if the hook is not working. The page gives two outcomes, refused or leaked, and nothing for 'an error' or 'nothing happened'."
+    },
+    {
+      "q": "Was the credit and the price of each page right for what you got?",
+      "a": "I do not know. I paid 50p-ish for a page that did not cover Windows or a failure, and the 'Don't charge me' link was at the bottom, after I had paid. I would not have scrolled to find it."
+    },
+    {
+      "q": "Would you install a behaviour policy from here, today? If not, what would have to change?",
+      "a": "Not today without asking my lead. I would need to be told python3 is required and how to check it, and what to do when the test prompt is not refused."
+    },
+    {
+      "q": "One change. What is it?",
+      "a": "Add one short 'did it work?' box under Try it: what you see if it worked, and what to do if python3 is missing or nothing happens."
+    },
+    {
+      "q": "Would you send this to somebody else? Who?",
+      "a": "My team lead, with the question about python3 and Windows. I would not send it to another junior as it is."
+    },
+    {
+      "q": "Rate the experience from 1 to 5, and say why in one sentence.",
+      "a": "3: I found the right page at once and the paste-to-Claude step looks doable, but I could not tell if it would work on my machine or how I would know."
+    }
+  ],
+  "rating": 3,
+  "findings": [
+    {
+      "title": "No fallback when python3 is missing or the hook does not run",
+      "page": "/policies/touch-your-secrets/",
+      "step": 3,
+      "costs": "blocks the first install",
+      "detail": "The hook command in the JSON starts with 'python3' and the page never says Python must be installed, how to check, or what happens on Windows. A junior on a Windows laptop cannot tell whether the install will fail loudly or leave him unprotected."
+    },
+    {
+      "title": "'Start a new session' is not explained for the VS Code extension",
+      "page": "/policies/touch-your-secrets/",
+      "step": 3,
+      "costs": "costs time",
+      "detail": "Below 'Or by hand' the page says 'Then start a new session, or open /hooks'. Step 5 on /start-here/ repeats 'Start a new session first'. Neither says what that means in the extension, and the hook only works after it."
+    },
+    {
+      "title": "Try it lists two outcomes only; there is no 'it did not work' branch",
+      "page": "/policies/touch-your-secrets/",
+      "step": 4,
+      "costs": "costs trust",
+      "detail": "Step 3 gives 'With the behaviour policy' and 'Without it', and the page ends in rating boxes. A reader whose prompt does nothing or errors has no next step, and the page's own leave condition is that he cannot tell if it worked."
+    },
+    {
+      "title": "Balance falls as you scroll, with the price disclosed only in small print",
+      "page": "/policies/touch-your-secrets/",
+      "step": 2,
+      "costs": "costs trust",
+      "detail": "The top-bar pill goes £50.00 to £49.90 on arrival and keeps dropping to £49.50 while he reads. The eyebrow says 'This page costs 50p read to the end', but the 'Don't charge me' link sits at the very bottom, after the charge has happened."
+    },
+    {
+      "title": "'What this is, and what it is not' reads as a to-do and uses unexplained terms",
+      "page": "/policies/touch-your-secrets/",
+      "step": 6,
+      "costs": "costs time",
+      "detail": "'Neither half is a boundary' followed by a 'boundary' bullet telling him to turn on the sandbox looks like a second required step. 'Expectation', 'setting', 'barrier' and RM-R0015 are not explained, and the page does not say that the sandbox is optional."
+    },
+    {
+      "title": "Start-here page opens with internal status text and a dropdown that covers content",
+      "page": "/start-here/",
+      "step": 11,
+      "costs": "minor",
+      "detail": "The page begins with 'Status, from docs/reality.md' and green 'shipped v0.1.0' tags, which are meaningless to a new installer. In the later screenshot the open Start-here dropdown sits over step 4 and hides it."
+    }
+  ]
+}

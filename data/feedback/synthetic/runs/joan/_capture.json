@@ -1,0 +1,208 @@
+{
+  "site": "a local copy of customers.riskmandate.ai v0.2.1, checked against the live site by sha256",
+  "viewport": "1180x820",
+  "mobile": true,
+  "steps": [
+    {
+      "n": 1,
+      "cmd": "start",
+      "args": [
+        "/"
+      ],
+      "file": "01.png",
+      "note": "",
+      "url": "/",
+      "title": "Put a behaviour policy on your agent in five minutes: £50 of credit to start",
+      "scrollY": 0,
+      "height": 5152,
+      "at": "2026-10-21T12:53:39.193Z"
+    },
+    {
+      "n": 2,
+      "cmd": "click",
+      "args": [
+        "743",
+        "28"
+      ],
+      "file": "02.png",
+      "note": "",
+      "url": "/",
+      "title": "Put a behaviour policy on your agent in five minutes: £50 of credit to start",
+      "scrollY": 0,
+      "height": 5152,
+      "at": "2026-10-21T12:53:48.496Z"
+    },
+    {
+      "n": 3,
+      "cmd": "clicktext",
+      "args": [
+        "The first batch"
+      ],
+      "file": "03.png",
+      "note": "",
+      "url": "/customers/",
+      "title": "The first batch: one row per customer, and a page for each, with no contact details",
+      "scrollY": 0,
+      "height": 1953,
+      "at": "2026-10-21T12:53:53.938Z"
+    },
+    {
+      "n": 4,
+      "cmd": "scroll",
+      "args": [
+        "700"
+      ],
+      "file": "04.png",
+      "note": "",
+      "url": "/customers/",
+      "title": "The first batch: one row per customer, and a page for each, with no contact details",
+      "scrollY": 700,
+      "height": 1953,
+      "at": "2026-10-21T12:53:59.514Z"
+    },
+    {
+      "n": 5,
+      "cmd": "scroll",
+      "args": [
+        "900"
+      ],
+      "file": "05.png",
+      "note": "",
+      "url": "/customers/",
+      "title": "The first batch: one row per customer, and a page for each, with no contact details",
+      "scrollY": 1133,
+      "height": 1953,
+      "at": "2026-10-21T12:54:06.028Z"
+    },
+    {
+      "n": 6,
+      "cmd": "click",
+      "args": [
+        "577",
+        "27"
+      ],
+      "file": "06.png",
+      "note": "",
+      "url": "/customers/",
+      "title": "The first batch: one row per customer, and a page for each, with no contact details",
+      "scrollY": 1133,
+      "height": 1953,
+      "at": "2026-10-21T12:54:11.890Z"
+    },
+    {
+      "n": 7,
+      "cmd": "clicktext",
+      "args": [
+        "The starter pack: four in one go"
+      ],
+      "file": "07.png",
+      "note": "",
+      "url": "/policies/starter/",
+      "title": "The starter pack: four behaviour policies for Claude Code, one install, five minutes",
+      "scrollY": 0,
+      "height": 4070,
+      "at": "2026-10-21T12:54:18.512Z"
+    },
+    {
+      "n": 8,
+      "cmd": "scroll",
+      "args": [
+        "1300"
+      ],
+      "file": "08.png",
+      "note": "",
+      "url": "/policies/starter/",
+      "title": "The starter pack: four behaviour policies for Claude Code, one install, five minutes",
+      "scrollY": 1300,
+      "height": 4070,
+      "at": "2026-10-21T12:54:25.890Z"
+    },
+    {
+      "n": 9,
+      "cmd": "scroll",
+      "args": [
+        "1500"
+      ],
+      "file": "09.png",
+      "note": "",
+      "url": "/policies/starter/",
+      "title": "The starter pack: four behaviour policies for Claude Code, one install, five minutes",
+      "scrollY": 2800,
+      "height": 4070,
+      "at": "2026-10-21T12:54:32.466Z"
+    },
+    {
+      "n": 10,
+      "cmd": "click",
+      "args": [
+        "491",
+        "27"
+      ],
+      "file": "10.png",
+      "note": "",
+      "url": "/policies/starter/",
+      "title": "The starter pack: four behaviour policies for Claude Code, one install, five minutes",
+      "scrollY": 2800,
+      "height": 4070,
+      "at": "2026-10-21T12:54:48.106Z"
+    },
+    {
+      "n": 11,
+      "cmd": "clicktext",
+      "args": [
+        "Your account: £50 to spend"
+      ],
+      "file": "11.png",
+      "note": "",
+      "url": "/account/",
+      "title": "Your account: £50 to start, what each page cost, and what you have left",
+      "scrollY": 0,
+      "height": 1893,
+      "at": "2026-10-21T12:54:54.958Z"
+    },
+    {
+      "n": 12,
+      "cmd": "click",
+      "args": [
+        "743",
+        "27"
+      ],
+      "file": "12.png",
+      "note": "",
+      "url": "/account/",
+      "title": "Your account: £50 to start, what each page cost, and what you have left",
+      "scrollY": 0,
+      "height": 1893,
+      "at": "2026-10-21T12:55:02.685Z"
+    },
+    {
+      "n": 13,
+      "cmd": "clicktext",
+      "args": [
+        "Customers, not beta users"
+      ],
+      "file": "13.png",
+      "note": "",
+      "url": "/programme/",
+      "title": "The programme: customers, not beta users; credit; a site of their own; hand-holding on purpose",
+      "scrollY": 0,
+      "height": 5161,
+      "at": "2026-10-21T12:55:08.884Z"
+    },
+    {
+      "n": 14,
+      "cmd": "scroll",
+      "args": [
+        "1500"
+      ],
+      "file": "14.png",
+      "note": "",
+      "url": "/programme/",
+      "title": "The programme: customers, not beta users; credit; a site of their own; hand-holding on purpose",
+      "scrollY": 1500,
+      "height": 5161,
+      "at": "2026-10-21T12:55:15.911Z"
+    }
+  ],
+  "refused": []
+}

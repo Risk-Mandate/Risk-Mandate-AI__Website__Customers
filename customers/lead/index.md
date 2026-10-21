@@ -2,7 +2,7 @@
 
 > The lead (Dinis Cruz, co-founder): starting; started 2026-10-20; first behaviour policy not yet; 2 of 7 steps done. No contact details on this page.
 
-*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/lead/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

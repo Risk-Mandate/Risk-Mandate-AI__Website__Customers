@@ -2,13 +2,11 @@
 
 > The page a customer reads first: you have £50 of credit; pick one worry; paste one line; add one hook; try it with a prompt that should be refused; tell us what happened. Then the whole journey, as seven steps, and where to write.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
 You are one of the first customers of the Agent Behaviour Policy. By the end of this page you will have a behaviour policy on an agent you run, and you will have watched it stop the thing it rules out.
-
-Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 A start-here page: what a customer does first, in order, with the links to do it · shipped v0.2.1 Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four · shipped v0.2.1 Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai
 
 1. **You have £50.00 to spend.**
 
@@ -28,11 +26,11 @@ Ask Claude Code to install it, with the prompt on the page, and read each change
 
 5. **Try it.**
 
-Each page has a prompt that should be refused, and what you should see with the behaviour policy and without it. Start a new session first, so Claude Code loads the hook.
+Each page has a prompt that should be refused, and what you should see with the behaviour policy and without it. Claude Code picks up a new hook on its own; `/hooks` lists the ones it is running. If the prompt is not refused, each policy's page says what to check.
 
 6. **Tell us what happened.**
 
-What it stopped, what it got in the way of, and what you would try next. A line each is plenty, to [agent@riskmandate.ai](mailto:agent@riskmandate.ai). A person reads it within a working day.
+What it stopped, what it got in the way of, and what you would try next. A line each is plenty, to [agent@riskmandate.ai](mailto:agent@riskmandate.ai). A person reads it within a working day. Or record a voice memo and let your Claude turn it into a review, or let Claude interview you: [tell us what you think](/feedback/index.md).
 
 ## Watch the whole thing first
 
@@ -45,8 +43,8 @@ What it stopped, what it got in the way of, and what you would try next. A line 
 5. + .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py
 6. Write these three changes? (y/n)
 7. y
-8. Installed. Start a new session so Claude Code loads the hook.
-9. new session
+8. Installed. Claude Code picks up the hook straight away; /hooks lists it.
+9. later that day
 10. The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.
 11. Read(.env)
 12. PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.
@@ -63,6 +61,8 @@ Your first policy is milestone S0 to S1 of seven steps every customer in the fir
 The follow-up asks three things, by email, as often as daily if that helps: what you did, what got in the way, and what is next. The answers go on your customer page in summary; anything private stays with the lead. [How the follow-up works](/follow-up/index.md).
 
 **If this page is hard to follow, say so.** "I did not understand step four" is the most useful thing you can send, and the next batch's start-here page is made from those sentences.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 A start-here page: what a customer does first, in order, with the links to do it · shipped v0.2.1 Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four · shipped v0.2.1 Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai
 
 ---
 

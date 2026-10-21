@@ -2,7 +2,7 @@
 
 > What is happening on this site, and what comes next. 8 panels. Drawn in your browser by the storyboard kit.
 
-*Source: <https://customers.riskmandate.ai/storyboards/the-first-batch/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/storyboards/the-first-batch/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

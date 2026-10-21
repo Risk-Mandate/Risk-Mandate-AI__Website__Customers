@@ -25,7 +25,7 @@
   <meta property="og:url" content="https://customers.riskmandate.ai/policies/delete-files/">
   <meta property="og:title" content="Nothing of yours is deleted without a yes: behaviour policy RM-R0007">
   <meta property="og:description" content="Do you want your agent to delete files without asking? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai&#x27;s RM-R0007.">
-  <meta name="rm-customers:version" content="0.2.1">
+  <meta name="rm-customers:version" content="0.2.2">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -43,6 +43,7 @@
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
             <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
             <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
           </div>
         </span>
         <span class="navgroup active">
@@ -73,6 +74,8 @@
             <a class="pagelink navchild" href="/learning/">What we want to discover</a>
             <a class="pagelink navchild" href="/next-batch/">The next batch</a>
             <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
         <span class="navgroup">
@@ -106,7 +109,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/policies/">Policies</a> <span class="sep">/</span> <span aria-current="page">Nothing of yours is deleted without a yes</span></div>
@@ -119,7 +122,7 @@
     <p class="you-get"><strong>What you get:</strong> Nothing you made is deleted without a yes, and nothing outside the project is deleted at all.</p>
     <ol class="steps install">
       <li><b>Tell the agent.</b><p>Paste this line into CLAUDE.md, at the top of your project (create it if there is none). It is the rule in the agent's own words; on its own it is an <em>expectation</em>, which the agent follows when it can.</p><div class="snippet"><pre id="line-delete-files"><code>Ask before deleting any file or folder you did not create in this session, and never run rm -rf or delete anything outside this project.</code></pre><button type="button" class="copy" data-copy="line-delete-files">Copy</button></div></li>
-      <li><b>Make Claude Code hold it.</b><p>The hook runs outside the model, before every matching tool call, and stops or asks before the thing the line rules out. The quickest way is to ask Claude Code to install it, and to read each change before you say yes:</p><div class="snippet"><pre id="install-delete-files"><code>Install the behaviour policy at https://customers.riskmandate.ai/policies/delete-files/ in this project: add its line to CLAUDE.md, save https://customers.riskmandate.ai/policies/hooks/delete_files.py as .claude/hooks/delete_files.py, and merge https://customers.riskmandate.ai/policies/delete-files/settings.json into .claude/settings.json. Show me each change before you make it, and wait for my yes.</code></pre><button type="button" class="copy" data-copy="install-delete-files">Copy</button></div><p>Or by hand: save <a href="/policies/hooks/delete_files.py"><code>delete_files.py</code></a> as <code>.claude/hooks/delete_files.py</code> and merge <a href="/policies/delete-files/settings.json"><code>settings.json</code></a> into <code>.claude/settings.json</code>. Then start a new session, or open <code>/hooks</code>, so Claude Code loads it.</p><div class="snippet"><pre id="settings-delete-files"><code>{
+      <li><b>Make Claude Code hold it.</b><p>The hook runs outside the model, before every matching tool call, and stops or asks before the thing the line rules out. The quickest way is to ask Claude Code to install it, and to read each change before you say yes:</p><div class="snippet"><pre id="install-delete-files"><code>Install the behaviour policy at https://customers.riskmandate.ai/policies/delete-files/ in this project: add its line to CLAUDE.md, save https://customers.riskmandate.ai/policies/hooks/delete_files.py as .claude/hooks/delete_files.py, and merge https://customers.riskmandate.ai/policies/delete-files/settings.json into .claude/settings.json. Show me each change before you make it, and wait for my yes.</code></pre><button type="button" class="copy" data-copy="install-delete-files">Copy</button></div><p>Or by hand: save <a href="/policies/hooks/delete_files.py"><code>delete_files.py</code></a> as <code>.claude/hooks/delete_files.py</code> and merge <a href="/policies/delete-files/settings.json"><code>settings.json</code></a> into <code>.claude/settings.json</code>. Claude Code picks up the change on its own; <code>/hooks</code> lists the hooks it is running.</p><div class="snippet"><pre id="settings-delete-files"><code>{
   &quot;permissions&quot;: {
     &quot;ask&quot;: [
       &quot;Bash(rm *)&quot;
@@ -140,7 +143,7 @@
     ]
   }
 }
-</code></pre><button type="button" class="copy" data-copy="settings-delete-files">Copy</button></div><details class="hook-source"><summary>Read the hook before you install it (82 lines of Python, standard library only)</summary><pre><code>#!/usr/bin/env python3
+</code></pre><button type="button" class="copy" data-copy="settings-delete-files">Copy</button></div><p><strong>What the hook does, in plain words:</strong></p><table class="plain"><tbody><tr><td>Looks at</td><td>shell commands only</td></tr><tr><td>Stops</td><td>rm -rf, and any delete outside the project folder</td></tr><tr><td>Asks you first</td><td>any other delete: rm, rmdir, unlink, shred, git clean, git rm, find -delete</td></tr><tr><td>Lets through</td><td>every other command</td></tr><tr><td>Does not see</td><td>a delete inside a script the agent runs; file tools that empty a file</td></tr></tbody></table><p><strong>To turn it off:</strong> remove its entry under <code>hooks.PreToolUse</code> in <code>.claude/settings.json</code>; Claude Code stops running it straight away.</p><details class="hook-source"><summary>Read the hook before you install it (82 lines of Python, standard library only; the box scrolls)</summary><pre><code>#!/usr/bin/env python3
 # ── delete_files.py : the hook half of RM-R0007, &quot;delete files&quot; ──────────────────────
 #
 # A Claude Code PreToolUse hook on Bash. rm -rf, and any delete outside the project
@@ -223,7 +226,7 @@ def main():
 if __name__ == &#x27;__main__&#x27;:
     sys.exit(main())
 </code></pre></details></li>
-      <li><b>Try it.</b><p>Paste this, as you would, and watch what happens.</p><div class="snippet"><pre id="try-delete-files"><code>The project feels cluttered. Clean it up: delete the build folders and anything that looks temporary.</code></pre><button type="button" class="copy" data-copy="try-delete-files">Copy</button></div><p><strong>With the behaviour policy:</strong> rm -rf is denied outright; any other delete stops at a prompt that names the paths, so you see what would go before it goes.</p><p><strong>Without it:</strong> Claude clears what it thinks is temporary, and one of those files was yours and was not in version control.</p></li>
+      <li><b>Try it.</b><p>Paste this, as you would, and watch what happens.</p><div class="snippet"><pre id="try-delete-files"><code>The project feels cluttered. Clean it up: delete the build folders and anything that looks temporary.</code></pre><button type="button" class="copy" data-copy="try-delete-files">Copy</button></div><p><strong>With the behaviour policy:</strong> rm -rf is denied outright; any other delete stops at a prompt that names the paths, so you see what would go before it goes.</p><p><strong>Without it:</strong> Claude clears what it thinks is temporary, and one of those files was yours and was not in version control.</p><div class="note did-it-work"><p><strong>Did it work?</strong> If Claude Code stopped it, or asked you, the hook is running. If the prompt went through as if nothing were installed, the hook did not run, and Claude Code does not wait for a hook that cannot run: the action goes ahead (on Windows without Git Bash it may be blocked instead). The hook fails open, one more reason it is a setting and not a boundary. Check three things: that <code>/hooks</code> lists it; that <code>python3 --version</code> works where Claude Code runs (on Windows, Claude Code runs hooks in Git Bash, or in PowerShell if Git Bash is not installed, and <code>python3</code> may not exist there: install Python, or put <code>py</code> in place of <code>python3</code> in the settings); and that <code>.claude/hooks/delete_files.py</code> is there. Still stuck? <a href="mailto:agent@riskmandate.ai?subject=RM-R0007%20did%20not%20work">Tell us</a>.</p><p>The tests for this hook feed it the JSON Claude Code would send, every refusal with an allowed twin beside it; they do not drive a live Claude Code session. Your try is the live test.</p></div></li>
     </ol>
     <h2>What this is, and what it is not</h2>
     <table><thead><tr><th>Half</th><th>Barrier</th><th>What holds it</th></tr></thead><tbody><tr><td>The line</td><td>expectation</td><td>the agent reads it and follows it when it can</td></tr><tr><td>The hook</td><td>setting</td><td>Claude Code runs it before the tool call, outside the model; it lives in a file the agent could edit, which <a href="/policies/change-its-own-permissions/">RM-R0015</a> guards</td></tr></tbody></table>
@@ -236,14 +239,14 @@ if __name__ == &#x27;__main__&#x27;:
   }
 }</code></pre><p class="src">Source: <a href="https://code.claude.com/docs/en/permissions">https://code.claude.com/docs/en/permissions</a>, read 2026-10-08, as riskmandate.ai quotes it.</p></li><li><span class="status status-shipped">boundary</span> <strong>Claude Code&#x27;s Bash sandbox, which limits where shell commands can write.</strong> <p>Turn the sandbox on (/sandbox). Shell commands, and the processes they start, can then write only inside the working directory and a few named places.</p><p class="src">Source: <a href="https://code.claude.com/docs/en/sandboxing">https://code.claude.com/docs/en/sandboxing</a>, read 2026-10-08, as riskmandate.ai quotes it.</p></li></ul>
     <h2>Tell us what happened</h2>
-    <p>Did it stop what it should, and nothing else? What did it get in the way of? <a href="mailto:agent@riskmandate.ai?subject=RM-R0007%20tried">Write to agent@riskmandate.ai</a>; it goes on your follow-up, and a person reads it within a working day.</p>
+    <p>Did it stop what it should, and nothing else? What did it get in the way of? <a href="mailto:agent@riskmandate.ai?subject=RM-R0007%20tried">Write to agent@riskmandate.ai</a>; it goes on your follow-up, and a person reads it within a working day. Or record a voice memo and let your Claude turn it into a review: <a href="/feedback/">tell us what you think</a>.</p>
     <p class="src">The rule is <a href="https://riskmandate.ai/rules/delete-files.html">RM-R0007 on riskmandate.ai</a>, version 1.0.0, CC BY 4.0; copied here on 2026-10-21. The hook and this page are this site's, CC BY 4.0 and Apache-2.0.</p>
   </main>
   <!-- rm-customers:footer:start -->
   <div class="wrap meter-card"><sg-meter view="page" kind="policy" title="Nothing of yours is deleted without a yes: behaviour policy RM-R0007"></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.1" title="released 2026-10-21; what shipped in v0.2.1">v0.2.1</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/policies/delete-files/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/policies/delete-files/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

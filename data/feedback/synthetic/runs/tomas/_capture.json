@@ -1,0 +1,165 @@
+{
+  "site": "a local copy of customers.riskmandate.ai v0.2.1, checked against the live site by sha256",
+  "viewport": "1366x768",
+  "mobile": false,
+  "steps": [
+    {
+      "n": 1,
+      "cmd": "start",
+      "args": [
+        "/"
+      ],
+      "file": "01.png",
+      "note": "",
+      "url": "/",
+      "title": "Put a behaviour policy on your agent in five minutes: £50 of credit to start",
+      "scrollY": 0,
+      "height": 5154,
+      "at": "2026-10-21T12:53:23.877Z"
+    },
+    {
+      "n": 2,
+      "cmd": "click",
+      "args": [
+        "305",
+        "490"
+      ],
+      "file": "02.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 0,
+      "height": 4081,
+      "at": "2026-10-21T12:53:29.203Z"
+    },
+    {
+      "n": 3,
+      "cmd": "scroll",
+      "args": [
+        "600"
+      ],
+      "file": "03.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 600,
+      "height": 4081,
+      "at": "2026-10-21T12:53:33.972Z"
+    },
+    {
+      "n": 4,
+      "cmd": "scroll",
+      "args": [
+        "700"
+      ],
+      "file": "04.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 1300,
+      "height": 4081,
+      "at": "2026-10-21T12:53:38.941Z"
+    },
+    {
+      "n": 5,
+      "cmd": "scroll",
+      "args": [
+        "650"
+      ],
+      "file": "05.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 1950,
+      "height": 4081,
+      "at": "2026-10-21T12:53:43.357Z"
+    },
+    {
+      "n": 6,
+      "cmd": "scroll",
+      "args": [
+        "650"
+      ],
+      "file": "06.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 2600,
+      "height": 4081,
+      "at": "2026-10-21T12:53:48.341Z"
+    },
+    {
+      "n": 7,
+      "cmd": "scroll",
+      "args": [
+        "650"
+      ],
+      "file": "07.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 3250,
+      "height": 4081,
+      "at": "2026-10-21T12:53:52.583Z"
+    },
+    {
+      "n": 8,
+      "cmd": "clicktext",
+      "args": [
+        "Read the hook before you install it"
+      ],
+      "file": "08.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 1099,
+      "height": 4523,
+      "at": "2026-10-21T12:53:57.968Z"
+    },
+    {
+      "n": 9,
+      "cmd": "click",
+      "args": [
+        "942",
+        "28"
+      ],
+      "file": "09.png",
+      "note": "",
+      "url": "/docs/",
+      "title": "Documents: the brief, the memo, the corrections, reality, operations and the team",
+      "scrollY": 0,
+      "height": 1561,
+      "at": "2026-10-21T12:54:03.402Z"
+    },
+    {
+      "n": 10,
+      "cmd": "click",
+      "args": [
+        "595",
+        "28"
+      ],
+      "file": "10.png",
+      "note": "",
+      "url": "/start-here/",
+      "title": "Start here: your first five minutes, from £50 of credit to a behaviour policy you have seen work",
+      "scrollY": 0,
+      "height": 2850,
+      "at": "2026-10-21T12:54:08.082Z"
+    },
+    {
+      "n": 11,
+      "cmd": "scroll",
+      "args": [
+        "800"
+      ],
+      "file": "11.png",
+      "note": "",
+      "url": "/start-here/",
+      "title": "Start here: your first five minutes, from £50 of credit to a behaviour policy you have seen work",
+      "scrollY": 800,
+      "height": 2850,
+      "at": "2026-10-21T12:54:12.382Z"
+    }
+  ],
+  "refused": []
+}

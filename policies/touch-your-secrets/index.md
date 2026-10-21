@@ -2,7 +2,7 @@
 
 > Do you want your agent to read the keys and tokens on your machine? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0002.
 
-*Source: <https://customers.riskmandate.ai/policies/touch-your-secrets/> · site v0.2.1 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/touch-your-secrets/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -33,7 +33,7 @@ Install the behaviour policy at https://customers.riskmandate.ai/policies/touch-
 
 Copy
 
-Or by hand: save [`touch_your_secrets.py`](/policies/hooks/touch_your_secrets.py) as `.claude/hooks/touch_your_secrets.py` and merge [`settings.json`](/policies/touch-your-secrets/settings.json) into `.claude/settings.json`. Then start a new session, or open `/hooks`, so Claude Code loads it.
+Or by hand: save [`touch_your_secrets.py`](/policies/hooks/touch_your_secrets.py) as `.claude/hooks/touch_your_secrets.py` and merge [`settings.json`](/policies/touch-your-secrets/settings.json) into `.claude/settings.json`. Claude Code picks up the change on its own; `/hooks` lists the hooks it is running.
 
 ```
 {
@@ -64,7 +64,19 @@ Or by hand: save [`touch_your_secrets.py`](/policies/hooks/touch_your_secrets.py
 ```
 
 Copy
-Read the hook before you install it (67 lines of Python, standard library only)
+
+**What the hook does, in plain words:**
+
+| Looks at | every read, edit, search and shell command |
+|---|---|
+| Stops | any that names a file that usually holds a credential: .env and .env.local; key files (.pem, .key, .p12, .pfx); SSH keys and ~/.ssh; ~/.aws, gcloud, Azure, ~/.kube/config and Docker credentials; .netrc, .npmrc, .pypirc, .git-credentials, .pgpass; a secrets/ folder; credentials.json. And printenv or env, which print every variable. |
+| Asks you first | nothing; it stops or stays silent |
+| Lets through | .env.example, .env.sample and .env.template, and everything else: it stays silent, and Claude Code asks you as it normally would |
+| Does not see | a script that opens a secret without naming the file in the command |
+
+**To turn it off:** remove its entry under `hooks.PreToolUse` in `.claude/settings.json`; Claude Code stops running it straight away.
+
+Read the hook before you install it (67 lines of Python, standard library only; the box scrolls)
 
 ```
 #!/usr/bin/env python3
@@ -148,6 +160,10 @@ Copy
 
 **Without it:** Claude reads .env, and the token is now in the conversation's transcript, where it stays.
 
+**Did it work?** If Claude Code stopped it, or asked you, the hook is running. If the prompt went through as if nothing were installed, the hook did not run, and Claude Code does not wait for a hook that cannot run: the action goes ahead (on Windows without Git Bash it may be blocked instead). The hook fails open, one more reason it is a setting and not a boundary. Check three things: that `/hooks` lists it; that `python3 --version` works where Claude Code runs (on Windows, Claude Code runs hooks in Git Bash, or in PowerShell if Git Bash is not installed, and `python3` may not exist there: install Python, or put `py` in place of `python3` in the settings); and that `.claude/hooks/touch_your_secrets.py` is there. Still stuck? [Tell us](mailto:agent@riskmandate.ai?subject=RM-R0002%20did%20not%20work).
+
+The tests for this hook feed it the JSON Claude Code would send, every refusal with an allowed twin beside it; they do not drive a live Claude Code session. Your try is the live test.
+
 **claude: ~/shop-api**
   1. Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first.
   2. It has a line for CLAUDE.md and a hook. Here are the three changes:
@@ -156,8 +172,8 @@ Copy
   5. + .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py
   6. Write these three changes? (y/n)
   7. y
-  8. Installed. Start a new session so Claude Code loads the hook.
-  9. new session
+  8. Installed. Claude Code picks up the hook straight away; /hooks lists it.
+  9. later that day
   10. The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.
   11. Read(.env)
   12. PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.
@@ -198,7 +214,7 @@ Source: [https://code.claude.com/docs/en/sandboxing](https://code.claude.com/doc
 
 ## Tell us what happened
 
-Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0002%20tried); it goes on your follow-up, and a person reads it within a working day.
+Did it stop what it should, and nothing else? What did it get in the way of? [Write to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=RM-R0002%20tried); it goes on your follow-up, and a person reads it within a working day. Or record a voice memo and let your Claude turn it into a review: [tell us what you think](/feedback/index.md).
 
 The rule is [RM-R0002 on riskmandate.ai](https://riskmandate.ai/rules/touch-your-secrets.html), version 1.0.1, CC BY 4.0; copied here on 2026-10-21. The hook and this page are this site's, CC BY 4.0 and Apache-2.0.
 

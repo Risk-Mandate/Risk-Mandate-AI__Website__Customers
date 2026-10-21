@@ -113,7 +113,7 @@ class Gen__Policies:
             f'3. Merge {BASE}/policies/starter/settings.json into the project\'s `.claude/settings.json`: add its `permissions` entries and its `hooks.PreToolUse` entries to any already there, keep everything else, and show the person the result before saving it. Create the file if there is none.',
             f'4. Add the block in {BASE}/policies/starter/CLAUDE.md to the end of the project\'s CLAUDE.md, creating it if there is none.',
             f'5. Last, because from then on any change to your own settings asks the person: save {BASE}/policies/hooks/{last["hook"]["file"]} to `.claude/hooks/{last["hook"]["file"]}`.',
-            '6. Tell the person to start a new session, or open /hooks, so Claude Code loads the hooks, and give them the four prompts on ' + f'{BASE}/policies/starter/' + ' to try.',
+            '6. Tell the person that Claude Code picks up the hooks on its own and that /hooks lists them, and give them the four prompts on ' + f'{BASE}/policies/starter/' + ' to try.',
             '',
             'The hooks need Python 3 and nothing else. Each is under eighty lines; the person may want to read them, and should.',
             ''])
@@ -140,6 +140,21 @@ class Gen__Policies:
                          f'<strong>{esc(s["what"])}.</strong> {how}<p class="src">Source: <a href="{esc(s["source"])}">{esc(s["source"])}</a>, read {esc(s["read"])}, as riskmandate.ai quotes it.</p></li>')
         return '<ul class="plist stronger">' + ''.join(items) + '</ul>' if items else '<p>riskmandate.ai lists no stronger control for this rule yet.</p>'
 
+    def plain_html(self, p):                                                      # the hook in plain words, written from its own rules (P12 of the feedback register)
+        w    = p['plain']
+        rows = ''.join(f'<tr><td>{label}</td><td>{esc(w[key])}</td></tr>' for key, label in (('looks_at', 'Looks at'), ('stops', 'Stops'), ('asks', 'Asks you first'), ('lets_through', 'Lets through'), ('misses', 'Does not see')))
+        return (f'<p><strong>What the hook does, in plain words:</strong></p><table class="plain"><tbody>{rows}</tbody></table>'
+                f'<p><strong>To turn it off:</strong> remove its entry under <code>hooks.PreToolUse</code> in <code>.claude/settings.json</code>; Claude Code stops running it straight away.</p>')
+
+    def did_it_work_html(self, p):                                                # what a customer does when the try does not go as the page says (P11)
+        return (f'<div class="note did-it-work"><p><strong>Did it work?</strong> If Claude Code stopped it, or asked you, the hook is running. '
+                f'If the prompt went through as if nothing were installed, the hook did not run, and Claude Code does not wait for a hook that cannot run: '
+                f'the action goes ahead (on Windows without Git Bash it may be blocked instead). The hook fails open, one more reason it is a setting and not a boundary. Check three things: '
+                f'that <code>/hooks</code> lists it; that <code>python3 --version</code> works where Claude Code runs (on Windows, Claude Code runs hooks in Git Bash, or in PowerShell if Git Bash is not installed, '
+                f'and <code>python3</code> may not exist there: install Python, or put <code>py</code> in place of <code>python3</code> in the settings); and that <code>.claude/hooks/{p["hook"]["file"]}</code> is there. '
+                f'Still stuck? <a href="mailto:{AGENT_ADDRESS}?subject={p["rule"]}%20did%20not%20work">Tell us</a>.</p>'
+                f'<p>The tests for this hook feed it the JSON Claude Code would send, every refusal with an allowed twin beside it; they do not drive a live Claude Code session. Your try is the live test.</p></div>')
+
     def policy_page(self, p):
         rule  = self.rules[p['slug']]
         price = self.money(PRICE['policy'])
@@ -150,16 +165,18 @@ class Gen__Policies:
             hook_src = (HOOKS / p['hook']['file']).read_text(encoding='utf-8')
             steps.append(f'      <li><b>Make Claude Code hold it.</b><p>The hook runs outside the model, before every matching tool call, and stops or asks before the thing the line rules out. The quickest way is to ask Claude Code to install it, and to read each change before you say yes:</p>'
                          f'{self.snippet(f"install-{slug}", self.install_prompt(p))}'
-                         f'<p>Or by hand: save <a href="/policies/hooks/{p["hook"]["file"]}"><code>{p["hook"]["file"]}</code></a> as <code>.claude/hooks/{p["hook"]["file"]}</code> and merge <a href="/policies/{slug}/settings.json"><code>settings.json</code></a> into <code>.claude/settings.json</code>. Then start a new session, or open <code>/hooks</code>, so Claude Code loads it.</p>'
+                         f'<p>Or by hand: save <a href="/policies/hooks/{p["hook"]["file"]}"><code>{p["hook"]["file"]}</code></a> as <code>.claude/hooks/{p["hook"]["file"]}</code> and merge <a href="/policies/{slug}/settings.json"><code>settings.json</code></a> into <code>.claude/settings.json</code>. Claude Code picks up the change on its own; <code>/hooks</code> lists the hooks it is running.</p>'
                          f'{self.snippet(f"settings-{slug}", self.settings([p]))}'
-                         f'<details class="hook-source"><summary>Read the hook before you install it ({len(hook_src.splitlines())} lines of Python, standard library only)</summary><pre><code>{esc(hook_src)}</code></pre></details></li>')
+                         f'{self.plain_html(p)}'
+                         f'<details class="hook-source"><summary>Read the hook before you install it ({len(hook_src.splitlines())} lines of Python, standard library only; the box scrolls)</summary><pre><code>{esc(hook_src)}</code></pre></details></li>')
         else:
             steps.append(f'      <li><b>There is no hook here, and that matters.</b><p>{" and ".join(esc(f) for f in p["for"])} take the line and nothing else, so this behaviour policy is an expectation and the page says so. The stronger controls riskmandate.ai lists are below; in Claude Code, the same line goes in CLAUDE.md.</p></li>')
         steps.append(f'      <li><b>Try it.</b><p>Paste this, as you would, and watch what happens.</p>{self.snippet(f"try-{slug}", p["try"]["prompt"])}'
                      f'<p><strong>With the behaviour policy:</strong> {esc(p["try"]["with"])}</p><p><strong>Without it:</strong> {esc(p["try"]["without"])}</p>'
+                     + (self.did_it_work_html(p) if p['hook'] else '')
                      + (f'\n    <!-- rm-customers:demo:start id="{p["demo"]}" -->\n{self.demos.demo(p["demo"])}\n    <!-- rm-customers:demo:end -->\n' if p.get('demo') else '')
                      + '</li>')
-        halves = ['<tr><td>The line</td><td>expectation</td><td>the agent reads it and follows it when it can</td></tr>']
+        halves = [f'<tr><td>The line</td><td>expectation</td><td>the agent reads it and follows it when it can</td></tr>']
         if p['hook']:
             halves.append('<tr><td>The hook</td><td>setting</td><td>Claude Code runs it before the tool call, outside the model; it lives in a file the agent could edit, which <a href="/policies/change-its-own-permissions/">RM-R0015</a> guards</td></tr>')
         main = '\n'.join([
@@ -169,11 +186,12 @@ class Gen__Policies:
             f'    <p class="you-get"><strong>What you get:</strong> {esc(rule["you_get"])}</p>',
             '    <ol class="steps install">', *steps, '    </ol>',
             '    <h2>What this is, and what it is not</h2>',
-            '    <table><thead><tr><th>Half</th><th>Barrier</th><th>What holds it</th></tr></thead><tbody>' + ''.join(halves) + '</tbody></table>',
-            '    <p>Neither half is a <em>boundary</em>, the only barrier that holds when the agent does not cooperate. The stronger controls for this rule, from riskmandate.ai:</p>',
+            f'    <table><thead><tr><th>{"Half" if p["hook"] else "Part"}</th><th>Barrier</th><th>What holds it</th></tr></thead><tbody>' + ''.join(halves) + '</tbody></table>',
+            ('    <p>Neither half is a <em>boundary</em>, the only barrier that holds when the agent does not cooperate. The stronger controls for this rule, from riskmandate.ai:</p>' if p['hook'] else
+             '    <p>The line is an <em>expectation</em>, not a <em>boundary</em>, the only barrier that holds when the agent does not cooperate. The stronger controls for this rule, from riskmandate.ai:</p>'),
             f'    {self.stronger_html(rule)}',
             '    <h2>Tell us what happened</h2>',
-            f'    <p>Did it stop what it should, and nothing else? What did it get in the way of? <a href="mailto:{AGENT_ADDRESS}?subject={rule["id"]}%20tried">Write to {AGENT_ADDRESS}</a>; it goes on your follow-up, and a person reads it within a working day.</p>',
+            f'    <p>Did it stop what it should, and nothing else? What did it get in the way of? <a href="mailto:{AGENT_ADDRESS}?subject={rule["id"]}%20tried">Write to {AGENT_ADDRESS}</a>; it goes on your follow-up, and a person reads it within a working day. Or record a voice memo and let your Claude turn it into a review: <a href="/feedback/">tell us what you think</a>.</p>',
             f'    <p class="src">The rule is <a href="https://riskmandate.ai/rules/{slug}.html">{rule["id"]} on riskmandate.ai</a>, version {esc(rule["version"])}, CC BY 4.0; copied here on {self.source["copied"]}. The hook and this page are this site\'s, CC BY 4.0 and Apache-2.0.</p>'])
         title = f'{p["title"]}: behaviour policy {rule["id"]}'
         desc  = f'{rule["question"]} The line for your agent, ' + ('the Claude Code hook that holds it, ' if p['hook'] else '') + f'and a prompt to try it with, in {p["minutes"]} minute{"s" if p["minutes"] != 1 else ""}. From riskmandate.ai\'s {rule["id"]}.'
@@ -199,7 +217,7 @@ class Gen__Policies:
             '      <li>Save the four hooks into <code>.claude/hooks/</code>: ' + ', '.join(f'<a href="/policies/hooks/{p["hook"]["file"]}"><code>{p["hook"]["file"]}</code></a>' for p in starters) + '.</li>',
             '      <li>Merge <a href="/policies/starter/settings.json"><code>settings.json</code></a> into <code>.claude/settings.json</code>.</li>',
             '      <li>Add <a href="/policies/starter/CLAUDE.md">the CLAUDE.md block</a> to your project\'s CLAUDE.md.</li>',
-            '      <li>Start a new session, or open <code>/hooks</code>, so Claude Code loads them.</li>',
+            '      <li>Claude Code picks them up on its own; <code>/hooks</code> lists them.</li>',
             '    </ol>',
             f'    {self.snippet("pack-settings", self.settings(starters))}',
             f'    {self.snippet("pack-claude-md", self.claude_md(starters))}',

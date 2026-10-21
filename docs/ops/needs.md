@@ -1,6 +1,6 @@
 # What only a human can do
 
-*customers.riskmandate.ai · operations · maintained by the build session · last updated at v0.1.1 (2026-10-20) · CC BY 4.0*
+*customers.riskmandate.ai · operations · maintained by the build session · last updated at v0.2.2 (2026-10-21) · CC BY 4.0*
 
 Everything on this list blocks a step of the brief or of the repository rules and cannot be done from inside the repository. Each item says who, what, exactly, and which step waits on it. Items are moved to *Done* when done, dated, and anything that turned out differently from the brief is recorded in [BRIEF-CORRECTIONS.md](../brief/BRIEF-CORRECTIONS.md).
 
@@ -26,6 +26,11 @@ Everything on this list blocks a step of the brief or of the repository rules an
 8. **The private list (the lead).** One file, held by the lead, never committed and never in a vault with a public read key: for each customer, the handle used on the site, the real name and how to reach them, the agent they named, the starting credit, and the private notes from the follow-ups. The public record in `data/customers.json` is the summary and carries none of it.
 9. **The consultants and the colleagues (the lead).** The brief's other two groups are not listed yet. Each is added as a record when they start, by a handle they agreed to, by a release.
 10. **The ten agents (the lead, with the wired-in agent).** A list of the agents the lead runs, one line each, with the published shape each is nearest to; two have behaviour policies today on riskmandate.ai/team/. This is step S1 of the record *the-agents*.
+
+## Waiting on the feedback register
+
+12a. **Three answers (the lead).** On [the reviews](../../feedback/reviews/index.md#questions): Q1, what "including the history" means in R001; Q2, whether the first try should show the line failing; Q3, what joining the first batch commits a company to. The guided path (P1, P2) is held for the further memos R001 announced, and for Q1.
+12b. **Fail closed or open (the lead).** P18: whether the guard hook, RM-R0015, ships with `"onFailure": "block"`, which stops every action it watches when the hook cannot run, and needs Claude Code v2.1.295 or later.
 
 ## The estate's asks
 

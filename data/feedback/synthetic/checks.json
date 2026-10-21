@@ -1,0 +1,280 @@
+{
+  "_comment": "What we checked after the runs, finding by finding: against the browser's own record (_capture.json), the screenshots, the site's files and, where the finding is about Claude Code, its documentation. A finding is kept whatever the verdict, so the next study can be compared with this one. Verdicts: confirmed; partly (part of it holds, the note says which); artefact (caused by our helper or the method, not the site); not-confirmed (the site does what the finding says it does not).",
+  "study": "S1",
+  "verdicts": {
+    "confirmed": "it holds",
+    "partly": "part of it holds; the note says which",
+    "artefact": "caused by our helper or the method, not the site",
+    "not-confirmed": "the site already does what the finding says it does not"
+  },
+  "helper_changes": [
+    "clicktext now clicks the first visible match; in S1 it could pick a hidden one (Marcus, step 14)"
+  ],
+  "checks": [
+    {
+      "run": "sam",
+      "finding": 0,
+      "verdict": "partly",
+      "note": "The source is all there, in a box that scrolls: 418 of its 1,246 pixels show, and nothing says it scrolls. What he needed, which files it stops, is not in plain words anywhere on the page.",
+      "proposals": [
+        "P12",
+        "D3"
+      ]
+    },
+    {
+      "run": "sam",
+      "finding": 1,
+      "verdict": "confirmed",
+      "note": "The matcher names every file tool and Bash, and nothing beside it says the hook answers only when a credential file is named.",
+      "proposals": [
+        "P12"
+      ]
+    },
+    {
+      "run": "sam",
+      "finding": 2,
+      "verdict": "confirmed",
+      "note": "No page says how to remove a hook.",
+      "proposals": [
+        "P12"
+      ]
+    },
+    {
+      "run": "sam",
+      "finding": 3,
+      "verdict": "confirmed",
+      "note": "Five of five asked what the £50 was.",
+      "proposals": [
+        "P9"
+      ]
+    },
+    {
+      "run": "sam",
+      "finding": 4,
+      "verdict": "partly",
+      "note": "A still screenshot cannot watch an animation: the demo is typing, not stuck. What holds: measured in the same browser, the refusal appears about eleven seconds after the demo comes into view.",
+      "proposals": [
+        "P17"
+      ]
+    },
+    {
+      "run": "sam",
+      "finding": 5,
+      "verdict": "confirmed",
+      "note": "The Docs menu is the brief, the memo and how the site is built.",
+      "proposals": [
+        "P16"
+      ]
+    },
+    {
+      "run": "nadia",
+      "finding": 0,
+      "verdict": "confirmed",
+      "note": "The first paragraph names a hook and Claude Code; ChatGPT first appears half a page down.",
+      "proposals": [
+        "P1",
+        "P7"
+      ]
+    },
+    {
+      "run": "nadia",
+      "finding": 1,
+      "verdict": "confirmed",
+      "note": "On /policies/ the Claude Code pack and section come first; the ChatGPT section is about 1,500 pixels down on a phone.",
+      "proposals": [
+        "P7"
+      ]
+    },
+    {
+      "run": "nadia",
+      "finding": 2,
+      "verdict": "confirmed",
+      "note": "As for Sam.",
+      "proposals": [
+        "P9"
+      ]
+    },
+    {
+      "run": "nadia",
+      "finding": 3,
+      "verdict": "confirmed",
+      "note": "The only stronger control listed for send-as-you is an organisation administrator's setting in Claude, from riskmandate.ai's rule. We do not yet know what a ChatGPT user can set for themselves.",
+      "proposals": [
+        "P7"
+      ]
+    },
+    {
+      "run": "nadia",
+      "finding": 4,
+      "verdict": "confirmed",
+      "note": "Our generator wrote 'Neither half is a boundary' on pages with only one half.",
+      "proposals": [
+        "P13"
+      ]
+    },
+    {
+      "run": "marcus",
+      "finding": 0,
+      "verdict": "confirmed",
+      "note": "The home page says the hook stops the read; how it fails is two clicks away.",
+      "proposals": [
+        "P4"
+      ]
+    },
+    {
+      "run": "marcus",
+      "finding": 1,
+      "verdict": "partly",
+      "note": "RM-R0015's page has the same limits table as the others, further down; he reached the page on his last action and saw only its top. What holds: the limit is not at the top, where a reader arrives from the self-edit link.",
+      "proposals": [
+        "P4"
+      ]
+    },
+    {
+      "run": "marcus",
+      "finding": 2,
+      "verdict": "confirmed",
+      "note": "No page said what happens when a hook cannot run. Claude Code's documentation: any failure other than exit code 2, a timeout included, lets the action go ahead. And the tests feed the hook the JSON Claude Code would send; they do not drive a live session.",
+      "proposals": [
+        "P11",
+        "P18"
+      ]
+    },
+    {
+      "run": "marcus",
+      "finding": 3,
+      "verdict": "confirmed",
+      "note": "As for Sam.",
+      "proposals": [
+        "P9"
+      ]
+    },
+    {
+      "run": "marcus",
+      "finding": 4,
+      "verdict": "confirmed",
+      "note": "Managed settings are named only in a hook's source comment.",
+      "proposals": [
+        "P2",
+        "P14"
+      ]
+    },
+    {
+      "run": "marcus",
+      "finding": 5,
+      "verdict": "artefact",
+      "note": "The helper's clicktext matched hidden text first and timed out; the link works, as his next action showed. The helper now clicks the first visible match.",
+      "proposals": []
+    },
+    {
+      "run": "joan",
+      "finding": 0,
+      "verdict": "confirmed",
+      "note": "Nothing says that committing .claude/settings.json gives everybody who pulls the same hooks, which Claude Code's documentation says it does.",
+      "proposals": [
+        "P14"
+      ]
+    },
+    {
+      "run": "joan",
+      "finding": 1,
+      "verdict": "confirmed",
+      "note": "No page says what joining commits a company to.",
+      "proposals": [
+        "P15"
+      ]
+    },
+    {
+      "run": "joan",
+      "finding": 2,
+      "verdict": "confirmed",
+      "note": "RM-R0015 asks the person at the keyboard. For a company, the answer is managed settings, which no page names.",
+      "proposals": [
+        "P14"
+      ]
+    },
+    {
+      "run": "joan",
+      "finding": 3,
+      "verdict": "confirmed",
+      "note": "Confirmed that nothing explains it; we are keeping the prices.",
+      "proposals": [
+        "P9",
+        "D5"
+      ]
+    },
+    {
+      "run": "joan",
+      "finding": 4,
+      "verdict": "confirmed",
+      "note": "The first batch page is the lead's tracking. She went there looking for terms, which are nowhere.",
+      "proposals": [
+        "P15"
+      ]
+    },
+    {
+      "run": "joan",
+      "finding": 5,
+      "verdict": "confirmed",
+      "note": "As for Sam.",
+      "proposals": [
+        "P9"
+      ]
+    },
+    {
+      "run": "tomas",
+      "finding": 0,
+      "verdict": "confirmed",
+      "note": "The settings run python3 and no page says so. On Windows, Claude Code runs hooks in Git Bash, or PowerShell if Git Bash is not installed; a hook that cannot start lets the action through.",
+      "proposals": [
+        "P11"
+      ]
+    },
+    {
+      "run": "tomas",
+      "finding": 1,
+      "verdict": "confirmed",
+      "note": "Worse than the finding: the instruction is out of date. Claude Code applies changes to hooks in the running session.",
+      "proposals": [
+        "P10"
+      ]
+    },
+    {
+      "run": "tomas",
+      "finding": 2,
+      "verdict": "confirmed",
+      "note": "Try it gave only the two outcomes.",
+      "proposals": [
+        "P11",
+        "D4"
+      ]
+    },
+    {
+      "run": "tomas",
+      "finding": 3,
+      "verdict": "confirmed",
+      "note": "As for Sam.",
+      "proposals": [
+        "P9"
+      ]
+    },
+    {
+      "run": "tomas",
+      "finding": 4,
+      "verdict": "confirmed",
+      "note": "The stronger controls read as a second required step; nothing says they are optional.",
+      "proposals": [
+        "P4"
+      ]
+    },
+    {
+      "run": "tomas",
+      "finding": 5,
+      "verdict": "partly",
+      "note": "The status line at the top of start here holds. The dropdown over step 4 was our helper: the mouse stayed where it clicked the menu, and the menu opens on hover.",
+      "proposals": [
+        "P16"
+      ]
+    }
+  ]
+}

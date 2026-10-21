@@ -1,0 +1,219 @@
+{
+  "site": "a local copy of customers.riskmandate.ai v0.2.1, checked against the live site by sha256",
+  "viewport": "1440x900",
+  "mobile": false,
+  "steps": [
+    {
+      "n": 1,
+      "cmd": "start",
+      "args": [
+        "/"
+      ],
+      "file": "01.png",
+      "note": "",
+      "url": "/",
+      "title": "Put a behaviour policy on your agent in five minutes: £50 of credit to start",
+      "scrollY": 0,
+      "height": 5154,
+      "at": "2026-10-21T12:53:20.161Z"
+    },
+    {
+      "n": 2,
+      "cmd": "clicktext",
+      "args": [
+        "What is a behaviour policy?"
+      ],
+      "file": "02.png",
+      "note": "",
+      "url": "/what-is-an-abp/#scene-1",
+      "title": "What an Agent Behaviour Policy is: the grant, the mandate, the delta and the barrier",
+      "scrollY": 0,
+      "height": 2976,
+      "at": "2026-10-21T12:53:26.070Z"
+    },
+    {
+      "n": 3,
+      "cmd": "clicktext",
+      "args": [
+        "Script"
+      ],
+      "file": "03.png",
+      "note": "",
+      "url": "/what-is-an-abp/#scene-1",
+      "title": "What an Agent Behaviour Policy is: the grant, the mandate, the delta and the barrier",
+      "scrollY": 0,
+      "height": 3579,
+      "at": "2026-10-21T12:53:30.347Z"
+    },
+    {
+      "n": 4,
+      "cmd": "scroll",
+      "args": [
+        "750"
+      ],
+      "file": "04.png",
+      "note": "",
+      "url": "/what-is-an-abp/#scene-1",
+      "title": "What an Agent Behaviour Policy is: the grant, the mandate, the delta and the barrier",
+      "scrollY": 750,
+      "height": 3579,
+      "at": "2026-10-21T12:53:34.223Z"
+    },
+    {
+      "n": 5,
+      "cmd": "clicktext",
+      "args": [
+        "Learn"
+      ],
+      "file": "05.png",
+      "note": "",
+      "url": "/what-is-an-abp/",
+      "title": "What an Agent Behaviour Policy is: the grant, the mandate, the delta and the barrier",
+      "scrollY": 0,
+      "height": 3579,
+      "at": "2026-10-21T12:53:39.840Z"
+    },
+    {
+      "n": 6,
+      "cmd": "clicktext",
+      "args": [
+        "Docs"
+      ],
+      "file": "06.png",
+      "note": "",
+      "url": "/docs/",
+      "title": "Documents: the brief, the memo, the corrections, reality, operations and the team",
+      "scrollY": 0,
+      "height": 1561,
+      "at": "2026-10-21T12:53:44.598Z"
+    },
+    {
+      "n": 7,
+      "cmd": "clicktext",
+      "args": [
+        "Reality: what exists"
+      ],
+      "file": "07.png",
+      "note": "",
+      "url": "/docs/reality.html",
+      "title": "customers.riskmandate.ai: reality",
+      "scrollY": 0,
+      "height": 4390,
+      "at": "2026-10-21T12:53:49.231Z"
+    },
+    {
+      "n": 8,
+      "cmd": "scroll",
+      "args": [
+        "1900"
+      ],
+      "file": "08.png",
+      "note": "",
+      "url": "/docs/reality.html",
+      "title": "customers.riskmandate.ai: reality",
+      "scrollY": 1900,
+      "height": 4390,
+      "at": "2026-10-21T12:53:54.685Z"
+    },
+    {
+      "n": 9,
+      "cmd": "clicktext",
+      "args": [
+        "Policies"
+      ],
+      "file": "09.png",
+      "note": "",
+      "url": "/policies/",
+      "title": "Behaviour policies: pick one worry, paste one line, add one hook, try it",
+      "scrollY": 0,
+      "height": 4221,
+      "at": "2026-10-21T12:54:00.951Z"
+    },
+    {
+      "n": 10,
+      "cmd": "clicktext",
+      "args": [
+        "Keep it away from your secrets"
+      ],
+      "file": "10.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 0,
+      "height": 4081,
+      "at": "2026-10-21T12:54:06.427Z"
+    },
+    {
+      "n": 11,
+      "cmd": "scroll",
+      "args": [
+        "850"
+      ],
+      "file": "11.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 850,
+      "height": 4081,
+      "at": "2026-10-21T12:54:11.094Z"
+    },
+    {
+      "n": 12,
+      "cmd": "scroll",
+      "args": [
+        "1000"
+      ],
+      "file": "12.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 1850,
+      "height": 4081,
+      "at": "2026-10-21T12:54:16.018Z"
+    },
+    {
+      "n": 13,
+      "cmd": "scroll",
+      "args": [
+        "600"
+      ],
+      "file": "13.png",
+      "note": "",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 2450,
+      "height": 4081,
+      "at": "2026-10-21T12:54:21.392Z"
+    },
+    {
+      "n": 14,
+      "cmd": "clicktext",
+      "args": [
+        "RM-R0015"
+      ],
+      "file": "14.png",
+      "note": "click failed: locator.click: Timeout 4000ms exceeded.",
+      "url": "/policies/touch-your-secrets/",
+      "title": "Keep your agent away from your secrets: behaviour policy RM-R0002",
+      "scrollY": 2450,
+      "height": 4081,
+      "at": "2026-10-21T12:54:31.032Z"
+    },
+    {
+      "n": 15,
+      "cmd": "click",
+      "args": [
+        "1148",
+        "177"
+      ],
+      "file": "15.png",
+      "note": "",
+      "url": "/policies/change-its-own-permissions/",
+      "title": "Only you change what your agent may do: behaviour policy RM-R0015",
+      "scrollY": 0,
+      "height": 3146,
+      "at": "2026-10-21T12:54:34.069Z"
+    }
+  ],
+  "refused": []
+}

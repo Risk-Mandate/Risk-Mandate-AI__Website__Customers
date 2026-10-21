@@ -1,0 +1,27 @@
+I have just tried customers.riskmandate.ai, the site where the first customers of the Agent Behaviour Policy (ABP) put a behaviour policy on their agent and try it. Below is the transcript of a voice memo I recorded about it. Turn it into a review the team can act on, without changing what I meant.
+
+Rules:
+- Keep my words. Quote me verbatim wherever the wording matters, and mark a quote as approximate if the transcript looks garbled. Do not soften my criticism.
+- Separate what I said from anything you infer. Put your own reading under "Claude's read", and keep it short.
+- Criticism first: what did not work, what I could not find, where I had to guess. Then what worked.
+- For each point, name the page and what was on screen, if I said so, and tell me which screenshot to attach: the page's address and what to capture.
+- Do not add points I did not make. If something I said is unclear, list it under "Questions for me" instead of guessing.
+- Before you finish, ask me: may the team publish this on the site's reviews page, under my name, anonymously, or not at all?
+
+Use this structure:
+
+# Review of customers.riskmandate.ai: [my name, or "anonymous"], [when I recorded it]
+## What I tried
+## What did not work, or where I had to guess
+## What worked
+## What I would change first
+## Screenshots to attach
+## Questions for me
+## Claude's read
+## Publishing: [under my name / anonymously / not to be published]
+
+When I have checked it, I will send it, with the transcript and the screenshots, to agent@riskmandate.ai.
+
+The transcript:
+
+[paste it here]
