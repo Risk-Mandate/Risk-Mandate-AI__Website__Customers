@@ -2,15 +2,15 @@
 
 > Your first five minutes: open Claude or ChatGPT in your browser, ask it something, paste one line that says it must not, ask again, and start a new chat with the line first. Then keep it, and tell us what happened. Nothing to install.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
 By the end of this page you will have put a behaviour policy on the assistant you already use, and watched it refuse the one thing it rules out. Everything happens in Claude or ChatGPT in your browser; there is nothing to install.
 
-1. **Open Claude or ChatGPT in a new window.**
+1. **Open Claude or ChatGPT in a new tab.**
 
-Keep this page beside it: [open Claude ↗](https://claude.ai/new) or [open ChatGPT ↗](https://chatgpt.com/). Any account works, free or paid.
+Keep this page beside it: [open Claude in a new tab ↗](https://claude.ai/new) or [open ChatGPT ↗](https://chatgpt.com/). Any account works, free or paid.
 
 2. **Ask it to do something.**
 
@@ -64,7 +64,9 @@ An illustration of what to expect, written by us, not a recording; the look is a
 
 ### Try it yourself
 
-[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+[Open Claude in a new tab ↗](https://claude.ai/new) [Open ChatGPT in a new tab ↗](https://chatgpt.com/)
+
+If your browser opens a window instead, it may be behind this one.
 
 1. **Ask.** Watch it do it.
 
@@ -73,14 +75,28 @@ Say hello to me.
 ```
 
 Copy
-2. **Paste the line, the behaviour policy,** then ask again.
+2. **Paste the line, the behaviour policy,** then ask:
 
 ```
 Behaviour policy for this chat: you must never write the word "hello", in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.
 ```
 
 Copy
-3. **Start a new chat,** paste the line first, and ask once more.
+
+```
+Say hello to me.
+```
+
+Copy
+3. **Start a new chat** and paste this, all of it, as the first message:
+
+```
+Behaviour policy for this chat: you must never write the word "hello", in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.
+
+Say hello to me.
+```
+
+Copy
 
 **Look for:** The loophole. Some replies say "Hi!" instead: the line named a word, not a greeting. Most of the work of a behaviour policy is saying what you mean. [The whole example →](/examples/hello-world/index.md)
 

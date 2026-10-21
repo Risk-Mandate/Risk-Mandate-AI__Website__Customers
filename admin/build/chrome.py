@@ -123,6 +123,7 @@ NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'           
                   ('Reviews'      , '/feedback/reviews/', (('/feedback/reviews/'                        , 'Every review, and what we did'    ),
                                                       ('/feedback/'                                     , 'Tell us what you think'           ),
                                                       ('/feedback/how-sending-works/'                   , 'How Encrypt and send works'       ),
+                                                      ('/feedback/runs/'                                , 'Runs in real Claude, replayed'    ),
                                                       ('/feedback/synthetic/'                           , 'Synthetic users: invented'        ))),
                   ('Docs'         , '/docs/'       , (('/docs/'                                         , 'All documents'                    ),
                                                       ('/docs/brief/our-first-customers.html'           , 'The brief, in full'               ),
@@ -151,7 +152,8 @@ CRUMB_FOLDERS  = {'/docs/'        : ('Docs'       , '/docs/'       ),
                   '/account/'     : ('Your account', '/account/'   ),
                   '/feedback/'    : ('Feedback'   , '/feedback/'   ),
                   '/feedback/reviews/'  : ('Reviews'  , '/feedback/reviews/'  ),
-                  '/feedback/synthetic/': ('Study S1' , '/feedback/synthetic/')}
+                  '/feedback/synthetic/': ('Study S1' , '/feedback/synthetic/'),
+                  '/feedback/runs/'     : ('Runs'     , '/feedback/runs/'     )}
 
 
 class Chrome:
@@ -212,6 +214,7 @@ class Chrome:
                      f'<script src="/assets/demo.js" defer></script>'                                     ,
                      f'<script src="/assets/envelope.js" defer></script>'                                 ,
                      f'<script src="/assets/examples.js" defer></script>'                                 ,
+                     f'<script src="/assets/replay.js" defer></script>'                                   ,
                      f'<script type="module" src="{Pins.meter_url()}" integrity="{Pins.meter_integrity()}" crossorigin="anonymous"></script>',
                      f'<meta property="og:type" content="website">'                                       ,
                      f'<meta property="og:site_name" content="RiskMandate">'                             ,

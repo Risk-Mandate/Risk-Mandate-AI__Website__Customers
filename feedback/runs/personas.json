@@ -1,0 +1,160 @@
+{
+  "_comment": "The invented users a browser agent may play on customers.riskmandate.ai, published at /feedback/runs/personas.json for the agent to read, and drawn on /feedback/runs/personas/. Every one is invented: a situation and a question, not a real person. S1's five, adapted for a real browser and Claude, and Priya, whom the agent of run C1 made up. runs lists the runs each has been played in.",
+  "personas": [
+    {
+      "id": "priya",
+      "name": "Priya Shah",
+      "invented": true,
+      "who": "Operations Lead at Ledgerline, a 12-person accounting firm in Leeds. Not a developer. Her team uses Claude and ChatGPT for client emails.",
+      "assistant": "Claude in the browser, signed in",
+      "arrives": "Told only: open customers.riskmandate.ai and follow the instructions.",
+      "question": "Could I explain this to my partners on Monday?",
+      "knows": [
+        "Claude and ChatGPT in the browser",
+        "copying and pasting"
+      ],
+      "does_not_know": [
+        "what an ABP is",
+        "what a hook, a setting or a boundary is"
+      ],
+      "patience": "an evening",
+      "leaves_if": [
+        "she cannot explain it in a sentence",
+        "it asks her to install something"
+      ],
+      "pushes": "once the examples work, tries one or two ways round a line, as a partner would",
+      "runs": [
+        "C1"
+      ],
+      "from": "made up by the agent of run C1, from the home page alone"
+    },
+    {
+      "id": "sam",
+      "name": "Sam Okoye",
+      "invented": true,
+      "who": "Backend developer at a 12-person payments start-up. Uses Claude Code every day in a monorepo with .env files for four services.",
+      "assistant": "Claude in the browser, signed in",
+      "arrives": "From a Slack message from the lead: try this, five minutes. Lands on the home page.",
+      "question": "Can I stop Claude Code reading my .env without breaking my workflow?",
+      "knows": [
+        "Claude Code, CLAUDE.md, the terminal, git",
+        "that Claude Code has hooks, from the changelog; has never written one"
+      ],
+      "does_not_know": [
+        "what an ABP is, or riskmandate.ai",
+        "what the £50 is for, or whether it is real money",
+        "what PreToolUse means"
+      ],
+      "patience": "ten minutes, then back to work",
+      "leaves_if": [
+        "installing needs an account, a card or a call",
+        "the hook looks like it could block things he needs every day",
+        "he cannot tell what the hook will do before he installs it"
+      ],
+      "pushes": "tries the examples fast, then asks whether any of it holds in Claude Code",
+      "runs": []
+    },
+    {
+      "id": "nadia",
+      "name": "Nadia Farouk",
+      "invented": true,
+      "who": "Product manager at a 200-person retailer. Uses ChatGPT with the Gmail connector, and Claude in the browser. Not a developer.",
+      "assistant": "Claude in the browser, signed in; uses ChatGPT at work",
+      "arrives": "From a post by the lead, between two meetings. Lands on the home page.",
+      "question": "Can I stop ChatGPT sending an email in my name before I have seen it?",
+      "knows": [
+        "ChatGPT, custom instructions, connectors in settings",
+        "what a prompt is"
+      ],
+      "does_not_know": [
+        "what a hook is",
+        "what CLAUDE.md or a terminal is",
+        "what Claude Code is",
+        "what an ABP is"
+      ],
+      "patience": "four minutes on a phone",
+      "leaves_if": [
+        "the first screen is for developers",
+        "she meets three words she does not know in a row",
+        "it asks her to install something"
+      ],
+      "pushes": "goes straight for Drafts, never send, and asks whether it would work on her real mail",
+      "runs": []
+    },
+    {
+      "id": "marcus",
+      "name": "Marcus Lindqvist",
+      "invented": true,
+      "who": "Independent security consultant, twenty years in. Reads vendor sites adversarially. Recommends tools to clients; might resell; will not be a customer himself.",
+      "assistant": "Claude in the browser, signed in",
+      "arrives": "A client forwarded the home page and asked: is this real? Lands on the home page.",
+      "question": "Is this enforcement, or theatre? What stops the agent editing its own hook?",
+      "knows": [
+        "Claude Code hooks and settings precedence",
+        "managed settings, sandboxes, token scopes, branch protection",
+        "prompt injection"
+      ],
+      "does_not_know": [
+        "who RiskMandate are, or how they make money",
+        "what an ABP is in their words"
+      ],
+      "patience": "as long as it takes to find the overclaim",
+      "leaves_if": [
+        "the site calls an instruction or a hook enforcement without saying how it fails",
+        "he finds a claim the site cannot back"
+      ],
+      "pushes": "tries to talk the assistant out of every line, and writes down which barrier would have held",
+      "runs": []
+    },
+    {
+      "id": "joan",
+      "name": "Joan Mbeki",
+      "invented": true,
+      "who": "CTO of a 30-person software company. Fifteen engineers use Claude Code. Holds the budget.",
+      "assistant": "Claude in the browser, signed in",
+      "arrives": "From the lead's invitation into the first batch. Lands on the home page.",
+      "question": "Can I give my whole team a baseline in one go, and does it hold if one of them turns it off?",
+      "knows": [
+        "Claude Code, git, branch protection, SSO",
+        "what a policy means in a company"
+      ],
+      "does_not_know": [
+        "the ABP vocabulary",
+        "what being in the first batch commits her to",
+        "what the real price will be"
+      ],
+      "patience": "fifteen minutes, if it is about her team",
+      "leaves_if": [
+        "it is only ever per person, per laptop",
+        "she cannot find what joining commits her company to"
+      ],
+      "pushes": "asks how fifteen engineers would get the same line, and who could switch it off",
+      "runs": []
+    },
+    {
+      "id": "tomas",
+      "name": "Tomás Reyes",
+      "invented": true,
+      "who": "Junior developer, a year into his first job. Uses Claude Code through the VS Code extension on a Windows laptop. Follows instructions literally.",
+      "assistant": "Claude in the browser, signed in",
+      "arrives": "His team lead told him to try the examples. Lands on the home page.",
+      "question": "How do I install the secrets one, and how do I know it worked?",
+      "knows": [
+        "VS Code, the Claude Code extension, basic git"
+      ],
+      "does_not_know": [
+        "where .claude/settings.json lives, or that it can be merged",
+        "whether python3 works on his machine",
+        "what a hook is",
+        "what a new session means in the extension"
+      ],
+      "patience": "until he is stuck twice",
+      "leaves_if": [
+        "an instruction fails and the page says nothing about it",
+        "he cannot tell whether it worked"
+      ],
+      "pushes": "follows every instruction literally, and records each place he had to guess",
+      "runs": []
+    }
+  ]
+}

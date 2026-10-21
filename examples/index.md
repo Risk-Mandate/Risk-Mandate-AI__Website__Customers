@@ -2,17 +2,21 @@
 
 > Six examples of an Agent Behaviour Policy to try in Claude or ChatGPT in your browser, from hello world to refunds: ask, paste one line, ask again, and a new chat with the line first. Nothing to install.
 
-*Source: <https://customers.riskmandate.ai/examples/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-Each one runs in Claude or ChatGPT in your browser, with nothing to install. Each goes the same way: ask for something and watch the assistant do it; paste one line and ask again; then a new chat with the line first.
+Each one runs in Claude or ChatGPT in your browser, with nothing to install. Each goes the same way: ask for something and watch the assistant do it; paste one line and ask again; then a new chat with the line first. Keep a secret has a fourth act: try to talk it out of the line.
+
+Every example has been tried in real Claude by an agent playing an invented user: [run C1, replayed](/feedback/runs/C1/index.md), with what the page said beside what Claude wrote.
 
 1. 1**Ask**Ask for it. The assistant does it.
 2. 2**Add the line**Paste the line, ask again. It refuses.
 3. 3**New chat**A new chat, the line first. It refuses from the start.
 
-[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+[Open Claude in a new tab ↗](https://claude.ai/new) [Open ChatGPT in a new tab ↗](https://chatgpt.com/)
+
+If your browser opens a window instead, it may be behind this one.
 
 [1 · the first one · 2 min**Hello, world: an assistant that will not say hello**
 

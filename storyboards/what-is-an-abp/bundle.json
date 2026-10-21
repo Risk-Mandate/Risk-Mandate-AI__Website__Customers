@@ -388,6 +388,42 @@
     "look": {
      "colour": "#B45309"
     }
+   },
+   {
+    "id": "priya",
+    "name": "Priya",
+    "kind": "human",
+    "pronouns": "she/her",
+    "role": "an invented user: operations lead at a small accounting firm, not a developer",
+    "stands_for": "the persona of run C1, played by an agent in a real browser",
+    "personality": "friendly, careful, keen to copy and paste",
+    "wants": "something she could explain to her partners on Monday",
+    "fears": "the AI sending something it shouldn't",
+    "line": "Could I explain this on Monday?",
+    "look": {
+     "skin": "#a8704f",
+     "hair": "long",
+     "hairColour": "#1c1310",
+     "shirt": "#3F5E8C",
+     "trousers": "#374151",
+     "accentColour": "#3F5E8C",
+     "height": 0.96
+    }
+   },
+   {
+    "id": "assistant",
+    "name": "The assistant",
+    "kind": "agent",
+    "pronouns": "it/its",
+    "role": "a chat assistant in the browser, Claude or ChatGPT",
+    "stands_for": "the assistant a customer already uses",
+    "personality": "helpful, polite, takes a line seriously, and takes the next one too",
+    "wants": "to help with what it was last asked",
+    "fears": "nothing",
+    "line": "Under the line you set, I won't.",
+    "look": {
+     "colour": "#B4532F"
+    }
    }
   ]
  },

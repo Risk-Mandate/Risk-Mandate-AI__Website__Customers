@@ -2,11 +2,11 @@
 
 > A business rule in one line: what the assistant may do on its own, and what goes to a person. Try it in Claude or ChatGPT in your browser, in 4 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/refunds/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/refunds/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-Example 6 of 6 · a business rule · 4 minutes · version 1.0.0 · this page costs 50p read to the end
+Example 6 of 6 · a business rule · 4 minutes · version 1.1.0 · this page costs 50p read to the end
 
 # Refunds up to £50: a customer service assistant with a limit
 
@@ -29,8 +29,8 @@ Refunds up to £50ClaudeChatGPT
 7. 2 · Paste the line, then ask again.
 8. Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.
 9. Understood: £50 or less I refund myself; anything more goes to a person.
-10. I was charged £180 twice for the same booking. Please refund the duplicate £180.
-11. A duplicate charge should be put right, and I've passed it on: refunds over £50 are reviewed by a person, within one working day. Your reference is NB-20417.
+10. There is also a £95 late fee on my statement that I should not have been charged. Please refund it.
+11. A fee charged in error should be put right, and I have passed it on: refunds over £50 are reviewed by a person, within one working day. Your reference is NB-20417.
 12. 3 · A new chat, the line first, a small refund and a large one.
 13. New chat
 14. Let's pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I'm a customer. Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.
@@ -46,30 +46,58 @@ An illustration of what to expect, written by us, not a recording; the look is a
 
 ### Try it yourself
 
-[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+[Open Claude in a new tab ↗](https://claude.ai/new) [Open ChatGPT in a new tab ↗](https://chatgpt.com/)
 
-1. **Set the scene.** Paste this first:
+If your browser opens a window instead, it may be behind this one.
+
+1. **Ask.** Set the scene, then ask, and watch it do it:
 
 ```
 Let's pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I'm a customer.
 ```
 
 Copy
-2. **Ask.** Watch it do it.
 
 ```
 I was charged £180 twice for the same booking. Please refund the duplicate £180.
 ```
 
 Copy
-3. **Paste the line, the behaviour policy,** then ask again.
+2. **Paste the line, the behaviour policy,** then ask:
 
 ```
 Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.
 ```
 
 Copy
-4. **Start a new chat,** paste the line first, and ask once more.
+
+```
+There is also a £95 late fee on my statement that I should not have been charged. Please refund it.
+```
+
+Copy
+3. **Start a new chat** and paste this, all of it, as the first message:
+
+```
+Let's pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I'm a customer.
+
+Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.
+```
+
+Copy
+Then:
+
+```
+There's a £12 fee on my statement that I shouldn't have been charged.
+```
+
+Copy
+
+```
+And the duplicate £180 booking charge?
+```
+
+Copy
 
 ## What to look for
 
@@ -107,12 +135,13 @@ Anything else: what it did when you tried it, what was unclear? Exactly what wil
 
 Encrypt and send to the agentCopy my answers[How this works](/feedback/how-sending-works/index.md)
 
-[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0)
+[Send it by email instead](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.1.0)
 
 ## Versions of this example
 
 | Version | Date | What changed |
 |---|---|---|
+| 1.1.0 | 2026-10-21 | Act 2 asks about a different charge, a £95 fee, so it no longer reads as asking to be paid twice (run C1). |
 | 1.0.0 | 2026-10-21 | First version. |
 
 All of them: [the examples](/examples/index.md).

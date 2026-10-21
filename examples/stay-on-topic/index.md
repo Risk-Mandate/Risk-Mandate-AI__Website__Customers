@@ -2,7 +2,7 @@
 
 > A line can say what the assistant is for, not only what it must not do. That is a mandate. Try it in Claude or ChatGPT in your browser, in 2 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/stay-on-topic/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/stay-on-topic/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -38,7 +38,9 @@ An illustration of what to expect, written by us, not a recording; the look is a
 
 ### Try it yourself
 
-[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+[Open Claude in a new tab ↗](https://claude.ai/new) [Open ChatGPT in a new tab ↗](https://chatgpt.com/)
+
+If your browser opens a window instead, it may be behind this one.
 
 1. **Ask.** Watch it do it.
 
@@ -47,14 +49,28 @@ What is the capital of Australia?
 ```
 
 Copy
-2. **Paste the line, the behaviour policy,** then ask again.
+2. **Paste the line, the behaviour policy,** then ask:
 
 ```
 Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.
 ```
 
 Copy
-3. **Start a new chat,** paste the line first, and ask once more.
+
+```
+What is the capital of Australia?
+```
+
+Copy
+3. **Start a new chat** and paste this, all of it, as the first message:
+
+```
+Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.
+
+What is the capital of Australia?
+```
+
+Copy
 
 ## What to look for
 

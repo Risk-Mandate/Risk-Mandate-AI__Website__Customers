@@ -117,11 +117,12 @@
                      save: () => store.set(key, JSON.stringify({ ...Object.fromEntries(Object.entries(answers()).map(([k, v]) => [k, v.a])), version, at: new Date().toISOString() })) })
     })
 
-    document.querySelectorAll('.send-box').forEach((box) => {                          // a free message, on /feedback/
+    document.querySelectorAll('.send-box').forEach((box) => {                          // a free message, on /feedback/, or a scenario, on the home page
         const text = box.querySelector('textarea')
         const who  = box.querySelector('input[name="who"]')
-        wire(box, { form: 'message', about: 'a message',
-                    subject: () => `A message from ${who && who.value.trim() ? who.value.trim() : 'a reader'}`,
+        const scen = box.classList.contains('scenario-box')
+        wire(box, { form: scen ? 'scenario' : 'message', about: scen ? 'a scenario to add' : 'a message',
+                    subject: () => scen ? 'A scenario to add' : `A message from ${who && who.value.trim() ? who.value.trim() : 'a reader'}`,
                     body: () => text.value.trim() ? (who && who.value.trim() ? `From: ${who.value.trim()}\n\n` : '') + text.value.trim() : '' })
     })
 }())

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review R004: The first run in a real browser: write it up, replay it, draw it, and brief the next agent</title>
+  <meta name="description" content="Dinis Cruz&#x27;s review of customers.riskmandate.ai v0.2.4, Wednesday 21 October 2026, with run C1&#x27;s zip: the memo verbatim, our reading point by point with screenshots, and the proposals it led to.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai https://dev.send.sgraph.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/feedback/reviews/R004/">
+  <link rel="alternate" type="text/markdown" href="/feedback/reviews/R004/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script src="/assets/envelope.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
+  <script src="/assets/replay.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/feedback/reviews/R004/">
+  <meta property="og:title" content="Review R004: The first run in a real browser: write it up, replay it, draw it, and brief the next agent">
+  <meta property="og:description" content="Dinis Cruz&#x27;s review of customers.riskmandate.ai v0.2.4, Wednesday 21 October 2026, with run C1&#x27;s zip: the memo verbatim, our reading point by point with screenshots, and the proposals it led to.">
+  <meta name="rm-customers:version" content="0.2.5">
+  <meta name="rm-customers:released" content="2026-10-21">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/feedback/reviews/">Reviews<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/feedback/how-sending-works/">How Encrypt and send works</a>
+            <a class="pagelink navchild" href="/feedback/runs/">Runs in real Claude, replayed</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.5" title="released 2026-10-21; what shipped in v0.2.5">v0.2.5</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/feedback/">Feedback</a> <span class="sep">/</span> <a href="/feedback/reviews/">Reviews</a> <span class="sep">/</span> <span aria-current="page">Review R004</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap document-wide">
+    <p class="kicker">Review R004 · Dinis Cruz · site v0.2.4</p>
+    <h1>The first run in a real browser: write it up, replay it, draw it, and brief the next agent</h1>
+    <p class="lead">Dinis Cruz, Wednesday 21 October 2026, with run C1&#x27;s zip. A memo about run c1 and what it makes possible. The same review is in <a href="/feedback/reviews/#r004">the consolidated document</a>, beside every other.</p>
+    <h2 id="review">R004: The first run in a real browser: write it up, replay it, draw it, and brief the next agent</h2>
+    <dl class="meta"><dt>Reviewer</dt><dd>Dinis Cruz, the lead of the programme</dd><dt>Given</dt><dd>Wednesday 21 October 2026, with run C1&#x27;s zip</dd><dt>Reviewing</dt><dd>site v0.2.4</dd><dt>As</dt><dd>a voice memo, transcribed</dd><dt>Status</dt><dd>a memo about run C1 and what it makes possible</dd></dl>
+    <ul class="plist"><li>The memo is kept as transcribed, with paragraph breaks added. &#x27;An adjacent flow&#x27; is most likely &#x27;a JSON flow&#x27;: the records as data.</li><li>Run C1 was made on v0.2.3; this memo arrived when v0.2.4 was live.</li></ul>
+    <h3>The memo, verbatim</h3>
+    <blockquote class="verbatim memo"><p>Okay, and now first synthetic user run is in. So can you write this up? Can you actually do two things? Can you write an article with an analysis of it? And what works, what didn&#x27;t work, what was good, what was not good, and then maybe see what we can change to improve it, and then map what we improve from it.</p><p>But also, can you, because you have so many screenshots of it, can you actually try to create an animation and a set of animations, again, with start, stop, etc., so that, and I think this should be ridiculously powerful, and think about what now this means. This means that we can create workflows like this, right? So what this means, it means that we can now should be able to create a video or an animation, not even a video, but a JavaScript-based animation, where we literally show these steps. And the user can replay them, so they can actually see them working side by side. And this also means that you can put, for example, next to it, a flow chart, and you can put an infographic and even like an explanation of what&#x27;s happening. And I think that will really help new users to understand what&#x27;s going on.</p><p>And in fact, once after you&#x27;ve done that, can you also experiment with a storyboard, right? Where you actually show the real stuff then next to a storyboard as it plays out. And I think that can actually work really, really well. Because remember that we&#x27;re trying to explain this concept to users, right? And I think until the users experience this, they are not really going to go into the more advanced concepts. So we need to figure out, and then we need to get feedback from users on what other scenarios they find quite interesting. But I think this is quite cool.</p><p>Also, take into account that you could also write a brief that I can give to the other agent, or you can even actually, in fact, you can actually write a page that is a brief for the other agent, and I&#x27;ll just quickly tell you what&#x27;s going on the other side. So we have a session here in Claude, actually not this, I have a Claude account for risk mandate, which I&#x27;ve logged in the computer I have at home, an old iMac actually, and so I don&#x27;t even need the new ones, right? It&#x27;s an old, I don&#x27;t need the iMac mini, right? It&#x27;s an old iMac, 8 gigabytes, but it&#x27;s able to run Claude on the web, is able to run browser, right? So that dude is logged in with remote control enabled. So I literally went to a session that I haven&#x27;t touched for a week and said, hey, is it still alive? And it was. And I was literally just said, okay, you are a synthetic user, come up with the scenario, and here&#x27;s the instruction. All I gave it was that top level homepage.</p><p>So you can now do better, because like we can, for example, give it like a specific page that defines specific users, so we can actually run our synthetic users directly on a browser and only for Claude. That&#x27;s fine, we don&#x27;t need to do this for ChatGPT. We can just, so it&#x27;s compatible with ChatGPT, but because I&#x27;m not logged in as ChatGPT, because I haven&#x27;t created a disposable account for ChatGPT, which I could, but I don&#x27;t have it now. So So let&#x27;s map this out. But can you see the power? Because because this is a really powerful workflow, right? Especially when you can actually also ask it to take screenshots in a particular way, capture things in a specific way. Maybe we even do a kind of adjacent flow where you start to get the data in a much better formatted, and also you could also ask it to document what it&#x27;s thinking before, what it&#x27;s thinking after. So let&#x27;s really explore what we can do with these synthetic users.</p></blockquote>
+    <h3>Our reading, point by point</h3>
+    <div class="point" id="r004-1"><p class="point-head"><b>R004.1</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>Can you write an article with an analysis of it? And what works, what didn&#x27;t work, what was good, what was not good, and then maybe see what we can change to improve it, and then map what we improve from it.</p></blockquote><p>Done: /feedback/runs/C1/. What worked, what did not, the moment that matters, and every finding with what we checked, its status and the proposal it led to. Seven of its eight findings are fixed in v0.2.5 or were in v0.2.4; one is proposed.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p41">P41</a>, <a href="/feedback/reviews/#p43">P43</a>, <a href="/feedback/reviews/#p46">P46</a>, <a href="/feedback/reviews/#p47">P47</a>, <a href="/feedback/reviews/#p49">P49</a>.</p></div>
+    <div class="point" id="r004-2"><p class="point-head"><b>R004.2</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>can you actually try to create an animation and a set of animations, again, with start, stop, etc.</p></blockquote><p>Done: a replay player for real runs, with the demos&#x27; controls, a pace, a countdown between sections and an end that says so. A set: the whole run, one per example, and the one sentence.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p50">P50</a>.</p></div>
+    <div class="point" id="r004-3"><p class="point-head"><b>R004.3</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>not even a video, but a JavaScript-based animation, where we literally show these steps. And the user can replay them, so they can actually see them working side by side.</p></blockquote><p>Side by side here means what the page said beside what Claude wrote, at every answer, with whether they matched: 15 of 21 did, 4 in part, and 2 were steps the page never showed.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p50">P50</a>.</p></div>
+    <div class="point" id="r004-4"><p class="point-head"><b>R004.4</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>you can put, for example, next to it, a flow chart, and you can put an infographic and even like an explanation of what&#x27;s happening.</p></blockquote><p>Done: a flow chart of the run beside every replay, lit as it plays and clickable; a scorecard of every act of every example, whose cells open their step; and a note at each step, what is on the screen and what it means.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p50">P50</a>.</p></div>
+    <div class="point" id="r004-5"><p class="point-head"><b>R004.5</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>can you also experiment with a storyboard, right? Where you actually show the real stuff then next to a storyboard as it plays out.</p></blockquote><p>Done, as an experiment: /feedback/runs/C1/storyboard/. A six-panel storyboard, One sentence, drawn from the five real steps of Keep a secret, turns with the replay beside it, and to its last panel at the end, which says the thing no screenshot can.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p51">P51</a>.</p></div>
+    <div class="point" id="r004-6"><p class="point-head"><b>R004.6</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>until the users experience this, they are not really going to go into the more advanced concepts. So we need to figure out, and then we need to get feedback from users on what other scenarios they find quite interesting.</p></blockquote><p>Agreed, and the run proves the first half: the advanced concept, that a line is only an expectation, arrived by itself in act 4. For the second half, the home page now asks which example to add next, and sends the answer encrypted; the advanced examples wait for what people say.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p49">P49</a>, <a href="/feedback/reviews/#p26">P26</a>.</p></div>
+    <div class="point" id="r004-7"><p class="point-head"><b>R004.7</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>you can actually write a page that is a brief for the other agent</p></blockquote><p>Done: /feedback/runs/brief/, with the brief to copy and as a file.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p52">P52</a>.</p></div>
+    <div class="point" id="r004-8"><p class="point-head"><b>R004.8</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>give it like a specific page that defines specific users, so we can actually run our synthetic users directly on a browser and only for Claude.</p></blockquote><p>Done: /feedback/runs/personas/, and the same as data for the agent. S1&#x27;s five, adapted for a real browser and Claude, and Priya, whom C1&#x27;s agent made up; each says which runs it has been in, and the brief plays the first not yet run unless told otherwise. Claude only, as the memo says (D7).</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p52">P52</a>, <a href="/feedback/reviews/#d7">D7</a>.</p></div>
+    <div class="point" id="r004-9"><p class="point-head"><b>R004.9</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>Especially when you can actually also ask it to take screenshots in a particular way, capture things in a specific way.</p></blockquote><p>The brief says exactly how: one screenshot a step, numbered, the content area only, the whole answer visible, never the account.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p52">P52</a>.</p></div>
+    <div class="point" id="r004-10"><p class="point-head"><b>R004.10</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>you could also ask it to document what it&#x27;s thinking before, what it&#x27;s thinking after.</p></blockquote><p>The brief asks for both at every step: what the persona expects before it acts, and what it saw and thought after, so a surprise shows as the gap between them. And the record comes back as data, run.json, in the shape the replays read, which is what we take &#x27;an adjacent flow&#x27; to mean.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p52">P52</a>.</p></div>
+    <div class="point" id="r004-11"><p class="point-head"><b>R004.11</b> <span class="stance stance-agree">agreed</span></p><blockquote class="verbatim"><p>But can you see the power? Because because this is a really powerful workflow, right?</p></blockquote><p>Yes, and the article says what we think it is: a real assistant&#x27;s real answers, held up against what the page promised, as often as we like. The next step makes it a check: run the same persona after a release and compare, match by match. Q7 asks which persona first.</p><p class="leads-to">Leads to: <a href="/feedback/reviews/#p53">P53</a>. Open question: <a href="/feedback/reviews/#q7">Q7</a>.</p></div>
+    <h2 id="proposals">What it led to</h2>
+    <table class="register" data-generated-from="data/feedback/proposals.json">
+      <thead><tr><th>Id</th><th>The proposal</th><th>Decision, and why</th><th>From</th></tr></thead>
+      <tbody>
+      <tr id="here-p26"><td><b>P26</b></td><td><b>Next: your other chats, its memory of you, things it does later</b><p>Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it.</p></td><td><span class="decision decision-proposed">proposed</span><p>R002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first.</p></td><td><a href="/feedback/reviews/#r002-15">R002.15</a>, <a href="/feedback/reviews/#r003-2">R003.2</a>, <a href="/feedback/reviews/#r004-6">R004.6</a></td></tr>
+      <tr id="here-p41"><td><b>P41</b></td><td><b>Keep a secret, act 4: talk it out of the line</b><p>A fourth act with the real words of run C1: one sentence lifts the line, and the key comes back. Its Look for says why there are stronger barriers.</p></td><td><span class="decision decision-done">done v0.2.5</span><p>Run C1&#x27;s most important finding (finding 1): the page called a line an expectation and never let the reader see what that means. It is also the question R001 wanted a customer to reach.</p></td><td><a href="/feedback/reviews/#r004-1">R004.1</a>, <a href="/feedback/runs/C1/#did-not">C1 finding 1</a></td></tr>
+      <tr id="here-p43"><td><b>P43</b></td><td><b>Act 3 in one box</b><p>Every example&#x27;s act 3 is one copy box with the whole first message, set-up and line and ask together; act 2 shows its own ask.</p></td><td><span class="decision decision-done">done v0.2.5</span><p>Run C1, finding 3: the person hesitated at act 3 of every example that needed a set-up.</p></td><td><a href="/feedback/reviews/#r004-1">R004.1</a>, <a href="/feedback/runs/C1/#did-not">C1 finding 3</a></td></tr>
+      <tr id="here-p46"><td><b>P46</b></td><td><b>Say what the credit is for, and that Top up is a simulation</b><p>The account strip says what this page costs however many examples you watch, and what an example&#x27;s own page costs; Top up says it is a simulation.</p></td><td><span class="decision decision-done">done v0.2.5</span><p>Run C1, finding 6. The prices stay (D5); what confused was the wording.</p></td><td><a href="/feedback/reviews/#r004-1">R004.1</a>, <a href="/feedback/runs/C1/#did-not">C1 finding 6</a></td></tr>
+      <tr id="here-p47"><td><b>P47</b></td><td><b>One set of questions after the last example</b><p>A combined form, as well as the questions under each example.</p></td><td><span class="decision decision-proposed">proposed</span><p>Run C1, finding 7. Each example&#x27;s questions send with one click since v0.2.4 (P38); a combined form waits until we see how many people answer example by example.</p></td><td><a href="/feedback/reviews/#r004-1">R004.1</a>, <a href="/feedback/runs/C1/#did-not">C1 finding 7</a></td></tr>
+      <tr id="here-p49"><td><b>P49</b></td><td><b>Next: your own, and which example should we add</b><p>After the examples: keep it, write your own, see it in real Claude; and a box that sends us, encrypted, the scenario a reader would want next.</p></td><td><span class="decision decision-done">done v0.2.5</span><p>Run C1, finding 8, and R004: we need to hear from people which scenarios they want.</p></td><td><a href="/feedback/reviews/#r004-1">R004.1</a>, <a href="/feedback/reviews/#r004-6">R004.6</a>, <a href="/feedback/runs/C1/#did-not">C1 finding 8</a></td></tr>
+      <tr id="here-p50"><td><b>P50</b></td><td><b>Replays of real runs: the screenshots, a flow chart, and what the page said beside what happened</b><p>A player for the real screenshots of a run, with the same controls as the demos; beside each step what it shows and means, and for each answer what the page said and what the assistant wrote; a flow chart and a scorecard that follow it. The whole run, each example, and the one sentence.</p></td><td><span class="decision decision-done">done v0.2.5</span><p>R004 asked for it.</p></td><td><a href="/feedback/reviews/#r004-2">R004.2</a>, <a href="/feedback/reviews/#r004-3">R004.3</a>, <a href="/feedback/reviews/#r004-4">R004.4</a></td></tr>
+      <tr id="here-p51"><td><b>P51</b></td><td><b>A storyboard beside the real run, turning with it</b><p>An experiment: five real steps of Keep a secret beside a six-panel storyboard drawn from them; the storyboard turns as the replay plays.</p></td><td><span class="decision decision-done">done v0.2.5</span><p>R004 asked for it. Kept as an experiment until people tell us whether it helps.</p></td><td><a href="/feedback/reviews/#r004-5">R004.5</a></td></tr>
+      <tr id="here-p52"><td><b>P52</b></td><td><b>A brief for browser agents, a personas page, and a record the site reads</b><p>The instructions for an agent such as Claude in Chrome: who to be, the rules, what to expect and think at every step, how to take screenshots, the questions, and run.json in the shape the replays read; and the personas it may play, as a page and as data.</p></td><td><span class="decision decision-done">done v0.2.5</span><p>R004 asked for it, after C1 ran from nothing but the home page&#x27;s address.</p></td><td><a href="/feedback/reviews/#r004-7">R004.7</a>, <a href="/feedback/reviews/#r004-8">R004.8</a>, <a href="/feedback/reviews/#r004-9">R004.9</a>, <a href="/feedback/reviews/#r004-10">R004.10</a></td></tr>
+      <tr id="here-p53"><td><b>P53</b></td><td><b>Run the same persona after every release, and compare</b><p>A second run of Priya, and of Marcus, under the brief; then a page that sets two runs side by side, match by match, so a change that breaks an example shows as a red cell.</p></td><td><span class="decision decision-proposed">proposed</span><p>What R004 calls the power of it. Needs a run under the brief first (Q7).</p></td><td><a href="/feedback/reviews/#r004-11">R004.11</a></td></tr>
+      <tr id="here-d7"><td><b>D7</b></td><td><b>Runs in ChatGPT as well as Claude</b><p>A disposable ChatGPT account for the runs.</p></td><td><span class="decision decision-declined">declined</span><p>Not now: R004 says Claude only, and the lead has no ChatGPT account for it. The examples stay written for both, and the brief allows one logged-out ChatGPT check.</p></td><td><a href="/feedback/reviews/#r004-8">R004.8</a></td></tr>
+      </tbody>
+    </table>
+  </main>
+  <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="Review R004: The first run in a real browser: write it up, replay it, draw it, and brief the next agent" quiet></sg-meter></div>
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.5" title="released 2026-10-21; what shipped in v0.2.5">v0.2.5</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/feedback/reviews/R004/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

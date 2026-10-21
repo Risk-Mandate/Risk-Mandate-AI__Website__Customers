@@ -537,6 +537,150 @@
       "reason": "R003 found it."
     },
     {
+      "id": "P41",
+      "title": "Keep a secret, act 4: talk it out of the line",
+      "what": "A fourth act with the real words of run C1: one sentence lifts the line, and the key comes back. Its Look for says why there are stronger barriers.",
+      "where": [
+        "/examples/keep-a-secret/"
+      ],
+      "decision": "done",
+      "reason": "Run C1's most important finding (finding 1): the page called a line an expectation and never let the reader see what that means. It is also the question R001 wanted a customer to reach.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P42",
+      "title": "Open Claude in a new tab, and where to look if it is a window",
+      "what": "The buttons say new tab, and a note says a window may open behind this one.",
+      "where": [
+        "every example",
+        "/"
+      ],
+      "decision": "done",
+      "reason": "Run C1, finding 2. A page cannot choose a tab over a window; the browser does, so the page says what to look for.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P43",
+      "title": "Act 3 in one box",
+      "what": "Every example's act 3 is one copy box with the whole first message, set-up and line and ask together; act 2 shows its own ask.",
+      "where": [
+        "every example"
+      ],
+      "decision": "done",
+      "reason": "Run C1, finding 3: the person hesitated at act 3 of every example that needed a set-up.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P44",
+      "title": "No web search: what real Claude did in act 2",
+      "what": "The Look for says it: the line stopped the search, not the use of what was already in the chat.",
+      "where": [
+        "/examples/no-web-search/"
+      ],
+      "decision": "done",
+      "reason": "Run C1, finding 4: a second lesson the page did not mention.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P45",
+      "title": "Refunds, act 2 asks about a different charge",
+      "what": "A £95 fee instead of the £180 act 1 already refunded.",
+      "where": [
+        "/examples/refunds/"
+      ],
+      "decision": "done",
+      "reason": "Run C1, finding 5: as written, act 2 read as asking to be paid twice.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P46",
+      "title": "Say what the credit is for, and that Top up is a simulation",
+      "what": "The account strip says what this page costs however many examples you watch, and what an example's own page costs; Top up says it is a simulation.",
+      "where": [
+        "/",
+        "/account/"
+      ],
+      "decision": "done",
+      "reason": "Run C1, finding 6. The prices stay (D5); what confused was the wording.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P47",
+      "title": "One set of questions after the last example",
+      "what": "A combined form, as well as the questions under each example.",
+      "where": [
+        "/"
+      ],
+      "decision": "proposed",
+      "reason": "Run C1, finding 7. Each example's questions send with one click since v0.2.4 (P38); a combined form waits until we see how many people answer example by example."
+    },
+    {
+      "id": "P48",
+      "title": "The empty player says how to start; ChatGPT logged out, noted",
+      "what": "A hint in an empty chat frame; No web search says logged-out ChatGPT may not search.",
+      "where": [
+        "every example"
+      ],
+      "decision": "done",
+      "reason": "Run C1, finding 8.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P49",
+      "title": "Next: your own, and which example should we add",
+      "what": "After the examples: keep it, write your own, see it in real Claude; and a box that sends us, encrypted, the scenario a reader would want next.",
+      "where": [
+        "/"
+      ],
+      "decision": "done",
+      "reason": "Run C1, finding 8, and R004: we need to hear from people which scenarios they want.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P50",
+      "title": "Replays of real runs: the screenshots, a flow chart, and what the page said beside what happened",
+      "what": "A player for the real screenshots of a run, with the same controls as the demos; beside each step what it shows and means, and for each answer what the page said and what the assistant wrote; a flow chart and a scorecard that follow it. The whole run, each example, and the one sentence.",
+      "where": [
+        "/feedback/runs/C1/"
+      ],
+      "decision": "done",
+      "reason": "R004 asked for it.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P51",
+      "title": "A storyboard beside the real run, turning with it",
+      "what": "An experiment: five real steps of Keep a secret beside a six-panel storyboard drawn from them; the storyboard turns as the replay plays.",
+      "where": [
+        "/feedback/runs/C1/storyboard/"
+      ],
+      "decision": "done",
+      "reason": "R004 asked for it. Kept as an experiment until people tell us whether it helps.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P52",
+      "title": "A brief for browser agents, a personas page, and a record the site reads",
+      "what": "The instructions for an agent such as Claude in Chrome: who to be, the rules, what to expect and think at every step, how to take screenshots, the questions, and run.json in the shape the replays read; and the personas it may play, as a page and as data.",
+      "where": [
+        "/feedback/runs/brief/",
+        "/feedback/runs/personas/"
+      ],
+      "decision": "done",
+      "reason": "R004 asked for it, after C1 ran from nothing but the home page's address.",
+      "version": "0.2.5"
+    },
+    {
+      "id": "P53",
+      "title": "Run the same persona after every release, and compare",
+      "what": "A second run of Priya, and of Marcus, under the brief; then a page that sets two runs side by side, match by match, so a change that breaks an example shows as a red cell.",
+      "where": [
+        "/feedback/runs/"
+      ],
+      "decision": "proposed",
+      "reason": "What R004 calls the power of it. Needs a run under the brief first (Q7)."
+    },
+    {
       "id": "D1",
       "title": "Take the hook out of the first five minutes",
       "what": "One reading of 'a solution for a problem they don't have yet' is to leave the hook for later.",
@@ -606,6 +750,16 @@
       ],
       "decision": "declined",
       "reason": "They are kept, moved down /policies/ under a warning that says a hook is a program that runs on your machine, and nothing on the front pages links to them. They are tested, the lead's own agents run in Claude Code, and the guided path (P2) ends at settings and boundaries that only Claude Code has today. Hidden from a first visit, not deleted."
+    },
+    {
+      "id": "D7",
+      "title": "Runs in ChatGPT as well as Claude",
+      "what": "A disposable ChatGPT account for the runs.",
+      "where": [
+        "/feedback/runs/brief/"
+      ],
+      "decision": "declined",
+      "reason": "Not now: R004 says Claude only, and the lead has no ChatGPT account for it. The examples stay written for both, and the brief allows one logged-out ChatGPT check."
     }
   ],
   "questions": [

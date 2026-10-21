@@ -2,7 +2,7 @@
 
 > How customers.riskmandate.ai is built and released: one version in one file, seven generators that keep the parts that must agree in agreement, an eight-check gate that fails the build, and a pipeline that validates, tags, deploys and then checks the live host. Copied from the newest gate in the sgit.ai estate.
 
-*Source: <https://customers.riskmandate.ai/admin/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/admin/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

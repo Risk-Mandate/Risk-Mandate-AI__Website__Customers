@@ -71,6 +71,8 @@
         const acts = items.filter((it) => it.kind === 'act').map((it) => it.text.replace(/^\d+ · /, ''))
         const head = figure.querySelector('.chat-window, .demo-laptop, .demo-browser')
         figure.insertBefore(bar, head)
+        const hint = chat ? el('li', 'chat-hint shown', 'Press Play, or Next to go one step at a time.', { 'aria-hidden': 'true' }) : null   // an empty frame looks broken (run C1)
+        if (hint) list.prepend(hint)
 
         // the end, said plainly
         const end   = el('div', 'demo-end', null, { role: 'status' })
@@ -102,6 +104,7 @@
                 if (li.textContent !== text) li.textContent = text
             })
             marks.forEach((m, i) => { m.classList.toggle('done', i < n); m.classList.toggle('now', i === n - 1) })
+            if (hint) hint.hidden = n > 0
             if (typed) typed.textContent = ''
             if (input) input.classList.remove('is-typing')
             list.scrollTop = list.scrollHeight
@@ -168,7 +171,7 @@
             if (mine === run) { playing = false; render() }
         }
 
-        function halt() { run++; waiting = 0; wait.textContent = '' }
+        function halt() { run++; seen = true; waiting = 0; wait.textContent = '' }     // any use of the controls: the reader has taken over, so it never starts by itself
         function stop() { playing = false; halt(); render() }
         function jump(to) {                                                            // move to a step, and keep playing if it was
             const was = playing

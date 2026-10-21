@@ -2,7 +2,7 @@
 
 > The shared ladder of seven steps for the first batch, each with its objective, what done looks like and who does it: in with credit, one agent named, the grant, the mandate, the delta, the hooks half, and the usage moment. The objectives per customer are their own; the steps are the shared shape.
 
-*Source: <https://customers.riskmandate.ai/milestones/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/milestones/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

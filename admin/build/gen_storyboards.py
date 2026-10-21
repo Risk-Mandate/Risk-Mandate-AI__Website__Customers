@@ -22,8 +22,8 @@ from pages  import Site__Pages
 BOARDS    = ROOT / 'storyboards'
 DEMOS     = ROOT / 'data' / 'demos.json'
 VIEWER    = (ROOT / 'admin' / 'build' / 'templates' / 'storyboard-viewer.tpl').read_text(encoding='utf-8').strip()
-CUSTOM    = {'what-is-an-abp': '/what-is-an-abp/'}                             # a storyboard whose page is written by hand
-ORDER     = ('what-is-an-abp', 'your-first-policy', 'the-first-batch')
+CUSTOM    = {'what-is-an-abp': '/what-is-an-abp/', 'one-sentence': '/feedback/runs/C1/storyboard/'}                             # a storyboard whose page is written by hand
+ORDER     = ('what-is-an-abp', 'one-sentence', 'your-first-policy', 'the-first-batch')
 VOCAB     = {'kinds'   : {'cover', 'scene', 'evidence', 'punchline', 'spectrum', 'map', 'graph'},
              'poses'   : {'stand', 'point', 'wave', 'arms-up', 'shrug', 'think', 'sit'},
              'moods'   : {'neutral', 'happy', 'excited', 'calm', 'worried', 'sad', 'surprised', 'thinking', 'confused', 'determined'},

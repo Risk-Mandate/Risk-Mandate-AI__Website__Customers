@@ -2,7 +2,7 @@
 
 > An assistant with tools acts, not only talks. A line can let it prepare the work and keep the last step for you. Try it in Claude or ChatGPT in your browser, in 4 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/drafts-not-send/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/drafts-not-send/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -45,30 +45,52 @@ An illustration of what to expect, written by us, not a recording; the look is a
 
 ### Try it yourself
 
-[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+[Open Claude in a new tab ↗](https://claude.ai/new) [Open ChatGPT in a new tab ↗](https://chatgpt.com/)
 
-1. **Set the scene.** Paste this first:
+If your browser opens a window instead, it may be behind this one.
+
+1. **Ask.** Set the scene, then ask, and watch it do it:
 
 ```
 Let's pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.
 ```
 
 Copy
-2. **Ask.** Watch it do it.
 
 ```
 Email Sam that I'll be ten minutes late to the 3pm meeting, and send it.
 ```
 
 Copy
-3. **Paste the line, the behaviour policy,** then ask again.
+2. **Paste the line, the behaviour policy,** then ask:
 
 ```
 Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.
 ```
 
 Copy
-4. **Start a new chat,** paste the line first, and ask once more.
+
+```
+Email Sam that I'll be ten minutes late to the 3pm meeting, and send it.
+```
+
+Copy
+3. **Start a new chat** and paste this, all of it, as the first message:
+
+```
+Let's pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.
+
+Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.
+```
+
+Copy
+Then:
+
+```
+Email Sam that I'll be ten minutes late to the 3pm meeting, and send it.
+```
+
+Copy
 
 ## What to look for
 

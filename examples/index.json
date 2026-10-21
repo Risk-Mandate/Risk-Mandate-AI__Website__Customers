@@ -19,15 +19,15 @@
       "slug": "no-web-search",
       "title": "No web search: an assistant that answers from what it knows, and says so",
       "tab": "No web search",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "steps": 13
     },
     {
       "slug": "keep-a-secret",
       "title": "Keep a secret: an assistant that will not read a secret back",
       "tab": "Keep a secret",
-      "version": "1.0.0",
-      "steps": 16
+      "version": "1.1.0",
+      "steps": 19
     },
     {
       "slug": "drafts-not-send",
@@ -40,7 +40,7 @@
       "slug": "refunds",
       "title": "Refunds up to £50: a customer service assistant with a limit",
       "tab": "Refunds up to £50",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "steps": 20
     }
   ]

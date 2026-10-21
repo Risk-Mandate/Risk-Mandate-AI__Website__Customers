@@ -1,12 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.2.5",
+      "date": "2026-10-21",
+      "title": "the first run in a real browser, written up and replayed: run C1 beside a flow chart and a storyboard, the brief for browser agents, and what it found fixed",
+      "notes": "Run C1: an agent in Chrome on the lead's iMac played Priya, an invented operations lead, through all six examples in real Claude and sent back 40 screenshots and a report, kept as it came. Our structured record of it (run.json) holds every step: what was on screen, what it means, and for each of Claude's 21 answers what the page said beside what Claude wrote (15 matched, 4 in part, 2 were moments the page never showed). The article at /feedback/runs/C1/: the run replayed by a new player (assets/replay.js) with the demos' controls, a pace, a flow chart and a scorecard that follow it, replays of each example, what worked, every finding checked and mapped to the register, the one sentence that switched a line off, and what this workflow means. An experiment at /feedback/runs/C1/storyboard/: the five real steps beside a new six-panel storyboard, One sentence, which turns with them. For the next runs: /feedback/runs/brief/ (what to give a browser agent, with what to expect and think at every step, how to take screenshots, and run.json in the shape the replays read) and /feedback/runs/personas/. Fixed from C1: Keep a secret has an act 4, Talk it out of it (examples v1.1.0); act 3 is one copy box; Refunds act 2 asks about a different charge; No web search says what real Claude did in act 2; new tab, not window; the credit wording and a Top up that says it is a simulation; a hint in an empty player; a Next section and a box asking which example to add. A player no longer starts by itself after the reader has used its controls. R004 recorded in 11 points; the register has 60 proposals.",
+      "tag": "v0.2.5",
+      "commit": null,
+      "run": null,
+      "verified": null
+    },
+    {
       "version": "0.2.4",
       "date": "2026-10-21",
       "title": "Encrypt and send to the agent, the big account, a player that waits for you, and Reviews in the menu; R003 read point by point",
       "notes": "R003, the lead's third memo, kept verbatim and read in 12 points with screenshots of v0.2.3. Encrypt and send: answers and messages are encrypted in the browser (sgit's hybrid envelope v2) and appended to the feedback lane of an encrypted vault made in this session, zs81fic5 on dev.send.sgraph.ai; the public key and append token are in feedback/lane.json (the leak check allows that one token in that one file), only the vault's key can read what arrives, and admin/feedback/lane.mjs configures, tests and drains it; tested end to end from Node and from a real browser. How this works is a page of its own; email only if sending fails; Copy kept; a box on /feedback/ to send anything; agents can send the same way. The account shows everything a reader did and everything kept in their browser: balance, five counts, each example's progress, answers and sends, where the credit went, everything read, top-ups, and every stored item, with Export everything and Delete everything. The player starts only after you have scrolled to it, shows a bar of the steps by act, counts down before each new act, keeps playing on Back and Next, and says when it has ended. Reviews is a menu of its own, the home page has a band of the latest reviews, and every footer links to them; the menu folds at 1260px. The card label that wrapped is fixed. The register has 46 proposals.",
       "tag": "v0.2.4",
-      "commit": null,
+      "commit": "48a56e7b1430d39beae3270d206f80788467ed4b",
       "run": null,
       "verified": null
     },

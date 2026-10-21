@@ -2,7 +2,7 @@
 
 > What happens when you press Encrypt and send on customers.riskmandate.ai: the message is encrypted in your browser with sgit's hybrid envelope, appended to an encrypted vault's lane that anybody can add to and nobody can read, and opened only with RiskMandate's key.
 
-*Source: <https://customers.riskmandate.ai/feedback/how-sending-works/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/how-sending-works/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

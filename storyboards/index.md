@@ -2,7 +2,7 @@
 
 > Three storyboards drawn in your browser: what an Agent Behaviour Policy is, the five minutes a customer spends installing their first one, and what the first batch is for and what comes next.
 
-*Source: <https://customers.riskmandate.ai/storyboards/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/storyboards/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -12,7 +12,11 @@ What an Agent Behaviour Policy is, what you do on this site, and what the first 
 
 Everything your agent can reach, what you asked it to do, the gap, and what stands in the way. 8 panels.
 
-](/what-is-an-abp/index.md) [8 panels**Your first behaviour policy**
+](/what-is-an-abp/index.md) [6 panels**One sentence**
+
+Keep a secret, in real Claude: the line holds, and then one sentence switches it off. Six panels, drawn from run C1.
+
+](/feedback/runs/C1/storyboard/index.md) [8 panels**Your first behaviour policy**
 
 £50 of credit, one worry, five minutes: what a customer does on this site. 8 panels.
 

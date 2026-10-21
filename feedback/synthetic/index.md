@@ -2,7 +2,7 @@
 
 > Study S1: five invented users, with profiles and expected journeys written first, drove a browser through customers.riskmandate.ai v0.2.1 one screenshot at a time. Their runs, interviews, ratings and findings, each checked. Invented, not user research.
 
-*Source: <https://customers.riskmandate.ai/feedback/synthetic/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/synthetic/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

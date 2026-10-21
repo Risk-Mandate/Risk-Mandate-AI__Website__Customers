@@ -70,6 +70,7 @@ class Gen__Feedback:
         self.runs      = {p['id']: json.loads((study / 'runs' / p['id'] / 'run.json').read_text(encoding='utf-8')) for p in self.personas['personas']}
         self.captures  = {p['id']: json.loads((study / 'runs' / p['id'] / '_capture.json').read_text(encoding='utf-8')) for p in self.personas['personas']}
         self.questions = {q['id']: q for r in self.reviews for q in r.get('questions', [])} | {q['id']: q for q in self.register.get('questions', [])}
+        self.browser_runs = {p.parent.name: json.loads(p.read_text(encoding='utf-8')) for p in sorted((DATA / 'runs').glob('*/run.json'))}   # runs of browser agents (gen_runs.py): their findings lead to proposals too
         self.validate()
 
     # ── validation ─────────────────────────────────────────────────────────────
@@ -141,6 +142,10 @@ class Gen__Feedback:
             for point in review['points']:
                 if proposal_id in point['proposals']:
                     out.append((point['id'], f'/feedback/reviews/#{self.point_anchor(point["id"])}'))
+        for rid, run in self.browser_runs.items():
+            for f in run['findings']:
+                if proposal_id in f['proposals']:
+                    out.append((f'{rid} finding {f["n"]}', f'/feedback/runs/{rid}/#did-not'))
         for c in self.checks['checks']:
             if proposal_id in c['proposals']:
                 name = self.persona(c['run'])['name'].split()[0]
@@ -487,6 +492,9 @@ class Gen__Feedback:
             done = sum(1 for i in mine if self.proposals[i]['decision'] in ('done', 'reversed'))
             cards.append(f'      <a class="card" href="/feedback/reviews/{r["id"]}/"><span class="n">{r["id"]} · {esc(r["reviewer"])} · site v{esc(r["site_version"])}</span>'
                          f'<b>{esc(r["title"])}</b><p>{len(r["points"])} points; {len(mine)} proposals, {done} done.</p></a>')
+        for rid, run in self.browser_runs.items():
+            cards.append(f'      <a class="card" href="/feedback/runs/{rid}/"><span class="n">Run {rid} · {esc(run["persona"]["name"])}, invented · in real Claude · site v{esc(run["site_version"])}</span>'
+                         f'<b>{esc(run["title"])}</b><p>{len(run["steps"])} steps, replayed; {len(run["findings"])} findings, each checked.</p></a>')
         cards.append(f'      <a class="card" href="/feedback/synthetic/"><span class="n">Study {self.study} · invented users · site v{esc(self.personas["site_version"])}</span>'
                      f'<b>Five people who do not exist, on the site as it was</b><p>{len(self.checks["checks"])} findings, each checked.</p></a>')
         return '\n'.join(['    <div class="cards">', *cards, '    </div>'])
@@ -503,6 +511,8 @@ class Gen__Feedback:
                    | {OUT / 'reviews' / r['id'] / 'index.html' for r in self.reviews}
                    | {OUT / 'synthetic' / who / 'index.html' for who in self.runs})
         for stale in OUT.rglob('index.html'):
+            if 'runs' in stale.relative_to(OUT).parts:                               # gen_runs.py writes those
+                continue
             if stale not in wanted:
                 raise SystemExit(f'{stale.relative_to(ROOT)}: nothing in data/feedback/ makes this page; remove it or add its record')
         self.put(OUT / 'index.html', self.give_page(), changed)

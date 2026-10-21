@@ -2,7 +2,7 @@
 
 > Dinis Cruz's review of customers.riskmandate.ai v0.2.1, Wednesday 21 October 2026, 1:41, as given in the memo: the memo verbatim, our reading point by point with screenshots, and the proposals it led to.
 
-*Source: <https://customers.riskmandate.ai/feedback/reviews/R001/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/reviews/R001/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

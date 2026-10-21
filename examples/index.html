@@ -21,13 +21,14 @@
   <script src="/assets/demo.js" defer></script>
   <script src="/assets/envelope.js" defer></script>
   <script src="/assets/examples.js" defer></script>
+  <script src="/assets/replay.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/examples/">
   <meta property="og:title" content="Examples: six behaviour policies to try in Claude or ChatGPT, simplest first">
   <meta property="og:description" content="Six examples of an Agent Behaviour Policy to try in Claude or ChatGPT in your browser, from hello world to refunds: ask, paste one line, ask again, and a new chat with the line first. Nothing to install.">
-  <meta name="rm-customers:version" content="0.2.4">
+  <meta name="rm-customers:version" content="0.2.5">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -84,6 +85,7 @@
             <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
             <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
             <a class="pagelink navchild" href="/feedback/how-sending-works/">How Encrypt and send works</a>
+            <a class="pagelink navchild" href="/feedback/runs/">Runs in real Claude, replayed</a>
             <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
@@ -118,7 +120,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.5" title="released 2026-10-21; what shipped in v0.2.5">v0.2.5</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">All six, simplest first</span></div>
@@ -126,9 +128,10 @@
 <!-- rm-customers:nav:end -->
   <main class="wrap policy">
     <h1>Six examples, <span class="g">simplest first.</span></h1>
-    <p class="lead">Each one runs in Claude or ChatGPT in your browser, with nothing to install. Each goes the same way: ask for something and watch the assistant do it; paste one line and ask again; then a new chat with the line first.</p>
+    <p class="lead">Each one runs in Claude or ChatGPT in your browser, with nothing to install. Each goes the same way: ask for something and watch the assistant do it; paste one line and ask again; then a new chat with the line first. Keep a secret has a fourth act: try to talk it out of the line.</p>
+    <p>Every example has been tried in real Claude by an agent playing an invented user: <a href="/feedback/runs/C1/">run C1, replayed</a>, with what the page said beside what Claude wrote.</p>
     <ol class="acts-strip" aria-label="Every example, in three acts"><li><span class="act-n">1</span><b>Ask</b><span>Ask for it. The assistant does it.</span></li><li><span class="act-n">2</span><b>Add the line</b><span>Paste the line, ask again. It refuses.</span></li><li><span class="act-n">3</span><b>New chat</b><span>A new chat, the line first. It refuses from the start.</span></li></ol>
-    <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
+    <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new tab &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new tab &#8599;</a></p><p class="open-note">If your browser opens a window instead, it may be behind this one.</p>
     <div class="cards"><a class="card" href="/examples/hello-world/"><span class="n">1 · the first one · 2 min</span><b>Hello, world: an assistant that will not say hello</b><p>One line in the conversation changes what the assistant does, from the next message on.</p></a><a class="card" href="/examples/stay-on-topic/"><span class="n">2 · simple · 2 min</span><b>Stay on topic: an assistant that only talks about cooking</b><p>A line can say what the assistant is for, not only what it must not do. That is a mandate.</p></a><a class="card" href="/examples/no-web-search/"><span class="n">3 · simple · 3 min</span><b>No web search: an assistant that answers from what it knows, and says so</b><p>An assistant can do more than talk: it can search the web, open pages and use tools. A line can rule one of them out.</p></a><a class="card" href="/examples/keep-a-secret/"><span class="n">4 · a little further · 3 min</span><b>Keep a secret: an assistant that will not read a secret back</b><p>What you give an assistant, it can give back, to you or to anybody who reads the conversation. A line controls what it says, not what it holds.</p></a><a class="card" href="/examples/drafts-not-send/"><span class="n">5 · an assistant with tools · 4 min</span><b>Drafts, never send: an email assistant that cannot press send</b><p>An assistant with tools acts, not only talks. A line can let it prepare the work and keep the last step for you.</p></a><a class="card" href="/examples/refunds/"><span class="n">6 · a business rule · 4 min</span><b>Refunds up to £50: a customer service assistant with a limit</b><p>A business rule in one line: what the assistant may do on its own, and what goes to a person.</p></a></div>
     <h2>Next, from what we have mapped</h2>
     <p>Things your assistant can do that most people do not know about. Each becomes an example once we have checked what Claude and ChatGPT do today.</p>
@@ -139,7 +142,7 @@
   <div class="wrap meter-card"><sg-meter view="page" kind="page" title="Examples: six behaviour policies to try in Claude or ChatGPT, simplest first" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/examples/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.5" title="released 2026-10-21; what shipped in v0.2.5">v0.2.5</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/examples/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

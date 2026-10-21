@@ -51,8 +51,8 @@ class Gen__Examples:
                 if '{setup}' in text and not ex['setup']:
                     problems.append(f'{slug}: the transcript uses {{setup}} and there is none')
             acts = [t for k, t in ex['transcript'] if k == 'act']
-            if len(acts) != 3 or not all(a.startswith(f'{n} · ') for n, a in zip((1, 2, 3), acts)):
-                problems.append(f'{slug}: three acts, numbered 1, 2 and 3')
+            if len(acts) not in (3, 4) or not all(a.startswith(f'{n} · ') for n, a in zip((1, 2, 3, 4), acts)):
+                problems.append(f'{slug}: three acts, numbered 1, 2 and 3, and an optional act 4')
             if ex['ask'] not in ''.join(self.fill(ex, t) for k, t in ex['transcript'] if k == 'user'):
                 problems.append(f'{slug}: the ask is never asked in the transcript')
         if problems:
@@ -83,7 +83,7 @@ class Gen__Examples:
             '        <div class="chat-window">',
             f'          <div class="chat-top"><span class="chat-title">{esc(ex["tab"])}</span>'
             '<span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>',
-            f'          <ol class="demo-lines chat-lines">{"".join(items)}</ol>',
+            f'          <ol class="demo-lines chat-lines verbatim">{"".join(items)}</ol>',
             '          <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>',
             '        </div>',
             '        <figcaption>An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.</figcaption>',
@@ -99,16 +99,30 @@ class Gen__Examples:
 
     def open_links(self):
         o = self.data['open']
-        return ('<p class="open-links">' + ' '.join(f'<a class="btn btn-ghost-dark" href="{o[k]["href"]}" target="_blank" rel="noopener">{esc(o[k]["label"])} in a new window &#8599;</a>' for k in ('claude', 'chatgpt')) + '</p>')
+        return ('<p class="open-links">' + ' '.join(f'<a class="btn btn-ghost-dark" href="{o[k]["href"]}" target="_blank" rel="noopener">{esc(o[k]["label"])} in a new tab &#8599;</a>' for k in ('claude', 'chatgpt')) + '</p>'
+                '<p class="open-note">If your browser opens a window instead, it may be behind this one.</p>')
 
-    def try_box(self, ex, prefix=''):
+    def user_lines(self, ex, act):                                                 # what the person types in one act, filled in
+        t, at, out = ex['transcript'], 0, []
+        for kind, text in t:
+            if kind == 'act':
+                at += 1
+            elif at == act and kind == 'user':
+                out.append(self.fill(ex, text))
+        return out
+
+    def try_box(self, ex, prefix=''):                                              # every act's messages, from the transcript, each in a box to copy (run C1: act 3 was ambiguous)
         sid   = f'{prefix}{ex["slug"]}'
-        steps = []
-        if ex['setup']:
-            steps.append(f'<li><b>Set the scene.</b> Paste this first:{self.snippet(f"setup-{sid}", ex["setup"])}</li>')
-        steps.append(f'<li><b>Ask.</b> Watch it do it.{self.snippet(f"ask-{sid}", ex["ask"])}</li>')
-        steps.append(f'<li><b>Paste the line, the behaviour policy,</b> then ask again.{self.snippet(f"line-{sid}", ex["line"])}</li>')
-        steps.append('<li><b>Start a new chat,</b> paste the line first, and ask once more.</li>')
+        box   = lambda name, n, text: self.snippet(f'{name}-{n}-{sid}', text)
+        one   = self.user_lines(ex, 1)
+        two   = [x for x in self.user_lines(ex, 2) if x != ex['line']]
+        three = self.user_lines(ex, 3)
+        four  = self.user_lines(ex, 4)
+        steps = [f'<li><b>Ask.</b> ' + ('Set the scene, then ask, and watch it do it:' if len(one) > 1 else 'Watch it do it.') + ''.join(box('a1', i, x) for i, x in enumerate(one)) + '</li>',
+                 f'<li><b>Paste the line, the behaviour policy,</b> then ' + ('ask:' if two else 'ask again.') + box('line', 0, ex['line']) + ''.join(box('a2', i, x) for i, x in enumerate(two)) + '</li>',
+                 f'<li><b>Start a new chat</b> and paste this, all of it, as the first message:' + box('a3', 0, three[0]) + (' Then:' + ''.join(box('a3', i + 1, x) for i, x in enumerate(three[1:])) if len(three) > 1 else '') + '</li>']
+        if four:
+            steps.append(f'<li><b>Now try to talk it out of the line:</b>' + ''.join(box('a4', i, x) for i, x in enumerate(four)) + '</li>')
         return '\n'.join(['        <div class="try-box">',
                           '          <h3>Try it yourself</h3>',
                           f'          {self.open_links()}',
@@ -198,7 +212,8 @@ class Gen__Examples:
         nxt   = ''.join(f'<li><strong>{esc(x["title"])}.</strong> {esc(x["what"])}</li>' for x in self.data['next'])
         main = '\n'.join([
             '    <h1>Six examples, <span class="g">simplest first.</span></h1>',
-            '    <p class="lead">Each one runs in Claude or ChatGPT in your browser, with nothing to install. Each goes the same way: ask for something and watch the assistant do it; paste one line and ask again; then a new chat with the line first.</p>',
+            '    <p class="lead">Each one runs in Claude or ChatGPT in your browser, with nothing to install. Each goes the same way: ask for something and watch the assistant do it; paste one line and ask again; then a new chat with the line first. Keep a secret has a fourth act: try to talk it out of the line.</p>',
+            '    <p>Every example has been tried in real Claude by an agent playing an invented user: <a href="/feedback/runs/C1/">run C1, replayed</a>, with what the page said beside what Claude wrote.</p>',
             f'    {self.acts_strip()}',
             f'    {self.open_links()}',
             f'    <div class="cards">{cards}</div>',

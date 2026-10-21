@@ -57,3 +57,12 @@ node admin/feedback/lane.mjs send "a test"                                      
 ```
 
 Each message is filed as `feedback-lane/inbox/<file>.eml` beside its `.enc`, with a line in `feedback-lane/log.jsonl`. A message becomes a review on this site only with the sender's yes, as the feedback page promises.
+
+## Runs in a real browser
+
+From v0.2.5 (R004) an agent that can drive a real browser, signed in to Claude, can play one invented user on the live site: `/feedback/runs/brief/` is what to give it, `/feedback/runs/personas/` who it may be. A run comes back as a folder: screenshots, `report.md`, and `run.json` in the shape the replays read. To add one:
+
+1. Unpack it in a folder of its own, outside the repository, and read every screenshot before anything is published: nothing of the account (names, history, email) may be in them.
+2. `data/feedback/runs/<id>/`: `report.md` as it came, `run.json` (the agent's, or ours written from the report if it sent none, as for C1), and `article.html`, our reading, with the markers `gen_runs.py` fills. Screenshots to `assets/feedback/<id>/NN.webp`.
+3. Check every finding, add the proposals it leads to in `data/feedback/proposals.json`, add `<id>` to `RUNS` in `admin/build/gen_runs.py` and the persona's `runs` in `data/feedback/runs/personas.json`.
+4. `python3 admin/build/gate.py --build`; release.

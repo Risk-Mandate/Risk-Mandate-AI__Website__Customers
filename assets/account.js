@@ -89,7 +89,7 @@
                 el('span', { class: 'dim' }, neg ? 'Read beyond your credit' : 'Your balance'),
                 el('b', { class: `account-balance${neg ? ' neg' : ''}` }, money(s.balance)),
                 el('span', { class: 'dim' }, `${money(s.spent)} spent of the ${money(start)} you started with` + (s.declined ? ` · ${money(s.declined)} not charged at your request` : ''))),
-            el('div', { class: 'account-actions' }, el('a', { class: 'btn btn-green', href: '/account/top-up.html' }, 'Top up'), exporter()))
+            el('div', { class: 'account-actions' }, el('a', { class: 'btn btn-green', href: '/account/top-up.html', title: 'A simulation: no money moves yet' }, 'Top up (a simulation)'), exporter()))
         const tiles = el('div', { class: 'account-tiles' },
             tile(`${watched.length} of ${examples.length}`, 'examples watched', '#examples'),
             tile(`${finished.length}`, 'played to the end', '#examples'),

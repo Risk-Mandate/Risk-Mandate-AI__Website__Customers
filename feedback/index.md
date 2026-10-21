@@ -2,7 +2,7 @@
 
 > Give feedback on customers.riskmandate.ai: one line by email, a voice memo that your Claude turns into a review, or a fifteen-minute interview by Claude. Criticism first; every point gets a decision and a reason; nothing is published without your yes.
 
-*Source: <https://customers.riskmandate.ai/feedback/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -138,7 +138,7 @@ As a file: [interview.txt](/feedback/prompts/interview.txt).
 - **Every point leads to a proposal with a decision:** done, proposed, a question, or declined. We do not do everything a reviewer asks, but every no has a reason, and you can see it.
 - **Nothing is published without your yes,** under your name or anonymously, as you choose. No contact details are ever published.
 
-Every review so far, and what we did: [the reviews](/feedback/reviews/index.md). The latest is [R003, Make the reviews easy to find, make the account big, and send to the agent, encrypted](/feedback/reviews/R003/index.md). We also run invented users through the site: [study S1](/feedback/synthetic/index.md).
+Every review so far, and what we did: [the reviews](/feedback/reviews/index.md). The latest is [R004, The first run in a real browser: write it up, replay it, draw it, and brief the next agent](/feedback/reviews/R004/index.md). We also run invented users through the site: [study S1](/feedback/synthetic/index.md).
 
 ---
 

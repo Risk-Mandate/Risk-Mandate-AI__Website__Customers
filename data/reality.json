@@ -236,6 +236,15 @@
       "notes": "Drawn in the browser from local storage only."
     },
     {
+      "id": "programme.runs",
+      "area": "programme",
+      "title": "Runs of browser agents playing invented users in real Claude, each replayed from its screenshots beside a flow chart, with what the page said beside what Claude wrote",
+      "status": "shipped",
+      "since": "0.2.5",
+      "where": "/feedback/runs/",
+      "notes": "Run C1 so far; the brief and the personas for the next ones are on the same pages. Invented users, real runs; not user research."
+    },
+    {
       "id": "programme.reviews",
       "area": "programme",
       "title": "Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason",

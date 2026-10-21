@@ -2,7 +2,7 @@
 
 > How the credit works: every reader starts with £50, each page costs a little by how far down it is read, a behaviour policy costs the most, and nothing is ever blocked. The meter is the newsroom's SG Meter, from api.newsroom.sgit.ai; there is no payment link yet.
 
-*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/credit/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

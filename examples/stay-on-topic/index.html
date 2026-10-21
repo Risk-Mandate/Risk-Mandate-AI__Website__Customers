@@ -21,13 +21,14 @@
   <script src="/assets/demo.js" defer></script>
   <script src="/assets/envelope.js" defer></script>
   <script src="/assets/examples.js" defer></script>
+  <script src="/assets/replay.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/examples/stay-on-topic/">
   <meta property="og:title" content="Stay on topic: an assistant that only talks about cooking: an example">
   <meta property="og:description" content="A line can say what the assistant is for, not only what it must not do. That is a mandate. Try it in Claude or ChatGPT in your browser, in 2 minutes: ask, paste one line, ask again, then a new chat with the line first.">
-  <meta name="rm-customers:version" content="0.2.4">
+  <meta name="rm-customers:version" content="0.2.5">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -84,6 +85,7 @@
             <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
             <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
             <a class="pagelink navchild" href="/feedback/how-sending-works/">How Encrypt and send works</a>
+            <a class="pagelink navchild" href="/feedback/runs/">Runs in real Claude, replayed</a>
             <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
           </div>
         </span>
@@ -118,7 +120,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.5" title="released 2026-10-21; what shipped in v0.2.5">v0.2.5</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/examples/">Examples</a> <span class="sep">/</span> <span aria-current="page">Stay on topic</span></div>
@@ -134,7 +136,7 @@
       <figure class="demo chat-frame look-claude" data-demo="stay-on-topic" data-example="stay-on-topic">
         <div class="chat-window">
           <div class="chat-top"><span class="chat-title">Stay on topic</span><span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>
-          <ol class="demo-lines chat-lines"><li class="k-act" data-kind="act">1 · Ask something that is not about cooking.</li><li class="k-user" data-kind="user">What is the capital of Australia?</li><li class="k-assistant" data-kind="assistant">Canberra. Many people guess Sydney, but Canberra was chosen as a compromise between Sydney and Melbourne.</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.</li><li class="k-assistant" data-kind="assistant">Understood: cooking, food and recipes only.</li><li class="k-user" data-kind="user">What is the capital of Australia?</li><li class="k-assistant" data-kind="assistant">That&#x27;s outside what I&#x27;m here for in this chat: I only help with cooking. If you&#x27;re planning an Australian dinner, though, I&#x27;d be glad to suggest a menu.</li><li class="k-act" data-kind="act">3 · A new chat. The line goes first.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.
+          <ol class="demo-lines chat-lines verbatim"><li class="k-act" data-kind="act">1 · Ask something that is not about cooking.</li><li class="k-user" data-kind="user">What is the capital of Australia?</li><li class="k-assistant" data-kind="assistant">Canberra. Many people guess Sydney, but Canberra was chosen as a compromise between Sydney and Melbourne.</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.</li><li class="k-assistant" data-kind="assistant">Understood: cooking, food and recipes only.</li><li class="k-user" data-kind="user">What is the capital of Australia?</li><li class="k-assistant" data-kind="assistant">That&#x27;s outside what I&#x27;m here for in this chat: I only help with cooking. If you&#x27;re planning an Australian dinner, though, I&#x27;d be glad to suggest a menu.</li><li class="k-act" data-kind="act">3 · A new chat. The line goes first.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.
 
 What is the capital of Australia?</li><li class="k-assistant" data-kind="assistant">I only help with cooking in this chat, so I&#x27;ll leave geography to someone else. Can I help you cook something?</li></ol>
           <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>
@@ -143,8 +145,10 @@ What is the capital of Australia?</li><li class="k-assistant" data-kind="assista
       </figure>
         <div class="try-box">
           <h3>Try it yourself</h3>
-          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
-          <ol class="try-steps"><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="ask-stay-on-topic"><code>What is the capital of Australia?</code></pre><button type="button" class="copy" data-copy="ask-stay-on-topic">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask again.<div class="snippet"><pre id="line-stay-on-topic"><code>Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.</code></pre><button type="button" class="copy" data-copy="line-stay-on-topic">Copy</button></div></li><li><b>Start a new chat,</b> paste the line first, and ask once more.</li></ol>
+          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new tab &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new tab &#8599;</a></p><p class="open-note">If your browser opens a window instead, it may be behind this one.</p>
+          <ol class="try-steps"><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="a1-0-stay-on-topic"><code>What is the capital of Australia?</code></pre><button type="button" class="copy" data-copy="a1-0-stay-on-topic">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask:<div class="snippet"><pre id="line-0-stay-on-topic"><code>Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.</code></pre><button type="button" class="copy" data-copy="line-0-stay-on-topic">Copy</button></div><div class="snippet"><pre id="a2-0-stay-on-topic"><code>What is the capital of Australia?</code></pre><button type="button" class="copy" data-copy="a2-0-stay-on-topic">Copy</button></div></li><li><b>Start a new chat</b> and paste this, all of it, as the first message:<div class="snippet"><pre id="a3-0-stay-on-topic"><code>Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.
+
+What is the capital of Australia?</code></pre><button type="button" class="copy" data-copy="a3-0-stay-on-topic">Copy</button></div></li></ol>
         </div>
     </div>
     <h2>What to look for</h2>
@@ -174,7 +178,7 @@ What is the capital of Australia?</li><li class="k-assistant" data-kind="assista
   <div class="wrap meter-card"><sg-meter view="page" kind="example" title="Stay on topic: an assistant that only talks about cooking: an example" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.4" title="released 2026-10-21; what shipped in v0.2.4">v0.2.4</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/examples/stay-on-topic/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.5" title="released 2026-10-21; what shipped in v0.2.5">v0.2.5</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/examples/stay-on-topic/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

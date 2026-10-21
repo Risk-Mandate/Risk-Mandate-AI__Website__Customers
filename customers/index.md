@@ -2,7 +2,7 @@
 
 > The customers of the first batch and where each is: started, first behaviour policy with its rows and gaps, milestone steps done, credit used and topped up, and follow-ups recorded. Generated from data/customers.json on every release. One worked example, marked as such, shows the shape.
 
-*Source: <https://customers.riskmandate.ai/customers/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/customers/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

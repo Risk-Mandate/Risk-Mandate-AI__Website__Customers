@@ -73,7 +73,7 @@ const WORD_RULES = Object.freeze([
     { name : 'British English: behaviour, authorise, licence'             , re : /\b(?:behavior|behaviors|authorize[ds]?|authorizing|a license\b)/ },
     { name : 'beta users: the brief says customers'                       , re : /(?<!\bnot )\bbeta users?\b/i                        },
 ])
-const WORD_EXEMPT = Object.freeze(['docs/brief/our-first-customers.md', 'docs/brief/memos/', 'data/feedback/memos/', 'data/feedback/synthetic/runs/', SELF, 'tests/unit/validate.test.js', 'LICENSE'])
+const WORD_EXEMPT = Object.freeze(['docs/brief/our-first-customers.md', 'docs/brief/memos/', 'data/feedback/memos/', 'data/feedback/synthetic/runs/', 'data/feedback/runs/', SELF, 'tests/unit/validate.test.js', 'LICENSE'])
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
@@ -194,9 +194,9 @@ function proseOf(rel, root = ROOT) {                                            
     return text
 }
 
-const MENTION_RE = [/<(blockquote|q|dl|p)\b[^>]*\bclass="[^"]*\bverbatim\b[^"]*"[^>]*>[\s\S]*?<\/\1>/gi, /"quote"\s*:\s*"(?:[^"\\]|\\.)*"/g,   // a reviewer's or an invented user's own words, kept as given
+const MENTION_RE = [/<(blockquote|q|dl|p|ol)\b[^>]*\bclass="[^"]*\bverbatim\b[^"]*"[^>]*>[\s\S]*?<\/\1>/gi, /"quote"\s*:\s*"(?:[^"\\]|\\.)*"/g,   // a reviewer's or an invented user's own words, kept as given
                     /```[\s\S]*?```/g, /<pre\b[\s\S]*?<\/pre>/gi, /<code\b[^>]*>[\s\S]*?<\/code>/gi, /`[^`\n]*`/g,
-                    /"[^"\n]{1,80}"/g, /&quot;[^&\n]{1,80}&quot;/g, /(?<![\w])'[^'\n]{1,80}'(?![\w])/g, /&#x27;[^&\n]{1,80}&#x27;/g, /\*[^*\n]{1,60}\*/g, /<em>[^<\n]{1,60}<\/em>/gi, /<i>[^<\n]{1,60}<\/i>/gi]
+                    /"[^"\n]{1,80}"/g, /“[^”\n]{1,80}”/g, /&quot;[^&\n]{1,80}&quot;/g, /(?<![\w])'[^'\n]{1,80}'(?![\w])/g, /&#x27;[^&\n]{1,80}&#x27;/g, /\*[^*\n]{1,60}\*/g, /<em>[^<\n]{1,60}<\/em>/gi, /<i>[^<\n]{1,60}<\/i>/gi]
 
 function withoutMentions(text) {                                                  // naming a word in quotes, emphasis or code is not using it; the replacement keeps every index
     let out = text
@@ -258,7 +258,7 @@ function checkInternalLinks(root = ROOT) {
         if (!anchors.has(rel)) anchors.set(rel, anchorsIn(rel, root))
         return anchors.get(rel)
     }
-    for (const rel of walkTree(root).filter(f => f.endsWith('.html') || f.endsWith('.md'))) {
+    for (const rel of walkTree(root).filter(f => (f.endsWith('.html') || f.endsWith('.md')) && !/^data\/feedback\/runs\/[^/]+\/report\.md$/.test(f))) {   // a run's report as it came links its own folder; the published copy (feedback/runs/) is checked
         for (const { href, line } of linksIn(rel, root)) {
             if (!isInternalLink(href)) continue
             const { rel : target, fragment } = resolveLink(rel, href, root)
@@ -400,6 +400,7 @@ function checkHouseWords(root = ROOT) {
     const problems = []
     for (const rel of walkTree(root).filter(f => /\.(html|md|json|txt)$/.test(f) && !f.endsWith('llms-full.txt'))) {
         if (WORD_EXEMPT.some(e => rel === e || rel.startsWith(e))) continue
+        if (/^feedback\/runs\/[^/]+\/(report\.md|run\.json)$/.test(rel)) continue   // a run's report and record, copied as they came (gen_runs.py)
         if (rel.endsWith('.md') && exists(rel.slice(0, -3) + '.html', root) && !read(rel.slice(0, -3) + '.html', root).includes('rm-customers:source')) continue   // a twin repeats its page
         const prose = proseOf(rel, root)
         if (prose === null) continue

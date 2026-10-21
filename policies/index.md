@@ -2,7 +2,7 @@
 
 > The behaviour policies a customer installs first: four for Claude Code, each a line and a hook, two for ChatGPT and Claude, each a line; a starter pack that installs the four in one go; and all 24 of riskmandate.ai's rules they come from.
 
-*Source: <https://customers.riskmandate.ai/policies/> · site v0.2.4 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

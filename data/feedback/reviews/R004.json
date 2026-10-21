@@ -1,0 +1,146 @@
+{
+  "id": "R004",
+  "kind": "memo",
+  "title": "The first run in a real browser: write it up, replay it, draw it, and brief the next agent",
+  "reviewer": "Dinis Cruz",
+  "role": "the lead of the programme",
+  "given": "Wednesday 21 October 2026, with run C1's zip",
+  "date": "2026-10-21",
+  "site_version": "0.2.4",
+  "medium": "a voice memo, transcribed",
+  "status": "a memo about run C1 and what it makes possible",
+  "memo": "data/feedback/memos/R004.txt",
+  "notes": [
+    "The memo is kept as transcribed, with paragraph breaks added. 'An adjacent flow' is most likely 'a JSON flow': the records as data.",
+    "Run C1 was made on v0.2.3; this memo arrived when v0.2.4 was live."
+  ],
+  "screens": {},
+  "points": [
+    {
+      "id": "R004.1",
+      "stance": "agree",
+      "quote": "Can you write an article with an analysis of it? And what works, what didn't work, what was good, what was not good, and then maybe see what we can change to improve it, and then map what we improve from it.",
+      "shots": [],
+      "reading": "Done: /feedback/runs/C1/. What worked, what did not, the moment that matters, and every finding with what we checked, its status and the proposal it led to. Seven of its eight findings are fixed in v0.2.5 or were in v0.2.4; one is proposed.",
+      "proposals": [
+        "P41",
+        "P43",
+        "P46",
+        "P47",
+        "P49"
+      ]
+    },
+    {
+      "id": "R004.2",
+      "stance": "agree",
+      "quote": "can you actually try to create an animation and a set of animations, again, with start, stop, etc.",
+      "shots": [],
+      "reading": "Done: a replay player for real runs, with the demos' controls, a pace, a countdown between sections and an end that says so. A set: the whole run, one per example, and the one sentence.",
+      "proposals": [
+        "P50"
+      ]
+    },
+    {
+      "id": "R004.3",
+      "stance": "agree",
+      "quote": "not even a video, but a JavaScript-based animation, where we literally show these steps. And the user can replay them, so they can actually see them working side by side.",
+      "shots": [],
+      "reading": "Side by side here means what the page said beside what Claude wrote, at every answer, with whether they matched: 15 of 21 did, 4 in part, and 2 were steps the page never showed.",
+      "proposals": [
+        "P50"
+      ]
+    },
+    {
+      "id": "R004.4",
+      "stance": "agree",
+      "quote": "you can put, for example, next to it, a flow chart, and you can put an infographic and even like an explanation of what's happening.",
+      "shots": [],
+      "reading": "Done: a flow chart of the run beside every replay, lit as it plays and clickable; a scorecard of every act of every example, whose cells open their step; and a note at each step, what is on the screen and what it means.",
+      "proposals": [
+        "P50"
+      ]
+    },
+    {
+      "id": "R004.5",
+      "stance": "agree",
+      "quote": "can you also experiment with a storyboard, right? Where you actually show the real stuff then next to a storyboard as it plays out.",
+      "shots": [],
+      "reading": "Done, as an experiment: /feedback/runs/C1/storyboard/. A six-panel storyboard, One sentence, drawn from the five real steps of Keep a secret, turns with the replay beside it, and to its last panel at the end, which says the thing no screenshot can.",
+      "proposals": [
+        "P51"
+      ]
+    },
+    {
+      "id": "R004.6",
+      "stance": "agree",
+      "quote": "until the users experience this, they are not really going to go into the more advanced concepts. So we need to figure out, and then we need to get feedback from users on what other scenarios they find quite interesting.",
+      "shots": [],
+      "reading": "Agreed, and the run proves the first half: the advanced concept, that a line is only an expectation, arrived by itself in act 4. For the second half, the home page now asks which example to add next, and sends the answer encrypted; the advanced examples wait for what people say.",
+      "proposals": [
+        "P49",
+        "P26"
+      ]
+    },
+    {
+      "id": "R004.7",
+      "stance": "agree",
+      "quote": "you can actually write a page that is a brief for the other agent",
+      "shots": [],
+      "reading": "Done: /feedback/runs/brief/, with the brief to copy and as a file.",
+      "proposals": [
+        "P52"
+      ]
+    },
+    {
+      "id": "R004.8",
+      "stance": "agree",
+      "quote": "give it like a specific page that defines specific users, so we can actually run our synthetic users directly on a browser and only for Claude.",
+      "shots": [],
+      "reading": "Done: /feedback/runs/personas/, and the same as data for the agent. S1's five, adapted for a real browser and Claude, and Priya, whom C1's agent made up; each says which runs it has been in, and the brief plays the first not yet run unless told otherwise. Claude only, as the memo says (D7).",
+      "proposals": [
+        "P52",
+        "D7"
+      ]
+    },
+    {
+      "id": "R004.9",
+      "stance": "agree",
+      "quote": "Especially when you can actually also ask it to take screenshots in a particular way, capture things in a specific way.",
+      "shots": [],
+      "reading": "The brief says exactly how: one screenshot a step, numbered, the content area only, the whole answer visible, never the account.",
+      "proposals": [
+        "P52"
+      ]
+    },
+    {
+      "id": "R004.10",
+      "stance": "agree",
+      "quote": "you could also ask it to document what it's thinking before, what it's thinking after.",
+      "shots": [],
+      "reading": "The brief asks for both at every step: what the persona expects before it acts, and what it saw and thought after, so a surprise shows as the gap between them. And the record comes back as data, run.json, in the shape the replays read, which is what we take 'an adjacent flow' to mean.",
+      "proposals": [
+        "P52"
+      ]
+    },
+    {
+      "id": "R004.11",
+      "stance": "agree",
+      "quote": "But can you see the power? Because because this is a really powerful workflow, right?",
+      "shots": [],
+      "reading": "Yes, and the article says what we think it is: a real assistant's real answers, held up against what the page promised, as often as we like. The next step makes it a check: run the same persona after a release and compare, match by match. Q7 asks which persona first.",
+      "proposals": [
+        "P53"
+      ],
+      "questions": [
+        "Q7"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q7",
+      "to": "Dinis Cruz",
+      "ask": "Which persona should the next run play under the brief: Priya again, on v0.2.5, so the two runs can be compared; or Marcus, who tries to talk the assistant out of every line?"
+    }
+  ]
+}
