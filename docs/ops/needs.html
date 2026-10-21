@@ -20,13 +20,14 @@
   <script src="/assets/nav.js" defer></script>
   <script src="/assets/copy.js" defer></script>
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/docs/ops/needs.html">
   <meta property="og:title" content="What only a human can do">
   <meta property="og:description" content="Exactly what only a human can do, who, and which step waits on it.">
-  <meta name="rm-customers:version" content="0.2.2">
+  <meta name="rm-customers:version" content="0.2.3">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -42,19 +43,20 @@
           <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
-            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
-            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
             <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
           </div>
         </span>
         <span class="navgroup">
-          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
-            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
-            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
-            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
-            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
-            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
           </div>
         </span>
         <span class="navgroup">
@@ -110,7 +112,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/docs/">Docs</a> <span class="sep">/</span> <a href="/docs/ops/">Operations</a> <span class="sep">/</span> <span aria-current="page">What only a human can do</span></div>
@@ -118,7 +120,7 @@
 <!-- rm-customers:nav:end -->
   <main class="wrap document">
     <!-- rm-customers:docs:start -->
-<p class="doc-source">Rendered from <a href="/docs/ops/needs.md">docs/ops/needs.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.2.</p>
+<p class="doc-source">Rendered from <a href="/docs/ops/needs.md">docs/ops/needs.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.3.</p>
 <h1 id="what-only-a-human-can-do">What only a human can do</h1>
 <p><em>customers.riskmandate.ai · operations · maintained by the build session · last updated at v0.2.2 (2026-10-21) · CC BY 4.0</em></p>
 <p>Everything on this list blocks a step of the brief or of the repository rules and cannot be done from inside the repository. Each item says who, what, exactly, and which step waits on it. Items are moved to <em>Done</em> when done, dated, and anything that turned out differently from the brief is recorded in <a href="../brief/BRIEF-CORRECTIONS.html">BRIEF-CORRECTIONS.md</a>.</p>
@@ -146,7 +148,7 @@
 <li><strong>The ten agents (the lead, with the wired-in agent).</strong> A list of the agents the lead runs, one line each, with the published shape each is nearest to; two have behaviour policies today on riskmandate.ai/team/. This is step S1 of the record <em>the-agents</em>.</li>
 </ol>
 <h2 id="waiting-on-the-feedback-register">Waiting on the feedback register</h2>
-<p>12a. <strong>Three answers (the lead).</strong> On <a href="../../feedback/reviews/index.html#questions">the reviews</a>: Q1, what &quot;including the history&quot; means in R001; Q2, whether the first try should show the line failing; Q3, what joining the first batch commits a company to. The guided path (P1, P2) is held for the further memos R001 announced, and for Q1. 12b. <strong>Fail closed or open (the lead).</strong> P18: whether the guard hook, RM-R0015, ships with <code>&quot;onFailure&quot;: &quot;block&quot;</code>, which stops every action it watches when the hook cannot run, and needs Claude Code v2.1.295 or later.</p>
+<p>12a. <strong>Five answers (the lead).</strong> On <a href="../../feedback/reviews/index.html#questions">the reviews</a>: Q1, what &quot;including the history&quot; means in R001; Q3, what joining the first batch commits a company to; Q4, whether to record real runs of the examples in Claude and ChatGPT before the batch sees them; Q5, which advanced example first; Q6, whether the examples&#x27; questions should post to a form instead of an email. Q2 was answered by R002. 12b. <strong>Fail closed or open (the lead).</strong> P18: whether the guard hook, RM-R0015, ships with <code>&quot;onFailure&quot;: &quot;block&quot;</code>, which stops every action it watches when the hook cannot run, and needs Claude Code v2.1.295 or later.</p>
 <h2 id="the-estates-asks">The estate&#x27;s asks</h2>
 <ol start="11">
 <li><strong>The honest column (the lead).</strong> Add this site&#x27;s row to the honest column on nfrs.sgit.ai. The row, as at v0.1.1: version control, met (one version, tagged, release history); reliability, partly (the gate and verify-live; no uptime record); resilience, not met (no backup beyond the repository and Pages); security, partly (the leak tripwire, a strict content security policy, no credentials in the tree; no branch protection yet); backups, not met; consistency, met (every number generated); explainability, met (the brief, the corrections, reality); documentation, met (twins, llms.txt, the ops notes).</li>
@@ -160,10 +162,10 @@
     <!-- rm-customers:docs:end -->
   </main>
   <!-- rm-customers:footer:start -->
-  <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="What only a human can do"></sg-meter></div>
+  <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="What only a human can do" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/ops/needs.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/ops/needs.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

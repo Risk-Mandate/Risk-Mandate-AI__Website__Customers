@@ -116,7 +116,7 @@ class Gen__Storyboards:
                  f'<div class="demo-browser"><div class="demo-bar"><span></span><span></span><span></span><b>{esc(demo["title"])}</b></div><ol class="demo-lines chat">{lines}</ol></div>')
         return '\n'.join([f'  <figure class="demo demo-{demo["frame"]}-frame" data-demo="{demo_id}">',
                           f'    {frame}',
-                          f'    <figcaption>{esc(demo["caption"])} <button type="button" class="demo-replay">Play again</button></figcaption>',
+                          f'    <figcaption>{esc(demo["caption"])}</figcaption>',
                           '  </figure>'])
 
     def board_page(self, slug):

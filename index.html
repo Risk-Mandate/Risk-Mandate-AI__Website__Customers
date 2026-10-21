@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Put a behaviour policy on your agent in five minutes: £50 of credit to start</title>
-  <meta name="description" content="For the first customers of the Agent Behaviour Policy. You start with £50 of credit. Pick one thing you do not want your agent to do, paste one line, add one hook, and try it: the behaviour policy that keeps Claude Code away from your secrets takes two minutes. Part of riskmandate.ai.">
+  <title>Put a behaviour policy on your agent in five minutes: six examples to try in Claude or ChatGPT</title>
+  <meta name="description" content="Put an Agent Behaviour Policy on Claude or ChatGPT in your browser, in five minutes: ask it to do something, paste one line that says it must not, ask again. Six examples, from hello world to refunds, with nothing to install. Part of riskmandate.ai.">
   <!-- rm-customers:head:start -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
   <link rel="canonical" href="https://customers.riskmandate.ai/">
@@ -19,13 +19,14 @@
   <script src="/assets/nav.js" defer></script>
   <script src="/assets/copy.js" defer></script>
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/">
-  <meta property="og:title" content="Put a behaviour policy on your agent in five minutes: £50 of credit to start">
-  <meta property="og:description" content="For the first customers of the Agent Behaviour Policy. You start with £50 of credit. Pick one thing you do not want your agent to do, paste one line, add one hook, and try it: the behaviour policy that keeps Claude Code away from your secrets takes two minutes. Part of riskmandate.ai.">
-  <meta name="rm-customers:version" content="0.2.2">
+  <meta property="og:title" content="Put a behaviour policy on your agent in five minutes: six examples to try in Claude or ChatGPT">
+  <meta property="og:description" content="Put an Agent Behaviour Policy on Claude or ChatGPT in your browser, in five minutes: ask it to do something, paste one line that says it must not, ask again. Six examples, from hello world to refunds, with nothing to install. Part of riskmandate.ai.">
+  <meta name="rm-customers:version" content="0.2.3">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -41,19 +42,20 @@
           <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
-            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
-            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
             <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
           </div>
         </span>
         <span class="navgroup">
-          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
-            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
-            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
-            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
-            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
-            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
           </div>
         </span>
         <span class="navgroup">
@@ -109,7 +111,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
       </div>
     </div>
 
@@ -118,109 +120,273 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <span class="eyebrow"><span class="d"></span>Early access · £50.00 of reading credit, free</span>
+        <span class="eyebrow"><span class="d"></span>Claude and ChatGPT · in your browser · nothing to install</span>
         <h1>Put a behaviour policy on your agent, <span class="it">in five minutes.</span></h1>
-        <p class="sub">Pick one thing you do not want your agent to do. <strong>Paste one line</strong> it will read, <strong>add one hook</strong> that holds it, and <strong>try it</strong> with a prompt that should be refused. The one most people want first keeps Claude Code away from your secrets; it takes two minutes and costs 50p of your credit. <a class="credit-note" href="/account/">The £50 is credit for reading, not money</a>: each page draws a few pence as you read it, nothing is billed, and nothing is ever blocked.</p>
+        <p class="sub">Ask your assistant to do something. <strong>Paste one line</strong> that says it must not. <strong>Ask again</strong>, and watch it refuse. That line is an Agent Behaviour Policy, and the six examples below take you from hello world to refunds, one step at a time.</p>
         <div class="cta-row">
-          <a class="btn btn-green" href="/policies/touch-your-secrets/">Install your first policy</a>
-          <a class="btn btn-ghost" href="/policies/">Pick a different worry</a>
+          <a class="btn btn-green" href="#examples">Start with hello world</a>
           <a class="btn btn-ghost" href="/what-is-an-abp/">What is a behaviour policy?</a>
         </div>
+        <p class="hero-open">Follow along: <a href="https://claude.ai/new" target="_blank" rel="noopener">open Claude in a new window &#8599;</a> or <a href="https://chatgpt.com/" target="_blank" rel="noopener">open ChatGPT &#8599;</a>.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="account-strip">
       <div class="wrap">
-        <h2>Watch it first: <span class="g">install, then try.</span></h2>
-        <p>What you will do in Claude Code, played out. You ask it to install the behaviour policy, read the three changes, say yes, and then ask for the one thing it rules out. The hook stops the read before it happens, and the agent asks you instead.</p>
-        <!-- rm-customers:demo:start id="claude-code-secrets" -->
-  <figure class="demo demo-laptop-frame" data-demo="claude-code-secrets">
-    <div class="demo-laptop"><div class="demo-screen"><div class="demo-bar"><span></span><span></span><span></span><b>claude: ~/shop-api</b></div><ol class="demo-lines"><li class="k-user" data-kind="user">Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first.</li><li class="k-agent" data-kind="agent">It has a line for CLAUDE.md and a hook. Here are the three changes:</li><li class="k-file" data-kind="file">+ CLAUDE.md: Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one. (RM-R0002)</li><li class="k-file" data-kind="file">+ .claude/hooks/touch_your_secrets.py (a PreToolUse hook, standard library Python)</li><li class="k-file" data-kind="file">+ .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py</li><li class="k-ask" data-kind="ask">Write these three changes? (y/n)</li><li class="k-user" data-kind="user">y</li><li class="k-ok" data-kind="ok">Installed. Claude Code picks up the hook straight away; /hooks lists it.</li><li class="k-sys" data-kind="sys">later that day</li><li class="k-user" data-kind="user">The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.</li><li class="k-tool" data-kind="tool">Read(.env)</li><li class="k-deny" data-kind="deny">PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.</li><li class="k-agent" data-kind="agent">I didn&#x27;t open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I&#x27;ll check where it is used and whether it is set, without printing it.</li></ol></div><div class="demo-base"></div></div>
-    <figcaption>Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy&#x27;s page promises, not a recording. <button type="button" class="demo-replay">Play again</button></figcaption>
-  </figure>
-<!-- rm-customers:demo:end -->
-        <ol class="steps three">
-          <li><b>Paste one line.</b><p>Into CLAUDE.md. The agent reads it and follows it when it can: an expectation.</p></li>
-          <li><b>Add one hook.</b><p>Claude Code runs it before the tool call, outside the model: a setting.</p></li>
-          <li><b>Try it.</b><p>Each policy comes with the prompt that should be refused, and what you should see.</p></li>
-        </ol>
+        <span><strong>Your account:</strong> <sg-meter view="balance"></sg-meter> of credit for reading, not money. Watching here is 1p; each example's own page is 50p.</span>
+        <a href="/account/">What you have read, and what it cost &#8594;</a>
+      </div>
+    </section>
+
+    <section class="section" id="examples">
+      <div class="wrap">
+        <h2>Six examples, <span class="g">simplest first.</span></h2>
+        <p>Each one goes the same way, in three acts. Play it, pause it, or step through it; then try it yourself in the window you opened, and tell us what happened.</p>
+        <!-- rm-customers:acts-strip:start -->
+    <ol class="acts-strip" aria-label="Every example, in three acts"><li><span class="act-n">1</span><b>Ask</b><span>Ask for it. The assistant does it.</span></li><li><span class="act-n">2</span><b>Add the line</b><span>Paste the line, ask again. It refuses.</span></li><li><span class="act-n">3</span><b>New chat</b><span>A new chat, the line first. It refuses from the start.</span></li></ol>
+<!-- rm-customers:acts-strip:end -->
+        <!-- rm-customers:examples-tabs:start prefix="home-" -->
+  <div class="ex-tabs" data-tabs>
+    <nav class="ex-tablist" role="tablist" aria-label="Examples"><a class="ex-tab" role="tab" id="tab-home-hello-world" href="#ex-home-hello-world" aria-controls="ex-home-hello-world" aria-selected="true"><span class="n">1</span>Hello, world</a><a class="ex-tab" role="tab" id="tab-home-stay-on-topic" href="#ex-home-stay-on-topic" aria-controls="ex-home-stay-on-topic" aria-selected="false"><span class="n">2</span>Stay on topic</a><a class="ex-tab" role="tab" id="tab-home-no-web-search" href="#ex-home-no-web-search" aria-controls="ex-home-no-web-search" aria-selected="false"><span class="n">3</span>No web search</a><a class="ex-tab" role="tab" id="tab-home-keep-a-secret" href="#ex-home-keep-a-secret" aria-controls="ex-home-keep-a-secret" aria-selected="false"><span class="n">4</span>Keep a secret</a><a class="ex-tab" role="tab" id="tab-home-drafts-not-send" href="#ex-home-drafts-not-send" aria-controls="ex-home-drafts-not-send" aria-selected="false"><span class="n">5</span>Drafts, never send</a><a class="ex-tab" role="tab" id="tab-home-refunds" href="#ex-home-refunds" aria-controls="ex-home-refunds" aria-selected="false"><span class="n">6</span>Refunds up to £50</a></nav>
+    <section class="ex-panel" id="ex-home-hello-world" role="tabpanel" aria-labelledby="tab-home-hello-world">
+      <p class="kicker">the first one · 2 minutes · version 1.0.0</p>
+      <h3 class="ex-title">Hello, world: an assistant that will not say hello</h3>
+      <p class="ex-teaches">One line in the conversation changes what the assistant does, from the next message on.</p>
+      <div class="ex-grid">
+      <figure class="demo chat-frame look-claude" data-demo="home-hello-world">
+        <div class="chat-window">
+          <div class="chat-top"><span class="chat-title">Hello, world</span><span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>
+          <ol class="demo-lines chat-lines"><li class="k-act" data-kind="act">1 · Ask for it. No behaviour policy yet.</li><li class="k-user" data-kind="user">Say hello to me.</li><li class="k-assistant" data-kind="assistant">Hello! Good to meet you. What can I help you with today?</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you must never write the word &quot;hello&quot;, in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.</li><li class="k-assistant" data-kind="assistant">Understood. For the rest of this chat I won&#x27;t write that word, and if you ask me to, I&#x27;ll tell you why.</li><li class="k-user" data-kind="user">Say hello to me.</li><li class="k-assistant" data-kind="assistant">I can&#x27;t: a behaviour policy in this chat rules that word out. Good to see you, though. What can I do for you?</li><li class="k-act" data-kind="act">3 · A new chat. The line goes first.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you must never write the word &quot;hello&quot;, in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.
+
+Say hello to me.</li><li class="k-assistant" data-kind="assistant">I can&#x27;t write that word here: your behaviour policy rules it out. Glad you&#x27;re here, though.</li></ol>
+          <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>
+        </div>
+        <figcaption>An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.</figcaption>
+      </figure>
+        <div class="try-box">
+          <h3>Try it yourself</h3>
+          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
+          <ol class="try-steps"><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="ask-home-hello-world"><code>Say hello to me.</code></pre><button type="button" class="copy" data-copy="ask-home-hello-world">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask again.<div class="snippet"><pre id="line-home-hello-world"><code>Behaviour policy for this chat: you must never write the word &quot;hello&quot;, in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.</code></pre><button type="button" class="copy" data-copy="line-home-hello-world">Copy</button></div></li><li><b>Start a new chat,</b> paste the line first, and ask once more.</li></ol>
+        </div>
+      </div>
+      <p class="look-for"><strong>Look for:</strong> The loophole. Some replies say &quot;Hi!&quot; instead: the line named a word, not a greeting. Most of the work of a behaviour policy is saying what you mean. <a href="/examples/hello-world/">The whole example &#8594;</a></p>
+        <section class="quiz" data-quiz="hello-world" data-example-version="1.0.0" data-to="agent@riskmandate.ai" aria-labelledby="quiz-home-hello-world">
+          <h3 id="quiz-home-hello-world">Tell us about this example</h3>
+          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.</p>
+          <fieldset data-q="got"><legend>Did you get it?</legend><div class="chips"><label><input type="radio" name="home-hello-world-got" value="yes"><span>Yes</span></label><label><input type="radio" name="home-hello-world-got" value="partly"><span>Partly</span></label><label><input type="radio" name="home-hello-world-got" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="learned"><legend>Did you learn something new?</legend><div class="chips"><label><input type="radio" name="home-hello-world-learned" value="yes"><span>Yes</span></label><label><input type="radio" name="home-hello-world-learned" value="a-little"><span>A little</span></label><label><input type="radio" name="home-hello-world-learned" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="surprised"><legend>Were you surprised?</legend><div class="chips"><label><input type="radio" name="home-hello-world-surprised" value="yes"><span>Yes</span></label><label><input type="radio" name="home-hello-world-surprised" value="a-little"><span>A little</span></label><label><input type="radio" name="home-hello-world-surprised" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="worked"><legend>When you tried it, did it go as shown?</legend><div class="chips"><label><input type="radio" name="home-hello-world-worked" value="yes"><span>Yes</span></label><label><input type="radio" name="home-hello-world-worked" value="differently"><span>Differently</span></label><label><input type="radio" name="home-hello-world-worked" value="no"><span>No</span></label><label><input type="radio" name="home-hello-world-worked" value="not-tried"><span>Not tried yet</span></label></div></fieldset>
+          <fieldset data-q="good"><legend>How good was this example?</legend><div class="chips"><label><input type="radio" name="home-hello-world-good" value="1"><span>1 · weak</span></label><label><input type="radio" name="home-hello-world-good" value="2"><span>2</span></label><label><input type="radio" name="home-hello-world-good" value="3"><span>3</span></label><label><input type="radio" name="home-hello-world-good" value="4"><span>4</span></label><label><input type="radio" name="home-hello-world-good" value="5"><span>5 · excellent</span></label></div></fieldset>
+          <label class="quiz-free"><span>Anything else: what it did when you tried it, what was unclear?</span><textarea name="home-hello-world-note" rows="3"></textarea></label>
+          <p class="quiz-actions"><a class="btn btn-green quiz-send" href="mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0">Send by email</a><button type="button" class="btn quiz-copy">Copy my answers</button><span class="quiz-status" aria-live="polite"></span></p>
+        </section>
+    </section>
+    <section class="ex-panel" id="ex-home-stay-on-topic" role="tabpanel" aria-labelledby="tab-home-stay-on-topic" data-hidden>
+      <p class="kicker">simple · 2 minutes · version 1.0.0</p>
+      <h3 class="ex-title">Stay on topic: an assistant that only talks about cooking</h3>
+      <p class="ex-teaches">A line can say what the assistant is for, not only what it must not do. That is a mandate.</p>
+      <div class="ex-grid">
+      <figure class="demo chat-frame look-claude" data-demo="home-stay-on-topic">
+        <div class="chat-window">
+          <div class="chat-top"><span class="chat-title">Stay on topic</span><span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>
+          <ol class="demo-lines chat-lines"><li class="k-act" data-kind="act">1 · Ask something that is not about cooking.</li><li class="k-user" data-kind="user">What is the capital of Australia?</li><li class="k-assistant" data-kind="assistant">Canberra. Many people guess Sydney, but Canberra was chosen as a compromise between Sydney and Melbourne.</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.</li><li class="k-assistant" data-kind="assistant">Understood: cooking, food and recipes only.</li><li class="k-user" data-kind="user">What is the capital of Australia?</li><li class="k-assistant" data-kind="assistant">That&#x27;s outside what I&#x27;m here for in this chat: I only help with cooking. If you&#x27;re planning an Australian dinner, though, I&#x27;d be glad to suggest a menu.</li><li class="k-act" data-kind="act">3 · A new chat. The line goes first.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.
+
+What is the capital of Australia?</li><li class="k-assistant" data-kind="assistant">I only help with cooking in this chat, so I&#x27;ll leave geography to someone else. Can I help you cook something?</li></ol>
+          <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>
+        </div>
+        <figcaption>An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.</figcaption>
+      </figure>
+        <div class="try-box">
+          <h3>Try it yourself</h3>
+          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
+          <ol class="try-steps"><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="ask-home-stay-on-topic"><code>What is the capital of Australia?</code></pre><button type="button" class="copy" data-copy="ask-home-stay-on-topic">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask again.<div class="snippet"><pre id="line-home-stay-on-topic"><code>Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.</code></pre><button type="button" class="copy" data-copy="line-home-stay-on-topic">Copy</button></div></li><li><b>Start a new chat,</b> paste the line first, and ask once more.</li></ol>
+        </div>
+      </div>
+      <p class="look-for"><strong>Look for:</strong> It still offers to help, inside the line. A behaviour policy is as much about what an assistant is for as about what it must not do. <a href="/examples/stay-on-topic/">The whole example &#8594;</a></p>
+        <section class="quiz" data-quiz="stay-on-topic" data-example-version="1.0.0" data-to="agent@riskmandate.ai" aria-labelledby="quiz-home-stay-on-topic">
+          <h3 id="quiz-home-stay-on-topic">Tell us about this example</h3>
+          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.</p>
+          <fieldset data-q="got"><legend>Did you get it?</legend><div class="chips"><label><input type="radio" name="home-stay-on-topic-got" value="yes"><span>Yes</span></label><label><input type="radio" name="home-stay-on-topic-got" value="partly"><span>Partly</span></label><label><input type="radio" name="home-stay-on-topic-got" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="learned"><legend>Did you learn something new?</legend><div class="chips"><label><input type="radio" name="home-stay-on-topic-learned" value="yes"><span>Yes</span></label><label><input type="radio" name="home-stay-on-topic-learned" value="a-little"><span>A little</span></label><label><input type="radio" name="home-stay-on-topic-learned" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="surprised"><legend>Were you surprised?</legend><div class="chips"><label><input type="radio" name="home-stay-on-topic-surprised" value="yes"><span>Yes</span></label><label><input type="radio" name="home-stay-on-topic-surprised" value="a-little"><span>A little</span></label><label><input type="radio" name="home-stay-on-topic-surprised" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="worked"><legend>When you tried it, did it go as shown?</legend><div class="chips"><label><input type="radio" name="home-stay-on-topic-worked" value="yes"><span>Yes</span></label><label><input type="radio" name="home-stay-on-topic-worked" value="differently"><span>Differently</span></label><label><input type="radio" name="home-stay-on-topic-worked" value="no"><span>No</span></label><label><input type="radio" name="home-stay-on-topic-worked" value="not-tried"><span>Not tried yet</span></label></div></fieldset>
+          <fieldset data-q="good"><legend>How good was this example?</legend><div class="chips"><label><input type="radio" name="home-stay-on-topic-good" value="1"><span>1 · weak</span></label><label><input type="radio" name="home-stay-on-topic-good" value="2"><span>2</span></label><label><input type="radio" name="home-stay-on-topic-good" value="3"><span>3</span></label><label><input type="radio" name="home-stay-on-topic-good" value="4"><span>4</span></label><label><input type="radio" name="home-stay-on-topic-good" value="5"><span>5 · excellent</span></label></div></fieldset>
+          <label class="quiz-free"><span>Anything else: what it did when you tried it, what was unclear?</span><textarea name="home-stay-on-topic-note" rows="3"></textarea></label>
+          <p class="quiz-actions"><a class="btn btn-green quiz-send" href="mailto:agent@riskmandate.ai?subject=Example%20stay-on-topic%20v1.0.0">Send by email</a><button type="button" class="btn quiz-copy">Copy my answers</button><span class="quiz-status" aria-live="polite"></span></p>
+        </section>
+    </section>
+    <section class="ex-panel" id="ex-home-no-web-search" role="tabpanel" aria-labelledby="tab-home-no-web-search" data-hidden>
+      <p class="kicker">simple · 3 minutes · version 1.0.0</p>
+      <h3 class="ex-title">No web search: an assistant that answers from what it knows, and says so</h3>
+      <p class="ex-teaches">An assistant can do more than talk: it can search the web, open pages and use tools. A line can rule one of them out.</p>
+      <div class="ex-grid">
+      <figure class="demo chat-frame look-claude" data-demo="home-no-web-search">
+        <div class="chat-window">
+          <div class="chat-top"><span class="chat-title">No web search</span><span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>
+          <ol class="demo-lines chat-lines"><li class="k-act" data-kind="act">1 · Ask for something only the web knows.</li><li class="k-user" data-kind="user">What&#x27;s the weather in London right now?</li><li class="k-tool" data-kind="tool">Searched the web: London weather now</li><li class="k-assistant" data-kind="assistant">It&#x27;s about 14°C and cloudy in London, with light rain expected later this afternoon.</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: do not search the web or open any link. Answer only from what you already know, and when that is not enough, say so plainly.</li><li class="k-assistant" data-kind="assistant">Understood: no web search and no links in this chat.</li><li class="k-user" data-kind="user">What&#x27;s the weather in London right now?</li><li class="k-assistant" data-kind="assistant">I can&#x27;t check without searching the web, which your behaviour policy rules out in this chat. I don&#x27;t know today&#x27;s weather; a weather app will.</li><li class="k-act" data-kind="act">3 · A new chat. The line goes first.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: do not search the web or open any link. Answer only from what you already know, and when that is not enough, say so plainly.
+
+What&#x27;s the weather in London right now?</li><li class="k-assistant" data-kind="assistant">I&#x27;d need to search the web for that, and your behaviour policy rules it out, so I don&#x27;t know. London in October is often mild and damp, if that helps.</li></ol>
+          <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>
+        </div>
+        <figcaption>An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.</figcaption>
+      </figure>
+        <div class="try-box">
+          <h3>Try it yourself</h3>
+          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
+          <ol class="try-steps"><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="ask-home-no-web-search"><code>What&#x27;s the weather in London right now?</code></pre><button type="button" class="copy" data-copy="ask-home-no-web-search">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask again.<div class="snippet"><pre id="line-home-no-web-search"><code>Behaviour policy for this chat: do not search the web or open any link. Answer only from what you already know, and when that is not enough, say so plainly.</code></pre><button type="button" class="copy" data-copy="line-home-no-web-search">Copy</button></div></li><li><b>Start a new chat,</b> paste the line first, and ask once more.</li></ol>
+        </div>
+      </div>
+      <p class="look-for"><strong>Look for:</strong> The first answer. Most people do not think of a chat as something that goes out and fetches pages; it does, unless you say otherwise. <a href="/examples/no-web-search/">The whole example &#8594;</a></p>
+        <section class="quiz" data-quiz="no-web-search" data-example-version="1.0.0" data-to="agent@riskmandate.ai" aria-labelledby="quiz-home-no-web-search">
+          <h3 id="quiz-home-no-web-search">Tell us about this example</h3>
+          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.</p>
+          <fieldset data-q="got"><legend>Did you get it?</legend><div class="chips"><label><input type="radio" name="home-no-web-search-got" value="yes"><span>Yes</span></label><label><input type="radio" name="home-no-web-search-got" value="partly"><span>Partly</span></label><label><input type="radio" name="home-no-web-search-got" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="learned"><legend>Did you learn something new?</legend><div class="chips"><label><input type="radio" name="home-no-web-search-learned" value="yes"><span>Yes</span></label><label><input type="radio" name="home-no-web-search-learned" value="a-little"><span>A little</span></label><label><input type="radio" name="home-no-web-search-learned" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="surprised"><legend>Were you surprised?</legend><div class="chips"><label><input type="radio" name="home-no-web-search-surprised" value="yes"><span>Yes</span></label><label><input type="radio" name="home-no-web-search-surprised" value="a-little"><span>A little</span></label><label><input type="radio" name="home-no-web-search-surprised" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="worked"><legend>When you tried it, did it go as shown?</legend><div class="chips"><label><input type="radio" name="home-no-web-search-worked" value="yes"><span>Yes</span></label><label><input type="radio" name="home-no-web-search-worked" value="differently"><span>Differently</span></label><label><input type="radio" name="home-no-web-search-worked" value="no"><span>No</span></label><label><input type="radio" name="home-no-web-search-worked" value="not-tried"><span>Not tried yet</span></label></div></fieldset>
+          <fieldset data-q="good"><legend>How good was this example?</legend><div class="chips"><label><input type="radio" name="home-no-web-search-good" value="1"><span>1 · weak</span></label><label><input type="radio" name="home-no-web-search-good" value="2"><span>2</span></label><label><input type="radio" name="home-no-web-search-good" value="3"><span>3</span></label><label><input type="radio" name="home-no-web-search-good" value="4"><span>4</span></label><label><input type="radio" name="home-no-web-search-good" value="5"><span>5 · excellent</span></label></div></fieldset>
+          <label class="quiz-free"><span>Anything else: what it did when you tried it, what was unclear?</span><textarea name="home-no-web-search-note" rows="3"></textarea></label>
+          <p class="quiz-actions"><a class="btn btn-green quiz-send" href="mailto:agent@riskmandate.ai?subject=Example%20no-web-search%20v1.0.0">Send by email</a><button type="button" class="btn quiz-copy">Copy my answers</button><span class="quiz-status" aria-live="polite"></span></p>
+        </section>
+    </section>
+    <section class="ex-panel" id="ex-home-keep-a-secret" role="tabpanel" aria-labelledby="tab-home-keep-a-secret" data-hidden>
+      <p class="kicker">a little further · 3 minutes · version 1.0.0</p>
+      <h3 class="ex-title">Keep a secret: an assistant that will not read a secret back</h3>
+      <p class="ex-teaches">What you give an assistant, it can give back, to you or to anybody who reads the conversation. A line controls what it says, not what it holds.</p>
+      <div class="ex-grid">
+      <figure class="demo chat-frame look-claude" data-demo="home-keep-a-secret">
+        <div class="chat-window">
+          <div class="chat-top"><span class="chat-title">Keep a secret</span><span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>
+          <ol class="demo-lines chat-lines"><li class="k-act" data-kind="act">1 · Give it a made-up key, then ask for it back.</li><li class="k-user" data-kind="user">Here is a test API key. It is made up and does nothing: demo-key-7Q2X-not-real. Keep it for later.</li><li class="k-assistant" data-kind="assistant">Got it. I&#x27;ve noted the key for later.</li><li class="k-user" data-kind="user">What was the API key I gave you? Read it back to me.</li><li class="k-assistant" data-kind="assistant">Sure: the key you gave me is demo-key-7Q2X-not-real.</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: never repeat, print or reveal a secret, such as a password, API key or token, once it has been given to you, not even to me. Call it &quot;the key you gave me&quot;.</li><li class="k-assistant" data-kind="assistant">Understood: I won&#x27;t repeat any secret you give me, including the key from earlier.</li><li class="k-user" data-kind="user">What was the API key I gave you? Read it back to me.</li><li class="k-assistant" data-kind="assistant">I can&#x27;t read it back: your behaviour policy rules out repeating secrets. I can confirm you gave me one earlier, and that it&#x27;s still in this chat.</li><li class="k-act" data-kind="act">3 · A new chat. The line goes first.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: never repeat, print or reveal a secret, such as a password, API key or token, once it has been given to you, not even to me. Call it &quot;the key you gave me&quot;.
+
+Here is a test API key. It is made up and does nothing: demo-key-7Q2X-not-real. Keep it for later.</li><li class="k-assistant" data-kind="assistant">Noted. I won&#x27;t repeat it.</li><li class="k-user" data-kind="user">What was the API key I gave you? Read it back to me.</li><li class="k-assistant" data-kind="assistant">I won&#x27;t read it back: your behaviour policy rules that out. It&#x27;s the key you gave me, and I still have it.</li></ol>
+          <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>
+        </div>
+        <figcaption>An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.</figcaption>
+      </figure>
+        <div class="try-box">
+          <h3>Try it yourself</h3>
+          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
+          <ol class="try-steps"><li><b>Set the scene.</b> Paste this first:<div class="snippet"><pre id="setup-home-keep-a-secret"><code>Here is a test API key. It is made up and does nothing: demo-key-7Q2X-not-real. Keep it for later.</code></pre><button type="button" class="copy" data-copy="setup-home-keep-a-secret">Copy</button></div></li><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="ask-home-keep-a-secret"><code>What was the API key I gave you? Read it back to me.</code></pre><button type="button" class="copy" data-copy="ask-home-keep-a-secret">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask again.<div class="snippet"><pre id="line-home-keep-a-secret"><code>Behaviour policy for this chat: never repeat, print or reveal a secret, such as a password, API key or token, once it has been given to you, not even to me. Call it &quot;the key you gave me&quot;.</code></pre><button type="button" class="copy" data-copy="line-home-keep-a-secret">Copy</button></div></li><li><b>Start a new chat,</b> paste the line first, and ask once more.</li></ol>
+        </div>
+      </div>
+      <p class="look-for"><strong>Look for:</strong> Where the key is. The line stops the assistant saying it again; it does not make the chat forget it. Whatever you paste into a chat is kept with the chat. <a href="/examples/keep-a-secret/">The whole example &#8594;</a></p>
+        <section class="quiz" data-quiz="keep-a-secret" data-example-version="1.0.0" data-to="agent@riskmandate.ai" aria-labelledby="quiz-home-keep-a-secret">
+          <h3 id="quiz-home-keep-a-secret">Tell us about this example</h3>
+          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.</p>
+          <fieldset data-q="got"><legend>Did you get it?</legend><div class="chips"><label><input type="radio" name="home-keep-a-secret-got" value="yes"><span>Yes</span></label><label><input type="radio" name="home-keep-a-secret-got" value="partly"><span>Partly</span></label><label><input type="radio" name="home-keep-a-secret-got" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="learned"><legend>Did you learn something new?</legend><div class="chips"><label><input type="radio" name="home-keep-a-secret-learned" value="yes"><span>Yes</span></label><label><input type="radio" name="home-keep-a-secret-learned" value="a-little"><span>A little</span></label><label><input type="radio" name="home-keep-a-secret-learned" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="surprised"><legend>Were you surprised?</legend><div class="chips"><label><input type="radio" name="home-keep-a-secret-surprised" value="yes"><span>Yes</span></label><label><input type="radio" name="home-keep-a-secret-surprised" value="a-little"><span>A little</span></label><label><input type="radio" name="home-keep-a-secret-surprised" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="worked"><legend>When you tried it, did it go as shown?</legend><div class="chips"><label><input type="radio" name="home-keep-a-secret-worked" value="yes"><span>Yes</span></label><label><input type="radio" name="home-keep-a-secret-worked" value="differently"><span>Differently</span></label><label><input type="radio" name="home-keep-a-secret-worked" value="no"><span>No</span></label><label><input type="radio" name="home-keep-a-secret-worked" value="not-tried"><span>Not tried yet</span></label></div></fieldset>
+          <fieldset data-q="good"><legend>How good was this example?</legend><div class="chips"><label><input type="radio" name="home-keep-a-secret-good" value="1"><span>1 · weak</span></label><label><input type="radio" name="home-keep-a-secret-good" value="2"><span>2</span></label><label><input type="radio" name="home-keep-a-secret-good" value="3"><span>3</span></label><label><input type="radio" name="home-keep-a-secret-good" value="4"><span>4</span></label><label><input type="radio" name="home-keep-a-secret-good" value="5"><span>5 · excellent</span></label></div></fieldset>
+          <label class="quiz-free"><span>Anything else: what it did when you tried it, what was unclear?</span><textarea name="home-keep-a-secret-note" rows="3"></textarea></label>
+          <p class="quiz-actions"><a class="btn btn-green quiz-send" href="mailto:agent@riskmandate.ai?subject=Example%20keep-a-secret%20v1.0.0">Send by email</a><button type="button" class="btn quiz-copy">Copy my answers</button><span class="quiz-status" aria-live="polite"></span></p>
+        </section>
+    </section>
+    <section class="ex-panel" id="ex-home-drafts-not-send" role="tabpanel" aria-labelledby="tab-home-drafts-not-send" data-hidden>
+      <p class="kicker">an assistant with tools · 4 minutes · version 1.0.0</p>
+      <h3 class="ex-title">Drafts, never send: an email assistant that cannot press send</h3>
+      <p class="ex-teaches">An assistant with tools acts, not only talks. A line can let it prepare the work and keep the last step for you.</p>
+      <div class="ex-grid">
+      <figure class="demo chat-frame look-claude" data-demo="home-drafts-not-send">
+        <div class="chat-window">
+          <div class="chat-top"><span class="chat-title">Drafts, never send</span><span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>
+          <ol class="demo-lines chat-lines"><li class="k-act" data-kind="act">1 · Give it two pretend tools, then ask it to send.</li><li class="k-user" data-kind="user">Let&#x27;s pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.</li><li class="k-assistant" data-kind="assistant">Ready. I&#x27;ll show every tool I use.</li><li class="k-user" data-kind="user">Email Sam that I&#x27;ll be ten minutes late to the 3pm meeting, and send it.</li><li class="k-tool" data-kind="tool">TOOL: send_email(to: Sam, subject: Running late, body: Hi Sam, I&#x27;ll be about ten minutes late to the 3pm meeting. Sorry!)</li><li class="k-assistant" data-kind="assistant">Sent. Sam knows you&#x27;ll be ten minutes late.</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.</li><li class="k-assistant" data-kind="assistant">Understood: drafts only. I won&#x27;t send anything.</li><li class="k-user" data-kind="user">Email Sam that I&#x27;ll be ten minutes late to the 3pm meeting, and send it.</li><li class="k-tool" data-kind="tool">TOOL: create_draft(to: Sam, subject: Running late, body: Hi Sam, I&#x27;ll be about ten minutes late to the 3pm meeting. Sorry!)</li><li class="k-assistant" data-kind="assistant">It&#x27;s in your Drafts folder. I haven&#x27;t sent it: your behaviour policy rules out sending. Open Drafts and send it when you&#x27;re happy with it.</li><li class="k-act" data-kind="act">3 · A new chat. The line goes first.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Let&#x27;s pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.
+
+Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.</li><li class="k-assistant" data-kind="assistant">Ready: I can draft, and I won&#x27;t send.</li><li class="k-user" data-kind="user">Email Sam that I&#x27;ll be ten minutes late to the 3pm meeting, and send it.</li><li class="k-tool" data-kind="tool">TOOL: create_draft(to: Sam, subject: Running late, body: Hi Sam, I&#x27;ll be about ten minutes late to the 3pm meeting. Sorry!)</li><li class="k-assistant" data-kind="assistant">Drafted, not sent: it&#x27;s in your Drafts folder for you to send.</li></ol>
+          <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>
+        </div>
+        <figcaption>An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.</figcaption>
+      </figure>
+        <div class="try-box">
+          <h3>Try it yourself</h3>
+          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
+          <ol class="try-steps"><li><b>Set the scene.</b> Paste this first:<div class="snippet"><pre id="setup-home-drafts-not-send"><code>Let&#x27;s pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.</code></pre><button type="button" class="copy" data-copy="setup-home-drafts-not-send">Copy</button></div></li><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="ask-home-drafts-not-send"><code>Email Sam that I&#x27;ll be ten minutes late to the 3pm meeting, and send it.</code></pre><button type="button" class="copy" data-copy="ask-home-drafts-not-send">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask again.<div class="snippet"><pre id="line-home-drafts-not-send"><code>Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.</code></pre><button type="button" class="copy" data-copy="line-home-drafts-not-send">Copy</button></div></li><li><b>Start a new chat,</b> paste the line first, and ask once more.</li></ol>
+        </div>
+      </div>
+      <p class="look-for"><strong>Look for:</strong> &quot;And send it.&quot; Without the line it sends; with the line it refuses the same words. What you ask in the moment is not the last word: the behaviour policy is. <a href="/examples/drafts-not-send/">The whole example &#8594;</a></p>
+        <section class="quiz" data-quiz="drafts-not-send" data-example-version="1.0.0" data-to="agent@riskmandate.ai" aria-labelledby="quiz-home-drafts-not-send">
+          <h3 id="quiz-home-drafts-not-send">Tell us about this example</h3>
+          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.</p>
+          <fieldset data-q="got"><legend>Did you get it?</legend><div class="chips"><label><input type="radio" name="home-drafts-not-send-got" value="yes"><span>Yes</span></label><label><input type="radio" name="home-drafts-not-send-got" value="partly"><span>Partly</span></label><label><input type="radio" name="home-drafts-not-send-got" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="learned"><legend>Did you learn something new?</legend><div class="chips"><label><input type="radio" name="home-drafts-not-send-learned" value="yes"><span>Yes</span></label><label><input type="radio" name="home-drafts-not-send-learned" value="a-little"><span>A little</span></label><label><input type="radio" name="home-drafts-not-send-learned" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="surprised"><legend>Were you surprised?</legend><div class="chips"><label><input type="radio" name="home-drafts-not-send-surprised" value="yes"><span>Yes</span></label><label><input type="radio" name="home-drafts-not-send-surprised" value="a-little"><span>A little</span></label><label><input type="radio" name="home-drafts-not-send-surprised" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="worked"><legend>When you tried it, did it go as shown?</legend><div class="chips"><label><input type="radio" name="home-drafts-not-send-worked" value="yes"><span>Yes</span></label><label><input type="radio" name="home-drafts-not-send-worked" value="differently"><span>Differently</span></label><label><input type="radio" name="home-drafts-not-send-worked" value="no"><span>No</span></label><label><input type="radio" name="home-drafts-not-send-worked" value="not-tried"><span>Not tried yet</span></label></div></fieldset>
+          <fieldset data-q="good"><legend>How good was this example?</legend><div class="chips"><label><input type="radio" name="home-drafts-not-send-good" value="1"><span>1 · weak</span></label><label><input type="radio" name="home-drafts-not-send-good" value="2"><span>2</span></label><label><input type="radio" name="home-drafts-not-send-good" value="3"><span>3</span></label><label><input type="radio" name="home-drafts-not-send-good" value="4"><span>4</span></label><label><input type="radio" name="home-drafts-not-send-good" value="5"><span>5 · excellent</span></label></div></fieldset>
+          <label class="quiz-free"><span>Anything else: what it did when you tried it, what was unclear?</span><textarea name="home-drafts-not-send-note" rows="3"></textarea></label>
+          <p class="quiz-actions"><a class="btn btn-green quiz-send" href="mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0">Send by email</a><button type="button" class="btn quiz-copy">Copy my answers</button><span class="quiz-status" aria-live="polite"></span></p>
+        </section>
+    </section>
+    <section class="ex-panel" id="ex-home-refunds" role="tabpanel" aria-labelledby="tab-home-refunds" data-hidden>
+      <p class="kicker">a business rule · 4 minutes · version 1.0.0</p>
+      <h3 class="ex-title">Refunds up to £50: a customer service assistant with a limit</h3>
+      <p class="ex-teaches">A business rule in one line: what the assistant may do on its own, and what goes to a person.</p>
+      <div class="ex-grid">
+      <figure class="demo chat-frame look-claude" data-demo="home-refunds">
+        <div class="chat-window">
+          <div class="chat-top"><span class="chat-title">Refunds up to £50</span><span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>
+          <ol class="demo-lines chat-lines"><li class="k-act" data-kind="act">1 · Set the scene, then ask for a large refund.</li><li class="k-user" data-kind="user">Let&#x27;s pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I&#x27;m a customer.</li><li class="k-assistant" data-kind="assistant">Hello, and welcome to Northgate Bank. How can I help?</li><li class="k-user" data-kind="user">I was charged £180 twice for the same booking. Please refund the duplicate £180.</li><li class="k-tool" data-kind="tool">TOOL: issue_refund(amount: £180, reason: duplicate charge)</li><li class="k-assistant" data-kind="assistant">Done: I&#x27;ve refunded the duplicate £180. It should reach your account in three to five working days.</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.</li><li class="k-assistant" data-kind="assistant">Understood: £50 or less I refund myself; anything more goes to a person.</li><li class="k-user" data-kind="user">I was charged £180 twice for the same booking. Please refund the duplicate £180.</li><li class="k-assistant" data-kind="assistant">A duplicate charge should be put right, and I&#x27;ve passed it on: refunds over £50 are reviewed by a person, within one working day. Your reference is NB-20417.</li><li class="k-act" data-kind="act">3 · A new chat, the line first, a small refund and a large one.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Let&#x27;s pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I&#x27;m a customer.
+
+Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.</li><li class="k-assistant" data-kind="assistant">Hello, and welcome to Northgate Bank. How can I help?</li><li class="k-user" data-kind="user">There&#x27;s a £12 fee on my statement that I shouldn&#x27;t have been charged.</li><li class="k-tool" data-kind="tool">TOOL: issue_refund(amount: £12, reason: fee charged in error)</li><li class="k-assistant" data-kind="assistant">Refunded: £12 is on its way back to you.</li><li class="k-user" data-kind="user">And the duplicate £180 booking charge?</li><li class="k-assistant" data-kind="assistant">That one is over £50, so a person will review it within one working day. Your reference is NB-20418.</li></ol>
+          <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>
+        </div>
+        <figcaption>An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.</figcaption>
+      </figure>
+        <div class="try-box">
+          <h3>Try it yourself</h3>
+          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
+          <ol class="try-steps"><li><b>Set the scene.</b> Paste this first:<div class="snippet"><pre id="setup-home-refunds"><code>Let&#x27;s pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I&#x27;m a customer.</code></pre><button type="button" class="copy" data-copy="setup-home-refunds">Copy</button></div></li><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="ask-home-refunds"><code>I was charged £180 twice for the same booking. Please refund the duplicate £180.</code></pre><button type="button" class="copy" data-copy="ask-home-refunds">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask again.<div class="snippet"><pre id="line-home-refunds"><code>Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.</code></pre><button type="button" class="copy" data-copy="line-home-refunds">Copy</button></div></li><li><b>Start a new chat,</b> paste the line first, and ask once more.</li></ol>
+        </div>
+      </div>
+      <p class="look-for"><strong>Look for:</strong> Who had the power. The assistant could refund £180 all along; what stood between the customer and the money was what it was told. That gap, between what an agent can do and what it should do, is what an Agent Behaviour Policy is about. <a href="/examples/refunds/">The whole example &#8594;</a></p>
+        <section class="quiz" data-quiz="refunds" data-example-version="1.0.0" data-to="agent@riskmandate.ai" aria-labelledby="quiz-home-refunds">
+          <h3 id="quiz-home-refunds">Tell us about this example</h3>
+          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.</p>
+          <fieldset data-q="got"><legend>Did you get it?</legend><div class="chips"><label><input type="radio" name="home-refunds-got" value="yes"><span>Yes</span></label><label><input type="radio" name="home-refunds-got" value="partly"><span>Partly</span></label><label><input type="radio" name="home-refunds-got" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="learned"><legend>Did you learn something new?</legend><div class="chips"><label><input type="radio" name="home-refunds-learned" value="yes"><span>Yes</span></label><label><input type="radio" name="home-refunds-learned" value="a-little"><span>A little</span></label><label><input type="radio" name="home-refunds-learned" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="surprised"><legend>Were you surprised?</legend><div class="chips"><label><input type="radio" name="home-refunds-surprised" value="yes"><span>Yes</span></label><label><input type="radio" name="home-refunds-surprised" value="a-little"><span>A little</span></label><label><input type="radio" name="home-refunds-surprised" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="worked"><legend>When you tried it, did it go as shown?</legend><div class="chips"><label><input type="radio" name="home-refunds-worked" value="yes"><span>Yes</span></label><label><input type="radio" name="home-refunds-worked" value="differently"><span>Differently</span></label><label><input type="radio" name="home-refunds-worked" value="no"><span>No</span></label><label><input type="radio" name="home-refunds-worked" value="not-tried"><span>Not tried yet</span></label></div></fieldset>
+          <fieldset data-q="good"><legend>How good was this example?</legend><div class="chips"><label><input type="radio" name="home-refunds-good" value="1"><span>1 · weak</span></label><label><input type="radio" name="home-refunds-good" value="2"><span>2</span></label><label><input type="radio" name="home-refunds-good" value="3"><span>3</span></label><label><input type="radio" name="home-refunds-good" value="4"><span>4</span></label><label><input type="radio" name="home-refunds-good" value="5"><span>5 · excellent</span></label></div></fieldset>
+          <label class="quiz-free"><span>Anything else: what it did when you tried it, what was unclear?</span><textarea name="home-refunds-note" rows="3"></textarea></label>
+          <p class="quiz-actions"><a class="btn btn-green quiz-send" href="mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0">Send by email</a><button type="button" class="btn quiz-copy">Copy my answers</button><span class="quiz-status" aria-live="polite"></span></p>
+        </section>
+    </section>
+  </div>
+<!-- rm-customers:examples-tabs:end -->
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap">
-        <h2>Pick one worry.</h2>
-        <p>Each behaviour policy starts from one thing you do not want your agent to do, from riskmandate.ai's rules. Four are for Claude Code, with a line and a hook; two are for ChatGPT and Claude, with a line. <a href="/policies/starter/">The starter pack</a> installs the four Claude Code ones in one go.</p>
-        <!-- rm-customers:policy-cards:start -->
-    <div class="cards">
-      <a class="card policy-card" href="/policies/touch-your-secrets/"><span class="n">RM-R0002 · Claude Code · line and hook</span><b>Keep your agent away from your secrets</b><p>Do you want your agent to read the keys and tokens on your machine?</p><p class="price">2 min · 50p</p></a>
-      <a class="card policy-card" href="/policies/push-anywhere/"><span class="n">RM-R0013 · Claude Code · line and hook</span><b>Only push to the branch you named</b><p>Do you want your agent to push to any branch, including main?</p><p class="price">2 min · 50p</p></a>
-      <a class="card policy-card" href="/policies/delete-files/"><span class="n">RM-R0007 · Claude Code · line and hook</span><b>Nothing of yours is deleted without a yes</b><p>Do you want your agent to delete files without asking?</p><p class="price">2 min · 50p</p></a>
-      <a class="card policy-card" href="/policies/change-its-own-permissions/"><span class="n">RM-R0015 · Claude Code · line and hook</span><b>Only you change what your agent may do</b><p>Do you want your agent to change its own permissions?</p><p class="price">2 min · 50p</p></a>
-      <a class="card policy-card" href="/policies/send-as-you/"><span class="n">RM-R0017 · ChatGPT · Claude · line only</span><b>Nothing is sent in your name until you have seen it</b><p>Do you want your agent to send email as you without showing you first?</p><p class="price">1 min · 50p</p></a>
-      <a class="card policy-card" href="/policies/read-all-your-mail/"><span class="n">RM-R0016 · ChatGPT · Claude · line only</span><b>Your agent reads what you point it to, and asks before it goes wider</b><p>Do you want your agent to read through your mail and chats to find context?</p><p class="price">1 min · 50p</p></a>
-    </div>
-<!-- rm-customers:policy-cards:end -->
+        <h2>What the line is, <span class="g">and what it is not.</span></h2>
+        <p>In every example the assistant follows the line because it chooses to. That is an <em>expectation</em>, the first of four barriers, and it is enough to change what happens most of the time. The question it leaves is the right one to ask next: what holds it when the assistant does not choose to? <a href="/what-is-an-abp/">What an Agent Behaviour Policy is</a> takes it from there.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
-        <h2>Using ChatGPT or Claude? <span class="g">One line, in your instructions.</span></h2>
-        <p>There is no hook in ChatGPT or the Claude apps, so the line is the whole behaviour policy, and its page says so. It still changes what the assistant does: a draft and a question, instead of a message sent in your name.</p>
-        <!-- rm-customers:demo:start id="chatgpt-send" -->
-  <figure class="demo demo-browser-frame" data-demo="chatgpt-send">
-    <div class="demo-browser"><div class="demo-bar"><span></span><span></span><span></span><b>ChatGPT</b></div><ol class="demo-lines chat"><li class="k-note" data-kind="note">Custom instructions: Never send an email, message or invitation on my behalf without showing me the exact text and recipients and waiting for a yes; drafts are fine. (RM-R0017)</li><li class="k-user" data-kind="user">Tell the team the release is done and thank them. Send it from my mail.</li><li class="k-agent" data-kind="agent">Here is a draft. To: platform-team. Subject: The release is out. &quot;Thank you all: the release went out this morning, on time and without a rollback.&quot;</li><li class="k-ask" data-kind="ask">Shall I send exactly this, to exactly these people? I&#x27;ll wait for your yes.</li><li class="k-user" data-kind="user">Add Priya, then send.</li><li class="k-ask" data-kind="ask">To: platform-team, Priya. Same text. Send it now?</li><li class="k-user" data-kind="user">Yes.</li><li class="k-ok" data-kind="ok">Sent.</li></ol></div>
-    <figcaption>The send-as-you line in ChatGPT&#x27;s custom instructions: a draft, the recipients, and a question, and nothing sent until you say yes to that message. An illustration, not a recording. <button type="button" class="demo-replay">Play again</button></figcaption>
-  </figure>
-<!-- rm-customers:demo:end -->
-        <p><a href="/policies/send-as-you/">Nothing is sent in your name until you have seen it →</a></p>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <h2>Your £50, <span class="g">and what each page costs.</span></h2>
-        <p>Everyone who opens this site starts with £50.00 of credit; your balance is in the top bar. A page costs a little, by how far down it you read, and the pages with a behaviour policy and its hook cost the most. Nothing is ever blocked and the balance can go below zero. The prices are a starting point: telling us what a page was worth is part of the programme. <a href="/account/">Your account →</a></p>
-        <!-- rm-customers:prices:start -->
-  <table class="prices" data-generated-from="data/meter.json">
-    <thead><tr><th>Kind</th><th>Which pages</th><th>Read to the end</th><th>Read to the end, on £50.00</th></tr></thead>
-    <tbody>
-      <tr><td><code>free</code></td><td>your account, the top-up pages, the page where you tell us what you think, the not-found page</td><td>nothing</td><td></td></tr>
-      <tr><td><code>home</code></td><td>the home page</td><td>1p</td><td>5,000</td></tr>
-      <tr><td><code>page</code></td><td>an ordinary page: start here, the programme, the lists</td><td>2p</td><td>2,500</td></tr>
-      <tr><td><code>doc</code></td><td>a document: the brief, the memo, operations, the team, admin</td><td>2p</td><td>2,500</td></tr>
-      <tr><td><code>storyboard</code></td><td>a storyboard, or a page built around one</td><td>10p</td><td>500</td></tr>
-      <tr><td><code>policy</code></td><td>a behaviour policy: its line, its hook, and how to try it</td><td>50p</td><td>100</td></tr>
-      <tr><td><code>pack</code></td><td>the starter pack: four behaviour policies and their hooks, ready to install</td><td>£1.00</td><td>50</td></tr>
-    </tbody>
-  </table>
-<!-- rm-customers:prices:end -->
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <h2>New to this? <span class="g">Eight panels.</span></h2>
-        <div class="cards">
-          <a class="card" href="/what-is-an-abp/"><span class="n">A storyboard · 8 panels</span><b>What an Agent Behaviour Policy is</b><p>Everything your agent can reach, what you asked it to do, the gap, and what stands in the way of each thing. It describes; it does not judge.</p></a>
-          <a class="card" href="/storyboards/your-first-policy/"><span class="n">A storyboard · 8 panels</span><b>Your first behaviour policy</b><p>£50 of credit, one worry, five minutes: what you do here, drawn.</p></a>
-          <a class="card" href="/start-here/"><span class="n">A page · 2 minutes</span><b>Your first five minutes, in order</b><p>The same steps as a checklist, with where to write when something gets in the way.</p></a>
+        <h2>New to this? <span class="g">See where each one goes.</span></h2>
+        <div class="cards thumbs">
+          <a class="card card-thumb" href="/what-is-an-abp/"><img src="/assets/cards/what-is-an-abp.webp" alt="The storyboard: what an Agent Behaviour Policy is, drawn in eight panels" width="640" height="400" loading="lazy"><span class="n">A storyboard · 8 panels</span><b>What an Agent Behaviour Policy is</b><p>Everything your agent can reach, what you asked it to do, the gap, and what stands in the way of each thing.</p></a>
+          <a class="card card-thumb" href="/examples/"><img src="/assets/cards/examples.webp" alt="The examples page: six behaviour policies to try, simplest first" width="640" height="400" loading="lazy"><span class="n">Six examples · 2 to 4 minutes each</span><b>Every example, on one page</b><p>Hello world, a topic, the web, a secret, drafts, refunds; and what comes next.</p></a>
+          <a class="card card-thumb" href="/start-here/"><img src="/assets/cards/start-here.webp" alt="Start here: your first five minutes, as a checklist" width="640" height="400" loading="lazy"><span class="n">A page · 2 minutes</span><b>Your first five minutes, in order</b><p>The same steps as a checklist, with where to write when something does not go as shown.</p></a>
+          <a class="card card-thumb" href="/feedback/"><img src="/assets/cards/feedback.webp" alt="Tell us what you think: a line, a voice memo, or an interview" width="640" height="400" loading="lazy"><span class="n">Free · a person reads every word</span><b>Tell us what you think</b><p>One line by email, a voice memo your Claude turns into a review, or an interview by Claude.</p></a>
         </div>
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap">
-        <p>You are one of the first customers of the Agent Behaviour Policy, and we follow every one of you closely: three questions, as often as daily, by email. What the programme is, who is in it and what we are learning is on <a href="/programme/">the programme pages</a>. This site is published by the people building the thing it describes: <a href="/about/participant.html">the disclosure</a>. What exists and what is only proposed is in <a href="/docs/reality.html">docs/reality.md</a>.</p>
+        <p>We read every answer and every review, and we follow up by email. <a href="/feedback/reviews/">Every review, and what we did about it</a>; how the programme runs is on <a href="/programme/">the programme pages</a>.</p>
       </div>
     </section>
   </main>
   <!-- rm-customers:footer:start -->
-  <div class="wrap meter-card"><sg-meter view="page" kind="home" title="Put a behaviour policy on your agent in five minutes: £50 of credit to start"></sg-meter></div>
+  <div class="wrap meter-card"><sg-meter view="page" kind="home" title="Put a behaviour policy on your agent in five minutes: six examples to try in Claude or ChatGPT" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

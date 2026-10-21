@@ -2,7 +2,7 @@
 
 > Do you want your agent to send email as you without showing you first? The line for your agent, and a prompt to try it with, in 1 minute. From riskmandate.ai's RM-R0017.
 
-*Source: <https://customers.riskmandate.ai/policies/send-as-you/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/send-as-you/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -50,7 +50,7 @@ Copy
   6. To: platform-team, Priya. Same text. Send it now?
   7. Yes.
   8. Sent.
-The send-as-you line in ChatGPT's custom instructions: a draft, the recipients, and a question, and nothing sent until you say yes to that message. An illustration, not a recording. Play again
+The send-as-you line in ChatGPT's custom instructions: a draft, the recipients, and a question, and nothing sent until you say yes to that message. An illustration, not a recording.
 
 ## What this is, and what it is not
 

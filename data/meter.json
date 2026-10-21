@@ -15,6 +15,7 @@
     { "kind": "page",       "price": 2,   "what": "an ordinary page: start here, the programme, the lists" },
     { "kind": "doc",        "price": 2,   "what": "a document: the brief, the memo, operations, the team, admin" },
     { "kind": "storyboard", "price": 10,  "what": "a storyboard, or a page built around one" },
+    { "kind": "example",    "price": 50,  "what": "an example: a behaviour policy you try in Claude or ChatGPT, act by act" },
     { "kind": "policy",     "price": 50,  "what": "a behaviour policy: its line, its hook, and how to try it" },
     { "kind": "pack",       "price": 100, "what": "the starter pack: four behaviour policies and their hooks, ready to install" }
   ],
@@ -24,6 +25,8 @@
     ["/feedback/",              "doc"],
     ["/404.html",               "free"],
     ["/policies/starter/",      "pack"],
+    ["/examples/index.html",    "page"],
+    ["/examples/",              "example"],
     ["/policies/index.html",    "page"],
     ["/policies/",              "policy"],
     ["/what-is-an-abp/",        "storyboard"],

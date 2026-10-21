@@ -199,7 +199,8 @@
     {
       "id": "Q2",
       "to": "Dinis Cruz",
-      "ask": "Should the first try show the line failing? An honest demonstration of a line being ignored is hard to stage without making the agent look worse than it is. We propose showing instead that it refused because it chose to: the same refusal, read differently. Is that enough?"
+      "ask": "Should the first try show the line failing? An honest demonstration of a line being ignored is hard to stage without making the agent look worse than it is. We propose showing instead that it refused because it chose to: the same refusal, read differently. Is that enough?",
+      "answer": "Answered by R002 (R002.12): show the assistant doing the thing first, then the line, then a new chat with the line first. Every example now goes that way."
     }
   ]
 }

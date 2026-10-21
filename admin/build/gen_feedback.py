@@ -26,7 +26,7 @@ OUT        = ROOT / 'feedback'
 SHOTS      = ROOT / 'assets' / 'feedback'
 PROMPTS    = OUT / 'prompts'
 STANCES    = {'agree': 'agreed', 'agree-in-part': 'agreed in part', 'disagree': 'we disagree', 'question': 'a question', 'asked': 'asked of us'}
-DECISIONS  = ('done', 'accepted', 'proposed', 'question', 'declined')
+DECISIONS  = ('done', 'reversed', 'accepted', 'proposed', 'question', 'declined')
 VERDICTS   = ('confirmed', 'partly', 'artefact', 'not-confirmed')
 esc        = html.escape
 
@@ -79,8 +79,13 @@ class Gen__Feedback:
         for p in self.register['proposals']:
             if p['decision'] not in DECISIONS:
                 problems.append(f'{p["id"]}: decision must be one of {DECISIONS}')
-            if p['decision'] == 'done' and not p.get('version'):
-                problems.append(f'{p["id"]}: a done proposal names its version')
+            if p['decision'] in ('done', 'reversed') and not p.get('version'):
+                problems.append(f'{p["id"]}: a {p["decision"]} proposal names its version')
+            for version, decision in p.get('history', []):
+                if decision not in DECISIONS:
+                    problems.append(f'{p["id"]}: history decision "{decision}" is not one of {DECISIONS}')
+            if p.get('history') and p['history'][-1][1] != p['decision']:
+                problems.append(f'{p["id"]}: the last entry of its history is its decision')
             if not p.get('reason'):
                 problems.append(f'{p["id"]}: every decision has a reason')
             if not self.sources_of(p['id']):
@@ -171,8 +176,11 @@ class Gen__Feedback:
                 f'<button type="button" class="copy" data-copy="{ident}">{label}</button></div>')
 
     def decision_chip(self, p):
-        label = f'done v{p["version"]}' if p['decision'] == 'done' else p['decision']
-        return f'<span class="decision decision-{p["decision"]}">{esc(label)}</span>'
+        label = f'{p["decision"]} v{p["version"]}' if p['decision'] in ('done', 'reversed') else p['decision']
+        chip  = f'<span class="decision decision-{p["decision"]}">{esc(label)}</span>'
+        if len(p.get('history', [])) > 1:                                           # a decision that changed keeps its history
+            chip += '<span class="history">' + ' &#8594; '.join(f'{esc(d)} at v{esc(v)}' for v, d in p['history']) + '</span>'
+        return chip
 
     def verdict_chip(self, verdict):
         return f'<span class="decision verdict-{verdict}">{esc(verdict)}</span>'
@@ -203,7 +211,8 @@ class Gen__Feedback:
     def questions_html(self):
         items = []
         for q in self.questions.values():
-            items.append(f'      <li id="{q["id"].lower()}"><b>{q["id"]}, to {esc(q["to"])}.</b> {esc(q["ask"])}</li>')
+            answer = f' <span class="answered">Answered: {esc(q["answer"])}</span>' if q.get('answer') else ''
+            items.append(f'      <li id="{q["id"].lower()}"><b>{q["id"]}, to {esc(q["to"])}.</b> {esc(q["ask"])}{answer}</li>')
         return '\n'.join(['    <ul class="plist">', *items, '    </ul>'])
 
     # ── a review written by a person ───────────────────────────────────────────
@@ -316,13 +325,13 @@ class Gen__Feedback:
 
     def reviews_page(self):
         people = [r for r in self.reviews]
-        index  = ''.join(f'<li><a href="#{r["id"].lower()}">{r["id"]}</a>, {esc(r["reviewer"])}, {esc(r["given"])}: {esc(r["title"])} ({len(r["points"])} points)</li>' for r in people)
+        index  = ''.join(f'<li><a href="#{r["id"].lower()}">{r["id"]}</a>, {esc(r["reviewer"])}, {esc(r["given"])}, on site v{esc(r["site_version"])}: {esc(r["title"])} ({len(r["points"])} points; <a href="/feedback/reviews/{r["id"]}/">on its own page</a>)</li>' for r in people)
         main = '\n'.join([
             '    <p class="kicker">Feedback · every review · one document</p>',
             '    <h1>Every review, what we read in it, <span class="g">and what we will do.</span></h1>',
             '    <p class="lead">Each review is kept in the reviewer\'s own words. Our reading follows point by point, with screenshots of what the reviewer was looking at. Every point leads to a proposal, and every proposal has a decision and a reason: we do not do everything a reviewer asks, but every no is explained here.</p>',
             f'    <ul class="plist"><li><strong>Reviews by people:</strong> {len(people)}.</li><li><strong>Synthetic users:</strong> <a href="#{self.study.lower()}">study {self.study}</a>. {self.study_summary()}</li>'
-            f'<li><strong>Proposals:</strong> {len(self.register["proposals"])}: {self.counts()}. <a href="#register">The register</a>.</li><li><strong>Questions waiting for an answer:</strong> {len(self.questions)}. <a href="#questions">The questions</a>.</li></ul>',
+            f'<li><strong>Proposals:</strong> {len(self.register["proposals"])}: {self.counts()}. <a href="#register">The register</a>.</li><li><strong>Questions:</strong> {sum(1 for q in self.questions.values() if not q.get("answer"))} waiting for an answer, {sum(1 for q in self.questions.values() if q.get("answer"))} answered. <a href="#questions">The questions</a>.</li></ul>',
             f'    <p>Give a review of your own: <a href="/feedback/">tell us what you think</a>.</p>',
             '    <h2 id="by-people">Reviews by people</h2>',
             f'    <ul class="plist">{index}</ul>',

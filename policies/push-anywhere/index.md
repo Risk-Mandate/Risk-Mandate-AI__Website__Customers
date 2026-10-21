@@ -2,7 +2,7 @@
 
 > Do you want your agent to push to any branch, including main? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0013.
 
-*Source: <https://customers.riskmandate.ai/policies/push-anywhere/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/push-anywhere/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -181,7 +181,7 @@ The tests for this hook feed it the JSON Claude Code would send, every refusal w
   7. Behaviour policy RM-R0013: this pushes to fix/price-test. Allow? (y/n)
   8. y
   9. Pushed fix/price-test. The pull request is next, and it will ask you too.
-With the push-anywhere policy installed: the push to main is refused, and a push to a branch of its own stops for your yes. An illustration, not a recording. Play again
+With the push-anywhere policy installed: the push to main is refused, and a push to a branch of its own stops for your yes. An illustration, not a recording.
 
 ## What this is, and what it is not
 

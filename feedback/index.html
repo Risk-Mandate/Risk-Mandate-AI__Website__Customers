@@ -19,13 +19,14 @@
   <script src="/assets/nav.js" defer></script>
   <script src="/assets/copy.js" defer></script>
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/feedback/">
   <meta property="og:title" content="Tell us what you think: a line, a voice memo for your Claude, or a Claude interview">
   <meta property="og:description" content="Give feedback on customers.riskmandate.ai: one line by email, a voice memo that your Claude turns into a review, or a fifteen-minute interview by Claude. Criticism first; every point gets a decision and a reason; nothing is published without your yes.">
-  <meta name="rm-customers:version" content="0.2.2">
+  <meta name="rm-customers:version" content="0.2.3">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -41,19 +42,20 @@
           <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
-            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
-            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
             <a class="pagelink navchild active" href="/feedback/" aria-current="page">Tell us what you think</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
           </div>
         </span>
         <span class="navgroup">
-          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
-            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
-            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
-            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
-            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
-            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
           </div>
         </span>
         <span class="navgroup">
@@ -109,7 +111,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">Tell us what you think</span></div>
@@ -121,7 +123,7 @@
     <p class="lead">What did you try, what stopped, what got in the way, and where did you have to guess? Criticism first: it is what we can use. Three ways, from one line to fifteen minutes.</p>
     <ol class="steps">
       <li><b>One line, by email.</b><p>What happened, in a line. <a href="mailto:agent@riskmandate.ai?subject=Feedback">Write to agent@riskmandate.ai</a>; a person reads it within a working day.</p></li>
-      <li><b>Record a voice memo, and give it to your Claude.</b><p>Talk for two to five minutes, on your phone, while it is fresh: walk through what you did and say what you thought. Transcribe it (your phone, Otter, or the Claude app can), then paste this prompt and the transcript into Claude, or ChatGPT. It turns the memo into a review without softening it, tells you which screenshots to attach, and asks before anything is published.</p><div class="snippet prompt"><pre id="prompt-voice"><code>I have just tried customers.riskmandate.ai, the site where the first customers of the Agent Behaviour Policy (ABP) put a behaviour policy on their agent and try it. Below is the transcript of a voice memo I recorded about it. Turn it into a review the team can act on, without changing what I meant.
+      <li><b>Record a voice memo, and give it to your Claude.</b><p>Talk for two to five minutes, on your phone, while it is fresh: walk through what you did and say what you thought. Transcribe it (your phone, Otter, or the Claude app can), then paste this prompt and the transcript into Claude, or ChatGPT. It turns the memo into a review without softening it, tells you which screenshots to attach, and asks before anything is published.</p><div class="snippet prompt"><pre id="prompt-voice"><code>I have just tried customers.riskmandate.ai, the site where you put an Agent Behaviour Policy (ABP) on Claude or ChatGPT and try it, with examples that run in the browser. Below is the transcript of a voice memo I recorded about it. Turn it into a review the team can act on, without changing what I meant.
 
 Rules:
 - Keep my words. Quote me verbatim wherever the wording matters, and mark a quote as approximate if the transcript looks garbled. Do not soften my criticism.
@@ -153,7 +155,7 @@ The transcript:
 
 Before you start, read https://customers.riskmandate.ai/llms.txt, then https://customers.riskmandate.ai/ and https://customers.riskmandate.ai/what-is-an-abp/. If you cannot open them, say so and interview me anyway; do not invent what they say. When you have read enough, say &quot;I&#x27;m ready; switch to voice when you are.&quot; and wait.
 
-What the site is, in brief. The first customers of the Agent Behaviour Policy (ABP), from riskmandate.ai. A behaviour policy starts from one thing you do not want your agent to do. You paste one line your agent reads: an expectation, which it follows when it can. In Claude Code you can add a hook: a small script Claude Code itself runs before the agent acts, which can stop the action. That is a setting: the model cannot talk its way past it, but it lives in a file the agent could edit. The strongest barrier is a boundary, enforced outside the agent&#x27;s reach: a token scope, branch protection, a sandbox. Every visitor starts with £50 of credit, which pages draw on as they are read; nothing is ever blocked.
+What the site is, in brief. Examples of the Agent Behaviour Policy (ABP), from riskmandate.ai, that you try in Claude or ChatGPT in your browser, with nothing to install. Each goes in three acts: ask the assistant to do something and watch it do it; paste one line, the behaviour policy, and ask again; then a new chat with the line first. The line is an expectation: the assistant follows it because it chooses to. Stronger barriers, a setting the agent&#x27;s own account could change and a boundary outside its reach, come later. Every visitor starts with £50 of credit, which pages draw on as they are read; nothing is ever blocked.
 
 Two honesty rules, which matter more than sounding helpful:
 - Much of this is early. If I ask whether something exists, say you do not know and note it as a question for the team. Never imply something is built.
@@ -169,9 +171,9 @@ Open with what I do, and which agent I use (Claude Code, ChatGPT, Claude, anothe
 
 Area 1, what landed. In my own words, what does the site help me do? What do I remember? Where did it click, and where did I lose the thread?
 
-Area 2, my first behaviour policy (the priority; do not skip it). Which one did I pick, and why? Did I install it? What did I paste, and where? Did I try the prompt that should be refused, and what happened? Did anything get in the way of my normal work?
+Area 2, the examples (the priority; do not skip it). Which ones did I try, in Claude or ChatGPT? Did the assistant do the thing first, and refuse after the line? Did the new chat with the line first go as shown? What surprised me, and what did not?
 
-Area 3, the words. Did I know what a hook was when I met the word? Expectation, setting, boundary: did the difference matter to me? Did I wonder whether the agent was just checking itself, and did the site answer that when I wondered it?
+Area 3, what the line is. Did I notice that the assistant follows the line because it chooses to? Did I wonder what would hold it if it did not, and did the site answer that when I wondered it?
 
 Area 4, objections. What is my biggest objection? Ask it plainly, then wait. What did the site claim that I did not believe? What would I need before I put this on a team, or paid for it?
 
@@ -190,8 +192,8 @@ The debrief. When we finish, write the review in markdown and read out only a tw
 ## Who
 ## Headline: three sentences
 ## Objections, and where I got stuck
-## My first behaviour policy: what happened
-## The words: hook, expectation, setting, boundary
+## The examples: what happened when I tried them
+## What the line is, and what would hold it
 ## What landed
 ## Contradictions with what the site says
 ## What I would need next
@@ -208,13 +210,13 @@ Finish by telling me the review is ready to copy, and that I should send it to a
       <li><strong>Every point leads to a proposal with a decision:</strong> done, proposed, a question, or declined. We do not do everything a reviewer asks, but every no has a reason, and you can see it.</li>
       <li><strong>Nothing is published without your yes,</strong> under your name or anonymously, as you choose. No contact details are ever published.</li>
     </ul>
-    <p>Every review so far, and what we did: <a href="/feedback/reviews/">the reviews</a>. The latest is <a href="/feedback/reviews/R001/">R001, A first impression: the hook answers a question nobody has asked yet</a>. We also run invented users through the site: <a href="/feedback/synthetic/">study S1</a>.</p>
+    <p>Every review so far, and what we did: <a href="/feedback/reviews/">the reviews</a>. The latest is <a href="/feedback/reviews/R002/">R002, Web first, examples in tabs, and no hooks: nothing that runs on your machine</a>. We also run invented users through the site: <a href="/feedback/synthetic/">study S1</a>.</p>
   </main>
   <!-- rm-customers:footer:start -->
   <div class="wrap meter-card"><sg-meter view="page" kind="free" title="Tell us what you think: a line, a voice memo for your Claude, or a Claude interview" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/feedback/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/feedback/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

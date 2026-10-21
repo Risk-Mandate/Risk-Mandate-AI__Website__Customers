@@ -236,12 +236,13 @@ class Gen__Policies:
             rows.append(f'      <tr><td><code>{rule["id"]}</code></td><td>{esc(rule["question"])}</td><td>{esc(rule["answer"])}</td><td>{esc(rule["line"])}</td><td>{link}</td></tr>')
         main = '\n'.join([
             '    <h1>Pick one thing <span class="g">you do not want your agent to do.</span></h1>',
-            '    <p class="lead">Each behaviour policy here starts from one worry and ends with the agent stopping, or asking you, before it does that thing. A line you paste, a hook where your agent has one, and a prompt to try it. Two minutes each.</p>',
-            f'    <a class="card pack-card" href="/policies/starter/"><span class="n">Starter pack {PACK_VERSION} · Claude Code · 5 minutes</span><b>All four Claude Code policies in one install</b><p>Secrets, pushes, deletes, and the agent\'s own permissions. Paste one prompt; Claude Code shows you every file before it writes it.</p><p class="price">{self.money(PRICE["pack"])}</p></a>',
-            '    <h2>For Claude Code: a line and a hook</h2>',
-            '    <div class="cards">', *[self.card(p) for p in self.policies if p['hook']], '    </div>',
-            '    <h2>For ChatGPT and Claude: a line</h2>',
+            '    <p class="lead">Each behaviour policy here starts from one worry and ends with the agent stopping, or asking you, before it does that thing. If you are new to this, start with <a href="/examples/">the six examples</a>, in Claude or ChatGPT in your browser.</p>',
+            '    <h2>In Claude or ChatGPT, in your browser: a line</h2>',
             '    <div class="cards">', *[self.card(p) for p in self.policies if not p['hook']], '    </div>',
+            '    <h2>For Claude Code, later: a line and a hook</h2>',
+            '    <div class="note warn"><p><strong>These install a script on your machine.</strong> A hook is a small Python program Claude Code runs before the agent acts; it runs as you, with everything you can reach. Read every hook before you install it, as each page asks, and start with the examples above if you have not tried a line yet.</p></div>',
+            f'    <a class="card pack-card" href="/policies/starter/"><span class="n">Starter pack {PACK_VERSION} · Claude Code · 5 minutes</span><b>All four Claude Code policies in one install</b><p>Secrets, pushes, deletes, and the agent\'s own permissions. Paste one prompt; Claude Code shows you every file before it writes it.</p><p class="price">{self.money(PRICE["pack"])}</p></a>',
+            '    <div class="cards">', *[self.card(p) for p in self.policies if p['hook']], '    </div>',
             f'    <h2>All {len(self.rules)} of riskmandate.ai\'s rules</h2>',
             f'    <p>The behaviour policies above are built from these, copied on {self.source["copied"]} from <a href="{self.source["page"]}">riskmandate.ai\'s rules</a>, CC BY 4.0. Each rule\'s page there has the stronger settings and, for some, a run with and without the line.</p>',
             '    <table class="rules"><thead><tr><th>Rule</th><th>The question</th><th>Answer</th><th>The line</th><th>Where</th></tr></thead><tbody>', *rows, '    </tbody></table>'])

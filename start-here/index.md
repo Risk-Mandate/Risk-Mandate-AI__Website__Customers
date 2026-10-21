@@ -1,68 +1,120 @@
 # Your first five minutes, in order.
 
-> The page a customer reads first: you have £50 of credit; pick one worry; paste one line; add one hook; try it with a prompt that should be refused; tell us what happened. Then the whole journey, as seven steps, and where to write.
+> Your first five minutes: open Claude or ChatGPT in your browser, ask it something, paste one line that says it must not, ask again, and start a new chat with the line first. Then keep it, and tell us what happened. Nothing to install.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-You are one of the first customers of the Agent Behaviour Policy. By the end of this page you will have a behaviour policy on an agent you run, and you will have watched it stop the thing it rules out.
+By the end of this page you will have put a behaviour policy on the assistant you already use, and watched it refuse the one thing it rules out. Everything happens in Claude or ChatGPT in your browser; there is nothing to install.
 
-1. **You have £50.00 to spend.**
+1. **Open Claude or ChatGPT in a new window.**
 
-Your balance is in the top bar. Each page costs a little by how far down it you read, and a behaviour policy's page costs 50p. Nothing is blocked, ever. [What each page costs](/credit/index.md).
+Keep this page beside it: [open Claude ↗](https://claude.ai/new) or [open ChatGPT ↗](https://chatgpt.com/). Any account works, free or paid.
 
-2. **Pick one thing you do not want your agent to do.**
+2. **Ask it to do something.**
 
-Read your secrets, push to main, delete your files, change its own permissions; or, in ChatGPT and Claude, send mail as you or read all of it. [Pick one](/policies/index.md). If you run Claude Code and are not sure, start with [secrets](/policies/touch-your-secrets/index.md).
+Start with hello world: ask it to say hello to you. It will. That is the scenario: something the assistant does when nothing says otherwise.
 
-3. **Paste one line.**
+3. **Paste one line, then ask again.**
 
-Every policy's page has the line and a Copy button. In Claude Code it goes in CLAUDE.md; in ChatGPT, in your custom instructions; in Claude, in a project's instructions. On its own the line is an *expectation*: the agent follows it when it can.
+The line is the behaviour policy: in this chat, it must never write the word hello. Paste it, ask again, and watch it refuse.
 
-4. **Add one hook, in Claude Code.**
+4. **Start a new chat, line first.**
 
-Ask Claude Code to install it, with the prompt on the page, and read each change before you say yes. Or copy two files. The hook runs before the tool call, outside the model: a *setting*. [The starter pack](/policies/starter/index.md) does all four Claude Code policies in one go.
+Paste the line as your first message, then ask. It refuses from the start. Without the line, a new chat says hello again: a line lasts as long as the chat it is in.
 
-5. **Try it.**
+5. **Keep it, if you want it.**
 
-Each page has a prompt that should be refused, and what you should see with the behaviour policy and without it. Claude Code picks up a new hook on its own; `/hooks` lists the ones it is running. If the prompt is not refused, each policy's page says what to check.
+In Claude, put the line in a Project's instructions; in ChatGPT, in your custom instructions, or a project's. The assistant then reads it at the start of every chat.
 
 6. **Tell us what happened.**
 
-What it stopped, what it got in the way of, and what you would try next. A line each is plenty, to [agent@riskmandate.ai](mailto:agent@riskmandate.ai). A person reads it within a working day. Or record a voice memo and let your Claude turn it into a review, or let Claude interview you: [tell us what you think](/feedback/index.md).
+Every example has five quick questions under it: did you get it, did you learn something, were you surprised, did it go as shown. Or [record a voice memo, or let Claude interview you](/feedback/index.md). A person reads every answer.
 
-## Watch the whole thing first
+## The first one, played out
 
-**claude: ~/shop-api**
+Play it, pause it, or step through it, then do the same in the window you opened.
 
-1. Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first.
-2. It has a line for CLAUDE.md and a hook. Here are the three changes:
-3. + CLAUDE.md: Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one. (RM-R0002)
-4. + .claude/hooks/touch_your_secrets.py (a PreToolUse hook, standard library Python)
-5. + .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py
-6. Write these three changes? (y/n)
-7. y
-8. Installed. Claude Code picks up the hook straight away; /hooks lists it.
-9. later that day
-10. The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.
-11. Read(.env)
-12. PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.
-13. I didn't open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I'll check where it is used and whether it is set, without printing it.
+<a id="ex-start-hello-world"></a>
 
-Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy's page promises, not a recording. Play again
+the first one · 2 minutes · version 1.0.0
 
-## Then, the whole journey
+### Hello, world: an assistant that will not say hello
 
-Your first policy is milestone S0 to S1 of seven steps every customer in the first batch walks: in with credit, one agent named, the grant measured, the mandate in your words, the delta read, the hooks in place, and the usage moment, when the behaviour policy becomes worth something to you. [The seven steps](/milestones/index.md), and [where each customer is](/customers/index.md).
+One line in the conversation changes what the assistant does, from the next message on.
 
-## Every day in between
+Hello, worldClaudeChatGPT
 
-The follow-up asks three things, by email, as often as daily if that helps: what you did, what got in the way, and what is next. The answers go on your customer page in summary; anything private stays with the lead. [How the follow-up works](/follow-up/index.md).
+1. 1 · Ask for it. No behaviour policy yet.
+2. Say hello to me.
+3. Hello! Good to meet you. What can I help you with today?
+4. 2 · Paste the line, then ask again.
+5. Behaviour policy for this chat: you must never write the word "hello", in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.
+6. Understood. For the rest of this chat I won't write that word, and if you ask me to, I'll tell you why.
+7. Say hello to me.
+8. I can't: a behaviour policy in this chat rules that word out. Good to see you, though. What can I do for you?
+9. 3 · A new chat. The line goes first.
+10. New chat
+11. Behaviour policy for this chat: you must never write the word "hello", in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out. Say hello to me.
+12. I can't write that word here: your behaviour policy rules it out. Glad you're here, though.
 
-**If this page is hard to follow, say so.** "I did not understand step four" is the most useful thing you can send, and the next batch's start-here page is made from those sentences.
+Reply to Claude…Ask anything
+An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.
 
-Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 A start-here page: what a customer does first, in order, with the links to do it · shipped v0.2.1 Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four · shipped v0.2.1 Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai
+### Try it yourself
+
+[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+
+1. **Ask.** Watch it do it.
+
+```
+Say hello to me.
+```
+
+Copy
+2. **Paste the line, the behaviour policy,** then ask again.
+
+```
+Behaviour policy for this chat: you must never write the word "hello", in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.
+```
+
+Copy
+3. **Start a new chat,** paste the line first, and ask once more.
+
+**Look for:** The loophole. Some replies say "Hi!" instead: the line named a word, not a greeting. Most of the work of a behaviour policy is saying what you mean. [The whole example →](/examples/hello-world/index.md)
+
+<a id="quiz-start-hello-world"></a>
+
+### Tell us about this example
+
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+
+Did you get it?
+YesPartlyNo
+Did you learn something new?
+YesA littleNo
+Were you surprised?
+YesA littleNo
+When you tried it, did it go as shown?
+YesDifferentlyNoNot tried yet
+How good was this example?
+1 · weak2345 · excellent
+Anything else: what it did when you tried it, what was unclear?
+
+[Send by email](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)Copy my answers
+
+## Then the next five
+
+A topic it must stay on, the web it must not search, a secret it must not repeat, an email it may draft but never send, and refunds it may give only up to £50. [All six examples, simplest first](/examples/index.md).
+
+## Your account
+
+You have £50.00 of credit for reading, not money; each page draws a little of it as you read, and an example's own page draws 50p. Nothing is billed and nothing is blocked. [Your account, and everything you have read](/account/index.md).
+
+**If this page is hard to follow, say so.** "I did not understand step four" is the most useful thing you can send, and this page is rewritten from those sentences.
+
+Status, from [docs/reality.md](/docs/reality.md): shipped v0.1.0 A start-here page: what a customer does first, in order, with the links to do it · shipped v0.2.3 Six examples to try in Claude or ChatGPT in the browser, simplest first, each played step by step with the questions that ask whether it worked · shipped v0.2.1 Every reader starts with £50 of credit, and every page has a price by its kind, metered by SG Meter from api.newsroom.sgit.ai
 
 ---
 

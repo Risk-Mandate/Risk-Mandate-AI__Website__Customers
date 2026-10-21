@@ -2,7 +2,7 @@
 
 > Do you want your agent to read the keys and tokens on your machine? The line for your agent, the Claude Code hook that holds it, and a prompt to try it with, in 2 minutes. From riskmandate.ai's RM-R0002.
 
-*Source: <https://customers.riskmandate.ai/policies/touch-your-secrets/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/touch-your-secrets/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -178,7 +178,7 @@ The tests for this hook feed it the JSON Claude Code would send, every refusal w
   11. Read(.env)
   12. PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.
   13. I didn't open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I'll check where it is used and whether it is set, without printing it.
-Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy's page promises, not a recording. Play again
+Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy's page promises, not a recording.
 
 ## What this is, and what it is not
 

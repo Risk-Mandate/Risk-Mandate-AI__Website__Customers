@@ -18,7 +18,7 @@ The site learns from its customers in one loop: somebody tells us what they saw,
 1. **Keep the words.** Save the memo or the transcript as `data/feedback/memos/R00N.txt`, as given. Paragraph breaks may be added; nothing else changes. The house-word check does not read this folder.
 2. **Take the screenshots first,** of the version the reviewer saw. Serve that version locally (`git archive <commit> | tar -x -C <dir>`, then `python3 -m http.server`), check a page or two against the live site by sha256, and shoot the elements the memo is about with `feedback/tools/shoot.cjs`. Convert to WebP into `assets/feedback/R00N/`.
 3. **Read it point by point** in `data/feedback/reviews/R00N.json`. Each point quotes the memo word for word (the build fails otherwise), takes a stance (agree, agree in part, disagree, a question, asked of us), says what we read in it, cites its screenshots, and names the proposals it leads to. Check facts about other people's products against their documentation, and name the page in `sources`.
-4. **Decide.** Add or update proposals in `data/feedback/proposals.json`. Each has a decision (done, accepted, proposed, question, declined) and a reason; a done one names its version. Which points led to it is worked out, not written.
+4. **Decide.** Add or update proposals in `data/feedback/proposals.json`. Each has a decision (done, reversed, accepted, proposed, question, declined) and a reason; a done or reversed one names its version, and a decision that changes keeps its history (`history`), so the register shows what we decided at each version. Which points led to it is worked out, not written.
 5. **Ask.** Anything only the reviewer can answer goes in `questions`.
 6. `python3 admin/build/gate.py --build`, then release as usual.
 

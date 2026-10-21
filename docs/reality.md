@@ -1,8 +1,8 @@
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.2 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.3 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
-30 claims: 19 shipped, 8 proposed, 3 absent.
+31 claims: 20 shipped, 8 proposed, 3 absent.
 
 | Status | Meaning |
 |---|---|
@@ -10,7 +10,7 @@
 | proposed | the brief or the memo says how; not built; described only in the future tense |
 | absent | deliberately not on this site; comes as a later version, lives elsewhere, or never |
 
-## Shipped (19)
+## Shipped (20)
 
 | Area | Feature | Status | Where | Notes |
 |---|---|---|---|---|
@@ -30,6 +30,7 @@
 | programme | Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four | shipped v0.2.1 | data/policies.json, data/rules/, policies/, tests/build/test_hooks.py | Built from riskmandate.ai's rules, copied byte for byte. Every hook refusal in the tests has an allowed twin. |
 | programme | Three storyboards drawn in the reader's browser by the kit from api.storyboards.sgit.ai: what an ABP is, your first policy, the first batch | shipped v0.2.1 | storyboards/, data/storyboards.json, assets/storyboards.js | The kit is pinned and loaded with its integrity strings; its delay attributes are allowed by hash and no other inline style. |
 | programme | Animated demos of a session: installing and trying a policy in Claude Code, and the send-as-you line in ChatGPT | shipped v0.2.1 | data/demos.json, assets/demo.js | Illustrations of what each policy's page promises, labelled as such; not recordings. Still and complete with reduced motion or no JavaScript. |
+| programme | Six examples to try in Claude or ChatGPT in the browser, simplest first, each played step by step with the questions that ask whether it worked | shipped v0.2.3 | /examples/ and the home page | The transcripts are illustrations we wrote, not recordings; each example has a version. Nothing to install. |
 | programme | A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude | shipped v0.2.2 | /feedback/ | The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer's yes. |
 | programme | Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason | shipped v0.2.2 | /feedback/reviews/ | Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason. |
 | programme | Synthetic users: invented people driving the site one screenshot at a time, with their findings checked | shipped v0.2.2 | /feedback/synthetic/ | Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/. |

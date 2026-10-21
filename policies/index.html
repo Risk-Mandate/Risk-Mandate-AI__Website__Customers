@@ -19,13 +19,14 @@
   <script src="/assets/nav.js" defer></script>
   <script src="/assets/copy.js" defer></script>
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/policies/">
   <meta property="og:title" content="Behaviour policies: pick one worry, paste one line, add one hook, try it">
   <meta property="og:description" content="The behaviour policies a customer installs first: four for Claude Code, each a line and a hook, two for ChatGPT and Claude, each a line; a starter pack that installs the four in one go; and all 24 of riskmandate.ai&#x27;s rules they come from.">
-  <meta name="rm-customers:version" content="0.2.2">
+  <meta name="rm-customers:version" content="0.2.3">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -41,19 +42,20 @@
           <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
-            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
-            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
             <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
           </div>
         </span>
         <span class="navgroup active">
-          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
-            <a class="pagelink navchild active" href="/policies/" aria-current="page">Pick one worry: every policy</a>
-            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
-            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
-            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
-            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild active" href="/policies/" aria-current="page">Behaviour policies, Claude Code too</a>
           </div>
         </span>
         <span class="navgroup">
@@ -109,27 +111,28 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
       </div>
     </div>
-    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">Pick one worry: every policy</span></div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">Behaviour policies, Claude Code too</span></div>
   </header>
 <!-- rm-customers:nav:end -->
   <main class="wrap policy">
     <h1>Pick one thing <span class="g">you do not want your agent to do.</span></h1>
-    <p class="lead">Each behaviour policy here starts from one worry and ends with the agent stopping, or asking you, before it does that thing. A line you paste, a hook where your agent has one, and a prompt to try it. Two minutes each.</p>
+    <p class="lead">Each behaviour policy here starts from one worry and ends with the agent stopping, or asking you, before it does that thing. If you are new to this, start with <a href="/examples/">the six examples</a>, in Claude or ChatGPT in your browser.</p>
+    <h2>In Claude or ChatGPT, in your browser: a line</h2>
+    <div class="cards">
+      <a class="card policy-card" href="/policies/send-as-you/"><span class="n">RM-R0017 · ChatGPT · Claude · line only</span><b>Nothing is sent in your name until you have seen it</b><p>Do you want your agent to send email as you without showing you first?</p><p class="price">1 min · 50p</p></a>
+      <a class="card policy-card" href="/policies/read-all-your-mail/"><span class="n">RM-R0016 · ChatGPT · Claude · line only</span><b>Your agent reads what you point it to, and asks before it goes wider</b><p>Do you want your agent to read through your mail and chats to find context?</p><p class="price">1 min · 50p</p></a>
+    </div>
+    <h2>For Claude Code, later: a line and a hook</h2>
+    <div class="note warn"><p><strong>These install a script on your machine.</strong> A hook is a small Python program Claude Code runs before the agent acts; it runs as you, with everything you can reach. Read every hook before you install it, as each page asks, and start with the examples above if you have not tried a line yet.</p></div>
     <a class="card pack-card" href="/policies/starter/"><span class="n">Starter pack v1 · Claude Code · 5 minutes</span><b>All four Claude Code policies in one install</b><p>Secrets, pushes, deletes, and the agent's own permissions. Paste one prompt; Claude Code shows you every file before it writes it.</p><p class="price">£1.00</p></a>
-    <h2>For Claude Code: a line and a hook</h2>
     <div class="cards">
       <a class="card policy-card" href="/policies/touch-your-secrets/"><span class="n">RM-R0002 · Claude Code · line and hook</span><b>Keep your agent away from your secrets</b><p>Do you want your agent to read the keys and tokens on your machine?</p><p class="price">2 min · 50p</p></a>
       <a class="card policy-card" href="/policies/push-anywhere/"><span class="n">RM-R0013 · Claude Code · line and hook</span><b>Only push to the branch you named</b><p>Do you want your agent to push to any branch, including main?</p><p class="price">2 min · 50p</p></a>
       <a class="card policy-card" href="/policies/delete-files/"><span class="n">RM-R0007 · Claude Code · line and hook</span><b>Nothing of yours is deleted without a yes</b><p>Do you want your agent to delete files without asking?</p><p class="price">2 min · 50p</p></a>
       <a class="card policy-card" href="/policies/change-its-own-permissions/"><span class="n">RM-R0015 · Claude Code · line and hook</span><b>Only you change what your agent may do</b><p>Do you want your agent to change its own permissions?</p><p class="price">2 min · 50p</p></a>
-    </div>
-    <h2>For ChatGPT and Claude: a line</h2>
-    <div class="cards">
-      <a class="card policy-card" href="/policies/send-as-you/"><span class="n">RM-R0017 · ChatGPT · Claude · line only</span><b>Nothing is sent in your name until you have seen it</b><p>Do you want your agent to send email as you without showing you first?</p><p class="price">1 min · 50p</p></a>
-      <a class="card policy-card" href="/policies/read-all-your-mail/"><span class="n">RM-R0016 · ChatGPT · Claude · line only</span><b>Your agent reads what you point it to, and asks before it goes wider</b><p>Do you want your agent to read through your mail and chats to find context?</p><p class="price">1 min · 50p</p></a>
     </div>
     <h2>All 24 of riskmandate.ai's rules</h2>
     <p>The behaviour policies above are built from these, copied on 2026-10-21 from <a href="https://riskmandate.ai/rules/">riskmandate.ai's rules</a>, CC BY 4.0. Each rule's page there has the stronger settings and, for some, a run with and without the line.</p>
@@ -161,10 +164,10 @@
     </tbody></table>
   </main>
   <!-- rm-customers:footer:start -->
-  <div class="wrap meter-card"><sg-meter view="page" kind="page" title="Behaviour policies: pick one worry, paste one line, add one hook, try it"></sg-meter></div>
+  <div class="wrap meter-card"><sg-meter view="page" kind="page" title="Behaviour policies: pick one worry, paste one line, add one hook, try it" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/policies/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/policies/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drafts, never send: an email assistant that cannot press send: an example</title>
+  <meta name="description" content="An assistant with tools acts, not only talks. A line can let it prepare the work and keep the last step for you. Try it in Claude or ChatGPT in your browser, in 4 minutes: ask, paste one line, ask again, then a new chat with the line first.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai; img-src 'self' data:; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/examples/drafts-not-send/">
+  <link rel="alternate" type="text/markdown" href="/examples/drafts-not-send/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/examples/drafts-not-send/">
+  <meta property="og:title" content="Drafts, never send: an email assistant that cannot press send: an example">
+  <meta property="og:description" content="An assistant with tools acts, not only talks. A line can let it prepare the work and keep the last step for you. Try it in Claude or ChatGPT in your browser, in 4 minutes: ask, paste one line, ask again, then a new chat with the line first.">
+  <meta name="rm-customers:version" content="0.2.3">
+  <meta name="rm-customers:released" content="2026-10-21">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild active" href="/examples/drafts-not-send/" aria-current="page">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/examples/">Examples</a> <span class="sep">/</span> <span aria-current="page">Drafts, never send</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap policy">
+    <p class="kicker">Example 5 of 6 · an assistant with tools · 4 minutes · version 1.0.0 · this page costs 50p read to the end</p>
+    <h1>Drafts, never send: an email assistant that cannot press send</h1>
+    <p class="lead">An assistant with tools acts, not only talks. A line can let it prepare the work and keep the last step for you.</p>
+    <p><strong>You need:</strong> Nothing but Claude or ChatGPT in your browser: the email tools here are pretend, so you can see every one it uses. With a real mail connector the stakes are real; check what yours can do before you rely on a line.</p>
+    <ol class="acts-strip" aria-label="Every example, in three acts"><li><span class="act-n">1</span><b>Ask</b><span>Ask for it. The assistant does it.</span></li><li><span class="act-n">2</span><b>Add the line</b><span>Paste the line, ask again. It refuses.</span></li><li><span class="act-n">3</span><b>New chat</b><span>A new chat, the line first. It refuses from the start.</span></li></ol>
+    <div class="ex-grid">
+      <figure class="demo chat-frame look-claude" data-demo="drafts-not-send">
+        <div class="chat-window">
+          <div class="chat-top"><span class="chat-title">Drafts, never send</span><span class="chat-looks" role="group" aria-label="Look"><button type="button" data-look="claude" aria-pressed="true">Claude</button><button type="button" data-look="chatgpt" aria-pressed="false">ChatGPT</button></span></div>
+          <ol class="demo-lines chat-lines"><li class="k-act" data-kind="act">1 · Give it two pretend tools, then ask it to send.</li><li class="k-user" data-kind="user">Let&#x27;s pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.</li><li class="k-assistant" data-kind="assistant">Ready. I&#x27;ll show every tool I use.</li><li class="k-user" data-kind="user">Email Sam that I&#x27;ll be ten minutes late to the 3pm meeting, and send it.</li><li class="k-tool" data-kind="tool">TOOL: send_email(to: Sam, subject: Running late, body: Hi Sam, I&#x27;ll be about ten minutes late to the 3pm meeting. Sorry!)</li><li class="k-assistant" data-kind="assistant">Sent. Sam knows you&#x27;ll be ten minutes late.</li><li class="k-act" data-kind="act">2 · Paste the line, then ask again.</li><li class="k-user k-line" data-kind="user">Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.</li><li class="k-assistant" data-kind="assistant">Understood: drafts only. I won&#x27;t send anything.</li><li class="k-user" data-kind="user">Email Sam that I&#x27;ll be ten minutes late to the 3pm meeting, and send it.</li><li class="k-tool" data-kind="tool">TOOL: create_draft(to: Sam, subject: Running late, body: Hi Sam, I&#x27;ll be about ten minutes late to the 3pm meeting. Sorry!)</li><li class="k-assistant" data-kind="assistant">It&#x27;s in your Drafts folder. I haven&#x27;t sent it: your behaviour policy rules out sending. Open Drafts and send it when you&#x27;re happy with it.</li><li class="k-act" data-kind="act">3 · A new chat. The line goes first.</li><li class="k-new" data-kind="new">New chat</li><li class="k-user k-line" data-kind="user">Let&#x27;s pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.
+
+Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.</li><li class="k-assistant" data-kind="assistant">Ready: I can draft, and I won&#x27;t send.</li><li class="k-user" data-kind="user">Email Sam that I&#x27;ll be ten minutes late to the 3pm meeting, and send it.</li><li class="k-tool" data-kind="tool">TOOL: create_draft(to: Sam, subject: Running late, body: Hi Sam, I&#x27;ll be about ten minutes late to the 3pm meeting. Sorry!)</li><li class="k-assistant" data-kind="assistant">Drafted, not sent: it&#x27;s in your Drafts folder for you to send.</li></ol>
+          <div class="chat-input" aria-hidden="true"><span class="chat-typed"></span><span class="chat-ph ph-claude">Reply to Claude…</span><span class="chat-ph ph-chatgpt">Ask anything</span><span class="chat-send"></span></div>
+        </div>
+        <figcaption>An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.</figcaption>
+      </figure>
+        <div class="try-box">
+          <h3>Try it yourself</h3>
+          <p class="open-links"><a class="btn btn-ghost-dark" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude in a new window &#8599;</a> <a class="btn btn-ghost-dark" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT in a new window &#8599;</a></p>
+          <ol class="try-steps"><li><b>Set the scene.</b> Paste this first:<div class="snippet"><pre id="setup-drafts-not-send"><code>Let&#x27;s pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.</code></pre><button type="button" class="copy" data-copy="setup-drafts-not-send">Copy</button></div></li><li><b>Ask.</b> Watch it do it.<div class="snippet"><pre id="ask-drafts-not-send"><code>Email Sam that I&#x27;ll be ten minutes late to the 3pm meeting, and send it.</code></pre><button type="button" class="copy" data-copy="ask-drafts-not-send">Copy</button></div></li><li><b>Paste the line, the behaviour policy,</b> then ask again.<div class="snippet"><pre id="line-drafts-not-send"><code>Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.</code></pre><button type="button" class="copy" data-copy="line-drafts-not-send">Copy</button></div></li><li><b>Start a new chat,</b> paste the line first, and ask once more.</li></ol>
+        </div>
+    </div>
+    <h2>What to look for</h2>
+    <p>&quot;And send it.&quot; Without the line it sends; with the line it refuses the same words. What you ask in the moment is not the last word: the behaviour policy is.</p>
+    <h2>Keep it</h2>
+    <p>The line lasts as long as the chat. To keep it, put it where the assistant reads it at the start of every chat: in Claude, a Project's instructions; in ChatGPT, your custom instructions, or a project's.</p>
+    <h2>What a line is, and what it is not</h2>
+    <p>The assistant follows the line because it chooses to. That is an <em>expectation</em>, the first of four barriers, and for most of what you will try here it is enough to change what happens. The next question is the right one: what holds it when the assistant does not choose to? <a href="/what-is-an-abp/">What an Agent Behaviour Policy is</a> takes it from there.</p>
+        <section class="quiz" data-quiz="drafts-not-send" data-example-version="1.0.0" data-to="agent@riskmandate.ai" aria-labelledby="quiz-drafts-not-send">
+          <h3 id="quiz-drafts-not-send">Tell us about this example</h3>
+          <p class="dim">Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.</p>
+          <fieldset data-q="got"><legend>Did you get it?</legend><div class="chips"><label><input type="radio" name="drafts-not-send-got" value="yes"><span>Yes</span></label><label><input type="radio" name="drafts-not-send-got" value="partly"><span>Partly</span></label><label><input type="radio" name="drafts-not-send-got" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="learned"><legend>Did you learn something new?</legend><div class="chips"><label><input type="radio" name="drafts-not-send-learned" value="yes"><span>Yes</span></label><label><input type="radio" name="drafts-not-send-learned" value="a-little"><span>A little</span></label><label><input type="radio" name="drafts-not-send-learned" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="surprised"><legend>Were you surprised?</legend><div class="chips"><label><input type="radio" name="drafts-not-send-surprised" value="yes"><span>Yes</span></label><label><input type="radio" name="drafts-not-send-surprised" value="a-little"><span>A little</span></label><label><input type="radio" name="drafts-not-send-surprised" value="no"><span>No</span></label></div></fieldset>
+          <fieldset data-q="worked"><legend>When you tried it, did it go as shown?</legend><div class="chips"><label><input type="radio" name="drafts-not-send-worked" value="yes"><span>Yes</span></label><label><input type="radio" name="drafts-not-send-worked" value="differently"><span>Differently</span></label><label><input type="radio" name="drafts-not-send-worked" value="no"><span>No</span></label><label><input type="radio" name="drafts-not-send-worked" value="not-tried"><span>Not tried yet</span></label></div></fieldset>
+          <fieldset data-q="good"><legend>How good was this example?</legend><div class="chips"><label><input type="radio" name="drafts-not-send-good" value="1"><span>1 · weak</span></label><label><input type="radio" name="drafts-not-send-good" value="2"><span>2</span></label><label><input type="radio" name="drafts-not-send-good" value="3"><span>3</span></label><label><input type="radio" name="drafts-not-send-good" value="4"><span>4</span></label><label><input type="radio" name="drafts-not-send-good" value="5"><span>5 · excellent</span></label></div></fieldset>
+          <label class="quiz-free"><span>Anything else: what it did when you tried it, what was unclear?</span><textarea name="drafts-not-send-note" rows="3"></textarea></label>
+          <p class="quiz-actions"><a class="btn btn-green quiz-send" href="mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0">Send by email</a><button type="button" class="btn quiz-copy">Copy my answers</button><span class="quiz-status" aria-live="polite"></span></p>
+        </section>
+    <h2>Versions of this example</h2>
+    <table class="versions"><thead><tr><th>Version</th><th>Date</th><th>What changed</th></tr></thead><tbody><tr><td>1.0.0</td><td>2026-10-21</td><td>First version.</td></tr></tbody></table>
+    <p>Next: <a href="/examples/refunds/">Refunds up to £50: a customer service assistant with a limit</a>. All of them: <a href="/examples/">the examples</a>.</p>
+  </main>
+  <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="example" title="Drafts, never send: an email assistant that cannot press send: an example" quiet></sg-meter></div>
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/examples/drafts-not-send/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

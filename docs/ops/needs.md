@@ -29,7 +29,7 @@ Everything on this list blocks a step of the brief or of the repository rules an
 
 ## Waiting on the feedback register
 
-12a. **Three answers (the lead).** On [the reviews](../../feedback/reviews/index.md#questions): Q1, what "including the history" means in R001; Q2, whether the first try should show the line failing; Q3, what joining the first batch commits a company to. The guided path (P1, P2) is held for the further memos R001 announced, and for Q1.
+12a. **Five answers (the lead).** On [the reviews](../../feedback/reviews/index.md#questions): Q1, what "including the history" means in R001; Q3, what joining the first batch commits a company to; Q4, whether to record real runs of the examples in Claude and ChatGPT before the batch sees them; Q5, which advanced example first; Q6, whether the examples' questions should post to a form instead of an email. Q2 was answered by R002.
 12b. **Fail closed or open (the lead).** P18: whether the guard hook, RM-R0015, ships with `"onFailure": "block"`, which stops every action it watches when the hook cannot run, and needs Claude Code v2.1.295 or later.
 
 ## The estate's asks

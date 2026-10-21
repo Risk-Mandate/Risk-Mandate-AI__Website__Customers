@@ -1,12 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.2.3",
+      "date": "2026-10-21",
+      "title": "web first: six examples to try in Claude or ChatGPT, played step by step, with questions under each; no hooks on the front pages; an account page of our own; R002 read point by point",
+      "notes": "R002, the lead's second memo, kept verbatim and read in 26 points with screenshots of v0.2.2. The home page and start here are now in the browser: open Claude or ChatGPT, ask, paste one line, ask again, new chat with the line first. Six examples in tabs, simplest first (hello world, stay on topic, no web search, keep a secret, drafts never send, refunds up to 50 pounds), each versioned, each in a chat frame drawn like Claude's or ChatGPT's, each with the prompts to copy and five questions whose answers the reader emails. Every demo on the site can be played, paused, stepped back and forward. No hook and nothing to install on the front pages; the Claude Code behaviour policies are kept further down /policies/ under a warning. The account strip sits under the hero; the account page is our own view of the meter, without the newsroom's personas; the meter's reader card under each page is gone, and it still charges. Cards show pictures of where they go. The register has 37 proposals; D1 is recorded as declined at v0.2.2 and reversed at v0.2.3, with why. Questions Q4 to Q6 for the lead.",
+      "tag": "v0.2.3",
+      "commit": null,
+      "run": null,
+      "verified": null
+    },
+    {
       "version": "0.2.2",
       "date": "2026-10-21",
       "title": "the feedback loop: the lead's first review read point by point with screenshots, five invented users run through v0.2.1, and one register of 23 proposals each with a decision and a reason",
       "notes": "R001, Dinis Cruz's first impression, kept verbatim with our reading point by point and screenshots of v0.2.1: the hook answers a question nobody has asked yet. Study S1: five invented users (Sam, Nadia, Marcus, Joan, Tomas) drove v0.2.1 one screenshot at a time; 29 findings, each checked (24 confirmed, 4 partly, 1 artefact). /feedback/: one line by email, a voice memo your Claude turns into a review, or a Claude interview. The register: 23 proposals; 8 done in this release (the feedback pages, the study, what the 50 pounds is, no more 'start a new session', did it work and the hook fails open, each hook in plain words with how to turn it off, line-only pages, start here's status line moved to its foot); the guided path (P1, P2) proposed and held for the lead's further memos; 5 declined with reasons; questions Q1 to Q3 for the lead.",
       "tag": "v0.2.2",
-      "commit": null,
+      "commit": "50c70a63b0edc16bdbc7a3f5461a36fc76471e92",
       "run": null,
       "verified": null
     },

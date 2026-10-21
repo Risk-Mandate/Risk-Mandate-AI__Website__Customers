@@ -20,13 +20,14 @@
   <script src="/assets/nav.js" defer></script>
   <script src="/assets/copy.js" defer></script>
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/docs/reality.html">
   <meta property="og:title" content="customers.riskmandate.ai: reality">
   <meta property="og:description" content="What exists on this site and in the programme, by status, generated from data/reality.json. If it is not listed, it does not exist.">
-  <meta name="rm-customers:version" content="0.2.2">
+  <meta name="rm-customers:version" content="0.2.3">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -42,19 +43,20 @@
           <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
-            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
-            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
             <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
           </div>
         </span>
         <span class="navgroup">
-          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
-            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
-            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
-            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
-            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
-            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
           </div>
         </span>
         <span class="navgroup">
@@ -110,7 +112,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/docs/">Docs</a> <span class="sep">/</span> <span aria-current="page">Reality: what exists</span></div>
@@ -118,10 +120,10 @@
 <!-- rm-customers:nav:end -->
   <main class="wrap document">
     <!-- rm-customers:docs:start -->
-<p class="doc-source">Rendered from <a href="/docs/reality.md">docs/reality.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.2.</p>
+<p class="doc-source">Rendered from <a href="/docs/reality.md">docs/reality.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.3.</p>
 <h1 id="customersriskmandateai-reality">customers.riskmandate.ai: reality</h1>
-<p><em>Generated from <code>data/reality.json</code> by <code>admin/build/gen_reality.py</code> at site v0.2.2 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.</em></p>
-<p>30 claims: 19 shipped, 8 proposed, 3 absent.</p>
+<p><em>Generated from <code>data/reality.json</code> by <code>admin/build/gen_reality.py</code> at site v0.2.3 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.</em></p>
+<p>31 claims: 20 shipped, 8 proposed, 3 absent.</p>
 <table>
 <thead><tr><th>Status</th><th>Meaning</th></tr></thead>
 <tbody>
@@ -130,7 +132,7 @@
 <tr><td>absent</td><td>deliberately not on this site; comes as a later version, lives elsewhere, or never</td></tr>
 </tbody>
 </table>
-<h2 id="shipped-19">Shipped (19)</h2>
+<h2 id="shipped-20">Shipped (20)</h2>
 <table>
 <thead><tr><th>Area</th><th>Feature</th><th>Status</th><th>Where</th><th>Notes</th></tr></thead>
 <tbody>
@@ -150,6 +152,7 @@
 <tr><td>programme</td><td>Six behaviour policies to install in minutes: four for Claude Code with a line and a tested hook, two for ChatGPT and Claude with a line; a starter pack for the four</td><td>shipped v0.2.1</td><td>data/policies.json, data/rules/, policies/, tests/build/test_hooks.py</td><td>Built from riskmandate.ai&#x27;s rules, copied byte for byte. Every hook refusal in the tests has an allowed twin.</td></tr>
 <tr><td>programme</td><td>Three storyboards drawn in the reader&#x27;s browser by the kit from api.storyboards.sgit.ai: what an ABP is, your first policy, the first batch</td><td>shipped v0.2.1</td><td>storyboards/, data/storyboards.json, assets/storyboards.js</td><td>The kit is pinned and loaded with its integrity strings; its delay attributes are allowed by hash and no other inline style.</td></tr>
 <tr><td>programme</td><td>Animated demos of a session: installing and trying a policy in Claude Code, and the send-as-you line in ChatGPT</td><td>shipped v0.2.1</td><td>data/demos.json, assets/demo.js</td><td>Illustrations of what each policy&#x27;s page promises, labelled as such; not recordings. Still and complete with reduced motion or no JavaScript.</td></tr>
+<tr><td>programme</td><td>Six examples to try in Claude or ChatGPT in the browser, simplest first, each played step by step with the questions that ask whether it worked</td><td>shipped v0.2.3</td><td>/examples/ and the home page</td><td>The transcripts are illustrations we wrote, not recordings; each example has a version. Nothing to install.</td></tr>
 <tr><td>programme</td><td>A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude</td><td>shipped v0.2.2</td><td>/feedback/</td><td>The two prompts are files too, in feedback/prompts/. Nothing is published without the reviewer&#x27;s yes.</td></tr>
 <tr><td>programme</td><td>Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason</td><td>shipped v0.2.2</td><td>/feedback/reviews/</td><td>Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason.</td></tr>
 <tr><td>programme</td><td>Synthetic users: invented people driving the site one screenshot at a time, with their findings checked</td><td>shipped v0.2.2</td><td>/feedback/synthetic/</td><td>Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/.</td></tr>
@@ -182,10 +185,10 @@
     <!-- rm-customers:docs:end -->
   </main>
   <!-- rm-customers:footer:start -->
-  <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="customers.riskmandate.ai: reality"></sg-meter></div>
+  <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="customers.riskmandate.ai: reality" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/reality.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/reality.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

@@ -1,11 +1,12 @@
 {
   "_comment": "Every change a review has led us to propose, from every review, with a decision and the reason for it. We do not do everything a reviewer says, but every no has a reason here. Which review points led to each proposal is worked out from the reviews and the study's checks, so it is not written twice. Decisions: proposed (we think yes; not built yet, and the reason says why), accepted (will be built; not yet), done (built, in the version named), declined (not doing it, and why), question (we need an answer from someone first).",
   "decisions": {
-    "proposed": "we think yes; not built yet, and the reason says why",
-    "accepted": "will be built; not yet",
     "done": "built, in the version named",
+    "accepted": "will be built; not yet",
+    "proposed": "we think yes; not built yet, and the reason says why",
+    "question": "we need an answer first; the question is named",
     "declined": "not doing it, and why",
-    "question": "we need an answer first; the question is named"
+    "reversed": "we declined it, then a later review gave a reason that changed our mind; done in the version named"
   },
   "proposals": [
     {
@@ -17,8 +18,19 @@
         "/start-here/",
         "/policies/"
       ],
-      "decision": "proposed",
-      "reason": "We agree with the memo. Not built yet because it changes the first screen and every policy page, and the lead says more memos are coming: one redesign made with all of them is better than two."
+      "decision": "done",
+      "reason": "Done in a stronger form than we proposed: R002 took the hook out of the first five minutes altogether (P19). The line comes first, and the question it leaves is asked under every example.",
+      "version": "0.2.3",
+      "history": [
+        [
+          "0.2.2",
+          "proposed"
+        ],
+        [
+          "0.2.3",
+          "done"
+        ]
+      ]
     },
     {
       "id": "P2",
@@ -30,19 +42,28 @@
         "/storyboards/"
       ],
       "decision": "proposed",
-      "reason": "This is the sequence the memo describes, and the site already has its words: the barrier table runs none, expectation, setting, boundary. Not built yet for the same reason as P1, and because Q1 (what 'the history' means) changes what each stop says."
+      "reason": "The examples are its first stop now: the line, an expectation, and the question it leaves. The other stops wait for Q1, and are no longer on the first screen: they are what a customer reads after the examples."
     },
     {
       "id": "P3",
       "title": "Say what a hook is, in plain words, where the word first appears",
       "what": "A hook: a small script Claude Code itself runs before the agent acts, which can stop the action. Said once, at the first mention, on every page that mentions one.",
       "where": [
-        "/",
-        "/start-here/",
         "/policies/"
       ],
-      "decision": "proposed",
-      "reason": "Cheap and right, but the first mention is exactly the text P1 rewrites. It ships with P1, so the first screen changes once."
+      "decision": "done",
+      "reason": "The front pages no longer mention a hook (P19). Where one is offered, on the Claude Code pages, the warning above them says what it is first.",
+      "version": "0.2.3",
+      "history": [
+        [
+          "0.2.2",
+          "proposed"
+        ],
+        [
+          "0.2.3",
+          "done"
+        ]
+      ]
     },
     {
       "id": "P4",
@@ -64,8 +85,19 @@
         "/start-here/",
         "/programme/"
       ],
-      "decision": "proposed",
-      "reason": "Agreed; the milestones are the programme's roadmap, not a customer's next step. Not built yet because the next stop is P2's, which is not built."
+      "decision": "done",
+      "reason": "Start here was rewritten for the browser (R002); it ends with the next five examples and your account, and the seven milestones are only on the programme pages.",
+      "version": "0.2.3",
+      "history": [
+        [
+          "0.2.2",
+          "proposed"
+        ],
+        [
+          "0.2.3",
+          "done"
+        ]
+      ]
     },
     {
       "id": "P6",
@@ -89,8 +121,19 @@
         "/policies/send-as-you/",
         "/policies/read-all-your-mail/"
       ],
-      "decision": "proposed",
-      "reason": "The memo's point about hooks applies twice over to people who cannot have one, and Nadia, an invented ChatGPT user on a phone, met 'hook' and 'Claude Code' in the first paragraph. Ships with P1; the facts about ChatGPT's connector settings have to be checked first."
+      "decision": "done",
+      "reason": "Done by R002's web first: every first example runs in ChatGPT or Claude in the browser, and none of them mentions a hook. Which boundary a ChatGPT user can set for a connector is still to be checked (P26).",
+      "version": "0.2.3",
+      "history": [
+        [
+          "0.2.2",
+          "proposed"
+        ],
+        [
+          "0.2.3",
+          "done"
+        ]
+      ]
     },
     {
       "id": "P8",
@@ -101,7 +144,7 @@
       ],
       "decision": "done",
       "version": "0.2.2",
-      "reason": "The memo asked for it. They are invented, not user research: they find what a page fails to say, not what a customer wants."
+      "reason": "The memo asked for it. They are invented, not user research: they find what a page fails to say, not what a customer wants. Study S2, the same five, is due once the lead has reviewed v0.2.3: R002 rebuilt the front pages, and running invented users on a design the lead is still changing would measure the wrong thing."
     },
     {
       "id": "P9",
@@ -211,8 +254,19 @@
         "/",
         "/policies/touch-your-secrets/"
       ],
-      "decision": "proposed",
-      "reason": "Two invented users saw the demo as stuck or empty. Partly a limit of the method (a screenshot cannot watch an animation), and partly real. P1 changes what the demo plays, so it changes with P1."
+      "decision": "done",
+      "reason": "Done differently: R002 asked for play, pause and step controls (P22), which let a reader get to the point at their own pace, and the player no longer loops. It does not open on its last frame.",
+      "version": "0.2.3",
+      "history": [
+        [
+          "0.2.2",
+          "proposed"
+        ],
+        [
+          "0.2.3",
+          "done"
+        ]
+      ]
     },
     {
       "id": "P18",
@@ -228,14 +282,176 @@
       ]
     },
     {
+      "id": "P19",
+      "title": "Web first: nothing to install, no hooks and no Claude Code on the front pages",
+      "what": "Every first example runs in Claude or ChatGPT in the browser. The home page, start here and the examples mention no hook and install nothing.",
+      "where": [
+        "/",
+        "/start-here/",
+        "/examples/"
+      ],
+      "decision": "done",
+      "reason": "R002's direction, and its security reason: a hook runs code on the customer's machine.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P20",
+      "title": "Six examples in tabs, simplest first",
+      "what": "Hello world, stay on topic, no web search, keep a secret, drafts never send, refunds up to £50. Each in three acts: ask and it does it; paste the line and ask again; a new chat with the line first. Each with the prompts to copy and what to look for.",
+      "where": [
+        "/",
+        "/examples/"
+      ],
+      "decision": "done",
+      "reason": "R002 asked for examples in tabs, from hello world to business rules, in the scenario, policy, again, new chat order.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P21",
+      "title": "Chat frames like Claude's and ChatGPT's, and a link to open each in a new window",
+      "what": "The examples play in a frame drawn roughly like each product's web chat, with a switch between them: messages above, the box you type into at the bottom. No logos; the caption says it is an approximation.",
+      "where": [
+        "/",
+        "/examples/"
+      ],
+      "decision": "done",
+      "reason": "R002: the old frames were not how either product looks, and most people will try this on the web.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P22",
+      "title": "Every demo can be played, paused and stepped",
+      "what": "Start again, back, play or pause, next, and which step of how many, on every demo on the site; the arrow keys step too. Plays once when first seen; never loops.",
+      "where": [
+        "every demo"
+      ],
+      "decision": "done",
+      "reason": "R002: reading a demo that plays by itself is annoying.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P23",
+      "title": "Questions under every example",
+      "what": "Did you get it, learn something, were you surprised, did it go as shown, how good was it, and a line. The answers become an email the reader sends, with the example's version; they stay in the reader's browser until then.",
+      "where": [
+        "/",
+        "/examples/"
+      ],
+      "decision": "done",
+      "reason": "R002: the first users should tell us, example by example, whether it surprised them.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P24",
+      "title": "The three acts, drawn",
+      "what": "A strip of the three acts above the examples and on every example's page, in place of 'paste one line, add one hook, try it'.",
+      "where": [
+        "/",
+        "/examples/"
+      ],
+      "decision": "done",
+      "reason": "R002 asked for an infographic beside the examples; the three acts are what every example has in common.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P25",
+      "title": "A small storyboard for each example",
+      "what": "Drawn with the storyboard kit, like what-is-an-abp: the scenario, the line, the refusal, the new chat.",
+      "where": [
+        "/examples/"
+      ],
+      "decision": "proposed",
+      "reason": "R002 suggested one. Proposed for after the lead has seen the examples as they are, so that the storyboards draw examples that have stopped changing."
+    },
+    {
+      "id": "P26",
+      "title": "Next: your other chats, its memory of you, things it does later",
+      "what": "Examples of what assistants can do that most people do not know about, each with the setting that turns it on and a line that limits it.",
+      "where": [
+        "/examples/"
+      ],
+      "decision": "proposed",
+      "reason": "R002 asked for them. Each needs a check of what Claude and ChatGPT do today first: an example that claims a capability the assistant does not have would teach the wrong thing. Q5 asks which first."
+    },
+    {
+      "id": "P27",
+      "title": "Your account first, the price list second",
+      "what": "An account strip straight under the hero: the balance, and a link to what you have read. The prices stay, on 'What each page costs', and each example's page costs 50p.",
+      "where": [
+        "/",
+        "/credit/"
+      ],
+      "decision": "done",
+      "reason": "R002: the account matters more than the price list at this stage; the prices are still an experiment, so they stay.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P28",
+      "title": "No newsroom in the account: no reader card under pages, and an account page of our own",
+      "what": "The meter still charges every page, quietly. /account/ draws the balance, where it went by kind of page, everything read and the top-ups from the meter's own state, without the newsroom's personas or links.",
+      "where": [
+        "every page",
+        "/account/"
+      ],
+      "decision": "done",
+      "reason": "R002: the reader card and the personas are the newsroom's, not this site's.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P29",
+      "title": "Cards that show where they go",
+      "what": "Each card on the home page shows a picture of the page it opens, made by admin/build/thumbs.cjs from the page itself.",
+      "where": [
+        "/"
+      ],
+      "decision": "done",
+      "reason": "R002: a card that does not show what is on the other side is not worth the click.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P30",
+      "title": "Professional copy: no 'first customers' on the pages a customer reads",
+      "what": "The home page and start here talk to somebody using the site, not to the first batch.",
+      "where": [
+        "/",
+        "/start-here/"
+      ],
+      "decision": "done",
+      "reason": "R002: the site is live and working with users.",
+      "version": "0.2.3"
+    },
+    {
+      "id": "P31",
+      "title": "Version control of all of it",
+      "what": "Each example has a version, shown on it, sent with the answers to its questions and listed on its page; each review records the version it reviewed; a decision that changes keeps its history in this register.",
+      "where": [
+        "/examples/",
+        "/feedback/reviews/"
+      ],
+      "decision": "done",
+      "reason": "R002 asked for it. The site's releases were already versioned; the examples and the decisions now are too.",
+      "version": "0.2.3"
+    },
+    {
       "id": "D1",
       "title": "Take the hook out of the first five minutes",
       "what": "One reading of 'a solution for a problem they don't have yet' is to leave the hook for later.",
       "where": [
         "/"
       ],
-      "decision": "declined",
-      "reason": "The hook stays in the first five minutes, second rather than first (P1). A customer who stops after the line leaves believing their agent is held when it has only been asked, and that difference is the point of the ABP. The memo's own sequence keeps it: the question that the hook answers comes up in the first try, if we let it."
+      "decision": "reversed",
+      "reason": "Declined at v0.2.2: a customer who stops after the line leaves believing their agent is held when it has only been asked. Reversed at v0.2.3 by R002 (R002.7): a hook is a program run on the customer's machine, which our first screen had their agent fetch from our site and install, before any behaviour policy governs what their agent installs. Our concern is kept in words: every example says the line is followed because the assistant chooses to.",
+      "version": "0.2.3",
+      "history": [
+        [
+          "0.2.2",
+          "declined"
+        ],
+        [
+          "0.2.3",
+          "reversed"
+        ]
+      ]
     },
     {
       "id": "D2",
@@ -276,6 +492,16 @@
       ],
       "decision": "declined",
       "reason": "Every page has a price because the lead asked for it, and the programme exists to find fair prices with its customers. What was wrong was that nothing said what the money is: P9 fixes that."
+    },
+    {
+      "id": "D6",
+      "title": "Delete the Claude Code behaviour policies",
+      "what": "R002 says not to use Claude Code for now.",
+      "where": [
+        "/policies/"
+      ],
+      "decision": "declined",
+      "reason": "They are kept, moved down /policies/ under a warning that says a hook is a program that runs on your machine, and nothing on the front pages links to them. They are tested, the lead's own agents run in Claude Code, and the guided path (P2) ends at settings and boundaries that only Claude Code has today. Hidden from a first visit, not deleted."
     }
   ],
   "questions": [

@@ -28,9 +28,9 @@ PINS_DIR       = ROOT / 'admin' / 'build' / 'pins'
 MARKER_PREFIX  = 'rm-customers'                                                  # <!-- rm-customers:<block>:start -->
 
 SITE_NAME      = 'customers.riskmandate.ai'
-SITE_ONE_LINER = ('The first customers of the Agent Behaviour Policy: an early access programme run as a site, '
-                  'with a start-here page, a page per customer, credit to spend, the milestones agreed with each one, '
-                  'and a daily follow-up. Part of riskmandate.ai.')
+SITE_ONE_LINER = ('Put an Agent Behaviour Policy on Claude or ChatGPT in five minutes: six examples to try in the browser, '
+                  'an account with £50 of credit, every review of the site and what was done about it, and the programme '
+                  'that follows each customer up. Part of riskmandate.ai.')
 PARENT_URL     = 'https://riskmandate.ai'
 PARENT_TITLE   = 'riskmandate.ai: the company and the product this programme is for'
 LICENCE_URL    = 'https://creativecommons.org/licenses/by/4.0/'
@@ -101,14 +101,15 @@ CSP_STORYBOARD = csp(storyboard=True)
 # Each group: (label, the group's own page, [(href, label), ...]). A group label is a
 # plain link to its first page, so the nav works with no JavaScript at all.
 NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'                                   , 'Your first five minutes'          ),
-                                                      ('/account/'                                      , 'Your account: £50 to spend'       ),
-                                                      ('/credit/'                                       , 'What each page costs'             ),
-                                                      ('/feedback/'                                     , 'Tell us what you think'           ))),
-                  ('Policies'     , '/policies/'   , (('/policies/'                                     , 'Pick one worry: every policy'     ),
-                                                      ('/policies/starter/'                             , 'The starter pack: four in one go' ),
-                                                      ('/policies/touch-your-secrets/'                  , 'Keep it away from your secrets'   ),
-                                                      ('/policies/push-anywhere/'                       , 'Only push to your branch'         ),
-                                                      ('/policies/send-as-you/'                         , 'ChatGPT: nothing sent without a yes'))),
+                                                      ('/account/'                                      , 'Your account'                     ),
+                                                      ('/feedback/'                                     , 'Tell us what you think'           ),
+                                                      ('/credit/'                                       , 'What each page costs'             ))),
+                  ('Examples'     , '/examples/'   , (('/examples/'                                     , 'All six, simplest first'          ),
+                                                      ('/examples/hello-world/'                         , 'Hello, world'                     ),
+                                                      ('/examples/keep-a-secret/'                       , 'Keep a secret'                    ),
+                                                      ('/examples/drafts-not-send/'                     , 'Drafts, never send'               ),
+                                                      ('/examples/refunds/'                             , 'Refunds up to £50'                ),
+                                                      ('/policies/'                                     , 'Behaviour policies, Claude Code too'))),
                   ('Learn'        , '/what-is-an-abp/', (('/what-is-an-abp/'                            , 'What an ABP is'                   ),
                                                       ('/storyboards/'                                  , 'Storyboards'                      ),
                                                       ('/storyboards/your-first-policy/'                , 'Your first policy, drawn'         ))),
@@ -143,6 +144,7 @@ CRUMB_FOLDERS  = {'/docs/'        : ('Docs'       , '/docs/'       ),
                   '/review/'      : ('Review'     , '/review/'     ),
                   '/admin/'       : ('Admin'      , '/admin/'      ),
                   '/policies/'    : ('Policies'   , '/policies/'   ),
+                  '/examples/'    : ('Examples'   , '/examples/'   ),
                   '/storyboards/' : ('Storyboards', '/storyboards/'),
                   '/account/'     : ('Your account', '/account/'   ),
                   '/feedback/'    : ('Feedback'   , '/feedback/'   ),
@@ -206,6 +208,7 @@ class Chrome:
                      f'<script src="/assets/nav.js" defer></script>'                                      ,
                      f'<script src="/assets/copy.js" defer></script>'                                     ,
                      f'<script src="/assets/demo.js" defer></script>'                                     ,
+                     f'<script src="/assets/examples.js" defer></script>'                                 ,
                      f'<script type="module" src="{Pins.meter_url()}" integrity="{Pins.meter_integrity()}" crossorigin="anonymous"></script>',
                      f'<meta property="og:type" content="website">'                                       ,
                      f'<meta property="og:site_name" content="RiskMandate">'                             ,
@@ -295,8 +298,7 @@ class Chrome:
 
     def meter_card(self, url_path, title):
         kind = self.kind_of(url_path)
-        return (f'  <div class="wrap meter-card"><sg-meter view="page" kind="{kind}" title="{html.escape(title, quote=True)}"'
-                + (' quiet' if kind == 'free' else '') + '></sg-meter></div>')
+        return (f'  <div class="wrap meter-card"><sg-meter view="page" kind="{kind}" title="{html.escape(title, quote=True)}" quiet></sg-meter></div>')   # charges, and shows nothing: the newsroom's reader card is not for this site (R002)
 
     def kit_scripts(self):
         return [f'  <script src="{url}" integrity="{sri}" crossorigin="anonymous"></script>'

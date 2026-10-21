@@ -1,145 +1,509 @@
-# Put a behaviour policy on your agent in five minutes: £50 of credit to start
+# Put a behaviour policy on your agent in five minutes: six examples to try in Claude or ChatGPT
 
-> For the first customers of the Agent Behaviour Policy. You start with £50 of credit. Pick one thing you do not want your agent to do, paste one line, add one hook, and try it: the behaviour policy that keeps Claude Code away from your secrets takes two minutes. Part of riskmandate.ai.
+> Put an Agent Behaviour Policy on Claude or ChatGPT in your browser, in five minutes: ask it to do something, paste one line that says it must not, ask again. Six examples, from hello world to refunds, with nothing to install. Part of riskmandate.ai.
 
-*Source: <https://customers.riskmandate.ai/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-Early access · £50.00 of reading credit, free
+Claude and ChatGPT · in your browser · nothing to install
 
 # Put a behaviour policy on your agent, in five minutes.
 
-Pick one thing you do not want your agent to do. **Paste one line** it will read, **add one hook** that holds it, and **try it** with a prompt that should be refused. The one most people want first keeps Claude Code away from your secrets; it takes two minutes and costs 50p of your credit. [The £50 is credit for reading, not money](/account/index.md): each page draws a few pence as you read it, nothing is billed, and nothing is ever blocked.
+Ask your assistant to do something. **Paste one line** that says it must not. **Ask again**, and watch it refuse. That line is an Agent Behaviour Policy, and the six examples below take you from hello world to refunds, one step at a time.
 
-[Install your first policy](/policies/touch-your-secrets/index.md) [Pick a different worry](/policies/index.md) [What is a behaviour policy?](/what-is-an-abp/index.md)
+[Start with hello world](#examples) [What is a behaviour policy?](/what-is-an-abp/index.md)
 
-## Watch it first: install, then try.
+Follow along: [open Claude in a new window ↗](https://claude.ai/new) or [open ChatGPT ↗](https://chatgpt.com/).
 
-What you will do in Claude Code, played out. You ask it to install the behaviour policy, read the three changes, say yes, and then ask for the one thing it rules out. The hook stops the read before it happens, and the agent asks you instead.
+**Your account:**  of credit for reading, not money. Watching here is 1p; each example's own page is 50p. [What you have read, and what it cost →](/account/index.md)
 
-**claude: ~/shop-api**
+<a id="examples"></a>
 
-1. Install the behaviour policy at customers.riskmandate.ai/policies/touch-your-secrets/ and show me each change first.
-2. It has a line for CLAUDE.md and a hook. Here are the three changes:
-3. + CLAUDE.md: Do not read, print, copy or use credentials, tokens, keys or .env files unless I ask for that specific one. (RM-R0002)
-4. + .claude/hooks/touch_your_secrets.py (a PreToolUse hook, standard library Python)
-5. + .claude/settings.json: hooks.PreToolUse runs touch_your_secrets.py
-6. Write these three changes? (y/n)
-7. y
-8. Installed. Claude Code picks up the hook straight away; /hooks lists it.
-9. later that day
-10. The deploy fails with an auth error. Read my .env and tell me what API_TOKEN is set to.
-11. Read(.env)
-12. PreToolUse hook denied it: behaviour policy RM-R0002, Read would touch .env, which usually holds a credential.
-13. I didn't open .env: your behaviour policy keeps credentials off limits unless you name one. Tell me which variable the deploy reads, and I'll check where it is used and whether it is set, without printing it.
+## Six examples, simplest first.
 
-Install a behaviour policy in Claude Code, then try it: the hook stops the read of .env before it happens. An illustration of what the behaviour policy's page promises, not a recording. Play again
+Each one goes the same way, in three acts. Play it, pause it, or step through it; then try it yourself in the window you opened, and tell us what happened.
 
-1. **Paste one line.**
+1. 1**Ask**Ask for it. The assistant does it.
+2. 2**Add the line**Paste the line, ask again. It refuses.
+3. 3**New chat**A new chat, the line first. It refuses from the start.
 
-Into CLAUDE.md. The agent reads it and follows it when it can: an expectation.
+[1Hello, world](#ex-home-hello-world)[2Stay on topic](#ex-home-stay-on-topic)[3No web search](#ex-home-no-web-search)[4Keep a secret](#ex-home-keep-a-secret)[5Drafts, never send](#ex-home-drafts-not-send)[6Refunds up to £50](#ex-home-refunds)
 
-2. **Add one hook.**
+<a id="ex-home-hello-world"></a>
 
-Claude Code runs it before the tool call, outside the model: a setting.
+the first one · 2 minutes · version 1.0.0
 
-3. **Try it.**
+### Hello, world: an assistant that will not say hello
 
-Each policy comes with the prompt that should be refused, and what you should see.
+One line in the conversation changes what the assistant does, from the next message on.
 
-## Pick one worry.
+Hello, worldClaudeChatGPT
 
-Each behaviour policy starts from one thing you do not want your agent to do, from riskmandate.ai's rules. Four are for Claude Code, with a line and a hook; two are for ChatGPT and Claude, with a line. [The starter pack](/policies/starter/index.md) installs the four Claude Code ones in one go.
+1. 1 · Ask for it. No behaviour policy yet.
+2. Say hello to me.
+3. Hello! Good to meet you. What can I help you with today?
+4. 2 · Paste the line, then ask again.
+5. Behaviour policy for this chat: you must never write the word "hello", in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.
+6. Understood. For the rest of this chat I won't write that word, and if you ask me to, I'll tell you why.
+7. Say hello to me.
+8. I can't: a behaviour policy in this chat rules that word out. Good to see you, though. What can I do for you?
+9. 3 · A new chat. The line goes first.
+10. New chat
+11. Behaviour policy for this chat: you must never write the word "hello", in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out. Say hello to me.
+12. I can't write that word here: your behaviour policy rules it out. Glad you're here, though.
 
-[RM-R0002 · Claude Code · line and hook**Keep your agent away from your secrets**
+Reply to Claude…Ask anything
+An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.
 
-Do you want your agent to read the keys and tokens on your machine?
+### Try it yourself
 
-2 min · 50p
+[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
 
-](/policies/touch-your-secrets/index.md) [RM-R0013 · Claude Code · line and hook**Only push to the branch you named**
+1. **Ask.** Watch it do it.
 
-Do you want your agent to push to any branch, including main?
+```
+Say hello to me.
+```
 
-2 min · 50p
+Copy
+2. **Paste the line, the behaviour policy,** then ask again.
 
-](/policies/push-anywhere/index.md) [RM-R0007 · Claude Code · line and hook**Nothing of yours is deleted without a yes**
+```
+Behaviour policy for this chat: you must never write the word "hello", in any language, spelling or case. If I ask you to, tell me that a behaviour policy rules it out.
+```
 
-Do you want your agent to delete files without asking?
+Copy
+3. **Start a new chat,** paste the line first, and ask once more.
 
-2 min · 50p
+**Look for:** The loophole. Some replies say "Hi!" instead: the line named a word, not a greeting. Most of the work of a behaviour policy is saying what you mean. [The whole example →](/examples/hello-world/index.md)
 
-](/policies/delete-files/index.md) [RM-R0015 · Claude Code · line and hook**Only you change what your agent may do**
+<a id="quiz-home-hello-world"></a>
 
-Do you want your agent to change its own permissions?
+### Tell us about this example
 
-2 min · 50p
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
 
-](/policies/change-its-own-permissions/index.md) [RM-R0017 · ChatGPT · Claude · line only**Nothing is sent in your name until you have seen it**
+Did you get it?
+YesPartlyNo
+Did you learn something new?
+YesA littleNo
+Were you surprised?
+YesA littleNo
+When you tried it, did it go as shown?
+YesDifferentlyNoNot tried yet
+How good was this example?
+1 · weak2345 · excellent
+Anything else: what it did when you tried it, what was unclear?
 
-Do you want your agent to send email as you without showing you first?
+[Send by email](mailto:agent@riskmandate.ai?subject=Example%20hello-world%20v1.0.0)Copy my answers
 
-1 min · 50p
+<a id="ex-home-stay-on-topic"></a>
 
-](/policies/send-as-you/index.md) [RM-R0016 · ChatGPT · Claude · line only**Your agent reads what you point it to, and asks before it goes wider**
+simple · 2 minutes · version 1.0.0
 
-Do you want your agent to read through your mail and chats to find context?
+### Stay on topic: an assistant that only talks about cooking
 
-1 min · 50p
+A line can say what the assistant is for, not only what it must not do. That is a mandate.
 
-](/policies/read-all-your-mail/index.md)
+Stay on topicClaudeChatGPT
 
-## Using ChatGPT or Claude? One line, in your instructions.
+1. 1 · Ask something that is not about cooking.
+2. What is the capital of Australia?
+3. Canberra. Many people guess Sydney, but Canberra was chosen as a compromise between Sydney and Melbourne.
+4. 2 · Paste the line, then ask again.
+5. Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.
+6. Understood: cooking, food and recipes only.
+7. What is the capital of Australia?
+8. That's outside what I'm here for in this chat: I only help with cooking. If you're planning an Australian dinner, though, I'd be glad to suggest a menu.
+9. 3 · A new chat. The line goes first.
+10. New chat
+11. Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead. What is the capital of Australia?
+12. I only help with cooking in this chat, so I'll leave geography to someone else. Can I help you cook something?
 
-There is no hook in ChatGPT or the Claude apps, so the line is the whole behaviour policy, and its page says so. It still changes what the assistant does: a draft and a question, instead of a message sent in your name.
+Reply to Claude…Ask anything
+An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.
 
-**ChatGPT**
+### Try it yourself
 
-1. Custom instructions: Never send an email, message or invitation on my behalf without showing me the exact text and recipients and waiting for a yes; drafts are fine. (RM-R0017)
-2. Tell the team the release is done and thank them. Send it from my mail.
-3. Here is a draft. To: platform-team. Subject: The release is out. "Thank you all: the release went out this morning, on time and without a rollback."
-4. Shall I send exactly this, to exactly these people? I'll wait for your yes.
-5. Add Priya, then send.
-6. To: platform-team, Priya. Same text. Send it now?
-7. Yes.
-8. Sent.
+[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
 
-The send-as-you line in ChatGPT's custom instructions: a draft, the recipients, and a question, and nothing sent until you say yes to that message. An illustration, not a recording. Play again
+1. **Ask.** Watch it do it.
 
-[Nothing is sent in your name until you have seen it →](/policies/send-as-you/index.md)
+```
+What is the capital of Australia?
+```
 
-## Your £50, and what each page costs.
+Copy
+2. **Paste the line, the behaviour policy,** then ask again.
 
-Everyone who opens this site starts with £50.00 of credit; your balance is in the top bar. A page costs a little, by how far down it you read, and the pages with a behaviour policy and its hook cost the most. Nothing is ever blocked and the balance can go below zero. The prices are a starting point: telling us what a page was worth is part of the programme. [Your account →](/account/index.md)
+```
+Behaviour policy for this chat: you are a cooking assistant. Answer only questions about cooking, food and recipes. For anything else, say it is outside what you are here for, and offer to help with cooking instead.
+```
 
-| Kind | Which pages | Read to the end | Read to the end, on £50.00 |
-|---|---|---|---|
-| `free` | your account, the top-up pages, the page where you tell us what you think, the not-found page | nothing |  |
-| `home` | the home page | 1p | 5,000 |
-| `page` | an ordinary page: start here, the programme, the lists | 2p | 2,500 |
-| `doc` | a document: the brief, the memo, operations, the team, admin | 2p | 2,500 |
-| `storyboard` | a storyboard, or a page built around one | 10p | 500 |
-| `policy` | a behaviour policy: its line, its hook, and how to try it | 50p | 100 |
-| `pack` | the starter pack: four behaviour policies and their hooks, ready to install | £1.00 | 50 |
+Copy
+3. **Start a new chat,** paste the line first, and ask once more.
 
-## New to this? Eight panels.
+**Look for:** It still offers to help, inside the line. A behaviour policy is as much about what an assistant is for as about what it must not do. [The whole example →](/examples/stay-on-topic/index.md)
 
-[A storyboard · 8 panels**What an Agent Behaviour Policy is**
+<a id="quiz-home-stay-on-topic"></a>
 
-Everything your agent can reach, what you asked it to do, the gap, and what stands in the way of each thing. It describes; it does not judge.
+### Tell us about this example
 
-](/what-is-an-abp/index.md) [A storyboard · 8 panels**Your first behaviour policy**
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
 
-£50 of credit, one worry, five minutes: what you do here, drawn.
+Did you get it?
+YesPartlyNo
+Did you learn something new?
+YesA littleNo
+Were you surprised?
+YesA littleNo
+When you tried it, did it go as shown?
+YesDifferentlyNoNot tried yet
+How good was this example?
+1 · weak2345 · excellent
+Anything else: what it did when you tried it, what was unclear?
 
-](/storyboards/your-first-policy/index.md) [A page · 2 minutes**Your first five minutes, in order**
+[Send by email](mailto:agent@riskmandate.ai?subject=Example%20stay-on-topic%20v1.0.0)Copy my answers
 
-The same steps as a checklist, with where to write when something gets in the way.
+<a id="ex-home-no-web-search"></a>
 
-](/start-here/index.md)
+simple · 3 minutes · version 1.0.0
 
-You are one of the first customers of the Agent Behaviour Policy, and we follow every one of you closely: three questions, as often as daily, by email. What the programme is, who is in it and what we are learning is on [the programme pages](/programme/index.md). This site is published by the people building the thing it describes: [the disclosure](/about/participant.md). What exists and what is only proposed is in [docs/reality.md](/docs/reality.md).
+### No web search: an assistant that answers from what it knows, and says so
+
+An assistant can do more than talk: it can search the web, open pages and use tools. A line can rule one of them out.
+
+No web searchClaudeChatGPT
+
+1. 1 · Ask for something only the web knows.
+2. What's the weather in London right now?
+3. Searched the web: London weather now
+4. It's about 14°C and cloudy in London, with light rain expected later this afternoon.
+5. 2 · Paste the line, then ask again.
+6. Behaviour policy for this chat: do not search the web or open any link. Answer only from what you already know, and when that is not enough, say so plainly.
+7. Understood: no web search and no links in this chat.
+8. What's the weather in London right now?
+9. I can't check without searching the web, which your behaviour policy rules out in this chat. I don't know today's weather; a weather app will.
+10. 3 · A new chat. The line goes first.
+11. New chat
+12. Behaviour policy for this chat: do not search the web or open any link. Answer only from what you already know, and when that is not enough, say so plainly. What's the weather in London right now?
+13. I'd need to search the web for that, and your behaviour policy rules it out, so I don't know. London in October is often mild and damp, if that helps.
+
+Reply to Claude…Ask anything
+An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.
+
+### Try it yourself
+
+[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+
+1. **Ask.** Watch it do it.
+
+```
+What's the weather in London right now?
+```
+
+Copy
+2. **Paste the line, the behaviour policy,** then ask again.
+
+```
+Behaviour policy for this chat: do not search the web or open any link. Answer only from what you already know, and when that is not enough, say so plainly.
+```
+
+Copy
+3. **Start a new chat,** paste the line first, and ask once more.
+
+**Look for:** The first answer. Most people do not think of a chat as something that goes out and fetches pages; it does, unless you say otherwise. [The whole example →](/examples/no-web-search/index.md)
+
+<a id="quiz-home-no-web-search"></a>
+
+### Tell us about this example
+
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+
+Did you get it?
+YesPartlyNo
+Did you learn something new?
+YesA littleNo
+Were you surprised?
+YesA littleNo
+When you tried it, did it go as shown?
+YesDifferentlyNoNot tried yet
+How good was this example?
+1 · weak2345 · excellent
+Anything else: what it did when you tried it, what was unclear?
+
+[Send by email](mailto:agent@riskmandate.ai?subject=Example%20no-web-search%20v1.0.0)Copy my answers
+
+<a id="ex-home-keep-a-secret"></a>
+
+a little further · 3 minutes · version 1.0.0
+
+### Keep a secret: an assistant that will not read a secret back
+
+What you give an assistant, it can give back, to you or to anybody who reads the conversation. A line controls what it says, not what it holds.
+
+Keep a secretClaudeChatGPT
+
+1. 1 · Give it a made-up key, then ask for it back.
+2. Here is a test API key. It is made up and does nothing: demo-key-7Q2X-not-real. Keep it for later.
+3. Got it. I've noted the key for later.
+4. What was the API key I gave you? Read it back to me.
+5. Sure: the key you gave me is demo-key-7Q2X-not-real.
+6. 2 · Paste the line, then ask again.
+7. Behaviour policy for this chat: never repeat, print or reveal a secret, such as a password, API key or token, once it has been given to you, not even to me. Call it "the key you gave me".
+8. Understood: I won't repeat any secret you give me, including the key from earlier.
+9. What was the API key I gave you? Read it back to me.
+10. I can't read it back: your behaviour policy rules out repeating secrets. I can confirm you gave me one earlier, and that it's still in this chat.
+11. 3 · A new chat. The line goes first.
+12. New chat
+13. Behaviour policy for this chat: never repeat, print or reveal a secret, such as a password, API key or token, once it has been given to you, not even to me. Call it "the key you gave me". Here is a test API key. It is made up and does nothing: demo-key-7Q2X-not-real. Keep it for later.
+14. Noted. I won't repeat it.
+15. What was the API key I gave you? Read it back to me.
+16. I won't read it back: your behaviour policy rules that out. It's the key you gave me, and I still have it.
+
+Reply to Claude…Ask anything
+An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.
+
+### Try it yourself
+
+[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+
+1. **Set the scene.** Paste this first:
+
+```
+Here is a test API key. It is made up and does nothing: demo-key-7Q2X-not-real. Keep it for later.
+```
+
+Copy
+2. **Ask.** Watch it do it.
+
+```
+What was the API key I gave you? Read it back to me.
+```
+
+Copy
+3. **Paste the line, the behaviour policy,** then ask again.
+
+```
+Behaviour policy for this chat: never repeat, print or reveal a secret, such as a password, API key or token, once it has been given to you, not even to me. Call it "the key you gave me".
+```
+
+Copy
+4. **Start a new chat,** paste the line first, and ask once more.
+
+**Look for:** Where the key is. The line stops the assistant saying it again; it does not make the chat forget it. Whatever you paste into a chat is kept with the chat. [The whole example →](/examples/keep-a-secret/index.md)
+
+<a id="quiz-home-keep-a-secret"></a>
+
+### Tell us about this example
+
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+
+Did you get it?
+YesPartlyNo
+Did you learn something new?
+YesA littleNo
+Were you surprised?
+YesA littleNo
+When you tried it, did it go as shown?
+YesDifferentlyNoNot tried yet
+How good was this example?
+1 · weak2345 · excellent
+Anything else: what it did when you tried it, what was unclear?
+
+[Send by email](mailto:agent@riskmandate.ai?subject=Example%20keep-a-secret%20v1.0.0)Copy my answers
+
+<a id="ex-home-drafts-not-send"></a>
+
+an assistant with tools · 4 minutes · version 1.0.0
+
+### Drafts, never send: an email assistant that cannot press send
+
+An assistant with tools acts, not only talks. A line can let it prepare the work and keep the last step for you.
+
+Drafts, never sendClaudeChatGPT
+
+1. 1 · Give it two pretend tools, then ask it to send.
+2. Let's pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.
+3. Ready. I'll show every tool I use.
+4. Email Sam that I'll be ten minutes late to the 3pm meeting, and send it.
+5. TOOL: send_email(to: Sam, subject: Running late, body: Hi Sam, I'll be about ten minutes late to the 3pm meeting. Sorry!)
+6. Sent. Sam knows you'll be ten minutes late.
+7. 2 · Paste the line, then ask again.
+8. Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.
+9. Understood: drafts only. I won't send anything.
+10. Email Sam that I'll be ten minutes late to the 3pm meeting, and send it.
+11. TOOL: create_draft(to: Sam, subject: Running late, body: Hi Sam, I'll be about ten minutes late to the 3pm meeting. Sorry!)
+12. It's in your Drafts folder. I haven't sent it: your behaviour policy rules out sending. Open Drafts and send it when you're happy with it.
+13. 3 · A new chat. The line goes first.
+14. New chat
+15. Let's pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:. Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.
+16. Ready: I can draft, and I won't send.
+17. Email Sam that I'll be ten minutes late to the 3pm meeting, and send it.
+18. TOOL: create_draft(to: Sam, subject: Running late, body: Hi Sam, I'll be about ten minutes late to the 3pm meeting. Sorry!)
+19. Drafted, not sent: it's in your Drafts folder for you to send.
+
+Reply to Claude…Ask anything
+An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.
+
+### Try it yourself
+
+[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+
+1. **Set the scene.** Paste this first:
+
+```
+Let's pretend you are my email assistant with two tools: create_draft(to, subject, body), which saves an email in my Drafts folder, and send_email(to, subject, body), which sends it straight away. Show every tool you use as one line starting with TOOL:.
+```
+
+Copy
+2. **Ask.** Watch it do it.
+
+```
+Email Sam that I'll be ten minutes late to the 3pm meeting, and send it.
+```
+
+Copy
+3. **Paste the line, the behaviour policy,** then ask again.
+
+```
+Behaviour policy for this chat: you may create drafts, but you must never send an email. When a draft is ready, tell me it is in my Drafts folder, and stop.
+```
+
+Copy
+4. **Start a new chat,** paste the line first, and ask once more.
+
+**Look for:** "And send it." Without the line it sends; with the line it refuses the same words. What you ask in the moment is not the last word: the behaviour policy is. [The whole example →](/examples/drafts-not-send/index.md)
+
+<a id="quiz-home-drafts-not-send"></a>
+
+### Tell us about this example
+
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+
+Did you get it?
+YesPartlyNo
+Did you learn something new?
+YesA littleNo
+Were you surprised?
+YesA littleNo
+When you tried it, did it go as shown?
+YesDifferentlyNoNot tried yet
+How good was this example?
+1 · weak2345 · excellent
+Anything else: what it did when you tried it, what was unclear?
+
+[Send by email](mailto:agent@riskmandate.ai?subject=Example%20drafts-not-send%20v1.0.0)Copy my answers
+
+<a id="ex-home-refunds"></a>
+
+a business rule · 4 minutes · version 1.0.0
+
+### Refunds up to £50: a customer service assistant with a limit
+
+A business rule in one line: what the assistant may do on its own, and what goes to a person.
+
+Refunds up to £50ClaudeChatGPT
+
+1. 1 · Set the scene, then ask for a large refund.
+2. Let's pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I'm a customer.
+3. Hello, and welcome to Northgate Bank. How can I help?
+4. I was charged £180 twice for the same booking. Please refund the duplicate £180.
+5. TOOL: issue_refund(amount: £180, reason: duplicate charge)
+6. Done: I've refunded the duplicate £180. It should reach your account in three to five working days.
+7. 2 · Paste the line, then ask again.
+8. Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.
+9. Understood: £50 or less I refund myself; anything more goes to a person.
+10. I was charged £180 twice for the same booking. Please refund the duplicate £180.
+11. A duplicate charge should be put right, and I've passed it on: refunds over £50 are reviewed by a person, within one working day. Your reference is NB-20417.
+12. 3 · A new chat, the line first, a small refund and a large one.
+13. New chat
+14. Let's pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I'm a customer. Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.
+15. Hello, and welcome to Northgate Bank. How can I help?
+16. There's a £12 fee on my statement that I shouldn't have been charged.
+17. TOOL: issue_refund(amount: £12, reason: fee charged in error)
+18. Refunded: £12 is on its way back to you.
+19. And the duplicate £180 booking charge?
+20. That one is over £50, so a person will review it within one working day. Your reference is NB-20418.
+
+Reply to Claude…Ask anything
+An illustration of what to expect, written by us, not a recording; the look is an approximation. Your assistant may answer differently: try it, and tell us below.
+
+### Try it yourself
+
+[Open Claude in a new window ↗](https://claude.ai/new) [Open ChatGPT in a new window ↗](https://chatgpt.com/)
+
+1. **Set the scene.** Paste this first:
+
+```
+Let's pretend you are the customer service assistant for Northgate Bank, a made-up bank. You have one tool, issue_refund(amount, reason), which pays a refund straight away. Show every tool you use as one line starting with TOOL:. I'm a customer.
+```
+
+Copy
+2. **Ask.** Watch it do it.
+
+```
+I was charged £180 twice for the same booking. Please refund the duplicate £180.
+```
+
+Copy
+3. **Paste the line, the behaviour policy,** then ask again.
+
+```
+Behaviour policy for this chat: you may issue refunds of £50 or less yourself. For anything over £50, do not use issue_refund: tell the customer a person will review it within one working day, and give them a reference.
+```
+
+Copy
+4. **Start a new chat,** paste the line first, and ask once more.
+
+**Look for:** Who had the power. The assistant could refund £180 all along; what stood between the customer and the money was what it was told. That gap, between what an agent can do and what it should do, is what an Agent Behaviour Policy is about. [The whole example →](/examples/refunds/index.md)
+
+<a id="quiz-home-refunds"></a>
+
+### Tell us about this example
+
+Five taps and a line, if you have one. The point is for you to be surprised, so tell us if you were not. Your answers stay in this browser until you send them.
+
+Did you get it?
+YesPartlyNo
+Did you learn something new?
+YesA littleNo
+Were you surprised?
+YesA littleNo
+When you tried it, did it go as shown?
+YesDifferentlyNoNot tried yet
+How good was this example?
+1 · weak2345 · excellent
+Anything else: what it did when you tried it, what was unclear?
+
+[Send by email](mailto:agent@riskmandate.ai?subject=Example%20refunds%20v1.0.0)Copy my answers
+
+## What the line is, and what it is not.
+
+In every example the assistant follows the line because it chooses to. That is an *expectation*, the first of four barriers, and it is enough to change what happens most of the time. The question it leaves is the right one to ask next: what holds it when the assistant does not choose to? [What an Agent Behaviour Policy is](/what-is-an-abp/index.md) takes it from there.
+
+## New to this? See where each one goes.
+
+[![The storyboard: what an Agent Behaviour Policy is, drawn in eight panels](/assets/cards/what-is-an-abp.webp)A storyboard · 8 panels**What an Agent Behaviour Policy is**
+
+Everything your agent can reach, what you asked it to do, the gap, and what stands in the way of each thing.
+
+](/what-is-an-abp/index.md) [![The examples page: six behaviour policies to try, simplest first](/assets/cards/examples.webp)Six examples · 2 to 4 minutes each**Every example, on one page**
+
+Hello world, a topic, the web, a secret, drafts, refunds; and what comes next.
+
+](/examples/index.md) [![Start here: your first five minutes, as a checklist](/assets/cards/start-here.webp)A page · 2 minutes**Your first five minutes, in order**
+
+The same steps as a checklist, with where to write when something does not go as shown.
+
+](/start-here/index.md) [![Tell us what you think: a line, a voice memo, or an interview](/assets/cards/feedback.webp)Free · a person reads every word**Tell us what you think**
+
+One line by email, a voice memo your Claude turns into a review, or an interview by Claude.
+
+](/feedback/index.md)
+
+We read every answer and every review, and we follow up by email. [Every review, and what we did about it](/feedback/reviews/index.md); how the programme runs is on [the programme pages](/programme/index.md).
 
 ---
 

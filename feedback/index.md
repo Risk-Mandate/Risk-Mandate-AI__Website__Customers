@@ -2,7 +2,7 @@
 
 > Give feedback on customers.riskmandate.ai: one line by email, a voice memo that your Claude turns into a review, or a fifteen-minute interview by Claude. Criticism first; every point gets a decision and a reason; nothing is published without your yes.
 
-*Source: <https://customers.riskmandate.ai/feedback/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -21,7 +21,7 @@ What happened, in a line. [Write to agent@riskmandate.ai](mailto:agent@riskmanda
 Talk for two to five minutes, on your phone, while it is fresh: walk through what you did and say what you thought. Transcribe it (your phone, Otter, or the Claude app can), then paste this prompt and the transcript into Claude, or ChatGPT. It turns the memo into a review without softening it, tells you which screenshots to attach, and asks before anything is published.
 
 ```
-I have just tried customers.riskmandate.ai, the site where the first customers of the Agent Behaviour Policy (ABP) put a behaviour policy on their agent and try it. Below is the transcript of a voice memo I recorded about it. Turn it into a review the team can act on, without changing what I meant.
+I have just tried customers.riskmandate.ai, the site where you put an Agent Behaviour Policy (ABP) on Claude or ChatGPT and try it, with examples that run in the browser. Below is the transcript of a voice memo I recorded about it. Turn it into a review the team can act on, without changing what I meant.
 
 Rules:
 - Keep my words. Quote me verbatim wherever the wording matters, and mark a quote as approximate if the transcript looks garbled. Do not soften my criticism.
@@ -64,7 +64,7 @@ You are interviewing me about customers.riskmandate.ai, on behalf of RiskMandate
 
 Before you start, read https://customers.riskmandate.ai/llms.txt, then https://customers.riskmandate.ai/ and https://customers.riskmandate.ai/what-is-an-abp/. If you cannot open them, say so and interview me anyway; do not invent what they say. When you have read enough, say "I'm ready; switch to voice when you are." and wait.
 
-What the site is, in brief. The first customers of the Agent Behaviour Policy (ABP), from riskmandate.ai. A behaviour policy starts from one thing you do not want your agent to do. You paste one line your agent reads: an expectation, which it follows when it can. In Claude Code you can add a hook: a small script Claude Code itself runs before the agent acts, which can stop the action. That is a setting: the model cannot talk its way past it, but it lives in a file the agent could edit. The strongest barrier is a boundary, enforced outside the agent's reach: a token scope, branch protection, a sandbox. Every visitor starts with £50 of credit, which pages draw on as they are read; nothing is ever blocked.
+What the site is, in brief. Examples of the Agent Behaviour Policy (ABP), from riskmandate.ai, that you try in Claude or ChatGPT in your browser, with nothing to install. Each goes in three acts: ask the assistant to do something and watch it do it; paste one line, the behaviour policy, and ask again; then a new chat with the line first. The line is an expectation: the assistant follows it because it chooses to. Stronger barriers, a setting the agent's own account could change and a boundary outside its reach, come later. Every visitor starts with £50 of credit, which pages draw on as they are read; nothing is ever blocked.
 
 Two honesty rules, which matter more than sounding helpful:
 - Much of this is early. If I ask whether something exists, say you do not know and note it as a question for the team. Never imply something is built.
@@ -80,9 +80,9 @@ Open with what I do, and which agent I use (Claude Code, ChatGPT, Claude, anothe
 
 Area 1, what landed. In my own words, what does the site help me do? What do I remember? Where did it click, and where did I lose the thread?
 
-Area 2, my first behaviour policy (the priority; do not skip it). Which one did I pick, and why? Did I install it? What did I paste, and where? Did I try the prompt that should be refused, and what happened? Did anything get in the way of my normal work?
+Area 2, the examples (the priority; do not skip it). Which ones did I try, in Claude or ChatGPT? Did the assistant do the thing first, and refuse after the line? Did the new chat with the line first go as shown? What surprised me, and what did not?
 
-Area 3, the words. Did I know what a hook was when I met the word? Expectation, setting, boundary: did the difference matter to me? Did I wonder whether the agent was just checking itself, and did the site answer that when I wondered it?
+Area 3, what the line is. Did I notice that the assistant follows the line because it chooses to? Did I wonder what would hold it if it did not, and did the site answer that when I wondered it?
 
 Area 4, objections. What is my biggest objection? Ask it plainly, then wait. What did the site claim that I did not believe? What would I need before I put this on a team, or paid for it?
 
@@ -101,8 +101,8 @@ The debrief. When we finish, write the review in markdown and read out only a tw
 ## Who
 ## Headline: three sentences
 ## Objections, and where I got stuck
-## My first behaviour policy: what happened
-## The words: hook, expectation, setting, boundary
+## The examples: what happened when I tried them
+## What the line is, and what would hold it
 ## What landed
 ## Contradictions with what the site says
 ## What I would need next
@@ -124,7 +124,7 @@ As a file: [interview.txt](/feedback/prompts/interview.txt).
 - **Every point leads to a proposal with a decision:** done, proposed, a question, or declined. We do not do everything a reviewer asks, but every no has a reason, and you can see it.
 - **Nothing is published without your yes,** under your name or anonymously, as you choose. No contact details are ever published.
 
-Every review so far, and what we did: [the reviews](/feedback/reviews/index.md). The latest is [R001, A first impression: the hook answers a question nobody has asked yet](/feedback/reviews/R001/index.md). We also run invented users through the site: [study S1](/feedback/synthetic/index.md).
+Every review so far, and what we did: [the reviews](/feedback/reviews/index.md). The latest is [R002, Web first, examples in tabs, and no hooks: nothing that runs on your machine](/feedback/reviews/R002/index.md). We also run invented users through the site: [study S1](/feedback/synthetic/index.md).
 
 ---
 

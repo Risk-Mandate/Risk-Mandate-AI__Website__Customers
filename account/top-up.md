@@ -2,7 +2,7 @@
 
 > Add credit to your reading account on customers.riskmandate.ai. There is no payment link on this site yet, so the top-up below is simulated and no money moves; it says so on the button.
 
-*Source: <https://customers.riskmandate.ai/account/top-up.html> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/account/top-up.html> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

@@ -2,7 +2,7 @@
 
 > Study S1, invented user Tomás Reyes (Junior developer, a year into his first job. Uses Claude Code through the VS Code extension on a Windows laptop. Follows instructions literally.) on customers.riskmandate.ai v0.2.1: the run screenshot by screenshot, the interview, the rating and the findings, each checked. Invented, not user research.
 
-*Source: <https://customers.riskmandate.ai/feedback/synthetic/tomas/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/synthetic/tomas/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

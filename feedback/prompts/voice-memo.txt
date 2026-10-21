@@ -1,4 +1,4 @@
-I have just tried customers.riskmandate.ai, the site where the first customers of the Agent Behaviour Policy (ABP) put a behaviour policy on their agent and try it. Below is the transcript of a voice memo I recorded about it. Turn it into a review the team can act on, without changing what I meant.
+I have just tried customers.riskmandate.ai, the site where you put an Agent Behaviour Policy (ABP) on Claude or ChatGPT and try it, with examples that run in the browser. Below is the transcript of a voice memo I recorded about it. Turn it into a review the team can act on, without changing what I meant.
 
 Rules:
 - Keep my words. Quote me verbatim wherever the wording matters, and mark a quote as approximate if the transcript looks garbled. Do not soften my criticism.

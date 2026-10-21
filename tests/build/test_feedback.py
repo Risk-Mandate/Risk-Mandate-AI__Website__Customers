@@ -41,14 +41,14 @@ class Test__Feedback(TestCase):
             with self.subTest(proposal=p['id']):
                 self.assertTrue(p['reason'].strip())
                 self.assertTrue(self.gen.sources_of(p['id']))
-                if p['decision'] == 'done':
+                if p['decision'] in ('done', 'reversed'):
                     self.assertRegex(p['version'], r'^\d+\.\d+\.\d+$')
 
     def test_a_done_proposal_is_not_from_the_future(self):
         version = (ROOT / 'admin' / 'build' / 'version.txt').read_text().strip()
         released = [r['version'] for r in json.loads((ROOT / 'data' / 'versions.json').read_text())['releases']]
         for p in self.gen.register['proposals']:
-            if p['decision'] == 'done':
+            if p['decision'] in ('done', 'reversed'):
                 with self.subTest(proposal=p['id']):
                     self.assertTrue(p['version'] in released or p['version'] == version)
 

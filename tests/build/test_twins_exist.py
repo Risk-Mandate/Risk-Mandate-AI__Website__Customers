@@ -59,4 +59,4 @@ class Test__Twins__Exist(TestCase):
         text = (ROOT / 'index.md').read_text(encoding='utf-8')
         self.assertIn('behaviour policy', text.splitlines()[0].lower())
         self.assertIn('£50', text)                                                # the credit every reader starts with
-        self.assertIn('/policies/touch-your-secrets/index.md', text)              # the first policy, one click away
+        self.assertIn('/examples/hello-world/index.md', text)                       # the first example, one click away (R002: web first)

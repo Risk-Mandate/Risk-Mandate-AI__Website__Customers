@@ -1,0 +1,12 @@
+[
+ {"name":"01-home-hero","url":"/","w":1280,"h":900,"sel":"section.hero","pad":0},
+ {"name":"02-watch-it-first","url":"/","w":1280,"h":900,"sel":"section:has(h2:has-text('Watch it first'))","pad":0,"maxh":1300},
+ {"name":"03-three-steps","url":"/","w":1280,"h":900,"sel":"ol.steps.three"},
+ {"name":"04-worries","url":"/","w":1280,"h":900,"sel":"section:has(h2:has-text('Pick one worry'))","pad":0,"maxh":1100},
+ {"name":"05-chatgpt-section","url":"/","w":1280,"h":900,"sel":"section:has(h2:has-text('Using ChatGPT'))","pad":0,"maxh":1300},
+ {"name":"06-your-50","url":"/","w":1280,"h":900,"sel":"section:has(h2:has-text('Your £50'))","pad":0,"maxh":1000},
+ {"name":"07-learn-cards","url":"/","w":1280,"h":900,"sel":"section:has(h2:has-text('New to this'))","pad":0},
+ {"name":"08-start-here-lead","url":"/start-here/","w":1280,"h":900,"sel":["h1","p.lead"]},
+ {"name":"09-reading-account","url":"/what-is-an-abp/","w":1280,"h":900,"sel":".meter-card","pad":12,"wait":1500},
+ {"name":"10-account","url":"/account/","w":1280,"h":900,"sel":".account-view","pad":12,"maxh":1100,"wait":1500}
+]

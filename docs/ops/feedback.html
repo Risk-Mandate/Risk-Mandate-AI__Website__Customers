@@ -20,13 +20,14 @@
   <script src="/assets/nav.js" defer></script>
   <script src="/assets/copy.js" defer></script>
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
   <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiskMandate">
   <meta property="og:url" content="https://customers.riskmandate.ai/docs/ops/feedback.html">
   <meta property="og:title" content="Feedback: from a memo to a decision, and invented users in between">
   <meta property="og:description" content="Feedback, from a memo to a decision: how a review is kept, read and decided, and how a synthetic study is run.">
-  <meta name="rm-customers:version" content="0.2.2">
+  <meta name="rm-customers:version" content="0.2.3">
   <meta name="rm-customers:released" content="2026-10-21">
 <!-- rm-customers:head:end -->
 </head>
@@ -42,19 +43,20 @@
           <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
             <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
-            <a class="pagelink navchild" href="/account/">Your account: £50 to spend</a>
-            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
             <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
           </div>
         </span>
         <span class="navgroup">
-          <a class="navgroup-btn" href="/policies/">Policies<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
           <div class="navmenu">
-            <a class="pagelink navchild" href="/policies/">Pick one worry: every policy</a>
-            <a class="pagelink navchild" href="/policies/starter/">The starter pack: four in one go</a>
-            <a class="pagelink navchild" href="/policies/touch-your-secrets/">Keep it away from your secrets</a>
-            <a class="pagelink navchild" href="/policies/push-anywhere/">Only push to your branch</a>
-            <a class="pagelink navchild" href="/policies/send-as-you/">ChatGPT: nothing sent without a yes</a>
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
           </div>
         </span>
         <span class="navgroup">
@@ -110,7 +112,7 @@
             <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
           </ul>
         </div>
-        <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a>
+        <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a>
       </div>
     </div>
     <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/docs/">Docs</a> <span class="sep">/</span> <a href="/docs/ops/">Operations</a> <span class="sep">/</span> <span aria-current="page">Feedback</span></div>
@@ -118,7 +120,7 @@
 <!-- rm-customers:nav:end -->
   <main class="wrap document">
     <!-- rm-customers:docs:start -->
-<p class="doc-source">Rendered from <a href="/docs/ops/feedback.md">docs/ops/feedback.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.2.</p>
+<p class="doc-source">Rendered from <a href="/docs/ops/feedback.md">docs/ops/feedback.md</a>, which is the source of truth and the markdown twin of this page. Rendered at site v0.2.3.</p>
 <h1 id="feedback-from-a-memo-to-a-decision-and-invented-users-in-between">Feedback: from a memo to a decision, and invented users in between</h1>
 <p><em>customers.riskmandate.ai · operations · written at v0.2.2 (2026-10-21) · CC BY 4.0</em></p>
 <p>The site learns from its customers in one loop: somebody tells us what they saw, we keep their words, read them point by point against what they were looking at, and every point leads to a proposal with a decision and a reason. We do not do everything a reviewer asks; every no has its reason in the register. Between reviews by people, invented users run the same pages and find what a page fails to say.</p>
@@ -138,7 +140,7 @@
 <li><strong>Keep the words.</strong> Save the memo or the transcript as <code>data/feedback/memos/R00N.txt</code>, as given. Paragraph breaks may be added; nothing else changes. The house-word check does not read this folder.</li>
 <li><strong>Take the screenshots first,</strong> of the version the reviewer saw. Serve that version locally (<code>git archive &lt;commit&gt; | tar -x -C &lt;dir&gt;</code>, then <code>python3 -m http.server</code>), check a page or two against the live site by sha256, and shoot the elements the memo is about with <code>feedback/tools/shoot.cjs</code>. Convert to WebP into <code>assets/feedback/R00N/</code>.</li>
 <li><strong>Read it point by point</strong> in <code>data/feedback/reviews/R00N.json</code>. Each point quotes the memo word for word (the build fails otherwise), takes a stance (agree, agree in part, disagree, a question, asked of us), says what we read in it, cites its screenshots, and names the proposals it leads to. Check facts about other people&#x27;s products against their documentation, and name the page in <code>sources</code>.</li>
-<li><strong>Decide.</strong> Add or update proposals in <code>data/feedback/proposals.json</code>. Each has a decision (done, accepted, proposed, question, declined) and a reason; a done one names its version. Which points led to it is worked out, not written.</li>
+<li><strong>Decide.</strong> Add or update proposals in <code>data/feedback/proposals.json</code>. Each has a decision (done, reversed, accepted, proposed, question, declined) and a reason; a done or reversed one names its version, and a decision that changes keeps its history (<code>history</code>), so the register shows what we decided at each version. Which points led to it is worked out, not written.</li>
 <li><strong>Ask.</strong> Anything only the reviewer can answer goes in <code>questions</code>.</li>
 <li><code>python3 admin/build/gate.py --build</code>, then release as usual.</li>
 </ol>
@@ -157,10 +159,10 @@
     <!-- rm-customers:docs:end -->
   </main>
   <!-- rm-customers:footer:start -->
-  <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="Feedback: from a memo to a decision, and invented users in between"></sg-meter></div>
+  <div class="wrap meter-card"><sg-meter view="page" kind="doc" title="Feedback: from a memo to a decision, and invented users in between" quiet></sg-meter></div>
   <footer class="foot">
     <div class="wrap">
-      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.2" title="released 2026-10-21; what shipped in v0.2.2">v0.2.2</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/ops/feedback.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.3" title="released 2026-10-21; what shipped in v0.2.3">v0.2.3</a> · released 2026-10-21 · <a href="/admin/versions.html">releases</a> · <a href="/docs/ops/feedback.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
       <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
     </div>
   </footer>

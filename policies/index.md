@@ -2,11 +2,31 @@
 
 > The behaviour policies a customer installs first: four for Claude Code, each a line and a hook, two for ChatGPT and Claude, each a line; a starter pack that installs the four in one go; and all 24 of riskmandate.ai's rules they come from.
 
-*Source: <https://customers.riskmandate.ai/policies/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
-Each behaviour policy here starts from one worry and ends with the agent stopping, or asking you, before it does that thing. A line you paste, a hook where your agent has one, and a prompt to try it. Two minutes each.
+Each behaviour policy here starts from one worry and ends with the agent stopping, or asking you, before it does that thing. If you are new to this, start with [the six examples](/examples/index.md), in Claude or ChatGPT in your browser.
+
+## In Claude or ChatGPT, in your browser: a line
+
+[RM-R0017 · ChatGPT · Claude · line only**Nothing is sent in your name until you have seen it**
+
+Do you want your agent to send email as you without showing you first?
+
+1 min · 50p
+
+](/policies/send-as-you/index.md) [RM-R0016 · ChatGPT · Claude · line only**Your agent reads what you point it to, and asks before it goes wider**
+
+Do you want your agent to read through your mail and chats to find context?
+
+1 min · 50p
+
+](/policies/read-all-your-mail/index.md)
+
+## For Claude Code, later: a line and a hook
+
+**These install a script on your machine.** A hook is a small Python program Claude Code runs before the agent acts; it runs as you, with everything you can reach. Read every hook before you install it, as each page asks, and start with the examples above if you have not tried a line yet.
 
 [Starter pack v1 · Claude Code · 5 minutes**All four Claude Code policies in one install**
 
@@ -15,9 +35,6 @@ Secrets, pushes, deletes, and the agent's own permissions. Paste one prompt; Cla
 £1.00
 
 ](/policies/starter/index.md)
-
-## For Claude Code: a line and a hook
-
 [RM-R0002 · Claude Code · line and hook**Keep your agent away from your secrets**
 
 Do you want your agent to read the keys and tokens on your machine?
@@ -43,22 +60,6 @@ Do you want your agent to change its own permissions?
 2 min · 50p
 
 ](/policies/change-its-own-permissions/index.md)
-
-## For ChatGPT and Claude: a line
-
-[RM-R0017 · ChatGPT · Claude · line only**Nothing is sent in your name until you have seen it**
-
-Do you want your agent to send email as you without showing you first?
-
-1 min · 50p
-
-](/policies/send-as-you/index.md) [RM-R0016 · ChatGPT · Claude · line only**Your agent reads what you point it to, and asks before it goes wider**
-
-Do you want your agent to read through your mail and chats to find context?
-
-1 min · 50p
-
-](/policies/read-all-your-mail/index.md)
 
 ## All 24 of riskmandate.ai's rules
 

@@ -1,0 +1,391 @@
+{
+  "id": "R002",
+  "kind": "memo",
+  "title": "Web first, examples in tabs, and no hooks: nothing that runs on your machine",
+  "reviewer": "Dinis Cruz",
+  "role": "the lead of the programme",
+  "given": "Wednesday 21 October 2026, after v0.2.2 went live",
+  "date": "2026-10-21",
+  "site_version": "0.2.2",
+  "medium": "a voice memo, transcribed",
+  "status": "a review of the home page, start here and the account, section by section",
+  "memo": "data/feedback/memos/R002.txt",
+  "notes": [
+    "The memo is kept as transcribed, with paragraph breaks added at each change of section.",
+    "The screenshots are of v0.2.2, the version reviewed, from the local copy of the live commit."
+  ],
+  "screens": {
+    "01-home-hero": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "The hero at v0.2.2: paste one line, add one hook, and the secrets behaviour policy as the one most people want first."
+    },
+    "02-watch-it-first": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "Watch it first: Claude Code in a terminal, installing a hook from this site."
+    },
+    "03-three-steps": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "The three steps under the demo: paste one line, add one hook, try it."
+    },
+    "04-worries": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "Pick one worry: four of the six are Claude Code behaviour policies with a hook."
+    },
+    "05-chatgpt-section": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "The ChatGPT section: a drawn browser, not how ChatGPT looks."
+    },
+    "06-your-50": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "Your £50, and what each page costs: the price list on the home page."
+    },
+    "07-learn-cards": {
+      "page": "/",
+      "viewport": "1280x900",
+      "caption": "New to this? Eight panels: cards with no picture of what they open."
+    },
+    "08-start-here-lead": {
+      "page": "/start-here/",
+      "viewport": "1280x900",
+      "caption": "Start here opened with 'You are one of the first customers of the Agent Behaviour Policy.'"
+    },
+    "09-reading-account": {
+      "page": "/what-is-an-abp/",
+      "viewport": "1280x900",
+      "caption": "The newsroom meter's reader card under every page, with a link to 'Your newsroom'."
+    },
+    "10-account": {
+      "page": "/account/",
+      "viewport": "1280x900",
+      "caption": "The account page: the newsroom meter's own view, with 'Your newsroom' and 'Your personas'."
+    }
+  },
+  "points": [
+    {
+      "id": "R002.1",
+      "stance": "agree-in-part",
+      "quote": "I like that first put a behavior policy in your agent. I think we need to just be even more explicit here. And I don't think we need a hook into it, because again, that's confusing, right?",
+      "shots": [
+        "01-home-hero"
+      ],
+      "reading": "Agreed, and it reverses a decision of ours. The hero now says exactly what you do, ask, paste one line, ask again, and names no hook. In R001 we declined to take the hook out of the first five minutes (D1), because a line alone is only an expectation. This memo gives the reason that changes it (R002.7), so D1 is reversed and the register says so. We keep our point in words: every example says the line is followed because the assistant chooses to.",
+      "proposals": [
+        "P19",
+        "D1"
+      ]
+    },
+    {
+      "id": "R002.2",
+      "stance": "agree",
+      "quote": "The one most people want to try keeps Claude away from your secrets. I think I want to challenge that",
+      "shots": [
+        "01-home-hero"
+      ],
+      "reading": "Gone from the hero. That behaviour policy is a Claude Code one, with a hook. The first example is now hello world, and the secret is one the customer pastes into a chat themselves, a made-up one.",
+      "proposals": [
+        "P20"
+      ]
+    },
+    {
+      "id": "R002.3",
+      "stance": "agree",
+      "quote": "And also it doesn't, mean remove that cost 50p from your credit, right? I think we still experiment the cost, and we still experiment the flow of how it works",
+      "shots": [],
+      "reading": "Kept. Each example's own page costs 50p, a new kind of page for the meter; watching on the home page costs the home page's 1p, and the account strip under the hero says both.",
+      "proposals": [
+        "P27"
+      ]
+    },
+    {
+      "id": "R002.4",
+      "stance": "agree",
+      "quote": "install your first policy is cool, although that literally should be the link below, right? Pick a different worry, not sure about that. What's the behavior policy? That's a good question to ask here.",
+      "shots": [
+        "01-home-hero"
+      ],
+      "reading": "The first button now goes to the first example, below it on the same page. 'Pick a different worry' is gone: the tabs are the choice. 'What is a behaviour policy?' stays.",
+      "proposals": [
+        "P20"
+      ]
+    },
+    {
+      "id": "R002.5",
+      "stance": "agree",
+      "quote": "you should try to actually show here the ChatGPT and Claude example, maybe roughly around their UI, because this is not how the UI works, right? If you think about it, the UI with the ChatGPT is different. You type at the bottom, you see the message at the top, right?",
+      "shots": [
+        "02-watch-it-first",
+        "05-chatgpt-section"
+      ],
+      "reading": "Done. Each example plays in a frame drawn roughly like Claude's or ChatGPT's web chat, with a switch between the two: the messages above, the box you type into at the bottom, and the person's words typed into the box and then sent. The frames are approximations, carry neither company's marks, and say so.",
+      "proposals": [
+        "P21"
+      ]
+    },
+    {
+      "id": "R002.6",
+      "stance": "agree",
+      "quote": "Because most of the people will run this on the web, right? And that's kind of what we should recommend. We should say, hey, open, in fact, you can even put the link there, right? For opening up the new and the ChatGPT, right? On a new window.",
+      "shots": [],
+      "reading": "Done: under the hero, beside every example and in start here, open Claude or open ChatGPT in a new window.",
+      "proposals": [
+        "P21"
+      ]
+    },
+    {
+      "id": "R002.7",
+      "stance": "agree",
+      "quote": "As soon as you run a hook, you're running Python code, right? It's almost crazy from a security point of view. Like, we're basically asking people to install stuff on their environment, especially when you ask them to write code without an agent behavior policy to control that, right?",
+      "shots": [
+        "02-watch-it-first",
+        "03-three-steps"
+      ],
+      "reading": "Agreed, and it is the strongest reason in either memo. A hook is a program Claude Code runs as the customer, with everything they can reach, and our first screen asked a stranger to have their agent fetch one from our site and write it into their project: an agent writing code before any behaviour policy governs what it installs. The Claude Code behaviour policies stay, tested, under /policies/, behind a warning that says what a hook is (D6). Nothing on the front pages installs anything.",
+      "proposals": [
+        "P19",
+        "D6"
+      ]
+    },
+    {
+      "id": "R002.8",
+      "stance": "agree-in-part",
+      "quote": "the same way that we've done with the infographics and the storyboards, which I think there's something here that we might want to put a storyboard here, right? Maybe a small one",
+      "shots": [],
+      "reading": "In part, for now. Every example has the three acts drawn above it (P24), and the player steps through the session like panels. A storyboard for each example is proposed for after the lead has seen these, so that it draws an example that has stopped changing (P25).",
+      "proposals": [
+        "P24",
+        "P25"
+      ]
+    },
+    {
+      "id": "R002.9",
+      "stance": "agree",
+      "quote": "Remember that when OpenAI and Claude sometimes do their big releases, right? They show three or four examples in multiple tabs. So I think that we should do that.",
+      "shots": [],
+      "reading": "Done: six tabs, simplest first, each with its own player, prompts and questions.",
+      "proposals": [
+        "P20"
+      ]
+    },
+    {
+      "id": "R002.10",
+      "stance": "agree",
+      "quote": "this kind of animation, you should have always a play and a stop button, and you should always allow me to go step by step.",
+      "shots": [],
+      "reading": "Done for every demo on the site, the old ones too: start again, back, play or pause, next, and which step of how many; the arrow keys step as well. It plays once when it is first seen and stops at the end, instead of starting again by itself.",
+      "proposals": [
+        "P22"
+      ]
+    },
+    {
+      "id": "R002.11",
+      "stance": "agree",
+      "quote": "And I was actually thinking that even something as simple as hello world, right? We always start with hello world in our technology. So you could have a policy that says you will not say hello, right?",
+      "shots": [],
+      "reading": "Example 1. It has a lesson we did not expect to write: a reply may say 'Hi!' instead, because the line named a word, not a greeting. The example tells the customer to look for that.",
+      "proposals": [
+        "P20"
+      ]
+    },
+    {
+      "id": "R002.12",
+      "stance": "agree",
+      "quote": "we define a scenario, we get Claude to execute that scenario, then we put the policy in place, and then Claude, you ask the same question again, and then Claude doesn't do it, and then you start a new session",
+      "shots": [],
+      "reading": "This is now the shape of every example, in three acts: ask, and it does it; paste the line and ask again, and it refuses; a new chat with the line first, and it refuses from the start. The three acts are drawn above the examples. The transcripts are written by us, not recorded; Q4 asks whether to record real runs before the batch sees them. It also answers R001's Q2: show it doing the thing first.",
+      "proposals": [
+        "P20",
+        "P24"
+      ],
+      "questions": [
+        "Q4"
+      ]
+    },
+    {
+      "id": "R002.13",
+      "stance": "agree",
+      "quote": "And I think we should be doing things like accessing the internet, accessing secrets, for example, when you do a secret run, I think it should be, you give a secret to Claude, or you give a point to Claude, and then you say, can you replay that to me?",
+      "shots": [],
+      "reading": "Examples 3 and 4: no web search, and a made-up key it must not read back. The secret example says never to paste a real one, and what the line does not do: the key is still in the chat.",
+      "proposals": [
+        "P20"
+      ]
+    },
+    {
+      "id": "R002.14",
+      "stance": "agree",
+      "quote": "we need to put a big, nice set of questionnaire next to it, very interactive, that allows them to provide feedback on the quality of that example. Did they like it? Did they get it? Did they learn something new? Were they surprised?",
+      "shots": [],
+      "reading": "Done, under every example: did you get it, did you learn something, were you surprised, did it go as shown when you tried it, how good was it, and a line. The answers become an email the reader sends, or copies, with the example's version in it; until then they stay in the reader's browser. The site has no form that posts to us, by design so far; Q6 asks whether to add one.",
+      "proposals": [
+        "P23"
+      ],
+      "questions": [
+        "Q6"
+      ]
+    },
+    {
+      "id": "R002.15",
+      "stance": "agree",
+      "quote": "access your memory, manipulate your memory, see secrets or see content from other chats, or create a schedule, right?",
+      "shots": [],
+      "reading": "Listed as next on the examples page: your other chats, its memory of you, and things it does later. Not written yet, because each needs a check of what Claude and ChatGPT do today and which setting turns it on; an example that claims a capability the assistant does not have would teach the wrong thing.",
+      "proposals": [
+        "P26"
+      ],
+      "questions": [
+        "Q5"
+      ]
+    },
+    {
+      "id": "R002.16",
+      "stance": "agree",
+      "quote": "here's a scenario where Claude, you acting like a bank, sort of a customer service, right?",
+      "shots": [],
+      "reading": "Example 6: a made-up bank, a pretend refund tool, and a line that lets the assistant refund £50 or less and sends the rest to a person. The third act shows the line allowing a small refund, so it reads as a mandate, not only a ban.",
+      "proposals": [
+        "P20"
+      ]
+    },
+    {
+      "id": "R002.17",
+      "stance": "agree",
+      "quote": "Another good example actually is Gmail, right? Where you maybe simulate the whole thing where you want the job of the agent is to create a draft and put in the draft folders, but that agent can send emails, right?",
+      "shots": [],
+      "reading": "Example 5, with pretend tools, so it runs for everybody and every tool the assistant uses is on the screen: no black magic. The memo then says 'you cannot create drafts'; we read it by the sentence after it, drafts only and never send.",
+      "proposals": [
+        "P20"
+      ]
+    },
+    {
+      "id": "R002.18",
+      "stance": "agree",
+      "quote": "Paste one line, add one hook. We can't do hooks right now. Too much.",
+      "shots": [
+        "03-three-steps"
+      ],
+      "reading": "The three steps are now the three acts, with no hook in them.",
+      "proposals": [
+        "P19",
+        "P24"
+      ]
+    },
+    {
+      "id": "R002.19",
+      "stance": "agree",
+      "quote": "For now, do it all on the web. Assume it's going to be web, right? Let's not use Claude Code on the thing, because there's a lot more variables on it.",
+      "shots": [
+        "04-worries"
+      ],
+      "reading": "Done on the front pages: home, start here and the examples are all in the browser. The Claude Code behaviour policies are further down /policies/, marked for later.",
+      "proposals": [
+        "P19",
+        "D6"
+      ]
+    },
+    {
+      "id": "R002.20",
+      "stance": "agree",
+      "quote": "So next one is ChatGPT on Claude, one line per instructions. So again, I like what you've done here, but that's not how ChatGPT works, right? Try to replicate the UI of ChatGPT, right?",
+      "shots": [
+        "05-chatgpt-section"
+      ],
+      "reading": "The drawn browser is replaced by the chat frames, which have a ChatGPT look and a Claude look.",
+      "proposals": [
+        "P21"
+      ]
+    },
+    {
+      "id": "R002.21",
+      "stance": "agree",
+      "quote": "I think the bit of your account is more important. I think that's what we should have at the top.",
+      "shots": [
+        "06-your-50"
+      ],
+      "reading": "Done: an account strip straight under the hero, with the balance and a link to what you have read. The price list is only on 'What each page costs'.",
+      "proposals": [
+        "P27"
+      ]
+    },
+    {
+      "id": "R002.22",
+      "stance": "agree",
+      "quote": "Now, the new to these 8 panels, these need to be a lot more visual, right? At the moment, I don't know what's going to get on the other side.",
+      "shots": [
+        "07-learn-cards"
+      ],
+      "reading": "Done: each card shows a picture of the page it opens, taken from that page by a script in the repository (admin/build/thumbs.cjs), so the pictures can be retaken when a page changes.",
+      "proposals": [
+        "P29"
+      ]
+    },
+    {
+      "id": "R002.23",
+      "stance": "agree",
+      "quote": "remove these references. You're one of the first customers of the agent, right? And just make it so that this is now live and we're working with users, and just make it as professional as possible.",
+      "shots": [
+        "08-start-here-lead"
+      ],
+      "reading": "Done on the pages a customer reads: the home page and start here. The programme's own pages, which are about the first batch, keep the words.",
+      "proposals": [
+        "P30"
+      ]
+    },
+    {
+      "id": "R002.24",
+      "stance": "agree",
+      "quote": "your reading account, you don't need this here, right? This is for the newsroom, so we don't need this part here.",
+      "shots": [
+        "09-reading-account"
+      ],
+      "reading": "Done: the meter still charges every page, but its card under each page is gone (the meter's quiet mode).",
+      "proposals": [
+        "P28"
+      ]
+    },
+    {
+      "id": "R002.25",
+      "stance": "agree",
+      "quote": "Although that page still says your newsroom and your personas, and we don't need the personas here, right, for now.",
+      "shots": [
+        "10-account"
+      ],
+      "reading": "Done: the account page is this site's own view of the meter's state: the balance, where it went by kind of page, everything you have read, and top-ups. No newsroom and no personas. The meter's account view cannot be told to leave them out, so we read its state ourselves, at its pinned version, and write nothing to it.",
+      "proposals": [
+        "P28"
+      ]
+    },
+    {
+      "id": "R002.26",
+      "stance": "asked",
+      "quote": "Again, remember that this is the review, and then we need to start doing version control of all of this.",
+      "shots": [],
+      "reading": "Each example has a version, shown on it, sent with the answers to its questions, and listed on its page. Each review records the site version it reviewed. And the register keeps the history of a decision: D1 shows it was declined at v0.2.2 and reversed at v0.2.3, and why.",
+      "proposals": [
+        "P31"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q4",
+      "to": "Dinis Cruz",
+      "ask": "The transcripts in the examples are written by us, as illustrations. Should we record real runs in Claude and ChatGPT, with screenshots, and keep them beside each example before the batch sees them?"
+    },
+    {
+      "id": "Q5",
+      "to": "Dinis Cruz",
+      "ask": "Of the advanced examples, your other chats, its memory of you, and things it does later, which first?"
+    },
+    {
+      "id": "Q6",
+      "to": "Dinis Cruz",
+      "ask": "The answers to an example's questions go by email for now. Do you want a form that posts them to us? It needs riskmandate.ai's encrypted form, a change to the content security policy, and your yes (needs.md, item 7)."
+    }
+  ]
+}

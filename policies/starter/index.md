@@ -2,7 +2,7 @@
 
 > Four Agent Behaviour Policies for Claude Code in one install: keep away from secrets, push only to your branch, nothing deleted without a yes, and only you change its permissions. Each is a line for CLAUDE.md and a hook; ask Claude Code to install them, or copy four files.
 
-*Source: <https://customers.riskmandate.ai/policies/starter/> · site v0.2.2 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/policies/starter/> · site v0.2.3 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

@@ -200,6 +200,15 @@
       "notes": "Another repository; the ask is recorded."
     },
     {
+      "id": "programme.examples",
+      "area": "programme",
+      "title": "Six examples to try in Claude or ChatGPT in the browser, simplest first, each played step by step with the questions that ask whether it worked",
+      "status": "shipped",
+      "since": "0.2.3",
+      "where": "/examples/ and the home page",
+      "notes": "The transcripts are illustrations we wrote, not recordings; each example has a version. Nothing to install."
+    },
+    {
       "id": "programme.feedback",
       "area": "programme",
       "title": "A page for giving feedback: one line by email, a voice memo your Claude turns into a review, or an interview by Claude",

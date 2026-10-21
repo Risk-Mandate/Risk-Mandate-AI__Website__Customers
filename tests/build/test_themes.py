@@ -23,7 +23,16 @@ RE_COLOUR = re.compile(r'(?<!&)#[0-9A-Fa-f]{3,8}\b|\brgba?\(|\bhsla?\(')      # 
 
 TEXT      = 4.5
 LARGE     = 3.0
-PAIRS     = (('--rm-text'      , '--rm-bg'      , TEXT ),                          # body text and headings
+PAIRS     = (('--rm-chat-c-text', '--rm-chat-c-bg', TEXT),                          # the Claude-style and ChatGPT-style chat frames, the same in every theme
+             ('--rm-chat-c-text', '--rm-chat-c-user', TEXT),
+             ('--rm-chat-c-muted', '--rm-chat-c-bg', TEXT),
+             ('--rm-chat-g-text', '--rm-chat-g-bg', TEXT),
+             ('--rm-chat-g-text', '--rm-chat-g-user', TEXT),
+             ('--rm-chat-g-muted', '--rm-chat-g-bg', TEXT),
+             ('--rm-chat-policy', '--rm-chat-policy-bg', TEXT),
+             ('--rm-chat-tool', '--rm-chat-tool-bg', TEXT),
+             ('--rm-chat-on-send', '--rm-chat-c-send', LARGE),
+             ('--rm-text'      , '--rm-bg'      , TEXT ),                          # body text and headings
              ('--rm-text'      , '--rm-card'    , TEXT ),
              ('--rm-text'      , '--rm-bg-2'    , TEXT ),
              ('--rm-muted'     , '--rm-bg'      , TEXT ),                          # secondary text, the crumbs
