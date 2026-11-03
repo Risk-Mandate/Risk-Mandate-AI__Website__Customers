@@ -2,7 +2,7 @@
 
 > The consolidated reviews: each review verbatim, our reading point by point with screenshots, the synthetic study's findings with our checks, and one register of 60 proposals, each with a decision and a reason.
 
-*Source: <https://customers.riskmandate.ai/feedback/reviews/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/reviews/> · site v0.2.6 (2026-11-03) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

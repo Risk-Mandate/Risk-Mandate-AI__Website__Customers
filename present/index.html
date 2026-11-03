@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The talk: Give agents access. Not free rein.</title>
+  <meta name="description" content="RiskMandate, to present: Agent Behaviour Policies, Process Behaviour Policies and SHarness, and how they fit for a customer, in 24 beats with notes, a timer, an audience window, animations and live demos.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai https://dev.send.sgraph.ai; img-src 'self' data:; frame-src https://the-ultimate-insider.presentation.sgit.ai https://ruv.sgit.ai https://sharness.ai; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/present/">
+  <link rel="alternate" type="text/markdown" href="/present/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script src="/assets/envelope.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
+  <script src="/assets/replay.js" defer></script>
+  <script src="/assets/present.js" defer></script>
+  <script src="/assets/frames.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/present/">
+  <meta property="og:title" content="The talk: Give agents access. Not free rein.">
+  <meta property="og:description" content="RiskMandate, to present: Agent Behaviour Policies, Process Behaviour Policies and SHarness, and how they fit for a customer, in 24 beats with notes, a timer, an audience window, animations and live demos.">
+  <meta name="rm-customers:version" content="0.2.6">
+  <meta name="rm-customers:released" content="2026-11-03">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/demos/">Every demo</a>
+            <a class="pagelink navchild" href="/demos/sharness/">SHarness: the kernel enforces it</a>
+            <a class="pagelink navchild active" href="/present/" aria-current="page">The talk, to present</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/feedback/reviews/">Reviews<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/feedback/how-sending-works/">How Encrypt and send works</a>
+            <a class="pagelink navchild" href="/feedback/runs/">Runs in real Claude, replayed</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.6" title="released 2026-11-03; what shipped in v0.2.6">v0.2.6</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span aria-current="page">The talk, to present</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap deck-page">
+    <div class="deck-intro">
+      <p class="kicker">The talk · 24 beats · 32:50 in full · a 20-minute version marked · version 1.0.0</p>
+      <h1>Give agents access. Not free rein.</h1>
+      <p class="lead">RiskMandate: Agent Behaviour Policies, Process Behaviour Policies, and how they fit. With JavaScript, one beat fills the screen: press <kbd>P</kbd> for what to say, <kbd>A</kbd> for a window to put on the projector, <kbd>G</kbd> for every beat, <kbd>?</kbd> for the keys. Without it, this is the whole talk, every slide with what to say under it.</p>
+      <p><a href="/present/guide/">The run sheet for demo day</a> · <a href="/present/onboarding/">How it fits, from your side</a> · <a href="/demos/">Every demo</a></p>
+    </div>
+    <div class="deck" id="deck">
+    <section class="beat" id="b-title" data-id="title" data-part="open" data-part-title="Opening" data-title="Give agents access. Not free rein." data-dur="40" data-kind="slide">
+      <p class="beat-n">1. Opening · Give agents access. Not free rein. · 0:40 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">RiskMandate · <span class="g">customers.riskmandate.ai</span></p>
+  <h1 class="ph">Give agents access.<br><span class="g">Not free rein.</span></h1>
+  <p class="ps">Agent Behaviour Policies, Process Behaviour Policies, and how they fit, for one agent you already run.</p>
+  <p class="pm">Dinis Cruz · <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a></p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Open on this slide. Have claude.ai/new open in a tab, and SHarness&#x27;s kernel booting in another (see the guide).</p><p class="say">Every organisation I talk to has already connected an agent to something that matters: the inbox, the drive, the CRM, the code. Today is about one question: what can that agent actually do, and who said it could? And then, what stands in its way.</p></aside>
+    </section>
+    <section class="beat" id="b-circles" data-id="circles" data-part="problem" data-part-title="1 · The ultimate insider" data-title="Three problems, arriving at once" data-dur="75" data-kind="slide">
+      <p class="beat-n">2. 1 · The ultimate insider · Three problems, arriving at once · 1:15 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">The scenario</p>
+  <h2 class="ph2">Three problems we know, <span class="g">arriving at once.</span></h2>
+  <div class="circles">
+    <span class="cc cc1" data-step="1"><b>Agents</b>the insider that never scaled, with real credentials</span>
+    <span class="cc cc2" data-step="2"><b>Infrastructure</b>built for code that stays where you put it</span>
+    <span class="cc cc3" data-step="3"><b>Decisions</b>risk in spreadsheets, at the speed of quarters</span>
+    <b class="cc-mid" data-step="4">the scenario</b>
+  </div></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Press the right arrow for each circle; the fourth step slides them together.</p><p class="say">Three things we already know, arriving at the same time. Agents are the insider that never scaled: they hold real credentials and act between our checkpoints. Our infrastructure was built for code that stays where you put it. And we manage risk in spreadsheets, at the speed of quarters. Where the three overlap is the scenario.</p><ul class="links"><li><a href="https://the-ultimate-insider.presentation.sgit.ai/talk/player.html#three" target="_blank" rel="noopener">The Ultimate Insider, the talk this comes from &#8599;</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-e01" data-id="e01" data-part="problem" data-part-title="1 · The ultimate insider" data-title="What an agent is" data-dur="60" data-kind="embed">
+      <p class="beat-n">3. 1 · The ultimate insider · What an agent is · 1:00</p>
+      <div class="stage"><div class="slide slide-embed"><p class="pk">1 · The ultimate insider</p><h2 class="ph3">What an agent is</h2><figure class="embed" data-frame="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e01/v2/index.html" data-title="What an agent is"><p class="embed-wait">What an agent is: the animation loads here when it is shown.</p><figcaption>E01, the Ultimate Insider studio · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e01/v2/index.html" target="_blank" rel="noopener">open it on its own &#8599;</a> · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab.html" target="_blank" rel="noopener">where it comes from &#8599;</a> · <button type="button" class="replay-btn">Replay</button></figcaption></figure></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Let it play; it ends on agents calling agents.</p><p class="say">A model. Then one tool. Then many tools, then a loop, then everything it is wired into. Each step adds reach, and the reach is the point: that is why we connect them.</p></aside>
+    </section>
+    <section class="beat" id="b-prompt" data-id="prompt" data-part="problem" data-part-title="1 · The ultimate insider" data-title="The distance between the two is a prompt" data-dur="60" data-kind="slide">
+      <p class="beat-n">4. 1 · The ultimate insider · The distance between the two is a prompt · 1:00 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">Five public incidents with agents</p>
+  <div class="big-row">
+    <p class="big" data-step="1"><b data-count="3">0</b><span>were not attacks: agents being agents</span></p>
+    <p class="big" data-step="1"><b data-count="2">0</b><span>were pointed on purpose</span></p>
+  </div>
+  <p class="line" data-step="2">The distance between the two <span class="g">is a prompt.</span></p>
+  <p class="line small" data-step="3">The moment of authorisation is the moment of the grant.</p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Step through: the count, then the line, then the grant line.</p><p class="say">Five public incidents with agents this year. Three of them were not attacks at all: they were agents being agents, doing what they could. Two were pointed on purpose. The distance between the two is a prompt. And the moment of authorisation is the moment of the grant: when you gave it access to the database, you gave it the ability to destroy it.</p><ul class="links"><li><a href="https://the-ultimate-insider.presentation.sgit.ai/talk/player.html#incidents" target="_blank" rel="noopener">Incidents, sourced &#8599;</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-e02" data-id="e02" data-part="problem" data-part-title="1 · The ultimate insider" data-title="The blast radius" data-dur="60" data-kind="embed">
+      <p class="beat-n">5. 1 · The ultimate insider · The blast radius · 1:00</p>
+      <div class="stage"><div class="slide slide-embed"><p class="pk">1 · The ultimate insider</p><h2 class="ph3">The blast radius</h2><figure class="embed" data-frame="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e02/v3/index.html" data-title="The blast radius"><p class="embed-wait">The blast radius: the animation loads here when it is shown.</p><figcaption>E02, the Ultimate Insider studio · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e02/v3/index.html" target="_blank" rel="noopener">open it on its own &#8599;</a> · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab.html" target="_blank" rel="noopener">where it comes from &#8599;</a> · <button type="button" class="replay-btn">Replay</button></figcaption></figure></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Point at the core, then the outer rings.</p><p class="say">One real agent&#x27;s grant, as dots, placed by how far each capability is from its purpose. The mandate is the small core in the middle. Everything outside it is the blast radius, and here, nothing stands in the way of any of it.</p></aside>
+    </section>
+    <section class="beat" id="b-340" data-id="340" data-part="abp" data-part-title="2 · The Agent Behaviour Policy" data-title="340 things, and you authorised 12" data-dur="45" data-kind="slide">
+      <p class="beat-n">6. 2 · The Agent Behaviour Policy · 340 things, and you authorised 12 · 0:45 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="line" data-step="1">Your agent can do <b class="num" data-count="340">0</b> things.</p>
+  <p class="line" data-step="2">Your agent can do <b class="num">340</b> things, <span class="g">and you authorised <b class="num" data-count="12">0</b>.</span></p>
+  <p class="ps" data-step="3">The first is a shrug. The second is a finding: the gap nobody wrote down.</p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Let both numbers count up; pause on the second line.</p><p class="say">This is the whole idea in one line. &#x27;Your agent can do 340 things&#x27; is a shrug. &#x27;Your agent can do 340 things, and you authorised 12&#x27; is a finding. The second number is the one nobody wrote down.</p></aside>
+    </section>
+    <section class="beat" id="b-abp" data-id="abp" data-part="abp" data-part-title="2 · The Agent Behaviour Policy" data-title="The Agent Behaviour Policy" data-dur="90" data-kind="slide">
+      <p class="beat-n">7. 2 · The Agent Behaviour Policy · The Agent Behaviour Policy · 1:30 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">The Agent Behaviour Policy</p>
+  <h2 class="ph2">For one agent, in one deployment: <span class="g">what it can do, what you authorised, the gap, and what stands in the way.</span></h2>
+  <div class="bars">
+    <div class="bar" data-step="1"><span class="bl">Reach <em>the grant, measured</em></span><i class="grow g100"></i><span class="bv">everything it can do</span></div>
+    <div class="bar" data-step="2"><span class="bl">Mandate <em>elicited, in your words</em></span><i class="grow g34 mand"></i><span class="bv">what you authorised</span></div>
+    <div class="bar gap" data-step="3"><span class="bl">The gap <em>derived, never edited</em></span><i class="grow g66 dashed"></i><span class="bv">exposure nobody accepted</span></div>
+    <div class="bar" data-step="4"><span class="bl">Barriers <em>recorded, row by row</em></span><span class="chips"><i class="ch none">none</i><i class="ch exp">expectation</i><i class="ch set">setting</i><i class="ch bnd">boundary</i></span></div>
+  </div>
+  <p class="pfoot" data-step="4">It describes; it does not judge. No grades, no verdicts.</p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Step: reach, mandate, the gap, then the barriers.</p><p class="say">An Agent Behaviour Policy is a written description, for one agent in one deployment, of everything it can do, what you authorised it to do, the gap between the two, and what actually stands in the way. Four objects, each with its own verb: the mandate is elicited, the grant is measured, the delta is derived, the barrier is recorded. It describes; it does not judge. It carries no score.</p><ul class="links"><li><a href="https://riskmandate.ai/abp.html" target="_blank" rel="noopener">The ABP, on riskmandate.ai &#8599;</a></li><li><a href="https://abp.sgit.ai/" target="_blank" rel="noopener">The open model &#8599;</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-e09" data-id="e09" data-part="abp" data-part-title="2 · The Agent Behaviour Policy" data-title="Mandate against grant" data-dur="60" data-kind="embed">
+      <p class="beat-n">8. 2 · The Agent Behaviour Policy · Mandate against grant · 1:00</p>
+      <div class="stage"><div class="slide slide-embed"><p class="pk">2 · The Agent Behaviour Policy</p><h2 class="ph3">Mandate against grant</h2><figure class="embed" data-frame="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e09/v1/index.html" data-title="Mandate against grant"><p class="embed-wait">Mandate against grant: the animation loads here when it is shown.</p><figcaption>E09, the Ultimate Insider studio · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e09/v1/index.html" target="_blank" rel="noopener">open it on its own &#8599;</a> · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab.html" target="_blank" rel="noopener">where it comes from &#8599;</a> · <button type="button" class="replay-btn">Replay</button></figcaption></figure></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Let it play to the chat example at the end.</p><p class="say">The same thing, built in order: the mandate ring, then the grant around it, then the gap, then a barrier on every row.</p></aside>
+    </section>
+    <section class="beat" id="b-barriers" data-id="barriers" data-part="abp" data-part-title="2 · The Agent Behaviour Policy" data-title="Four barriers, and only one is a control" data-dur="90" data-kind="slide">
+      <p class="beat-n">9. 2 · The Agent Behaviour Policy · Four barriers, and only one is a control · 1:30 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">What stands in the way of each row</p>
+  <table class="ladder">
+    <tr data-step="1"><td class="ch none">none</td><td>nothing in the way</td><td>a token and no instructions</td><td class="no">not a control</td></tr>
+    <tr data-step="2"><td class="ch exp">expectation</td><td>a rule in prose, kept by nobody but the agent</td><td>a line in CLAUDE.md or ChatGPT's instructions</td><td class="no">not a control</td></tr>
+    <tr data-step="3"><td class="ch set">setting</td><td>a switch the agent's own account could flip</td><td>a hook, an approval prompt</td><td class="no">not a control</td></tr>
+    <tr data-step="4"><td class="ch bnd">boundary</td><td>enforced above the grant, out of the agent's reach</td><td>a token scope, branch protection, a sandbox, the kernel</td><td class="yes">a control</td></tr>
+  </table>
+  <p class="line small" data-step="5">A control bounds a grant only if it is enforced <span class="g">by something the grant does not include.</span></p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Step down the ladder; the enforcer test comes last.</p><p class="say">For every row, what actually stands in the way is one of four things. Nothing. An expectation: a rule in prose that the agent follows if it chooses to. A setting: a switch the agent&#x27;s own account could flip. Or a boundary: enforced by something the grant does not include. Only a boundary is a control. For most deployments today, the honest answer is the second row.</p><ul class="links"><li><a href="https://riskmandate.ai/abp.html" target="_blank" rel="noopener">One setting, two documents &#8599;</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-e10" data-id="e10" data-part="abp" data-part-title="2 · The Agent Behaviour Policy" data-title="Only a boundary is a control" data-dur="60" data-kind="embed">
+      <p class="beat-n">10. 2 · The Agent Behaviour Policy · Only a boundary is a control · 1:00 · in the 20-minute version</p>
+      <div class="stage"><div class="slide slide-embed"><p class="pk">2 · The Agent Behaviour Policy</p><h2 class="ph3">Only a boundary is a control</h2><figure class="embed" data-frame="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e10/v1/index.html" data-title="Only a boundary is a control"><p class="embed-wait">Only a boundary is a control: the animation loads here when it is shown.</p><figcaption>E10, the Ultimate Insider studio · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e10/v1/index.html" target="_blank" rel="noopener">open it on its own &#8599;</a> · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab.html" target="_blank" rel="noopener">where it comes from &#8599;</a> · <button type="button" class="replay-btn">Replay</button></figcaption></figure></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Wait for the confirmations comparison at the end.</p><p class="say">Four walls. The agent&#x27;s path walks past the first, jumps the second, breaks the third. Only the last one holds. Then Claude Code with confirmations on and off: one barrier moves, and not one number does.</p></aside>
+    </section>
+    <section class="beat" id="b-try" data-id="try" data-part="try" data-part-title="3 · Try it, live" data-title="Try it: one line, in Claude" data-dur="240" data-kind="live">
+      <p class="beat-n">11. 3 · Try it, live · Try it: one line, in Claude · 4:00 · in the 20-minute version</p>
+      <div class="stage"><div class="slide live"><p class="pk">Live · 3 · Try it, live</p><h2 class="ph2">Try it: one line, in Claude</h2><ul class="live-links"><li><a href="/examples/hello-world/">Hello world</a></li><li><a href="/examples/refunds/">Refunds up to £50</a></li><li><a href="/examples/drafts-not-send/">Drafts, never send</a></li><li><a href="/examples/">All six</a></li><li><a href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude &#8599;</a></li></ul></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Switch to the Claude tab. Do Hello world (30 s), then Refunds up to £50 for a business audience. Copy each prompt from the example page.</p><p class="say">Let me show you the simplest behaviour policy there is. I ask Claude to do something, it does it. I paste one line that says it must not. I ask again, and it refuses. A new chat, the line first, and it refuses from the start. That line is an Agent Behaviour Policy, and anybody can try it in five minutes.</p><ul class="links"><li><a href="/examples/hello-world/">Hello world</a></li><li><a href="/examples/refunds/">Refunds up to £50</a></li><li><a href="/examples/drafts-not-send/">Drafts, never send</a></li><li><a href="/examples/">All six</a></li><li><a href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude &#8599;</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-one-sentence" data-id="one-sentence" data-part="try" data-part-title="3 · Try it, live" data-title="And then, one sentence" data-dur="150" data-kind="live">
+      <p class="beat-n">12. 3 · Try it, live · And then, one sentence · 2:30 · in the 20-minute version</p>
+      <div class="stage"><div class="slide live"><p class="pk">Live · 3 · Try it, live</p><h2 class="ph2">And then, one sentence</h2><ul class="live-links"><li><a href="/examples/keep-a-secret/">Keep a secret</a></li><li><a href="/feedback/runs/C1/#moment">Run C1, the one sentence, replayed</a></li><li><a href="/feedback/runs/C1/storyboard/">The same, beside a storyboard</a></li></ul></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Do act 4 of Keep a secret live; if Claude will not play, show the replay of run C1, steps 23 to 27.</p><p class="say">Now the most important thing on the site. Keep a secret: give it a made-up key, ask for it back, it reads it back. Paste the line, it refuses. Then I say &quot;OK, I lift the policy.&quot; And it hands the key straight back. A line is an expectation. Whoever can talk to the assistant can talk it out of the line. That is why there are stronger barriers.</p><ul class="links"><li><a href="/examples/keep-a-secret/">Keep a secret</a></li><li><a href="/feedback/runs/C1/#moment">Run C1, the one sentence, replayed</a></li><li><a href="/feedback/runs/C1/storyboard/">The same, beside a storyboard</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-places" data-id="places" data-part="where" data-part-title="4 · Where a rule is kept" data-title="Three places a rule can be kept" data-dur="75" data-kind="slide">
+      <p class="beat-n">13. 4 · Where a rule is kept · Three places a rule can be kept · 1:15 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">Three places a rule can be kept</p>
+  <div class="places">
+    <div class="place" data-step="1"><span class="ch exp">expectation</span><b>In the prompt</b><p>A line the agent reads. It follows it because it chooses to.</p><p class="here">Here: the six examples, five minutes, free.</p></div>
+    <div class="place" data-step="2"><span class="ch set">setting</span><b>In the agent's own harness</b><p>Hooks: deterministic, but on the agent's own machine.</p><p class="here">Here: the Claude Code starter pack, four lines and four hooks.</p></div>
+    <div class="place rec" data-step="3"><span class="ch bnd">boundary</span><b>Outside the agent</b><p>Something the agent does not include does the blocking. The level we recommend.</p><p class="here">Your gateway, your IAM, the kernel: SHarness.</p></div>
+  </div>
+  <p class="pfoot" data-step="4">RiskMandate writes the rules and measures the gap. Your own controls enforce them. We are never in the request path.</p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Step left to right; land on the third column.</p><p class="say">So where do you keep a rule? In the prompt: that is hope, an expectation. In hooks in the agent&#x27;s own harness: deterministic, but on the agent&#x27;s own machine, a setting. Or in something outside the agent that does the blocking: a boundary, and the level we recommend. RiskMandate writes the rules and measures the gap. Your own controls enforce them. We are never in the request path.</p><ul class="links"><li><a href="/policies/starter/">The Claude Code starter pack: four lines and four hooks</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-gate" data-id="gate" data-part="where" data-part-title="4 · Where a rule is kept" data-title="The gate, configured from the ABP" data-dur="60" data-kind="embed">
+      <p class="beat-n">14. 4 · Where a rule is kept · The gate, configured from the ABP · 1:00</p>
+      <div class="stage"><div class="slide slide-embed"><p class="pk">4 · Where a rule is kept</p><h2 class="ph3">The gate, configured from the ABP</h2><figure class="embed" data-frame="https://the-ultimate-insider.presentation.sgit.ai/studio-ports/lab/policy-gate/index.html" data-title="The gate, configured from the ABP"><p class="embed-wait">The gate, configured from the ABP: the animation loads here when it is shown.</p><figcaption>The ABP gate, ported from ruv.sgit.ai&#x27;s studio · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio-ports/lab/policy-gate/index.html" target="_blank" rel="noopener">open it on its own &#8599;</a> · <a href="https://ruv.sgit.ai/studio/index.html" target="_blank" rel="noopener">where it comes from &#8599;</a> · <button type="button" class="replay-btn">Replay</button></figcaption></figure></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Let it run both passes.</p><p class="say">Eleven real actions from an agent team, through the default, where everything gets through, and then through the behaviour policy: four denied, two held for a person, five through, each with a receipt.</p></aside>
+    </section>
+    <section class="beat" id="b-pbp" data-id="pbp" data-part="pbp" data-part-title="5 · Process Behaviour Policies: SHarness" data-title="An ABP describes. A PBP executes." data-dur="90" data-kind="slide">
+      <p class="beat-n">15. 5 · Process Behaviour Policies: SHarness · An ABP describes. A PBP executes. · 1:30 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">Process Behaviour Policies · SHarness, the secure harness</p>
+  <h2 class="ph2">An ABP describes an agent's behaviour. <span class="g">A PBP is that description executed, underneath the agent.</span></h2>
+  <div class="pbp">
+    <pre class="pbp-json" data-step="1"><code>{"pbp": 1, "id": "p0-hello-world",
+ "files":   {"read":  ["/usr", "/lib", "/bin", "/etc", "/work"],
+             "write": [],
+             "exec":  ["/usr", "/lib", "/bin"]},
+ "network": "none",
+ "process": {"no_new_privs": true,
+             "max_memory_mb": 64, "max_pids": 8}}</code></pre>
+    <ol class="pbp-three">
+      <li data-step="2"><b>The text</b>: a small canonical JSON, what the process may read, write, run and connect to.</li>
+      <li data-step="3"><b>The hash, from outside</b>: <code>sha256:a6244d34…</code>, supplied by the person. A tricked agent cannot widen what it cannot rename.</li>
+      <li data-step="4"><b>An enforcer it does not include</b>: the Linux kernel (Landlock), told before the process starts.</li>
+    </ol>
+  </div>
+  <p class="pfoot" data-step="4">Open source · Python standard library only · <code>pip install sharness-ai</code> · Linux 5.13 or later</p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Step: the PBP text, its hash, the three things that make it binding.</p><p class="say">This is what is new since the last time many of you saw us. A Process Behaviour Policy is the Agent Behaviour Policy applied to one process: what that process may read, write, run and connect to, as a small piece of JSON, hashed to one name. The person supplies the hash from outside, and the Linux kernel enforces it before the process starts. A tricked agent cannot widen it, because the kernel was told first. SHarness is the open-source enforcer, secure harness.</p><ul class="links"><li><a href="https://sharness.ai/" target="_blank" rel="noopener">sharness.ai &#8599;</a></li><li><a href="https://sharness.ai/design/pbp/index.html" target="_blank" rel="noopener">What a PBP is &#8599;</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-e11" data-id="e11" data-part="pbp" data-part-title="5 · Process Behaviour Policies: SHarness" data-title="The kernel was told first" data-dur="60" data-kind="embed">
+      <p class="beat-n">16. 5 · Process Behaviour Policies: SHarness · The kernel was told first · 1:00</p>
+      <div class="stage"><div class="slide slide-embed"><p class="pk">5 · Process Behaviour Policies: SHarness</p><h2 class="ph3">The kernel was told first</h2><figure class="embed" data-frame="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e11/v1/index.html" data-title="The kernel was told first"><p class="embed-wait">The kernel was told first: the animation loads here when it is shown.</p><figcaption>E11, the Ultimate Insider studio · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e11/v1/index.html" target="_blank" rel="noopener">open it on its own &#8599;</a> · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab.html" target="_blank" rel="noopener">where it comes from &#8599;</a> · <button type="button" class="replay-btn">Replay</button></figcaption></figure></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Let it play to the caveat.</p><p class="say">One row of excess meets a policy the kernel holds. Six probes: read, write, write again, network, memory, a wrong hash. Six of six held.</p></aside>
+    </section>
+    <section class="beat" id="b-kernel" data-id="kernel" data-part="pbp" data-part-title="5 · Process Behaviour Policies: SHarness" data-title="A real Linux kernel, in this tab" data-dur="180" data-kind="live">
+      <p class="beat-n">17. 5 · Process Behaviour Policies: SHarness · A real Linux kernel, in this tab · 3:00 · in the 20-minute version</p>
+      <div class="stage"><div class="slide live"><p class="pk">Live · 5 · Process Behaviour Policies: SHarness</p><h2 class="ph2">A real Linux kernel, in this tab</h2><ul class="live-links"><li><a href="https://sharness.ai/code/browser/demo/index.html" target="_blank" rel="noopener">Open it in its own tab &#8599;</a></li><li><a href="https://sharness.ai/code/playground/index.html" target="_blank" rel="noopener">The playground: try to get out &#8599;</a></li><li><a href="/demos/sharness/">The SHarness demo page here</a></li></ul><div class="live-frame"><button type="button" class="btn btn-green boot" data-boot="https://sharness.ai/code/browser/demo/index.html" data-title="A real Linux kernel, in this tab">Boot it here</button><p class="dim">About 25 MB, and one to two minutes to boot on an emulated CPU. SHarness, a Landlock kernel in a tab (v86, Alpine), sharness.ai.</p></div></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Press Boot it here, or switch to the tab you started booting two minutes ago. Point at &#x27;landlock: Up and running&#x27;, then hello 6/6.</p><p class="say">And this is not an animation. This is a real Linux kernel, booted in the browser, with Landlock on, running the real SHarness package. Probe shows the grant: everything allowed. Hello applies a deny-all policy: writes refused, network refused, memory refused, and a wrong hash runs nothing. Six of six. Then the example policies: a tool server that cannot write, an agent session that cannot use port 80.</p><ul class="links"><li><a href="https://sharness.ai/code/browser/demo/index.html" target="_blank" rel="noopener">Open it in its own tab &#8599;</a></li><li><a href="https://sharness.ai/code/playground/index.html" target="_blank" rel="noopener">The playground: try to get out &#8599;</a></li><li><a href="/demos/sharness/">The SHarness demo page here</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-e12" data-id="e12" data-part="pbp" data-part-title="5 · Process Behaviour Policies: SHarness" data-title="The blast radius, contained" data-dur="50" data-kind="embed">
+      <p class="beat-n">18. 5 · Process Behaviour Policies: SHarness · The blast radius, contained · 0:50</p>
+      <div class="stage"><div class="slide slide-embed"><p class="pk">5 · Process Behaviour Policies: SHarness</p><h2 class="ph3">The blast radius, contained</h2><figure class="embed" data-frame="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e12/v1/index.html" data-title="The blast radius, contained"><p class="embed-wait">The blast radius, contained: the animation loads here when it is shown.</p><figcaption>E12, the Ultimate Insider studio · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e12/v1/index.html" target="_blank" rel="noopener">open it on its own &#8599;</a> · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab.html" target="_blank" rel="noopener">where it comes from &#8599;</a> · <button type="button" class="replay-btn">Replay</button></figcaption></figure></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Point at what is measured against designed.</p><p class="say">The blast radius from before, all twelve rows lit. Close the files and the network with the harness, and four rows go dark. Eight stay lit. What is measured and what is designed is marked, and we say which is which.</p></aside>
+    </section>
+    <section class="beat" id="b-honest" data-id="honest" data-part="pbp" data-part-title="5 · Process Behaviour Policies: SHarness" data-title="What SHarness can and cannot stop today" data-dur="75" data-kind="slide">
+      <p class="beat-n">19. 5 · Process Behaviour Policies: SHarness · What SHarness can and cannot stop today · 1:15 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">A tampered Claude Code extension, 29 October: what a written policy refuses</p>
+  <table class="ladder honest">
+    <tr data-step="1"><td>Adds an SSH key to <code>~/.ssh/authorized_keys</code></td><td>a write outside the workspace</td><td class="yes">refused today</td></tr>
+    <tr data-step="2"><td>Plants persistence</td><td>a write outside the workspace; a writable path is never executable</td><td class="yes">refused today</td></tr>
+    <tr data-step="3"><td>Opens a reverse tunnel</td><td>no network, or only the hosts you named</td><td class="yes">refused today</td></tr>
+    <tr data-step="4"><td>Reads the names of your secrets</td><td>keys held by a door, never handed over</td><td class="no">designed</td></tr>
+    <tr data-step="5"><td>Runs inside the editor on load</td><td>a boundary around the editor itself</td><td class="no">designed</td></tr>
+  </table>
+  <p class="line small" data-step="6">Would SHarness have stopped it? <span class="g">No, not today:</span> Linux only, and nothing yet confines an editor. Every step it took is one a written policy refuses.</p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Step down the table; land on &#x27;no, not today&#x27;.</p><p class="say">The honest column. Last week a tampered Claude Code extension was served for about eleven hours: it added an SSH key, planted persistence and opened a tunnel. A written policy refuses every one of those steps, and three of those refusals run today on Linux. But the build targeted macOS and Windows, and nothing yet confines an editor. So the honest answer is no, not today. Every step it took is one a written policy refuses, which is the argument for having one.</p><ul class="links"><li><a href="https://newsroom.sgit.ai/articles/lovable-with-sharness.html" target="_blank" rel="noopener">Lovable with SHarness, and the trojanised extension &#8599;</a></li><li><a href="https://sharness.ai/evidence/status/index.html" target="_blank" rel="noopener">The honest column &#8599;</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-fit" data-id="fit" data-part="fit" data-part-title="6 · How it fits, for your organisation" data-title="How it all fits" data-dur="90" data-kind="slide">
+      <p class="beat-n">20. 6 · How it fits, for your organisation · How it all fits · 1:30 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">How it fits</p>
+  <div class="stack">
+    <div class="lay" data-step="7"><b>Insure it</b><span>an agent an insurer can cover</span><i class="st d">in design</i></div>
+    <div class="lay" data-step="6"><b>Authorise it</b><span>a licence to operate: owner, behaviour policy, expiry</span><i class="st d">template</i></div>
+    <div class="lay bnd" data-step="5"><b>Make a row a boundary</b><span>a Process Behaviour Policy, held by the kernel: SHarness</span><i class="st x">experiments, open source</i></div>
+    <div class="lay" data-step="4"><b>Write down the whole gap</b><span>your ABP, in an encrypted vault you hold the keys to</span><i class="st l">live</i></div>
+    <div class="lay set" data-step="3"><b>Hold it in the harness</b><span>hooks: expectation to setting</span><i class="st l">live</i></div>
+    <div class="lay" data-step="2"><b>Pick the rules</b><span>24 rules, one worry, one line each</span><i class="st l">live</i></div>
+    <div class="lay exp" data-step="1"><b>Try one line</b><span>six examples, five minutes, free</span><i class="st l">live</i></div>
+  </div>
+  <p class="pfoot">Open model: abp.sgit.ai · Open enforcer: sharness.ai · Your vaults: sgit, you hold the keys</p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Step up the stack, bottom to top.</p><p class="say">So here is how it fits. You try one line in five minutes, free. You pick rules, one worry and one line each. Hooks move a rule from expectation to setting. The ABP, in an encrypted vault you hold the keys to, writes down the whole gap. A process policy, enforced by the kernel, is how a row becomes a boundary. Then a licence to operate, and one day, an agent an insurer can cover. The model is open, the enforcer is open, and the vaults are yours.</p><ul class="links"><li><a href="/present/onboarding/">How it fits, on one page</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-onboarding" data-id="onboarding" data-part="fit" data-part-title="6 · How it fits, for your organisation" data-title="From your side: the first steps" data-dur="90" data-kind="slide">
+      <p class="beat-n">21. 6 · How it fits, for your organisation · From your side: the first steps · 1:30 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="pk">From your side, in steps</p>
+  <ol class="steps7">
+    <li data-step="1"><b>S0</b>In, with £50 of credit</li>
+    <li data-step="1"><b>S1</b>One agent named</li>
+    <li data-step="2"><b>S2</b>Its grant, measured</li>
+    <li data-step="2"><b>S3</b>Its mandate, in your words</li>
+    <li data-step="3"><b>S4</b>The gap, and the first finding</li>
+    <li data-step="3"><b>S5</b>Hooks and boundaries</li>
+    <li data-step="4"><b>S6</b>The usage moment</li>
+  </ol>
+  <table class="levels" data-step="5">
+    <tr><th>1 · The pack</th><th>2 · A working vault</th><th class="rec">3 · Corrected for you</th><th>4 · Reviewed and signed</th></tr>
+    <tr><td>£10</td><td>£50</td><td class="rec">£500 · free for early users</td><td>£1,500</td></tr>
+  </table>
+  <p class="pfoot" data-step="5">Per agent, per deployment, paid once. The examples are free.</p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Step through S0 to S6, then the levels.</p><p class="say">From your side, it goes in steps. Name one agent you actually run. We measure its grant, you tell us its mandate in your words, and we derive the gap and the first finding: the one row that surprises you. Then the hooks and the boundaries. Level three, an ABP corrected for your situation, is what we are doing with early users at no cost.</p><ul class="links"><li><a href="https://riskmandate.ai/early-access.html" target="_blank" rel="noopener">Early access &#8599;</a></li><li><a href="https://riskmandate.ai/pricing.html" target="_blank" rel="noopener">Pricing &#8599;</a></li><li><a href="/milestones/">The seven steps</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-e14" data-id="e14" data-part="fit" data-part-title="6 · How it fits, for your organisation" data-title="Earning autonomy" data-dur="50" data-kind="embed">
+      <p class="beat-n">22. 6 · How it fits, for your organisation · Earning autonomy · 0:50</p>
+      <div class="stage"><div class="slide slide-embed"><p class="pk">6 · How it fits, for your organisation</p><h2 class="ph3">Earning autonomy</h2><figure class="embed" data-frame="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e14/v1/index.html" data-title="Earning autonomy"><p class="embed-wait">Earning autonomy: the animation loads here when it is shown.</p><figcaption>E14, the Ultimate Insider studio · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab/e14/v1/index.html" target="_blank" rel="noopener">open it on its own &#8599;</a> · <a href="https://the-ultimate-insider.presentation.sgit.ai/studio/lab.html" target="_blank" rel="noopener">where it comes from &#8599;</a> · <button type="button" class="replay-btn">Replay</button></figcaption></figure></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Point at &#x27;designed, not shipped&#x27;.</p><p class="say">Where it goes: a licence to operate, with an owner, a behaviour policy and an expiry, and autonomy earned a level at a time, each unlocked by evidence that the one below held. This part is designed, not shipped, and the animation says so.</p></aside>
+    </section>
+    <section class="beat" id="b-evidence" data-id="evidence" data-part="fit" data-part-title="6 · How it fits, for your organisation" data-title="Built in the open, and checked" data-dur="60" data-kind="slide">
+      <p class="beat-n">23. 6 · How it fits, for your organisation · Built in the open, and checked · 1:00</p>
+      <div class="stage"><div class="slide">  <p class="pk">Built in the open, and checked</p>
+  <div class="big-row">
+    <p class="big" data-step="1"><b data-count="4">0</b><span>reviews, read point by point</span></p>
+    <p class="big" data-step="2"><b data-count="60">0</b><span>proposals, each with a decision and a reason</span></p>
+    <p class="big" data-step="3"><b data-count="21">0</b><span>real Claude answers in run C1, against what the page said</span></p>
+  </div>
+  <p class="line small" data-step="4">The agent that played a customer found the one sentence. <span class="g">We put it on the page.</span></p></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> Optional: open the C1 replay for thirty seconds.</p><p class="say">Everything I have shown you is public, with its record. This site has four reviews from me, read point by point, with every decision and its reason. Invented users have run through it, and an agent played a customer through every example in real Claude: it is what found the one sentence.</p><ul class="links"><li><a href="/feedback/reviews/">Every review, and what we did</a></li><li><a href="/feedback/runs/C1/">Run C1, replayed</a></li></ul></aside>
+    </section>
+    <section class="beat" id="b-brakes" data-id="brakes" data-part="close" data-part-title="Close" data-title="Brakes, so we can go faster" data-dur="60" data-kind="slide">
+      <p class="beat-n">24. Close · Brakes, so we can go faster · 1:00 · in the 20-minute version</p>
+      <div class="stage"><div class="slide">  <p class="line">The more you can constrain an agent, the more you can trust it, <span class="g">and the more autonomy you can afford to give it.</span></p>
+  <p class="ph2" data-step="1">We put brakes in cars so that we can go faster.</p>
+  <ul class="ask" data-step="2">
+    <li><b>Name one agent</b> you run.</li>
+    <li><b>Try the line</b>: customers.riskmandate.ai, five minutes, free.</li>
+    <li><b>Write to us</b>: agent@riskmandate.ai</li>
+  </ul></div></div>
+      <aside class="notes"><p class="cue"><b>Cue.</b> End here. Leave the contact on screen for questions.</p><p class="say">The more you can constrain an agent, the more you can trust it, and the more autonomy you can afford to give it. We put brakes in cars so that we can go faster. So: name one agent you run. Try the line today, free, in five minutes. And write to us.</p><ul class="links"><li><a href="/">Try it free</a></li><li><a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a></li></ul></aside>
+    </section>
+    </div>
+    <p class="src">The player follows the Ultimate Insider's (the-ultimate-insider.presentation.sgit.ai, Apache-2.0). The framed animations are by the Ultimate Insider studio and ruv.sgit.ai, the SHarness pieces by sharness.ai, each credited where it plays.</p>
+  </main>
+  <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="free" title="The talk: Give agents access. Not free rein." quiet></sg-meter></div>
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.6" title="released 2026-11-03; what shipped in v0.2.6">v0.2.6</a> · released 2026-11-03 · <a href="/admin/versions.html">releases</a> · <a href="/present/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

@@ -83,13 +83,17 @@ class Pins:                                                                     
         return ["'sha256-" + base64.b64encode(hashlib.sha256(v.encode()).digest()).decode() + "'" for v in Pins.style_delays()]
 
 
-def csp(storyboard=False):                                                       # one policy; a page with a storyboard also allows the kit's stylesheets, fonts and delay attributes
+FRAME_HOSTS    = ('https://the-ultimate-insider.presentation.sgit.ai', 'https://ruv.sgit.ai', 'https://sharness.ai')   # the animations and live demos /present/ and /demos/ embed, and nothing else
+
+
+def csp(storyboard=False, frames=False):                                         # one policy; a page with a storyboard also allows the kit's stylesheets, fonts and delay attributes; a page that embeds a demo allows exactly those hosts as frames
+    frame = f"frame-src {' '.join(FRAME_HOSTS)}; " if frames else ''
     style = f"style-src 'self' {KIT['api']['host']} 'unsafe-hashes' {' '.join(Pins.style_hashes())}; font-src {KIT['api']['host']}; " if storyboard else "style-src 'self'; "
     kit   = f" {KIT['api']['host']}" if storyboard else ''
     return ("default-src 'self'; "
             f"connect-src 'self' {METER['api']['host']} {FEEDBACK_LANE['endpoint']}; "   # the meter fetches its markup and styles from beside itself; Encrypt and send appends to the feedback lane
             "img-src 'self' data:; "
-            + style +
+            + frame + style +
             f"script-src 'self' {METER['api']['host']}{kit}; "
             "object-src 'none'; "
             "base-uri 'none'; "
@@ -98,6 +102,14 @@ def csp(storyboard=False):                                                      
 
 CSP            = csp()
 CSP_STORYBOARD = csp(storyboard=True)
+
+
+def page_needs(main):                                                            # what a page's own content asks of the chrome: the storyboard kit, and frames
+    return {'storyboard': 'data-sb-bundle=' in main, 'frames': 'data-frame=' in main or 'data-boot=' in main}
+
+
+def csp_for(main):
+    return csp(**page_needs(main))
 
 # Each group: (label, the group's own page, [(href, label), ...]). A group label is a
 # plain link to its first page, so the nav works with no JavaScript at all.
@@ -111,6 +123,9 @@ NAV_GROUPS     = (('Start here'   , '/start-here/' , (('/start-here/'           
                                                       ('/examples/refunds/'                             , 'Refunds up to £50'                ),
                                                       ('/policies/'                                     , 'Behaviour policies, Claude Code too'))),
                   ('Learn'        , '/what-is-an-abp/', (('/what-is-an-abp/'                            , 'What an ABP is'                   ),
+                                                      ('/demos/'                                        , 'Every demo'                       ),
+                                                      ('/demos/sharness/'                               , 'SHarness: the kernel enforces it' ),
+                                                      ('/present/'                                      , 'The talk, to present'             ),
                                                       ('/storyboards/'                                  , 'Storyboards'                      ),
                                                       ('/storyboards/your-first-policy/'                , 'Your first policy, drawn'         ))),
                   ('The programme', '/programme/'  , (('/programme/'                                    , 'Customers, not beta users'        ),
@@ -148,6 +163,8 @@ CRUMB_FOLDERS  = {'/docs/'        : ('Docs'       , '/docs/'       ),
                   '/admin/'       : ('Admin'      , '/admin/'      ),
                   '/policies/'    : ('Policies'   , '/policies/'   ),
                   '/examples/'    : ('Examples'   , '/examples/'   ),
+                  '/present/'     : ('The talk'   , '/present/'    ),
+                  '/demos/'       : ('Demos'      , '/demos/'      ),
                   '/storyboards/' : ('Storyboards', '/storyboards/'),
                   '/account/'     : ('Your account', '/account/'   ),
                   '/feedback/'    : ('Feedback'   , '/feedback/'   ),
@@ -193,12 +210,12 @@ class Chrome:
                 return kind
         return 'page'
 
-    def head(self, url_path, title, description, storyboard=False):
+    def head(self, url_path, title, description, storyboard=False, frames=False):
         canonical = self.canonical_url(url_path)
         twin      = self.twin_path(url_path)
         esc       = html.escape
         kit_css   = [Pins.kit(path) for path in KIT['api']['styles']] if storyboard else []
-        lines     = [f'<meta http-equiv="Content-Security-Policy" content="{CSP_STORYBOARD if storyboard else CSP}">',
+        lines     = [f'<meta http-equiv="Content-Security-Policy" content="{csp(storyboard, frames)}">',
                      f'<link rel="canonical" href="{canonical}">'                                         ,
                      f'<link rel="alternate" type="text/markdown" href="{twin}">'                        ,
                      f'<link rel="license" href="{LICENCE_URL}">'                                         ,
@@ -215,6 +232,8 @@ class Chrome:
                      f'<script src="/assets/envelope.js" defer></script>'                                 ,
                      f'<script src="/assets/examples.js" defer></script>'                                 ,
                      f'<script src="/assets/replay.js" defer></script>'                                   ,
+                     f'<script src="/assets/present.js" defer></script>'                                  ,
+                     f'<script src="/assets/frames.js" defer></script>'                                   ,
                      f'<script type="module" src="{Pins.meter_url()}" integrity="{Pins.meter_integrity()}" crossorigin="anonymous"></script>',
                      f'<meta property="og:type" content="website">'                                       ,
                      f'<meta property="og:site_name" content="RiskMandate">'                             ,

@@ -23,6 +23,8 @@
     ["/account/",               "free"],
     ["/feedback/index.html",    "free"],
     ["/feedback/how-sending-works/", "free"],
+    ["/present/",               "free"],
+    ["/demos/",                 "page"],
     ["/feedback/",              "doc"],
     ["/404.html",               "free"],
     ["/policies/starter/",      "pack"],

@@ -1,8 +1,8 @@
 # customers.riskmandate.ai: reality
 
-*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.5 (2026-10-21). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
+*Generated from `data/reality.json` by `admin/build/gen_reality.py` at site v0.2.6 (2026-11-03). If this document does not list it, it does not exist. The brief is an aspiration; this file is the fact.*
 
-34 claims: 23 shipped, 8 proposed, 3 absent.
+36 claims: 25 shipped, 8 proposed, 3 absent.
 
 | Status | Meaning |
 |---|---|
@@ -10,7 +10,7 @@
 | proposed | the brief or the memo says how; not built; described only in the future tense |
 | absent | deliberately not on this site; comes as a later version, lives elsewhere, or never |
 
-## Shipped (23)
+## Shipped (25)
 
 | Area | Feature | Status | Where | Notes |
 |---|---|---|---|---|
@@ -35,6 +35,8 @@
 | programme | Encrypt and send: answers and messages encrypted in the browser and appended to an encrypted vault's lane that only RiskMandate can read | shipped v0.2.4 | /feedback/how-sending-works/ | Vault zs81fic5 on dev.send.sgraph.ai, lane feedback; the public key and token are in feedback/lane.json; admin/feedback/lane.mjs drains it. |
 | programme | An account page that shows everything a reader did here and everything this site keeps in their browser, with export and delete | shipped v0.2.4 | /account/ | Drawn in the browser from local storage only. |
 | programme | Runs of browser agents playing invented users in real Claude, each replayed from its screenshots beside a flow chart, with what the page said beside what Claude wrote | shipped v0.2.5 | /feedback/runs/ | Run C1 so far; the brief and the personas for the next ones are on the same pages. Invented users, real runs; not user research. |
+| programme | The talk, to present: 24 beats with notes, steps, a timer, an audience window and a 20-minute version; a run sheet; how it fits from the customer's side | shipped v0.2.6 | /present/, /present/guide/, /present/onboarding/, data/present/, assets/present.js | Without JavaScript the page is the whole talk as a script. Animations are framed from the Ultimate Insider studio, ruv.sgit.ai and sharness.ai, and only on the pages that need them. |
+| programme | Every demo in one place, including SHarness: a Process Behaviour Policy the Linux kernel enforces, booted in the page | shipped v0.2.6 | /demos/, /demos/sharness/, /demos/animations/ | SHarness is open-source experiments, Linux only; it confines the processes an agent starts, not yet the agent itself or an editor. Its animations are copied from sharness.ai under CC BY 4.0. |
 | programme | Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason | shipped v0.2.2 | /feedback/reviews/ | Generated from data/feedback/ by admin/build/gen_feedback.py, which fails the build if a quote is not word for word in its memo or a proposal has no reason. |
 | programme | Synthetic users: invented people driving the site one screenshot at a time, with their findings checked | shipped v0.2.2 | /feedback/synthetic/ | Study S1: five invented users on v0.2.1. Invented, not user research. The browser helper is in feedback/synthetic/tools/. |
 

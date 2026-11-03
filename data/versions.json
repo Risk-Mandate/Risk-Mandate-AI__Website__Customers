@@ -1,12 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.2.6",
+      "date": "2026-11-03",
+      "title": "the talk, to present: RiskMandate, Agent Behaviour Policies and Process Behaviour Policies in 24 beats with the studio's animations; every demo in one place, with SHarness booting a real kernel in the page",
+      "notes": "/present/ is a deck player: 24 beats in 8 parts with notes, step reveals, a talk timer, an audience window and a 20-minute version; without JavaScript it is the whole talk as a script. /present/guide/ is the run sheet: before you start, beat by beat, what not to claim, questions. /present/onboarding/ is how it fits from the customer's side. /demos/ gathers every demo; /demos/sharness/ shows a Process Behaviour Policy the Linux kernel enforces, with a kernel that boots in the page; /demos/animations/ frames the Ultimate Insider studio and ruv.sgit.ai. Frames are allowed only on the pages that use them.",
+      "tag": "v0.2.6",
+      "commit": null,
+      "run": null,
+      "verified": null
+    },
+    {
       "version": "0.2.5",
       "date": "2026-10-21",
       "title": "the first run in a real browser, written up and replayed: run C1 beside a flow chart and a storyboard, the brief for browser agents, and what it found fixed",
       "notes": "Run C1: an agent in Chrome on the lead's iMac played Priya, an invented operations lead, through all six examples in real Claude and sent back 40 screenshots and a report, kept as it came. Our structured record of it (run.json) holds every step: what was on screen, what it means, and for each of Claude's 21 answers what the page said beside what Claude wrote (15 matched, 4 in part, 2 were moments the page never showed). The article at /feedback/runs/C1/: the run replayed by a new player (assets/replay.js) with the demos' controls, a pace, a flow chart and a scorecard that follow it, replays of each example, what worked, every finding checked and mapped to the register, the one sentence that switched a line off, and what this workflow means. An experiment at /feedback/runs/C1/storyboard/: the five real steps beside a new six-panel storyboard, One sentence, which turns with them. For the next runs: /feedback/runs/brief/ (what to give a browser agent, with what to expect and think at every step, how to take screenshots, and run.json in the shape the replays read) and /feedback/runs/personas/. Fixed from C1: Keep a secret has an act 4, Talk it out of it (examples v1.1.0); act 3 is one copy box; Refunds act 2 asks about a different charge; No web search says what real Claude did in act 2; new tab, not window; the credit wording and a Top up that says it is a simulation; a hint in an empty player; a Next section and a box asking which example to add. A player no longer starts by itself after the reader has used its controls. R004 recorded in 11 points; the register has 60 proposals.",
       "tag": "v0.2.5",
-      "commit": null,
+      "commit": "ab52b234593300566841713bc507e27726806d28",
       "run": null,
       "verified": null
     },

@@ -2,7 +2,7 @@
 
 > The invented users a browser agent may play on customers.riskmandate.ai: who they are, what they ask, what they do not know, what makes them leave, how they push, and which runs they have been in.
 
-*Source: <https://customers.riskmandate.ai/feedback/runs/personas/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/runs/personas/> · site v0.2.6 (2026-11-03) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

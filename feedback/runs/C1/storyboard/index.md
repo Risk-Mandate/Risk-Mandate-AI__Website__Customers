@@ -2,7 +2,7 @@
 
 > An experiment: five steps of a real run of Keep a secret in Claude, played beside a storyboard drawn from them, turning together. The line holds, and then one sentence switches it off.
 
-*Source: <https://customers.riskmandate.ai/feedback/runs/C1/storyboard/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/runs/C1/storyboard/> · site v0.2.6 (2026-11-03) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

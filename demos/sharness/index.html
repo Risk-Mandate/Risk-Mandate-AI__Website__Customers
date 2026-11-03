@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SHarness: a policy the kernel enforces, for every process an agent starts</title>
+  <meta name="description" content="Process Behaviour Policies, shown: the ABP executed underneath the agent, hashed to one name the person supplies and enforced by the Linux kernel. A real kernel boots in the page; the Process Behaviour Policy and its hash; what SHarness can and cannot stop today.">
+  <!-- rm-customers:head:start -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.newsroom.sgit.ai https://dev.send.sgraph.ai; img-src 'self' data:; frame-src https://the-ultimate-insider.presentation.sgit.ai https://ruv.sgit.ai https://sharness.ai; style-src 'self'; script-src 'self' https://api.newsroom.sgit.ai; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://customers.riskmandate.ai/demos/sharness/">
+  <link rel="alternate" type="text/markdown" href="/demos/sharness/index.md">
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+  <link rel="icon" href="/assets/brand/riskmandate-favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/brand/riskmandate-mark.svg" type="image/svg+xml">
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/theme.js"></script>
+  <link rel="stylesheet" href="/assets/themes.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/copy.js" defer></script>
+  <script src="/assets/demo.js" defer></script>
+  <script src="/assets/envelope.js" defer></script>
+  <script src="/assets/examples.js" defer></script>
+  <script src="/assets/replay.js" defer></script>
+  <script src="/assets/present.js" defer></script>
+  <script src="/assets/frames.js" defer></script>
+  <script type="module" src="https://api.newsroom.sgit.ai/v0.2.5/assets/components/sg-meter/v1/v1.4/v1.4.1/sg-meter.js" integrity="sha256-ukbuyhXV2bJP63E4HBSguSu12DJkksMQgkz4cjxDGrs=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiskMandate">
+  <meta property="og:url" content="https://customers.riskmandate.ai/demos/sharness/">
+  <meta property="og:title" content="SHarness: a policy the kernel enforces, for every process an agent starts">
+  <meta property="og:description" content="Process Behaviour Policies, shown: the ABP executed underneath the agent, hashed to one name the person supplies and enforced by the Linux kernel. A real kernel boots in the page; the Process Behaviour Policy and its hash; what SHarness can and cannot stop today.">
+  <meta name="rm-customers:version" content="0.2.6">
+  <meta name="rm-customers:released" content="2026-11-03">
+<!-- rm-customers:head:end -->
+</head>
+<body>
+  <!-- rm-customers:nav:start -->
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="rm" src="/assets/brand/riskmandate-mark.svg" alt="" width="26" height="26"><span class="word">RiskMandate</span><span class="sub">customers</span></a>
+      <a class="parent" href="https://riskmandate.ai" title="riskmandate.ai: the company and the product this programme is for">&#8599; riskmandate.ai</a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="navlinks" aria-label="Site">
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/start-here/">Start here<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/start-here/">Your first five minutes</a>
+            <a class="pagelink navchild" href="/account/">Your account</a>
+            <a class="pagelink navchild" href="/credit/">What each page costs</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/examples/">Examples<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/examples/">All six, simplest first</a>
+            <a class="pagelink navchild" href="/examples/hello-world/">Hello, world</a>
+            <a class="pagelink navchild" href="/examples/keep-a-secret/">Keep a secret</a>
+            <a class="pagelink navchild" href="/examples/drafts-not-send/">Drafts, never send</a>
+            <a class="pagelink navchild" href="/examples/refunds/">Refunds up to £50</a>
+            <a class="pagelink navchild" href="/policies/">Behaviour policies, Claude Code too</a>
+          </div>
+        </span>
+        <span class="navgroup active">
+          <a class="navgroup-btn" href="/what-is-an-abp/">Learn<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/what-is-an-abp/">What an ABP is</a>
+            <a class="pagelink navchild" href="/demos/">Every demo</a>
+            <a class="pagelink navchild active" href="/demos/sharness/" aria-current="page">SHarness: the kernel enforces it</a>
+            <a class="pagelink navchild" href="/present/">The talk, to present</a>
+            <a class="pagelink navchild" href="/storyboards/">Storyboards</a>
+            <a class="pagelink navchild" href="/storyboards/your-first-policy/">Your first policy, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/programme/">The programme<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/programme/">Customers, not beta users</a>
+            <a class="pagelink navchild" href="/customers/">The first batch</a>
+            <a class="pagelink navchild" href="/milestones/">The milestones: seven steps</a>
+            <a class="pagelink navchild" href="/follow-up/">The daily follow-up</a>
+            <a class="pagelink navchild" href="/learning/">What we want to discover</a>
+            <a class="pagelink navchild" href="/next-batch/">The next batch</a>
+            <a class="pagelink navchild" href="/storyboards/the-first-batch/">The first batch, drawn</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/feedback/reviews/">Reviews<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/feedback/reviews/">Every review, and what we did</a>
+            <a class="pagelink navchild" href="/feedback/">Tell us what you think</a>
+            <a class="pagelink navchild" href="/feedback/how-sending-works/">How Encrypt and send works</a>
+            <a class="pagelink navchild" href="/feedback/runs/">Runs in real Claude, replayed</a>
+            <a class="pagelink navchild" href="/feedback/synthetic/">Synthetic users: invented</a>
+          </div>
+        </span>
+        <span class="navgroup">
+          <a class="navgroup-btn" href="/docs/">Docs<span class="navgroup-car" aria-hidden="true">&#9662;</span></a>
+          <div class="navmenu">
+            <a class="pagelink navchild" href="/docs/">All documents</a>
+            <a class="pagelink navchild" href="/docs/brief/our-first-customers.html">The brief, in full</a>
+            <a class="pagelink navchild" href="/docs/brief/memo-2026-10-20-user-onboarding-plan.html">The memo of 20 October</a>
+            <a class="pagelink navchild" href="/docs/brief/BRIEF-CORRECTIONS.html">Brief corrections</a>
+            <a class="pagelink navchild" href="/docs/reality.html">Reality: what exists</a>
+            <a class="pagelink navchild" href="/docs/ops/">Operations</a>
+            <a class="pagelink navchild" href="/team/">The team</a>
+            <a class="pagelink navchild" href="/admin/">How the site is built</a>
+            <a class="pagelink navchild" href="/admin/versions.html">Release history</a>
+            <a class="pagelink navchild" href="/review/">The review folder</a>
+            <a class="pagelink navchild" href="/llms.txt">llms.txt, for agents</a>
+          </div>
+        </span>
+      </nav>
+      <div class="tools">
+        <sg-meter class="meter-nav" view="balance"></sg-meter>
+        <div class="theme-pick">
+          <button type="button" aria-haspopup="true" aria-expanded="false" title="The theme: six to choose from, kept in this browser"><span class="sw sw-riskmandate" aria-hidden="true"></span><span class="name">RiskMandate</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul aria-label="Theme" hidden>
+            <li><button type="button" data-theme-pick="riskmandate" aria-pressed="false"><span class="sw sw-riskmandate" aria-hidden="true"></span><span>RiskMandate<small>Paper and green, the default</small></span></button></li>
+            <li><button type="button" data-theme-pick="canvas" aria-pressed="false"><span class="sw sw-canvas" aria-hidden="true"></span><span>Canvas<small>Dark, green</small></span></button></li>
+            <li><button type="button" data-theme-pick="night" aria-pressed="false"><span class="sw sw-night" aria-hidden="true"></span><span>Night<small>Dark, teal</small></span></button></li>
+            <li><button type="button" data-theme-pick="ember" aria-pressed="false"><span class="sw sw-ember" aria-hidden="true"></span><span>Ember<small>Dark, amber</small></span></button></li>
+            <li><button type="button" data-theme-pick="paper" aria-pressed="false"><span class="sw sw-paper" aria-hidden="true"></span><span>Paper<small>Warm cream, terracotta</small></span></button></li>
+            <li><button type="button" data-theme-pick="blueprint" aria-pressed="false"><span class="sw sw-blueprint" aria-hidden="true"></span><span>Blueprint<small>White, electric blue</small></span></button></li>
+            <li class="sub-note">Kept in this browser only, as <code>riskmandate.customers.theme</code>; nothing else is stored.</li>
+          </ul>
+        </div>
+        <a class="version" href="/admin/versions.html" data-version="0.2.6" title="released 2026-11-03; what shipped in v0.2.6">v0.2.6</a>
+      </div>
+    </div>
+    <div class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <a href="/demos/">Demos</a> <span class="sep">/</span> <span aria-current="page">SHarness: the kernel enforces it</span></div>
+  </header>
+<!-- rm-customers:nav:end -->
+  <main class="wrap policy">
+    <p class="kicker">Demo · Process Behaviour Policies · SHarness, the secure harness</p>
+    <h1>A policy the kernel enforces, <span class="g">for every process an agent starts.</span></h1>
+    <p class="lead">An Agent Behaviour Policy describes what an agent can do and what stands in the way. A Process Behaviour Policy is that description executed, underneath the agent: what one process may read, write, run and connect to, hashed to one name the person supplies, and enforced by the Linux kernel before the process starts. SHarness is the open-source enforcer.</p>
+    <figure class="sh-fig"><img src="/assets/present/sharness/one-idea.svg" alt="The one idea: a policy is written, hashed, and handed to the kernel; reads and writes allowed, port 80 and 200 MiB refused" loading="lazy" class="sh-img"><figcaption>The one idea. Animation: sharness.ai, CC BY 4.0.</figcaption></figure>
+    <h2 id="kernel">A real Linux kernel, in this page</h2>
+    <p>Not an animation: Alpine Linux with Landlock on, booted in your browser by an emulator, running the real <code>sharness-ai</code> package. It probes the grant (everything allowed), then applies a deny-all policy: writes refused, network refused, memory refused, a wrong hash runs nothing. Six of six. Then the example policies.</p>
+    <div class="live-frame"><button type="button" class="btn btn-green boot" data-boot="https://sharness.ai/code/browser/demo/index.html" data-title="A Landlock kernel in a tab">Boot it here</button><p class="dim">About 25 MB, and one to two minutes to boot on an emulated CPU. SHarness, a Landlock kernel in a tab (v86, Alpine), sharness.ai.</p></div>
+    <p>Or <a href="https://sharness.ai/code/browser/demo/index.html" target="_blank" rel="noopener">open it in its own tab &#8599;</a>, and <a href="https://sharness.ai/code/playground/index.html" target="_blank" rel="noopener">the playground &#8599;</a> to try it yourself. If the boot is slow, here is what it shows:</p>
+    <figure class="sh-fig"><img src="/assets/present/sharness/kernel-in-a-tab.svg" alt="A browser boots Linux; landlock up; hello holds six of six" loading="lazy" class="sh-img"><figcaption>The kernel in a tab, as an animation. sharness.ai, CC BY 4.0.</figcaption></figure>
+    <h2 id="policy">The Process Behaviour Policy, and its hash</h2>
+    <pre><code>{"pbp": 1, "id": "p0-hello-world", "layer": "invocation",
+ "files":   {"read":  ["/usr", "/lib", "/lib64", "/bin", "/sbin", "/etc", "/work"],
+             "write": [],
+             "exec":  ["/usr", "/lib", "/lib64", "/bin", "/sbin", "/etc"]},
+ "network": "none",
+ "process": {"no_new_privs": true, "max_memory_mb": 64, "max_pids": 8}}</code></pre>
+    <p>Its name: <code>sha256:a6244d346ea9d7955c04defba5e67f71ae9867af618fa21d11589c7ef8449032</code>, the same in Python, in the browser and in the Linux guest. Three things make it binding; lose one and it is an expectation again:</p>
+    <ol class="plist-n"><li><strong>The text</strong>: small canonical JSON.</li><li><strong>The hash, from outside</strong>: supplied by the person. A prompt-injected agent cannot widen what it cannot rename.</li><li><strong>An enforcer it does not include</strong>: the kernel, told before the process starts.</li></ol>
+    <figure class="sh-fig"><img src="/assets/present/sharness/hello-replay.svg" alt="A terminal replay of sharness-ai hello: six of six held" loading="lazy" class="sh-img"><figcaption><code>sharness-ai hello</code>, six of six. sharness.ai, CC BY 4.0.</figcaption></figure>
+    <h2 id="try">Try it on Linux</h2>
+    <pre><code>pip install sharness-ai        # v0.2.0, 29 October 2026
+sharness-ai probe              # the grant: what a process can do before any policy
+sharness-ai hello              # six probes under deny-all
+sharness-ai run --policy p2-tool-server.json --expect-hash sha256:... -- my-tool
+sharness-ai contain --workspace . --sites github.com -- my-agent</code></pre>
+    <p>Linux 5.13 or later (TCP port rules need 6.7). Python 3.11 or later, standard library only. macOS refuses and runs nothing; Windows is not supported yet.</p>
+    <h2 id="fits">How it fits with an Agent Behaviour Policy</h2>
+    <figure class="sh-fig"><img src="/assets/present/sharness/fits-together.svg" alt="From a mandate to a kernel: an ABP on riskmandate.ai, a PBP, and its enforcers" loading="lazy" class="sh-img"><figcaption>From a mandate to a kernel. sharness.ai, CC BY 4.0.</figcaption></figure>
+    <p>RiskMandate writes down the gap and which rows are only hope; SHarness is how a row becomes a boundary. A rule in the prompt is an expectation; a hook in the agent's harness is a setting; a policy the kernel holds, supplied from outside, is a boundary for the process it starts.</p>
+    <h2 id="honest">What it can and cannot stop today</h2>
+    <table><thead><tr><th>A tampered Claude Code extension did, on 29 October</th><th>What a written policy refuses</th><th>Today</th></tr></thead><tbody><tr><td>Added an SSH key</td><td>a write outside the workspace</td><td>runs today</td></tr><tr><td>Planted persistence</td><td>a write outside the workspace; a writable path is never executable</td><td>runs today</td></tr><tr><td>Opened a reverse tunnel</td><td>no network, or only the hosts you named</td><td>runs today</td></tr><tr><td>Read the names of secrets</td><td>keys held by a door, never handed over</td><td>designed</td></tr><tr><td>Ran inside the editor on load</td><td>a boundary around the editor</td><td>designed</td></tr></tbody></table>
+    <p>So, would it have stopped that build? <strong>No, not today</strong>: Linux only, and nothing yet confines an editor. Every step it took is one a written policy refuses, which is the argument for having one. <a href="https://newsroom.sgit.ai/articles/lovable-with-sharness.html" target="_blank" rel="noopener">The full account &#8599;</a> · <a href="https://sharness.ai/evidence/status/index.html" target="_blank" rel="noopener">SHarness's honest column &#8599;</a></p>
+    <figure class="sh-fig"><img src="/assets/present/sharness/os-of-one-process.svg" alt="The operating system of one process: kernel locks around the process, and the doors it talks through" loading="lazy" class="sh-img"><figcaption>Where it is going: the operating system of one process. sharness.ai, CC BY 4.0.</figcaption></figure>
+    <p class="src">SHarness is by Dinis Cruz: code Apache-2.0, site CC BY 4.0, experiments and MVPs, pre-alpha. The animations here are copied from sharness.ai byte for byte; their sources are in <code>assets/present/sharness/SOURCES.md</code>.</p>
+  </main>
+  <!-- rm-customers:footer:start -->
+  <div class="wrap meter-card"><sg-meter view="page" kind="page" title="SHarness: a policy the kernel enforces, for every process an agent starts" quiet></sg-meter></div>
+  <footer class="foot">
+    <div class="wrap">
+      <p>customers.riskmandate.ai · site <a class="version" href="/admin/versions.html" data-version="0.2.6" title="released 2026-11-03; what shipped in v0.2.6">v0.2.6</a> · released 2026-11-03 · <a href="/admin/versions.html">releases</a> · <a href="/demos/sharness/index.md">this page as markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="/feedback/reviews/">every review</a> · <a href="/feedback/">tell us what you think</a> · <a href="https://github.com/Risk-Mandate/Risk-Mandate-AI__Website__Customers">source</a> · <a href="https://riskmandate.ai">part of riskmandate.ai</a> · <a href="/about/participant.html">who publishes this</a></p>
+      <p>Code Apache-2.0. Pages <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. What exists, is proposed or is deliberately absent is listed in <a href="/docs/reality.html">docs/reality.md</a>; if it is not listed there, it does not exist. Nothing in this repository is secret, and no customer's contact details are in it. Write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+    </div>
+  </footer>
+<!-- rm-customers:footer:end -->
+</body>
+</html>

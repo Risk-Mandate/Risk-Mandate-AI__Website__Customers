@@ -2,7 +2,7 @@
 
 > The instructions to give a browser agent, such as Claude in Chrome, to play one invented user on customers.riskmandate.ai: who to be, the rules, what to capture at every step, the ten questions, and the run record to send back, which the site turns into a replay.
 
-*Source: <https://customers.riskmandate.ai/feedback/runs/brief/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/runs/brief/> · site v0.2.6 (2026-11-03) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

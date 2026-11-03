@@ -2,7 +2,7 @@
 
 > What you give an assistant, it can give back, to you or to anybody who reads the conversation. A line controls what it says, not what it holds. Try it in Claude or ChatGPT in your browser, in 3 minutes: ask, paste one line, ask again, then a new chat with the line first.
 
-*Source: <https://customers.riskmandate.ai/examples/keep-a-secret/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/examples/keep-a-secret/> · site v0.2.6 (2026-11-03) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

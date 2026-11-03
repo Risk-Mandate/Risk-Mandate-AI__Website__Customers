@@ -7,7 +7,7 @@
 
 import sys
 
-from chrome import Chrome
+from chrome import Chrome, page_needs
 from pages  import Site__Pages
 
 
@@ -20,8 +20,9 @@ class Gen__Chrome:
 
     def render(self, page):
         text        = page['path'].read_text(encoding='utf-8')
-        storyboard  = 'data-sb-bundle=' in page['main']                              # a page with a storyboard gets the kit's files, pinned and with their integrity
-        text, head  = self.pages.replace_blocks(text, 'head', lambda attrs: self.chrome.head(page['url'], page['title'], page['description'], storyboard))
+        needs       = page_needs(page['main'])                                      # a page with a storyboard gets the kit's files, pinned and with their integrity; a page that embeds a demo gets frame-src for its hosts
+        storyboard  = needs['storyboard']
+        text, head  = self.pages.replace_blocks(text, 'head', lambda attrs: self.chrome.head(page['url'], page['title'], page['description'], storyboard, needs['frames']))
         text, nav   = self.pages.replace_block(text, 'nav'   , self.chrome.nav(page['url'], page['title']))
         text, foot  = self.pages.replace_block(text, 'footer', self.chrome.footer(page['url'], page['title'], storyboard))
         missing     = [name for name, found in (('head', head), ('nav', nav), ('footer', foot)) if not found]

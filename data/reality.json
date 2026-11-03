@@ -245,6 +245,24 @@
       "notes": "Run C1 so far; the brief and the personas for the next ones are on the same pages. Invented users, real runs; not user research."
     },
     {
+      "id": "programme.present",
+      "area": "programme",
+      "title": "The talk, to present: 24 beats with notes, steps, a timer, an audience window and a 20-minute version; a run sheet; how it fits from the customer's side",
+      "status": "shipped",
+      "since": "0.2.6",
+      "where": "/present/, /present/guide/, /present/onboarding/, data/present/, assets/present.js",
+      "notes": "Without JavaScript the page is the whole talk as a script. Animations are framed from the Ultimate Insider studio, ruv.sgit.ai and sharness.ai, and only on the pages that need them."
+    },
+    {
+      "id": "programme.demo-pages",
+      "area": "programme",
+      "title": "Every demo in one place, including SHarness: a Process Behaviour Policy the Linux kernel enforces, booted in the page",
+      "status": "shipped",
+      "since": "0.2.6",
+      "where": "/demos/, /demos/sharness/, /demos/animations/",
+      "notes": "SHarness is open-source experiments, Linux only; it confines the processes an agent starts, not yet the agent itself or an editor. Its animations are copied from sharness.ai under CC BY 4.0."
+    },
+    {
       "id": "programme.reviews",
       "area": "programme",
       "title": "Every review in one document: verbatim, our reading point by point with screenshots, and one register of proposals, each with a decision and a reason",

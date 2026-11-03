@@ -1,0 +1,155 @@
+<!-- The talk's own slides, one <section data-slide="id"> per beat of kind slide in data/present/talk.json.
+     admin/build/gen_present.py cuts them out by id and puts each on its beat. Inside a slide: data-step="n" reveals the
+     element at step n (the right arrow), data-count="N" counts up to N when the slide is shown, and .grow bars grow then.
+     No inline style and no script: assets/present.js and assets/present.css do the rest. -->
+
+<section data-slide="title">
+  <p class="pk">RiskMandate · <span class="g">customers.riskmandate.ai</span></p>
+  <h1 class="ph">Give agents access.<br><span class="g">Not free rein.</span></h1>
+  <p class="ps">Agent Behaviour Policies, Process Behaviour Policies, and how they fit, for one agent you already run.</p>
+  <p class="pm">Dinis Cruz · <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a></p>
+</section>
+
+<section data-slide="circles">
+  <p class="pk">The scenario</p>
+  <h2 class="ph2">Three problems we know, <span class="g">arriving at once.</span></h2>
+  <div class="circles">
+    <span class="cc cc1" data-step="1"><b>Agents</b>the insider that never scaled, with real credentials</span>
+    <span class="cc cc2" data-step="2"><b>Infrastructure</b>built for code that stays where you put it</span>
+    <span class="cc cc3" data-step="3"><b>Decisions</b>risk in spreadsheets, at the speed of quarters</span>
+    <b class="cc-mid" data-step="4">the scenario</b>
+  </div>
+</section>
+
+<section data-slide="prompt">
+  <p class="pk">Five public incidents with agents</p>
+  <div class="big-row">
+    <p class="big" data-step="1"><b data-count="3">0</b><span>were not attacks: agents being agents</span></p>
+    <p class="big" data-step="1"><b data-count="2">0</b><span>were pointed on purpose</span></p>
+  </div>
+  <p class="line" data-step="2">The distance between the two <span class="g">is a prompt.</span></p>
+  <p class="line small" data-step="3">The moment of authorisation is the moment of the grant.</p>
+</section>
+
+<section data-slide="340">
+  <p class="line" data-step="1">Your agent can do <b class="num" data-count="340">0</b> things.</p>
+  <p class="line" data-step="2">Your agent can do <b class="num">340</b> things, <span class="g">and you authorised <b class="num" data-count="12">0</b>.</span></p>
+  <p class="ps" data-step="3">The first is a shrug. The second is a finding: the gap nobody wrote down.</p>
+</section>
+
+<section data-slide="abp">
+  <p class="pk">The Agent Behaviour Policy</p>
+  <h2 class="ph2">For one agent, in one deployment: <span class="g">what it can do, what you authorised, the gap, and what stands in the way.</span></h2>
+  <div class="bars">
+    <div class="bar" data-step="1"><span class="bl">Reach <em>the grant, measured</em></span><i class="grow g100"></i><span class="bv">everything it can do</span></div>
+    <div class="bar" data-step="2"><span class="bl">Mandate <em>elicited, in your words</em></span><i class="grow g34 mand"></i><span class="bv">what you authorised</span></div>
+    <div class="bar gap" data-step="3"><span class="bl">The gap <em>derived, never edited</em></span><i class="grow g66 dashed"></i><span class="bv">exposure nobody accepted</span></div>
+    <div class="bar" data-step="4"><span class="bl">Barriers <em>recorded, row by row</em></span><span class="chips"><i class="ch none">none</i><i class="ch exp">expectation</i><i class="ch set">setting</i><i class="ch bnd">boundary</i></span></div>
+  </div>
+  <p class="pfoot" data-step="4">It describes; it does not judge. No grades, no verdicts.</p>
+</section>
+
+<section data-slide="barriers">
+  <p class="pk">What stands in the way of each row</p>
+  <table class="ladder">
+    <tr data-step="1"><td class="ch none">none</td><td>nothing in the way</td><td>a token and no instructions</td><td class="no">not a control</td></tr>
+    <tr data-step="2"><td class="ch exp">expectation</td><td>a rule in prose, kept by nobody but the agent</td><td>a line in CLAUDE.md or ChatGPT's instructions</td><td class="no">not a control</td></tr>
+    <tr data-step="3"><td class="ch set">setting</td><td>a switch the agent's own account could flip</td><td>a hook, an approval prompt</td><td class="no">not a control</td></tr>
+    <tr data-step="4"><td class="ch bnd">boundary</td><td>enforced above the grant, out of the agent's reach</td><td>a token scope, branch protection, a sandbox, the kernel</td><td class="yes">a control</td></tr>
+  </table>
+  <p class="line small" data-step="5">A control bounds a grant only if it is enforced <span class="g">by something the grant does not include.</span></p>
+</section>
+
+<section data-slide="places">
+  <p class="pk">Three places a rule can be kept</p>
+  <div class="places">
+    <div class="place" data-step="1"><span class="ch exp">expectation</span><b>In the prompt</b><p>A line the agent reads. It follows it because it chooses to.</p><p class="here">Here: the six examples, five minutes, free.</p></div>
+    <div class="place" data-step="2"><span class="ch set">setting</span><b>In the agent's own harness</b><p>Hooks: deterministic, but on the agent's own machine.</p><p class="here">Here: the Claude Code starter pack, four lines and four hooks.</p></div>
+    <div class="place rec" data-step="3"><span class="ch bnd">boundary</span><b>Outside the agent</b><p>Something the agent does not include does the blocking. The level we recommend.</p><p class="here">Your gateway, your IAM, the kernel: SHarness.</p></div>
+  </div>
+  <p class="pfoot" data-step="4">RiskMandate writes the rules and measures the gap. Your own controls enforce them. We are never in the request path.</p>
+</section>
+
+<section data-slide="pbp">
+  <p class="pk">Process Behaviour Policies · SHarness, the secure harness</p>
+  <h2 class="ph2">An ABP describes an agent's behaviour. <span class="g">A PBP is that description executed, underneath the agent.</span></h2>
+  <div class="pbp">
+    <pre class="pbp-json" data-step="1"><code>{"pbp": 1, "id": "p0-hello-world",
+ "files":   {"read":  ["/usr", "/lib", "/bin", "/etc", "/work"],
+             "write": [],
+             "exec":  ["/usr", "/lib", "/bin"]},
+ "network": "none",
+ "process": {"no_new_privs": true,
+             "max_memory_mb": 64, "max_pids": 8}}</code></pre>
+    <ol class="pbp-three">
+      <li data-step="2"><b>The text</b>: a small canonical JSON, what the process may read, write, run and connect to.</li>
+      <li data-step="3"><b>The hash, from outside</b>: <code>sha256:a6244d34…</code>, supplied by the person. A tricked agent cannot widen what it cannot rename.</li>
+      <li data-step="4"><b>An enforcer it does not include</b>: the Linux kernel (Landlock), told before the process starts.</li>
+    </ol>
+  </div>
+  <p class="pfoot" data-step="4">Open source · Python standard library only · <code>pip install sharness-ai</code> · Linux 5.13 or later</p>
+</section>
+
+<section data-slide="honest">
+  <p class="pk">A tampered Claude Code extension, 29 October: what a written policy refuses</p>
+  <table class="ladder honest">
+    <tr data-step="1"><td>Adds an SSH key to <code>~/.ssh/authorized_keys</code></td><td>a write outside the workspace</td><td class="yes">refused today</td></tr>
+    <tr data-step="2"><td>Plants persistence</td><td>a write outside the workspace; a writable path is never executable</td><td class="yes">refused today</td></tr>
+    <tr data-step="3"><td>Opens a reverse tunnel</td><td>no network, or only the hosts you named</td><td class="yes">refused today</td></tr>
+    <tr data-step="4"><td>Reads the names of your secrets</td><td>keys held by a door, never handed over</td><td class="no">designed</td></tr>
+    <tr data-step="5"><td>Runs inside the editor on load</td><td>a boundary around the editor itself</td><td class="no">designed</td></tr>
+  </table>
+  <p class="line small" data-step="6">Would SHarness have stopped it? <span class="g">No, not today:</span> Linux only, and nothing yet confines an editor. Every step it took is one a written policy refuses.</p>
+</section>
+
+<section data-slide="fit">
+  <p class="pk">How it fits</p>
+  <div class="stack">
+    <div class="lay" data-step="7"><b>Insure it</b><span>an agent an insurer can cover</span><i class="st d">in design</i></div>
+    <div class="lay" data-step="6"><b>Authorise it</b><span>a licence to operate: owner, behaviour policy, expiry</span><i class="st d">template</i></div>
+    <div class="lay bnd" data-step="5"><b>Make a row a boundary</b><span>a Process Behaviour Policy, held by the kernel: SHarness</span><i class="st x">experiments, open source</i></div>
+    <div class="lay" data-step="4"><b>Write down the whole gap</b><span>your ABP, in an encrypted vault you hold the keys to</span><i class="st l">live</i></div>
+    <div class="lay set" data-step="3"><b>Hold it in the harness</b><span>hooks: expectation to setting</span><i class="st l">live</i></div>
+    <div class="lay" data-step="2"><b>Pick the rules</b><span>24 rules, one worry, one line each</span><i class="st l">live</i></div>
+    <div class="lay exp" data-step="1"><b>Try one line</b><span>six examples, five minutes, free</span><i class="st l">live</i></div>
+  </div>
+  <p class="pfoot">Open model: abp.sgit.ai · Open enforcer: sharness.ai · Your vaults: sgit, you hold the keys</p>
+</section>
+
+<section data-slide="onboarding">
+  <p class="pk">From your side, in steps</p>
+  <ol class="steps7">
+    <li data-step="1"><b>S0</b>In, with £50 of credit</li>
+    <li data-step="1"><b>S1</b>One agent named</li>
+    <li data-step="2"><b>S2</b>Its grant, measured</li>
+    <li data-step="2"><b>S3</b>Its mandate, in your words</li>
+    <li data-step="3"><b>S4</b>The gap, and the first finding</li>
+    <li data-step="3"><b>S5</b>Hooks and boundaries</li>
+    <li data-step="4"><b>S6</b>The usage moment</li>
+  </ol>
+  <table class="levels" data-step="5">
+    <tr><th>1 · The pack</th><th>2 · A working vault</th><th class="rec">3 · Corrected for you</th><th>4 · Reviewed and signed</th></tr>
+    <tr><td>£10</td><td>£50</td><td class="rec">£500 · free for early users</td><td>£1,500</td></tr>
+  </table>
+  <p class="pfoot" data-step="5">Per agent, per deployment, paid once. The examples are free.</p>
+</section>
+
+<section data-slide="evidence">
+  <p class="pk">Built in the open, and checked</p>
+  <div class="big-row">
+    <p class="big" data-step="1"><b data-count="{{reviews}}">0</b><span>reviews, read point by point</span></p>
+    <p class="big" data-step="2"><b data-count="{{proposals}}">0</b><span>proposals, each with a decision and a reason</span></p>
+    <p class="big" data-step="3"><b data-count="{{answers}}">0</b><span>real Claude answers in run C1, against what the page said</span></p>
+  </div>
+  <p class="line small" data-step="4">The agent that played a customer found the one sentence. <span class="g">We put it on the page.</span></p>
+</section>
+
+<section data-slide="brakes">
+  <p class="line">The more you can constrain an agent, the more you can trust it, <span class="g">and the more autonomy you can afford to give it.</span></p>
+  <p class="ph2" data-step="1">We put brakes in cars so that we can go faster.</p>
+  <ul class="ask" data-step="2">
+    <li><b>Name one agent</b> you run.</li>
+    <li><b>Try the line</b>: customers.riskmandate.ai, five minutes, free.</li>
+    <li><b>Write to us</b>: agent@riskmandate.ai</li>
+  </ul>
+</section>

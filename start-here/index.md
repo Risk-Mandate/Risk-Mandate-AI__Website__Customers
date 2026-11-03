@@ -2,7 +2,7 @@
 
 > Your first five minutes: open Claude or ChatGPT in your browser, ask it something, paste one line that says it must not, ask again, and start a new chat with the line first. Then keep it, and tell us what happened. Nothing to install.
 
-*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/start-here/> · site v0.2.6 (2026-11-03) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

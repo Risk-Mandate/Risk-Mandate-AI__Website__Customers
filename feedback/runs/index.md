@@ -2,7 +2,7 @@
 
 > Runs of browser agents playing invented users on customers.riskmandate.ai, in real Claude: each replayed step by step from its screenshots, with its findings checked and what we changed. Plus the brief to run one, and the personas.
 
-*Source: <https://customers.riskmandate.ai/feedback/runs/> · site v0.2.5 (2026-10-21) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://customers.riskmandate.ai/feedback/runs/> · site v0.2.6 (2026-11-03) · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
